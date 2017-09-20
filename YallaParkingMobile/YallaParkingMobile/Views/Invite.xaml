@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+    xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+    x:Class="YallaParkingMobile.Invite"
+    Title="Invite"
+    NavigationPage.HasBackButton="False">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Activated="Button_Clicked"
+            Order="Primary"
+            Priority="0"
+            Icon="hamburgerMenu.png">
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <telerikPrimitives:RadSideDrawer
+            x:Name="Menu"
+            DrawerLength="200"
+            BackgroundColor="White">
+            <telerikPrimitives:RadSideDrawer.MainContent>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                            Height="*" />
+                        <RowDefinition
+                            Height="Auto" />
+                        <RowDefinition
+                            Height="Auto" />
+                        <RowDefinition
+                            Height="*" />
+                    </Grid.RowDefinitions>
+                    <Image
+                        Margin="40"
+                        Source="invite.png"
+                        Grid.Row="0"
+                        VerticalOptions="Center"
+                        Aspect="AspectFit" />
+                    <ContentView
+                        Padding="0,40,0,0"
+                        Grid.Row="1">
+                        <Label
+                            Style="{StaticResource Header}"
+                            VerticalTextAlignment="Center"
+                            Text="YP781624" />
+                    </ContentView>
+                    <Label
+                        Margin="40"
+                        Grid.Row="2"
+                        HorizontalTextAlignment="Center"
+                        Text="Get 25% off your booking when you an invite a friend. Your friend gets 25% off too" />
+                    <ContentView
+                        Padding="40"
+                        Grid.Row="3">
+                        <Button                                                    
+                            Style="{StaticResource GreenButton}"
+                            Text="Invite Now"
+                            HorizontalOptions="Fill"
+                            VerticalOptions="End" />
+                    </ContentView>
+                </Grid>
+            </telerikPrimitives:RadSideDrawer.MainContent>
+            <telerikPrimitives:RadSideDrawer.DrawerContent>
+                <StackLayout>
+                    <StackLayout
+                        Margin="40, 10, 10, 10"
+                        Orientation="Horizontal">
+                        <Image
+                            Margin="0,0,5,0"
+                            Source="menu-car.png" />
+                        <Button
+                            x:Name="FindParking"
+                            Text="Find Parking"
+                            TextColor="#a1a1b4"
+                            HorizontalOptions="Start"
+                            Clicked="FindParking_Clicked" />
+                    </StackLayout>
+                    <StackLayout
+                        Margin="40, 10, 10, 10"
+                        Orientation="Horizontal">
+                        <Image
+                            Margin="0,0,5,0"
+                            Source="menu-bookings.png" />
+                        <Button
+                            x:Name="MyBookings"
+                            Text="My Bookings"
+                            TextColor="#ff8e30"
+                            HorizontalOptions="Start"
+                            Clicked="MyBookings_Clicked" />
+                    </StackLayout>
+                    <StackLayout
+                        Margin="40, 10, 10, 10"
+                        Orientation="Horizontal">
+                        <Image
+                            Margin="0,0,5,0"
+                            Source="menu-profile.png" />
+                        <Button
+                            x:Name="MyProfile"
+                            Text="My Profile"
+                            TextColor="#ff8e30"
+                            HorizontalOptions="Start"
+                            Clicked="MyProfile_Clicked" />
+                    </StackLayout>
+                    <StackLayout
+                        Margin="40, 10, 10, 10"
+                        Orientation="Horizontal">
+                        <Image
+                            Margin="0,0,5,0"
+                            Source="menu-invite.png" />
+                        <Button
+                            x:Name="InviteButton"
+                            Text="Invite"
+                            TextColor="#ff8e30"
+                            HorizontalOptions="Start"
+                            Clicked="Invite_Clicked" />
+                    </StackLayout>
+                    <StackLayout
+                        Margin="40, 10, 10, 10"
+                        Orientation="Horizontal">
+                        <Image
+                            Margin="0,0,5,0"
+                            Source="menu-logout.png" />
+                        <Button
+                            x:Name="Logout"
+                            Text="Logout"
+                            TextColor="#a1a1b4"
+                            HorizontalOptions="Start"
+                            Clicked="Logout_Clicked" />
+                    </StackLayout>
+                </StackLayout>
+            </telerikPrimitives:RadSideDrawer.DrawerContent>
+        </telerikPrimitives:RadSideDrawer>
+    </ContentPage.Content>
+</ContentPage>

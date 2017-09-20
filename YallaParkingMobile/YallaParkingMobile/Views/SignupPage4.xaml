@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:YallaParkingMobile"
+    x:Class="YallaParkingMobile.SignupPage4"
+    NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition
+                Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <Image
+            Source="location.png"
+            Grid.Row="1"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Grid.RowSpan="3"
+            Aspect="AspectFit" />
+
+        <ContentView
+            Padding="0,40,0,0"
+            Grid.Row="5"
+            Grid.Column="0"
+            Grid.ColumnSpan="4">
+            <Label
+                Style="{StaticResource Header}"
+                VerticalTextAlignment="Start"
+                Text="One Last Thing" />
+        </ContentView>
+
+        <Label            
+            Grid.Row="6"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Text="In order to show parking spaces around you, we need to access your location" />
+
+        <ContentView
+            Padding="0,10,0,40"
+            Grid.Row="7"
+            Grid.Column="1"
+            Grid.ColumnSpan="2">
+            <Button
+                x:Name="AcceptButton"
+                Clicked="AcceptButton_Clicked"
+                Style="{StaticResource GreenButton}"
+                Text="Accept"
+                HorizontalOptions="Fill"
+                VerticalOptions="End" />
+        </ContentView>
+    </Grid>
+
+</ContentPage>

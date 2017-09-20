@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:YallaParkingMobile"
+    xmlns:control="clr-namespace:YallaParkingMobile.Control"
+    x:Class="YallaParkingMobile.Login"
+    NavigationPage.HasBackButton="False"
+    Title="Login">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Activated="ToolbarItem_Activated"
+            Order="Primary"
+            Priority="0"
+            Text="Register">
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="*" />
+            <ColumnDefinition
+                Width="*" />
+            <ColumnDefinition
+                Width="*" />
+            <ColumnDefinition
+                Width="*" />
+            <ColumnDefinition
+                Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Image
+            Source="logo.png"
+            Grid.Row="1"
+            Grid.Column="1"
+            Grid.ColumnSpan="3"
+            Aspect="AspectFit" />
+        
+        <control:BorderlessEntry
+            Grid.Row="3"
+            Grid.Column="1"
+            Grid.ColumnSpan="3"
+            Placeholder="E-mail Address"
+            Keyboard="Email"
+            x:Name="EmailAddress" />
+
+        <control:BorderlessEntry
+            Grid.Row="4"
+            Grid.Column="1"            
+            Grid.ColumnSpan="3"
+            Placeholder="Password"      
+            IsPassword="True"            
+            x:Name="Password" />
+
+        <ContentView
+            Padding="0,5,0,0"
+            Grid.Row="6"
+            Grid.Column="1"
+            Grid.ColumnSpan="3">
+            <Button
+                x:Name="NextButton"
+				Clicked="NextButton_Clicked"
+                Style="{StaticResource GreenButton}"
+                Text="Log In"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center" />
+        </ContentView>
+        
+        <ContentView
+            Padding="0,5,0,0"
+            Grid.Row="7"
+            Grid.Column="1"
+            Grid.ColumnSpan="3">
+            <Button
+                x:Name="FacebookButton"
+				Clicked="FacebookButton_Clicked"
+                Style="{StaticResource FacebookButton}"
+                Text="Log In with Facebook"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center" />
+        </ContentView>
+
+
+        <ContentView
+            Padding="0,5,0,0"
+            Grid.Row="8"
+            Grid.Column="1"
+            Grid.ColumnSpan="3">
+            <Button
+                x:Name="ForgotPasswordButton"
+                Clicked="ForgotPasswordButton_Clicked"
+                Style="{StaticResource GreyTextButton}"
+                Text="Forgotten Password"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center" />
+        </ContentView>
+    </Grid>
+
+</ContentPage>

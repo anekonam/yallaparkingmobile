@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+    xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+    xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+    x:Class="YallaParkingMobile.Home"
+    Title="Find Parking"
+    NavigationPage.HasBackButton="False">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Activated="Button_Clicked"
+            Order="Primary"
+            Priority="0"
+            Icon="hamburgerMenu.png">
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <telerikPrimitives:RadSideDrawer
+            x:Name="Menu"
+            DrawerLength="200"
+            BackgroundColor="White">
+            <telerikPrimitives:RadSideDrawer.MainContent>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                            Height="Auto" />
+                        <RowDefinition
+                            Height="*" />
+                    </Grid.RowDefinitions>
+                    <StackLayout
+                        Padding="4"
+                        Grid.Row="0">
+                        <telerikInput:RadAutoComplete
+                            x:Name="Search"
+                            BackgroundColor="White"
+                            SuggestMode="Suggest"
+                            CompletionMode="StartsWith"
+                            TextColor="#ff8e30"
+                            SuggestionItemSelected="Search_SuggestionItemSelected"
+                            Watermark="Search for parking by area or building..." />
+                        <StackLayout
+                            Padding="4"
+                            Orientation="Horizontal">
+                            <DatePicker
+                                x:Name="SearchDate"
+                                Format="dd-MMM-yyyy"
+                                TextColor="#ff8e30"
+                                DateSelected="DatePicker_DateSelected"
+                                HorizontalOptions="FillAndExpand">
+                            </DatePicker>
+                            <TimePicker
+                                x:Name="SearchTime"
+                                Time="10:00"
+                                TextColor="#ff8e30"
+                                HorizontalOptions="FillAndExpand" />
+                        </StackLayout>
+                        <StackLayout
+                            Padding="8"
+                            Orientation="Horizontal">
+                            <Label
+                                x:Name="Hours"
+                                Margin="0,0,10,0"
+                                Text="2 Hours" />
+                            <Slider
+                                x:Name="HoursSlider"
+                                Maximum="24"
+                                Minimum="1"
+                                Value="2"
+                                Margin="0,5,0,0"
+                                ValueChanged="HoursSlider_ValueChanged"
+                                HorizontalOptions="FillAndExpand" />
+                        </StackLayout>
+                    </StackLayout>
+                    <telerikPrimitives:RadBusyIndicator
+                        x:Name="BusyIndicator"
+                        AnimationContentHeightRequest="50"
+                        AnimationContentWidthRequest="50"
+                        AnimationContentColor="#ff8e30"
+                        Grid.Row="1"
+                        IsBusy="True">
+                        <telerikPrimitives:RadBusyIndicator.BusyContent>
+                            <Label
+                                Text="Searching for parking spaces..." />
+                        </telerikPrimitives:RadBusyIndicator.BusyContent>
+                        <telerikPrimitives:RadBusyIndicator.Content>
+                            <maps:Map
+                                WidthRequest="320"
+                                HeightRequest="200"
+                                x:Name="Map"
+                                IsShowingUser="true"
+                                VerticalOptions="FillAndExpand"
+                                MapType="Street" />
+                        </telerikPrimitives:RadBusyIndicator.Content>
+                    </telerikPrimitives:RadBusyIndicator>
+                </Grid>
+            </telerikPrimitives:RadSideDrawer.MainContent>
+            <telerikPrimitives:RadSideDrawer.DrawerContent>
+                <StackLayout>
+                    <StackLayout
+                        Margin="40, 10, 10, 10"
+                        Orientation="Horizontal">
+                        <Image
+                            Margin="0,0,5,0"
+                            Source="menu-car.png" />
+                        <Button
+                            x:Name="FindParking"
+                            Text="Find Parking"
+                            TextColor="#a1a1b4"
+                            HorizontalOptions="Start"
+                            Clicked="FindParking_Clicked" />
+                    </StackLayout>
+                    <StackLayout
+                        Margin="40, 10, 10, 10"
+                        Orientation="Horizontal">
+                        <Image
+                            Margin="0,0,5,0"
+                            Source="menu-bookings.png" />
+                        <Button
+                            x:Name="MyBookings"
+                            Text="My Bookings"
+                            TextColor="#ff8e30"
+                            HorizontalOptions="Start"
+                            Clicked="MyBookings_Clicked" />
+                    </StackLayout>
+                    <StackLayout
+                        Margin="40, 10, 10, 10"
+                        Orientation="Horizontal">
+                        <Image
+                            Margin="0,0,5,0"
+                            Source="menu-profile.png" />
+                        <Button
+                            x:Name="MyProfile"
+                            Text="My Profile"
+                            TextColor="#ff8e30"
+                            HorizontalOptions="Start"
+                            Clicked="MyProfile_Clicked" />
+                    </StackLayout>
+                    <StackLayout
+                        Margin="40, 10, 10, 10"
+                        Orientation="Horizontal">
+                        <Image
+                            Margin="0,0,5,0"
+                            Source="menu-invite.png" />
+                        <Button
+                            x:Name="Invite"
+                            Text="Invite"
+                            TextColor="#ff8e30"
+                            HorizontalOptions="Start"
+                            Clicked="Invite_Clicked" />
+                    </StackLayout>
+                    <StackLayout
+                        Margin="40, 10, 10, 10"
+                        Orientation="Horizontal">
+                        <Image
+                            Margin="0,0,5,0"
+                            Source="menu-logout.png" />
+                        <Button
+                            x:Name="Logout"
+                            Text="Logout"
+                            TextColor="#a1a1b4"
+                            HorizontalOptions="Start"
+                            Clicked="Logout_Clicked" />
+                    </StackLayout>
+                </StackLayout>
+            </telerikPrimitives:RadSideDrawer.DrawerContent>
+        </telerikPrimitives:RadSideDrawer>
+    </ContentPage.Content>
+</ContentPage>

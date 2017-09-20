@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:YallaParkingMobile"
+    x:Class="YallaParkingMobile.SignupPage3"
+    NavigationPage.HasNavigationBar="False">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="*" />
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition
+                Width="*" />
+            <ColumnDefinition
+                Width="*" />
+            <ColumnDefinition
+                Width="*" />
+            <ColumnDefinition
+                Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Image
+            Source="car.png"
+            Grid.Row="2"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Grid.RowSpan="3"
+            Aspect="AspectFit" />
+
+        <ContentView
+            Padding="0,40,0,0"
+            Grid.Row="5"
+            Grid.Column="0"
+            Grid.ColumnSpan="4">
+            <Label
+                Style="{StaticResource Header}"
+                VerticalTextAlignment="Start"
+                Text="Park Your Car" />
+        </ContentView>
+
+        <Label            
+            Grid.Row="6"
+            Grid.Column="1"
+            Grid.ColumnSpan="2"
+            Text="With Yalla Parking, it really is that simple" />
+
+        <ContentView
+            Padding="20,0,0,20"
+            Grid.Row="8"
+            Grid.Column="0">
+            <Button
+                x:Name="SkipButton"
+                Clicked="SkipButton_Clicked"
+                Style="{StaticResource GreyTextButton}"
+                Text="Skip"
+                HorizontalOptions="End"
+                VerticalOptions="End" />
+        </ContentView>
+
+        <ContentView
+            Padding="0,0,20,20"
+            Grid.Row="8"
+            Grid.Column="3">
+            <Button
+                x:Name="NextButton"
+                Clicked="NextButton_Clicked"
+                Style="{StaticResource GreenTextButton}"
+                Text="Next"
+                HorizontalOptions="Start"
+                VerticalOptions="End"
+                TextColor="#5fd25f" />
+        </ContentView>
+
+    </Grid>
+
+</ContentPage>
