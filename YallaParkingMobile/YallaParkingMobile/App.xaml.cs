@@ -8,6 +8,8 @@ using System.Text;
 
 using Xamarin.Forms;
 using YallaParkingMobile.Utility;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Distribute;
 
 namespace YallaParkingMobile {
     public partial class App : Application {
@@ -36,7 +38,7 @@ namespace YallaParkingMobile {
         }
 
         protected override void OnStart() {
-            MobileCenter.Start("ios=cb01c0e7-1e13-4db0-a7ab-b6e6bfc6aea3;android=7543c5d7-d484-4a54-a528-26d0bb7744e3", typeof(Analytics), typeof(Crashes));
+            MobileCenter.Start("ios=cb01c0e7-1e13-4db0-a7ab-b6e6bfc6aea3;android=7543c5d7-d484-4a54-a528-26d0bb7744e3", typeof(Analytics), typeof(Crashes), typeof(Distribute));            
             Analytics.TrackEvent("App Started");
         }
 

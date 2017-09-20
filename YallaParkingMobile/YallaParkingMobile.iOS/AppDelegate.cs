@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using Foundation;
 using UIKit;
 using Xamarin.Forms;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Distribute;
 
 [assembly: ExportRenderer(typeof(Telerik.XamarinForms.Primitives.RadSideDrawer), typeof(Telerik.XamarinForms.PrimitivesRenderer.iOS.SideDrawerRenderer))]
 namespace YallaParkingMobile.iOS {
@@ -23,7 +24,11 @@ namespace YallaParkingMobile.iOS {
         public override bool FinishedLaunching(UIApplication app, NSDictionary options) {
             global::Xamarin.Forms.Forms.Init();            
             Xamarin.FormsMaps.Init();
-            LoadApplication(new App());
+
+            Distribute.DontCheckForUpdatesInDebug();
+            MobileCenter.Start("cb01c0e7-1e13-4db0-a7ab-b6e6bfc6aea3", typeof(Distribute));
+
+            LoadApplication(new App());            
 
             return base.FinishedLaunching(app, options);
         }
