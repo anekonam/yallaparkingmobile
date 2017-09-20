@@ -91,9 +91,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
-    <Reference Include="Telerik.Xamarin.Android.Chart, Version=2017.3.913.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.2017.3.913.3\lib\MonoAndroid10\Telerik.Xamarin.Android.Chart.dll</HintPath>
-    </Reference>
     <Reference Include="Telerik.Xamarin.Android.Common, Version=2017.3.913.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Telerik.UI.for.Xamarin.2017.3.913.3\lib\MonoAndroid10\Telerik.Xamarin.Android.Common.dll</HintPath>
     </Reference>
@@ -108,9 +105,6 @@
     </Reference>
     <Reference Include="Telerik.Xamarin.Android.Primitives, Version=2017.3.913.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Telerik.UI.for.Xamarin.2017.3.913.3\lib\MonoAndroid10\Telerik.Xamarin.Android.Primitives.dll</HintPath>
-    </Reference>
-    <Reference Include="Telerik.XamarinForms.Chart, Version=2017.3.913.234, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.2017.3.913.3\lib\MonoAndroid10\Telerik.XamarinForms.Chart.dll</HintPath>
     </Reference>
     <Reference Include="Telerik.XamarinForms.Common, Version=2017.3.913.234, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Telerik.UI.for.Xamarin.2017.3.913.3\lib\MonoAndroid10\Telerik.XamarinForms.Common.dll</HintPath>
@@ -196,7 +190,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
   </ItemGroup>

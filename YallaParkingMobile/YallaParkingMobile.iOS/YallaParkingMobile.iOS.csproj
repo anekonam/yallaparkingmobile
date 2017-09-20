@@ -156,9 +156,6 @@
     <Reference Include="Telerik.Xamarin.iOS, Version=2017.3.913.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Telerik.UI.for.Xamarin.2017.3.913.3\lib\xamarinios10\Telerik.Xamarin.iOS.dll</HintPath>
     </Reference>
-    <Reference Include="Telerik.XamarinForms.Chart, Version=2017.3.913.234, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Telerik.UI.for.Xamarin.2017.3.913.3\lib\xamarinios10\Telerik.XamarinForms.Chart.dll</HintPath>
-    </Reference>
     <Reference Include="Telerik.XamarinForms.Common, Version=2017.3.913.234, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Telerik.UI.for.Xamarin.2017.3.913.3\lib\xamarinios10\Telerik.XamarinForms.Common.dll</HintPath>
     </Reference>
