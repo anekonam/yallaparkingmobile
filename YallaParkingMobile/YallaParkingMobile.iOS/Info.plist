@@ -10,8 +10,8 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
@@ -66,6 +66,6 @@
 				<string>mobilecenter-cb01c0e7-1e13-4db0-a7ab-b6e6bfc6aea3</string>
 			</array>
 		</dict>
-	</array>	
+	</array>
 </dict>
 </plist>
