@@ -17,9 +17,7 @@ namespace YallaParkingMobile {
     public partial class Profile : ContentPage {        
         public Profile() {
             InitializeComponent();
-            Analytics.TrackEvent("Viewing Profile Page");
-
-            DisplayAlert("Profile Error", "Unable to retrieve your profile details, please check your internet connection and try again", "OK").ConfigureAwait(false);
+            Analytics.TrackEvent("Viewing Profile Page");            
         }       
 
         private void Button_Clicked(object sender, EventArgs e) {
@@ -35,6 +33,7 @@ namespace YallaParkingMobile {
         }
 
         private async void MyProfile_Clicked(object sender, EventArgs e) {
+            await DisplayAlert("Profile Error", "Unable to retrieve your profile details, please check your internet connection and try again", "OK").ConfigureAwait(false);
             await Navigation.PushAsync(new Profile());
         }
 
