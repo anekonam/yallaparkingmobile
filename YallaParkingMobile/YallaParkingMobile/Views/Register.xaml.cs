@@ -45,7 +45,7 @@ namespace YallaParkingMobile {
                 EmailAddress = this.EmailAddress.Text,
                 Password = this.Password.Text,
                 ConfirmPassword = this.ConfirmPassword.Text,
-                PhoneNumber = this.PhoneNumber.Text
+                PhoneNumber = this.PhoneNumberPrefix.Text + this.PhoneNumber.Text
             };
 
             var success = await ServiceUtility.Register(model);
