@@ -76,13 +76,21 @@
                 Keyboard="Email"
                 x:Name="EmailAddress" />
 
-            <control:BorderlessEntry
+            <StackLayout
                 Grid.Row="4"
                 Grid.Column="1"
-                Grid.ColumnSpan="3"
+                Orientation="Horizontal"
+                Grid.ColumnSpan="3">
+            <control:BorderlessEntry             
+                IsEnabled="False"
+                Text="+971"
+                Keyboard="Telephone"
+                x:Name="PhoneNumberPrefix" />
+            <control:BorderlessEntry              
                 Placeholder="Phone Number"
                 Keyboard="Telephone"
                 x:Name="PhoneNumber" />
+            </StackLayout>
 
             <control:BorderlessEntry
                 Grid.Row="5"

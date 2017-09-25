@@ -34,7 +34,7 @@ namespace YallaParkingMobile {
         }
 				
         async void ToolbarItem_Activated(object sender, EventArgs e) {
-            await Navigation.PushAsync(new Login());
+            await Navigation.PushAsync(new Home());
         }
     }
 }
