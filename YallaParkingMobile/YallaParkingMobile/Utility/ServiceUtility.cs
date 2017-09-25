@@ -12,11 +12,7 @@ namespace YallaParkingMobile.Utility {
 
         private static HttpClient client;
 
-#if DEBUG
         private static string webUrl = "http://yallaparking-new.insiso.co.uk";
-#else
-        private static string webUrl = Settings.Default.WebUrl;        
-#endif
         private static void InitHttpClient() {
             client = new HttpClient(new HttpClientHandler {
                 ClientCertificateOptions = ClientCertificateOption.Automatic                
