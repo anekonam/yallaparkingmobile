@@ -26,2087 +26,21 @@ namespace YallaParkingMobile.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Animation.abc_fade_in = global::YallaParkingMobile.Droid.Resource.Animation.abc_fade_in;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Animation.abc_fade_out = global::YallaParkingMobile.Droid.Resource.Animation.abc_fade_out;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Animation.abc_grow_fade_in_from_bottom = global::YallaParkingMobile.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Animation.abc_popup_enter = global::YallaParkingMobile.Droid.Resource.Animation.abc_popup_enter;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Animation.abc_popup_exit = global::YallaParkingMobile.Droid.Resource.Animation.abc_popup_exit;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Animation.abc_shrink_fade_out_from_bottom = global::YallaParkingMobile.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Animation.abc_slide_in_bottom = global::YallaParkingMobile.Droid.Resource.Animation.abc_slide_in_bottom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Animation.abc_slide_in_top = global::YallaParkingMobile.Droid.Resource.Animation.abc_slide_in_top;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Animation.abc_slide_out_bottom = global::YallaParkingMobile.Droid.Resource.Animation.abc_slide_out_bottom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Animation.abc_slide_out_top = global::YallaParkingMobile.Droid.Resource.Animation.abc_slide_out_top;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Animation.design_bottom_sheet_slide_in = global::YallaParkingMobile.Droid.Resource.Animation.design_bottom_sheet_slide_in;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Animation.design_bottom_sheet_slide_out = global::YallaParkingMobile.Droid.Resource.Animation.design_bottom_sheet_slide_out;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Animation.design_fab_in = global::YallaParkingMobile.Droid.Resource.Animation.design_fab_in;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Animation.design_fab_out = global::YallaParkingMobile.Droid.Resource.Animation.design_fab_out;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Animation.design_snackbar_in = global::YallaParkingMobile.Droid.Resource.Animation.design_snackbar_in;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Animation.design_snackbar_out = global::YallaParkingMobile.Droid.Resource.Animation.design_snackbar_out;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Animation.drawer_slide_in_top = global::YallaParkingMobile.Droid.Resource.Animation.drawer_slide_in_top;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Animation.drawer_slide_out_top = global::YallaParkingMobile.Droid.Resource.Animation.drawer_slide_out_top;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.AreaSeriesStyle = global::YallaParkingMobile.Droid.Resource.Attribute.AreaSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.AxisStyle = global::YallaParkingMobile.Droid.Resource.Attribute.AxisStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.BarSeriesStyle = global::YallaParkingMobile.Droid.Resource.Attribute.BarSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.CartesianAxisStyle = global::YallaParkingMobile.Droid.Resource.Attribute.CartesianAxisStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.CartesianCustomAnnotationStyle = global::YallaParkingMobile.Droid.Resource.Attribute.CartesianCustomAnnotationStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.CartesianPlotBandAnnotationStyle = global::YallaParkingMobile.Droid.Resource.Attribute.CartesianPlotBandAnnotationStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.CartesianStrokedAnnotationStyle = global::YallaParkingMobile.Droid.Resource.Attribute.CartesianStrokedAnnotationStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.CategoricalAxisStyle = global::YallaParkingMobile.Droid.Resource.Attribute.CategoricalAxisStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.CategoricalSeriesStyle = global::YallaParkingMobile.Droid.Resource.Attribute.CategoricalSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.CategoricalStrokedSeriesStyle = global::YallaParkingMobile.Droid.Resource.Attribute.CategoricalStrokedSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.ChartAnnotationStyle = global::YallaParkingMobile.Droid.Resource.Attribute.ChartAnnotationStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.ChartSeriesStyle = global::YallaParkingMobile.Droid.Resource.Attribute.ChartSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.DateTimeCategoricalAxisStyle = global::YallaParkingMobile.Droid.Resource.Attribute.DateTimeCategoricalAxisStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.DateTimeContinuousAxisStyle = global::YallaParkingMobile.Droid.Resource.Attribute.DateTimeContinuousAxisStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.LineAxisStyle = global::YallaParkingMobile.Droid.Resource.Attribute.LineAxisStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.MediaRouteControllerWindowBackground = global::YallaParkingMobile.Droid.Resource.Attribute.MediaRouteControllerWindowBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.RadChartBaseStyle = global::YallaParkingMobile.Droid.Resource.Attribute.RadChartBaseStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.RangeBarSeriesStyle = global::YallaParkingMobile.Droid.Resource.Attribute.RangeBarSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.TestBarSeriesStyle = global::YallaParkingMobile.Droid.Resource.Attribute.TestBarSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionBarDivider = global::YallaParkingMobile.Droid.Resource.Attribute.actionBarDivider;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionBarItemBackground = global::YallaParkingMobile.Droid.Resource.Attribute.actionBarItemBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionBarPopupTheme = global::YallaParkingMobile.Droid.Resource.Attribute.actionBarPopupTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionBarSize = global::YallaParkingMobile.Droid.Resource.Attribute.actionBarSize;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionBarSplitStyle = global::YallaParkingMobile.Droid.Resource.Attribute.actionBarSplitStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionBarStyle = global::YallaParkingMobile.Droid.Resource.Attribute.actionBarStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionBarTabBarStyle = global::YallaParkingMobile.Droid.Resource.Attribute.actionBarTabBarStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionBarTabStyle = global::YallaParkingMobile.Droid.Resource.Attribute.actionBarTabStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionBarTabTextStyle = global::YallaParkingMobile.Droid.Resource.Attribute.actionBarTabTextStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionBarTheme = global::YallaParkingMobile.Droid.Resource.Attribute.actionBarTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionBarWidgetTheme = global::YallaParkingMobile.Droid.Resource.Attribute.actionBarWidgetTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionButtonStyle = global::YallaParkingMobile.Droid.Resource.Attribute.actionButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionDropDownStyle = global::YallaParkingMobile.Droid.Resource.Attribute.actionDropDownStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionLayout = global::YallaParkingMobile.Droid.Resource.Attribute.actionLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionMenuTextAppearance = global::YallaParkingMobile.Droid.Resource.Attribute.actionMenuTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionMenuTextColor = global::YallaParkingMobile.Droid.Resource.Attribute.actionMenuTextColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionModeBackground = global::YallaParkingMobile.Droid.Resource.Attribute.actionModeBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionModeCloseButtonStyle = global::YallaParkingMobile.Droid.Resource.Attribute.actionModeCloseButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionModeCloseDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.actionModeCloseDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionModeCopyDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.actionModeCopyDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionModeCutDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.actionModeCutDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionModeFindDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.actionModeFindDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionModePasteDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.actionModePasteDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionModePopupWindowStyle = global::YallaParkingMobile.Droid.Resource.Attribute.actionModePopupWindowStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionModeSelectAllDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.actionModeSelectAllDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionModeShareDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.actionModeShareDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionModeSplitBackground = global::YallaParkingMobile.Droid.Resource.Attribute.actionModeSplitBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionModeStyle = global::YallaParkingMobile.Droid.Resource.Attribute.actionModeStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionModeWebSearchDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.actionModeWebSearchDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionOverflowButtonStyle = global::YallaParkingMobile.Droid.Resource.Attribute.actionOverflowButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionOverflowMenuStyle = global::YallaParkingMobile.Droid.Resource.Attribute.actionOverflowMenuStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionProviderClass = global::YallaParkingMobile.Droid.Resource.Attribute.actionProviderClass;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.actionViewClass = global::YallaParkingMobile.Droid.Resource.Attribute.actionViewClass;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.activityChooserViewStyle = global::YallaParkingMobile.Droid.Resource.Attribute.activityChooserViewStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.alertDialogButtonGroupStyle = global::YallaParkingMobile.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.alertDialogCenterButtons = global::YallaParkingMobile.Droid.Resource.Attribute.alertDialogCenterButtons;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.alertDialogStyle = global::YallaParkingMobile.Droid.Resource.Attribute.alertDialogStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.alertDialogTheme = global::YallaParkingMobile.Droid.Resource.Attribute.alertDialogTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.allowStacking = global::YallaParkingMobile.Droid.Resource.Attribute.allowStacking;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.applyDefaultPalette = global::YallaParkingMobile.Droid.Resource.Attribute.applyDefaultPalette;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.areBarsRounded = global::YallaParkingMobile.Droid.Resource.Attribute.areBarsRounded;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.arrowHeadLength = global::YallaParkingMobile.Droid.Resource.Attribute.arrowHeadLength;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.arrowShaftLength = global::YallaParkingMobile.Droid.Resource.Attribute.arrowShaftLength;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.autoCompleteTextViewStyle = global::YallaParkingMobile.Droid.Resource.Attribute.autoCompleteTextViewStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.axisLabelFitMode = global::YallaParkingMobile.Droid.Resource.Attribute.axisLabelFitMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.axisLastLabelVisibility = global::YallaParkingMobile.Droid.Resource.Attribute.axisLastLabelVisibility;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.axisTitle = global::YallaParkingMobile.Droid.Resource.Attribute.axisTitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.background = global::YallaParkingMobile.Droid.Resource.Attribute.background;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.backgroundSplit = global::YallaParkingMobile.Droid.Resource.Attribute.backgroundSplit;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.backgroundStacked = global::YallaParkingMobile.Droid.Resource.Attribute.backgroundStacked;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.backgroundTint = global::YallaParkingMobile.Droid.Resource.Attribute.backgroundTint;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.backgroundTintMode = global::YallaParkingMobile.Droid.Resource.Attribute.backgroundTintMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.barLength = global::YallaParkingMobile.Droid.Resource.Attribute.barLength;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.behavior_hideable = global::YallaParkingMobile.Droid.Resource.Attribute.behavior_hideable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.behavior_overlapTop = global::YallaParkingMobile.Droid.Resource.Attribute.behavior_overlapTop;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.behavior_peekHeight = global::YallaParkingMobile.Droid.Resource.Attribute.behavior_peekHeight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.borderWidth = global::YallaParkingMobile.Droid.Resource.Attribute.borderWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.borderlessButtonStyle = global::YallaParkingMobile.Droid.Resource.Attribute.borderlessButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.bottomSheetDialogTheme = global::YallaParkingMobile.Droid.Resource.Attribute.bottomSheetDialogTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.bottomSheetStyle = global::YallaParkingMobile.Droid.Resource.Attribute.bottomSheetStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.buttonBarButtonStyle = global::YallaParkingMobile.Droid.Resource.Attribute.buttonBarButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.buttonBarNegativeButtonStyle = global::YallaParkingMobile.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.buttonBarNeutralButtonStyle = global::YallaParkingMobile.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.buttonBarPositiveButtonStyle = global::YallaParkingMobile.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.buttonBarStyle = global::YallaParkingMobile.Droid.Resource.Attribute.buttonBarStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.buttonPanelSideLayout = global::YallaParkingMobile.Droid.Resource.Attribute.buttonPanelSideLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.buttonStyle = global::YallaParkingMobile.Droid.Resource.Attribute.buttonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.buttonStyleSmall = global::YallaParkingMobile.Droid.Resource.Attribute.buttonStyleSmall;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.buttonTint = global::YallaParkingMobile.Droid.Resource.Attribute.buttonTint;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.buttonTintMode = global::YallaParkingMobile.Droid.Resource.Attribute.buttonTintMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.cardBackgroundColor = global::YallaParkingMobile.Droid.Resource.Attribute.cardBackgroundColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.cardCornerRadius = global::YallaParkingMobile.Droid.Resource.Attribute.cardCornerRadius;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.cardElevation = global::YallaParkingMobile.Droid.Resource.Attribute.cardElevation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.cardMaxElevation = global::YallaParkingMobile.Droid.Resource.Attribute.cardMaxElevation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.cardPreventCornerOverlap = global::YallaParkingMobile.Droid.Resource.Attribute.cardPreventCornerOverlap;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.cardUseCompatPadding = global::YallaParkingMobile.Droid.Resource.Attribute.cardUseCompatPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.chartZoom = global::YallaParkingMobile.Droid.Resource.Attribute.chartZoom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.checkboxStyle = global::YallaParkingMobile.Droid.Resource.Attribute.checkboxStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.checkedTextViewStyle = global::YallaParkingMobile.Droid.Resource.Attribute.checkedTextViewStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.clipToBounds = global::YallaParkingMobile.Droid.Resource.Attribute.clipToBounds;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.clipToPlotArea = global::YallaParkingMobile.Droid.Resource.Attribute.clipToPlotArea;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.closeIcon = global::YallaParkingMobile.Droid.Resource.Attribute.closeIcon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.closeItemLayout = global::YallaParkingMobile.Droid.Resource.Attribute.closeItemLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.collapseContentDescription = global::YallaParkingMobile.Droid.Resource.Attribute.collapseContentDescription;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.collapseIcon = global::YallaParkingMobile.Droid.Resource.Attribute.collapseIcon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.collapsedTitleGravity = global::YallaParkingMobile.Droid.Resource.Attribute.collapsedTitleGravity;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.collapsedTitleTextAppearance = global::YallaParkingMobile.Droid.Resource.Attribute.collapsedTitleTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.color = global::YallaParkingMobile.Droid.Resource.Attribute.color;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.colorAccent = global::YallaParkingMobile.Droid.Resource.Attribute.colorAccent;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.colorButtonNormal = global::YallaParkingMobile.Droid.Resource.Attribute.colorButtonNormal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.colorControlActivated = global::YallaParkingMobile.Droid.Resource.Attribute.colorControlActivated;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.colorControlHighlight = global::YallaParkingMobile.Droid.Resource.Attribute.colorControlHighlight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.colorControlNormal = global::YallaParkingMobile.Droid.Resource.Attribute.colorControlNormal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.colorPrimary = global::YallaParkingMobile.Droid.Resource.Attribute.colorPrimary;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.colorPrimaryDark = global::YallaParkingMobile.Droid.Resource.Attribute.colorPrimaryDark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.colorSwitchThumbNormal = global::YallaParkingMobile.Droid.Resource.Attribute.colorSwitchThumbNormal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.combineMode = global::YallaParkingMobile.Droid.Resource.Attribute.combineMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.commitIcon = global::YallaParkingMobile.Droid.Resource.Attribute.commitIcon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.content = global::YallaParkingMobile.Droid.Resource.Attribute.content;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.contentInsetEnd = global::YallaParkingMobile.Droid.Resource.Attribute.contentInsetEnd;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.contentInsetLeft = global::YallaParkingMobile.Droid.Resource.Attribute.contentInsetLeft;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.contentInsetRight = global::YallaParkingMobile.Droid.Resource.Attribute.contentInsetRight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.contentInsetStart = global::YallaParkingMobile.Droid.Resource.Attribute.contentInsetStart;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.contentPadding = global::YallaParkingMobile.Droid.Resource.Attribute.contentPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.contentPaddingBottom = global::YallaParkingMobile.Droid.Resource.Attribute.contentPaddingBottom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.contentPaddingLeft = global::YallaParkingMobile.Droid.Resource.Attribute.contentPaddingLeft;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.contentPaddingRight = global::YallaParkingMobile.Droid.Resource.Attribute.contentPaddingRight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.contentPaddingTop = global::YallaParkingMobile.Droid.Resource.Attribute.contentPaddingTop;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.contentScrim = global::YallaParkingMobile.Droid.Resource.Attribute.contentScrim;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.controlBackground = global::YallaParkingMobile.Droid.Resource.Attribute.controlBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.counterEnabled = global::YallaParkingMobile.Droid.Resource.Attribute.counterEnabled;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.counterMaxLength = global::YallaParkingMobile.Droid.Resource.Attribute.counterMaxLength;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.counterOverflowTextAppearance = global::YallaParkingMobile.Droid.Resource.Attribute.counterOverflowTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.counterTextAppearance = global::YallaParkingMobile.Droid.Resource.Attribute.counterTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.customNavigationLayout = global::YallaParkingMobile.Droid.Resource.Attribute.customNavigationLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.dateFormat = global::YallaParkingMobile.Droid.Resource.Attribute.dateFormat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.dateTimeComponent = global::YallaParkingMobile.Droid.Resource.Attribute.dateTimeComponent;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.defaultQueryHint = global::YallaParkingMobile.Droid.Resource.Attribute.defaultQueryHint;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.dialogPreferredPadding = global::YallaParkingMobile.Droid.Resource.Attribute.dialogPreferredPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.dialogTheme = global::YallaParkingMobile.Droid.Resource.Attribute.dialogTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.displayOptions = global::YallaParkingMobile.Droid.Resource.Attribute.displayOptions;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.divider = global::YallaParkingMobile.Droid.Resource.Attribute.divider;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.dividerHorizontal = global::YallaParkingMobile.Droid.Resource.Attribute.dividerHorizontal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.dividerPadding = global::YallaParkingMobile.Droid.Resource.Attribute.dividerPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.dividerVertical = global::YallaParkingMobile.Droid.Resource.Attribute.dividerVertical;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.drawableSize = global::YallaParkingMobile.Droid.Resource.Attribute.drawableSize;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.drawerArrowStyle = global::YallaParkingMobile.Droid.Resource.Attribute.drawerArrowStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.dropDownListViewStyle = global::YallaParkingMobile.Droid.Resource.Attribute.dropDownListViewStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.dropdownListPreferredItemHeight = global::YallaParkingMobile.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.editTextBackground = global::YallaParkingMobile.Droid.Resource.Attribute.editTextBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.editTextColor = global::YallaParkingMobile.Droid.Resource.Attribute.editTextColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.editTextStyle = global::YallaParkingMobile.Droid.Resource.Attribute.editTextStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.elevation = global::YallaParkingMobile.Droid.Resource.Attribute.elevation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.emptyContent = global::YallaParkingMobile.Droid.Resource.Attribute.emptyContent;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.errorEnabled = global::YallaParkingMobile.Droid.Resource.Attribute.errorEnabled;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.errorTextAppearance = global::YallaParkingMobile.Droid.Resource.Attribute.errorTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.expandActivityOverflowButtonDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.expanded = global::YallaParkingMobile.Droid.Resource.Attribute.expanded;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.expandedTitleGravity = global::YallaParkingMobile.Droid.Resource.Attribute.expandedTitleGravity;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.expandedTitleMargin = global::YallaParkingMobile.Droid.Resource.Attribute.expandedTitleMargin;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.expandedTitleMarginBottom = global::YallaParkingMobile.Droid.Resource.Attribute.expandedTitleMarginBottom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.expandedTitleMarginEnd = global::YallaParkingMobile.Droid.Resource.Attribute.expandedTitleMarginEnd;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.expandedTitleMarginStart = global::YallaParkingMobile.Droid.Resource.Attribute.expandedTitleMarginStart;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.expandedTitleMarginTop = global::YallaParkingMobile.Droid.Resource.Attribute.expandedTitleMarginTop;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.expandedTitleTextAppearance = global::YallaParkingMobile.Droid.Resource.Attribute.expandedTitleTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.externalRouteEnabledDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.externalRouteEnabledDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.fabSize = global::YallaParkingMobile.Droid.Resource.Attribute.fabSize;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.fillColor = global::YallaParkingMobile.Droid.Resource.Attribute.fillColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.fillViewport = global::YallaParkingMobile.Droid.Resource.Attribute.fillViewport;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.foregroundInsidePadding = global::YallaParkingMobile.Droid.Resource.Attribute.foregroundInsidePadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.gapBetweenBars = global::YallaParkingMobile.Droid.Resource.Attribute.gapBetweenBars;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.gapLength = global::YallaParkingMobile.Droid.Resource.Attribute.gapLength;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.goIcon = global::YallaParkingMobile.Droid.Resource.Attribute.goIcon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.headerLayout = global::YallaParkingMobile.Droid.Resource.Attribute.headerLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.height = global::YallaParkingMobile.Droid.Resource.Attribute.height;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.hideOnContentScroll = global::YallaParkingMobile.Droid.Resource.Attribute.hideOnContentScroll;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.hintAnimationEnabled = global::YallaParkingMobile.Droid.Resource.Attribute.hintAnimationEnabled;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.hintEnabled = global::YallaParkingMobile.Droid.Resource.Attribute.hintEnabled;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.hintTextAppearance = global::YallaParkingMobile.Droid.Resource.Attribute.hintTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.homeAsUpIndicator = global::YallaParkingMobile.Droid.Resource.Attribute.homeAsUpIndicator;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.homeLayout = global::YallaParkingMobile.Droid.Resource.Attribute.homeLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.horizontalAlignment = global::YallaParkingMobile.Droid.Resource.Attribute.horizontalAlignment;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.horizontalLocation = global::YallaParkingMobile.Droid.Resource.Attribute.horizontalLocation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.horizontalOffset = global::YallaParkingMobile.Droid.Resource.Attribute.horizontalOffset;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.icon = global::YallaParkingMobile.Droid.Resource.Attribute.icon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.iconifiedByDefault = global::YallaParkingMobile.Droid.Resource.Attribute.iconifiedByDefault;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.imageButtonStyle = global::YallaParkingMobile.Droid.Resource.Attribute.imageButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.indeterminateProgressStyle = global::YallaParkingMobile.Droid.Resource.Attribute.indeterminateProgressStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.initialActivityCount = global::YallaParkingMobile.Droid.Resource.Attribute.initialActivityCount;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.insetForeground = global::YallaParkingMobile.Droid.Resource.Attribute.insetForeground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.isLightTheme = global::YallaParkingMobile.Droid.Resource.Attribute.isLightTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.itemBackground = global::YallaParkingMobile.Droid.Resource.Attribute.itemBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.itemIconTint = global::YallaParkingMobile.Droid.Resource.Attribute.itemIconTint;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.itemPadding = global::YallaParkingMobile.Droid.Resource.Attribute.itemPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.itemTextAppearance = global::YallaParkingMobile.Droid.Resource.Attribute.itemTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.itemTextColor = global::YallaParkingMobile.Droid.Resource.Attribute.itemTextColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.keylines = global::YallaParkingMobile.Droid.Resource.Attribute.keylines;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.label = global::YallaParkingMobile.Droid.Resource.Attribute.label;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.labelColor = global::YallaParkingMobile.Droid.Resource.Attribute.labelColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.labelFont = global::YallaParkingMobile.Droid.Resource.Attribute.labelFont;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.labelFontStyle = global::YallaParkingMobile.Droid.Resource.Attribute.labelFontStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.labelFormat = global::YallaParkingMobile.Droid.Resource.Attribute.labelFormat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.labelInterval = global::YallaParkingMobile.Droid.Resource.Attribute.labelInterval;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.labelMargin = global::YallaParkingMobile.Droid.Resource.Attribute.labelMargin;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.labelOffset = global::YallaParkingMobile.Droid.Resource.Attribute.labelOffset;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.labelRotationAngle = global::YallaParkingMobile.Droid.Resource.Attribute.labelRotationAngle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.labelSize = global::YallaParkingMobile.Droid.Resource.Attribute.labelSize;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.layout = global::YallaParkingMobile.Droid.Resource.Attribute.layout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.layoutManager = global::YallaParkingMobile.Droid.Resource.Attribute.layoutManager;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.layout_anchor = global::YallaParkingMobile.Droid.Resource.Attribute.layout_anchor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.layout_anchorGravity = global::YallaParkingMobile.Droid.Resource.Attribute.layout_anchorGravity;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.layout_behavior = global::YallaParkingMobile.Droid.Resource.Attribute.layout_behavior;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.layout_collapseMode = global::YallaParkingMobile.Droid.Resource.Attribute.layout_collapseMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.layout_collapseParallaxMultiplier = global::YallaParkingMobile.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.layout_keyline = global::YallaParkingMobile.Droid.Resource.Attribute.layout_keyline;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.layout_scrollFlags = global::YallaParkingMobile.Droid.Resource.Attribute.layout_scrollFlags;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.layout_scrollInterpolator = global::YallaParkingMobile.Droid.Resource.Attribute.layout_scrollInterpolator;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.lineColor = global::YallaParkingMobile.Droid.Resource.Attribute.lineColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.lineThickness = global::YallaParkingMobile.Droid.Resource.Attribute.lineThickness;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.listChoiceBackgroundIndicator = global::YallaParkingMobile.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.listDividerAlertDialog = global::YallaParkingMobile.Droid.Resource.Attribute.listDividerAlertDialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.listItemLayout = global::YallaParkingMobile.Droid.Resource.Attribute.listItemLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.listLayout = global::YallaParkingMobile.Droid.Resource.Attribute.listLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.listPopupWindowStyle = global::YallaParkingMobile.Droid.Resource.Attribute.listPopupWindowStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.listPreferredItemHeight = global::YallaParkingMobile.Droid.Resource.Attribute.listPreferredItemHeight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.listPreferredItemHeightLarge = global::YallaParkingMobile.Droid.Resource.Attribute.listPreferredItemHeightLarge;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.listPreferredItemHeightSmall = global::YallaParkingMobile.Droid.Resource.Attribute.listPreferredItemHeightSmall;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.listPreferredItemPaddingLeft = global::YallaParkingMobile.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.listPreferredItemPaddingRight = global::YallaParkingMobile.Droid.Resource.Attribute.listPreferredItemPaddingRight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.logo = global::YallaParkingMobile.Droid.Resource.Attribute.logo;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.logoDescription = global::YallaParkingMobile.Droid.Resource.Attribute.logoDescription;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.majorStep = global::YallaParkingMobile.Droid.Resource.Attribute.majorStep;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.majorStepUnit = global::YallaParkingMobile.Droid.Resource.Attribute.majorStepUnit;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.majorTickInterval = global::YallaParkingMobile.Droid.Resource.Attribute.majorTickInterval;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.majorTickOffset = global::YallaParkingMobile.Droid.Resource.Attribute.majorTickOffset;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.maxActionInlineWidth = global::YallaParkingMobile.Droid.Resource.Attribute.maxActionInlineWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.maxButtonHeight = global::YallaParkingMobile.Droid.Resource.Attribute.maxButtonHeight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.maxZoom = global::YallaParkingMobile.Droid.Resource.Attribute.maxZoom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.maximumTicks = global::YallaParkingMobile.Droid.Resource.Attribute.maximumTicks;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.measureWithLargestChild = global::YallaParkingMobile.Droid.Resource.Attribute.measureWithLargestChild;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRouteAudioTrackDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRouteBluetoothIconDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRouteBluetoothIconDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRouteButtonStyle = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRouteButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRouteCastDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRouteCastDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRouteChooserPrimaryTextStyle = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRouteChooserPrimaryTextStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRouteChooserSecondaryTextStyle = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRouteChooserSecondaryTextStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRouteCloseDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRouteCloseDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRouteCollapseGroupDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRouteCollapseGroupDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRouteConnectingDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRouteConnectingDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRouteControllerPrimaryTextStyle = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRouteControllerPrimaryTextStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRouteControllerSecondaryTextStyle = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRouteControllerSecondaryTextStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRouteControllerTitleTextStyle = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRouteControllerTitleTextStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRouteDefaultIconDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRouteExpandGroupDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRouteExpandGroupDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRouteOffDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRouteOffDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRouteOnDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRouteOnDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRoutePauseDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRoutePauseDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRoutePlayDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRoutePlayDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRouteSpeakerIconDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.mediaRouteTvIconDrawable = global::YallaParkingMobile.Droid.Resource.Attribute.mediaRouteTvIconDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.menu = global::YallaParkingMobile.Droid.Resource.Attribute.menu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.multiChoiceItemLayout = global::YallaParkingMobile.Droid.Resource.Attribute.multiChoiceItemLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.navigationContentDescription = global::YallaParkingMobile.Droid.Resource.Attribute.navigationContentDescription;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.navigationIcon = global::YallaParkingMobile.Droid.Resource.Attribute.navigationIcon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.navigationMode = global::YallaParkingMobile.Droid.Resource.Attribute.navigationMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.overlapAnchor = global::YallaParkingMobile.Droid.Resource.Attribute.overlapAnchor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.paddingEnd = global::YallaParkingMobile.Droid.Resource.Attribute.paddingEnd;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.paddingStart = global::YallaParkingMobile.Droid.Resource.Attribute.paddingStart;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.palette = global::YallaParkingMobile.Droid.Resource.Attribute.palette;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.pan = global::YallaParkingMobile.Droid.Resource.Attribute.pan;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.panelBackground = global::YallaParkingMobile.Droid.Resource.Attribute.panelBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.panelMenuListTheme = global::YallaParkingMobile.Droid.Resource.Attribute.panelMenuListTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.panelMenuListWidth = global::YallaParkingMobile.Droid.Resource.Attribute.panelMenuListWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.plotMode = global::YallaParkingMobile.Droid.Resource.Attribute.plotMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.pointerFill = global::YallaParkingMobile.Droid.Resource.Attribute.pointerFill;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.pointerMargin = global::YallaParkingMobile.Droid.Resource.Attribute.pointerMargin;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.pointerSize = global::YallaParkingMobile.Droid.Resource.Attribute.pointerSize;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.popupMenuStyle = global::YallaParkingMobile.Droid.Resource.Attribute.popupMenuStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.popupTheme = global::YallaParkingMobile.Droid.Resource.Attribute.popupTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.popupWindowStyle = global::YallaParkingMobile.Droid.Resource.Attribute.popupWindowStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.preserveIconSpacing = global::YallaParkingMobile.Droid.Resource.Attribute.preserveIconSpacing;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.pressedTranslationZ = global::YallaParkingMobile.Droid.Resource.Attribute.pressedTranslationZ;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.progressBarPadding = global::YallaParkingMobile.Droid.Resource.Attribute.progressBarPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.progressBarStyle = global::YallaParkingMobile.Droid.Resource.Attribute.progressBarStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.queryBackground = global::YallaParkingMobile.Droid.Resource.Attribute.queryBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.queryHint = global::YallaParkingMobile.Droid.Resource.Attribute.queryHint;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.radScrollViewStyle = global::YallaParkingMobile.Droid.Resource.Attribute.radScrollViewStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.radioButtonStyle = global::YallaParkingMobile.Droid.Resource.Attribute.radioButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.ratingBarStyle = global::YallaParkingMobile.Droid.Resource.Attribute.ratingBarStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.ratingBarStyleIndicator = global::YallaParkingMobile.Droid.Resource.Attribute.ratingBarStyleIndicator;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.ratingBarStyleSmall = global::YallaParkingMobile.Droid.Resource.Attribute.ratingBarStyleSmall;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.reverseLayout = global::YallaParkingMobile.Droid.Resource.Attribute.reverseLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.rippleColor = global::YallaParkingMobile.Droid.Resource.Attribute.rippleColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.roundBarsRadius = global::YallaParkingMobile.Droid.Resource.Attribute.roundBarsRadius;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.scrollMode = global::YallaParkingMobile.Droid.Resource.Attribute.scrollMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.searchHintIcon = global::YallaParkingMobile.Droid.Resource.Attribute.searchHintIcon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.searchIcon = global::YallaParkingMobile.Droid.Resource.Attribute.searchIcon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.searchViewStyle = global::YallaParkingMobile.Droid.Resource.Attribute.searchViewStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.seekBarStyle = global::YallaParkingMobile.Droid.Resource.Attribute.seekBarStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.selectableItemBackground = global::YallaParkingMobile.Droid.Resource.Attribute.selectableItemBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.selectableItemBackgroundBorderless = global::YallaParkingMobile.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.showAsAction = global::YallaParkingMobile.Droid.Resource.Attribute.showAsAction;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.showDividers = global::YallaParkingMobile.Droid.Resource.Attribute.showDividers;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.showLabels = global::YallaParkingMobile.Droid.Resource.Attribute.showLabels;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.showText = global::YallaParkingMobile.Droid.Resource.Attribute.showText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.singleChoiceItemLayout = global::YallaParkingMobile.Droid.Resource.Attribute.singleChoiceItemLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.spanCount = global::YallaParkingMobile.Droid.Resource.Attribute.spanCount;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.spinBars = global::YallaParkingMobile.Droid.Resource.Attribute.spinBars;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.spinnerDropDownItemStyle = global::YallaParkingMobile.Droid.Resource.Attribute.spinnerDropDownItemStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.spinnerStyle = global::YallaParkingMobile.Droid.Resource.Attribute.spinnerStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.splitTrack = global::YallaParkingMobile.Droid.Resource.Attribute.splitTrack;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.srcCompat = global::YallaParkingMobile.Droid.Resource.Attribute.srcCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.stackFromEnd = global::YallaParkingMobile.Droid.Resource.Attribute.stackFromEnd;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.state_above_anchor = global::YallaParkingMobile.Droid.Resource.Attribute.state_above_anchor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.statusBarBackground = global::YallaParkingMobile.Droid.Resource.Attribute.statusBarBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.statusBarScrim = global::YallaParkingMobile.Droid.Resource.Attribute.statusBarScrim;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.strokeColor = global::YallaParkingMobile.Droid.Resource.Attribute.strokeColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.strokeWidth = global::YallaParkingMobile.Droid.Resource.Attribute.strokeWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.submitBackground = global::YallaParkingMobile.Droid.Resource.Attribute.submitBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.subtitle = global::YallaParkingMobile.Droid.Resource.Attribute.subtitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.subtitleTextAppearance = global::YallaParkingMobile.Droid.Resource.Attribute.subtitleTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.subtitleTextColor = global::YallaParkingMobile.Droid.Resource.Attribute.subtitleTextColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.subtitleTextStyle = global::YallaParkingMobile.Droid.Resource.Attribute.subtitleTextStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.suggestionRowLayout = global::YallaParkingMobile.Droid.Resource.Attribute.suggestionRowLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.switchMinWidth = global::YallaParkingMobile.Droid.Resource.Attribute.switchMinWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.switchPadding = global::YallaParkingMobile.Droid.Resource.Attribute.switchPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.switchStyle = global::YallaParkingMobile.Droid.Resource.Attribute.switchStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.switchTextAppearance = global::YallaParkingMobile.Droid.Resource.Attribute.switchTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.tabBackground = global::YallaParkingMobile.Droid.Resource.Attribute.tabBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.tabContentStart = global::YallaParkingMobile.Droid.Resource.Attribute.tabContentStart;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.tabGravity = global::YallaParkingMobile.Droid.Resource.Attribute.tabGravity;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.tabIndicatorColor = global::YallaParkingMobile.Droid.Resource.Attribute.tabIndicatorColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.tabIndicatorHeight = global::YallaParkingMobile.Droid.Resource.Attribute.tabIndicatorHeight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.tabMaxWidth = global::YallaParkingMobile.Droid.Resource.Attribute.tabMaxWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.tabMinWidth = global::YallaParkingMobile.Droid.Resource.Attribute.tabMinWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.tabMode = global::YallaParkingMobile.Droid.Resource.Attribute.tabMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.tabPadding = global::YallaParkingMobile.Droid.Resource.Attribute.tabPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.tabPaddingBottom = global::YallaParkingMobile.Droid.Resource.Attribute.tabPaddingBottom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.tabPaddingEnd = global::YallaParkingMobile.Droid.Resource.Attribute.tabPaddingEnd;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.tabPaddingStart = global::YallaParkingMobile.Droid.Resource.Attribute.tabPaddingStart;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.tabPaddingTop = global::YallaParkingMobile.Droid.Resource.Attribute.tabPaddingTop;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.tabSelectedTextColor = global::YallaParkingMobile.Droid.Resource.Attribute.tabSelectedTextColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.tabTextAppearance = global::YallaParkingMobile.Droid.Resource.Attribute.tabTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.tabTextColor = global::YallaParkingMobile.Droid.Resource.Attribute.tabTextColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.textAllCaps = global::YallaParkingMobile.Droid.Resource.Attribute.textAllCaps;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.textAppearanceLargePopupMenu = global::YallaParkingMobile.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.textAppearanceListItem = global::YallaParkingMobile.Droid.Resource.Attribute.textAppearanceListItem;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.textAppearanceListItemSmall = global::YallaParkingMobile.Droid.Resource.Attribute.textAppearanceListItemSmall;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.textAppearanceSearchResultSubtitle = global::YallaParkingMobile.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.textAppearanceSearchResultTitle = global::YallaParkingMobile.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.textAppearanceSmallPopupMenu = global::YallaParkingMobile.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.textColorAlertDialogListItem = global::YallaParkingMobile.Droid.Resource.Attribute.textColorAlertDialogListItem;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.textColorError = global::YallaParkingMobile.Droid.Resource.Attribute.textColorError;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.textColorSearchUrl = global::YallaParkingMobile.Droid.Resource.Attribute.textColorSearchUrl;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.theme = global::YallaParkingMobile.Droid.Resource.Attribute.theme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.thickness = global::YallaParkingMobile.Droid.Resource.Attribute.thickness;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.thumbTextPadding = global::YallaParkingMobile.Droid.Resource.Attribute.thumbTextPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.tickThickness = global::YallaParkingMobile.Droid.Resource.Attribute.tickThickness;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.title = global::YallaParkingMobile.Droid.Resource.Attribute.title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.titleEnabled = global::YallaParkingMobile.Droid.Resource.Attribute.titleEnabled;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.titleMarginBottom = global::YallaParkingMobile.Droid.Resource.Attribute.titleMarginBottom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.titleMarginEnd = global::YallaParkingMobile.Droid.Resource.Attribute.titleMarginEnd;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.titleMarginStart = global::YallaParkingMobile.Droid.Resource.Attribute.titleMarginStart;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.titleMarginTop = global::YallaParkingMobile.Droid.Resource.Attribute.titleMarginTop;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.titleMargins = global::YallaParkingMobile.Droid.Resource.Attribute.titleMargins;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.titleTextAppearance = global::YallaParkingMobile.Droid.Resource.Attribute.titleTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.titleTextColor = global::YallaParkingMobile.Droid.Resource.Attribute.titleTextColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.titleTextStyle = global::YallaParkingMobile.Droid.Resource.Attribute.titleTextStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.toolbarId = global::YallaParkingMobile.Droid.Resource.Attribute.toolbarId;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.toolbarNavigationButtonStyle = global::YallaParkingMobile.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.toolbarStyle = global::YallaParkingMobile.Droid.Resource.Attribute.toolbarStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.track = global::YallaParkingMobile.Droid.Resource.Attribute.track;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.useCompatPadding = global::YallaParkingMobile.Droid.Resource.Attribute.useCompatPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.verticalAlignment = global::YallaParkingMobile.Droid.Resource.Attribute.verticalAlignment;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.verticalLocation = global::YallaParkingMobile.Droid.Resource.Attribute.verticalLocation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.verticalOffset = global::YallaParkingMobile.Droid.Resource.Attribute.verticalOffset;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.voiceIcon = global::YallaParkingMobile.Droid.Resource.Attribute.voiceIcon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.windowActionBar = global::YallaParkingMobile.Droid.Resource.Attribute.windowActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.windowActionBarOverlay = global::YallaParkingMobile.Droid.Resource.Attribute.windowActionBarOverlay;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.windowActionModeOverlay = global::YallaParkingMobile.Droid.Resource.Attribute.windowActionModeOverlay;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.windowFixedHeightMajor = global::YallaParkingMobile.Droid.Resource.Attribute.windowFixedHeightMajor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.windowFixedHeightMinor = global::YallaParkingMobile.Droid.Resource.Attribute.windowFixedHeightMinor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.windowFixedWidthMajor = global::YallaParkingMobile.Droid.Resource.Attribute.windowFixedWidthMajor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.windowFixedWidthMinor = global::YallaParkingMobile.Droid.Resource.Attribute.windowFixedWidthMinor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.windowMinWidthMajor = global::YallaParkingMobile.Droid.Resource.Attribute.windowMinWidthMajor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.windowMinWidthMinor = global::YallaParkingMobile.Droid.Resource.Attribute.windowMinWidthMinor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Attribute.windowNoTitle = global::YallaParkingMobile.Droid.Resource.Attribute.windowNoTitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Boolean.abc_action_bar_embed_tabs = global::YallaParkingMobile.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Boolean.abc_action_bar_embed_tabs_pre_jb = global::YallaParkingMobile.Droid.Resource.Boolean.abc_action_bar_embed_tabs_pre_jb;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Boolean.abc_action_bar_expanded_action_views_exclusive = global::YallaParkingMobile.Droid.Resource.Boolean.abc_action_bar_expanded_action_views_exclusive;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Boolean.abc_allow_stacked_button_bar = global::YallaParkingMobile.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::YallaParkingMobile.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Boolean.abc_config_allowActionMenuItemTextWithIcon = global::YallaParkingMobile.Droid.Resource.Boolean.abc_config_allowActionMenuItemTextWithIcon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Boolean.abc_config_closeDialogWhenTouchOutside = global::YallaParkingMobile.Droid.Resource.Boolean.abc_config_closeDialogWhenTouchOutside;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent = global::YallaParkingMobile.Droid.Resource.Boolean.abc_config_showMenuShortcutsWhenKeyboardPresent;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.abc_background_cache_hint_selector_material_dark = global::YallaParkingMobile.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.abc_background_cache_hint_selector_material_light = global::YallaParkingMobile.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.abc_color_highlight_material = global::YallaParkingMobile.Droid.Resource.Color.abc_color_highlight_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.abc_input_method_navigation_guard = global::YallaParkingMobile.Droid.Resource.Color.abc_input_method_navigation_guard;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.abc_primary_text_disable_only_material_dark = global::YallaParkingMobile.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.abc_primary_text_disable_only_material_light = global::YallaParkingMobile.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.abc_primary_text_material_dark = global::YallaParkingMobile.Droid.Resource.Color.abc_primary_text_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.abc_primary_text_material_light = global::YallaParkingMobile.Droid.Resource.Color.abc_primary_text_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.abc_search_url_text = global::YallaParkingMobile.Droid.Resource.Color.abc_search_url_text;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.abc_search_url_text_normal = global::YallaParkingMobile.Droid.Resource.Color.abc_search_url_text_normal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.abc_search_url_text_pressed = global::YallaParkingMobile.Droid.Resource.Color.abc_search_url_text_pressed;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.abc_search_url_text_selected = global::YallaParkingMobile.Droid.Resource.Color.abc_search_url_text_selected;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.abc_secondary_text_material_dark = global::YallaParkingMobile.Droid.Resource.Color.abc_secondary_text_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.abc_secondary_text_material_light = global::YallaParkingMobile.Droid.Resource.Color.abc_secondary_text_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.accent_material_dark = global::YallaParkingMobile.Droid.Resource.Color.accent_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.accent_material_light = global::YallaParkingMobile.Droid.Resource.Color.accent_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.background_floating_material_dark = global::YallaParkingMobile.Droid.Resource.Color.background_floating_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.background_floating_material_light = global::YallaParkingMobile.Droid.Resource.Color.background_floating_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.background_material_dark = global::YallaParkingMobile.Droid.Resource.Color.background_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.background_material_light = global::YallaParkingMobile.Droid.Resource.Color.background_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.black = global::YallaParkingMobile.Droid.Resource.Color.black;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.bright_foreground_disabled_material_dark = global::YallaParkingMobile.Droid.Resource.Color.bright_foreground_disabled_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.bright_foreground_disabled_material_light = global::YallaParkingMobile.Droid.Resource.Color.bright_foreground_disabled_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.bright_foreground_inverse_material_dark = global::YallaParkingMobile.Droid.Resource.Color.bright_foreground_inverse_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.bright_foreground_inverse_material_light = global::YallaParkingMobile.Droid.Resource.Color.bright_foreground_inverse_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.bright_foreground_material_dark = global::YallaParkingMobile.Droid.Resource.Color.bright_foreground_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.bright_foreground_material_light = global::YallaParkingMobile.Droid.Resource.Color.bright_foreground_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.button_material_dark = global::YallaParkingMobile.Droid.Resource.Color.button_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.button_material_light = global::YallaParkingMobile.Droid.Resource.Color.button_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.cardview_dark_background = global::YallaParkingMobile.Droid.Resource.Color.cardview_dark_background;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.cardview_light_background = global::YallaParkingMobile.Droid.Resource.Color.cardview_light_background;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.cardview_shadow_end_color = global::YallaParkingMobile.Droid.Resource.Color.cardview_shadow_end_color;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.cardview_shadow_start_color = global::YallaParkingMobile.Droid.Resource.Color.cardview_shadow_start_color;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.design_fab_shadow_end_color = global::YallaParkingMobile.Droid.Resource.Color.design_fab_shadow_end_color;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.design_fab_shadow_mid_color = global::YallaParkingMobile.Droid.Resource.Color.design_fab_shadow_mid_color;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.design_fab_shadow_start_color = global::YallaParkingMobile.Droid.Resource.Color.design_fab_shadow_start_color;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.design_fab_stroke_end_inner_color = global::YallaParkingMobile.Droid.Resource.Color.design_fab_stroke_end_inner_color;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.design_fab_stroke_end_outer_color = global::YallaParkingMobile.Droid.Resource.Color.design_fab_stroke_end_outer_color;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.design_fab_stroke_top_inner_color = global::YallaParkingMobile.Droid.Resource.Color.design_fab_stroke_top_inner_color;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.design_fab_stroke_top_outer_color = global::YallaParkingMobile.Droid.Resource.Color.design_fab_stroke_top_outer_color;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.design_snackbar_background_color = global::YallaParkingMobile.Droid.Resource.Color.design_snackbar_background_color;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.design_textinput_error_color_dark = global::YallaParkingMobile.Droid.Resource.Color.design_textinput_error_color_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.design_textinput_error_color_light = global::YallaParkingMobile.Droid.Resource.Color.design_textinput_error_color_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.dim_foreground_disabled_material_dark = global::YallaParkingMobile.Droid.Resource.Color.dim_foreground_disabled_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.dim_foreground_disabled_material_light = global::YallaParkingMobile.Droid.Resource.Color.dim_foreground_disabled_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.dim_foreground_material_dark = global::YallaParkingMobile.Droid.Resource.Color.dim_foreground_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.dim_foreground_material_light = global::YallaParkingMobile.Droid.Resource.Color.dim_foreground_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.foreground_material_dark = global::YallaParkingMobile.Droid.Resource.Color.foreground_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.foreground_material_light = global::YallaParkingMobile.Droid.Resource.Color.foreground_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.highlighted_text_material_dark = global::YallaParkingMobile.Droid.Resource.Color.highlighted_text_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.highlighted_text_material_light = global::YallaParkingMobile.Droid.Resource.Color.highlighted_text_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.hint_foreground_material_dark = global::YallaParkingMobile.Droid.Resource.Color.hint_foreground_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.hint_foreground_material_light = global::YallaParkingMobile.Droid.Resource.Color.hint_foreground_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.material_blue_grey_800 = global::YallaParkingMobile.Droid.Resource.Color.material_blue_grey_800;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.material_blue_grey_900 = global::YallaParkingMobile.Droid.Resource.Color.material_blue_grey_900;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.material_blue_grey_950 = global::YallaParkingMobile.Droid.Resource.Color.material_blue_grey_950;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.material_deep_teal_200 = global::YallaParkingMobile.Droid.Resource.Color.material_deep_teal_200;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.material_deep_teal_500 = global::YallaParkingMobile.Droid.Resource.Color.material_deep_teal_500;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.material_grey_100 = global::YallaParkingMobile.Droid.Resource.Color.material_grey_100;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.material_grey_300 = global::YallaParkingMobile.Droid.Resource.Color.material_grey_300;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.material_grey_50 = global::YallaParkingMobile.Droid.Resource.Color.material_grey_50;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.material_grey_600 = global::YallaParkingMobile.Droid.Resource.Color.material_grey_600;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.material_grey_800 = global::YallaParkingMobile.Droid.Resource.Color.material_grey_800;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.material_grey_850 = global::YallaParkingMobile.Droid.Resource.Color.material_grey_850;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.material_grey_900 = global::YallaParkingMobile.Droid.Resource.Color.material_grey_900;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.primary_dark_material_dark = global::YallaParkingMobile.Droid.Resource.Color.primary_dark_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.primary_dark_material_light = global::YallaParkingMobile.Droid.Resource.Color.primary_dark_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.primary_material_dark = global::YallaParkingMobile.Droid.Resource.Color.primary_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.primary_material_light = global::YallaParkingMobile.Droid.Resource.Color.primary_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.primary_text_default_material_dark = global::YallaParkingMobile.Droid.Resource.Color.primary_text_default_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.primary_text_default_material_light = global::YallaParkingMobile.Droid.Resource.Color.primary_text_default_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.primary_text_disabled_material_dark = global::YallaParkingMobile.Droid.Resource.Color.primary_text_disabled_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.primary_text_disabled_material_light = global::YallaParkingMobile.Droid.Resource.Color.primary_text_disabled_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.red = global::YallaParkingMobile.Droid.Resource.Color.red;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.ripple_material_dark = global::YallaParkingMobile.Droid.Resource.Color.ripple_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.ripple_material_light = global::YallaParkingMobile.Droid.Resource.Color.ripple_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.secondary_text_default_material_dark = global::YallaParkingMobile.Droid.Resource.Color.secondary_text_default_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.secondary_text_default_material_light = global::YallaParkingMobile.Droid.Resource.Color.secondary_text_default_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.secondary_text_disabled_material_dark = global::YallaParkingMobile.Droid.Resource.Color.secondary_text_disabled_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.secondary_text_disabled_material_light = global::YallaParkingMobile.Droid.Resource.Color.secondary_text_disabled_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.switch_thumb_disabled_material_dark = global::YallaParkingMobile.Droid.Resource.Color.switch_thumb_disabled_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.switch_thumb_disabled_material_light = global::YallaParkingMobile.Droid.Resource.Color.switch_thumb_disabled_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.switch_thumb_material_dark = global::YallaParkingMobile.Droid.Resource.Color.switch_thumb_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.switch_thumb_material_light = global::YallaParkingMobile.Droid.Resource.Color.switch_thumb_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.switch_thumb_normal_material_dark = global::YallaParkingMobile.Droid.Resource.Color.switch_thumb_normal_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.switch_thumb_normal_material_light = global::YallaParkingMobile.Droid.Resource.Color.switch_thumb_normal_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Color.white = global::YallaParkingMobile.Droid.Resource.Color.white;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_action_bar_content_inset_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_action_bar_default_height_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_action_bar_default_height_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_action_bar_default_padding_end_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_action_bar_default_padding_start_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_action_bar_progress_bar_size = global::YallaParkingMobile.Droid.Resource.Dimension.abc_action_bar_progress_bar_size;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_action_bar_stacked_max_height = global::YallaParkingMobile.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::YallaParkingMobile.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_action_button_min_height_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_action_button_min_height_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_action_button_min_width_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_action_button_min_width_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_action_button_min_width_overflow_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_alert_dialog_button_bar_height = global::YallaParkingMobile.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_button_inset_horizontal_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_button_inset_vertical_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_button_inset_vertical_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_button_padding_horizontal_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_button_padding_vertical_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_button_padding_vertical_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_config_prefDialogWidth = global::YallaParkingMobile.Droid.Resource.Dimension.abc_config_prefDialogWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_control_corner_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_control_corner_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_control_inset_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_control_inset_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_control_padding_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_control_padding_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_dialog_fixed_height_major = global::YallaParkingMobile.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_dialog_fixed_height_minor = global::YallaParkingMobile.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_dialog_fixed_width_major = global::YallaParkingMobile.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_dialog_fixed_width_minor = global::YallaParkingMobile.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_dialog_list_padding_vertical_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_dialog_list_padding_vertical_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_dialog_min_width_major = global::YallaParkingMobile.Droid.Resource.Dimension.abc_dialog_min_width_major;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_dialog_min_width_minor = global::YallaParkingMobile.Droid.Resource.Dimension.abc_dialog_min_width_minor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_dialog_padding_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_dialog_padding_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_dialog_padding_top_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_dialog_padding_top_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_disabled_alpha_material_dark = global::YallaParkingMobile.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_disabled_alpha_material_light = global::YallaParkingMobile.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_dropdownitem_icon_width = global::YallaParkingMobile.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_dropdownitem_text_padding_left = global::YallaParkingMobile.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_dropdownitem_text_padding_right = global::YallaParkingMobile.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_edit_text_inset_bottom_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_edit_text_inset_top_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_floating_window_z = global::YallaParkingMobile.Droid.Resource.Dimension.abc_floating_window_z;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_list_item_padding_horizontal_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_panel_menu_list_width = global::YallaParkingMobile.Droid.Resource.Dimension.abc_panel_menu_list_width;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_search_view_preferred_width = global::YallaParkingMobile.Droid.Resource.Dimension.abc_search_view_preferred_width;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_search_view_text_min_width = global::YallaParkingMobile.Droid.Resource.Dimension.abc_search_view_text_min_width;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_seekbar_track_background_height_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_seekbar_track_progress_height_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_select_dialog_padding_start_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_switch_padding = global::YallaParkingMobile.Droid.Resource.Dimension.abc_switch_padding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_text_size_body_1_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_text_size_body_1_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_text_size_body_2_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_text_size_body_2_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_text_size_button_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_text_size_button_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_text_size_caption_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_text_size_caption_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_text_size_display_1_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_text_size_display_1_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_text_size_display_2_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_text_size_display_2_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_text_size_display_3_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_text_size_display_3_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_text_size_display_4_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_text_size_display_4_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_text_size_headline_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_text_size_headline_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_text_size_large_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_text_size_large_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_text_size_medium_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_text_size_medium_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_text_size_menu_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_text_size_menu_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_text_size_small_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_text_size_small_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_text_size_subhead_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_text_size_subhead_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::YallaParkingMobile.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_text_size_title_material = global::YallaParkingMobile.Droid.Resource.Dimension.abc_text_size_title_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.abc_text_size_title_material_toolbar = global::YallaParkingMobile.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.cardview_compat_inset_shadow = global::YallaParkingMobile.Droid.Resource.Dimension.cardview_compat_inset_shadow;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.cardview_default_elevation = global::YallaParkingMobile.Droid.Resource.Dimension.cardview_default_elevation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.cardview_default_radius = global::YallaParkingMobile.Droid.Resource.Dimension.cardview_default_radius;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_appbar_elevation = global::YallaParkingMobile.Droid.Resource.Dimension.design_appbar_elevation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_bottom_sheet_modal_elevation = global::YallaParkingMobile.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_bottom_sheet_modal_peek_height = global::YallaParkingMobile.Droid.Resource.Dimension.design_bottom_sheet_modal_peek_height;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_fab_border_width = global::YallaParkingMobile.Droid.Resource.Dimension.design_fab_border_width;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_fab_elevation = global::YallaParkingMobile.Droid.Resource.Dimension.design_fab_elevation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_fab_image_size = global::YallaParkingMobile.Droid.Resource.Dimension.design_fab_image_size;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_fab_size_mini = global::YallaParkingMobile.Droid.Resource.Dimension.design_fab_size_mini;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_fab_size_normal = global::YallaParkingMobile.Droid.Resource.Dimension.design_fab_size_normal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_fab_translation_z_pressed = global::YallaParkingMobile.Droid.Resource.Dimension.design_fab_translation_z_pressed;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_navigation_elevation = global::YallaParkingMobile.Droid.Resource.Dimension.design_navigation_elevation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_navigation_icon_padding = global::YallaParkingMobile.Droid.Resource.Dimension.design_navigation_icon_padding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_navigation_icon_size = global::YallaParkingMobile.Droid.Resource.Dimension.design_navigation_icon_size;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_navigation_max_width = global::YallaParkingMobile.Droid.Resource.Dimension.design_navigation_max_width;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_navigation_padding_bottom = global::YallaParkingMobile.Droid.Resource.Dimension.design_navigation_padding_bottom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_navigation_separator_vertical_padding = global::YallaParkingMobile.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_snackbar_action_inline_max_width = global::YallaParkingMobile.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_snackbar_background_corner_radius = global::YallaParkingMobile.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_snackbar_elevation = global::YallaParkingMobile.Droid.Resource.Dimension.design_snackbar_elevation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::YallaParkingMobile.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_snackbar_max_width = global::YallaParkingMobile.Droid.Resource.Dimension.design_snackbar_max_width;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_snackbar_min_width = global::YallaParkingMobile.Droid.Resource.Dimension.design_snackbar_min_width;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_snackbar_padding_horizontal = global::YallaParkingMobile.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_snackbar_padding_vertical = global::YallaParkingMobile.Droid.Resource.Dimension.design_snackbar_padding_vertical;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::YallaParkingMobile.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_snackbar_text_size = global::YallaParkingMobile.Droid.Resource.Dimension.design_snackbar_text_size;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_tab_max_width = global::YallaParkingMobile.Droid.Resource.Dimension.design_tab_max_width;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_tab_scrollable_min_width = global::YallaParkingMobile.Droid.Resource.Dimension.design_tab_scrollable_min_width;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_tab_text_size = global::YallaParkingMobile.Droid.Resource.Dimension.design_tab_text_size;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.design_tab_text_size_2line = global::YallaParkingMobile.Droid.Resource.Dimension.design_tab_text_size_2line;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.disabled_alpha_material_dark = global::YallaParkingMobile.Droid.Resource.Dimension.disabled_alpha_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.disabled_alpha_material_light = global::YallaParkingMobile.Droid.Resource.Dimension.disabled_alpha_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.highlight_alpha_material_colored = global::YallaParkingMobile.Droid.Resource.Dimension.highlight_alpha_material_colored;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.highlight_alpha_material_dark = global::YallaParkingMobile.Droid.Resource.Dimension.highlight_alpha_material_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.highlight_alpha_material_light = global::YallaParkingMobile.Droid.Resource.Dimension.highlight_alpha_material_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::YallaParkingMobile.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::YallaParkingMobile.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::YallaParkingMobile.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.legend_stroke_width = global::YallaParkingMobile.Droid.Resource.Dimension.legend_stroke_width;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.mr_controller_volume_group_list_item_height = global::YallaParkingMobile.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.mr_controller_volume_group_list_item_icon_size = global::YallaParkingMobile.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.mr_controller_volume_group_list_max_height = global::YallaParkingMobile.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.mr_controller_volume_group_list_padding_top = global::YallaParkingMobile.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.mr_dialog_fixed_width_major = global::YallaParkingMobile.Droid.Resource.Dimension.mr_dialog_fixed_width_major;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.mr_dialog_fixed_width_minor = global::YallaParkingMobile.Droid.Resource.Dimension.mr_dialog_fixed_width_minor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.notification_large_icon_height = global::YallaParkingMobile.Droid.Resource.Dimension.notification_large_icon_height;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.notification_large_icon_width = global::YallaParkingMobile.Droid.Resource.Dimension.notification_large_icon_width;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.notification_subtext_size = global::YallaParkingMobile.Droid.Resource.Dimension.notification_subtext_size;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Dimension.trackball_indicator_radius = global::YallaParkingMobile.Droid.Resource.Dimension.trackball_indicator_radius;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_action_bar_item_background_material = global::YallaParkingMobile.Droid.Resource.Drawable.abc_action_bar_item_background_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_btn_borderless_material = global::YallaParkingMobile.Droid.Resource.Drawable.abc_btn_borderless_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_btn_check_material = global::YallaParkingMobile.Droid.Resource.Drawable.abc_btn_check_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::YallaParkingMobile.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::YallaParkingMobile.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_btn_colored_material = global::YallaParkingMobile.Droid.Resource.Drawable.abc_btn_colored_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_btn_default_mtrl_shape = global::YallaParkingMobile.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_btn_radio_material = global::YallaParkingMobile.Droid.Resource.Drawable.abc_btn_radio_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::YallaParkingMobile.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::YallaParkingMobile.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_btn_rating_star_off_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_btn_rating_star_off_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_btn_rating_star_on_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_btn_rating_star_on_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::YallaParkingMobile.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::YallaParkingMobile.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_cab_background_internal_bg = global::YallaParkingMobile.Droid.Resource.Drawable.abc_cab_background_internal_bg;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_cab_background_top_material = global::YallaParkingMobile.Droid.Resource.Drawable.abc_cab_background_top_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_control_background_material = global::YallaParkingMobile.Droid.Resource.Drawable.abc_control_background_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_dialog_material_background_dark = global::YallaParkingMobile.Droid.Resource.Drawable.abc_dialog_material_background_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_dialog_material_background_light = global::YallaParkingMobile.Droid.Resource.Drawable.abc_dialog_material_background_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_edit_text_material = global::YallaParkingMobile.Droid.Resource.Drawable.abc_edit_text_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ic_ab_back_mtrl_am_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ic_ab_back_mtrl_am_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ic_clear_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ic_clear_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ic_go_search_api_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ic_go_search_api_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ic_menu_moreoverflow_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ic_menu_moreoverflow_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ic_search_api_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ic_search_api_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ic_star_black_16dp = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ic_star_black_16dp;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ic_star_black_36dp = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ic_star_black_36dp;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ic_star_half_black_16dp = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ic_star_half_black_36dp = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ic_voice_search_api_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ic_voice_search_api_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_item_background_holo_dark = global::YallaParkingMobile.Droid.Resource.Drawable.abc_item_background_holo_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_item_background_holo_light = global::YallaParkingMobile.Droid.Resource.Drawable.abc_item_background_holo_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_list_divider_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_list_focused_holo = global::YallaParkingMobile.Droid.Resource.Drawable.abc_list_focused_holo;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_list_longpressed_holo = global::YallaParkingMobile.Droid.Resource.Drawable.abc_list_longpressed_holo;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_list_pressed_holo_dark = global::YallaParkingMobile.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_list_pressed_holo_light = global::YallaParkingMobile.Droid.Resource.Drawable.abc_list_pressed_holo_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::YallaParkingMobile.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::YallaParkingMobile.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::YallaParkingMobile.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_list_selector_disabled_holo_light = global::YallaParkingMobile.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_list_selector_holo_dark = global::YallaParkingMobile.Droid.Resource.Drawable.abc_list_selector_holo_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_list_selector_holo_light = global::YallaParkingMobile.Droid.Resource.Drawable.abc_list_selector_holo_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::YallaParkingMobile.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_popup_background_mtrl_mult = global::YallaParkingMobile.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ratingbar_full_material = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ratingbar_full_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ratingbar_indicator_material = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_ratingbar_small_material = global::YallaParkingMobile.Droid.Resource.Drawable.abc_ratingbar_small_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::YallaParkingMobile.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::YallaParkingMobile.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_seekbar_thumb_material = global::YallaParkingMobile.Droid.Resource.Drawable.abc_seekbar_thumb_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_seekbar_track_material = global::YallaParkingMobile.Droid.Resource.Drawable.abc_seekbar_track_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_spinner_textfield_background_material = global::YallaParkingMobile.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_switch_thumb_material = global::YallaParkingMobile.Droid.Resource.Drawable.abc_switch_thumb_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_switch_track_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_tab_indicator_material = global::YallaParkingMobile.Droid.Resource.Drawable.abc_tab_indicator_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_text_cursor_material = global::YallaParkingMobile.Droid.Resource.Drawable.abc_text_cursor_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::YallaParkingMobile.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.abc_textfield_search_material = global::YallaParkingMobile.Droid.Resource.Drawable.abc_textfield_search_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.design_fab_background = global::YallaParkingMobile.Droid.Resource.Drawable.design_fab_background;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.design_snackbar_background = global::YallaParkingMobile.Droid.Resource.Drawable.design_snackbar_background;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.hamburger = global::YallaParkingMobile.Droid.Resource.Drawable.hamburger;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.hmb = global::YallaParkingMobile.Droid.Resource.Drawable.hmb;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_audiotrack = global::YallaParkingMobile.Droid.Resource.Drawable.ic_audiotrack;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_audiotrack_light = global::YallaParkingMobile.Droid.Resource.Drawable.ic_audiotrack_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_bluetooth_grey = global::YallaParkingMobile.Droid.Resource.Drawable.ic_bluetooth_grey;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_bluetooth_white = global::YallaParkingMobile.Droid.Resource.Drawable.ic_bluetooth_white;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_cast_dark = global::YallaParkingMobile.Droid.Resource.Drawable.ic_cast_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_cast_disabled_light = global::YallaParkingMobile.Droid.Resource.Drawable.ic_cast_disabled_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_cast_grey = global::YallaParkingMobile.Droid.Resource.Drawable.ic_cast_grey;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_cast_light = global::YallaParkingMobile.Droid.Resource.Drawable.ic_cast_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_cast_off_light = global::YallaParkingMobile.Droid.Resource.Drawable.ic_cast_off_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_cast_on_0_light = global::YallaParkingMobile.Droid.Resource.Drawable.ic_cast_on_0_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_cast_on_1_light = global::YallaParkingMobile.Droid.Resource.Drawable.ic_cast_on_1_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_cast_on_2_light = global::YallaParkingMobile.Droid.Resource.Drawable.ic_cast_on_2_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_cast_on_light = global::YallaParkingMobile.Droid.Resource.Drawable.ic_cast_on_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_cast_white = global::YallaParkingMobile.Droid.Resource.Drawable.ic_cast_white;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_close_dark = global::YallaParkingMobile.Droid.Resource.Drawable.ic_close_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_close_light = global::YallaParkingMobile.Droid.Resource.Drawable.ic_close_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_collapse = global::YallaParkingMobile.Droid.Resource.Drawable.ic_collapse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_collapse_00000 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_collapse_00000;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_collapse_00001 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_collapse_00001;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_collapse_00002 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_collapse_00002;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_collapse_00003 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_collapse_00003;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_collapse_00004 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_collapse_00004;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_collapse_00005 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_collapse_00005;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_collapse_00006 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_collapse_00006;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_collapse_00007 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_collapse_00007;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_collapse_00008 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_collapse_00008;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_collapse_00009 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_collapse_00009;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_collapse_00010 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_collapse_00010;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_collapse_00011 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_collapse_00011;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_collapse_00012 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_collapse_00012;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_collapse_00013 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_collapse_00013;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_collapse_00014 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_collapse_00014;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_collapse_00015 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_collapse_00015;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_expand = global::YallaParkingMobile.Droid.Resource.Drawable.ic_expand;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_expand_00000 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_expand_00000;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_expand_00001 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_expand_00001;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_expand_00002 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_expand_00002;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_expand_00003 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_expand_00003;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_expand_00004 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_expand_00004;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_expand_00005 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_expand_00005;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_expand_00006 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_expand_00006;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_expand_00007 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_expand_00007;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_expand_00008 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_expand_00008;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_expand_00009 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_expand_00009;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_expand_00010 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_expand_00010;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_expand_00011 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_expand_00011;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_expand_00012 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_expand_00012;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_expand_00013 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_expand_00013;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_expand_00014 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_expand_00014;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_expand_00015 = global::YallaParkingMobile.Droid.Resource.Drawable.ic_expand_00015;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_media_pause = global::YallaParkingMobile.Droid.Resource.Drawable.ic_media_pause;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_media_play = global::YallaParkingMobile.Droid.Resource.Drawable.ic_media_play;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_media_route_disabled_mono_dark = global::YallaParkingMobile.Droid.Resource.Drawable.ic_media_route_disabled_mono_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_media_route_off_mono_dark = global::YallaParkingMobile.Droid.Resource.Drawable.ic_media_route_off_mono_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_media_route_on_0_mono_dark = global::YallaParkingMobile.Droid.Resource.Drawable.ic_media_route_on_0_mono_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_media_route_on_1_mono_dark = global::YallaParkingMobile.Droid.Resource.Drawable.ic_media_route_on_1_mono_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_media_route_on_2_mono_dark = global::YallaParkingMobile.Droid.Resource.Drawable.ic_media_route_on_2_mono_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_media_route_on_mono_dark = global::YallaParkingMobile.Droid.Resource.Drawable.ic_media_route_on_mono_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_pause_dark = global::YallaParkingMobile.Droid.Resource.Drawable.ic_pause_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_pause_light = global::YallaParkingMobile.Droid.Resource.Drawable.ic_pause_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_play_dark = global::YallaParkingMobile.Droid.Resource.Drawable.ic_play_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_play_light = global::YallaParkingMobile.Droid.Resource.Drawable.ic_play_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_speaker_dark = global::YallaParkingMobile.Droid.Resource.Drawable.ic_speaker_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_speaker_group_dark = global::YallaParkingMobile.Droid.Resource.Drawable.ic_speaker_group_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_speaker_group_light = global::YallaParkingMobile.Droid.Resource.Drawable.ic_speaker_group_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_speaker_light = global::YallaParkingMobile.Droid.Resource.Drawable.ic_speaker_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_tv_dark = global::YallaParkingMobile.Droid.Resource.Drawable.ic_tv_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.ic_tv_light = global::YallaParkingMobile.Droid.Resource.Drawable.ic_tv_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.mr_dialog_material_background_dark = global::YallaParkingMobile.Droid.Resource.Drawable.mr_dialog_material_background_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.mr_dialog_material_background_light = global::YallaParkingMobile.Droid.Resource.Drawable.mr_dialog_material_background_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.mr_ic_audiotrack_light = global::YallaParkingMobile.Droid.Resource.Drawable.mr_ic_audiotrack_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.mr_ic_cast_dark = global::YallaParkingMobile.Droid.Resource.Drawable.mr_ic_cast_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.mr_ic_cast_light = global::YallaParkingMobile.Droid.Resource.Drawable.mr_ic_cast_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.mr_ic_close_dark = global::YallaParkingMobile.Droid.Resource.Drawable.mr_ic_close_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.mr_ic_close_light = global::YallaParkingMobile.Droid.Resource.Drawable.mr_ic_close_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.mr_ic_media_route_connecting_mono_dark = global::YallaParkingMobile.Droid.Resource.Drawable.mr_ic_media_route_connecting_mono_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.mr_ic_media_route_connecting_mono_light = global::YallaParkingMobile.Droid.Resource.Drawable.mr_ic_media_route_connecting_mono_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.mr_ic_media_route_mono_dark = global::YallaParkingMobile.Droid.Resource.Drawable.mr_ic_media_route_mono_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.mr_ic_media_route_mono_light = global::YallaParkingMobile.Droid.Resource.Drawable.mr_ic_media_route_mono_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.mr_ic_pause_dark = global::YallaParkingMobile.Droid.Resource.Drawable.mr_ic_pause_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.mr_ic_pause_light = global::YallaParkingMobile.Droid.Resource.Drawable.mr_ic_pause_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.mr_ic_play_dark = global::YallaParkingMobile.Droid.Resource.Drawable.mr_ic_play_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.mr_ic_play_light = global::YallaParkingMobile.Droid.Resource.Drawable.mr_ic_play_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.notification_template_icon_bg = global::YallaParkingMobile.Droid.Resource.Drawable.notification_template_icon_bg;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Drawable.tab_view_popup_background = global::YallaParkingMobile.Droid.Resource.Drawable.tab_view_popup_background;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.BetweenTicks = global::YallaParkingMobile.Droid.Resource.Id.BetweenTicks;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Bottom = global::YallaParkingMobile.Droid.Resource.Id.Bottom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Clip = global::YallaParkingMobile.Droid.Resource.Id.Clip;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Cluster = global::YallaParkingMobile.Droid.Resource.Id.Cluster;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Date = global::YallaParkingMobile.Droid.Resource.Id.Date;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Day = global::YallaParkingMobile.Droid.Resource.Id.Day;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.DayOfWeek = global::YallaParkingMobile.Droid.Resource.Id.DayOfWeek;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.DayOfYear = global::YallaParkingMobile.Droid.Resource.Id.DayOfYear;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Hidden = global::YallaParkingMobile.Droid.Resource.Id.Hidden;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Hour = global::YallaParkingMobile.Droid.Resource.Id.Hour;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Left = global::YallaParkingMobile.Droid.Resource.Id.Left;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Millisecond = global::YallaParkingMobile.Droid.Resource.Id.Millisecond;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Minute = global::YallaParkingMobile.Droid.Resource.Id.Minute;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Month = global::YallaParkingMobile.Droid.Resource.Id.Month;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Multiline = global::YallaParkingMobile.Droid.Resource.Id.Multiline;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.None = global::YallaParkingMobile.Droid.Resource.Id.None;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.OnTicks = global::YallaParkingMobile.Droid.Resource.Id.OnTicks;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.OnTicksPadded = global::YallaParkingMobile.Droid.Resource.Id.OnTicksPadded;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Quarter = global::YallaParkingMobile.Droid.Resource.Id.Quarter;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Right = global::YallaParkingMobile.Droid.Resource.Id.Right;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Rotate = global::YallaParkingMobile.Droid.Resource.Id.Rotate;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Second = global::YallaParkingMobile.Droid.Resource.Id.Second;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Stack = global::YallaParkingMobile.Droid.Resource.Id.Stack;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Stack100 = global::YallaParkingMobile.Droid.Resource.Id.Stack100;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.TimeOfDay = global::YallaParkingMobile.Droid.Resource.Id.TimeOfDay;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Top = global::YallaParkingMobile.Droid.Resource.Id.Top;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Visible = global::YallaParkingMobile.Droid.Resource.Id.Visible;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Week = global::YallaParkingMobile.Droid.Resource.Id.Week;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.Year = global::YallaParkingMobile.Droid.Resource.Id.Year;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.action0 = global::YallaParkingMobile.Droid.Resource.Id.action0;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.action_bar = global::YallaParkingMobile.Droid.Resource.Id.action_bar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.action_bar_activity_content = global::YallaParkingMobile.Droid.Resource.Id.action_bar_activity_content;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.action_bar_container = global::YallaParkingMobile.Droid.Resource.Id.action_bar_container;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.action_bar_root = global::YallaParkingMobile.Droid.Resource.Id.action_bar_root;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.action_bar_spinner = global::YallaParkingMobile.Droid.Resource.Id.action_bar_spinner;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.action_bar_subtitle = global::YallaParkingMobile.Droid.Resource.Id.action_bar_subtitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.action_bar_title = global::YallaParkingMobile.Droid.Resource.Id.action_bar_title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.action_context_bar = global::YallaParkingMobile.Droid.Resource.Id.action_context_bar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.action_divider = global::YallaParkingMobile.Droid.Resource.Id.action_divider;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.action_menu_divider = global::YallaParkingMobile.Droid.Resource.Id.action_menu_divider;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.action_menu_presenter = global::YallaParkingMobile.Droid.Resource.Id.action_menu_presenter;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.action_mode_bar = global::YallaParkingMobile.Droid.Resource.Id.action_mode_bar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.action_mode_bar_stub = global::YallaParkingMobile.Droid.Resource.Id.action_mode_bar_stub;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.action_mode_close_button = global::YallaParkingMobile.Droid.Resource.Id.action_mode_close_button;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.activity_chooser_view_content = global::YallaParkingMobile.Droid.Resource.Id.activity_chooser_view_content;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.alertTitle = global::YallaParkingMobile.Droid.Resource.Id.alertTitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.always = global::YallaParkingMobile.Droid.Resource.Id.always;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.areaText = global::YallaParkingMobile.Droid.Resource.Id.areaText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.beginning = global::YallaParkingMobile.Droid.Resource.Id.beginning;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.bottom = global::YallaParkingMobile.Droid.Resource.Id.bottom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.buttonPanel = global::YallaParkingMobile.Droid.Resource.Id.buttonPanel;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.cancel_action = global::YallaParkingMobile.Droid.Resource.Id.cancel_action;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.center = global::YallaParkingMobile.Droid.Resource.Id.center;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.center_horizontal = global::YallaParkingMobile.Droid.Resource.Id.center_horizontal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.center_vertical = global::YallaParkingMobile.Droid.Resource.Id.center_vertical;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.chart_data_point_content_container = global::YallaParkingMobile.Droid.Resource.Id.chart_data_point_content_container;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.chart_layout_root = global::YallaParkingMobile.Droid.Resource.Id.chart_layout_root;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.chart_tooltip_category = global::YallaParkingMobile.Droid.Resource.Id.chart_tooltip_category;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.chart_tooltip_pointer = global::YallaParkingMobile.Droid.Resource.Id.chart_tooltip_pointer;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.chart_tooltip_value = global::YallaParkingMobile.Droid.Resource.Id.chart_tooltip_value;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.chart_trackball_category = global::YallaParkingMobile.Droid.Resource.Id.chart_trackball_category;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.chart_trackball_value = global::YallaParkingMobile.Droid.Resource.Id.chart_trackball_value;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.checkbox = global::YallaParkingMobile.Droid.Resource.Id.checkbox;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.chronometer = global::YallaParkingMobile.Droid.Resource.Id.chronometer;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.clip_horizontal = global::YallaParkingMobile.Droid.Resource.Id.clip_horizontal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.clip_vertical = global::YallaParkingMobile.Droid.Resource.Id.clip_vertical;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.closeText = global::YallaParkingMobile.Droid.Resource.Id.closeText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.collapseActionView = global::YallaParkingMobile.Droid.Resource.Id.collapseActionView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.contentPanel = global::YallaParkingMobile.Droid.Resource.Id.contentPanel;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.custom = global::YallaParkingMobile.Droid.Resource.Id.custom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.customPanel = global::YallaParkingMobile.Droid.Resource.Id.customPanel;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.decor_content_parent = global::YallaParkingMobile.Droid.Resource.Id.decor_content_parent;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.default_activity_button = global::YallaParkingMobile.Droid.Resource.Id.default_activity_button;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.design_bottom_sheet = global::YallaParkingMobile.Droid.Resource.Id.design_bottom_sheet;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.design_menu_item_action_area = global::YallaParkingMobile.Droid.Resource.Id.design_menu_item_action_area;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.design_menu_item_action_area_stub = global::YallaParkingMobile.Droid.Resource.Id.design_menu_item_action_area_stub;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.design_menu_item_text = global::YallaParkingMobile.Droid.Resource.Id.design_menu_item_text;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.design_navigation_view = global::YallaParkingMobile.Droid.Resource.Id.design_navigation_view;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.disableHome = global::YallaParkingMobile.Droid.Resource.Id.disableHome;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.edit_query = global::YallaParkingMobile.Droid.Resource.Id.edit_query;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.emptyContent = global::YallaParkingMobile.Droid.Resource.Id.emptyContent;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.end = global::YallaParkingMobile.Droid.Resource.Id.end;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.end_padder = global::YallaParkingMobile.Droid.Resource.Id.end_padder;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.enterAlways = global::YallaParkingMobile.Droid.Resource.Id.enterAlways;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.enterAlwaysCollapsed = global::YallaParkingMobile.Droid.Resource.Id.enterAlwaysCollapsed;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.exitUntilCollapsed = global::YallaParkingMobile.Droid.Resource.Id.exitUntilCollapsed;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.expand_activities_button = global::YallaParkingMobile.Droid.Resource.Id.expand_activities_button;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.expanded_menu = global::YallaParkingMobile.Droid.Resource.Id.expanded_menu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.fill = global::YallaParkingMobile.Droid.Resource.Id.fill;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.fill_horizontal = global::YallaParkingMobile.Droid.Resource.Id.fill_horizontal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.fill_vertical = global::YallaParkingMobile.Droid.Resource.Id.fill_vertical;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.@fixed = global::YallaParkingMobile.Droid.Resource.Id.@fixed;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.highText = global::YallaParkingMobile.Droid.Resource.Id.highText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.home = global::YallaParkingMobile.Droid.Resource.Id.home;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.homeAsUp = global::YallaParkingMobile.Droid.Resource.Id.homeAsUp;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.horizontal = global::YallaParkingMobile.Droid.Resource.Id.horizontal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.icon = global::YallaParkingMobile.Droid.Resource.Id.icon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.ifRoom = global::YallaParkingMobile.Droid.Resource.Id.ifRoom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.image = global::YallaParkingMobile.Droid.Resource.Id.image;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.imageView = global::YallaParkingMobile.Droid.Resource.Id.imageView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.info = global::YallaParkingMobile.Droid.Resource.Id.info;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.item_touch_helper_previous_elevation = global::YallaParkingMobile.Droid.Resource.Id.item_touch_helper_previous_elevation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.left = global::YallaParkingMobile.Droid.Resource.Id.left;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.legendItemIconView = global::YallaParkingMobile.Droid.Resource.Id.legendItemIconView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.legendItemTitleView = global::YallaParkingMobile.Droid.Resource.Id.legendItemTitleView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.legendRecyclerView = global::YallaParkingMobile.Droid.Resource.Id.legendRecyclerView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.line1 = global::YallaParkingMobile.Droid.Resource.Id.line1;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.line3 = global::YallaParkingMobile.Droid.Resource.Id.line3;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.listMode = global::YallaParkingMobile.Droid.Resource.Id.listMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.list_item = global::YallaParkingMobile.Droid.Resource.Id.list_item;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.lowText = global::YallaParkingMobile.Droid.Resource.Id.lowText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.media_actions = global::YallaParkingMobile.Droid.Resource.Id.media_actions;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.middle = global::YallaParkingMobile.Droid.Resource.Id.middle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mini = global::YallaParkingMobile.Droid.Resource.Id.mini;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_art = global::YallaParkingMobile.Droid.Resource.Id.mr_art;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_chooser_list = global::YallaParkingMobile.Droid.Resource.Id.mr_chooser_list;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_chooser_route_desc = global::YallaParkingMobile.Droid.Resource.Id.mr_chooser_route_desc;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_chooser_route_icon = global::YallaParkingMobile.Droid.Resource.Id.mr_chooser_route_icon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_chooser_route_name = global::YallaParkingMobile.Droid.Resource.Id.mr_chooser_route_name;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_close = global::YallaParkingMobile.Droid.Resource.Id.mr_close;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_control_divider = global::YallaParkingMobile.Droid.Resource.Id.mr_control_divider;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_control_play_pause = global::YallaParkingMobile.Droid.Resource.Id.mr_control_play_pause;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_control_subtitle = global::YallaParkingMobile.Droid.Resource.Id.mr_control_subtitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_control_title = global::YallaParkingMobile.Droid.Resource.Id.mr_control_title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_control_title_container = global::YallaParkingMobile.Droid.Resource.Id.mr_control_title_container;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_custom_control = global::YallaParkingMobile.Droid.Resource.Id.mr_custom_control;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_default_control = global::YallaParkingMobile.Droid.Resource.Id.mr_default_control;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_dialog_area = global::YallaParkingMobile.Droid.Resource.Id.mr_dialog_area;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_expandable_area = global::YallaParkingMobile.Droid.Resource.Id.mr_expandable_area;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_group_expand_collapse = global::YallaParkingMobile.Droid.Resource.Id.mr_group_expand_collapse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_media_main_control = global::YallaParkingMobile.Droid.Resource.Id.mr_media_main_control;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_name = global::YallaParkingMobile.Droid.Resource.Id.mr_name;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_playback_control = global::YallaParkingMobile.Droid.Resource.Id.mr_playback_control;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_title_bar = global::YallaParkingMobile.Droid.Resource.Id.mr_title_bar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_volume_control = global::YallaParkingMobile.Droid.Resource.Id.mr_volume_control;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_volume_group_list = global::YallaParkingMobile.Droid.Resource.Id.mr_volume_group_list;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_volume_item_icon = global::YallaParkingMobile.Droid.Resource.Id.mr_volume_item_icon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.mr_volume_slider = global::YallaParkingMobile.Droid.Resource.Id.mr_volume_slider;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.multiply = global::YallaParkingMobile.Droid.Resource.Id.multiply;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.navItemsLayout = global::YallaParkingMobile.Droid.Resource.Id.navItemsLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.navigationItemText = global::YallaParkingMobile.Droid.Resource.Id.navigationItemText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.navigation_header_container = global::YallaParkingMobile.Droid.Resource.Id.navigation_header_container;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.never = global::YallaParkingMobile.Droid.Resource.Id.never;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.none = global::YallaParkingMobile.Droid.Resource.Id.none;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.normal = global::YallaParkingMobile.Droid.Resource.Id.normal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.openText = global::YallaParkingMobile.Droid.Resource.Id.openText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.parallax = global::YallaParkingMobile.Droid.Resource.Id.parallax;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.parentPanel = global::YallaParkingMobile.Droid.Resource.Id.parentPanel;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.pin = global::YallaParkingMobile.Droid.Resource.Id.pin;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.progress_circular = global::YallaParkingMobile.Droid.Resource.Id.progress_circular;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.progress_horizontal = global::YallaParkingMobile.Droid.Resource.Id.progress_horizontal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.radio = global::YallaParkingMobile.Droid.Resource.Id.radio;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.renderSurface = global::YallaParkingMobile.Droid.Resource.Id.renderSurface;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.right = global::YallaParkingMobile.Droid.Resource.Id.right;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.screen = global::YallaParkingMobile.Droid.Resource.Id.screen;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.scroll = global::YallaParkingMobile.Droid.Resource.Id.scroll;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.scrollIndicatorDown = global::YallaParkingMobile.Droid.Resource.Id.scrollIndicatorDown;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.scrollIndicatorUp = global::YallaParkingMobile.Droid.Resource.Id.scrollIndicatorUp;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.scrollView = global::YallaParkingMobile.Droid.Resource.Id.scrollView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.scrollable = global::YallaParkingMobile.Droid.Resource.Id.scrollable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.search_badge = global::YallaParkingMobile.Droid.Resource.Id.search_badge;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.search_bar = global::YallaParkingMobile.Droid.Resource.Id.search_bar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.search_button = global::YallaParkingMobile.Droid.Resource.Id.search_button;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.search_close_btn = global::YallaParkingMobile.Droid.Resource.Id.search_close_btn;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.search_edit_frame = global::YallaParkingMobile.Droid.Resource.Id.search_edit_frame;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.search_go_btn = global::YallaParkingMobile.Droid.Resource.Id.search_go_btn;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.search_mag_icon = global::YallaParkingMobile.Droid.Resource.Id.search_mag_icon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.search_plate = global::YallaParkingMobile.Droid.Resource.Id.search_plate;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.search_src_text = global::YallaParkingMobile.Droid.Resource.Id.search_src_text;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.search_voice_btn = global::YallaParkingMobile.Droid.Resource.Id.search_voice_btn;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.select_dialog_listview = global::YallaParkingMobile.Droid.Resource.Id.select_dialog_listview;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.shortcut = global::YallaParkingMobile.Droid.Resource.Id.shortcut;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.showCustom = global::YallaParkingMobile.Droid.Resource.Id.showCustom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.showHome = global::YallaParkingMobile.Droid.Resource.Id.showHome;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.showTitle = global::YallaParkingMobile.Droid.Resource.Id.showTitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.snackbar_action = global::YallaParkingMobile.Droid.Resource.Id.snackbar_action;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.snackbar_text = global::YallaParkingMobile.Droid.Resource.Id.snackbar_text;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.snap = global::YallaParkingMobile.Droid.Resource.Id.snap;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.spacer = global::YallaParkingMobile.Droid.Resource.Id.spacer;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.split_action_bar = global::YallaParkingMobile.Droid.Resource.Id.split_action_bar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.src_atop = global::YallaParkingMobile.Droid.Resource.Id.src_atop;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.src_in = global::YallaParkingMobile.Droid.Resource.Id.src_in;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.src_over = global::YallaParkingMobile.Droid.Resource.Id.src_over;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.start = global::YallaParkingMobile.Droid.Resource.Id.start;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.status_bar_latest_event_content = global::YallaParkingMobile.Droid.Resource.Id.status_bar_latest_event_content;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.submit_area = global::YallaParkingMobile.Droid.Resource.Id.submit_area;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.tabItemImageView = global::YallaParkingMobile.Droid.Resource.Id.tabItemImageView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.tabItemTextView = global::YallaParkingMobile.Droid.Resource.Id.tabItemTextView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.tabMode = global::YallaParkingMobile.Droid.Resource.Id.tabMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.text = global::YallaParkingMobile.Droid.Resource.Id.text;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.text2 = global::YallaParkingMobile.Droid.Resource.Id.text2;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.textSpacerNoButtons = global::YallaParkingMobile.Droid.Resource.Id.textSpacerNoButtons;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.time = global::YallaParkingMobile.Droid.Resource.Id.time;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.title = global::YallaParkingMobile.Droid.Resource.Id.title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.title_template = global::YallaParkingMobile.Droid.Resource.Id.title_template;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.tooltip_content_container = global::YallaParkingMobile.Droid.Resource.Id.tooltip_content_container;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.top = global::YallaParkingMobile.Droid.Resource.Id.top;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.topPanel = global::YallaParkingMobile.Droid.Resource.Id.topPanel;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.touch_outside = global::YallaParkingMobile.Droid.Resource.Id.touch_outside;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.trackball_points_list = global::YallaParkingMobile.Droid.Resource.Id.trackball_points_list;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.up = global::YallaParkingMobile.Droid.Resource.Id.up;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.useLogo = global::YallaParkingMobile.Droid.Resource.Id.useLogo;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.vertical = global::YallaParkingMobile.Droid.Resource.Id.vertical;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.view_offset_helper = global::YallaParkingMobile.Droid.Resource.Id.view_offset_helper;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.volume_item_container = global::YallaParkingMobile.Droid.Resource.Id.volume_item_container;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.withText = global::YallaParkingMobile.Droid.Resource.Id.withText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.wrap_content = global::YallaParkingMobile.Droid.Resource.Id.wrap_content;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.xText = global::YallaParkingMobile.Droid.Resource.Id.xText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Id.yText = global::YallaParkingMobile.Droid.Resource.Id.yText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Integer.abc_config_activityDefaultDur = global::YallaParkingMobile.Droid.Resource.Integer.abc_config_activityDefaultDur;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Integer.abc_config_activityShortDur = global::YallaParkingMobile.Droid.Resource.Integer.abc_config_activityShortDur;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Integer.abc_max_action_buttons = global::YallaParkingMobile.Droid.Resource.Integer.abc_max_action_buttons;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Integer.bottom_sheet_slide_duration = global::YallaParkingMobile.Droid.Resource.Integer.bottom_sheet_slide_duration;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Integer.cancel_button_image_alpha = global::YallaParkingMobile.Droid.Resource.Integer.cancel_button_image_alpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Integer.design_snackbar_text_max_lines = global::YallaParkingMobile.Droid.Resource.Integer.design_snackbar_text_max_lines;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms = global::YallaParkingMobile.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms = global::YallaParkingMobile.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms = global::YallaParkingMobile.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Integer.status_bar_notification_info_maxnum = global::YallaParkingMobile.Droid.Resource.Integer.status_bar_notification_info_maxnum;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Interpolator.mr_fast_out_slow_in = global::YallaParkingMobile.Droid.Resource.Interpolator.mr_fast_out_slow_in;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Interpolator.mr_linear_out_slow_in = global::YallaParkingMobile.Droid.Resource.Interpolator.mr_linear_out_slow_in;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_action_bar_title_item = global::YallaParkingMobile.Droid.Resource.Layout.abc_action_bar_title_item;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_action_bar_up_container = global::YallaParkingMobile.Droid.Resource.Layout.abc_action_bar_up_container;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_action_bar_view_list_nav_layout = global::YallaParkingMobile.Droid.Resource.Layout.abc_action_bar_view_list_nav_layout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_action_menu_item_layout = global::YallaParkingMobile.Droid.Resource.Layout.abc_action_menu_item_layout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_action_menu_layout = global::YallaParkingMobile.Droid.Resource.Layout.abc_action_menu_layout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_action_mode_bar = global::YallaParkingMobile.Droid.Resource.Layout.abc_action_mode_bar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_action_mode_close_item_material = global::YallaParkingMobile.Droid.Resource.Layout.abc_action_mode_close_item_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_activity_chooser_view = global::YallaParkingMobile.Droid.Resource.Layout.abc_activity_chooser_view;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_activity_chooser_view_list_item = global::YallaParkingMobile.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_alert_dialog_button_bar_material = global::YallaParkingMobile.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_alert_dialog_material = global::YallaParkingMobile.Droid.Resource.Layout.abc_alert_dialog_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_dialog_title_material = global::YallaParkingMobile.Droid.Resource.Layout.abc_dialog_title_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_expanded_menu_layout = global::YallaParkingMobile.Droid.Resource.Layout.abc_expanded_menu_layout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_list_menu_item_checkbox = global::YallaParkingMobile.Droid.Resource.Layout.abc_list_menu_item_checkbox;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_list_menu_item_icon = global::YallaParkingMobile.Droid.Resource.Layout.abc_list_menu_item_icon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_list_menu_item_layout = global::YallaParkingMobile.Droid.Resource.Layout.abc_list_menu_item_layout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_list_menu_item_radio = global::YallaParkingMobile.Droid.Resource.Layout.abc_list_menu_item_radio;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_popup_menu_item_layout = global::YallaParkingMobile.Droid.Resource.Layout.abc_popup_menu_item_layout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_screen_content_include = global::YallaParkingMobile.Droid.Resource.Layout.abc_screen_content_include;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_screen_simple = global::YallaParkingMobile.Droid.Resource.Layout.abc_screen_simple;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_screen_simple_overlay_action_mode = global::YallaParkingMobile.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_screen_toolbar = global::YallaParkingMobile.Droid.Resource.Layout.abc_screen_toolbar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_search_dropdown_item_icons_2line = global::YallaParkingMobile.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_search_view = global::YallaParkingMobile.Droid.Resource.Layout.abc_search_view;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.abc_select_dialog_material = global::YallaParkingMobile.Droid.Resource.Layout.abc_select_dialog_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.default_tooltip_content = global::YallaParkingMobile.Droid.Resource.Layout.default_tooltip_content;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.default_tooltip_ohlc_content = global::YallaParkingMobile.Droid.Resource.Layout.default_tooltip_ohlc_content;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.default_tooltip_scatter_bubble_content = global::YallaParkingMobile.Droid.Resource.Layout.default_tooltip_scatter_bubble_content;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.default_tooltip_scatter_content = global::YallaParkingMobile.Droid.Resource.Layout.default_tooltip_scatter_content;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.default_trackball_content = global::YallaParkingMobile.Droid.Resource.Layout.default_trackball_content;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.default_trackball_item_content = global::YallaParkingMobile.Droid.Resource.Layout.default_trackball_item_content;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.design_bottom_sheet_dialog = global::YallaParkingMobile.Droid.Resource.Layout.design_bottom_sheet_dialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.design_layout_snackbar = global::YallaParkingMobile.Droid.Resource.Layout.design_layout_snackbar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.design_layout_snackbar_include = global::YallaParkingMobile.Droid.Resource.Layout.design_layout_snackbar_include;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.design_layout_tab_icon = global::YallaParkingMobile.Droid.Resource.Layout.design_layout_tab_icon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.design_layout_tab_text = global::YallaParkingMobile.Droid.Resource.Layout.design_layout_tab_text;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.design_menu_item_action_area = global::YallaParkingMobile.Droid.Resource.Layout.design_menu_item_action_area;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.design_navigation_item = global::YallaParkingMobile.Droid.Resource.Layout.design_navigation_item;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.design_navigation_item_header = global::YallaParkingMobile.Droid.Resource.Layout.design_navigation_item_header;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.design_navigation_item_separator = global::YallaParkingMobile.Droid.Resource.Layout.design_navigation_item_separator;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.design_navigation_item_subheader = global::YallaParkingMobile.Droid.Resource.Layout.design_navigation_item_subheader;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.design_navigation_menu = global::YallaParkingMobile.Droid.Resource.Layout.design_navigation_menu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.design_navigation_menu_item = global::YallaParkingMobile.Droid.Resource.Layout.design_navigation_menu_item;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.drawer_blur_fade_layer = global::YallaParkingMobile.Droid.Resource.Layout.drawer_blur_fade_layer;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.legend_item_view = global::YallaParkingMobile.Droid.Resource.Layout.legend_item_view;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.mr_chooser_dialog = global::YallaParkingMobile.Droid.Resource.Layout.mr_chooser_dialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.mr_chooser_list_item = global::YallaParkingMobile.Droid.Resource.Layout.mr_chooser_list_item;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.mr_controller_material_dialog_b = global::YallaParkingMobile.Droid.Resource.Layout.mr_controller_material_dialog_b;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.mr_controller_volume_item = global::YallaParkingMobile.Droid.Resource.Layout.mr_controller_volume_item;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.mr_playback_control = global::YallaParkingMobile.Droid.Resource.Layout.mr_playback_control;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.mr_volume_control = global::YallaParkingMobile.Droid.Resource.Layout.mr_volume_control;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.navigation_drawer_content = global::YallaParkingMobile.Droid.Resource.Layout.navigation_drawer_content;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.navigation_item_view = global::YallaParkingMobile.Droid.Resource.Layout.navigation_item_view;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.notification_media_action = global::YallaParkingMobile.Droid.Resource.Layout.notification_media_action;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.notification_media_cancel_action = global::YallaParkingMobile.Droid.Resource.Layout.notification_media_cancel_action;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.notification_template_big_media = global::YallaParkingMobile.Droid.Resource.Layout.notification_template_big_media;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.notification_template_big_media_narrow = global::YallaParkingMobile.Droid.Resource.Layout.notification_template_big_media_narrow;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.notification_template_lines = global::YallaParkingMobile.Droid.Resource.Layout.notification_template_lines;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.notification_template_media = global::YallaParkingMobile.Droid.Resource.Layout.notification_template_media;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.notification_template_part_chronometer = global::YallaParkingMobile.Droid.Resource.Layout.notification_template_part_chronometer;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.notification_template_part_time = global::YallaParkingMobile.Droid.Resource.Layout.notification_template_part_time;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.ohlc_trackball_item_content = global::YallaParkingMobile.Droid.Resource.Layout.ohlc_trackball_item_content;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.radchartbase = global::YallaParkingMobile.Droid.Resource.Layout.radchartbase;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.radlegendcontrol = global::YallaParkingMobile.Droid.Resource.Layout.radlegendcontrol;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.range_trackball_item_content = global::YallaParkingMobile.Droid.Resource.Layout.range_trackball_item_content;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.select_dialog_item_material = global::YallaParkingMobile.Droid.Resource.Layout.select_dialog_item_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.select_dialog_multichoice_material = global::YallaParkingMobile.Droid.Resource.Layout.select_dialog_multichoice_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.select_dialog_singlechoice_material = global::YallaParkingMobile.Droid.Resource.Layout.select_dialog_singlechoice_material;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.support_simple_spinner_dropdown_item = global::YallaParkingMobile.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.tab_item_view = global::YallaParkingMobile.Droid.Resource.Layout.tab_item_view;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.tooltip_container = global::YallaParkingMobile.Droid.Resource.Layout.tooltip_container;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.trackball_container = global::YallaParkingMobile.Droid.Resource.Layout.trackball_container;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Layout.trial_message = global::YallaParkingMobile.Droid.Resource.Layout.trial_message;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.ApplicationName = global::YallaParkingMobile.Droid.Resource.String.ApplicationName;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.Hello = global::YallaParkingMobile.Droid.Resource.String.Hello;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.abc_action_bar_home_description = global::YallaParkingMobile.Droid.Resource.String.abc_action_bar_home_description;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.abc_action_bar_home_description_format = global::YallaParkingMobile.Droid.Resource.String.abc_action_bar_home_description_format;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.abc_action_bar_home_subtitle_description_format = global::YallaParkingMobile.Droid.Resource.String.abc_action_bar_home_subtitle_description_format;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.abc_action_bar_up_description = global::YallaParkingMobile.Droid.Resource.String.abc_action_bar_up_description;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.abc_action_menu_overflow_description = global::YallaParkingMobile.Droid.Resource.String.abc_action_menu_overflow_description;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.abc_action_mode_done = global::YallaParkingMobile.Droid.Resource.String.abc_action_mode_done;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.abc_activity_chooser_view_see_all = global::YallaParkingMobile.Droid.Resource.String.abc_activity_chooser_view_see_all;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.abc_activitychooserview_choose_application = global::YallaParkingMobile.Droid.Resource.String.abc_activitychooserview_choose_application;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.abc_capital_off = global::YallaParkingMobile.Droid.Resource.String.abc_capital_off;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.abc_capital_on = global::YallaParkingMobile.Droid.Resource.String.abc_capital_on;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.abc_search_hint = global::YallaParkingMobile.Droid.Resource.String.abc_search_hint;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.abc_searchview_description_clear = global::YallaParkingMobile.Droid.Resource.String.abc_searchview_description_clear;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.abc_searchview_description_query = global::YallaParkingMobile.Droid.Resource.String.abc_searchview_description_query;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.abc_searchview_description_search = global::YallaParkingMobile.Droid.Resource.String.abc_searchview_description_search;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.abc_searchview_description_submit = global::YallaParkingMobile.Droid.Resource.String.abc_searchview_description_submit;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.abc_searchview_description_voice = global::YallaParkingMobile.Droid.Resource.String.abc_searchview_description_voice;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.abc_shareactionprovider_share_with = global::YallaParkingMobile.Droid.Resource.String.abc_shareactionprovider_share_with;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.abc_shareactionprovider_share_with_application = global::YallaParkingMobile.Droid.Resource.String.abc_shareactionprovider_share_with_application;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.abc_toolbar_collapse_description = global::YallaParkingMobile.Droid.Resource.String.abc_toolbar_collapse_description;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.appbar_scrolling_view_behavior = global::YallaParkingMobile.Droid.Resource.String.appbar_scrolling_view_behavior;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.bottom_sheet_behavior = global::YallaParkingMobile.Droid.Resource.String.bottom_sheet_behavior;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.character_counter_pattern = global::YallaParkingMobile.Droid.Resource.String.character_counter_pattern;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.mr_button_content_description = global::YallaParkingMobile.Droid.Resource.String.mr_button_content_description;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.mr_chooser_searching = global::YallaParkingMobile.Droid.Resource.String.mr_chooser_searching;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.mr_chooser_title = global::YallaParkingMobile.Droid.Resource.String.mr_chooser_title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.mr_controller_casting_screen = global::YallaParkingMobile.Droid.Resource.String.mr_controller_casting_screen;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.mr_controller_close_description = global::YallaParkingMobile.Droid.Resource.String.mr_controller_close_description;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.mr_controller_collapse_group = global::YallaParkingMobile.Droid.Resource.String.mr_controller_collapse_group;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.mr_controller_disconnect = global::YallaParkingMobile.Droid.Resource.String.mr_controller_disconnect;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.mr_controller_expand_group = global::YallaParkingMobile.Droid.Resource.String.mr_controller_expand_group;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.mr_controller_no_info_available = global::YallaParkingMobile.Droid.Resource.String.mr_controller_no_info_available;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.mr_controller_no_media_selected = global::YallaParkingMobile.Droid.Resource.String.mr_controller_no_media_selected;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.mr_controller_pause = global::YallaParkingMobile.Droid.Resource.String.mr_controller_pause;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.mr_controller_play = global::YallaParkingMobile.Droid.Resource.String.mr_controller_play;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.mr_controller_stop = global::YallaParkingMobile.Droid.Resource.String.mr_controller_stop;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.mr_system_route_name = global::YallaParkingMobile.Droid.Resource.String.mr_system_route_name;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.mr_user_route_category_name = global::YallaParkingMobile.Droid.Resource.String.mr_user_route_category_name;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.status_bar_notification_info_overflow = global::YallaParkingMobile.Droid.Resource.String.status_bar_notification_info_overflow;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.trial_message = global::YallaParkingMobile.Droid.Resource.String.trial_message;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.String.trial_message_caption = global::YallaParkingMobile.Droid.Resource.String.trial_message_caption;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.AlertDialog_AppCompat = global::YallaParkingMobile.Droid.Resource.Style.AlertDialog_AppCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.AlertDialog_AppCompat_Light = global::YallaParkingMobile.Droid.Resource.Style.AlertDialog_AppCompat_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Animation_AppCompat_Dialog = global::YallaParkingMobile.Droid.Resource.Style.Animation_AppCompat_Dialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Animation_AppCompat_DropDownUp = global::YallaParkingMobile.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Animation_Design_BottomSheetDialog = global::YallaParkingMobile.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.AxisStyle = global::YallaParkingMobile.Droid.Resource.Style.AxisStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.AxisStyle_LineAxisStyle = global::YallaParkingMobile.Droid.Resource.Style.AxisStyle_LineAxisStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.AxisStyle_LineAxisStyle_CartesianAxisStyle = global::YallaParkingMobile.Droid.Resource.Style.AxisStyle_LineAxisStyle_CartesianAxisStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.AxisStyle_LineAxisStyle_CartesianAxisStyle_CategoricalAxisStyle = global::YallaParkingMobile.Droid.Resource.Style.AxisStyle_LineAxisStyle_CartesianAxisStyle_CategoricalAxisStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.AxisStyle_LineAxisStyle_CartesianAxisStyle_CategoricalAxisStyle_DateTimeCategoricalAxisStyle = global::YallaParkingMobile.Droid.Resource.Style.AxisStyle_LineAxisStyle_CartesianAxisStyle_CategoricalAxisStyle_DateTimeCategoricalAxisStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.AxisStyle_LineAxisStyle_CartesianAxisStyle_CategoricalAxisStyle_TestDateTimeCategoricalAxisStyle = global::YallaParkingMobile.Droid.Resource.Style.AxisStyle_LineAxisStyle_CartesianAxisStyle_CategoricalAxisStyle_TestDateTimeCategoricalAxisStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.AxisStyle_LineAxisStyle_CartesianAxisStyle_DateTimeContinuousAxisStyle = global::YallaParkingMobile.Droid.Resource.Style.AxisStyle_LineAxisStyle_CartesianAxisStyle_DateTimeContinuousAxisStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_AlertDialog_AppCompat = global::YallaParkingMobile.Droid.Resource.Style.Base_AlertDialog_AppCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_AlertDialog_AppCompat_Light = global::YallaParkingMobile.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Animation_AppCompat_Dialog = global::YallaParkingMobile.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::YallaParkingMobile.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_CardView = global::YallaParkingMobile.Droid.Resource.Style.Base_CardView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_DialogWindowTitle_AppCompat = global::YallaParkingMobile.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::YallaParkingMobile.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Button = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Large = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Small = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Title = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::YallaParkingMobile.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Theme_AppCompat = global::YallaParkingMobile.Droid.Resource.Style.Base_Theme_AppCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::YallaParkingMobile.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Theme_AppCompat_Dialog = global::YallaParkingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::YallaParkingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::YallaParkingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::YallaParkingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::YallaParkingMobile.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Theme_AppCompat_Light = global::YallaParkingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::YallaParkingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::YallaParkingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::YallaParkingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::YallaParkingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::YallaParkingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::YallaParkingMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_ThemeOverlay_AppCompat = global::YallaParkingMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::YallaParkingMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::YallaParkingMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::YallaParkingMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::YallaParkingMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_V11_Theme_AppCompat_Dialog = global::YallaParkingMobile.Droid.Resource.Style.Base_V11_Theme_AppCompat_Dialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog = global::YallaParkingMobile.Droid.Resource.Style.Base_V11_Theme_AppCompat_Light_Dialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView = global::YallaParkingMobile.Droid.Resource.Style.Base_V12_Widget_AppCompat_AutoCompleteTextView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_V12_Widget_AppCompat_EditText = global::YallaParkingMobile.Droid.Resource.Style.Base_V12_Widget_AppCompat_EditText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_V21_Theme_AppCompat = global::YallaParkingMobile.Droid.Resource.Style.Base_V21_Theme_AppCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::YallaParkingMobile.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_V21_Theme_AppCompat_Light = global::YallaParkingMobile.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::YallaParkingMobile.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_V22_Theme_AppCompat = global::YallaParkingMobile.Droid.Resource.Style.Base_V22_Theme_AppCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_V22_Theme_AppCompat_Light = global::YallaParkingMobile.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_V23_Theme_AppCompat = global::YallaParkingMobile.Droid.Resource.Style.Base_V23_Theme_AppCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_V23_Theme_AppCompat_Light = global::YallaParkingMobile.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_V7_Theme_AppCompat = global::YallaParkingMobile.Droid.Resource.Style.Base_V7_Theme_AppCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::YallaParkingMobile.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_V7_Theme_AppCompat_Light = global::YallaParkingMobile.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::YallaParkingMobile.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::YallaParkingMobile.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::YallaParkingMobile.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_ActionBar = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_ActionButton = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_ActionMode = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_Button = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_Button_Small = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_EditText = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_ImageButton = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_ListView = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_RatingBar = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_SearchView = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_SeekBar = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_Spinner = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_Toolbar = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Base_Widget_Design_TabLayout = global::YallaParkingMobile.Droid.Resource.Style.Base_Widget_Design_TabLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.CardView = global::YallaParkingMobile.Droid.Resource.Style.CardView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.CardView_Dark = global::YallaParkingMobile.Droid.Resource.Style.CardView_Dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.CardView_Light = global::YallaParkingMobile.Droid.Resource.Style.CardView_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.ChartAnnotationStyle = global::YallaParkingMobile.Droid.Resource.Style.ChartAnnotationStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.ChartAnnotationStyle_CartesianCustomAnnotationStyle = global::YallaParkingMobile.Droid.Resource.Style.ChartAnnotationStyle_CartesianCustomAnnotationStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.ChartAnnotationStyle_CartesianStrokedAnnotationStyle = global::YallaParkingMobile.Droid.Resource.Style.ChartAnnotationStyle_CartesianStrokedAnnotationStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.ChartAnnotationStyle_CartesianStrokedAnnotationStyle_CartesianPlotBandAnnotationStyle = global::YallaParkingMobile.Droid.Resource.Style.ChartAnnotationStyle_CartesianStrokedAnnotationStyle_CartesianPlotBandAnnotationStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.ChartSeriesStyle = global::YallaParkingMobile.Droid.Resource.Style.ChartSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.ChartSeriesStyle_CategoricalSeriesStyle = global::YallaParkingMobile.Droid.Resource.Style.ChartSeriesStyle_CategoricalSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.ChartSeriesStyle_CategoricalSeriesStyle_BarSeriesStyle = global::YallaParkingMobile.Droid.Resource.Style.ChartSeriesStyle_CategoricalSeriesStyle_BarSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.ChartSeriesStyle_CategoricalSeriesStyle_CategoricalStrokedSeriesStyle = global::YallaParkingMobile.Droid.Resource.Style.ChartSeriesStyle_CategoricalSeriesStyle_CategoricalStrokedSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.ChartSeriesStyle_CategoricalSeriesStyle_CategoricalStrokedSeriesStyle_AreaSeriesStyle = global::YallaParkingMobile.Droid.Resource.Style.ChartSeriesStyle_CategoricalSeriesStyle_CategoricalStrokedSeriesStyle_AreaSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.ChartSeriesStyle_CategoricalSeriesStyle_RangeBarSeriesStyle = global::YallaParkingMobile.Droid.Resource.Style.ChartSeriesStyle_CategoricalSeriesStyle_RangeBarSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.ChartSeriesStyle_CategoricalSeriesStyle_TestBarSeriesStyle = global::YallaParkingMobile.Droid.Resource.Style.ChartSeriesStyle_CategoricalSeriesStyle_TestBarSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Platform_AppCompat = global::YallaParkingMobile.Droid.Resource.Style.Platform_AppCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Platform_AppCompat_Light = global::YallaParkingMobile.Droid.Resource.Style.Platform_AppCompat_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Platform_ThemeOverlay_AppCompat = global::YallaParkingMobile.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::YallaParkingMobile.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::YallaParkingMobile.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Platform_V11_AppCompat = global::YallaParkingMobile.Droid.Resource.Style.Platform_V11_AppCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Platform_V11_AppCompat_Light = global::YallaParkingMobile.Droid.Resource.Style.Platform_V11_AppCompat_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Platform_V14_AppCompat = global::YallaParkingMobile.Droid.Resource.Style.Platform_V14_AppCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Platform_V14_AppCompat_Light = global::YallaParkingMobile.Droid.Resource.Style.Platform_V14_AppCompat_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Platform_Widget_AppCompat_Spinner = global::YallaParkingMobile.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.RadChartBaseStyle = global::YallaParkingMobile.Droid.Resource.Style.RadChartBaseStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.RadScrollViewStyle = global::YallaParkingMobile.Droid.Resource.Style.RadScrollViewStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.RadScrollViewTheme = global::YallaParkingMobile.Droid.Resource.Style.RadScrollViewTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::YallaParkingMobile.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::YallaParkingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::YallaParkingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::YallaParkingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::YallaParkingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::YallaParkingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::YallaParkingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::YallaParkingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::YallaParkingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::YallaParkingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::YallaParkingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::YallaParkingMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::YallaParkingMobile.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::YallaParkingMobile.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Body1 = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Body2 = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Button = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Button;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Caption = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Display1 = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Display2 = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Display3 = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Display4 = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Headline = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Inverse = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Large = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Large;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Medium = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Menu = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Small = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Small;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Subhead = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Title = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_Design_Counter = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_Design_Counter;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_Design_Counter_Overflow = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_Design_Error = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_Design_Error;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_Design_Hint = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_Design_Hint;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_Design_Snackbar_Message = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_Design_Tab = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_Design_Tab;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_StatusBar_EventContent = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_StatusBar_EventContent;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_StatusBar_EventContent_Info = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Info;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_StatusBar_EventContent_Line2 = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Line2;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_StatusBar_EventContent_Time = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Time;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_StatusBar_EventContent_Title = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_StatusBar_EventContent_Title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::YallaParkingMobile.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_CompactMenu = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_DayNight = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_DayNight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_Dialog = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_Dialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_Dialog_Alert = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_Light = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_Light_Dialog = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_AppCompat_NoActionBar = global::YallaParkingMobile.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_ChartTheme = global::YallaParkingMobile.Droid.Resource.Style.Theme_ChartTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_Design = global::YallaParkingMobile.Droid.Resource.Style.Theme_Design;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_Design_BottomSheetDialog = global::YallaParkingMobile.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_Design_Light = global::YallaParkingMobile.Droid.Resource.Style.Theme_Design_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::YallaParkingMobile.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_Design_Light_NoActionBar = global::YallaParkingMobile.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_Design_NoActionBar = global::YallaParkingMobile.Droid.Resource.Style.Theme_Design_NoActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_MediaRouter = global::YallaParkingMobile.Droid.Resource.Style.Theme_MediaRouter;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_MediaRouter_Light = global::YallaParkingMobile.Droid.Resource.Style.Theme_MediaRouter_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel = global::YallaParkingMobile.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Theme_MediaRouter_LightControlPanel = global::YallaParkingMobile.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.ThemeOverlay_AppCompat = global::YallaParkingMobile.Droid.Resource.Style.ThemeOverlay_AppCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::YallaParkingMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.ThemeOverlay_AppCompat_Dark = global::YallaParkingMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::YallaParkingMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.ThemeOverlay_AppCompat_Light = global::YallaParkingMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_ActionBar = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_ActionButton = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_ActionButton;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_ActionMode = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_ActionMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_ActivityChooserView = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Button = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Button;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Button_Borderless = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Button_Colored = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Button_Small = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Button_Small;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_ButtonBar = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_EditText = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_EditText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_ImageButton = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_ImageButton;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_ActionBar = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_ActionButton = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_SearchView = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_ListPopupWindow = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_ListView = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_ListView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_ListView_DropDown = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_ListView_Menu = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_PopupMenu = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_PopupWindow = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_ProgressBar = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_RatingBar = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_RatingBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_RatingBar_Small = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_SearchView = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_SearchView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_SeekBar = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_SeekBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Spinner = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Spinner;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Toolbar = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Toolbar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::YallaParkingMobile.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_Design_AppBarLayout = global::YallaParkingMobile.Droid.Resource.Style.Widget_Design_AppBarLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_Design_BottomSheet_Modal = global::YallaParkingMobile.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_Design_CollapsingToolbar = global::YallaParkingMobile.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_Design_CoordinatorLayout = global::YallaParkingMobile.Droid.Resource.Style.Widget_Design_CoordinatorLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_Design_FloatingActionButton = global::YallaParkingMobile.Droid.Resource.Style.Widget_Design_FloatingActionButton;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_Design_NavigationView = global::YallaParkingMobile.Droid.Resource.Style.Widget_Design_NavigationView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::YallaParkingMobile.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_Design_Snackbar = global::YallaParkingMobile.Droid.Resource.Style.Widget_Design_Snackbar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_Design_TabLayout = global::YallaParkingMobile.Droid.Resource.Style.Widget_Design_TabLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_Design_TextInputLayout = global::YallaParkingMobile.Droid.Resource.Style.Widget_Design_TextInputLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_MediaRouter_ChooserText = global::YallaParkingMobile.Droid.Resource.Style.Widget_MediaRouter_ChooserText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_MediaRouter_ChooserText_Primary = global::YallaParkingMobile.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Primary;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_MediaRouter_ChooserText_Primary_Dark = global::YallaParkingMobile.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Primary_Dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_MediaRouter_ChooserText_Primary_Light = global::YallaParkingMobile.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Primary_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_MediaRouter_ChooserText_Secondary = global::YallaParkingMobile.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Secondary;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_MediaRouter_ChooserText_Secondary_Dark = global::YallaParkingMobile.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Secondary_Dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_MediaRouter_ChooserText_Secondary_Light = global::YallaParkingMobile.Droid.Resource.Style.Widget_MediaRouter_ChooserText_Secondary_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_MediaRouter_ControllerText = global::YallaParkingMobile.Droid.Resource.Style.Widget_MediaRouter_ControllerText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_MediaRouter_ControllerText_Primary = global::YallaParkingMobile.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Primary;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_MediaRouter_ControllerText_Primary_Dark = global::YallaParkingMobile.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Primary_Dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_MediaRouter_ControllerText_Primary_Light = global::YallaParkingMobile.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Primary_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_MediaRouter_ControllerText_Secondary = global::YallaParkingMobile.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Secondary;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_MediaRouter_ControllerText_Secondary_Dark = global::YallaParkingMobile.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Secondary_Dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_MediaRouter_ControllerText_Secondary_Light = global::YallaParkingMobile.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Secondary_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_MediaRouter_ControllerText_Title = global::YallaParkingMobile.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_MediaRouter_ControllerText_Title_Dark = global::YallaParkingMobile.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Title_Dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_MediaRouter_ControllerText_Title_Light = global::YallaParkingMobile.Droid.Resource.Style.Widget_MediaRouter_ControllerText_Title_Light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::YallaParkingMobile.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::YallaParkingMobile.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Xml.chart_palettes_dark_selected = global::YallaParkingMobile.Droid.Resource.Xml.chart_palettes_dark_selected;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Xml.chart_palettes_default_dark = global::YallaParkingMobile.Droid.Resource.Xml.chart_palettes_default_dark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Xml.chart_palettes_default_light = global::YallaParkingMobile.Droid.Resource.Xml.chart_palettes_default_light;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Xml.chart_palettes_light_selected = global::YallaParkingMobile.Droid.Resource.Xml.chart_palettes_light_selected;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_background = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_background;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_backgroundSplit = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_backgroundSplit;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_backgroundStacked = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_backgroundStacked;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_contentInsetEnd = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_contentInsetLeft = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_contentInsetRight = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_contentInsetRight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_contentInsetStart = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_contentInsetStart;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_customNavigationLayout = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_displayOptions = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_displayOptions;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_divider = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_divider;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_elevation = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_elevation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_height = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_height;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_hideOnContentScroll = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_homeAsUpIndicator = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_homeLayout = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_homeLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_icon = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_icon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_itemPadding = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_itemPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_logo = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_logo;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_navigationMode = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_navigationMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_popupTheme = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_popupTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_progressBarPadding = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_progressBarPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_progressBarStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_progressBarStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_subtitle = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_subtitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_subtitleTextStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_title = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBar_titleTextStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBar_titleTextStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBarLayout = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBarLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::YallaParkingMobile.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionMenuItemView = global::YallaParkingMobile.Droid.Resource.Styleable.ActionMenuItemView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionMenuItemView_android_minWidth = global::YallaParkingMobile.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionMenuView = global::YallaParkingMobile.Droid.Resource.Styleable.ActionMenuView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionMode = global::YallaParkingMobile.Droid.Resource.Styleable.ActionMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionMode_background = global::YallaParkingMobile.Droid.Resource.Styleable.ActionMode_background;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionMode_backgroundSplit = global::YallaParkingMobile.Droid.Resource.Styleable.ActionMode_backgroundSplit;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionMode_closeItemLayout = global::YallaParkingMobile.Droid.Resource.Styleable.ActionMode_closeItemLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionMode_height = global::YallaParkingMobile.Droid.Resource.Styleable.ActionMode_height;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionMode_subtitleTextStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActionMode_titleTextStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ActionMode_titleTextStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActivityChooserView = global::YallaParkingMobile.Droid.Resource.Styleable.ActivityChooserView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::YallaParkingMobile.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ActivityChooserView_initialActivityCount = global::YallaParkingMobile.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AlertDialog = global::YallaParkingMobile.Droid.Resource.Styleable.AlertDialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AlertDialog_android_layout = global::YallaParkingMobile.Droid.Resource.Styleable.AlertDialog_android_layout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::YallaParkingMobile.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AlertDialog_listItemLayout = global::YallaParkingMobile.Droid.Resource.Styleable.AlertDialog_listItemLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AlertDialog_listLayout = global::YallaParkingMobile.Droid.Resource.Styleable.AlertDialog_listLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::YallaParkingMobile.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::YallaParkingMobile.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppBarLayout = global::YallaParkingMobile.Droid.Resource.Styleable.AppBarLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppBarLayout_android_background = global::YallaParkingMobile.Droid.Resource.Styleable.AppBarLayout_android_background;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppBarLayout_elevation = global::YallaParkingMobile.Droid.Resource.Styleable.AppBarLayout_elevation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppBarLayout_expanded = global::YallaParkingMobile.Droid.Resource.Styleable.AppBarLayout_expanded;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppBarLayout_LayoutParams = global::YallaParkingMobile.Droid.Resource.Styleable.AppBarLayout_LayoutParams;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppBarLayout_LayoutParams_layout_scrollFlags = global::YallaParkingMobile.Droid.Resource.Styleable.AppBarLayout_LayoutParams_layout_scrollFlags;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppBarLayout_LayoutParams_layout_scrollInterpolator = global::YallaParkingMobile.Droid.Resource.Styleable.AppBarLayout_LayoutParams_layout_scrollInterpolator;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatImageView = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatImageView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatImageView_android_src = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatImageView_android_src;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatImageView_srcCompat = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTextView = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTextView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTextView_android_textAppearance = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTextView_textAllCaps = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionBarDivider = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionBarSize = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionBarStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionBarTheme = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionModeBackground = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionModeStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_buttonStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_checkboxStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_colorAccent = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_colorControlActivated = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_colorControlNormal = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_colorPrimary = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_controlBackground = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_dialogTheme = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_dividerVertical = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_editTextBackground = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_editTextColor = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_editTextStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_panelBackground = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_searchViewStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_seekBarStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_spinnerStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_switchStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_toolbarStyle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_windowActionBar = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AppCompatTheme_windowNoTitle = global::YallaParkingMobile.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AreaSeries = global::YallaParkingMobile.Droid.Resource.Styleable.AreaSeries;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.AreaSeries_fillColor = global::YallaParkingMobile.Droid.Resource.Styleable.AreaSeries_fillColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Axis = global::YallaParkingMobile.Droid.Resource.Styleable.Axis;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Axis_axisLabelFitMode = global::YallaParkingMobile.Droid.Resource.Styleable.Axis_axisLabelFitMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Axis_axisLastLabelVisibility = global::YallaParkingMobile.Droid.Resource.Styleable.Axis_axisLastLabelVisibility;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Axis_axisTitle = global::YallaParkingMobile.Droid.Resource.Styleable.Axis_axisTitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Axis_labelColor = global::YallaParkingMobile.Droid.Resource.Styleable.Axis_labelColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Axis_labelFont = global::YallaParkingMobile.Droid.Resource.Styleable.Axis_labelFont;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Axis_labelFontStyle = global::YallaParkingMobile.Droid.Resource.Styleable.Axis_labelFontStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Axis_labelFormat = global::YallaParkingMobile.Droid.Resource.Styleable.Axis_labelFormat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Axis_labelInterval = global::YallaParkingMobile.Droid.Resource.Styleable.Axis_labelInterval;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Axis_labelMargin = global::YallaParkingMobile.Droid.Resource.Styleable.Axis_labelMargin;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Axis_labelOffset = global::YallaParkingMobile.Droid.Resource.Styleable.Axis_labelOffset;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Axis_labelRotationAngle = global::YallaParkingMobile.Droid.Resource.Styleable.Axis_labelRotationAngle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Axis_labelSize = global::YallaParkingMobile.Droid.Resource.Styleable.Axis_labelSize;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Axis_lineThickness = global::YallaParkingMobile.Droid.Resource.Styleable.Axis_lineThickness;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Axis_majorTickOffset = global::YallaParkingMobile.Droid.Resource.Styleable.Axis_majorTickOffset;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Axis_showLabels = global::YallaParkingMobile.Droid.Resource.Styleable.Axis_showLabels;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Axis_tickThickness = global::YallaParkingMobile.Droid.Resource.Styleable.Axis_tickThickness;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.BarSeries = global::YallaParkingMobile.Droid.Resource.Styleable.BarSeries;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.BarSeries_areBarsRounded = global::YallaParkingMobile.Droid.Resource.Styleable.BarSeries_areBarsRounded;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.BarSeries_fillColor = global::YallaParkingMobile.Droid.Resource.Styleable.BarSeries_fillColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.BarSeries_roundBarsRadius = global::YallaParkingMobile.Droid.Resource.Styleable.BarSeries_roundBarsRadius;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.BarSeries_strokeColor = global::YallaParkingMobile.Droid.Resource.Styleable.BarSeries_strokeColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.BarSeries_strokeWidth = global::YallaParkingMobile.Droid.Resource.Styleable.BarSeries_strokeWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.BottomSheetBehavior_Params = global::YallaParkingMobile.Droid.Resource.Styleable.BottomSheetBehavior_Params;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.BottomSheetBehavior_Params_behavior_hideable = global::YallaParkingMobile.Droid.Resource.Styleable.BottomSheetBehavior_Params_behavior_hideable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.BottomSheetBehavior_Params_behavior_peekHeight = global::YallaParkingMobile.Droid.Resource.Styleable.BottomSheetBehavior_Params_behavior_peekHeight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ButtonBarLayout = global::YallaParkingMobile.Droid.Resource.Styleable.ButtonBarLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ButtonBarLayout_allowStacking = global::YallaParkingMobile.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CardView = global::YallaParkingMobile.Droid.Resource.Styleable.CardView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CardView_android_minHeight = global::YallaParkingMobile.Droid.Resource.Styleable.CardView_android_minHeight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CardView_android_minWidth = global::YallaParkingMobile.Droid.Resource.Styleable.CardView_android_minWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CardView_cardBackgroundColor = global::YallaParkingMobile.Droid.Resource.Styleable.CardView_cardBackgroundColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CardView_cardCornerRadius = global::YallaParkingMobile.Droid.Resource.Styleable.CardView_cardCornerRadius;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CardView_cardElevation = global::YallaParkingMobile.Droid.Resource.Styleable.CardView_cardElevation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CardView_cardMaxElevation = global::YallaParkingMobile.Droid.Resource.Styleable.CardView_cardMaxElevation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CardView_cardPreventCornerOverlap = global::YallaParkingMobile.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CardView_cardUseCompatPadding = global::YallaParkingMobile.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CardView_contentPadding = global::YallaParkingMobile.Droid.Resource.Styleable.CardView_contentPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CardView_contentPaddingBottom = global::YallaParkingMobile.Droid.Resource.Styleable.CardView_contentPaddingBottom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CardView_contentPaddingLeft = global::YallaParkingMobile.Droid.Resource.Styleable.CardView_contentPaddingLeft;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CardView_contentPaddingRight = global::YallaParkingMobile.Droid.Resource.Styleable.CardView_contentPaddingRight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CardView_contentPaddingTop = global::YallaParkingMobile.Droid.Resource.Styleable.CardView_contentPaddingTop;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CartesianAxis = global::YallaParkingMobile.Droid.Resource.Styleable.CartesianAxis;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CartesianAxis_horizontalLocation = global::YallaParkingMobile.Droid.Resource.Styleable.CartesianAxis_horizontalLocation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CartesianAxis_verticalLocation = global::YallaParkingMobile.Droid.Resource.Styleable.CartesianAxis_verticalLocation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CartesianCustomAnnotation = global::YallaParkingMobile.Droid.Resource.Styleable.CartesianCustomAnnotation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CartesianCustomAnnotation_content = global::YallaParkingMobile.Droid.Resource.Styleable.CartesianCustomAnnotation_content;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CartesianCustomAnnotation_horizontalAlignment = global::YallaParkingMobile.Droid.Resource.Styleable.CartesianCustomAnnotation_horizontalAlignment;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CartesianCustomAnnotation_horizontalOffset = global::YallaParkingMobile.Droid.Resource.Styleable.CartesianCustomAnnotation_horizontalOffset;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CartesianCustomAnnotation_verticalAlignment = global::YallaParkingMobile.Droid.Resource.Styleable.CartesianCustomAnnotation_verticalAlignment;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CartesianCustomAnnotation_verticalOffset = global::YallaParkingMobile.Droid.Resource.Styleable.CartesianCustomAnnotation_verticalOffset;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CartesianPlotBandAnnotation = global::YallaParkingMobile.Droid.Resource.Styleable.CartesianPlotBandAnnotation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CartesianPlotBandAnnotation_fillColor = global::YallaParkingMobile.Droid.Resource.Styleable.CartesianPlotBandAnnotation_fillColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CartesianStrokedAnnotation = global::YallaParkingMobile.Droid.Resource.Styleable.CartesianStrokedAnnotation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CartesianStrokedAnnotation_label = global::YallaParkingMobile.Droid.Resource.Styleable.CartesianStrokedAnnotation_label;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CartesianStrokedAnnotation_strokeColor = global::YallaParkingMobile.Droid.Resource.Styleable.CartesianStrokedAnnotation_strokeColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CartesianStrokedAnnotation_strokeWidth = global::YallaParkingMobile.Droid.Resource.Styleable.CartesianStrokedAnnotation_strokeWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CategoricalAxis = global::YallaParkingMobile.Droid.Resource.Styleable.CategoricalAxis;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CategoricalAxis_gapLength = global::YallaParkingMobile.Droid.Resource.Styleable.CategoricalAxis_gapLength;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CategoricalAxis_majorTickInterval = global::YallaParkingMobile.Droid.Resource.Styleable.CategoricalAxis_majorTickInterval;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CategoricalAxis_plotMode = global::YallaParkingMobile.Droid.Resource.Styleable.CategoricalAxis_plotMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CategoricalSeries = global::YallaParkingMobile.Droid.Resource.Styleable.CategoricalSeries;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CategoricalSeries_combineMode = global::YallaParkingMobile.Droid.Resource.Styleable.CategoricalSeries_combineMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CategoricalStrokedSeries = global::YallaParkingMobile.Droid.Resource.Styleable.CategoricalStrokedSeries;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CategoricalStrokedSeries_strokeColor = global::YallaParkingMobile.Droid.Resource.Styleable.CategoricalStrokedSeries_strokeColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CategoricalStrokedSeries_strokeWidth = global::YallaParkingMobile.Droid.Resource.Styleable.CategoricalStrokedSeries_strokeWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartAnnotation = global::YallaParkingMobile.Droid.Resource.Styleable.ChartAnnotation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartAnnotation_clipToPlotArea = global::YallaParkingMobile.Droid.Resource.Styleable.ChartAnnotation_clipToPlotArea;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartSeries = global::YallaParkingMobile.Droid.Resource.Styleable.ChartSeries;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartSeries_clipToPlotArea = global::YallaParkingMobile.Droid.Resource.Styleable.ChartSeries_clipToPlotArea;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartSeries_labelColor = global::YallaParkingMobile.Droid.Resource.Styleable.ChartSeries_labelColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartSeries_labelFont = global::YallaParkingMobile.Droid.Resource.Styleable.ChartSeries_labelFont;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartSeries_labelFontStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ChartSeries_labelFontStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartSeries_labelFormat = global::YallaParkingMobile.Droid.Resource.Styleable.ChartSeries_labelFormat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartSeries_labelSize = global::YallaParkingMobile.Droid.Resource.Styleable.ChartSeries_labelSize;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartSeries_showLabels = global::YallaParkingMobile.Droid.Resource.Styleable.ChartSeries_showLabels;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartTheme = global::YallaParkingMobile.Droid.Resource.Styleable.ChartTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartTheme_AreaSeriesStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ChartTheme_AreaSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartTheme_AxisStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ChartTheme_AxisStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartTheme_BarSeriesStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ChartTheme_BarSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartTheme_CartesianAxisStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ChartTheme_CartesianAxisStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartTheme_CartesianCustomAnnotationStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ChartTheme_CartesianCustomAnnotationStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartTheme_CartesianPlotBandAnnotationStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ChartTheme_CartesianPlotBandAnnotationStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartTheme_CartesianStrokedAnnotationStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ChartTheme_CartesianStrokedAnnotationStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartTheme_CategoricalAxisStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ChartTheme_CategoricalAxisStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartTheme_CategoricalSeriesStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ChartTheme_CategoricalSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartTheme_CategoricalStrokedSeriesStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ChartTheme_CategoricalStrokedSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartTheme_ChartAnnotationStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ChartTheme_ChartAnnotationStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartTheme_ChartSeriesStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ChartTheme_ChartSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartTheme_DateTimeCategoricalAxisStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ChartTheme_DateTimeCategoricalAxisStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartTheme_DateTimeContinuousAxisStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ChartTheme_DateTimeContinuousAxisStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartTheme_LineAxisStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ChartTheme_LineAxisStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartTheme_RadChartBaseStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ChartTheme_RadChartBaseStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartTheme_RangeBarSeriesStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ChartTheme_RangeBarSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ChartTheme_TestBarSeriesStyle = global::YallaParkingMobile.Droid.Resource.Styleable.ChartTheme_TestBarSeriesStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CollapsingAppBarLayout_LayoutParams = global::YallaParkingMobile.Droid.Resource.Styleable.CollapsingAppBarLayout_LayoutParams;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CollapsingAppBarLayout_LayoutParams_layout_collapseMode = global::YallaParkingMobile.Droid.Resource.Styleable.CollapsingAppBarLayout_LayoutParams_layout_collapseMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CollapsingAppBarLayout_LayoutParams_layout_collapseParallaxMultiplier = global::YallaParkingMobile.Droid.Resource.Styleable.CollapsingAppBarLayout_LayoutParams_layout_collapseParallaxMultiplier;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CollapsingToolbarLayout = global::YallaParkingMobile.Droid.Resource.Styleable.CollapsingToolbarLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::YallaParkingMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::YallaParkingMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::YallaParkingMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::YallaParkingMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::YallaParkingMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::YallaParkingMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::YallaParkingMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::YallaParkingMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::YallaParkingMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::YallaParkingMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::YallaParkingMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CollapsingToolbarLayout_title = global::YallaParkingMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::YallaParkingMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::YallaParkingMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CompoundButton = global::YallaParkingMobile.Droid.Resource.Styleable.CompoundButton;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CompoundButton_android_button = global::YallaParkingMobile.Droid.Resource.Styleable.CompoundButton_android_button;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CompoundButton_buttonTint = global::YallaParkingMobile.Droid.Resource.Styleable.CompoundButton_buttonTint;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CompoundButton_buttonTintMode = global::YallaParkingMobile.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CoordinatorLayout = global::YallaParkingMobile.Droid.Resource.Styleable.CoordinatorLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CoordinatorLayout_keylines = global::YallaParkingMobile.Droid.Resource.Styleable.CoordinatorLayout_keylines;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::YallaParkingMobile.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CoordinatorLayout_LayoutParams = global::YallaParkingMobile.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CoordinatorLayout_LayoutParams_android_layout_gravity = global::YallaParkingMobile.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_android_layout_gravity;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_anchor = global::YallaParkingMobile.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_anchor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_anchorGravity = global::YallaParkingMobile.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_anchorGravity;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_behavior = global::YallaParkingMobile.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_behavior;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_keyline = global::YallaParkingMobile.Droid.Resource.Styleable.CoordinatorLayout_LayoutParams_layout_keyline;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DateTimeCategoricalAxis = global::YallaParkingMobile.Droid.Resource.Styleable.DateTimeCategoricalAxis;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DateTimeCategoricalAxis_dateFormat = global::YallaParkingMobile.Droid.Resource.Styleable.DateTimeCategoricalAxis_dateFormat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DateTimeCategoricalAxis_dateTimeComponent = global::YallaParkingMobile.Droid.Resource.Styleable.DateTimeCategoricalAxis_dateTimeComponent;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DateTimeContinuousAxis = global::YallaParkingMobile.Droid.Resource.Styleable.DateTimeContinuousAxis;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DateTimeContinuousAxis_gapLength = global::YallaParkingMobile.Droid.Resource.Styleable.DateTimeContinuousAxis_gapLength;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DateTimeContinuousAxis_majorStep = global::YallaParkingMobile.Droid.Resource.Styleable.DateTimeContinuousAxis_majorStep;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DateTimeContinuousAxis_majorStepUnit = global::YallaParkingMobile.Droid.Resource.Styleable.DateTimeContinuousAxis_majorStepUnit;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DateTimeContinuousAxis_maximumTicks = global::YallaParkingMobile.Droid.Resource.Styleable.DateTimeContinuousAxis_maximumTicks;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DateTimeContinuousAxis_plotMode = global::YallaParkingMobile.Droid.Resource.Styleable.DateTimeContinuousAxis_plotMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DesignTheme = global::YallaParkingMobile.Droid.Resource.Styleable.DesignTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::YallaParkingMobile.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DesignTheme_bottomSheetStyle = global::YallaParkingMobile.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DesignTheme_textColorError = global::YallaParkingMobile.Droid.Resource.Styleable.DesignTheme_textColorError;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DrawerArrowToggle = global::YallaParkingMobile.Droid.Resource.Styleable.DrawerArrowToggle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::YallaParkingMobile.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::YallaParkingMobile.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DrawerArrowToggle_barLength = global::YallaParkingMobile.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DrawerArrowToggle_color = global::YallaParkingMobile.Droid.Resource.Styleable.DrawerArrowToggle_color;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DrawerArrowToggle_drawableSize = global::YallaParkingMobile.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::YallaParkingMobile.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DrawerArrowToggle_spinBars = global::YallaParkingMobile.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.DrawerArrowToggle_thickness = global::YallaParkingMobile.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.FloatingActionButton = global::YallaParkingMobile.Droid.Resource.Styleable.FloatingActionButton;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.FloatingActionButton_backgroundTint = global::YallaParkingMobile.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::YallaParkingMobile.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.FloatingActionButton_borderWidth = global::YallaParkingMobile.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.FloatingActionButton_elevation = global::YallaParkingMobile.Droid.Resource.Styleable.FloatingActionButton_elevation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.FloatingActionButton_fabSize = global::YallaParkingMobile.Droid.Resource.Styleable.FloatingActionButton_fabSize;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::YallaParkingMobile.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.FloatingActionButton_rippleColor = global::YallaParkingMobile.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.FloatingActionButton_useCompatPadding = global::YallaParkingMobile.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ForegroundLinearLayout = global::YallaParkingMobile.Droid.Resource.Styleable.ForegroundLinearLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::YallaParkingMobile.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::YallaParkingMobile.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::YallaParkingMobile.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.LineAxis = global::YallaParkingMobile.Droid.Resource.Styleable.LineAxis;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.LineAxis_lineColor = global::YallaParkingMobile.Droid.Resource.Styleable.LineAxis_lineColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.LinearLayoutCompat = global::YallaParkingMobile.Droid.Resource.Styleable.LinearLayoutCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::YallaParkingMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::YallaParkingMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.LinearLayoutCompat_android_gravity = global::YallaParkingMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.LinearLayoutCompat_android_orientation = global::YallaParkingMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::YallaParkingMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.LinearLayoutCompat_divider = global::YallaParkingMobile.Droid.Resource.Styleable.LinearLayoutCompat_divider;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::YallaParkingMobile.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::YallaParkingMobile.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.LinearLayoutCompat_showDividers = global::YallaParkingMobile.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.LinearLayoutCompat_Layout = global::YallaParkingMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::YallaParkingMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::YallaParkingMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::YallaParkingMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::YallaParkingMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ListPopupWindow = global::YallaParkingMobile.Droid.Resource.Styleable.ListPopupWindow;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::YallaParkingMobile.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::YallaParkingMobile.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MediaRouteButton = global::YallaParkingMobile.Droid.Resource.Styleable.MediaRouteButton;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MediaRouteButton_android_minHeight = global::YallaParkingMobile.Droid.Resource.Styleable.MediaRouteButton_android_minHeight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MediaRouteButton_android_minWidth = global::YallaParkingMobile.Droid.Resource.Styleable.MediaRouteButton_android_minWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable = global::YallaParkingMobile.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuGroup = global::YallaParkingMobile.Droid.Resource.Styleable.MenuGroup;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuGroup_android_checkableBehavior = global::YallaParkingMobile.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuGroup_android_enabled = global::YallaParkingMobile.Droid.Resource.Styleable.MenuGroup_android_enabled;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuGroup_android_id = global::YallaParkingMobile.Droid.Resource.Styleable.MenuGroup_android_id;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuGroup_android_menuCategory = global::YallaParkingMobile.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuGroup_android_orderInCategory = global::YallaParkingMobile.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuGroup_android_visible = global::YallaParkingMobile.Droid.Resource.Styleable.MenuGroup_android_visible;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuItem = global::YallaParkingMobile.Droid.Resource.Styleable.MenuItem;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuItem_actionLayout = global::YallaParkingMobile.Droid.Resource.Styleable.MenuItem_actionLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuItem_actionProviderClass = global::YallaParkingMobile.Droid.Resource.Styleable.MenuItem_actionProviderClass;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuItem_actionViewClass = global::YallaParkingMobile.Droid.Resource.Styleable.MenuItem_actionViewClass;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::YallaParkingMobile.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuItem_android_checkable = global::YallaParkingMobile.Droid.Resource.Styleable.MenuItem_android_checkable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuItem_android_checked = global::YallaParkingMobile.Droid.Resource.Styleable.MenuItem_android_checked;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuItem_android_enabled = global::YallaParkingMobile.Droid.Resource.Styleable.MenuItem_android_enabled;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuItem_android_icon = global::YallaParkingMobile.Droid.Resource.Styleable.MenuItem_android_icon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuItem_android_id = global::YallaParkingMobile.Droid.Resource.Styleable.MenuItem_android_id;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuItem_android_menuCategory = global::YallaParkingMobile.Droid.Resource.Styleable.MenuItem_android_menuCategory;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuItem_android_numericShortcut = global::YallaParkingMobile.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuItem_android_onClick = global::YallaParkingMobile.Droid.Resource.Styleable.MenuItem_android_onClick;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuItem_android_orderInCategory = global::YallaParkingMobile.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuItem_android_title = global::YallaParkingMobile.Droid.Resource.Styleable.MenuItem_android_title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuItem_android_titleCondensed = global::YallaParkingMobile.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuItem_android_visible = global::YallaParkingMobile.Droid.Resource.Styleable.MenuItem_android_visible;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuItem_showAsAction = global::YallaParkingMobile.Droid.Resource.Styleable.MenuItem_showAsAction;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuView = global::YallaParkingMobile.Droid.Resource.Styleable.MenuView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuView_android_headerBackground = global::YallaParkingMobile.Droid.Resource.Styleable.MenuView_android_headerBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuView_android_horizontalDivider = global::YallaParkingMobile.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuView_android_itemBackground = global::YallaParkingMobile.Droid.Resource.Styleable.MenuView_android_itemBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::YallaParkingMobile.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuView_android_itemTextAppearance = global::YallaParkingMobile.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuView_android_verticalDivider = global::YallaParkingMobile.Droid.Resource.Styleable.MenuView_android_verticalDivider;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuView_android_windowAnimationStyle = global::YallaParkingMobile.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.MenuView_preserveIconSpacing = global::YallaParkingMobile.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.NavigationView = global::YallaParkingMobile.Droid.Resource.Styleable.NavigationView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.NavigationView_android_background = global::YallaParkingMobile.Droid.Resource.Styleable.NavigationView_android_background;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::YallaParkingMobile.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.NavigationView_android_maxWidth = global::YallaParkingMobile.Droid.Resource.Styleable.NavigationView_android_maxWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.NavigationView_elevation = global::YallaParkingMobile.Droid.Resource.Styleable.NavigationView_elevation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.NavigationView_headerLayout = global::YallaParkingMobile.Droid.Resource.Styleable.NavigationView_headerLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.NavigationView_itemBackground = global::YallaParkingMobile.Droid.Resource.Styleable.NavigationView_itemBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.NavigationView_itemIconTint = global::YallaParkingMobile.Droid.Resource.Styleable.NavigationView_itemIconTint;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.NavigationView_itemTextAppearance = global::YallaParkingMobile.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.NavigationView_itemTextColor = global::YallaParkingMobile.Droid.Resource.Styleable.NavigationView_itemTextColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.NavigationView_menu = global::YallaParkingMobile.Droid.Resource.Styleable.NavigationView_menu;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.PointerLayout = global::YallaParkingMobile.Droid.Resource.Styleable.PointerLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.PointerLayout_pointerFill = global::YallaParkingMobile.Droid.Resource.Styleable.PointerLayout_pointerFill;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.PointerLayout_pointerMargin = global::YallaParkingMobile.Droid.Resource.Styleable.PointerLayout_pointerMargin;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.PointerLayout_pointerSize = global::YallaParkingMobile.Droid.Resource.Styleable.PointerLayout_pointerSize;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.PopupWindow = global::YallaParkingMobile.Droid.Resource.Styleable.PopupWindow;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.PopupWindow_android_popupBackground = global::YallaParkingMobile.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.PopupWindow_overlapAnchor = global::YallaParkingMobile.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.PopupWindowBackgroundState = global::YallaParkingMobile.Droid.Resource.Styleable.PopupWindowBackgroundState;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::YallaParkingMobile.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RadChartViewBase = global::YallaParkingMobile.Droid.Resource.Styleable.RadChartViewBase;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RadChartViewBase_chartZoom = global::YallaParkingMobile.Droid.Resource.Styleable.RadChartViewBase_chartZoom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RadChartViewBase_clipToBounds = global::YallaParkingMobile.Droid.Resource.Styleable.RadChartViewBase_clipToBounds;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RadChartViewBase_emptyContent = global::YallaParkingMobile.Droid.Resource.Styleable.RadChartViewBase_emptyContent;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RadChartViewBase_maxZoom = global::YallaParkingMobile.Droid.Resource.Styleable.RadChartViewBase_maxZoom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RadChartViewBase_palette = global::YallaParkingMobile.Droid.Resource.Styleable.RadChartViewBase_palette;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RadChartViewBase_pan = global::YallaParkingMobile.Droid.Resource.Styleable.RadChartViewBase_pan;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RadScrollView = global::YallaParkingMobile.Droid.Resource.Styleable.RadScrollView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RadScrollView_fillViewport = global::YallaParkingMobile.Droid.Resource.Styleable.RadScrollView_fillViewport;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RadScrollView_scrollMode = global::YallaParkingMobile.Droid.Resource.Styleable.RadScrollView_scrollMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RadScrollViewTheme = global::YallaParkingMobile.Droid.Resource.Styleable.RadScrollViewTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RadScrollViewTheme_radScrollViewStyle = global::YallaParkingMobile.Droid.Resource.Styleable.RadScrollViewTheme_radScrollViewStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RangeBarSeries = global::YallaParkingMobile.Droid.Resource.Styleable.RangeBarSeries;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RangeBarSeries_areBarsRounded = global::YallaParkingMobile.Droid.Resource.Styleable.RangeBarSeries_areBarsRounded;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RangeBarSeries_fillColor = global::YallaParkingMobile.Droid.Resource.Styleable.RangeBarSeries_fillColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RangeBarSeries_roundBarsRadius = global::YallaParkingMobile.Droid.Resource.Styleable.RangeBarSeries_roundBarsRadius;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RangeBarSeries_strokeColor = global::YallaParkingMobile.Droid.Resource.Styleable.RangeBarSeries_strokeColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RangeBarSeries_strokeWidth = global::YallaParkingMobile.Droid.Resource.Styleable.RangeBarSeries_strokeWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RecyclerView = global::YallaParkingMobile.Droid.Resource.Styleable.RecyclerView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RecyclerView_android_orientation = global::YallaParkingMobile.Droid.Resource.Styleable.RecyclerView_android_orientation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RecyclerView_layoutManager = global::YallaParkingMobile.Droid.Resource.Styleable.RecyclerView_layoutManager;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RecyclerView_reverseLayout = global::YallaParkingMobile.Droid.Resource.Styleable.RecyclerView_reverseLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RecyclerView_spanCount = global::YallaParkingMobile.Droid.Resource.Styleable.RecyclerView_spanCount;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.RecyclerView_stackFromEnd = global::YallaParkingMobile.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ScrimInsetsFrameLayout = global::YallaParkingMobile.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::YallaParkingMobile.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ScrollingViewBehavior_Params = global::YallaParkingMobile.Droid.Resource.Styleable.ScrollingViewBehavior_Params;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ScrollingViewBehavior_Params_behavior_overlapTop = global::YallaParkingMobile.Droid.Resource.Styleable.ScrollingViewBehavior_Params_behavior_overlapTop;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SearchView = global::YallaParkingMobile.Droid.Resource.Styleable.SearchView;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SearchView_android_focusable = global::YallaParkingMobile.Droid.Resource.Styleable.SearchView_android_focusable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SearchView_android_imeOptions = global::YallaParkingMobile.Droid.Resource.Styleable.SearchView_android_imeOptions;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SearchView_android_inputType = global::YallaParkingMobile.Droid.Resource.Styleable.SearchView_android_inputType;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SearchView_android_maxWidth = global::YallaParkingMobile.Droid.Resource.Styleable.SearchView_android_maxWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SearchView_closeIcon = global::YallaParkingMobile.Droid.Resource.Styleable.SearchView_closeIcon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SearchView_commitIcon = global::YallaParkingMobile.Droid.Resource.Styleable.SearchView_commitIcon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SearchView_defaultQueryHint = global::YallaParkingMobile.Droid.Resource.Styleable.SearchView_defaultQueryHint;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SearchView_goIcon = global::YallaParkingMobile.Droid.Resource.Styleable.SearchView_goIcon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SearchView_iconifiedByDefault = global::YallaParkingMobile.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SearchView_layout = global::YallaParkingMobile.Droid.Resource.Styleable.SearchView_layout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SearchView_queryBackground = global::YallaParkingMobile.Droid.Resource.Styleable.SearchView_queryBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SearchView_queryHint = global::YallaParkingMobile.Droid.Resource.Styleable.SearchView_queryHint;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SearchView_searchHintIcon = global::YallaParkingMobile.Droid.Resource.Styleable.SearchView_searchHintIcon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SearchView_searchIcon = global::YallaParkingMobile.Droid.Resource.Styleable.SearchView_searchIcon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SearchView_submitBackground = global::YallaParkingMobile.Droid.Resource.Styleable.SearchView_submitBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SearchView_suggestionRowLayout = global::YallaParkingMobile.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SearchView_voiceIcon = global::YallaParkingMobile.Droid.Resource.Styleable.SearchView_voiceIcon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SnackbarLayout = global::YallaParkingMobile.Droid.Resource.Styleable.SnackbarLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SnackbarLayout_android_maxWidth = global::YallaParkingMobile.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SnackbarLayout_elevation = global::YallaParkingMobile.Droid.Resource.Styleable.SnackbarLayout_elevation;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::YallaParkingMobile.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Spinner = global::YallaParkingMobile.Droid.Resource.Styleable.Spinner;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Spinner_android_dropDownWidth = global::YallaParkingMobile.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Spinner_android_entries = global::YallaParkingMobile.Droid.Resource.Styleable.Spinner_android_entries;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Spinner_android_popupBackground = global::YallaParkingMobile.Droid.Resource.Styleable.Spinner_android_popupBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Spinner_android_prompt = global::YallaParkingMobile.Droid.Resource.Styleable.Spinner_android_prompt;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Spinner_popupTheme = global::YallaParkingMobile.Droid.Resource.Styleable.Spinner_popupTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SwitchCompat = global::YallaParkingMobile.Droid.Resource.Styleable.SwitchCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SwitchCompat_android_textOff = global::YallaParkingMobile.Droid.Resource.Styleable.SwitchCompat_android_textOff;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SwitchCompat_android_textOn = global::YallaParkingMobile.Droid.Resource.Styleable.SwitchCompat_android_textOn;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SwitchCompat_android_thumb = global::YallaParkingMobile.Droid.Resource.Styleable.SwitchCompat_android_thumb;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SwitchCompat_showText = global::YallaParkingMobile.Droid.Resource.Styleable.SwitchCompat_showText;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SwitchCompat_splitTrack = global::YallaParkingMobile.Droid.Resource.Styleable.SwitchCompat_splitTrack;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SwitchCompat_switchMinWidth = global::YallaParkingMobile.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SwitchCompat_switchPadding = global::YallaParkingMobile.Droid.Resource.Styleable.SwitchCompat_switchPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SwitchCompat_switchTextAppearance = global::YallaParkingMobile.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SwitchCompat_thumbTextPadding = global::YallaParkingMobile.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.SwitchCompat_track = global::YallaParkingMobile.Droid.Resource.Styleable.SwitchCompat_track;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabItem = global::YallaParkingMobile.Droid.Resource.Styleable.TabItem;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabItem_android_icon = global::YallaParkingMobile.Droid.Resource.Styleable.TabItem_android_icon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabItem_android_layout = global::YallaParkingMobile.Droid.Resource.Styleable.TabItem_android_layout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabItem_android_text = global::YallaParkingMobile.Droid.Resource.Styleable.TabItem_android_text;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabLayout = global::YallaParkingMobile.Droid.Resource.Styleable.TabLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabLayout_tabBackground = global::YallaParkingMobile.Droid.Resource.Styleable.TabLayout_tabBackground;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabLayout_tabContentStart = global::YallaParkingMobile.Droid.Resource.Styleable.TabLayout_tabContentStart;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabLayout_tabGravity = global::YallaParkingMobile.Droid.Resource.Styleable.TabLayout_tabGravity;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabLayout_tabIndicatorColor = global::YallaParkingMobile.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabLayout_tabIndicatorHeight = global::YallaParkingMobile.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabLayout_tabMaxWidth = global::YallaParkingMobile.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabLayout_tabMinWidth = global::YallaParkingMobile.Droid.Resource.Styleable.TabLayout_tabMinWidth;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabLayout_tabMode = global::YallaParkingMobile.Droid.Resource.Styleable.TabLayout_tabMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabLayout_tabPadding = global::YallaParkingMobile.Droid.Resource.Styleable.TabLayout_tabPadding;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabLayout_tabPaddingBottom = global::YallaParkingMobile.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabLayout_tabPaddingEnd = global::YallaParkingMobile.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabLayout_tabPaddingStart = global::YallaParkingMobile.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabLayout_tabPaddingTop = global::YallaParkingMobile.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabLayout_tabSelectedTextColor = global::YallaParkingMobile.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabLayout_tabTextAppearance = global::YallaParkingMobile.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TabLayout_tabTextColor = global::YallaParkingMobile.Droid.Resource.Styleable.TabLayout_tabTextColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextAppearance = global::YallaParkingMobile.Droid.Resource.Styleable.TextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextAppearance_android_shadowColor = global::YallaParkingMobile.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextAppearance_android_shadowDx = global::YallaParkingMobile.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextAppearance_android_shadowDy = global::YallaParkingMobile.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextAppearance_android_shadowRadius = global::YallaParkingMobile.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextAppearance_android_textColor = global::YallaParkingMobile.Droid.Resource.Styleable.TextAppearance_android_textColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextAppearance_android_textSize = global::YallaParkingMobile.Droid.Resource.Styleable.TextAppearance_android_textSize;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextAppearance_android_textStyle = global::YallaParkingMobile.Droid.Resource.Styleable.TextAppearance_android_textStyle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextAppearance_android_typeface = global::YallaParkingMobile.Droid.Resource.Styleable.TextAppearance_android_typeface;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextAppearance_textAllCaps = global::YallaParkingMobile.Droid.Resource.Styleable.TextAppearance_textAllCaps;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextInputLayout = global::YallaParkingMobile.Droid.Resource.Styleable.TextInputLayout;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextInputLayout_android_hint = global::YallaParkingMobile.Droid.Resource.Styleable.TextInputLayout_android_hint;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextInputLayout_android_textColorHint = global::YallaParkingMobile.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextInputLayout_counterEnabled = global::YallaParkingMobile.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextInputLayout_counterMaxLength = global::YallaParkingMobile.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::YallaParkingMobile.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextInputLayout_counterTextAppearance = global::YallaParkingMobile.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextInputLayout_errorEnabled = global::YallaParkingMobile.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextInputLayout_errorTextAppearance = global::YallaParkingMobile.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::YallaParkingMobile.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextInputLayout_hintEnabled = global::YallaParkingMobile.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.TextInputLayout_hintTextAppearance = global::YallaParkingMobile.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_android_gravity = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_android_gravity;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_android_minHeight = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_android_minHeight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_collapseContentDescription = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_collapseIcon = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_collapseIcon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_contentInsetEnd = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_contentInsetLeft = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_contentInsetRight = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_contentInsetRight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_contentInsetStart = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_contentInsetStart;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_logo = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_logo;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_logoDescription = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_logoDescription;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_maxButtonHeight = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_navigationContentDescription = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_navigationIcon = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_navigationIcon;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_popupTheme = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_popupTheme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_subtitle = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_subtitle;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_subtitleTextAppearance = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_subtitleTextColor = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_title = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_title;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_titleMarginBottom = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_titleMarginEnd = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_titleMarginStart = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_titleMarginStart;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_titleMarginTop = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_titleMarginTop;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_titleMargins = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_titleMargins;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_titleTextAppearance = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.Toolbar_titleTextColor = global::YallaParkingMobile.Droid.Resource.Styleable.Toolbar_titleTextColor;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.View = global::YallaParkingMobile.Droid.Resource.Styleable.View;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.View_android_focusable = global::YallaParkingMobile.Droid.Resource.Styleable.View_android_focusable;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.View_android_theme = global::YallaParkingMobile.Droid.Resource.Styleable.View_android_theme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.View_paddingEnd = global::YallaParkingMobile.Droid.Resource.Styleable.View_paddingEnd;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.View_paddingStart = global::YallaParkingMobile.Droid.Resource.Styleable.View_paddingStart;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.View_theme = global::YallaParkingMobile.Droid.Resource.Styleable.View_theme;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ViewBackgroundHelper = global::YallaParkingMobile.Droid.Resource.Styleable.ViewBackgroundHelper;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ViewBackgroundHelper_android_background = global::YallaParkingMobile.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::YallaParkingMobile.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::YallaParkingMobile.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ViewStubCompat = global::YallaParkingMobile.Droid.Resource.Styleable.ViewStubCompat;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ViewStubCompat_android_id = global::YallaParkingMobile.Droid.Resource.Styleable.ViewStubCompat_android_id;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ViewStubCompat_android_inflatedId = global::YallaParkingMobile.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
-			global::Telerik.XamarinForms.ChartRenderer.Android.Resource.Styleable.ViewStubCompat_android_layout = global::YallaParkingMobile.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Microsoft.Azure.Mobile.Distribute.Resource.String.mobile_center_distribute_dialog_actioned_on_disabled_toast = global::YallaParkingMobile.Droid.Resource.String.mobile_center_distribute_dialog_actioned_on_disabled_toast;
+			global::Microsoft.Azure.Mobile.Distribute.Resource.String.mobile_center_distribute_download_progress_number_format = global::YallaParkingMobile.Droid.Resource.String.mobile_center_distribute_download_progress_number_format;
+			global::Microsoft.Azure.Mobile.Distribute.Resource.String.mobile_center_distribute_downloading_mandatory_update = global::YallaParkingMobile.Droid.Resource.String.mobile_center_distribute_downloading_mandatory_update;
+			global::Microsoft.Azure.Mobile.Distribute.Resource.String.mobile_center_distribute_install = global::YallaParkingMobile.Droid.Resource.String.mobile_center_distribute_install;
+			global::Microsoft.Azure.Mobile.Distribute.Resource.String.mobile_center_distribute_install_ready_message = global::YallaParkingMobile.Droid.Resource.String.mobile_center_distribute_install_ready_message;
+			global::Microsoft.Azure.Mobile.Distribute.Resource.String.mobile_center_distribute_install_ready_title = global::YallaParkingMobile.Droid.Resource.String.mobile_center_distribute_install_ready_title;
+			global::Microsoft.Azure.Mobile.Distribute.Resource.String.mobile_center_distribute_notification_category = global::YallaParkingMobile.Droid.Resource.String.mobile_center_distribute_notification_category;
+			global::Microsoft.Azure.Mobile.Distribute.Resource.String.mobile_center_distribute_unknown_sources_dialog_message = global::YallaParkingMobile.Droid.Resource.String.mobile_center_distribute_unknown_sources_dialog_message;
+			global::Microsoft.Azure.Mobile.Distribute.Resource.String.mobile_center_distribute_unknown_sources_dialog_settings = global::YallaParkingMobile.Droid.Resource.String.mobile_center_distribute_unknown_sources_dialog_settings;
+			global::Microsoft.Azure.Mobile.Distribute.Resource.String.mobile_center_distribute_update_dialog_download = global::YallaParkingMobile.Droid.Resource.String.mobile_center_distribute_update_dialog_download;
+			global::Microsoft.Azure.Mobile.Distribute.Resource.String.mobile_center_distribute_update_dialog_message_mandatory = global::YallaParkingMobile.Droid.Resource.String.mobile_center_distribute_update_dialog_message_mandatory;
+			global::Microsoft.Azure.Mobile.Distribute.Resource.String.mobile_center_distribute_update_dialog_message_optional = global::YallaParkingMobile.Droid.Resource.String.mobile_center_distribute_update_dialog_message_optional;
+			global::Microsoft.Azure.Mobile.Distribute.Resource.String.mobile_center_distribute_update_dialog_postpone = global::YallaParkingMobile.Droid.Resource.String.mobile_center_distribute_update_dialog_postpone;
+			global::Microsoft.Azure.Mobile.Distribute.Resource.String.mobile_center_distribute_update_dialog_title = global::YallaParkingMobile.Droid.Resource.String.mobile_center_distribute_update_dialog_title;
+			global::Microsoft.Azure.Mobile.Distribute.Resource.String.mobile_center_distribute_update_dialog_view_release_notes = global::YallaParkingMobile.Droid.Resource.String.mobile_center_distribute_update_dialog_view_release_notes;
 			global::Telerik.XamarinForms.Common.Android.Resource.Animation.abc_fade_in = global::YallaParkingMobile.Droid.Resource.Animation.abc_fade_in;
 			global::Telerik.XamarinForms.Common.Android.Resource.Animation.abc_fade_out = global::YallaParkingMobile.Droid.Resource.Animation.abc_fade_out;
 			global::Telerik.XamarinForms.Common.Android.Resource.Animation.abc_grow_fade_in_from_bottom = global::YallaParkingMobile.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -9648,62 +7582,8 @@ namespace YallaParkingMobile.Droid
 		public partial class Attribute
 		{
 			
-			// aapt resource value: 0x7f0101a0
-			public const int AreaSeriesStyle = 2130772384;
-			
-			// aapt resource value: 0x7f010194
-			public const int AxisStyle = 2130772372;
-			
-			// aapt resource value: 0x7f01019c
-			public const int BarSeriesStyle = 2130772380;
-			
-			// aapt resource value: 0x7f010195
-			public const int CartesianAxisStyle = 2130772373;
-			
-			// aapt resource value: 0x7f0101a4
-			public const int CartesianCustomAnnotationStyle = 2130772388;
-			
-			// aapt resource value: 0x7f0101a3
-			public const int CartesianPlotBandAnnotationStyle = 2130772387;
-			
-			// aapt resource value: 0x7f0101a2
-			public const int CartesianStrokedAnnotationStyle = 2130772386;
-			
-			// aapt resource value: 0x7f010196
-			public const int CategoricalAxisStyle = 2130772374;
-			
-			// aapt resource value: 0x7f01019e
-			public const int CategoricalSeriesStyle = 2130772382;
-			
-			// aapt resource value: 0x7f01019f
-			public const int CategoricalStrokedSeriesStyle = 2130772383;
-			
-			// aapt resource value: 0x7f0101a1
-			public const int ChartAnnotationStyle = 2130772385;
-			
-			// aapt resource value: 0x7f01019a
-			public const int ChartSeriesStyle = 2130772378;
-			
-			// aapt resource value: 0x7f010197
-			public const int DateTimeCategoricalAxisStyle = 2130772375;
-			
-			// aapt resource value: 0x7f010198
-			public const int DateTimeContinuousAxisStyle = 2130772376;
-			
-			// aapt resource value: 0x7f01019b
-			public const int LineAxisStyle = 2130772379;
-			
 			// aapt resource value: 0x7f01001b
 			public const int MediaRouteControllerWindowBackground = 2130771995;
-			
-			// aapt resource value: 0x7f010199
-			public const int RadChartBaseStyle = 2130772377;
-			
-			// aapt resource value: 0x7f01019d
-			public const int RangeBarSeriesStyle = 2130772381;
-			
-			// aapt resource value: 0x7f0101a5
-			public const int TestBarSeriesStyle = 2130772389;
 			
 			// aapt resource value: 0x7f010078
 			public const int actionBarDivider = 2130772088;
@@ -9825,12 +7705,6 @@ namespace YallaParkingMobile.Droid
 			// aapt resource value: 0x7f010010
 			public const int ambientEnabled = 2130771984;
 			
-			// aapt resource value: 0x7f010175
-			public const int applyDefaultPalette = 2130772341;
-			
-			// aapt resource value: 0x7f010172
-			public const int areBarsRounded = 2130772338;
-			
 			// aapt resource value: 0x7f0100d8
 			public const int arrowHeadLength = 2130772184;
 			
@@ -9839,15 +7713,6 @@ namespace YallaParkingMobile.Droid
 			
 			// aapt resource value: 0x7f0100c4
 			public const int autoCompleteTextViewStyle = 2130772164;
-			
-			// aapt resource value: 0x7f010181
-			public const int axisLabelFitMode = 2130772353;
-			
-			// aapt resource value: 0x7f01017e
-			public const int axisLastLabelVisibility = 2130772350;
-			
-			// aapt resource value: 0x7f010182
-			public const int axisTitle = 2130772354;
 			
 			// aapt resource value: 0x7f010049
 			public const int background = 2130772041;
@@ -9960,9 +7825,6 @@ namespace YallaParkingMobile.Droid
 			// aapt resource value: 0x7f010036
 			public const int cardUseCompatPadding = 2130772022;
 			
-			// aapt resource value: 0x7f010177
-			public const int chartZoom = 2130772343;
-			
 			// aapt resource value: 0x7f0100c7
 			public const int checkboxStyle = 2130772167;
 			
@@ -9971,12 +7833,6 @@ namespace YallaParkingMobile.Droid
 			
 			// aapt resource value: 0x7f010013
 			public const int circleCrop = 2130771987;
-			
-			// aapt resource value: 0x7f010179
-			public const int clipToBounds = 2130772345;
-			
-			// aapt resource value: 0x7f010167
-			public const int clipToPlotArea = 2130772327;
 			
 			// aapt resource value: 0x7f0100ea
 			public const int closeIcon = 2130772202;
@@ -10026,14 +7882,8 @@ namespace YallaParkingMobile.Droid
 			// aapt resource value: 0x7f0100ba
 			public const int colorSwitchThumbNormal = 2130772154;
 			
-			// aapt resource value: 0x7f01017c
-			public const int combineMode = 2130772348;
-			
 			// aapt resource value: 0x7f0100ef
 			public const int commitIcon = 2130772207;
-			
-			// aapt resource value: 0x7f010191
-			public const int content = 2130772369;
 			
 			// aapt resource value: 0x7f010054
 			public const int contentInsetEnd = 2130772052;
@@ -10082,12 +7932,6 @@ namespace YallaParkingMobile.Droid
 			
 			// aapt resource value: 0x7f01004c
 			public const int customNavigationLayout = 2130772044;
-			
-			// aapt resource value: 0x7f010189
-			public const int dateFormat = 2130772361;
-			
-			// aapt resource value: 0x7f01018a
-			public const int dateTimeComponent = 2130772362;
 			
 			// aapt resource value: 0x7f0100e9
 			public const int defaultQueryHint = 2130772201;
@@ -10140,9 +7984,6 @@ namespace YallaParkingMobile.Droid
 			// aapt resource value: 0x7f010057
 			public const int elevation = 2130772055;
 			
-			// aapt resource value: 0x7f01017a
-			public const int emptyContent = 2130772346;
-			
 			// aapt resource value: 0x7f01014c
 			public const int errorEnabled = 2130772300;
 			
@@ -10194,9 +8035,6 @@ namespace YallaParkingMobile.Droid
 			// aapt resource value: 0x7f0100d7
 			public const int gapBetweenBars = 2130772183;
 			
-			// aapt resource value: 0x7f010169
-			public const int gapLength = 2130772329;
-			
 			// aapt resource value: 0x7f0100eb
 			public const int goIcon = 2130772203;
 			
@@ -10223,15 +8061,6 @@ namespace YallaParkingMobile.Droid
 			
 			// aapt resource value: 0x7f01004d
 			public const int homeLayout = 2130772045;
-			
-			// aapt resource value: 0x7f010192
-			public const int horizontalAlignment = 2130772370;
-			
-			// aapt resource value: 0x7f010187
-			public const int horizontalLocation = 2130772359;
-			
-			// aapt resource value: 0x7f01018f
-			public const int horizontalOffset = 2130772367;
 			
 			// aapt resource value: 0x7f010046
 			public const int icon = 2130772038;
@@ -10281,36 +8110,6 @@ namespace YallaParkingMobile.Droid
 			// aapt resource value: 0x7f010122
 			public const int keylines = 2130772258;
 			
-			// aapt resource value: 0x7f01018e
-			public const int label = 2130772366;
-			
-			// aapt resource value: 0x7f01016b
-			public const int labelColor = 2130772331;
-			
-			// aapt resource value: 0x7f01016f
-			public const int labelFont = 2130772335;
-			
-			// aapt resource value: 0x7f010170
-			public const int labelFontStyle = 2130772336;
-			
-			// aapt resource value: 0x7f010174
-			public const int labelFormat = 2130772340;
-			
-			// aapt resource value: 0x7f010184
-			public const int labelInterval = 2130772356;
-			
-			// aapt resource value: 0x7f01016d
-			public const int labelMargin = 2130772333;
-			
-			// aapt resource value: 0x7f010180
-			public const int labelOffset = 2130772352;
-			
-			// aapt resource value: 0x7f01017d
-			public const int labelRotationAngle = 2130772349;
-			
-			// aapt resource value: 0x7f01016c
-			public const int labelSize = 2130772332;
-			
 			// aapt resource value: 0x7f0100e6
 			public const int layout = 2130772198;
 			
@@ -10340,12 +8139,6 @@ namespace YallaParkingMobile.Droid
 			
 			// aapt resource value: 0x7f010110
 			public const int layout_scrollInterpolator = 2130772240;
-			
-			// aapt resource value: 0x7f010185
-			public const int lineColor = 2130772357;
-			
-			// aapt resource value: 0x7f01016e
-			public const int lineThickness = 2130772334;
 			
 			// aapt resource value: 0x7f0100b2
 			public const int listChoiceBackgroundIndicator = 2130772146;
@@ -10386,18 +8179,6 @@ namespace YallaParkingMobile.Droid
 			// aapt resource value: 0x7f010106
 			public const int logoDescription = 2130772230;
 			
-			// aapt resource value: 0x7f01018c
-			public const int majorStep = 2130772364;
-			
-			// aapt resource value: 0x7f01018d
-			public const int majorStepUnit = 2130772365;
-			
-			// aapt resource value: 0x7f010186
-			public const int majorTickInterval = 2130772358;
-			
-			// aapt resource value: 0x7f01017f
-			public const int majorTickOffset = 2130772351;
-			
 			// aapt resource value: 0x7f010000
 			public const int mapType = 2130771968;
 			
@@ -10406,12 +8187,6 @@ namespace YallaParkingMobile.Droid
 			
 			// aapt resource value: 0x7f010101
 			public const int maxButtonHeight = 2130772225;
-			
-			// aapt resource value: 0x7f010178
-			public const int maxZoom = 2130772344;
-			
-			// aapt resource value: 0x7f01018b
-			public const int maximumTicks = 2130772363;
 			
 			// aapt resource value: 0x7f0100dc
 			public const int measureWithLargestChild = 2130772188;
@@ -10503,12 +8278,6 @@ namespace YallaParkingMobile.Droid
 			// aapt resource value: 0x7f010109
 			public const int paddingStart = 2130772233;
 			
-			// aapt resource value: 0x7f01017b
-			public const int palette = 2130772347;
-			
-			// aapt resource value: 0x7f010176
-			public const int pan = 2130772342;
-			
 			// aapt resource value: 0x7f0100af
 			public const int panelBackground = 2130772143;
 			
@@ -10517,9 +8286,6 @@ namespace YallaParkingMobile.Droid
 			
 			// aapt resource value: 0x7f0100b0
 			public const int panelMenuListWidth = 2130772144;
-			
-			// aapt resource value: 0x7f01016a
-			public const int plotMode = 2130772330;
 			
 			// aapt resource value: 0x7f010155
 			public const int pointerFill = 2130772309;
@@ -10581,9 +8347,6 @@ namespace YallaParkingMobile.Droid
 			// aapt resource value: 0x7f01012b
 			public const int rippleColor = 2130772267;
 			
-			// aapt resource value: 0x7f010173
-			public const int roundBarsRadius = 2130772339;
-			
 			// aapt resource value: 0x7f010016
 			public const int scopeUris = 2130771990;
 			
@@ -10629,9 +8392,6 @@ namespace YallaParkingMobile.Droid
 			// aapt resource value: 0x7f01015d
 			public const int showGridLines = 2130772317;
 			
-			// aapt resource value: 0x7f010168
-			public const int showLabels = 2130772328;
-			
 			// aapt resource value: 0x7f0100f9
 			public const int showText = 2130772217;
 			
@@ -10673,9 +8433,6 @@ namespace YallaParkingMobile.Droid
 			
 			// aapt resource value: 0x7f010166
 			public const int strokeColor = 2130772326;
-			
-			// aapt resource value: 0x7f010171
-			public const int strokeWidth = 2130772337;
 			
 			// aapt resource value: 0x7f0100f2
 			public const int submitBackground = 2130772210;
@@ -10794,9 +8551,6 @@ namespace YallaParkingMobile.Droid
 			// aapt resource value: 0x7f0100f4
 			public const int thumbTextPadding = 2130772212;
 			
-			// aapt resource value: 0x7f010183
-			public const int tickThickness = 2130772355;
-			
 			// aapt resource value: 0x7f010040
 			public const int title = 2130772032;
 			
@@ -10866,15 +8620,6 @@ namespace YallaParkingMobile.Droid
 			// aapt resource value: 0x7f01000d
 			public const int useViewLifecycle = 2130771981;
 			
-			// aapt resource value: 0x7f010193
-			public const int verticalAlignment = 2130772371;
-			
-			// aapt resource value: 0x7f010188
-			public const int verticalLocation = 2130772360;
-			
-			// aapt resource value: 0x7f010190
-			public const int verticalOffset = 2130772368;
-			
 			// aapt resource value: 0x7f0100ee
 			public const int voiceIcon = 2130772206;
 			
@@ -10927,29 +8672,29 @@ namespace YallaParkingMobile.Droid
 		public partial class Boolean
 		{
 			
-			// aapt resource value: 0x7f0d0003
-			public const int abc_action_bar_embed_tabs = 2131558403;
+			// aapt resource value: 0x7f0c0003
+			public const int abc_action_bar_embed_tabs = 2131492867;
 			
-			// aapt resource value: 0x7f0d0001
-			public const int abc_action_bar_embed_tabs_pre_jb = 2131558401;
+			// aapt resource value: 0x7f0c0001
+			public const int abc_action_bar_embed_tabs_pre_jb = 2131492865;
 			
-			// aapt resource value: 0x7f0d0004
-			public const int abc_action_bar_expanded_action_views_exclusive = 2131558404;
+			// aapt resource value: 0x7f0c0004
+			public const int abc_action_bar_expanded_action_views_exclusive = 2131492868;
 			
-			// aapt resource value: 0x7f0d0000
-			public const int abc_allow_stacked_button_bar = 2131558400;
+			// aapt resource value: 0x7f0c0000
+			public const int abc_allow_stacked_button_bar = 2131492864;
 			
-			// aapt resource value: 0x7f0d0005
-			public const int abc_config_actionMenuItemAllCaps = 2131558405;
+			// aapt resource value: 0x7f0c0005
+			public const int abc_config_actionMenuItemAllCaps = 2131492869;
 			
-			// aapt resource value: 0x7f0d0002
-			public const int abc_config_allowActionMenuItemTextWithIcon = 2131558402;
+			// aapt resource value: 0x7f0c0002
+			public const int abc_config_allowActionMenuItemTextWithIcon = 2131492866;
 			
-			// aapt resource value: 0x7f0d0006
-			public const int abc_config_closeDialogWhenTouchOutside = 2131558406;
+			// aapt resource value: 0x7f0c0006
+			public const int abc_config_closeDialogWhenTouchOutside = 2131492870;
 			
-			// aapt resource value: 0x7f0d0007
-			public const int abc_config_showMenuShortcutsWhenKeyboardPresent = 2131558407;
+			// aapt resource value: 0x7f0c0007
+			public const int abc_config_showMenuShortcutsWhenKeyboardPresent = 2131492871;
 			
 			static Boolean()
 			{
@@ -10964,401 +8709,398 @@ namespace YallaParkingMobile.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f090074
-			public const int abc_background_cache_hint_selector_material_dark = 2131296372;
+			// aapt resource value: 0x7f080073
+			public const int abc_background_cache_hint_selector_material_dark = 2131230835;
 			
-			// aapt resource value: 0x7f090075
-			public const int abc_background_cache_hint_selector_material_light = 2131296373;
+			// aapt resource value: 0x7f080074
+			public const int abc_background_cache_hint_selector_material_light = 2131230836;
 			
-			// aapt resource value: 0x7f090076
-			public const int abc_color_highlight_material = 2131296374;
+			// aapt resource value: 0x7f080075
+			public const int abc_color_highlight_material = 2131230837;
 			
-			// aapt resource value: 0x7f090015
-			public const int abc_input_method_navigation_guard = 2131296277;
+			// aapt resource value: 0x7f080015
+			public const int abc_input_method_navigation_guard = 2131230741;
 			
-			// aapt resource value: 0x7f090077
-			public const int abc_primary_text_disable_only_material_dark = 2131296375;
+			// aapt resource value: 0x7f080076
+			public const int abc_primary_text_disable_only_material_dark = 2131230838;
 			
-			// aapt resource value: 0x7f090078
-			public const int abc_primary_text_disable_only_material_light = 2131296376;
+			// aapt resource value: 0x7f080077
+			public const int abc_primary_text_disable_only_material_light = 2131230839;
 			
-			// aapt resource value: 0x7f090079
-			public const int abc_primary_text_material_dark = 2131296377;
+			// aapt resource value: 0x7f080078
+			public const int abc_primary_text_material_dark = 2131230840;
 			
-			// aapt resource value: 0x7f09007a
-			public const int abc_primary_text_material_light = 2131296378;
+			// aapt resource value: 0x7f080079
+			public const int abc_primary_text_material_light = 2131230841;
 			
-			// aapt resource value: 0x7f09007b
-			public const int abc_search_url_text = 2131296379;
+			// aapt resource value: 0x7f08007a
+			public const int abc_search_url_text = 2131230842;
 			
-			// aapt resource value: 0x7f090016
-			public const int abc_search_url_text_normal = 2131296278;
+			// aapt resource value: 0x7f080016
+			public const int abc_search_url_text_normal = 2131230742;
 			
-			// aapt resource value: 0x7f090017
-			public const int abc_search_url_text_pressed = 2131296279;
+			// aapt resource value: 0x7f080017
+			public const int abc_search_url_text_pressed = 2131230743;
 			
-			// aapt resource value: 0x7f090018
-			public const int abc_search_url_text_selected = 2131296280;
+			// aapt resource value: 0x7f080018
+			public const int abc_search_url_text_selected = 2131230744;
 			
-			// aapt resource value: 0x7f09007c
-			public const int abc_secondary_text_material_dark = 2131296380;
+			// aapt resource value: 0x7f08007b
+			public const int abc_secondary_text_material_dark = 2131230843;
 			
-			// aapt resource value: 0x7f09007d
-			public const int abc_secondary_text_material_light = 2131296381;
+			// aapt resource value: 0x7f08007c
+			public const int abc_secondary_text_material_light = 2131230844;
 			
-			// aapt resource value: 0x7f090019
-			public const int accent_material_dark = 2131296281;
+			// aapt resource value: 0x7f080019
+			public const int accent_material_dark = 2131230745;
 			
-			// aapt resource value: 0x7f09001a
-			public const int accent_material_light = 2131296282;
+			// aapt resource value: 0x7f08001a
+			public const int accent_material_light = 2131230746;
 			
-			// aapt resource value: 0x7f090065
-			public const int autocomplete_primary = 2131296357;
+			// aapt resource value: 0x7f080065
+			public const int autocomplete_primary = 2131230821;
 			
-			// aapt resource value: 0x7f09001b
-			public const int background_floating_material_dark = 2131296283;
+			// aapt resource value: 0x7f08001b
+			public const int background_floating_material_dark = 2131230747;
 			
-			// aapt resource value: 0x7f09001c
-			public const int background_floating_material_light = 2131296284;
+			// aapt resource value: 0x7f08001c
+			public const int background_floating_material_light = 2131230748;
 			
-			// aapt resource value: 0x7f09001d
-			public const int background_material_dark = 2131296285;
+			// aapt resource value: 0x7f08001d
+			public const int background_material_dark = 2131230749;
 			
-			// aapt resource value: 0x7f09001e
-			public const int background_material_light = 2131296286;
+			// aapt resource value: 0x7f08001e
+			public const int background_material_light = 2131230750;
 			
-			// aapt resource value: 0x7f090072
-			public const int black = 2131296370;
+			// aapt resource value: 0x7f080072
+			public const int black = 2131230834;
 			
-			// aapt resource value: 0x7f09001f
-			public const int bright_foreground_disabled_material_dark = 2131296287;
+			// aapt resource value: 0x7f08001f
+			public const int bright_foreground_disabled_material_dark = 2131230751;
 			
-			// aapt resource value: 0x7f090020
-			public const int bright_foreground_disabled_material_light = 2131296288;
+			// aapt resource value: 0x7f080020
+			public const int bright_foreground_disabled_material_light = 2131230752;
 			
-			// aapt resource value: 0x7f090021
-			public const int bright_foreground_inverse_material_dark = 2131296289;
+			// aapt resource value: 0x7f080021
+			public const int bright_foreground_inverse_material_dark = 2131230753;
 			
-			// aapt resource value: 0x7f090022
-			public const int bright_foreground_inverse_material_light = 2131296290;
+			// aapt resource value: 0x7f080022
+			public const int bright_foreground_inverse_material_light = 2131230754;
 			
-			// aapt resource value: 0x7f090023
-			public const int bright_foreground_material_dark = 2131296291;
+			// aapt resource value: 0x7f080023
+			public const int bright_foreground_material_dark = 2131230755;
 			
-			// aapt resource value: 0x7f090024
-			public const int bright_foreground_material_light = 2131296292;
+			// aapt resource value: 0x7f080024
+			public const int bright_foreground_material_light = 2131230756;
 			
-			// aapt resource value: 0x7f090025
-			public const int button_material_dark = 2131296293;
+			// aapt resource value: 0x7f080025
+			public const int button_material_dark = 2131230757;
 			
-			// aapt resource value: 0x7f090026
-			public const int button_material_light = 2131296294;
+			// aapt resource value: 0x7f080026
+			public const int button_material_light = 2131230758;
 			
-			// aapt resource value: 0x7f090011
-			public const int cardview_dark_background = 2131296273;
+			// aapt resource value: 0x7f080011
+			public const int cardview_dark_background = 2131230737;
 			
-			// aapt resource value: 0x7f090012
-			public const int cardview_light_background = 2131296274;
+			// aapt resource value: 0x7f080012
+			public const int cardview_light_background = 2131230738;
 			
-			// aapt resource value: 0x7f090013
-			public const int cardview_shadow_end_color = 2131296275;
+			// aapt resource value: 0x7f080013
+			public const int cardview_shadow_end_color = 2131230739;
 			
-			// aapt resource value: 0x7f090014
-			public const int cardview_shadow_start_color = 2131296276;
+			// aapt resource value: 0x7f080014
+			public const int cardview_shadow_start_color = 2131230740;
 			
-			// aapt resource value: 0x7f090008
-			public const int common_action_bar_splitter = 2131296264;
+			// aapt resource value: 0x7f080008
+			public const int common_action_bar_splitter = 2131230728;
 			
-			// aapt resource value: 0x7f09007e
-			public const int common_google_signin_btn_text_dark = 2131296382;
+			// aapt resource value: 0x7f08007d
+			public const int common_google_signin_btn_text_dark = 2131230845;
 			
-			// aapt resource value: 0x7f090009
-			public const int common_google_signin_btn_text_dark_default = 2131296265;
+			// aapt resource value: 0x7f080009
+			public const int common_google_signin_btn_text_dark_default = 2131230729;
 			
-			// aapt resource value: 0x7f09000b
-			public const int common_google_signin_btn_text_dark_disabled = 2131296267;
+			// aapt resource value: 0x7f08000b
+			public const int common_google_signin_btn_text_dark_disabled = 2131230731;
 			
-			// aapt resource value: 0x7f09000c
-			public const int common_google_signin_btn_text_dark_focused = 2131296268;
+			// aapt resource value: 0x7f08000c
+			public const int common_google_signin_btn_text_dark_focused = 2131230732;
 			
-			// aapt resource value: 0x7f09000a
-			public const int common_google_signin_btn_text_dark_pressed = 2131296266;
+			// aapt resource value: 0x7f08000a
+			public const int common_google_signin_btn_text_dark_pressed = 2131230730;
 			
-			// aapt resource value: 0x7f09007f
-			public const int common_google_signin_btn_text_light = 2131296383;
+			// aapt resource value: 0x7f08007e
+			public const int common_google_signin_btn_text_light = 2131230846;
 			
-			// aapt resource value: 0x7f09000d
-			public const int common_google_signin_btn_text_light_default = 2131296269;
+			// aapt resource value: 0x7f08000d
+			public const int common_google_signin_btn_text_light_default = 2131230733;
 			
-			// aapt resource value: 0x7f09000f
-			public const int common_google_signin_btn_text_light_disabled = 2131296271;
+			// aapt resource value: 0x7f08000f
+			public const int common_google_signin_btn_text_light_disabled = 2131230735;
 			
-			// aapt resource value: 0x7f090010
-			public const int common_google_signin_btn_text_light_focused = 2131296272;
+			// aapt resource value: 0x7f080010
+			public const int common_google_signin_btn_text_light_focused = 2131230736;
 			
-			// aapt resource value: 0x7f09000e
-			public const int common_google_signin_btn_text_light_pressed = 2131296270;
+			// aapt resource value: 0x7f08000e
+			public const int common_google_signin_btn_text_light_pressed = 2131230734;
 			
-			// aapt resource value: 0x7f090080
-			public const int common_plus_signin_btn_text_dark = 2131296384;
+			// aapt resource value: 0x7f08007f
+			public const int common_plus_signin_btn_text_dark = 2131230847;
 			
-			// aapt resource value: 0x7f090000
-			public const int common_plus_signin_btn_text_dark_default = 2131296256;
+			// aapt resource value: 0x7f080000
+			public const int common_plus_signin_btn_text_dark_default = 2131230720;
 			
-			// aapt resource value: 0x7f090002
-			public const int common_plus_signin_btn_text_dark_disabled = 2131296258;
+			// aapt resource value: 0x7f080002
+			public const int common_plus_signin_btn_text_dark_disabled = 2131230722;
 			
-			// aapt resource value: 0x7f090003
-			public const int common_plus_signin_btn_text_dark_focused = 2131296259;
+			// aapt resource value: 0x7f080003
+			public const int common_plus_signin_btn_text_dark_focused = 2131230723;
 			
-			// aapt resource value: 0x7f090001
-			public const int common_plus_signin_btn_text_dark_pressed = 2131296257;
+			// aapt resource value: 0x7f080001
+			public const int common_plus_signin_btn_text_dark_pressed = 2131230721;
 			
-			// aapt resource value: 0x7f090081
-			public const int common_plus_signin_btn_text_light = 2131296385;
+			// aapt resource value: 0x7f080080
+			public const int common_plus_signin_btn_text_light = 2131230848;
 			
-			// aapt resource value: 0x7f090004
-			public const int common_plus_signin_btn_text_light_default = 2131296260;
+			// aapt resource value: 0x7f080004
+			public const int common_plus_signin_btn_text_light_default = 2131230724;
 			
-			// aapt resource value: 0x7f090006
-			public const int common_plus_signin_btn_text_light_disabled = 2131296262;
+			// aapt resource value: 0x7f080006
+			public const int common_plus_signin_btn_text_light_disabled = 2131230726;
 			
-			// aapt resource value: 0x7f090007
-			public const int common_plus_signin_btn_text_light_focused = 2131296263;
+			// aapt resource value: 0x7f080007
+			public const int common_plus_signin_btn_text_light_focused = 2131230727;
 			
-			// aapt resource value: 0x7f090005
-			public const int common_plus_signin_btn_text_light_pressed = 2131296261;
+			// aapt resource value: 0x7f080005
+			public const int common_plus_signin_btn_text_light_pressed = 2131230725;
 			
-			// aapt resource value: 0x7f090064
-			public const int data_form_invalid_validation_color = 2131296356;
+			// aapt resource value: 0x7f080064
+			public const int data_form_invalid_validation_color = 2131230820;
 			
-			// aapt resource value: 0x7f090062
-			public const int data_form_list_selected = 2131296354;
+			// aapt resource value: 0x7f080062
+			public const int data_form_list_selected = 2131230818;
 			
-			// aapt resource value: 0x7f090063
-			public const int data_form_valid_validation_color = 2131296355;
+			// aapt resource value: 0x7f080063
+			public const int data_form_valid_validation_color = 2131230819;
 			
-			// aapt resource value: 0x7f09004f
-			public const int design_fab_shadow_end_color = 2131296335;
+			// aapt resource value: 0x7f08004f
+			public const int design_fab_shadow_end_color = 2131230799;
 			
-			// aapt resource value: 0x7f090050
-			public const int design_fab_shadow_mid_color = 2131296336;
+			// aapt resource value: 0x7f080050
+			public const int design_fab_shadow_mid_color = 2131230800;
 			
-			// aapt resource value: 0x7f090051
-			public const int design_fab_shadow_start_color = 2131296337;
+			// aapt resource value: 0x7f080051
+			public const int design_fab_shadow_start_color = 2131230801;
 			
-			// aapt resource value: 0x7f090052
-			public const int design_fab_stroke_end_inner_color = 2131296338;
+			// aapt resource value: 0x7f080052
+			public const int design_fab_stroke_end_inner_color = 2131230802;
 			
-			// aapt resource value: 0x7f090053
-			public const int design_fab_stroke_end_outer_color = 2131296339;
+			// aapt resource value: 0x7f080053
+			public const int design_fab_stroke_end_outer_color = 2131230803;
 			
-			// aapt resource value: 0x7f090054
-			public const int design_fab_stroke_top_inner_color = 2131296340;
+			// aapt resource value: 0x7f080054
+			public const int design_fab_stroke_top_inner_color = 2131230804;
 			
-			// aapt resource value: 0x7f090055
-			public const int design_fab_stroke_top_outer_color = 2131296341;
+			// aapt resource value: 0x7f080055
+			public const int design_fab_stroke_top_outer_color = 2131230805;
 			
-			// aapt resource value: 0x7f090056
-			public const int design_snackbar_background_color = 2131296342;
+			// aapt resource value: 0x7f080056
+			public const int design_snackbar_background_color = 2131230806;
 			
-			// aapt resource value: 0x7f090057
-			public const int design_textinput_error_color_dark = 2131296343;
+			// aapt resource value: 0x7f080057
+			public const int design_textinput_error_color_dark = 2131230807;
 			
-			// aapt resource value: 0x7f090058
-			public const int design_textinput_error_color_light = 2131296344;
+			// aapt resource value: 0x7f080058
+			public const int design_textinput_error_color_light = 2131230808;
 			
-			// aapt resource value: 0x7f090027
-			public const int dim_foreground_disabled_material_dark = 2131296295;
+			// aapt resource value: 0x7f080027
+			public const int dim_foreground_disabled_material_dark = 2131230759;
 			
-			// aapt resource value: 0x7f090028
-			public const int dim_foreground_disabled_material_light = 2131296296;
+			// aapt resource value: 0x7f080028
+			public const int dim_foreground_disabled_material_light = 2131230760;
 			
-			// aapt resource value: 0x7f090029
-			public const int dim_foreground_material_dark = 2131296297;
+			// aapt resource value: 0x7f080029
+			public const int dim_foreground_material_dark = 2131230761;
 			
-			// aapt resource value: 0x7f09002a
-			public const int dim_foreground_material_light = 2131296298;
+			// aapt resource value: 0x7f08002a
+			public const int dim_foreground_material_light = 2131230762;
 			
-			// aapt resource value: 0x7f09002b
-			public const int foreground_material_dark = 2131296299;
+			// aapt resource value: 0x7f08002b
+			public const int foreground_material_dark = 2131230763;
 			
-			// aapt resource value: 0x7f09002c
-			public const int foreground_material_light = 2131296300;
+			// aapt resource value: 0x7f08002c
+			public const int foreground_material_light = 2131230764;
 			
-			// aapt resource value: 0x7f09005f
-			public const int groupHeaderTextColor = 2131296351;
+			// aapt resource value: 0x7f08005f
+			public const int groupHeaderTextColor = 2131230815;
 			
-			// aapt resource value: 0x7f09002d
-			public const int highlighted_text_material_dark = 2131296301;
+			// aapt resource value: 0x7f08002d
+			public const int highlighted_text_material_dark = 2131230765;
 			
-			// aapt resource value: 0x7f09002e
-			public const int highlighted_text_material_light = 2131296302;
+			// aapt resource value: 0x7f08002e
+			public const int highlighted_text_material_light = 2131230766;
 			
-			// aapt resource value: 0x7f09002f
-			public const int hint_foreground_material_dark = 2131296303;
+			// aapt resource value: 0x7f08002f
+			public const int hint_foreground_material_dark = 2131230767;
 			
-			// aapt resource value: 0x7f090030
-			public const int hint_foreground_material_light = 2131296304;
+			// aapt resource value: 0x7f080030
+			public const int hint_foreground_material_light = 2131230768;
 			
-			// aapt resource value: 0x7f09005e
-			public const int listAccentColor = 2131296350;
+			// aapt resource value: 0x7f08005e
+			public const int listAccentColor = 2131230814;
 			
-			// aapt resource value: 0x7f09005d
-			public const int listItemTextColor = 2131296349;
+			// aapt resource value: 0x7f08005d
+			public const int listItemTextColor = 2131230813;
 			
-			// aapt resource value: 0x7f090031
-			public const int material_blue_grey_800 = 2131296305;
+			// aapt resource value: 0x7f080031
+			public const int material_blue_grey_800 = 2131230769;
 			
-			// aapt resource value: 0x7f090032
-			public const int material_blue_grey_900 = 2131296306;
+			// aapt resource value: 0x7f080032
+			public const int material_blue_grey_900 = 2131230770;
 			
-			// aapt resource value: 0x7f090033
-			public const int material_blue_grey_950 = 2131296307;
+			// aapt resource value: 0x7f080033
+			public const int material_blue_grey_950 = 2131230771;
 			
-			// aapt resource value: 0x7f090034
-			public const int material_deep_teal_200 = 2131296308;
+			// aapt resource value: 0x7f080034
+			public const int material_deep_teal_200 = 2131230772;
 			
-			// aapt resource value: 0x7f090035
-			public const int material_deep_teal_500 = 2131296309;
+			// aapt resource value: 0x7f080035
+			public const int material_deep_teal_500 = 2131230773;
 			
-			// aapt resource value: 0x7f090036
-			public const int material_grey_100 = 2131296310;
+			// aapt resource value: 0x7f080036
+			public const int material_grey_100 = 2131230774;
 			
-			// aapt resource value: 0x7f090037
-			public const int material_grey_300 = 2131296311;
+			// aapt resource value: 0x7f080037
+			public const int material_grey_300 = 2131230775;
 			
-			// aapt resource value: 0x7f090038
-			public const int material_grey_50 = 2131296312;
+			// aapt resource value: 0x7f080038
+			public const int material_grey_50 = 2131230776;
 			
-			// aapt resource value: 0x7f090039
-			public const int material_grey_600 = 2131296313;
+			// aapt resource value: 0x7f080039
+			public const int material_grey_600 = 2131230777;
 			
-			// aapt resource value: 0x7f09003a
-			public const int material_grey_800 = 2131296314;
+			// aapt resource value: 0x7f08003a
+			public const int material_grey_800 = 2131230778;
 			
-			// aapt resource value: 0x7f09003b
-			public const int material_grey_850 = 2131296315;
+			// aapt resource value: 0x7f08003b
+			public const int material_grey_850 = 2131230779;
 			
-			// aapt resource value: 0x7f09003c
-			public const int material_grey_900 = 2131296316;
+			// aapt resource value: 0x7f08003c
+			public const int material_grey_900 = 2131230780;
 			
-			// aapt resource value: 0x7f09006a
-			public const int number_picker_background_theme_blue = 2131296362;
+			// aapt resource value: 0x7f08006a
+			public const int number_picker_background_theme_blue = 2131230826;
 			
-			// aapt resource value: 0x7f090068
-			public const int number_picker_stroke_color_theme_blue = 2131296360;
+			// aapt resource value: 0x7f080068
+			public const int number_picker_stroke_color_theme_blue = 2131230824;
 			
-			// aapt resource value: 0x7f090069
-			public const int number_picker_text_color_theme_blue = 2131296361;
+			// aapt resource value: 0x7f080069
+			public const int number_picker_text_color_theme_blue = 2131230825;
 			
-			// aapt resource value: 0x7f09005c
-			public const int pressedColor = 2131296348;
+			// aapt resource value: 0x7f08005c
+			public const int pressedColor = 2131230812;
 			
-			// aapt resource value: 0x7f09003d
-			public const int primary_dark_material_dark = 2131296317;
+			// aapt resource value: 0x7f08003d
+			public const int primary_dark_material_dark = 2131230781;
 			
-			// aapt resource value: 0x7f09003e
-			public const int primary_dark_material_light = 2131296318;
+			// aapt resource value: 0x7f08003e
+			public const int primary_dark_material_light = 2131230782;
 			
-			// aapt resource value: 0x7f09003f
-			public const int primary_material_dark = 2131296319;
+			// aapt resource value: 0x7f08003f
+			public const int primary_material_dark = 2131230783;
 			
-			// aapt resource value: 0x7f090040
-			public const int primary_material_light = 2131296320;
+			// aapt resource value: 0x7f080040
+			public const int primary_material_light = 2131230784;
 			
-			// aapt resource value: 0x7f090041
-			public const int primary_text_default_material_dark = 2131296321;
+			// aapt resource value: 0x7f080041
+			public const int primary_text_default_material_dark = 2131230785;
 			
-			// aapt resource value: 0x7f090042
-			public const int primary_text_default_material_light = 2131296322;
+			// aapt resource value: 0x7f080042
+			public const int primary_text_default_material_light = 2131230786;
 			
-			// aapt resource value: 0x7f090043
-			public const int primary_text_disabled_material_dark = 2131296323;
+			// aapt resource value: 0x7f080043
+			public const int primary_text_disabled_material_dark = 2131230787;
 			
-			// aapt resource value: 0x7f090044
-			public const int primary_text_disabled_material_light = 2131296324;
+			// aapt resource value: 0x7f080044
+			public const int primary_text_disabled_material_light = 2131230788;
 			
-			// aapt resource value: 0x7f090073
-			public const int red = 2131296371;
+			// aapt resource value: 0x7f080045
+			public const int ripple_material_dark = 2131230789;
 			
-			// aapt resource value: 0x7f090045
-			public const int ripple_material_dark = 2131296325;
+			// aapt resource value: 0x7f080046
+			public const int ripple_material_light = 2131230790;
 			
-			// aapt resource value: 0x7f090046
-			public const int ripple_material_light = 2131296326;
+			// aapt resource value: 0x7f080047
+			public const int secondary_text_default_material_dark = 2131230791;
 			
-			// aapt resource value: 0x7f090047
-			public const int secondary_text_default_material_dark = 2131296327;
+			// aapt resource value: 0x7f080048
+			public const int secondary_text_default_material_light = 2131230792;
 			
-			// aapt resource value: 0x7f090048
-			public const int secondary_text_default_material_light = 2131296328;
+			// aapt resource value: 0x7f080049
+			public const int secondary_text_disabled_material_dark = 2131230793;
 			
-			// aapt resource value: 0x7f090049
-			public const int secondary_text_disabled_material_dark = 2131296329;
+			// aapt resource value: 0x7f08004a
+			public const int secondary_text_disabled_material_light = 2131230794;
 			
-			// aapt resource value: 0x7f09004a
-			public const int secondary_text_disabled_material_light = 2131296330;
+			// aapt resource value: 0x7f08006e
+			public const int segmented_view_button_color_theme_blue = 2131230830;
 			
-			// aapt resource value: 0x7f09006e
-			public const int segmented_view_button_color_theme_blue = 2131296366;
+			// aapt resource value: 0x7f08006c
+			public const int segmented_view_disabled_text_color_theme_blue = 2131230828;
 			
-			// aapt resource value: 0x7f09006c
-			public const int segmented_view_disabled_text_color_theme_blue = 2131296364;
+			// aapt resource value: 0x7f08006f
+			public const int segmented_view_selected_button_color_theme_blue = 2131230831;
 			
-			// aapt resource value: 0x7f09006f
-			public const int segmented_view_selected_button_color_theme_blue = 2131296367;
+			// aapt resource value: 0x7f080071
+			public const int segmented_view_selected_stroke_color_theme_blue = 2131230833;
 			
-			// aapt resource value: 0x7f090071
-			public const int segmented_view_selected_stroke_color_theme_blue = 2131296369;
+			// aapt resource value: 0x7f08006d
+			public const int segmented_view_selected_text_color_theme_blue = 2131230829;
 			
-			// aapt resource value: 0x7f09006d
-			public const int segmented_view_selected_text_color_theme_blue = 2131296365;
+			// aapt resource value: 0x7f080070
+			public const int segmented_view_stroke_color_theme_blue = 2131230832;
 			
-			// aapt resource value: 0x7f090070
-			public const int segmented_view_stroke_color_theme_blue = 2131296368;
+			// aapt resource value: 0x7f08006b
+			public const int segmented_view_text_color_theme_blue = 2131230827;
 			
-			// aapt resource value: 0x7f09006b
-			public const int segmented_view_text_color_theme_blue = 2131296363;
+			// aapt resource value: 0x7f08005b
+			public const int selectionColor = 2131230811;
 			
-			// aapt resource value: 0x7f09005b
-			public const int selectionColor = 2131296347;
+			// aapt resource value: 0x7f080060
+			public const int shadeColor = 2131230816;
 			
-			// aapt resource value: 0x7f090060
-			public const int shadeColor = 2131296352;
+			// aapt resource value: 0x7f080061
+			public const int shadeColorCenter = 2131230817;
 			
-			// aapt resource value: 0x7f090061
-			public const int shadeColorCenter = 2131296353;
+			// aapt resource value: 0x7f08004b
+			public const int switch_thumb_disabled_material_dark = 2131230795;
 			
-			// aapt resource value: 0x7f09004b
-			public const int switch_thumb_disabled_material_dark = 2131296331;
+			// aapt resource value: 0x7f08004c
+			public const int switch_thumb_disabled_material_light = 2131230796;
 			
-			// aapt resource value: 0x7f09004c
-			public const int switch_thumb_disabled_material_light = 2131296332;
+			// aapt resource value: 0x7f080081
+			public const int switch_thumb_material_dark = 2131230849;
 			
-			// aapt resource value: 0x7f090082
-			public const int switch_thumb_material_dark = 2131296386;
+			// aapt resource value: 0x7f080082
+			public const int switch_thumb_material_light = 2131230850;
 			
-			// aapt resource value: 0x7f090083
-			public const int switch_thumb_material_light = 2131296387;
+			// aapt resource value: 0x7f08004d
+			public const int switch_thumb_normal_material_dark = 2131230797;
 			
-			// aapt resource value: 0x7f09004d
-			public const int switch_thumb_normal_material_dark = 2131296333;
+			// aapt resource value: 0x7f08004e
+			public const int switch_thumb_normal_material_light = 2131230798;
 			
-			// aapt resource value: 0x7f09004e
-			public const int switch_thumb_normal_material_light = 2131296334;
+			// aapt resource value: 0x7f080067
+			public const int token_normal = 2131230823;
 			
-			// aapt resource value: 0x7f090067
-			public const int token_normal = 2131296359;
+			// aapt resource value: 0x7f080066
+			public const int token_selected = 2131230822;
 			
-			// aapt resource value: 0x7f090066
-			public const int token_selected = 2131296358;
+			// aapt resource value: 0x7f080059
+			public const int transparent = 2131230809;
 			
-			// aapt resource value: 0x7f090059
-			public const int transparent = 2131296345;
-			
-			// aapt resource value: 0x7f09005a
-			public const int white = 2131296346;
+			// aapt resource value: 0x7f08005a
+			public const int white = 2131230810;
 			
 			static Color()
 			{
@@ -11373,383 +9115,380 @@ namespace YallaParkingMobile.Droid
 		public partial class Dimension
 		{
 			
-			// aapt resource value: 0x7f0a0019
-			public const int abc_action_bar_content_inset_material = 2131361817;
+			// aapt resource value: 0x7f090019
+			public const int abc_action_bar_content_inset_material = 2131296281;
 			
-			// aapt resource value: 0x7f0a000d
-			public const int abc_action_bar_default_height_material = 2131361805;
+			// aapt resource value: 0x7f09000d
+			public const int abc_action_bar_default_height_material = 2131296269;
 			
-			// aapt resource value: 0x7f0a001a
-			public const int abc_action_bar_default_padding_end_material = 2131361818;
+			// aapt resource value: 0x7f09001a
+			public const int abc_action_bar_default_padding_end_material = 2131296282;
 			
-			// aapt resource value: 0x7f0a001b
-			public const int abc_action_bar_default_padding_start_material = 2131361819;
+			// aapt resource value: 0x7f09001b
+			public const int abc_action_bar_default_padding_start_material = 2131296283;
 			
-			// aapt resource value: 0x7f0a001d
-			public const int abc_action_bar_icon_vertical_padding_material = 2131361821;
+			// aapt resource value: 0x7f09001d
+			public const int abc_action_bar_icon_vertical_padding_material = 2131296285;
 			
-			// aapt resource value: 0x7f0a001e
-			public const int abc_action_bar_overflow_padding_end_material = 2131361822;
+			// aapt resource value: 0x7f09001e
+			public const int abc_action_bar_overflow_padding_end_material = 2131296286;
 			
-			// aapt resource value: 0x7f0a001f
-			public const int abc_action_bar_overflow_padding_start_material = 2131361823;
+			// aapt resource value: 0x7f09001f
+			public const int abc_action_bar_overflow_padding_start_material = 2131296287;
 			
-			// aapt resource value: 0x7f0a000e
-			public const int abc_action_bar_progress_bar_size = 2131361806;
+			// aapt resource value: 0x7f09000e
+			public const int abc_action_bar_progress_bar_size = 2131296270;
 			
-			// aapt resource value: 0x7f0a0020
-			public const int abc_action_bar_stacked_max_height = 2131361824;
+			// aapt resource value: 0x7f090020
+			public const int abc_action_bar_stacked_max_height = 2131296288;
 			
-			// aapt resource value: 0x7f0a0021
-			public const int abc_action_bar_stacked_tab_max_width = 2131361825;
+			// aapt resource value: 0x7f090021
+			public const int abc_action_bar_stacked_tab_max_width = 2131296289;
 			
-			// aapt resource value: 0x7f0a0022
-			public const int abc_action_bar_subtitle_bottom_margin_material = 2131361826;
+			// aapt resource value: 0x7f090022
+			public const int abc_action_bar_subtitle_bottom_margin_material = 2131296290;
 			
-			// aapt resource value: 0x7f0a0023
-			public const int abc_action_bar_subtitle_top_margin_material = 2131361827;
+			// aapt resource value: 0x7f090023
+			public const int abc_action_bar_subtitle_top_margin_material = 2131296291;
 			
-			// aapt resource value: 0x7f0a0024
-			public const int abc_action_button_min_height_material = 2131361828;
+			// aapt resource value: 0x7f090024
+			public const int abc_action_button_min_height_material = 2131296292;
 			
-			// aapt resource value: 0x7f0a0025
-			public const int abc_action_button_min_width_material = 2131361829;
+			// aapt resource value: 0x7f090025
+			public const int abc_action_button_min_width_material = 2131296293;
 			
-			// aapt resource value: 0x7f0a0026
-			public const int abc_action_button_min_width_overflow_material = 2131361830;
+			// aapt resource value: 0x7f090026
+			public const int abc_action_button_min_width_overflow_material = 2131296294;
 			
-			// aapt resource value: 0x7f0a000c
-			public const int abc_alert_dialog_button_bar_height = 2131361804;
+			// aapt resource value: 0x7f09000c
+			public const int abc_alert_dialog_button_bar_height = 2131296268;
 			
-			// aapt resource value: 0x7f0a0027
-			public const int abc_button_inset_horizontal_material = 2131361831;
+			// aapt resource value: 0x7f090027
+			public const int abc_button_inset_horizontal_material = 2131296295;
 			
-			// aapt resource value: 0x7f0a0028
-			public const int abc_button_inset_vertical_material = 2131361832;
+			// aapt resource value: 0x7f090028
+			public const int abc_button_inset_vertical_material = 2131296296;
 			
-			// aapt resource value: 0x7f0a0029
-			public const int abc_button_padding_horizontal_material = 2131361833;
+			// aapt resource value: 0x7f090029
+			public const int abc_button_padding_horizontal_material = 2131296297;
 			
-			// aapt resource value: 0x7f0a002a
-			public const int abc_button_padding_vertical_material = 2131361834;
+			// aapt resource value: 0x7f09002a
+			public const int abc_button_padding_vertical_material = 2131296298;
 			
-			// aapt resource value: 0x7f0a0011
-			public const int abc_config_prefDialogWidth = 2131361809;
+			// aapt resource value: 0x7f090011
+			public const int abc_config_prefDialogWidth = 2131296273;
 			
-			// aapt resource value: 0x7f0a002b
-			public const int abc_control_corner_material = 2131361835;
+			// aapt resource value: 0x7f09002b
+			public const int abc_control_corner_material = 2131296299;
 			
-			// aapt resource value: 0x7f0a002c
-			public const int abc_control_inset_material = 2131361836;
+			// aapt resource value: 0x7f09002c
+			public const int abc_control_inset_material = 2131296300;
 			
-			// aapt resource value: 0x7f0a002d
-			public const int abc_control_padding_material = 2131361837;
+			// aapt resource value: 0x7f09002d
+			public const int abc_control_padding_material = 2131296301;
 			
-			// aapt resource value: 0x7f0a0012
-			public const int abc_dialog_fixed_height_major = 2131361810;
+			// aapt resource value: 0x7f090012
+			public const int abc_dialog_fixed_height_major = 2131296274;
 			
-			// aapt resource value: 0x7f0a0013
-			public const int abc_dialog_fixed_height_minor = 2131361811;
+			// aapt resource value: 0x7f090013
+			public const int abc_dialog_fixed_height_minor = 2131296275;
 			
-			// aapt resource value: 0x7f0a0014
-			public const int abc_dialog_fixed_width_major = 2131361812;
+			// aapt resource value: 0x7f090014
+			public const int abc_dialog_fixed_width_major = 2131296276;
 			
-			// aapt resource value: 0x7f0a0015
-			public const int abc_dialog_fixed_width_minor = 2131361813;
+			// aapt resource value: 0x7f090015
+			public const int abc_dialog_fixed_width_minor = 2131296277;
 			
-			// aapt resource value: 0x7f0a002e
-			public const int abc_dialog_list_padding_vertical_material = 2131361838;
+			// aapt resource value: 0x7f09002e
+			public const int abc_dialog_list_padding_vertical_material = 2131296302;
 			
-			// aapt resource value: 0x7f0a0016
-			public const int abc_dialog_min_width_major = 2131361814;
+			// aapt resource value: 0x7f090016
+			public const int abc_dialog_min_width_major = 2131296278;
 			
-			// aapt resource value: 0x7f0a0017
-			public const int abc_dialog_min_width_minor = 2131361815;
+			// aapt resource value: 0x7f090017
+			public const int abc_dialog_min_width_minor = 2131296279;
 			
-			// aapt resource value: 0x7f0a002f
-			public const int abc_dialog_padding_material = 2131361839;
+			// aapt resource value: 0x7f09002f
+			public const int abc_dialog_padding_material = 2131296303;
 			
-			// aapt resource value: 0x7f0a0030
-			public const int abc_dialog_padding_top_material = 2131361840;
+			// aapt resource value: 0x7f090030
+			public const int abc_dialog_padding_top_material = 2131296304;
 			
-			// aapt resource value: 0x7f0a0031
-			public const int abc_disabled_alpha_material_dark = 2131361841;
+			// aapt resource value: 0x7f090031
+			public const int abc_disabled_alpha_material_dark = 2131296305;
 			
-			// aapt resource value: 0x7f0a0032
-			public const int abc_disabled_alpha_material_light = 2131361842;
+			// aapt resource value: 0x7f090032
+			public const int abc_disabled_alpha_material_light = 2131296306;
 			
-			// aapt resource value: 0x7f0a0033
-			public const int abc_dropdownitem_icon_width = 2131361843;
+			// aapt resource value: 0x7f090033
+			public const int abc_dropdownitem_icon_width = 2131296307;
 			
-			// aapt resource value: 0x7f0a0034
-			public const int abc_dropdownitem_text_padding_left = 2131361844;
+			// aapt resource value: 0x7f090034
+			public const int abc_dropdownitem_text_padding_left = 2131296308;
 			
-			// aapt resource value: 0x7f0a0035
-			public const int abc_dropdownitem_text_padding_right = 2131361845;
+			// aapt resource value: 0x7f090035
+			public const int abc_dropdownitem_text_padding_right = 2131296309;
 			
-			// aapt resource value: 0x7f0a0036
-			public const int abc_edit_text_inset_bottom_material = 2131361846;
+			// aapt resource value: 0x7f090036
+			public const int abc_edit_text_inset_bottom_material = 2131296310;
 			
-			// aapt resource value: 0x7f0a0037
-			public const int abc_edit_text_inset_horizontal_material = 2131361847;
+			// aapt resource value: 0x7f090037
+			public const int abc_edit_text_inset_horizontal_material = 2131296311;
 			
-			// aapt resource value: 0x7f0a0038
-			public const int abc_edit_text_inset_top_material = 2131361848;
+			// aapt resource value: 0x7f090038
+			public const int abc_edit_text_inset_top_material = 2131296312;
 			
-			// aapt resource value: 0x7f0a0039
-			public const int abc_floating_window_z = 2131361849;
+			// aapt resource value: 0x7f090039
+			public const int abc_floating_window_z = 2131296313;
 			
-			// aapt resource value: 0x7f0a003a
-			public const int abc_list_item_padding_horizontal_material = 2131361850;
+			// aapt resource value: 0x7f09003a
+			public const int abc_list_item_padding_horizontal_material = 2131296314;
 			
-			// aapt resource value: 0x7f0a003b
-			public const int abc_panel_menu_list_width = 2131361851;
+			// aapt resource value: 0x7f09003b
+			public const int abc_panel_menu_list_width = 2131296315;
 			
-			// aapt resource value: 0x7f0a003c
-			public const int abc_search_view_preferred_width = 2131361852;
+			// aapt resource value: 0x7f09003c
+			public const int abc_search_view_preferred_width = 2131296316;
 			
-			// aapt resource value: 0x7f0a0018
-			public const int abc_search_view_text_min_width = 2131361816;
+			// aapt resource value: 0x7f090018
+			public const int abc_search_view_text_min_width = 2131296280;
 			
-			// aapt resource value: 0x7f0a003d
-			public const int abc_seekbar_track_background_height_material = 2131361853;
+			// aapt resource value: 0x7f09003d
+			public const int abc_seekbar_track_background_height_material = 2131296317;
 			
-			// aapt resource value: 0x7f0a003e
-			public const int abc_seekbar_track_progress_height_material = 2131361854;
+			// aapt resource value: 0x7f09003e
+			public const int abc_seekbar_track_progress_height_material = 2131296318;
 			
-			// aapt resource value: 0x7f0a003f
-			public const int abc_select_dialog_padding_start_material = 2131361855;
+			// aapt resource value: 0x7f09003f
+			public const int abc_select_dialog_padding_start_material = 2131296319;
 			
-			// aapt resource value: 0x7f0a001c
-			public const int abc_switch_padding = 2131361820;
+			// aapt resource value: 0x7f09001c
+			public const int abc_switch_padding = 2131296284;
 			
-			// aapt resource value: 0x7f0a0040
-			public const int abc_text_size_body_1_material = 2131361856;
+			// aapt resource value: 0x7f090040
+			public const int abc_text_size_body_1_material = 2131296320;
 			
-			// aapt resource value: 0x7f0a0041
-			public const int abc_text_size_body_2_material = 2131361857;
+			// aapt resource value: 0x7f090041
+			public const int abc_text_size_body_2_material = 2131296321;
 			
-			// aapt resource value: 0x7f0a0042
-			public const int abc_text_size_button_material = 2131361858;
+			// aapt resource value: 0x7f090042
+			public const int abc_text_size_button_material = 2131296322;
 			
-			// aapt resource value: 0x7f0a0043
-			public const int abc_text_size_caption_material = 2131361859;
+			// aapt resource value: 0x7f090043
+			public const int abc_text_size_caption_material = 2131296323;
 			
-			// aapt resource value: 0x7f0a0044
-			public const int abc_text_size_display_1_material = 2131361860;
+			// aapt resource value: 0x7f090044
+			public const int abc_text_size_display_1_material = 2131296324;
 			
-			// aapt resource value: 0x7f0a0045
-			public const int abc_text_size_display_2_material = 2131361861;
+			// aapt resource value: 0x7f090045
+			public const int abc_text_size_display_2_material = 2131296325;
 			
-			// aapt resource value: 0x7f0a0046
-			public const int abc_text_size_display_3_material = 2131361862;
+			// aapt resource value: 0x7f090046
+			public const int abc_text_size_display_3_material = 2131296326;
 			
-			// aapt resource value: 0x7f0a0047
-			public const int abc_text_size_display_4_material = 2131361863;
+			// aapt resource value: 0x7f090047
+			public const int abc_text_size_display_4_material = 2131296327;
 			
-			// aapt resource value: 0x7f0a0048
-			public const int abc_text_size_headline_material = 2131361864;
+			// aapt resource value: 0x7f090048
+			public const int abc_text_size_headline_material = 2131296328;
 			
-			// aapt resource value: 0x7f0a0049
-			public const int abc_text_size_large_material = 2131361865;
+			// aapt resource value: 0x7f090049
+			public const int abc_text_size_large_material = 2131296329;
 			
-			// aapt resource value: 0x7f0a004a
-			public const int abc_text_size_medium_material = 2131361866;
+			// aapt resource value: 0x7f09004a
+			public const int abc_text_size_medium_material = 2131296330;
 			
-			// aapt resource value: 0x7f0a004b
-			public const int abc_text_size_menu_material = 2131361867;
+			// aapt resource value: 0x7f09004b
+			public const int abc_text_size_menu_material = 2131296331;
 			
-			// aapt resource value: 0x7f0a004c
-			public const int abc_text_size_small_material = 2131361868;
+			// aapt resource value: 0x7f09004c
+			public const int abc_text_size_small_material = 2131296332;
 			
-			// aapt resource value: 0x7f0a004d
-			public const int abc_text_size_subhead_material = 2131361869;
+			// aapt resource value: 0x7f09004d
+			public const int abc_text_size_subhead_material = 2131296333;
 			
-			// aapt resource value: 0x7f0a000f
-			public const int abc_text_size_subtitle_material_toolbar = 2131361807;
+			// aapt resource value: 0x7f09000f
+			public const int abc_text_size_subtitle_material_toolbar = 2131296271;
 			
-			// aapt resource value: 0x7f0a004e
-			public const int abc_text_size_title_material = 2131361870;
+			// aapt resource value: 0x7f09004e
+			public const int abc_text_size_title_material = 2131296334;
 			
-			// aapt resource value: 0x7f0a0010
-			public const int abc_text_size_title_material_toolbar = 2131361808;
+			// aapt resource value: 0x7f090010
+			public const int abc_text_size_title_material_toolbar = 2131296272;
 			
-			// aapt resource value: 0x7f0a0075
-			public const int card_deck_translation = 2131361909;
+			// aapt resource value: 0x7f090075
+			public const int card_deck_translation = 2131296373;
 			
-			// aapt resource value: 0x7f0a0009
-			public const int cardview_compat_inset_shadow = 2131361801;
+			// aapt resource value: 0x7f090009
+			public const int cardview_compat_inset_shadow = 2131296265;
 			
-			// aapt resource value: 0x7f0a000a
-			public const int cardview_default_elevation = 2131361802;
+			// aapt resource value: 0x7f09000a
+			public const int cardview_default_elevation = 2131296266;
 			
-			// aapt resource value: 0x7f0a000b
-			public const int cardview_default_radius = 2131361803;
+			// aapt resource value: 0x7f09000b
+			public const int cardview_default_radius = 2131296267;
 			
-			// aapt resource value: 0x7f0a0079
-			public const int data_form_editor_header_text_size = 2131361913;
+			// aapt resource value: 0x7f090079
+			public const int data_form_editor_header_text_size = 2131296377;
 			
-			// aapt resource value: 0x7f0a0077
-			public const int data_form_editor_margin_horizontal = 2131361911;
+			// aapt resource value: 0x7f090077
+			public const int data_form_editor_margin_horizontal = 2131296375;
 			
-			// aapt resource value: 0x7f0a007b
-			public const int data_form_editor_padding_horizontal = 2131361915;
+			// aapt resource value: 0x7f09007b
+			public const int data_form_editor_padding_horizontal = 2131296379;
 			
-			// aapt resource value: 0x7f0a007c
-			public const int data_form_editor_padding_vertical = 2131361916;
+			// aapt resource value: 0x7f09007c
+			public const int data_form_editor_padding_vertical = 2131296380;
 			
-			// aapt resource value: 0x7f0a0078
-			public const int data_form_editor_text_size = 2131361912;
+			// aapt resource value: 0x7f090078
+			public const int data_form_editor_text_size = 2131296376;
 			
-			// aapt resource value: 0x7f0a007a
-			public const int data_form_editor_validation_text_size = 2131361914;
+			// aapt resource value: 0x7f09007a
+			public const int data_form_editor_validation_text_size = 2131296378;
 			
-			// aapt resource value: 0x7f0a0076
-			public const int date_text_size_year_mode = 2131361910;
+			// aapt resource value: 0x7f090076
+			public const int date_text_size_year_mode = 2131296374;
 			
-			// aapt resource value: 0x7f0a005f
-			public const int design_appbar_elevation = 2131361887;
+			// aapt resource value: 0x7f09005f
+			public const int design_appbar_elevation = 2131296351;
 			
-			// aapt resource value: 0x7f0a0060
-			public const int design_bottom_sheet_modal_elevation = 2131361888;
+			// aapt resource value: 0x7f090060
+			public const int design_bottom_sheet_modal_elevation = 2131296352;
 			
-			// aapt resource value: 0x7f0a0061
-			public const int design_bottom_sheet_modal_peek_height = 2131361889;
+			// aapt resource value: 0x7f090061
+			public const int design_bottom_sheet_modal_peek_height = 2131296353;
 			
-			// aapt resource value: 0x7f0a0062
-			public const int design_fab_border_width = 2131361890;
+			// aapt resource value: 0x7f090062
+			public const int design_fab_border_width = 2131296354;
 			
-			// aapt resource value: 0x7f0a0063
-			public const int design_fab_elevation = 2131361891;
+			// aapt resource value: 0x7f090063
+			public const int design_fab_elevation = 2131296355;
 			
-			// aapt resource value: 0x7f0a0064
-			public const int design_fab_image_size = 2131361892;
+			// aapt resource value: 0x7f090064
+			public const int design_fab_image_size = 2131296356;
 			
-			// aapt resource value: 0x7f0a0065
-			public const int design_fab_size_mini = 2131361893;
+			// aapt resource value: 0x7f090065
+			public const int design_fab_size_mini = 2131296357;
 			
-			// aapt resource value: 0x7f0a0066
-			public const int design_fab_size_normal = 2131361894;
+			// aapt resource value: 0x7f090066
+			public const int design_fab_size_normal = 2131296358;
 			
-			// aapt resource value: 0x7f0a0067
-			public const int design_fab_translation_z_pressed = 2131361895;
+			// aapt resource value: 0x7f090067
+			public const int design_fab_translation_z_pressed = 2131296359;
 			
-			// aapt resource value: 0x7f0a0068
-			public const int design_navigation_elevation = 2131361896;
+			// aapt resource value: 0x7f090068
+			public const int design_navigation_elevation = 2131296360;
 			
-			// aapt resource value: 0x7f0a0069
-			public const int design_navigation_icon_padding = 2131361897;
+			// aapt resource value: 0x7f090069
+			public const int design_navigation_icon_padding = 2131296361;
 			
-			// aapt resource value: 0x7f0a006a
-			public const int design_navigation_icon_size = 2131361898;
+			// aapt resource value: 0x7f09006a
+			public const int design_navigation_icon_size = 2131296362;
 			
-			// aapt resource value: 0x7f0a0057
-			public const int design_navigation_max_width = 2131361879;
+			// aapt resource value: 0x7f090057
+			public const int design_navigation_max_width = 2131296343;
 			
-			// aapt resource value: 0x7f0a006b
-			public const int design_navigation_padding_bottom = 2131361899;
+			// aapt resource value: 0x7f09006b
+			public const int design_navigation_padding_bottom = 2131296363;
 			
-			// aapt resource value: 0x7f0a006c
-			public const int design_navigation_separator_vertical_padding = 2131361900;
+			// aapt resource value: 0x7f09006c
+			public const int design_navigation_separator_vertical_padding = 2131296364;
 			
-			// aapt resource value: 0x7f0a0058
-			public const int design_snackbar_action_inline_max_width = 2131361880;
+			// aapt resource value: 0x7f090058
+			public const int design_snackbar_action_inline_max_width = 2131296344;
 			
-			// aapt resource value: 0x7f0a0059
-			public const int design_snackbar_background_corner_radius = 2131361881;
+			// aapt resource value: 0x7f090059
+			public const int design_snackbar_background_corner_radius = 2131296345;
 			
-			// aapt resource value: 0x7f0a006d
-			public const int design_snackbar_elevation = 2131361901;
+			// aapt resource value: 0x7f09006d
+			public const int design_snackbar_elevation = 2131296365;
 			
-			// aapt resource value: 0x7f0a005a
-			public const int design_snackbar_extra_spacing_horizontal = 2131361882;
+			// aapt resource value: 0x7f09005a
+			public const int design_snackbar_extra_spacing_horizontal = 2131296346;
 			
-			// aapt resource value: 0x7f0a005b
-			public const int design_snackbar_max_width = 2131361883;
+			// aapt resource value: 0x7f09005b
+			public const int design_snackbar_max_width = 2131296347;
 			
-			// aapt resource value: 0x7f0a005c
-			public const int design_snackbar_min_width = 2131361884;
+			// aapt resource value: 0x7f09005c
+			public const int design_snackbar_min_width = 2131296348;
 			
-			// aapt resource value: 0x7f0a006e
-			public const int design_snackbar_padding_horizontal = 2131361902;
+			// aapt resource value: 0x7f09006e
+			public const int design_snackbar_padding_horizontal = 2131296366;
 			
-			// aapt resource value: 0x7f0a006f
-			public const int design_snackbar_padding_vertical = 2131361903;
+			// aapt resource value: 0x7f09006f
+			public const int design_snackbar_padding_vertical = 2131296367;
 			
-			// aapt resource value: 0x7f0a005d
-			public const int design_snackbar_padding_vertical_2lines = 2131361885;
+			// aapt resource value: 0x7f09005d
+			public const int design_snackbar_padding_vertical_2lines = 2131296349;
 			
-			// aapt resource value: 0x7f0a0070
-			public const int design_snackbar_text_size = 2131361904;
+			// aapt resource value: 0x7f090070
+			public const int design_snackbar_text_size = 2131296368;
 			
-			// aapt resource value: 0x7f0a0071
-			public const int design_tab_max_width = 2131361905;
+			// aapt resource value: 0x7f090071
+			public const int design_tab_max_width = 2131296369;
 			
-			// aapt resource value: 0x7f0a005e
-			public const int design_tab_scrollable_min_width = 2131361886;
+			// aapt resource value: 0x7f09005e
+			public const int design_tab_scrollable_min_width = 2131296350;
 			
-			// aapt resource value: 0x7f0a0072
-			public const int design_tab_text_size = 2131361906;
+			// aapt resource value: 0x7f090072
+			public const int design_tab_text_size = 2131296370;
 			
-			// aapt resource value: 0x7f0a0073
-			public const int design_tab_text_size_2line = 2131361907;
+			// aapt resource value: 0x7f090073
+			public const int design_tab_text_size_2line = 2131296371;
 			
-			// aapt resource value: 0x7f0a004f
-			public const int disabled_alpha_material_dark = 2131361871;
+			// aapt resource value: 0x7f09004f
+			public const int disabled_alpha_material_dark = 2131296335;
 			
-			// aapt resource value: 0x7f0a0050
-			public const int disabled_alpha_material_light = 2131361872;
+			// aapt resource value: 0x7f090050
+			public const int disabled_alpha_material_light = 2131296336;
 			
-			// aapt resource value: 0x7f0a0051
-			public const int highlight_alpha_material_colored = 2131361873;
+			// aapt resource value: 0x7f090051
+			public const int highlight_alpha_material_colored = 2131296337;
 			
-			// aapt resource value: 0x7f0a0052
-			public const int highlight_alpha_material_dark = 2131361874;
+			// aapt resource value: 0x7f090052
+			public const int highlight_alpha_material_dark = 2131296338;
 			
-			// aapt resource value: 0x7f0a0053
-			public const int highlight_alpha_material_light = 2131361875;
+			// aapt resource value: 0x7f090053
+			public const int highlight_alpha_material_light = 2131296339;
 			
-			// aapt resource value: 0x7f0a0000
-			public const int item_touch_helper_max_drag_scroll_per_frame = 2131361792;
+			// aapt resource value: 0x7f090000
+			public const int item_touch_helper_max_drag_scroll_per_frame = 2131296256;
 			
-			// aapt resource value: 0x7f0a0001
-			public const int item_touch_helper_swipe_escape_max_velocity = 2131361793;
+			// aapt resource value: 0x7f090001
+			public const int item_touch_helper_swipe_escape_max_velocity = 2131296257;
 			
-			// aapt resource value: 0x7f0a0002
-			public const int item_touch_helper_swipe_escape_velocity = 2131361794;
+			// aapt resource value: 0x7f090002
+			public const int item_touch_helper_swipe_escape_velocity = 2131296258;
 			
-			// aapt resource value: 0x7f0a0074
-			public const int legend_stroke_width = 2131361908;
+			// aapt resource value: 0x7f090074
+			public const int legend_stroke_width = 2131296372;
 			
-			// aapt resource value: 0x7f0a0003
-			public const int mr_controller_volume_group_list_item_height = 2131361795;
+			// aapt resource value: 0x7f090003
+			public const int mr_controller_volume_group_list_item_height = 2131296259;
 			
-			// aapt resource value: 0x7f0a0004
-			public const int mr_controller_volume_group_list_item_icon_size = 2131361796;
+			// aapt resource value: 0x7f090004
+			public const int mr_controller_volume_group_list_item_icon_size = 2131296260;
 			
-			// aapt resource value: 0x7f0a0005
-			public const int mr_controller_volume_group_list_max_height = 2131361797;
+			// aapt resource value: 0x7f090005
+			public const int mr_controller_volume_group_list_max_height = 2131296261;
 			
-			// aapt resource value: 0x7f0a0008
-			public const int mr_controller_volume_group_list_padding_top = 2131361800;
+			// aapt resource value: 0x7f090008
+			public const int mr_controller_volume_group_list_padding_top = 2131296264;
 			
-			// aapt resource value: 0x7f0a0006
-			public const int mr_dialog_fixed_width_major = 2131361798;
+			// aapt resource value: 0x7f090006
+			public const int mr_dialog_fixed_width_major = 2131296262;
 			
-			// aapt resource value: 0x7f0a0007
-			public const int mr_dialog_fixed_width_minor = 2131361799;
+			// aapt resource value: 0x7f090007
+			public const int mr_dialog_fixed_width_minor = 2131296263;
 			
-			// aapt resource value: 0x7f0a0054
-			public const int notification_large_icon_height = 2131361876;
+			// aapt resource value: 0x7f090054
+			public const int notification_large_icon_height = 2131296340;
 			
-			// aapt resource value: 0x7f0a0055
-			public const int notification_large_icon_width = 2131361877;
+			// aapt resource value: 0x7f090055
+			public const int notification_large_icon_width = 2131296341;
 			
-			// aapt resource value: 0x7f0a0056
-			public const int notification_subtext_size = 2131361878;
-			
-			// aapt resource value: 0x7f0a007d
-			public const int trackball_indicator_radius = 2131361917;
+			// aapt resource value: 0x7f090056
+			public const int notification_subtext_size = 2131296342;
 			
 			static Dimension()
 			{
@@ -12455,821 +10194,698 @@ namespace YallaParkingMobile.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0b0052
-			public const int BetweenTicks = 2131427410;
+			// aapt resource value: 0x7f0a004d
+			public const int Block = 2131361869;
 			
-			// aapt resource value: 0x7f0b004d
-			public const int Block = 2131427405;
+			// aapt resource value: 0x7f0a004e
+			public const int Inline = 2131361870;
 			
-			// aapt resource value: 0x7f0b005f
-			public const int Bottom = 2131427423;
+			// aapt resource value: 0x7f0a004a
+			public const int Month = 2131361866;
 			
-			// aapt resource value: 0x7f0b0058
-			public const int Clip = 2131427416;
+			// aapt resource value: 0x7f0a0047
+			public const int Multiple = 2131361863;
 			
-			// aapt resource value: 0x7f0b0055
-			public const int Cluster = 2131427413;
+			// aapt resource value: 0x7f0a004f
+			public const int None = 2131361871;
 			
-			// aapt resource value: 0x7f0b0061
-			public const int Date = 2131427425;
+			// aapt resource value: 0x7f0a0048
+			public const int Range = 2131361864;
 			
-			// aapt resource value: 0x7f0b0062
-			public const int Day = 2131427426;
+			// aapt resource value: 0x7f0a0049
+			public const int Single = 2131361865;
 			
-			// aapt resource value: 0x7f0b0063
-			public const int DayOfWeek = 2131427427;
+			// aapt resource value: 0x7f0a004b
+			public const int Week = 2131361867;
 			
-			// aapt resource value: 0x7f0b0064
-			public const int DayOfYear = 2131427428;
+			// aapt resource value: 0x7f0a004c
+			public const int Year = 2131361868;
 			
-			// aapt resource value: 0x7f0b0059
-			public const int Hidden = 2131427417;
+			// aapt resource value: 0x7f0a00c9
+			public const int action0 = 2131361993;
 			
-			// aapt resource value: 0x7f0b0065
-			public const int Hour = 2131427429;
+			// aapt resource value: 0x7f0a0071
+			public const int action_bar = 2131361905;
 			
-			// aapt resource value: 0x7f0b004e
-			public const int Inline = 2131427406;
+			// aapt resource value: 0x7f0a0001
+			public const int action_bar_activity_content = 2131361793;
 			
-			// aapt resource value: 0x7f0b005d
-			public const int Left = 2131427421;
+			// aapt resource value: 0x7f0a0070
+			public const int action_bar_container = 2131361904;
 			
-			// aapt resource value: 0x7f0b0066
-			public const int Millisecond = 2131427430;
+			// aapt resource value: 0x7f0a006c
+			public const int action_bar_root = 2131361900;
 			
-			// aapt resource value: 0x7f0b0067
-			public const int Minute = 2131427431;
+			// aapt resource value: 0x7f0a0002
+			public const int action_bar_spinner = 2131361794;
 			
-			// aapt resource value: 0x7f0b004a
-			public const int Month = 2131427402;
+			// aapt resource value: 0x7f0a0053
+			public const int action_bar_subtitle = 2131361875;
 			
-			// aapt resource value: 0x7f0b005b
-			public const int Multiline = 2131427419;
+			// aapt resource value: 0x7f0a0052
+			public const int action_bar_title = 2131361874;
 			
-			// aapt resource value: 0x7f0b0047
-			public const int Multiple = 2131427399;
+			// aapt resource value: 0x7f0a0072
+			public const int action_context_bar = 2131361906;
 			
-			// aapt resource value: 0x7f0b004f
-			public const int None = 2131427407;
+			// aapt resource value: 0x7f0a00cd
+			public const int action_divider = 2131361997;
 			
-			// aapt resource value: 0x7f0b0053
-			public const int OnTicks = 2131427411;
+			// aapt resource value: 0x7f0a0003
+			public const int action_menu_divider = 2131361795;
 			
-			// aapt resource value: 0x7f0b0054
-			public const int OnTicksPadded = 2131427412;
+			// aapt resource value: 0x7f0a0004
+			public const int action_menu_presenter = 2131361796;
 			
-			// aapt resource value: 0x7f0b0068
-			public const int Quarter = 2131427432;
+			// aapt resource value: 0x7f0a006e
+			public const int action_mode_bar = 2131361902;
 			
-			// aapt resource value: 0x7f0b0048
-			public const int Range = 2131427400;
+			// aapt resource value: 0x7f0a006d
+			public const int action_mode_bar_stub = 2131361901;
 			
-			// aapt resource value: 0x7f0b005e
-			public const int Right = 2131427422;
+			// aapt resource value: 0x7f0a0054
+			public const int action_mode_close_button = 2131361876;
 			
-			// aapt resource value: 0x7f0b005c
-			public const int Rotate = 2131427420;
+			// aapt resource value: 0x7f0a0055
+			public const int activity_chooser_view_content = 2131361877;
 			
-			// aapt resource value: 0x7f0b0069
-			public const int Second = 2131427433;
+			// aapt resource value: 0x7f0a0010
+			public const int adjust_height = 2131361808;
 			
-			// aapt resource value: 0x7f0b0049
-			public const int Single = 2131427401;
+			// aapt resource value: 0x7f0a0011
+			public const int adjust_width = 2131361809;
 			
-			// aapt resource value: 0x7f0b0056
-			public const int Stack = 2131427414;
+			// aapt resource value: 0x7f0a0061
+			public const int alertTitle = 2131361889;
 			
-			// aapt resource value: 0x7f0b0057
-			public const int Stack100 = 2131427415;
+			// aapt resource value: 0x7f0a0029
+			public const int always = 2131361833;
 			
-			// aapt resource value: 0x7f0b006a
-			public const int TimeOfDay = 2131427434;
+			// aapt resource value: 0x7f0a0015
+			public const int auto = 2131361813;
 			
-			// aapt resource value: 0x7f0b0060
-			public const int Top = 2131427424;
+			// aapt resource value: 0x7f0a0026
+			public const int beginning = 2131361830;
 			
-			// aapt resource value: 0x7f0b005a
-			public const int Visible = 2131427418;
+			// aapt resource value: 0x7f0a0035
+			public const int bottom = 2131361845;
 			
-			// aapt resource value: 0x7f0b004b
-			public const int Week = 2131427403;
+			// aapt resource value: 0x7f0a005c
+			public const int buttonPanel = 2131361884;
 			
-			// aapt resource value: 0x7f0b004c
-			public const int Year = 2131427404;
+			// aapt resource value: 0x7f0a00ca
+			public const int cancel_action = 2131361994;
 			
-			// aapt resource value: 0x7f0b00ee
-			public const int action0 = 2131427566;
+			// aapt resource value: 0x7f0a0036
+			public const int center = 2131361846;
 			
-			// aapt resource value: 0x7f0b008a
-			public const int action_bar = 2131427466;
+			// aapt resource value: 0x7f0a0037
+			public const int center_horizontal = 2131361847;
 			
-			// aapt resource value: 0x7f0b0001
-			public const int action_bar_activity_content = 2131427329;
+			// aapt resource value: 0x7f0a0038
+			public const int center_vertical = 2131361848;
 			
-			// aapt resource value: 0x7f0b0089
-			public const int action_bar_container = 2131427465;
+			// aapt resource value: 0x7f0a00e6
+			public const int chart_data_point_content_container = 2131362022;
 			
-			// aapt resource value: 0x7f0b0085
-			public const int action_bar_root = 2131427461;
+			// aapt resource value: 0x7f0a009f
+			public const int chart_tooltip_category = 2131361951;
 			
-			// aapt resource value: 0x7f0b0002
-			public const int action_bar_spinner = 2131427330;
+			// aapt resource value: 0x7f0a00e5
+			public const int chart_tooltip_pointer = 2131362021;
 			
-			// aapt resource value: 0x7f0b006c
-			public const int action_bar_subtitle = 2131427436;
+			// aapt resource value: 0x7f0a00a0
+			public const int chart_tooltip_value = 2131361952;
 			
-			// aapt resource value: 0x7f0b006b
-			public const int action_bar_title = 2131427435;
+			// aapt resource value: 0x7f0a006a
+			public const int checkbox = 2131361898;
 			
-			// aapt resource value: 0x7f0b008b
-			public const int action_context_bar = 2131427467;
+			// aapt resource value: 0x7f0a00d0
+			public const int chronometer = 2131362000;
 			
-			// aapt resource value: 0x7f0b00f2
-			public const int action_divider = 2131427570;
+			// aapt resource value: 0x7f0a003e
+			public const int clip_horizontal = 2131361854;
 			
-			// aapt resource value: 0x7f0b0003
-			public const int action_menu_divider = 2131427331;
+			// aapt resource value: 0x7f0a003f
+			public const int clip_vertical = 2131361855;
 			
-			// aapt resource value: 0x7f0b0004
-			public const int action_menu_presenter = 2131427332;
+			// aapt resource value: 0x7f0a002a
+			public const int collapseActionView = 2131361834;
 			
-			// aapt resource value: 0x7f0b0087
-			public const int action_mode_bar = 2131427463;
+			// aapt resource value: 0x7f0a0062
+			public const int contentPanel = 2131361890;
 			
-			// aapt resource value: 0x7f0b0086
-			public const int action_mode_bar_stub = 2131427462;
+			// aapt resource value: 0x7f0a0068
+			public const int custom = 2131361896;
 			
-			// aapt resource value: 0x7f0b006d
-			public const int action_mode_close_button = 2131427437;
+			// aapt resource value: 0x7f0a0067
+			public const int customPanel = 2131361895;
 			
-			// aapt resource value: 0x7f0b006e
-			public const int activity_chooser_view_content = 2131427438;
+			// aapt resource value: 0x7f0a0016
+			public const int dark = 2131361814;
 			
-			// aapt resource value: 0x7f0b0010
-			public const int adjust_height = 2131427344;
+			// aapt resource value: 0x7f0a0082
+			public const int data_form_autocomplete_editor = 2131361922;
 			
-			// aapt resource value: 0x7f0b0011
-			public const int adjust_width = 2131427345;
+			// aapt resource value: 0x7f0a0083
+			public const int data_form_checkbox_editor = 2131361923;
 			
-			// aapt resource value: 0x7f0b007a
-			public const int alertTitle = 2131427450;
+			// aapt resource value: 0x7f0a0084
+			public const int data_form_date_editor = 2131361924;
 			
-			// aapt resource value: 0x7f0b0029
-			public const int always = 2131427369;
+			// aapt resource value: 0x7f0a0085
+			public const int data_form_decimal_editor = 2131361925;
 			
-			// aapt resource value: 0x7f0b00c0
-			public const int areaText = 2131427520;
+			// aapt resource value: 0x7f0a008d
+			public const int data_form_editor_container = 2131361933;
 			
-			// aapt resource value: 0x7f0b0015
-			public const int auto = 2131427349;
+			// aapt resource value: 0x7f0a0088
+			public const int data_form_editor_group_container = 2131361928;
 			
-			// aapt resource value: 0x7f0b0026
-			public const int beginning = 2131427366;
+			// aapt resource value: 0x7f0a008a
+			public const int data_form_editor_image = 2131361930;
 			
-			// aapt resource value: 0x7f0b0035
-			public const int bottom = 2131427381;
+			// aapt resource value: 0x7f0a0090
+			public const int data_form_expandable_group_expand_button = 2131361936;
 			
-			// aapt resource value: 0x7f0b0075
-			public const int buttonPanel = 2131427445;
+			// aapt resource value: 0x7f0a0087
+			public const int data_form_group_header = 2131361927;
 			
-			// aapt resource value: 0x7f0b00ef
-			public const int cancel_action = 2131427567;
+			// aapt resource value: 0x7f0a0086
+			public const int data_form_group_header_container = 2131361926;
 			
-			// aapt resource value: 0x7f0b0036
-			public const int center = 2131427382;
+			// aapt resource value: 0x7f0a008b
+			public const int data_form_header_container = 2131361931;
 			
-			// aapt resource value: 0x7f0b0037
-			public const int center_horizontal = 2131427383;
+			// aapt resource value: 0x7f0a0091
+			public const int data_form_integer_editor = 2131361937;
 			
-			// aapt resource value: 0x7f0b0038
-			public const int center_vertical = 2131427384;
+			// aapt resource value: 0x7f0a0092
+			public const int data_form_list_editor = 2131361938;
 			
-			// aapt resource value: 0x7f0b010f
-			public const int chart_data_point_content_container = 2131427599;
+			// aapt resource value: 0x7f0a0093
+			public const int data_form_number_picker_editor = 2131361939;
 			
-			// aapt resource value: 0x7f0b0101
-			public const int chart_layout_root = 2131427585;
+			// aapt resource value: 0x7f0a0094
+			public const int data_form_rad_autocomplete_editor = 2131361940;
 			
-			// aapt resource value: 0x7f0b00b8
-			public const int chart_tooltip_category = 2131427512;
+			// aapt resource value: 0x7f0a0095
+			public const int data_form_radio_group = 2131361941;
 			
-			// aapt resource value: 0x7f0b010e
-			public const int chart_tooltip_pointer = 2131427598;
+			// aapt resource value: 0x7f0a0096
+			public const int data_form_root_layout = 2131361942;
 			
-			// aapt resource value: 0x7f0b00b9
-			public const int chart_tooltip_value = 2131427513;
+			// aapt resource value: 0x7f0a0097
+			public const int data_form_seekbar_editor = 2131361943;
 			
-			// aapt resource value: 0x7f0b00c1
-			public const int chart_trackball_category = 2131427521;
+			// aapt resource value: 0x7f0a0098
+			public const int data_form_spinner_editor = 2131361944;
 			
-			// aapt resource value: 0x7f0b00c3
-			public const int chart_trackball_value = 2131427523;
+			// aapt resource value: 0x7f0a0099
+			public const int data_form_switch_editor = 2131361945;
 			
-			// aapt resource value: 0x7f0b0083
-			public const int checkbox = 2131427459;
+			// aapt resource value: 0x7f0a009a
+			public const int data_form_text_editor = 2131361946;
 			
-			// aapt resource value: 0x7f0b00f5
-			public const int chronometer = 2131427573;
+			// aapt resource value: 0x7f0a009b
+			public const int data_form_text_viewer = 2131361947;
 			
-			// aapt resource value: 0x7f0b003e
-			public const int clip_horizontal = 2131427390;
+			// aapt resource value: 0x7f0a0089
+			public const int data_form_text_viewer_header = 2131361929;
 			
-			// aapt resource value: 0x7f0b003f
-			public const int clip_vertical = 2131427391;
+			// aapt resource value: 0x7f0a009c
+			public const int data_form_time_editor = 2131361948;
 			
-			// aapt resource value: 0x7f0b00bc
-			public const int closeText = 2131427516;
+			// aapt resource value: 0x7f0a009d
+			public const int data_form_toggle_editor = 2131361949;
 			
-			// aapt resource value: 0x7f0b002a
-			public const int collapseActionView = 2131427370;
+			// aapt resource value: 0x7f0a008e
+			public const int data_form_validation_container = 2131361934;
 			
-			// aapt resource value: 0x7f0b007b
-			public const int contentPanel = 2131427451;
+			// aapt resource value: 0x7f0a008c
+			public const int data_form_validation_icon = 2131361932;
 			
-			// aapt resource value: 0x7f0b0081
-			public const int custom = 2131427457;
+			// aapt resource value: 0x7f0a008f
+			public const int data_form_validation_message_view = 2131361935;
 			
-			// aapt resource value: 0x7f0b0080
-			public const int customPanel = 2131427456;
+			// aapt resource value: 0x7f0a006f
+			public const int decor_content_parent = 2131361903;
 			
-			// aapt resource value: 0x7f0b0016
-			public const int dark = 2131427350;
+			// aapt resource value: 0x7f0a0058
+			public const int default_activity_button = 2131361880;
 			
-			// aapt resource value: 0x7f0b009b
-			public const int data_form_autocomplete_editor = 2131427483;
+			// aapt resource value: 0x7f0a00a2
+			public const int design_bottom_sheet = 2131361954;
 			
-			// aapt resource value: 0x7f0b009c
-			public const int data_form_checkbox_editor = 2131427484;
+			// aapt resource value: 0x7f0a00a9
+			public const int design_menu_item_action_area = 2131361961;
 			
-			// aapt resource value: 0x7f0b009d
-			public const int data_form_date_editor = 2131427485;
+			// aapt resource value: 0x7f0a00a8
+			public const int design_menu_item_action_area_stub = 2131361960;
 			
-			// aapt resource value: 0x7f0b009e
-			public const int data_form_decimal_editor = 2131427486;
+			// aapt resource value: 0x7f0a00a7
+			public const int design_menu_item_text = 2131361959;
 			
-			// aapt resource value: 0x7f0b00a6
-			public const int data_form_editor_container = 2131427494;
+			// aapt resource value: 0x7f0a00a6
+			public const int design_navigation_view = 2131361958;
 			
-			// aapt resource value: 0x7f0b00a1
-			public const int data_form_editor_group_container = 2131427489;
+			// aapt resource value: 0x7f0a001a
+			public const int disableHome = 2131361818;
 			
-			// aapt resource value: 0x7f0b00a3
-			public const int data_form_editor_image = 2131427491;
+			// aapt resource value: 0x7f0a0073
+			public const int edit_query = 2131361907;
 			
-			// aapt resource value: 0x7f0b00a9
-			public const int data_form_expandable_group_expand_button = 2131427497;
+			// aapt resource value: 0x7f0a0027
+			public const int end = 2131361831;
 			
-			// aapt resource value: 0x7f0b00a0
-			public const int data_form_group_header = 2131427488;
+			// aapt resource value: 0x7f0a00d5
+			public const int end_padder = 2131362005;
 			
-			// aapt resource value: 0x7f0b009f
-			public const int data_form_group_header_container = 2131427487;
+			// aapt resource value: 0x7f0a002e
+			public const int enterAlways = 2131361838;
 			
-			// aapt resource value: 0x7f0b00a4
-			public const int data_form_header_container = 2131427492;
+			// aapt resource value: 0x7f0a002f
+			public const int enterAlwaysCollapsed = 2131361839;
 			
-			// aapt resource value: 0x7f0b00aa
-			public const int data_form_integer_editor = 2131427498;
+			// aapt resource value: 0x7f0a0081
+			public const int event_details = 2131361921;
 			
-			// aapt resource value: 0x7f0b00ab
-			public const int data_form_list_editor = 2131427499;
+			// aapt resource value: 0x7f0a0080
+			public const int event_title = 2131361920;
 			
-			// aapt resource value: 0x7f0b00ac
-			public const int data_form_number_picker_editor = 2131427500;
+			// aapt resource value: 0x7f0a0030
+			public const int exitUntilCollapsed = 2131361840;
 			
-			// aapt resource value: 0x7f0b00ad
-			public const int data_form_rad_autocomplete_editor = 2131427501;
+			// aapt resource value: 0x7f0a0056
+			public const int expand_activities_button = 2131361878;
 			
-			// aapt resource value: 0x7f0b00ae
-			public const int data_form_radio_group = 2131427502;
+			// aapt resource value: 0x7f0a0069
+			public const int expanded_menu = 2131361897;
 			
-			// aapt resource value: 0x7f0b00af
-			public const int data_form_root_layout = 2131427503;
+			// aapt resource value: 0x7f0a0040
+			public const int fill = 2131361856;
 			
-			// aapt resource value: 0x7f0b00b0
-			public const int data_form_seekbar_editor = 2131427504;
+			// aapt resource value: 0x7f0a0041
+			public const int fill_horizontal = 2131361857;
 			
-			// aapt resource value: 0x7f0b00b1
-			public const int data_form_spinner_editor = 2131427505;
+			// aapt resource value: 0x7f0a0039
+			public const int fill_vertical = 2131361849;
 			
-			// aapt resource value: 0x7f0b00b2
-			public const int data_form_switch_editor = 2131427506;
+			// aapt resource value: 0x7f0a0043
+			public const int @fixed = 2131361859;
 			
-			// aapt resource value: 0x7f0b00b3
-			public const int data_form_text_editor = 2131427507;
+			// aapt resource value: 0x7f0a00dc
+			public const int groupHeaderCollapseImage = 2131362012;
 			
-			// aapt resource value: 0x7f0b00b4
-			public const int data_form_text_viewer = 2131427508;
+			// aapt resource value: 0x7f0a00dd
+			public const int groupHeaderText = 2131362013;
 			
-			// aapt resource value: 0x7f0b00a2
-			public const int data_form_text_viewer_header = 2131427490;
+			// aapt resource value: 0x7f0a0005
+			public const int home = 2131361797;
 			
-			// aapt resource value: 0x7f0b00b5
-			public const int data_form_time_editor = 2131427509;
+			// aapt resource value: 0x7f0a001b
+			public const int homeAsUp = 2131361819;
 			
-			// aapt resource value: 0x7f0b00b6
-			public const int data_form_toggle_editor = 2131427510;
+			// aapt resource value: 0x7f0a0045
+			public const int horizontal = 2131361861;
 			
-			// aapt resource value: 0x7f0b00a7
-			public const int data_form_validation_container = 2131427495;
+			// aapt resource value: 0x7f0a000b
+			public const int hybrid = 2131361803;
 			
-			// aapt resource value: 0x7f0b00a5
-			public const int data_form_validation_icon = 2131427493;
+			// aapt resource value: 0x7f0a005a
+			public const int icon = 2131361882;
 			
-			// aapt resource value: 0x7f0b00a8
-			public const int data_form_validation_message_view = 2131427496;
+			// aapt resource value: 0x7f0a0012
+			public const int icon_only = 2131361810;
 			
-			// aapt resource value: 0x7f0b0088
-			public const int decor_content_parent = 2131427464;
+			// aapt resource value: 0x7f0a002b
+			public const int ifRoom = 2131361835;
 			
-			// aapt resource value: 0x7f0b0071
-			public const int default_activity_button = 2131427441;
+			// aapt resource value: 0x7f0a0057
+			public const int image = 2131361879;
 			
-			// aapt resource value: 0x7f0b00c5
-			public const int design_bottom_sheet = 2131427525;
+			// aapt resource value: 0x7f0a00aa
+			public const int imageView = 2131361962;
 			
-			// aapt resource value: 0x7f0b00cc
-			public const int design_menu_item_action_area = 2131427532;
+			// aapt resource value: 0x7f0a00d4
+			public const int info = 2131362004;
 			
-			// aapt resource value: 0x7f0b00cb
-			public const int design_menu_item_action_area_stub = 2131427531;
+			// aapt resource value: 0x7f0a00ac
+			public const int inline_event_end = 2131361964;
 			
-			// aapt resource value: 0x7f0b00ca
-			public const int design_menu_item_text = 2131427530;
+			// aapt resource value: 0x7f0a00ab
+			public const int inline_event_start = 2131361963;
 			
-			// aapt resource value: 0x7f0b00c9
-			public const int design_navigation_view = 2131427529;
+			// aapt resource value: 0x7f0a00ad
+			public const int inline_event_title = 2131361965;
 			
-			// aapt resource value: 0x7f0b001a
-			public const int disableHome = 2131427354;
+			// aapt resource value: 0x7f0a0000
+			public const int item_touch_helper_previous_elevation = 2131361792;
 			
-			// aapt resource value: 0x7f0b008c
-			public const int edit_query = 2131427468;
+			// aapt resource value: 0x7f0a003a
+			public const int left = 2131361850;
 			
-			// aapt resource value: 0x7f0b0102
-			public const int emptyContent = 2131427586;
+			// aapt resource value: 0x7f0a0017
+			public const int light = 2131361815;
 			
-			// aapt resource value: 0x7f0b0027
-			public const int end = 2131427367;
+			// aapt resource value: 0x7f0a00ce
+			public const int line1 = 2131361998;
 			
-			// aapt resource value: 0x7f0b00fa
-			public const int end_padder = 2131427578;
+			// aapt resource value: 0x7f0a00d2
+			public const int line3 = 2131362002;
 			
-			// aapt resource value: 0x7f0b002e
-			public const int enterAlways = 2131427374;
+			// aapt resource value: 0x7f0a0018
+			public const int listMode = 2131361816;
 			
-			// aapt resource value: 0x7f0b002f
-			public const int enterAlwaysCollapsed = 2131427375;
+			// aapt resource value: 0x7f0a0059
+			public const int list_item = 2131361881;
 			
-			// aapt resource value: 0x7f0b009a
-			public const int event_details = 2131427482;
+			// aapt resource value: 0x7f0a00cc
+			public const int media_actions = 2131361996;
 			
-			// aapt resource value: 0x7f0b0099
-			public const int event_title = 2131427481;
+			// aapt resource value: 0x7f0a0028
+			public const int middle = 2131361832;
 			
-			// aapt resource value: 0x7f0b0030
-			public const int exitUntilCollapsed = 2131427376;
+			// aapt resource value: 0x7f0a0042
+			public const int mini = 2131361858;
 			
-			// aapt resource value: 0x7f0b006f
-			public const int expand_activities_button = 2131427439;
+			// aapt resource value: 0x7f0a00b9
+			public const int mr_art = 2131361977;
 			
-			// aapt resource value: 0x7f0b0082
-			public const int expanded_menu = 2131427458;
+			// aapt resource value: 0x7f0a00ae
+			public const int mr_chooser_list = 2131361966;
 			
-			// aapt resource value: 0x7f0b0040
-			public const int fill = 2131427392;
+			// aapt resource value: 0x7f0a00b1
+			public const int mr_chooser_route_desc = 2131361969;
 			
-			// aapt resource value: 0x7f0b0041
-			public const int fill_horizontal = 2131427393;
+			// aapt resource value: 0x7f0a00af
+			public const int mr_chooser_route_icon = 2131361967;
 			
-			// aapt resource value: 0x7f0b0039
-			public const int fill_vertical = 2131427385;
+			// aapt resource value: 0x7f0a00b0
+			public const int mr_chooser_route_name = 2131361968;
 			
-			// aapt resource value: 0x7f0b0043
-			public const int @fixed = 2131427395;
+			// aapt resource value: 0x7f0a00b6
+			public const int mr_close = 2131361974;
 			
-			// aapt resource value: 0x7f0b0105
-			public const int groupHeaderCollapseImage = 2131427589;
+			// aapt resource value: 0x7f0a00bc
+			public const int mr_control_divider = 2131361980;
 			
-			// aapt resource value: 0x7f0b0106
-			public const int groupHeaderText = 2131427590;
+			// aapt resource value: 0x7f0a00c2
+			public const int mr_control_play_pause = 2131361986;
 			
-			// aapt resource value: 0x7f0b00ba
-			public const int highText = 2131427514;
+			// aapt resource value: 0x7f0a00c5
+			public const int mr_control_subtitle = 2131361989;
 			
-			// aapt resource value: 0x7f0b0005
-			public const int home = 2131427333;
+			// aapt resource value: 0x7f0a00c4
+			public const int mr_control_title = 2131361988;
 			
-			// aapt resource value: 0x7f0b001b
-			public const int homeAsUp = 2131427355;
+			// aapt resource value: 0x7f0a00c3
+			public const int mr_control_title_container = 2131361987;
 			
-			// aapt resource value: 0x7f0b0045
-			public const int horizontal = 2131427397;
+			// aapt resource value: 0x7f0a00b7
+			public const int mr_custom_control = 2131361975;
 			
-			// aapt resource value: 0x7f0b000b
-			public const int hybrid = 2131427339;
+			// aapt resource value: 0x7f0a00b8
+			public const int mr_default_control = 2131361976;
 			
-			// aapt resource value: 0x7f0b0073
-			public const int icon = 2131427443;
+			// aapt resource value: 0x7f0a00b3
+			public const int mr_dialog_area = 2131361971;
 			
-			// aapt resource value: 0x7f0b0012
-			public const int icon_only = 2131427346;
+			// aapt resource value: 0x7f0a00b2
+			public const int mr_expandable_area = 2131361970;
 			
-			// aapt resource value: 0x7f0b002b
-			public const int ifRoom = 2131427371;
+			// aapt resource value: 0x7f0a00c6
+			public const int mr_group_expand_collapse = 2131361990;
 			
-			// aapt resource value: 0x7f0b0070
-			public const int image = 2131427440;
+			// aapt resource value: 0x7f0a00ba
+			public const int mr_media_main_control = 2131361978;
 			
-			// aapt resource value: 0x7f0b00cd
-			public const int imageView = 2131427533;
+			// aapt resource value: 0x7f0a00b5
+			public const int mr_name = 2131361973;
 			
-			// aapt resource value: 0x7f0b00f9
-			public const int info = 2131427577;
+			// aapt resource value: 0x7f0a00bb
+			public const int mr_playback_control = 2131361979;
 			
-			// aapt resource value: 0x7f0b00cf
-			public const int inline_event_end = 2131427535;
+			// aapt resource value: 0x7f0a00b4
+			public const int mr_title_bar = 2131361972;
 			
-			// aapt resource value: 0x7f0b00ce
-			public const int inline_event_start = 2131427534;
+			// aapt resource value: 0x7f0a00bd
+			public const int mr_volume_control = 2131361981;
 			
-			// aapt resource value: 0x7f0b00d0
-			public const int inline_event_title = 2131427536;
+			// aapt resource value: 0x7f0a00be
+			public const int mr_volume_group_list = 2131361982;
 			
-			// aapt resource value: 0x7f0b0000
-			public const int item_touch_helper_previous_elevation = 2131427328;
+			// aapt resource value: 0x7f0a00c0
+			public const int mr_volume_item_icon = 2131361984;
 			
-			// aapt resource value: 0x7f0b003a
-			public const int left = 2131427386;
+			// aapt resource value: 0x7f0a00c1
+			public const int mr_volume_slider = 2131361985;
 			
-			// aapt resource value: 0x7f0b00d1
-			public const int legendItemIconView = 2131427537;
+			// aapt resource value: 0x7f0a0021
+			public const int multiply = 2131361825;
 			
-			// aapt resource value: 0x7f0b00d2
-			public const int legendItemTitleView = 2131427538;
+			// aapt resource value: 0x7f0a00c7
+			public const int navItemsLayout = 2131361991;
 			
-			// aapt resource value: 0x7f0b0104
-			public const int legendRecyclerView = 2131427588;
+			// aapt resource value: 0x7f0a00c8
+			public const int navigationItemText = 2131361992;
 			
-			// aapt resource value: 0x7f0b0017
-			public const int light = 2131427351;
+			// aapt resource value: 0x7f0a00a5
+			public const int navigation_header_container = 2131361957;
 			
-			// aapt resource value: 0x7f0b00f3
-			public const int line1 = 2131427571;
+			// aapt resource value: 0x7f0a002c
+			public const int never = 2131361836;
 			
-			// aapt resource value: 0x7f0b00f7
-			public const int line3 = 2131427575;
+			// aapt resource value: 0x7f0a000c
+			public const int none = 2131361804;
 			
-			// aapt resource value: 0x7f0b0018
-			public const int listMode = 2131427352;
+			// aapt resource value: 0x7f0a000d
+			public const int normal = 2131361805;
 			
-			// aapt resource value: 0x7f0b0072
-			public const int list_item = 2131427442;
+			// aapt resource value: 0x7f0a00d7
+			public const int number_picker_minus = 2131362007;
 			
-			// aapt resource value: 0x7f0b00bd
-			public const int lowText = 2131427517;
+			// aapt resource value: 0x7f0a00d9
+			public const int number_picker_plus = 2131362009;
 			
-			// aapt resource value: 0x7f0b00f1
-			public const int media_actions = 2131427569;
+			// aapt resource value: 0x7f0a00d6
+			public const int number_picker_root = 2131362006;
 			
-			// aapt resource value: 0x7f0b0028
-			public const int middle = 2131427368;
+			// aapt resource value: 0x7f0a00d8
+			public const int number_picker_view = 2131362008;
 			
-			// aapt resource value: 0x7f0b0042
-			public const int mini = 2131427394;
+			// aapt resource value: 0x7f0a0033
+			public const int parallax = 2131361843;
 			
-			// aapt resource value: 0x7f0b00de
-			public const int mr_art = 2131427550;
+			// aapt resource value: 0x7f0a005e
+			public const int parentPanel = 2131361886;
 			
-			// aapt resource value: 0x7f0b00d3
-			public const int mr_chooser_list = 2131427539;
+			// aapt resource value: 0x7f0a0034
+			public const int pin = 2131361844;
 			
-			// aapt resource value: 0x7f0b00d6
-			public const int mr_chooser_route_desc = 2131427542;
+			// aapt resource value: 0x7f0a00da
+			public const int popup_event_time = 2131362010;
 			
-			// aapt resource value: 0x7f0b00d4
-			public const int mr_chooser_route_icon = 2131427540;
+			// aapt resource value: 0x7f0a00db
+			public const int popup_event_title = 2131362011;
 			
-			// aapt resource value: 0x7f0b00d5
-			public const int mr_chooser_route_name = 2131427541;
+			// aapt resource value: 0x7f0a0006
+			public const int progress_circular = 2131361798;
 			
-			// aapt resource value: 0x7f0b00db
-			public const int mr_close = 2131427547;
+			// aapt resource value: 0x7f0a0007
+			public const int progress_horizontal = 2131361799;
 			
-			// aapt resource value: 0x7f0b00e1
-			public const int mr_control_divider = 2131427553;
+			// aapt resource value: 0x7f0a0050
+			public const int radio = 2131361872;
 			
-			// aapt resource value: 0x7f0b00e7
-			public const int mr_control_play_pause = 2131427559;
+			// aapt resource value: 0x7f0a003b
+			public const int right = 2131361851;
 			
-			// aapt resource value: 0x7f0b00ea
-			public const int mr_control_subtitle = 2131427562;
+			// aapt resource value: 0x7f0a000e
+			public const int satellite = 2131361806;
 			
-			// aapt resource value: 0x7f0b00e9
-			public const int mr_control_title = 2131427561;
+			// aapt resource value: 0x7f0a0022
+			public const int screen = 2131361826;
 			
-			// aapt resource value: 0x7f0b00e8
-			public const int mr_control_title_container = 2131427560;
+			// aapt resource value: 0x7f0a0031
+			public const int scroll = 2131361841;
 			
-			// aapt resource value: 0x7f0b00dc
-			public const int mr_custom_control = 2131427548;
+			// aapt resource value: 0x7f0a0066
+			public const int scrollIndicatorDown = 2131361894;
 			
-			// aapt resource value: 0x7f0b00dd
-			public const int mr_default_control = 2131427549;
+			// aapt resource value: 0x7f0a0063
+			public const int scrollIndicatorUp = 2131361891;
 			
-			// aapt resource value: 0x7f0b00d8
-			public const int mr_dialog_area = 2131427544;
+			// aapt resource value: 0x7f0a0064
+			public const int scrollView = 2131361892;
 			
-			// aapt resource value: 0x7f0b00d7
-			public const int mr_expandable_area = 2131427543;
+			// aapt resource value: 0x7f0a0044
+			public const int scrollable = 2131361860;
 			
-			// aapt resource value: 0x7f0b00eb
-			public const int mr_group_expand_collapse = 2131427563;
+			// aapt resource value: 0x7f0a0075
+			public const int search_badge = 2131361909;
 			
-			// aapt resource value: 0x7f0b00df
-			public const int mr_media_main_control = 2131427551;
+			// aapt resource value: 0x7f0a0074
+			public const int search_bar = 2131361908;
 			
-			// aapt resource value: 0x7f0b00da
-			public const int mr_name = 2131427546;
+			// aapt resource value: 0x7f0a0076
+			public const int search_button = 2131361910;
 			
-			// aapt resource value: 0x7f0b00e0
-			public const int mr_playback_control = 2131427552;
+			// aapt resource value: 0x7f0a007b
+			public const int search_close_btn = 2131361915;
 			
-			// aapt resource value: 0x7f0b00d9
-			public const int mr_title_bar = 2131427545;
+			// aapt resource value: 0x7f0a0077
+			public const int search_edit_frame = 2131361911;
 			
-			// aapt resource value: 0x7f0b00e2
-			public const int mr_volume_control = 2131427554;
+			// aapt resource value: 0x7f0a007d
+			public const int search_go_btn = 2131361917;
 			
-			// aapt resource value: 0x7f0b00e3
-			public const int mr_volume_group_list = 2131427555;
+			// aapt resource value: 0x7f0a0078
+			public const int search_mag_icon = 2131361912;
 			
-			// aapt resource value: 0x7f0b00e5
-			public const int mr_volume_item_icon = 2131427557;
+			// aapt resource value: 0x7f0a0079
+			public const int search_plate = 2131361913;
 			
-			// aapt resource value: 0x7f0b00e6
-			public const int mr_volume_slider = 2131427558;
+			// aapt resource value: 0x7f0a007a
+			public const int search_src_text = 2131361914;
 			
-			// aapt resource value: 0x7f0b0021
-			public const int multiply = 2131427361;
+			// aapt resource value: 0x7f0a007e
+			public const int search_voice_btn = 2131361918;
 			
-			// aapt resource value: 0x7f0b00ec
-			public const int navItemsLayout = 2131427564;
+			// aapt resource value: 0x7f0a0051
+			public const int segmented = 2131361873;
 			
-			// aapt resource value: 0x7f0b00ed
-			public const int navigationItemText = 2131427565;
+			// aapt resource value: 0x7f0a007f
+			public const int select_dialog_listview = 2131361919;
 			
-			// aapt resource value: 0x7f0b00c8
-			public const int navigation_header_container = 2131427528;
+			// aapt resource value: 0x7f0a006b
+			public const int shortcut = 2131361899;
 			
-			// aapt resource value: 0x7f0b002c
-			public const int never = 2131427372;
+			// aapt resource value: 0x7f0a001c
+			public const int showCustom = 2131361820;
 			
-			// aapt resource value: 0x7f0b000c
-			public const int none = 2131427340;
+			// aapt resource value: 0x7f0a001d
+			public const int showHome = 2131361821;
 			
-			// aapt resource value: 0x7f0b000d
-			public const int normal = 2131427341;
+			// aapt resource value: 0x7f0a001e
+			public const int showTitle = 2131361822;
 			
-			// aapt resource value: 0x7f0b00fc
-			public const int number_picker_minus = 2131427580;
+			// aapt resource value: 0x7f0a00e3
+			public const int sliding_tabs = 2131362019;
 			
-			// aapt resource value: 0x7f0b00fe
-			public const int number_picker_plus = 2131427582;
+			// aapt resource value: 0x7f0a00a4
+			public const int snackbar_action = 2131361956;
 			
-			// aapt resource value: 0x7f0b00fb
-			public const int number_picker_root = 2131427579;
+			// aapt resource value: 0x7f0a00a3
+			public const int snackbar_text = 2131361955;
 			
-			// aapt resource value: 0x7f0b00fd
-			public const int number_picker_view = 2131427581;
+			// aapt resource value: 0x7f0a0032
+			public const int snap = 2131361842;
 			
-			// aapt resource value: 0x7f0b00bb
-			public const int openText = 2131427515;
+			// aapt resource value: 0x7f0a005d
+			public const int spacer = 2131361885;
 			
-			// aapt resource value: 0x7f0b0033
-			public const int parallax = 2131427379;
+			// aapt resource value: 0x7f0a0008
+			public const int split_action_bar = 2131361800;
 			
-			// aapt resource value: 0x7f0b0077
-			public const int parentPanel = 2131427447;
+			// aapt resource value: 0x7f0a0023
+			public const int src_atop = 2131361827;
 			
-			// aapt resource value: 0x7f0b0034
-			public const int pin = 2131427380;
+			// aapt resource value: 0x7f0a0024
+			public const int src_in = 2131361828;
 			
-			// aapt resource value: 0x7f0b00ff
-			public const int popup_event_time = 2131427583;
+			// aapt resource value: 0x7f0a0025
+			public const int src_over = 2131361829;
 			
-			// aapt resource value: 0x7f0b0100
-			public const int popup_event_title = 2131427584;
+			// aapt resource value: 0x7f0a0013
+			public const int standard = 2131361811;
 			
-			// aapt resource value: 0x7f0b0006
-			public const int progress_circular = 2131427334;
+			// aapt resource value: 0x7f0a003c
+			public const int start = 2131361852;
 			
-			// aapt resource value: 0x7f0b0007
-			public const int progress_horizontal = 2131427335;
+			// aapt resource value: 0x7f0a00cb
+			public const int status_bar_latest_event_content = 2131361995;
 			
-			// aapt resource value: 0x7f0b0050
-			public const int radio = 2131427408;
+			// aapt resource value: 0x7f0a007c
+			public const int submit_area = 2131361916;
 			
-			// aapt resource value: 0x7f0b0103
-			public const int renderSurface = 2131427587;
+			// aapt resource value: 0x7f0a00df
+			public const int suggestion_img = 2131362015;
 			
-			// aapt resource value: 0x7f0b003b
-			public const int right = 2131427387;
+			// aapt resource value: 0x7f0a00e0
+			public const int suggestion_text = 2131362016;
 			
-			// aapt resource value: 0x7f0b000e
-			public const int satellite = 2131427342;
+			// aapt resource value: 0x7f0a00e2
+			public const int tabItemImageView = 2131362018;
 			
-			// aapt resource value: 0x7f0b0022
-			public const int screen = 2131427362;
+			// aapt resource value: 0x7f0a00e1
+			public const int tabItemTextView = 2131362017;
 			
-			// aapt resource value: 0x7f0b0031
-			public const int scroll = 2131427377;
+			// aapt resource value: 0x7f0a0019
+			public const int tabMode = 2131361817;
 			
-			// aapt resource value: 0x7f0b007f
-			public const int scrollIndicatorDown = 2131427455;
+			// aapt resource value: 0x7f0a000f
+			public const int terrain = 2131361807;
 			
-			// aapt resource value: 0x7f0b007c
-			public const int scrollIndicatorUp = 2131427452;
+			// aapt resource value: 0x7f0a00d3
+			public const int text = 2131362003;
 			
-			// aapt resource value: 0x7f0b007d
-			public const int scrollView = 2131427453;
+			// aapt resource value: 0x7f0a00de
+			public const int text1 = 2131362014;
 			
-			// aapt resource value: 0x7f0b0044
-			public const int scrollable = 2131427396;
+			// aapt resource value: 0x7f0a00d1
+			public const int text2 = 2131362001;
 			
-			// aapt resource value: 0x7f0b008e
-			public const int search_badge = 2131427470;
+			// aapt resource value: 0x7f0a0065
+			public const int textSpacerNoButtons = 2131361893;
 			
-			// aapt resource value: 0x7f0b008d
-			public const int search_bar = 2131427469;
+			// aapt resource value: 0x7f0a00cf
+			public const int time = 2131361999;
 			
-			// aapt resource value: 0x7f0b008f
-			public const int search_button = 2131427471;
+			// aapt resource value: 0x7f0a005b
+			public const int title = 2131361883;
 			
-			// aapt resource value: 0x7f0b0094
-			public const int search_close_btn = 2131427476;
+			// aapt resource value: 0x7f0a0060
+			public const int title_template = 2131361888;
 			
-			// aapt resource value: 0x7f0b0090
-			public const int search_edit_frame = 2131427472;
+			// aapt resource value: 0x7f0a00e4
+			public const int toolbar = 2131362020;
 			
-			// aapt resource value: 0x7f0b0096
-			public const int search_go_btn = 2131427478;
+			// aapt resource value: 0x7f0a009e
+			public const int tooltip_content_container = 2131361950;
 			
-			// aapt resource value: 0x7f0b0091
-			public const int search_mag_icon = 2131427473;
+			// aapt resource value: 0x7f0a003d
+			public const int top = 2131361853;
 			
-			// aapt resource value: 0x7f0b0092
-			public const int search_plate = 2131427474;
+			// aapt resource value: 0x7f0a005f
+			public const int topPanel = 2131361887;
 			
-			// aapt resource value: 0x7f0b0093
-			public const int search_src_text = 2131427475;
+			// aapt resource value: 0x7f0a00a1
+			public const int touch_outside = 2131361953;
 			
-			// aapt resource value: 0x7f0b0097
-			public const int search_voice_btn = 2131427479;
+			// aapt resource value: 0x7f0a0009
+			public const int up = 2131361801;
 			
-			// aapt resource value: 0x7f0b0051
-			public const int segmented = 2131427409;
+			// aapt resource value: 0x7f0a001f
+			public const int useLogo = 2131361823;
 			
-			// aapt resource value: 0x7f0b0098
-			public const int select_dialog_listview = 2131427480;
+			// aapt resource value: 0x7f0a0046
+			public const int vertical = 2131361862;
 			
-			// aapt resource value: 0x7f0b0084
-			public const int shortcut = 2131427460;
+			// aapt resource value: 0x7f0a000a
+			public const int view_offset_helper = 2131361802;
 			
-			// aapt resource value: 0x7f0b001c
-			public const int showCustom = 2131427356;
+			// aapt resource value: 0x7f0a00bf
+			public const int volume_item_container = 2131361983;
 			
-			// aapt resource value: 0x7f0b001d
-			public const int showHome = 2131427357;
+			// aapt resource value: 0x7f0a0014
+			public const int wide = 2131361812;
 			
-			// aapt resource value: 0x7f0b001e
-			public const int showTitle = 2131427358;
+			// aapt resource value: 0x7f0a002d
+			public const int withText = 2131361837;
 			
-			// aapt resource value: 0x7f0b010c
-			public const int sliding_tabs = 2131427596;
-			
-			// aapt resource value: 0x7f0b00c7
-			public const int snackbar_action = 2131427527;
-			
-			// aapt resource value: 0x7f0b00c6
-			public const int snackbar_text = 2131427526;
-			
-			// aapt resource value: 0x7f0b0032
-			public const int snap = 2131427378;
-			
-			// aapt resource value: 0x7f0b0076
-			public const int spacer = 2131427446;
-			
-			// aapt resource value: 0x7f0b0008
-			public const int split_action_bar = 2131427336;
-			
-			// aapt resource value: 0x7f0b0023
-			public const int src_atop = 2131427363;
-			
-			// aapt resource value: 0x7f0b0024
-			public const int src_in = 2131427364;
-			
-			// aapt resource value: 0x7f0b0025
-			public const int src_over = 2131427365;
-			
-			// aapt resource value: 0x7f0b0013
-			public const int standard = 2131427347;
-			
-			// aapt resource value: 0x7f0b003c
-			public const int start = 2131427388;
-			
-			// aapt resource value: 0x7f0b00f0
-			public const int status_bar_latest_event_content = 2131427568;
-			
-			// aapt resource value: 0x7f0b0095
-			public const int submit_area = 2131427477;
-			
-			// aapt resource value: 0x7f0b0108
-			public const int suggestion_img = 2131427592;
-			
-			// aapt resource value: 0x7f0b0109
-			public const int suggestion_text = 2131427593;
-			
-			// aapt resource value: 0x7f0b010b
-			public const int tabItemImageView = 2131427595;
-			
-			// aapt resource value: 0x7f0b010a
-			public const int tabItemTextView = 2131427594;
-			
-			// aapt resource value: 0x7f0b0019
-			public const int tabMode = 2131427353;
-			
-			// aapt resource value: 0x7f0b000f
-			public const int terrain = 2131427343;
-			
-			// aapt resource value: 0x7f0b00f8
-			public const int text = 2131427576;
-			
-			// aapt resource value: 0x7f0b0107
-			public const int text1 = 2131427591;
-			
-			// aapt resource value: 0x7f0b00f6
-			public const int text2 = 2131427574;
-			
-			// aapt resource value: 0x7f0b007e
-			public const int textSpacerNoButtons = 2131427454;
-			
-			// aapt resource value: 0x7f0b00f4
-			public const int time = 2131427572;
-			
-			// aapt resource value: 0x7f0b0074
-			public const int title = 2131427444;
-			
-			// aapt resource value: 0x7f0b0079
-			public const int title_template = 2131427449;
-			
-			// aapt resource value: 0x7f0b010d
-			public const int toolbar = 2131427597;
-			
-			// aapt resource value: 0x7f0b00b7
-			public const int tooltip_content_container = 2131427511;
-			
-			// aapt resource value: 0x7f0b003d
-			public const int top = 2131427389;
-			
-			// aapt resource value: 0x7f0b0078
-			public const int topPanel = 2131427448;
-			
-			// aapt resource value: 0x7f0b00c4
-			public const int touch_outside = 2131427524;
-			
-			// aapt resource value: 0x7f0b00c2
-			public const int trackball_points_list = 2131427522;
-			
-			// aapt resource value: 0x7f0b0009
-			public const int up = 2131427337;
-			
-			// aapt resource value: 0x7f0b001f
-			public const int useLogo = 2131427359;
-			
-			// aapt resource value: 0x7f0b0046
-			public const int vertical = 2131427398;
-			
-			// aapt resource value: 0x7f0b000a
-			public const int view_offset_helper = 2131427338;
-			
-			// aapt resource value: 0x7f0b00e4
-			public const int volume_item_container = 2131427556;
-			
-			// aapt resource value: 0x7f0b0014
-			public const int wide = 2131427348;
-			
-			// aapt resource value: 0x7f0b002d
-			public const int withText = 2131427373;
-			
-			// aapt resource value: 0x7f0b0020
-			public const int wrap_content = 2131427360;
-			
-			// aapt resource value: 0x7f0b00be
-			public const int xText = 2131427518;
-			
-			// aapt resource value: 0x7f0b00bf
-			public const int yText = 2131427519;
+			// aapt resource value: 0x7f0a0020
+			public const int wrap_content = 2131361824;
 			
 			static Id()
 			{
@@ -13284,38 +10900,38 @@ namespace YallaParkingMobile.Droid
 		public partial class Integer
 		{
 			
-			// aapt resource value: 0x7f080005
-			public const int abc_config_activityDefaultDur = 2131230725;
+			// aapt resource value: 0x7f070005
+			public const int abc_config_activityDefaultDur = 2131165189;
 			
-			// aapt resource value: 0x7f080006
-			public const int abc_config_activityShortDur = 2131230726;
+			// aapt resource value: 0x7f070006
+			public const int abc_config_activityShortDur = 2131165190;
 			
-			// aapt resource value: 0x7f080004
-			public const int abc_max_action_buttons = 2131230724;
+			// aapt resource value: 0x7f070004
+			public const int abc_max_action_buttons = 2131165188;
 			
-			// aapt resource value: 0x7f08000a
-			public const int bottom_sheet_slide_duration = 2131230730;
+			// aapt resource value: 0x7f07000a
+			public const int bottom_sheet_slide_duration = 2131165194;
 			
-			// aapt resource value: 0x7f080007
-			public const int cancel_button_image_alpha = 2131230727;
+			// aapt resource value: 0x7f070007
+			public const int cancel_button_image_alpha = 2131165191;
 			
-			// aapt resource value: 0x7f080009
-			public const int design_snackbar_text_max_lines = 2131230729;
+			// aapt resource value: 0x7f070009
+			public const int design_snackbar_text_max_lines = 2131165193;
 			
-			// aapt resource value: 0x7f080000
-			public const int google_play_services_version = 2131230720;
+			// aapt resource value: 0x7f070000
+			public const int google_play_services_version = 2131165184;
 			
-			// aapt resource value: 0x7f080001
-			public const int mr_controller_volume_group_list_animation_duration_ms = 2131230721;
+			// aapt resource value: 0x7f070001
+			public const int mr_controller_volume_group_list_animation_duration_ms = 2131165185;
 			
-			// aapt resource value: 0x7f080002
-			public const int mr_controller_volume_group_list_fade_in_duration_ms = 2131230722;
+			// aapt resource value: 0x7f070002
+			public const int mr_controller_volume_group_list_fade_in_duration_ms = 2131165186;
 			
-			// aapt resource value: 0x7f080003
-			public const int mr_controller_volume_group_list_fade_out_duration_ms = 2131230723;
+			// aapt resource value: 0x7f070003
+			public const int mr_controller_volume_group_list_fade_out_duration_ms = 2131165187;
 			
-			// aapt resource value: 0x7f080008
-			public const int status_bar_notification_info_maxnum = 2131230728;
+			// aapt resource value: 0x7f070008
+			public const int status_bar_notification_info_maxnum = 2131165192;
 			
 			static Integer()
 			{
@@ -13521,184 +11137,151 @@ namespace YallaParkingMobile.Droid
 			public const int default_tooltip_content = 2130903096;
 			
 			// aapt resource value: 0x7f030039
-			public const int default_tooltip_ohlc_content = 2130903097;
+			public const int design_bottom_sheet_dialog = 2130903097;
 			
 			// aapt resource value: 0x7f03003a
-			public const int default_tooltip_scatter_bubble_content = 2130903098;
+			public const int design_layout_snackbar = 2130903098;
 			
 			// aapt resource value: 0x7f03003b
-			public const int default_tooltip_scatter_content = 2130903099;
+			public const int design_layout_snackbar_include = 2130903099;
 			
 			// aapt resource value: 0x7f03003c
-			public const int default_trackball_content = 2130903100;
+			public const int design_layout_tab_icon = 2130903100;
 			
 			// aapt resource value: 0x7f03003d
-			public const int default_trackball_item_content = 2130903101;
+			public const int design_layout_tab_text = 2130903101;
 			
 			// aapt resource value: 0x7f03003e
-			public const int design_bottom_sheet_dialog = 2130903102;
+			public const int design_menu_item_action_area = 2130903102;
 			
 			// aapt resource value: 0x7f03003f
-			public const int design_layout_snackbar = 2130903103;
+			public const int design_navigation_item = 2130903103;
 			
 			// aapt resource value: 0x7f030040
-			public const int design_layout_snackbar_include = 2130903104;
+			public const int design_navigation_item_header = 2130903104;
 			
 			// aapt resource value: 0x7f030041
-			public const int design_layout_tab_icon = 2130903105;
+			public const int design_navigation_item_separator = 2130903105;
 			
 			// aapt resource value: 0x7f030042
-			public const int design_layout_tab_text = 2130903106;
+			public const int design_navigation_item_subheader = 2130903106;
 			
 			// aapt resource value: 0x7f030043
-			public const int design_menu_item_action_area = 2130903107;
+			public const int design_navigation_menu = 2130903107;
 			
 			// aapt resource value: 0x7f030044
-			public const int design_navigation_item = 2130903108;
+			public const int design_navigation_menu_item = 2130903108;
 			
 			// aapt resource value: 0x7f030045
-			public const int design_navigation_item_header = 2130903109;
+			public const int drawer_blur_fade_layer = 2130903109;
 			
 			// aapt resource value: 0x7f030046
-			public const int design_navigation_item_separator = 2130903110;
+			public const int inline_event = 2130903110;
 			
 			// aapt resource value: 0x7f030047
-			public const int design_navigation_item_subheader = 2130903111;
+			public const int linear_layout = 2130903111;
 			
 			// aapt resource value: 0x7f030048
-			public const int design_navigation_menu = 2130903112;
+			public const int mr_chooser_dialog = 2130903112;
 			
 			// aapt resource value: 0x7f030049
-			public const int design_navigation_menu_item = 2130903113;
+			public const int mr_chooser_list_item = 2130903113;
 			
 			// aapt resource value: 0x7f03004a
-			public const int drawer_blur_fade_layer = 2130903114;
+			public const int mr_controller_material_dialog_b = 2130903114;
 			
 			// aapt resource value: 0x7f03004b
-			public const int inline_event = 2130903115;
+			public const int mr_controller_volume_item = 2130903115;
 			
 			// aapt resource value: 0x7f03004c
-			public const int legend_item_view = 2130903116;
+			public const int mr_playback_control = 2130903116;
 			
 			// aapt resource value: 0x7f03004d
-			public const int linear_layout = 2130903117;
+			public const int mr_volume_control = 2130903117;
 			
 			// aapt resource value: 0x7f03004e
-			public const int mr_chooser_dialog = 2130903118;
+			public const int navigation_drawer_content = 2130903118;
 			
 			// aapt resource value: 0x7f03004f
-			public const int mr_chooser_list_item = 2130903119;
+			public const int navigation_item_view = 2130903119;
 			
 			// aapt resource value: 0x7f030050
-			public const int mr_controller_material_dialog_b = 2130903120;
+			public const int notification_media_action = 2130903120;
 			
 			// aapt resource value: 0x7f030051
-			public const int mr_controller_volume_item = 2130903121;
+			public const int notification_media_cancel_action = 2130903121;
 			
 			// aapt resource value: 0x7f030052
-			public const int mr_playback_control = 2130903122;
+			public const int notification_template_big_media = 2130903122;
 			
 			// aapt resource value: 0x7f030053
-			public const int mr_volume_control = 2130903123;
+			public const int notification_template_big_media_narrow = 2130903123;
 			
 			// aapt resource value: 0x7f030054
-			public const int navigation_drawer_content = 2130903124;
+			public const int notification_template_lines = 2130903124;
 			
 			// aapt resource value: 0x7f030055
-			public const int navigation_item_view = 2130903125;
+			public const int notification_template_media = 2130903125;
 			
 			// aapt resource value: 0x7f030056
-			public const int notification_media_action = 2130903126;
+			public const int notification_template_part_chronometer = 2130903126;
 			
 			// aapt resource value: 0x7f030057
-			public const int notification_media_cancel_action = 2130903127;
+			public const int notification_template_part_time = 2130903127;
 			
 			// aapt resource value: 0x7f030058
-			public const int notification_template_big_media = 2130903128;
+			public const int number_picker = 2130903128;
 			
 			// aapt resource value: 0x7f030059
-			public const int notification_template_big_media_narrow = 2130903129;
+			public const int on_demand_automatic = 2130903129;
 			
 			// aapt resource value: 0x7f03005a
-			public const int notification_template_lines = 2130903130;
+			public const int on_demand_manual = 2130903130;
 			
 			// aapt resource value: 0x7f03005b
-			public const int notification_template_media = 2130903131;
+			public const int popup_event = 2130903131;
 			
 			// aapt resource value: 0x7f03005c
-			public const int notification_template_part_chronometer = 2130903132;
+			public const int select_dialog_item_material = 2130903132;
 			
 			// aapt resource value: 0x7f03005d
-			public const int notification_template_part_time = 2130903133;
+			public const int select_dialog_multichoice_material = 2130903133;
 			
 			// aapt resource value: 0x7f03005e
-			public const int number_picker = 2130903134;
+			public const int select_dialog_singlechoice_material = 2130903134;
 			
 			// aapt resource value: 0x7f03005f
-			public const int ohlc_trackball_item_content = 2130903135;
+			public const int simple_empty_content = 2130903135;
 			
 			// aapt resource value: 0x7f030060
-			public const int on_demand_automatic = 2130903136;
+			public const int simple_group_header_item = 2130903136;
 			
 			// aapt resource value: 0x7f030061
-			public const int on_demand_manual = 2130903137;
+			public const int simple_list_item = 2130903137;
 			
 			// aapt resource value: 0x7f030062
-			public const int popup_event = 2130903138;
+			public const int suggestion_item_layout = 2130903138;
 			
 			// aapt resource value: 0x7f030063
-			public const int radchartbase = 2130903139;
+			public const int support_simple_spinner_dropdown_item = 2130903139;
 			
 			// aapt resource value: 0x7f030064
-			public const int radlegendcontrol = 2130903140;
+			public const int tab_item_view = 2130903140;
 			
 			// aapt resource value: 0x7f030065
-			public const int range_trackball_item_content = 2130903141;
+			public const int Tabbar = 2130903141;
 			
 			// aapt resource value: 0x7f030066
-			public const int select_dialog_item_material = 2130903142;
+			public const int table_layout = 2130903142;
 			
 			// aapt resource value: 0x7f030067
-			public const int select_dialog_multichoice_material = 2130903143;
+			public const int Toolbar = 2130903143;
 			
 			// aapt resource value: 0x7f030068
-			public const int select_dialog_singlechoice_material = 2130903144;
+			public const int tooltip_container = 2130903144;
 			
 			// aapt resource value: 0x7f030069
-			public const int simple_empty_content = 2130903145;
-			
-			// aapt resource value: 0x7f03006a
-			public const int simple_group_header_item = 2130903146;
-			
-			// aapt resource value: 0x7f03006b
-			public const int simple_list_item = 2130903147;
-			
-			// aapt resource value: 0x7f03006c
-			public const int suggestion_item_layout = 2130903148;
-			
-			// aapt resource value: 0x7f03006d
-			public const int support_simple_spinner_dropdown_item = 2130903149;
-			
-			// aapt resource value: 0x7f03006e
-			public const int tab_item_view = 2130903150;
-			
-			// aapt resource value: 0x7f03006f
-			public const int Tabbar = 2130903151;
-			
-			// aapt resource value: 0x7f030070
-			public const int table_layout = 2130903152;
-			
-			// aapt resource value: 0x7f030071
-			public const int Toolbar = 2130903153;
-			
-			// aapt resource value: 0x7f030072
-			public const int tooltip_container = 2130903154;
-			
-			// aapt resource value: 0x7f030073
-			public const int trackball_container = 2130903155;
-			
-			// aapt resource value: 0x7f030074
-			public const int trial_message = 2130903156;
+			public const int trial_message = 2130903145;
 			
 			static Layout()
 			{
@@ -13713,233 +11296,278 @@ namespace YallaParkingMobile.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f070046
-			public const int ApplicationName = 2131165254;
+			// aapt resource value: 0x7f060046
+			public const int ApplicationName = 2131099718;
 			
-			// aapt resource value: 0x7f070045
-			public const int Hello = 2131165253;
+			// aapt resource value: 0x7f060045
+			public const int Hello = 2131099717;
 			
-			// aapt resource value: 0x7f07002e
-			public const int abc_action_bar_home_description = 2131165230;
+			// aapt resource value: 0x7f06002e
+			public const int abc_action_bar_home_description = 2131099694;
 			
-			// aapt resource value: 0x7f07002f
-			public const int abc_action_bar_home_description_format = 2131165231;
+			// aapt resource value: 0x7f06002f
+			public const int abc_action_bar_home_description_format = 2131099695;
 			
-			// aapt resource value: 0x7f070030
-			public const int abc_action_bar_home_subtitle_description_format = 2131165232;
+			// aapt resource value: 0x7f060030
+			public const int abc_action_bar_home_subtitle_description_format = 2131099696;
 			
-			// aapt resource value: 0x7f070031
-			public const int abc_action_bar_up_description = 2131165233;
+			// aapt resource value: 0x7f060031
+			public const int abc_action_bar_up_description = 2131099697;
 			
-			// aapt resource value: 0x7f070032
-			public const int abc_action_menu_overflow_description = 2131165234;
+			// aapt resource value: 0x7f060032
+			public const int abc_action_menu_overflow_description = 2131099698;
 			
-			// aapt resource value: 0x7f070033
-			public const int abc_action_mode_done = 2131165235;
+			// aapt resource value: 0x7f060033
+			public const int abc_action_mode_done = 2131099699;
 			
-			// aapt resource value: 0x7f070034
-			public const int abc_activity_chooser_view_see_all = 2131165236;
+			// aapt resource value: 0x7f060034
+			public const int abc_activity_chooser_view_see_all = 2131099700;
 			
-			// aapt resource value: 0x7f070035
-			public const int abc_activitychooserview_choose_application = 2131165237;
+			// aapt resource value: 0x7f060035
+			public const int abc_activitychooserview_choose_application = 2131099701;
 			
-			// aapt resource value: 0x7f070036
-			public const int abc_capital_off = 2131165238;
+			// aapt resource value: 0x7f060036
+			public const int abc_capital_off = 2131099702;
 			
-			// aapt resource value: 0x7f070037
-			public const int abc_capital_on = 2131165239;
+			// aapt resource value: 0x7f060037
+			public const int abc_capital_on = 2131099703;
 			
-			// aapt resource value: 0x7f070038
-			public const int abc_search_hint = 2131165240;
+			// aapt resource value: 0x7f060038
+			public const int abc_search_hint = 2131099704;
 			
-			// aapt resource value: 0x7f070039
-			public const int abc_searchview_description_clear = 2131165241;
+			// aapt resource value: 0x7f060039
+			public const int abc_searchview_description_clear = 2131099705;
 			
-			// aapt resource value: 0x7f07003a
-			public const int abc_searchview_description_query = 2131165242;
+			// aapt resource value: 0x7f06003a
+			public const int abc_searchview_description_query = 2131099706;
 			
-			// aapt resource value: 0x7f07003b
-			public const int abc_searchview_description_search = 2131165243;
+			// aapt resource value: 0x7f06003b
+			public const int abc_searchview_description_search = 2131099707;
 			
-			// aapt resource value: 0x7f07003c
-			public const int abc_searchview_description_submit = 2131165244;
+			// aapt resource value: 0x7f06003c
+			public const int abc_searchview_description_submit = 2131099708;
 			
-			// aapt resource value: 0x7f07003d
-			public const int abc_searchview_description_voice = 2131165245;
+			// aapt resource value: 0x7f06003d
+			public const int abc_searchview_description_voice = 2131099709;
 			
-			// aapt resource value: 0x7f07003e
-			public const int abc_shareactionprovider_share_with = 2131165246;
+			// aapt resource value: 0x7f06003e
+			public const int abc_shareactionprovider_share_with = 2131099710;
 			
-			// aapt resource value: 0x7f07003f
-			public const int abc_shareactionprovider_share_with_application = 2131165247;
+			// aapt resource value: 0x7f06003f
+			public const int abc_shareactionprovider_share_with_application = 2131099711;
 			
-			// aapt resource value: 0x7f070040
-			public const int abc_toolbar_collapse_description = 2131165248;
+			// aapt resource value: 0x7f060040
+			public const int abc_toolbar_collapse_description = 2131099712;
 			
-			// aapt resource value: 0x7f070042
-			public const int appbar_scrolling_view_behavior = 2131165250;
+			// aapt resource value: 0x7f060042
+			public const int appbar_scrolling_view_behavior = 2131099714;
 			
-			// aapt resource value: 0x7f070001
-			public const int auth_google_play_services_client_facebook_display_name = 2131165185;
+			// aapt resource value: 0x7f060001
+			public const int auth_google_play_services_client_facebook_display_name = 2131099649;
 			
-			// aapt resource value: 0x7f070000
-			public const int auth_google_play_services_client_google_display_name = 2131165184;
+			// aapt resource value: 0x7f060000
+			public const int auth_google_play_services_client_google_display_name = 2131099648;
 			
-			// aapt resource value: 0x7f070043
-			public const int bottom_sheet_behavior = 2131165251;
+			// aapt resource value: 0x7f060043
+			public const int bottom_sheet_behavior = 2131099715;
 			
-			// aapt resource value: 0x7f070044
-			public const int character_counter_pattern = 2131165252;
+			// aapt resource value: 0x7f060044
+			public const int character_counter_pattern = 2131099716;
 			
-			// aapt resource value: 0x7f070018
-			public const int common_google_play_services_api_unavailable_text = 2131165208;
+			// aapt resource value: 0x7f060018
+			public const int common_google_play_services_api_unavailable_text = 2131099672;
 			
-			// aapt resource value: 0x7f07000a
-			public const int common_google_play_services_enable_button = 2131165194;
+			// aapt resource value: 0x7f06000a
+			public const int common_google_play_services_enable_button = 2131099658;
 			
-			// aapt resource value: 0x7f070009
-			public const int common_google_play_services_enable_text = 2131165193;
+			// aapt resource value: 0x7f060009
+			public const int common_google_play_services_enable_text = 2131099657;
 			
-			// aapt resource value: 0x7f070008
-			public const int common_google_play_services_enable_title = 2131165192;
+			// aapt resource value: 0x7f060008
+			public const int common_google_play_services_enable_title = 2131099656;
 			
-			// aapt resource value: 0x7f070007
-			public const int common_google_play_services_install_button = 2131165191;
+			// aapt resource value: 0x7f060007
+			public const int common_google_play_services_install_button = 2131099655;
 			
-			// aapt resource value: 0x7f070005
-			public const int common_google_play_services_install_text_phone = 2131165189;
+			// aapt resource value: 0x7f060005
+			public const int common_google_play_services_install_text_phone = 2131099653;
 			
-			// aapt resource value: 0x7f070006
-			public const int common_google_play_services_install_text_tablet = 2131165190;
+			// aapt resource value: 0x7f060006
+			public const int common_google_play_services_install_text_tablet = 2131099654;
 			
-			// aapt resource value: 0x7f070004
-			public const int common_google_play_services_install_title = 2131165188;
+			// aapt resource value: 0x7f060004
+			public const int common_google_play_services_install_title = 2131099652;
 			
-			// aapt resource value: 0x7f070013
-			public const int common_google_play_services_invalid_account_text = 2131165203;
+			// aapt resource value: 0x7f060013
+			public const int common_google_play_services_invalid_account_text = 2131099667;
 			
-			// aapt resource value: 0x7f070012
-			public const int common_google_play_services_invalid_account_title = 2131165202;
+			// aapt resource value: 0x7f060012
+			public const int common_google_play_services_invalid_account_title = 2131099666;
 			
-			// aapt resource value: 0x7f070011
-			public const int common_google_play_services_network_error_text = 2131165201;
+			// aapt resource value: 0x7f060011
+			public const int common_google_play_services_network_error_text = 2131099665;
 			
-			// aapt resource value: 0x7f070010
-			public const int common_google_play_services_network_error_title = 2131165200;
+			// aapt resource value: 0x7f060010
+			public const int common_google_play_services_network_error_title = 2131099664;
 			
-			// aapt resource value: 0x7f070003
-			public const int common_google_play_services_notification_ticker = 2131165187;
+			// aapt resource value: 0x7f060003
+			public const int common_google_play_services_notification_ticker = 2131099651;
 			
-			// aapt resource value: 0x7f07001c
-			public const int common_google_play_services_restricted_profile_text = 2131165212;
+			// aapt resource value: 0x7f06001c
+			public const int common_google_play_services_restricted_profile_text = 2131099676;
 			
-			// aapt resource value: 0x7f07001b
-			public const int common_google_play_services_restricted_profile_title = 2131165211;
+			// aapt resource value: 0x7f06001b
+			public const int common_google_play_services_restricted_profile_title = 2131099675;
 			
-			// aapt resource value: 0x7f07001a
-			public const int common_google_play_services_sign_in_failed_text = 2131165210;
+			// aapt resource value: 0x7f06001a
+			public const int common_google_play_services_sign_in_failed_text = 2131099674;
 			
-			// aapt resource value: 0x7f070019
-			public const int common_google_play_services_sign_in_failed_title = 2131165209;
+			// aapt resource value: 0x7f060019
+			public const int common_google_play_services_sign_in_failed_title = 2131099673;
 			
-			// aapt resource value: 0x7f070002
-			public const int common_google_play_services_unknown_issue = 2131165186;
+			// aapt resource value: 0x7f060002
+			public const int common_google_play_services_unknown_issue = 2131099650;
 			
-			// aapt resource value: 0x7f070015
-			public const int common_google_play_services_unsupported_text = 2131165205;
+			// aapt resource value: 0x7f060015
+			public const int common_google_play_services_unsupported_text = 2131099669;
 			
-			// aapt resource value: 0x7f070014
-			public const int common_google_play_services_unsupported_title = 2131165204;
+			// aapt resource value: 0x7f060014
+			public const int common_google_play_services_unsupported_title = 2131099668;
 			
-			// aapt resource value: 0x7f070016
-			public const int common_google_play_services_update_button = 2131165206;
+			// aapt resource value: 0x7f060016
+			public const int common_google_play_services_update_button = 2131099670;
 			
-			// aapt resource value: 0x7f07000c
-			public const int common_google_play_services_update_text = 2131165196;
+			// aapt resource value: 0x7f06000c
+			public const int common_google_play_services_update_text = 2131099660;
 			
-			// aapt resource value: 0x7f07000b
-			public const int common_google_play_services_update_title = 2131165195;
+			// aapt resource value: 0x7f06000b
+			public const int common_google_play_services_update_title = 2131099659;
 			
-			// aapt resource value: 0x7f07000f
-			public const int common_google_play_services_updating_text = 2131165199;
+			// aapt resource value: 0x7f06000f
+			public const int common_google_play_services_updating_text = 2131099663;
 			
-			// aapt resource value: 0x7f07000e
-			public const int common_google_play_services_updating_title = 2131165198;
+			// aapt resource value: 0x7f06000e
+			public const int common_google_play_services_updating_title = 2131099662;
 			
-			// aapt resource value: 0x7f07000d
-			public const int common_google_play_services_wear_update_text = 2131165197;
+			// aapt resource value: 0x7f06000d
+			public const int common_google_play_services_wear_update_text = 2131099661;
 			
-			// aapt resource value: 0x7f070017
-			public const int common_open_on_phone = 2131165207;
+			// aapt resource value: 0x7f060017
+			public const int common_open_on_phone = 2131099671;
 			
-			// aapt resource value: 0x7f07001d
-			public const int common_signin_button_text = 2131165213;
+			// aapt resource value: 0x7f06001d
+			public const int common_signin_button_text = 2131099677;
 			
-			// aapt resource value: 0x7f07001e
-			public const int common_signin_button_text_long = 2131165214;
+			// aapt resource value: 0x7f06001e
+			public const int common_signin_button_text_long = 2131099678;
 			
-			// aapt resource value: 0x7f070049
-			public const int list_view_default_empty_content = 2131165257;
+			// aapt resource value: 0x7f060049
+			public const int list_view_default_empty_content = 2131099721;
 			
-			// aapt resource value: 0x7f07001f
-			public const int mr_button_content_description = 2131165215;
+			// aapt resource value: 0x7f06004c
+			public const int mobile_center_distribute_dialog_actioned_on_disabled_toast = 2131099724;
 			
-			// aapt resource value: 0x7f070020
-			public const int mr_chooser_searching = 2131165216;
+			// aapt resource value: 0x7f06004d
+			public const int mobile_center_distribute_download_progress_number_format = 2131099725;
 			
-			// aapt resource value: 0x7f070021
-			public const int mr_chooser_title = 2131165217;
+			// aapt resource value: 0x7f06004e
+			public const int mobile_center_distribute_downloading_mandatory_update = 2131099726;
 			
-			// aapt resource value: 0x7f070022
-			public const int mr_controller_casting_screen = 2131165218;
+			// aapt resource value: 0x7f06004f
+			public const int mobile_center_distribute_install = 2131099727;
 			
-			// aapt resource value: 0x7f070023
-			public const int mr_controller_close_description = 2131165219;
+			// aapt resource value: 0x7f060050
+			public const int mobile_center_distribute_install_ready_message = 2131099728;
 			
-			// aapt resource value: 0x7f070024
-			public const int mr_controller_collapse_group = 2131165220;
+			// aapt resource value: 0x7f060051
+			public const int mobile_center_distribute_install_ready_title = 2131099729;
 			
-			// aapt resource value: 0x7f070025
-			public const int mr_controller_disconnect = 2131165221;
+			// aapt resource value: 0x7f060052
+			public const int mobile_center_distribute_notification_category = 2131099730;
 			
-			// aapt resource value: 0x7f070026
-			public const int mr_controller_expand_group = 2131165222;
+			// aapt resource value: 0x7f060053
+			public const int mobile_center_distribute_unknown_sources_dialog_message = 2131099731;
 			
-			// aapt resource value: 0x7f070027
-			public const int mr_controller_no_info_available = 2131165223;
+			// aapt resource value: 0x7f060054
+			public const int mobile_center_distribute_unknown_sources_dialog_settings = 2131099732;
 			
-			// aapt resource value: 0x7f070028
-			public const int mr_controller_no_media_selected = 2131165224;
+			// aapt resource value: 0x7f060055
+			public const int mobile_center_distribute_update_dialog_download = 2131099733;
 			
-			// aapt resource value: 0x7f070029
-			public const int mr_controller_pause = 2131165225;
+			// aapt resource value: 0x7f060056
+			public const int mobile_center_distribute_update_dialog_message_mandatory = 2131099734;
 			
-			// aapt resource value: 0x7f07002a
-			public const int mr_controller_play = 2131165226;
+			// aapt resource value: 0x7f060057
+			public const int mobile_center_distribute_update_dialog_message_optional = 2131099735;
 			
-			// aapt resource value: 0x7f07002b
-			public const int mr_controller_stop = 2131165227;
+			// aapt resource value: 0x7f060058
+			public const int mobile_center_distribute_update_dialog_postpone = 2131099736;
 			
-			// aapt resource value: 0x7f07002c
-			public const int mr_system_route_name = 2131165228;
+			// aapt resource value: 0x7f060059
+			public const int mobile_center_distribute_update_dialog_title = 2131099737;
 			
-			// aapt resource value: 0x7f07002d
-			public const int mr_user_route_category_name = 2131165229;
+			// aapt resource value: 0x7f06005a
+			public const int mobile_center_distribute_update_dialog_view_release_notes = 2131099738;
 			
-			// aapt resource value: 0x7f070048
-			public const int on_demand_manual_button_busy = 2131165256;
+			// aapt resource value: 0x7f06001f
+			public const int mr_button_content_description = 2131099679;
 			
-			// aapt resource value: 0x7f070047
-			public const int on_demand_manual_button_idle = 2131165255;
+			// aapt resource value: 0x7f060020
+			public const int mr_chooser_searching = 2131099680;
 			
-			// aapt resource value: 0x7f070041
-			public const int status_bar_notification_info_overflow = 2131165249;
+			// aapt resource value: 0x7f060021
+			public const int mr_chooser_title = 2131099681;
 			
-			// aapt resource value: 0x7f07004a
-			public const int trial_message = 2131165258;
+			// aapt resource value: 0x7f060022
+			public const int mr_controller_casting_screen = 2131099682;
 			
-			// aapt resource value: 0x7f07004b
-			public const int trial_message_caption = 2131165259;
+			// aapt resource value: 0x7f060023
+			public const int mr_controller_close_description = 2131099683;
+			
+			// aapt resource value: 0x7f060024
+			public const int mr_controller_collapse_group = 2131099684;
+			
+			// aapt resource value: 0x7f060025
+			public const int mr_controller_disconnect = 2131099685;
+			
+			// aapt resource value: 0x7f060026
+			public const int mr_controller_expand_group = 2131099686;
+			
+			// aapt resource value: 0x7f060027
+			public const int mr_controller_no_info_available = 2131099687;
+			
+			// aapt resource value: 0x7f060028
+			public const int mr_controller_no_media_selected = 2131099688;
+			
+			// aapt resource value: 0x7f060029
+			public const int mr_controller_pause = 2131099689;
+			
+			// aapt resource value: 0x7f06002a
+			public const int mr_controller_play = 2131099690;
+			
+			// aapt resource value: 0x7f06002b
+			public const int mr_controller_stop = 2131099691;
+			
+			// aapt resource value: 0x7f06002c
+			public const int mr_system_route_name = 2131099692;
+			
+			// aapt resource value: 0x7f06002d
+			public const int mr_user_route_category_name = 2131099693;
+			
+			// aapt resource value: 0x7f060048
+			public const int on_demand_manual_button_busy = 2131099720;
+			
+			// aapt resource value: 0x7f060047
+			public const int on_demand_manual_button_idle = 2131099719;
+			
+			// aapt resource value: 0x7f060041
+			public const int status_bar_notification_info_overflow = 2131099713;
+			
+			// aapt resource value: 0x7f06004a
+			public const int trial_message = 2131099722;
+			
+			// aapt resource value: 0x7f06004b
+			public const int trial_message_caption = 2131099723;
 			
 			static String()
 			{
@@ -13954,1220 +11582,1160 @@ namespace YallaParkingMobile.Droid
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f0c00a1
-			public const int AlertDialog_AppCompat = 2131493025;
+			// aapt resource value: 0x7f0b00a1
+			public const int AlertDialog_AppCompat = 2131427489;
 			
-			// aapt resource value: 0x7f0c00a2
-			public const int AlertDialog_AppCompat_Light = 2131493026;
+			// aapt resource value: 0x7f0b00a2
+			public const int AlertDialog_AppCompat_Light = 2131427490;
 			
-			// aapt resource value: 0x7f0c00a3
-			public const int Animation_AppCompat_Dialog = 2131493027;
+			// aapt resource value: 0x7f0b00a3
+			public const int Animation_AppCompat_Dialog = 2131427491;
 			
-			// aapt resource value: 0x7f0c00a4
-			public const int Animation_AppCompat_DropDownUp = 2131493028;
+			// aapt resource value: 0x7f0b00a4
+			public const int Animation_AppCompat_DropDownUp = 2131427492;
 			
-			// aapt resource value: 0x7f0c015a
-			public const int Animation_Design_BottomSheetDialog = 2131493210;
+			// aapt resource value: 0x7f0b015a
+			public const int Animation_Design_BottomSheetDialog = 2131427674;
 			
-			// aapt resource value: 0x7f0c0194
-			public const int AppCompatDialogStyle = 2131493268;
+			// aapt resource value: 0x7f0b0180
+			public const int AppCompatDialogStyle = 2131427712;
 			
-			// aapt resource value: 0x7f0c017e
-			public const int AxisStyle = 2131493246;
+			// aapt resource value: 0x7f0b00a5
+			public const int Base_AlertDialog_AppCompat = 2131427493;
 			
-			// aapt resource value: 0x7f0c0181
-			public const int AxisStyle_LineAxisStyle = 2131493249;
+			// aapt resource value: 0x7f0b00a6
+			public const int Base_AlertDialog_AppCompat_Light = 2131427494;
 			
-			// aapt resource value: 0x7f0c0188
-			public const int AxisStyle_LineAxisStyle_CartesianAxisStyle = 2131493256;
+			// aapt resource value: 0x7f0b00a7
+			public const int Base_Animation_AppCompat_Dialog = 2131427495;
 			
-			// aapt resource value: 0x7f0c0189
-			public const int AxisStyle_LineAxisStyle_CartesianAxisStyle_CategoricalAxisStyle = 2131493257;
+			// aapt resource value: 0x7f0b00a8
+			public const int Base_Animation_AppCompat_DropDownUp = 2131427496;
 			
-			// aapt resource value: 0x7f0c018a
-			public const int AxisStyle_LineAxisStyle_CartesianAxisStyle_CategoricalAxisStyle_DateTimeCategoricalAxisStyle = 2131493258;
+			// aapt resource value: 0x7f0b0018
+			public const int Base_CardView = 2131427352;
 			
-			// aapt resource value: 0x7f0c018b
-			public const int AxisStyle_LineAxisStyle_CartesianAxisStyle_CategoricalAxisStyle_TestDateTimeCategoricalAxisStyle = 2131493259;
+			// aapt resource value: 0x7f0b00a9
+			public const int Base_DialogWindowTitle_AppCompat = 2131427497;
 			
-			// aapt resource value: 0x7f0c018c
-			public const int AxisStyle_LineAxisStyle_CartesianAxisStyle_DateTimeContinuousAxisStyle = 2131493260;
+			// aapt resource value: 0x7f0b00aa
+			public const int Base_DialogWindowTitleBackground_AppCompat = 2131427498;
 			
-			// aapt resource value: 0x7f0c00a5
-			public const int Base_AlertDialog_AppCompat = 2131493029;
+			// aapt resource value: 0x7f0b0051
+			public const int Base_TextAppearance_AppCompat = 2131427409;
 			
-			// aapt resource value: 0x7f0c00a6
-			public const int Base_AlertDialog_AppCompat_Light = 2131493030;
+			// aapt resource value: 0x7f0b0052
+			public const int Base_TextAppearance_AppCompat_Body1 = 2131427410;
 			
-			// aapt resource value: 0x7f0c00a7
-			public const int Base_Animation_AppCompat_Dialog = 2131493031;
+			// aapt resource value: 0x7f0b0053
+			public const int Base_TextAppearance_AppCompat_Body2 = 2131427411;
 			
-			// aapt resource value: 0x7f0c00a8
-			public const int Base_Animation_AppCompat_DropDownUp = 2131493032;
+			// aapt resource value: 0x7f0b003b
+			public const int Base_TextAppearance_AppCompat_Button = 2131427387;
 			
-			// aapt resource value: 0x7f0c0018
-			public const int Base_CardView = 2131492888;
+			// aapt resource value: 0x7f0b0054
+			public const int Base_TextAppearance_AppCompat_Caption = 2131427412;
 			
-			// aapt resource value: 0x7f0c00a9
-			public const int Base_DialogWindowTitle_AppCompat = 2131493033;
+			// aapt resource value: 0x7f0b0055
+			public const int Base_TextAppearance_AppCompat_Display1 = 2131427413;
 			
-			// aapt resource value: 0x7f0c00aa
-			public const int Base_DialogWindowTitleBackground_AppCompat = 2131493034;
+			// aapt resource value: 0x7f0b0056
+			public const int Base_TextAppearance_AppCompat_Display2 = 2131427414;
 			
-			// aapt resource value: 0x7f0c0051
-			public const int Base_TextAppearance_AppCompat = 2131492945;
+			// aapt resource value: 0x7f0b0057
+			public const int Base_TextAppearance_AppCompat_Display3 = 2131427415;
 			
-			// aapt resource value: 0x7f0c0052
-			public const int Base_TextAppearance_AppCompat_Body1 = 2131492946;
+			// aapt resource value: 0x7f0b0058
+			public const int Base_TextAppearance_AppCompat_Display4 = 2131427416;
 			
-			// aapt resource value: 0x7f0c0053
-			public const int Base_TextAppearance_AppCompat_Body2 = 2131492947;
+			// aapt resource value: 0x7f0b0059
+			public const int Base_TextAppearance_AppCompat_Headline = 2131427417;
 			
-			// aapt resource value: 0x7f0c003b
-			public const int Base_TextAppearance_AppCompat_Button = 2131492923;
+			// aapt resource value: 0x7f0b0026
+			public const int Base_TextAppearance_AppCompat_Inverse = 2131427366;
 			
-			// aapt resource value: 0x7f0c0054
-			public const int Base_TextAppearance_AppCompat_Caption = 2131492948;
+			// aapt resource value: 0x7f0b005a
+			public const int Base_TextAppearance_AppCompat_Large = 2131427418;
 			
-			// aapt resource value: 0x7f0c0055
-			public const int Base_TextAppearance_AppCompat_Display1 = 2131492949;
+			// aapt resource value: 0x7f0b0027
+			public const int Base_TextAppearance_AppCompat_Large_Inverse = 2131427367;
 			
-			// aapt resource value: 0x7f0c0056
-			public const int Base_TextAppearance_AppCompat_Display2 = 2131492950;
+			// aapt resource value: 0x7f0b005b
+			public const int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131427419;
 			
-			// aapt resource value: 0x7f0c0057
-			public const int Base_TextAppearance_AppCompat_Display3 = 2131492951;
+			// aapt resource value: 0x7f0b005c
+			public const int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131427420;
 			
-			// aapt resource value: 0x7f0c0058
-			public const int Base_TextAppearance_AppCompat_Display4 = 2131492952;
+			// aapt resource value: 0x7f0b005d
+			public const int Base_TextAppearance_AppCompat_Medium = 2131427421;
 			
-			// aapt resource value: 0x7f0c0059
-			public const int Base_TextAppearance_AppCompat_Headline = 2131492953;
+			// aapt resource value: 0x7f0b0028
+			public const int Base_TextAppearance_AppCompat_Medium_Inverse = 2131427368;
 			
-			// aapt resource value: 0x7f0c0026
-			public const int Base_TextAppearance_AppCompat_Inverse = 2131492902;
+			// aapt resource value: 0x7f0b005e
+			public const int Base_TextAppearance_AppCompat_Menu = 2131427422;
 			
-			// aapt resource value: 0x7f0c005a
-			public const int Base_TextAppearance_AppCompat_Large = 2131492954;
+			// aapt resource value: 0x7f0b00ab
+			public const int Base_TextAppearance_AppCompat_SearchResult = 2131427499;
 			
-			// aapt resource value: 0x7f0c0027
-			public const int Base_TextAppearance_AppCompat_Large_Inverse = 2131492903;
+			// aapt resource value: 0x7f0b005f
+			public const int Base_TextAppearance_AppCompat_SearchResult_Subtitle = 2131427423;
 			
-			// aapt resource value: 0x7f0c005b
-			public const int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131492955;
+			// aapt resource value: 0x7f0b0060
+			public const int Base_TextAppearance_AppCompat_SearchResult_Title = 2131427424;
 			
-			// aapt resource value: 0x7f0c005c
-			public const int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131492956;
+			// aapt resource value: 0x7f0b0061
+			public const int Base_TextAppearance_AppCompat_Small = 2131427425;
 			
-			// aapt resource value: 0x7f0c005d
-			public const int Base_TextAppearance_AppCompat_Medium = 2131492957;
+			// aapt resource value: 0x7f0b0029
+			public const int Base_TextAppearance_AppCompat_Small_Inverse = 2131427369;
 			
-			// aapt resource value: 0x7f0c0028
-			public const int Base_TextAppearance_AppCompat_Medium_Inverse = 2131492904;
+			// aapt resource value: 0x7f0b0062
+			public const int Base_TextAppearance_AppCompat_Subhead = 2131427426;
 			
-			// aapt resource value: 0x7f0c005e
-			public const int Base_TextAppearance_AppCompat_Menu = 2131492958;
+			// aapt resource value: 0x7f0b002a
+			public const int Base_TextAppearance_AppCompat_Subhead_Inverse = 2131427370;
 			
-			// aapt resource value: 0x7f0c00ab
-			public const int Base_TextAppearance_AppCompat_SearchResult = 2131493035;
+			// aapt resource value: 0x7f0b0063
+			public const int Base_TextAppearance_AppCompat_Title = 2131427427;
 			
-			// aapt resource value: 0x7f0c005f
-			public const int Base_TextAppearance_AppCompat_SearchResult_Subtitle = 2131492959;
+			// aapt resource value: 0x7f0b002b
+			public const int Base_TextAppearance_AppCompat_Title_Inverse = 2131427371;
 			
-			// aapt resource value: 0x7f0c0060
-			public const int Base_TextAppearance_AppCompat_SearchResult_Title = 2131492960;
+			// aapt resource value: 0x7f0b009a
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131427482;
 			
-			// aapt resource value: 0x7f0c0061
-			public const int Base_TextAppearance_AppCompat_Small = 2131492961;
+			// aapt resource value: 0x7f0b0064
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131427428;
 			
-			// aapt resource value: 0x7f0c0029
-			public const int Base_TextAppearance_AppCompat_Small_Inverse = 2131492905;
+			// aapt resource value: 0x7f0b0065
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131427429;
 			
-			// aapt resource value: 0x7f0c0062
-			public const int Base_TextAppearance_AppCompat_Subhead = 2131492962;
+			// aapt resource value: 0x7f0b0066
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Title = 2131427430;
 			
-			// aapt resource value: 0x7f0c002a
-			public const int Base_TextAppearance_AppCompat_Subhead_Inverse = 2131492906;
+			// aapt resource value: 0x7f0b0067
+			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131427431;
 			
-			// aapt resource value: 0x7f0c0063
-			public const int Base_TextAppearance_AppCompat_Title = 2131492963;
+			// aapt resource value: 0x7f0b0068
+			public const int Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131427432;
 			
-			// aapt resource value: 0x7f0c002b
-			public const int Base_TextAppearance_AppCompat_Title_Inverse = 2131492907;
+			// aapt resource value: 0x7f0b0069
+			public const int Base_TextAppearance_AppCompat_Widget_ActionMode_Title = 2131427433;
 			
-			// aapt resource value: 0x7f0c009a
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131493018;
+			// aapt resource value: 0x7f0b006a
+			public const int Base_TextAppearance_AppCompat_Widget_Button = 2131427434;
 			
-			// aapt resource value: 0x7f0c0064
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131492964;
+			// aapt resource value: 0x7f0b009b
+			public const int Base_TextAppearance_AppCompat_Widget_Button_Inverse = 2131427483;
 			
-			// aapt resource value: 0x7f0c0065
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131492965;
+			// aapt resource value: 0x7f0b00ac
+			public const int Base_TextAppearance_AppCompat_Widget_DropDownItem = 2131427500;
 			
-			// aapt resource value: 0x7f0c0066
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Title = 2131492966;
+			// aapt resource value: 0x7f0b006b
+			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131427435;
 			
-			// aapt resource value: 0x7f0c0067
-			public const int Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131492967;
+			// aapt resource value: 0x7f0b006c
+			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131427436;
 			
-			// aapt resource value: 0x7f0c0068
-			public const int Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131492968;
+			// aapt resource value: 0x7f0b006d
+			public const int Base_TextAppearance_AppCompat_Widget_Switch = 2131427437;
 			
-			// aapt resource value: 0x7f0c0069
-			public const int Base_TextAppearance_AppCompat_Widget_ActionMode_Title = 2131492969;
+			// aapt resource value: 0x7f0b006e
+			public const int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131427438;
 			
-			// aapt resource value: 0x7f0c006a
-			public const int Base_TextAppearance_AppCompat_Widget_Button = 2131492970;
+			// aapt resource value: 0x7f0b00ad
+			public const int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131427501;
 			
-			// aapt resource value: 0x7f0c009b
-			public const int Base_TextAppearance_AppCompat_Widget_Button_Inverse = 2131493019;
+			// aapt resource value: 0x7f0b006f
+			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131427439;
 			
-			// aapt resource value: 0x7f0c00ac
-			public const int Base_TextAppearance_AppCompat_Widget_DropDownItem = 2131493036;
+			// aapt resource value: 0x7f0b0070
+			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Title = 2131427440;
 			
-			// aapt resource value: 0x7f0c006b
-			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131492971;
+			// aapt resource value: 0x7f0b0071
+			public const int Base_Theme_AppCompat = 2131427441;
 			
-			// aapt resource value: 0x7f0c006c
-			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131492972;
+			// aapt resource value: 0x7f0b00ae
+			public const int Base_Theme_AppCompat_CompactMenu = 2131427502;
 			
-			// aapt resource value: 0x7f0c006d
-			public const int Base_TextAppearance_AppCompat_Widget_Switch = 2131492973;
+			// aapt resource value: 0x7f0b002c
+			public const int Base_Theme_AppCompat_Dialog = 2131427372;
 			
-			// aapt resource value: 0x7f0c006e
-			public const int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131492974;
+			// aapt resource value: 0x7f0b00af
+			public const int Base_Theme_AppCompat_Dialog_Alert = 2131427503;
 			
-			// aapt resource value: 0x7f0c00ad
-			public const int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131493037;
+			// aapt resource value: 0x7f0b00b0
+			public const int Base_Theme_AppCompat_Dialog_FixedSize = 2131427504;
 			
-			// aapt resource value: 0x7f0c006f
-			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131492975;
+			// aapt resource value: 0x7f0b00b1
+			public const int Base_Theme_AppCompat_Dialog_MinWidth = 2131427505;
 			
-			// aapt resource value: 0x7f0c0070
-			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Title = 2131492976;
+			// aapt resource value: 0x7f0b001c
+			public const int Base_Theme_AppCompat_DialogWhenLarge = 2131427356;
 			
-			// aapt resource value: 0x7f0c0071
-			public const int Base_Theme_AppCompat = 2131492977;
+			// aapt resource value: 0x7f0b0072
+			public const int Base_Theme_AppCompat_Light = 2131427442;
 			
-			// aapt resource value: 0x7f0c00ae
-			public const int Base_Theme_AppCompat_CompactMenu = 2131493038;
+			// aapt resource value: 0x7f0b00b2
+			public const int Base_Theme_AppCompat_Light_DarkActionBar = 2131427506;
 			
-			// aapt resource value: 0x7f0c002c
-			public const int Base_Theme_AppCompat_Dialog = 2131492908;
+			// aapt resource value: 0x7f0b002d
+			public const int Base_Theme_AppCompat_Light_Dialog = 2131427373;
 			
-			// aapt resource value: 0x7f0c00af
-			public const int Base_Theme_AppCompat_Dialog_Alert = 2131493039;
+			// aapt resource value: 0x7f0b00b3
+			public const int Base_Theme_AppCompat_Light_Dialog_Alert = 2131427507;
 			
-			// aapt resource value: 0x7f0c00b0
-			public const int Base_Theme_AppCompat_Dialog_FixedSize = 2131493040;
+			// aapt resource value: 0x7f0b00b4
+			public const int Base_Theme_AppCompat_Light_Dialog_FixedSize = 2131427508;
 			
-			// aapt resource value: 0x7f0c00b1
-			public const int Base_Theme_AppCompat_Dialog_MinWidth = 2131493041;
+			// aapt resource value: 0x7f0b00b5
+			public const int Base_Theme_AppCompat_Light_Dialog_MinWidth = 2131427509;
 			
-			// aapt resource value: 0x7f0c001c
-			public const int Base_Theme_AppCompat_DialogWhenLarge = 2131492892;
+			// aapt resource value: 0x7f0b001d
+			public const int Base_Theme_AppCompat_Light_DialogWhenLarge = 2131427357;
 			
-			// aapt resource value: 0x7f0c0072
-			public const int Base_Theme_AppCompat_Light = 2131492978;
+			// aapt resource value: 0x7f0b00b6
+			public const int Base_ThemeOverlay_AppCompat = 2131427510;
 			
-			// aapt resource value: 0x7f0c00b2
-			public const int Base_Theme_AppCompat_Light_DarkActionBar = 2131493042;
+			// aapt resource value: 0x7f0b00b7
+			public const int Base_ThemeOverlay_AppCompat_ActionBar = 2131427511;
 			
-			// aapt resource value: 0x7f0c002d
-			public const int Base_Theme_AppCompat_Light_Dialog = 2131492909;
+			// aapt resource value: 0x7f0b00b8
+			public const int Base_ThemeOverlay_AppCompat_Dark = 2131427512;
 			
-			// aapt resource value: 0x7f0c00b3
-			public const int Base_Theme_AppCompat_Light_Dialog_Alert = 2131493043;
+			// aapt resource value: 0x7f0b00b9
+			public const int Base_ThemeOverlay_AppCompat_Dark_ActionBar = 2131427513;
 			
-			// aapt resource value: 0x7f0c00b4
-			public const int Base_Theme_AppCompat_Light_Dialog_FixedSize = 2131493044;
+			// aapt resource value: 0x7f0b00ba
+			public const int Base_ThemeOverlay_AppCompat_Light = 2131427514;
 			
-			// aapt resource value: 0x7f0c00b5
-			public const int Base_Theme_AppCompat_Light_Dialog_MinWidth = 2131493045;
+			// aapt resource value: 0x7f0b002e
+			public const int Base_V11_Theme_AppCompat_Dialog = 2131427374;
 			
-			// aapt resource value: 0x7f0c001d
-			public const int Base_Theme_AppCompat_Light_DialogWhenLarge = 2131492893;
+			// aapt resource value: 0x7f0b002f
+			public const int Base_V11_Theme_AppCompat_Light_Dialog = 2131427375;
 			
-			// aapt resource value: 0x7f0c00b6
-			public const int Base_ThemeOverlay_AppCompat = 2131493046;
+			// aapt resource value: 0x7f0b0037
+			public const int Base_V12_Widget_AppCompat_AutoCompleteTextView = 2131427383;
 			
-			// aapt resource value: 0x7f0c00b7
-			public const int Base_ThemeOverlay_AppCompat_ActionBar = 2131493047;
+			// aapt resource value: 0x7f0b0038
+			public const int Base_V12_Widget_AppCompat_EditText = 2131427384;
 			
-			// aapt resource value: 0x7f0c00b8
-			public const int Base_ThemeOverlay_AppCompat_Dark = 2131493048;
+			// aapt resource value: 0x7f0b0073
+			public const int Base_V21_Theme_AppCompat = 2131427443;
 			
-			// aapt resource value: 0x7f0c00b9
-			public const int Base_ThemeOverlay_AppCompat_Dark_ActionBar = 2131493049;
+			// aapt resource value: 0x7f0b0074
+			public const int Base_V21_Theme_AppCompat_Dialog = 2131427444;
 			
-			// aapt resource value: 0x7f0c00ba
-			public const int Base_ThemeOverlay_AppCompat_Light = 2131493050;
+			// aapt resource value: 0x7f0b0075
+			public const int Base_V21_Theme_AppCompat_Light = 2131427445;
 			
-			// aapt resource value: 0x7f0c002e
-			public const int Base_V11_Theme_AppCompat_Dialog = 2131492910;
+			// aapt resource value: 0x7f0b0076
+			public const int Base_V21_Theme_AppCompat_Light_Dialog = 2131427446;
 			
-			// aapt resource value: 0x7f0c002f
-			public const int Base_V11_Theme_AppCompat_Light_Dialog = 2131492911;
+			// aapt resource value: 0x7f0b0098
+			public const int Base_V22_Theme_AppCompat = 2131427480;
 			
-			// aapt resource value: 0x7f0c0037
-			public const int Base_V12_Widget_AppCompat_AutoCompleteTextView = 2131492919;
+			// aapt resource value: 0x7f0b0099
+			public const int Base_V22_Theme_AppCompat_Light = 2131427481;
 			
-			// aapt resource value: 0x7f0c0038
-			public const int Base_V12_Widget_AppCompat_EditText = 2131492920;
+			// aapt resource value: 0x7f0b009c
+			public const int Base_V23_Theme_AppCompat = 2131427484;
 			
-			// aapt resource value: 0x7f0c0073
-			public const int Base_V21_Theme_AppCompat = 2131492979;
+			// aapt resource value: 0x7f0b009d
+			public const int Base_V23_Theme_AppCompat_Light = 2131427485;
 			
-			// aapt resource value: 0x7f0c0074
-			public const int Base_V21_Theme_AppCompat_Dialog = 2131492980;
+			// aapt resource value: 0x7f0b00bb
+			public const int Base_V7_Theme_AppCompat = 2131427515;
 			
-			// aapt resource value: 0x7f0c0075
-			public const int Base_V21_Theme_AppCompat_Light = 2131492981;
+			// aapt resource value: 0x7f0b00bc
+			public const int Base_V7_Theme_AppCompat_Dialog = 2131427516;
 			
-			// aapt resource value: 0x7f0c0076
-			public const int Base_V21_Theme_AppCompat_Light_Dialog = 2131492982;
+			// aapt resource value: 0x7f0b00bd
+			public const int Base_V7_Theme_AppCompat_Light = 2131427517;
 			
-			// aapt resource value: 0x7f0c0098
-			public const int Base_V22_Theme_AppCompat = 2131493016;
+			// aapt resource value: 0x7f0b00be
+			public const int Base_V7_Theme_AppCompat_Light_Dialog = 2131427518;
 			
-			// aapt resource value: 0x7f0c0099
-			public const int Base_V22_Theme_AppCompat_Light = 2131493017;
+			// aapt resource value: 0x7f0b00bf
+			public const int Base_V7_Widget_AppCompat_AutoCompleteTextView = 2131427519;
 			
-			// aapt resource value: 0x7f0c009c
-			public const int Base_V23_Theme_AppCompat = 2131493020;
+			// aapt resource value: 0x7f0b00c0
+			public const int Base_V7_Widget_AppCompat_EditText = 2131427520;
 			
-			// aapt resource value: 0x7f0c009d
-			public const int Base_V23_Theme_AppCompat_Light = 2131493021;
+			// aapt resource value: 0x7f0b00c1
+			public const int Base_Widget_AppCompat_ActionBar = 2131427521;
 			
-			// aapt resource value: 0x7f0c00bb
-			public const int Base_V7_Theme_AppCompat = 2131493051;
+			// aapt resource value: 0x7f0b00c2
+			public const int Base_Widget_AppCompat_ActionBar_Solid = 2131427522;
 			
-			// aapt resource value: 0x7f0c00bc
-			public const int Base_V7_Theme_AppCompat_Dialog = 2131493052;
+			// aapt resource value: 0x7f0b00c3
+			public const int Base_Widget_AppCompat_ActionBar_TabBar = 2131427523;
 			
-			// aapt resource value: 0x7f0c00bd
-			public const int Base_V7_Theme_AppCompat_Light = 2131493053;
+			// aapt resource value: 0x7f0b0077
+			public const int Base_Widget_AppCompat_ActionBar_TabText = 2131427447;
 			
-			// aapt resource value: 0x7f0c00be
-			public const int Base_V7_Theme_AppCompat_Light_Dialog = 2131493054;
+			// aapt resource value: 0x7f0b0078
+			public const int Base_Widget_AppCompat_ActionBar_TabView = 2131427448;
 			
-			// aapt resource value: 0x7f0c00bf
-			public const int Base_V7_Widget_AppCompat_AutoCompleteTextView = 2131493055;
+			// aapt resource value: 0x7f0b0079
+			public const int Base_Widget_AppCompat_ActionButton = 2131427449;
 			
-			// aapt resource value: 0x7f0c00c0
-			public const int Base_V7_Widget_AppCompat_EditText = 2131493056;
+			// aapt resource value: 0x7f0b007a
+			public const int Base_Widget_AppCompat_ActionButton_CloseMode = 2131427450;
 			
-			// aapt resource value: 0x7f0c00c1
-			public const int Base_Widget_AppCompat_ActionBar = 2131493057;
+			// aapt resource value: 0x7f0b007b
+			public const int Base_Widget_AppCompat_ActionButton_Overflow = 2131427451;
 			
-			// aapt resource value: 0x7f0c00c2
-			public const int Base_Widget_AppCompat_ActionBar_Solid = 2131493058;
+			// aapt resource value: 0x7f0b00c4
+			public const int Base_Widget_AppCompat_ActionMode = 2131427524;
 			
-			// aapt resource value: 0x7f0c00c3
-			public const int Base_Widget_AppCompat_ActionBar_TabBar = 2131493059;
+			// aapt resource value: 0x7f0b00c5
+			public const int Base_Widget_AppCompat_ActivityChooserView = 2131427525;
 			
-			// aapt resource value: 0x7f0c0077
-			public const int Base_Widget_AppCompat_ActionBar_TabText = 2131492983;
+			// aapt resource value: 0x7f0b0039
+			public const int Base_Widget_AppCompat_AutoCompleteTextView = 2131427385;
 			
-			// aapt resource value: 0x7f0c0078
-			public const int Base_Widget_AppCompat_ActionBar_TabView = 2131492984;
+			// aapt resource value: 0x7f0b007c
+			public const int Base_Widget_AppCompat_Button = 2131427452;
 			
-			// aapt resource value: 0x7f0c0079
-			public const int Base_Widget_AppCompat_ActionButton = 2131492985;
+			// aapt resource value: 0x7f0b007d
+			public const int Base_Widget_AppCompat_Button_Borderless = 2131427453;
 			
-			// aapt resource value: 0x7f0c007a
-			public const int Base_Widget_AppCompat_ActionButton_CloseMode = 2131492986;
+			// aapt resource value: 0x7f0b007e
+			public const int Base_Widget_AppCompat_Button_Borderless_Colored = 2131427454;
 			
-			// aapt resource value: 0x7f0c007b
-			public const int Base_Widget_AppCompat_ActionButton_Overflow = 2131492987;
+			// aapt resource value: 0x7f0b00c6
+			public const int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131427526;
 			
-			// aapt resource value: 0x7f0c00c4
-			public const int Base_Widget_AppCompat_ActionMode = 2131493060;
+			// aapt resource value: 0x7f0b009e
+			public const int Base_Widget_AppCompat_Button_Colored = 2131427486;
 			
-			// aapt resource value: 0x7f0c00c5
-			public const int Base_Widget_AppCompat_ActivityChooserView = 2131493061;
+			// aapt resource value: 0x7f0b007f
+			public const int Base_Widget_AppCompat_Button_Small = 2131427455;
 			
-			// aapt resource value: 0x7f0c0039
-			public const int Base_Widget_AppCompat_AutoCompleteTextView = 2131492921;
+			// aapt resource value: 0x7f0b0080
+			public const int Base_Widget_AppCompat_ButtonBar = 2131427456;
 			
-			// aapt resource value: 0x7f0c007c
-			public const int Base_Widget_AppCompat_Button = 2131492988;
+			// aapt resource value: 0x7f0b00c7
+			public const int Base_Widget_AppCompat_ButtonBar_AlertDialog = 2131427527;
 			
-			// aapt resource value: 0x7f0c007d
-			public const int Base_Widget_AppCompat_Button_Borderless = 2131492989;
+			// aapt resource value: 0x7f0b0081
+			public const int Base_Widget_AppCompat_CompoundButton_CheckBox = 2131427457;
 			
-			// aapt resource value: 0x7f0c007e
-			public const int Base_Widget_AppCompat_Button_Borderless_Colored = 2131492990;
+			// aapt resource value: 0x7f0b0082
+			public const int Base_Widget_AppCompat_CompoundButton_RadioButton = 2131427458;
 			
-			// aapt resource value: 0x7f0c00c6
-			public const int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131493062;
+			// aapt resource value: 0x7f0b00c8
+			public const int Base_Widget_AppCompat_CompoundButton_Switch = 2131427528;
 			
-			// aapt resource value: 0x7f0c009e
-			public const int Base_Widget_AppCompat_Button_Colored = 2131493022;
+			// aapt resource value: 0x7f0b001b
+			public const int Base_Widget_AppCompat_DrawerArrowToggle = 2131427355;
 			
-			// aapt resource value: 0x7f0c007f
-			public const int Base_Widget_AppCompat_Button_Small = 2131492991;
+			// aapt resource value: 0x7f0b00c9
+			public const int Base_Widget_AppCompat_DrawerArrowToggle_Common = 2131427529;
 			
-			// aapt resource value: 0x7f0c0080
-			public const int Base_Widget_AppCompat_ButtonBar = 2131492992;
+			// aapt resource value: 0x7f0b0083
+			public const int Base_Widget_AppCompat_DropDownItem_Spinner = 2131427459;
 			
-			// aapt resource value: 0x7f0c00c7
-			public const int Base_Widget_AppCompat_ButtonBar_AlertDialog = 2131493063;
+			// aapt resource value: 0x7f0b003a
+			public const int Base_Widget_AppCompat_EditText = 2131427386;
 			
-			// aapt resource value: 0x7f0c0081
-			public const int Base_Widget_AppCompat_CompoundButton_CheckBox = 2131492993;
+			// aapt resource value: 0x7f0b0084
+			public const int Base_Widget_AppCompat_ImageButton = 2131427460;
 			
-			// aapt resource value: 0x7f0c0082
-			public const int Base_Widget_AppCompat_CompoundButton_RadioButton = 2131492994;
+			// aapt resource value: 0x7f0b00ca
+			public const int Base_Widget_AppCompat_Light_ActionBar = 2131427530;
 			
-			// aapt resource value: 0x7f0c00c8
-			public const int Base_Widget_AppCompat_CompoundButton_Switch = 2131493064;
+			// aapt resource value: 0x7f0b00cb
+			public const int Base_Widget_AppCompat_Light_ActionBar_Solid = 2131427531;
 			
-			// aapt resource value: 0x7f0c001b
-			public const int Base_Widget_AppCompat_DrawerArrowToggle = 2131492891;
+			// aapt resource value: 0x7f0b00cc
+			public const int Base_Widget_AppCompat_Light_ActionBar_TabBar = 2131427532;
 			
-			// aapt resource value: 0x7f0c00c9
-			public const int Base_Widget_AppCompat_DrawerArrowToggle_Common = 2131493065;
+			// aapt resource value: 0x7f0b0085
+			public const int Base_Widget_AppCompat_Light_ActionBar_TabText = 2131427461;
 			
-			// aapt resource value: 0x7f0c0083
-			public const int Base_Widget_AppCompat_DropDownItem_Spinner = 2131492995;
+			// aapt resource value: 0x7f0b0086
+			public const int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131427462;
 			
-			// aapt resource value: 0x7f0c003a
-			public const int Base_Widget_AppCompat_EditText = 2131492922;
+			// aapt resource value: 0x7f0b0087
+			public const int Base_Widget_AppCompat_Light_ActionBar_TabView = 2131427463;
 			
-			// aapt resource value: 0x7f0c0084
-			public const int Base_Widget_AppCompat_ImageButton = 2131492996;
+			// aapt resource value: 0x7f0b0088
+			public const int Base_Widget_AppCompat_Light_PopupMenu = 2131427464;
 			
-			// aapt resource value: 0x7f0c00ca
-			public const int Base_Widget_AppCompat_Light_ActionBar = 2131493066;
+			// aapt resource value: 0x7f0b0089
+			public const int Base_Widget_AppCompat_Light_PopupMenu_Overflow = 2131427465;
 			
-			// aapt resource value: 0x7f0c00cb
-			public const int Base_Widget_AppCompat_Light_ActionBar_Solid = 2131493067;
+			// aapt resource value: 0x7f0b008a
+			public const int Base_Widget_AppCompat_ListPopupWindow = 2131427466;
 			
-			// aapt resource value: 0x7f0c00cc
-			public const int Base_Widget_AppCompat_Light_ActionBar_TabBar = 2131493068;
+			// aapt resource value: 0x7f0b008b
+			public const int Base_Widget_AppCompat_ListView = 2131427467;
 			
-			// aapt resource value: 0x7f0c0085
-			public const int Base_Widget_AppCompat_Light_ActionBar_TabText = 2131492997;
+			// aapt resource value: 0x7f0b008c
+			public const int Base_Widget_AppCompat_ListView_DropDown = 2131427468;
 			
-			// aapt resource value: 0x7f0c0086
-			public const int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131492998;
+			// aapt resource value: 0x7f0b008d
+			public const int Base_Widget_AppCompat_ListView_Menu = 2131427469;
 			
-			// aapt resource value: 0x7f0c0087
-			public const int Base_Widget_AppCompat_Light_ActionBar_TabView = 2131492999;
+			// aapt resource value: 0x7f0b008e
+			public const int Base_Widget_AppCompat_PopupMenu = 2131427470;
 			
-			// aapt resource value: 0x7f0c0088
-			public const int Base_Widget_AppCompat_Light_PopupMenu = 2131493000;
+			// aapt resource value: 0x7f0b008f
+			public const int Base_Widget_AppCompat_PopupMenu_Overflow = 2131427471;
 			
-			// aapt resource value: 0x7f0c0089
-			public const int Base_Widget_AppCompat_Light_PopupMenu_Overflow = 2131493001;
+			// aapt resource value: 0x7f0b00cd
+			public const int Base_Widget_AppCompat_PopupWindow = 2131427533;
 			
-			// aapt resource value: 0x7f0c008a
-			public const int Base_Widget_AppCompat_ListPopupWindow = 2131493002;
+			// aapt resource value: 0x7f0b0030
+			public const int Base_Widget_AppCompat_ProgressBar = 2131427376;
 			
-			// aapt resource value: 0x7f0c008b
-			public const int Base_Widget_AppCompat_ListView = 2131493003;
+			// aapt resource value: 0x7f0b0031
+			public const int Base_Widget_AppCompat_ProgressBar_Horizontal = 2131427377;
 			
-			// aapt resource value: 0x7f0c008c
-			public const int Base_Widget_AppCompat_ListView_DropDown = 2131493004;
+			// aapt resource value: 0x7f0b0090
+			public const int Base_Widget_AppCompat_RatingBar = 2131427472;
 			
-			// aapt resource value: 0x7f0c008d
-			public const int Base_Widget_AppCompat_ListView_Menu = 2131493005;
+			// aapt resource value: 0x7f0b009f
+			public const int Base_Widget_AppCompat_RatingBar_Indicator = 2131427487;
 			
-			// aapt resource value: 0x7f0c008e
-			public const int Base_Widget_AppCompat_PopupMenu = 2131493006;
+			// aapt resource value: 0x7f0b00a0
+			public const int Base_Widget_AppCompat_RatingBar_Small = 2131427488;
 			
-			// aapt resource value: 0x7f0c008f
-			public const int Base_Widget_AppCompat_PopupMenu_Overflow = 2131493007;
+			// aapt resource value: 0x7f0b00ce
+			public const int Base_Widget_AppCompat_SearchView = 2131427534;
 			
-			// aapt resource value: 0x7f0c00cd
-			public const int Base_Widget_AppCompat_PopupWindow = 2131493069;
+			// aapt resource value: 0x7f0b00cf
+			public const int Base_Widget_AppCompat_SearchView_ActionBar = 2131427535;
 			
-			// aapt resource value: 0x7f0c0030
-			public const int Base_Widget_AppCompat_ProgressBar = 2131492912;
+			// aapt resource value: 0x7f0b0091
+			public const int Base_Widget_AppCompat_SeekBar = 2131427473;
 			
-			// aapt resource value: 0x7f0c0031
-			public const int Base_Widget_AppCompat_ProgressBar_Horizontal = 2131492913;
+			// aapt resource value: 0x7f0b0092
+			public const int Base_Widget_AppCompat_Spinner = 2131427474;
 			
-			// aapt resource value: 0x7f0c0090
-			public const int Base_Widget_AppCompat_RatingBar = 2131493008;
+			// aapt resource value: 0x7f0b001e
+			public const int Base_Widget_AppCompat_Spinner_Underlined = 2131427358;
 			
-			// aapt resource value: 0x7f0c009f
-			public const int Base_Widget_AppCompat_RatingBar_Indicator = 2131493023;
+			// aapt resource value: 0x7f0b0093
+			public const int Base_Widget_AppCompat_TextView_SpinnerItem = 2131427475;
 			
-			// aapt resource value: 0x7f0c00a0
-			public const int Base_Widget_AppCompat_RatingBar_Small = 2131493024;
+			// aapt resource value: 0x7f0b00d0
+			public const int Base_Widget_AppCompat_Toolbar = 2131427536;
 			
-			// aapt resource value: 0x7f0c00ce
-			public const int Base_Widget_AppCompat_SearchView = 2131493070;
+			// aapt resource value: 0x7f0b0094
+			public const int Base_Widget_AppCompat_Toolbar_Button_Navigation = 2131427476;
 			
-			// aapt resource value: 0x7f0c00cf
-			public const int Base_Widget_AppCompat_SearchView_ActionBar = 2131493071;
+			// aapt resource value: 0x7f0b015b
+			public const int Base_Widget_Design_TabLayout = 2131427675;
 			
-			// aapt resource value: 0x7f0c0091
-			public const int Base_Widget_AppCompat_SeekBar = 2131493009;
+			// aapt resource value: 0x7f0b0017
+			public const int CardView = 2131427351;
 			
-			// aapt resource value: 0x7f0c0092
-			public const int Base_Widget_AppCompat_Spinner = 2131493010;
+			// aapt resource value: 0x7f0b0019
+			public const int CardView_Dark = 2131427353;
 			
-			// aapt resource value: 0x7f0c001e
-			public const int Base_Widget_AppCompat_Spinner_Underlined = 2131492894;
+			// aapt resource value: 0x7f0b001a
+			public const int CardView_Light = 2131427354;
 			
-			// aapt resource value: 0x7f0c0093
-			public const int Base_Widget_AppCompat_TextView_SpinnerItem = 2131493011;
+			// aapt resource value: 0x7f0b0176
+			public const int CustomCheckBoxEditorThemeBlue = 2131427702;
 			
-			// aapt resource value: 0x7f0c00d0
-			public const int Base_Widget_AppCompat_Toolbar = 2131493072;
+			// aapt resource value: 0x7f0b0174
+			public const int CustomDatePickerThemeBlue = 2131427700;
 			
-			// aapt resource value: 0x7f0c0094
-			public const int Base_Widget_AppCompat_Toolbar_Button_Navigation = 2131493012;
+			// aapt resource value: 0x7f0b0178
+			public const int CustomIntegerEditorThemeBlue = 2131427704;
 			
-			// aapt resource value: 0x7f0c015b
-			public const int Base_Widget_Design_TabLayout = 2131493211;
+			// aapt resource value: 0x7f0b0179
+			public const int CustomSeekBarEditorThemeBlue = 2131427705;
 			
-			// aapt resource value: 0x7f0c0017
-			public const int CardView = 2131492887;
+			// aapt resource value: 0x7f0b017b
+			public const int CustomSpinnerEditorThemeBlue = 2131427707;
 			
-			// aapt resource value: 0x7f0c0019
-			public const int CardView_Dark = 2131492889;
+			// aapt resource value: 0x7f0b0177
+			public const int CustomTextEditorThemeBlue = 2131427703;
 			
-			// aapt resource value: 0x7f0c001a
-			public const int CardView_Light = 2131492890;
+			// aapt resource value: 0x7f0b0175
+			public const int CustomTimePickerThemeBlue = 2131427701;
 			
-			// aapt resource value: 0x7f0c018d
-			public const int ChartAnnotationStyle = 2131493261;
+			// aapt resource value: 0x7f0b017a
+			public const int CustomToggleButtonEditorThemeBlue = 2131427706;
 			
-			// aapt resource value: 0x7f0c0190
-			public const int ChartAnnotationStyle_CartesianCustomAnnotationStyle = 2131493264;
+			// aapt resource value: 0x7f0b017e
+			public const int MainTheme = 2131427710;
 			
-			// aapt resource value: 0x7f0c018e
-			public const int ChartAnnotationStyle_CartesianStrokedAnnotationStyle = 2131493262;
+			// aapt resource value: 0x7f0b017f
+			public const int MainTheme_Base = 2131427711;
 			
-			// aapt resource value: 0x7f0c018f
-			public const int ChartAnnotationStyle_CartesianStrokedAnnotationStyle_CartesianPlotBandAnnotationStyle = 2131493263;
+			// aapt resource value: 0x7f0b0032
+			public const int Platform_AppCompat = 2131427378;
 			
-			// aapt resource value: 0x7f0c0180
-			public const int ChartSeriesStyle = 2131493248;
+			// aapt resource value: 0x7f0b0033
+			public const int Platform_AppCompat_Light = 2131427379;
 			
-			// aapt resource value: 0x7f0c0185
-			public const int ChartSeriesStyle_CategoricalSeriesStyle = 2131493253;
+			// aapt resource value: 0x7f0b0095
+			public const int Platform_ThemeOverlay_AppCompat = 2131427477;
 			
-			// aapt resource value: 0x7f0c0182
-			public const int ChartSeriesStyle_CategoricalSeriesStyle_BarSeriesStyle = 2131493250;
+			// aapt resource value: 0x7f0b0096
+			public const int Platform_ThemeOverlay_AppCompat_Dark = 2131427478;
 			
-			// aapt resource value: 0x7f0c0186
-			public const int ChartSeriesStyle_CategoricalSeriesStyle_CategoricalStrokedSeriesStyle = 2131493254;
+			// aapt resource value: 0x7f0b0097
+			public const int Platform_ThemeOverlay_AppCompat_Light = 2131427479;
 			
-			// aapt resource value: 0x7f0c0187
-			public const int ChartSeriesStyle_CategoricalSeriesStyle_CategoricalStrokedSeriesStyle_AreaSeriesStyle = 2131493255;
+			// aapt resource value: 0x7f0b0034
+			public const int Platform_V11_AppCompat = 2131427380;
 			
-			// aapt resource value: 0x7f0c0183
-			public const int ChartSeriesStyle_CategoricalSeriesStyle_RangeBarSeriesStyle = 2131493251;
+			// aapt resource value: 0x7f0b0035
+			public const int Platform_V11_AppCompat_Light = 2131427381;
 			
-			// aapt resource value: 0x7f0c0184
-			public const int ChartSeriesStyle_CategoricalSeriesStyle_TestBarSeriesStyle = 2131493252;
+			// aapt resource value: 0x7f0b003c
+			public const int Platform_V14_AppCompat = 2131427388;
 			
-			// aapt resource value: 0x7f0c0176
-			public const int CustomCheckBoxEditorThemeBlue = 2131493238;
+			// aapt resource value: 0x7f0b003d
+			public const int Platform_V14_AppCompat_Light = 2131427389;
 			
-			// aapt resource value: 0x7f0c0174
-			public const int CustomDatePickerThemeBlue = 2131493236;
+			// aapt resource value: 0x7f0b0036
+			public const int Platform_Widget_AppCompat_Spinner = 2131427382;
 			
-			// aapt resource value: 0x7f0c0178
-			public const int CustomIntegerEditorThemeBlue = 2131493240;
+			// aapt resource value: 0x7f0b0172
+			public const int RadScrollViewStyle = 2131427698;
 			
-			// aapt resource value: 0x7f0c0179
-			public const int CustomSeekBarEditorThemeBlue = 2131493241;
+			// aapt resource value: 0x7f0b0173
+			public const int RadScrollViewTheme = 2131427699;
 			
-			// aapt resource value: 0x7f0c017b
-			public const int CustomSpinnerEditorThemeBlue = 2131493243;
+			// aapt resource value: 0x7f0b0043
+			public const int RtlOverlay_DialogWindowTitle_AppCompat = 2131427395;
 			
-			// aapt resource value: 0x7f0c0177
-			public const int CustomTextEditorThemeBlue = 2131493239;
+			// aapt resource value: 0x7f0b0044
+			public const int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = 2131427396;
 			
-			// aapt resource value: 0x7f0c0175
-			public const int CustomTimePickerThemeBlue = 2131493237;
+			// aapt resource value: 0x7f0b0045
+			public const int RtlOverlay_Widget_AppCompat_DialogTitle_Icon = 2131427397;
 			
-			// aapt resource value: 0x7f0c017a
-			public const int CustomToggleButtonEditorThemeBlue = 2131493242;
+			// aapt resource value: 0x7f0b0046
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem = 2131427398;
 			
-			// aapt resource value: 0x7f0c0192
-			public const int MainTheme = 2131493266;
+			// aapt resource value: 0x7f0b0047
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = 2131427399;
 			
-			// aapt resource value: 0x7f0c0193
-			public const int MainTheme_Base = 2131493267;
+			// aapt resource value: 0x7f0b0048
+			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = 2131427400;
 			
-			// aapt resource value: 0x7f0c0032
-			public const int Platform_AppCompat = 2131492914;
+			// aapt resource value: 0x7f0b0049
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown = 2131427401;
 			
-			// aapt resource value: 0x7f0c0033
-			public const int Platform_AppCompat_Light = 2131492915;
+			// aapt resource value: 0x7f0b004a
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = 2131427402;
 			
-			// aapt resource value: 0x7f0c0095
-			public const int Platform_ThemeOverlay_AppCompat = 2131493013;
+			// aapt resource value: 0x7f0b004b
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = 2131427403;
 			
-			// aapt resource value: 0x7f0c0096
-			public const int Platform_ThemeOverlay_AppCompat_Dark = 2131493014;
+			// aapt resource value: 0x7f0b004c
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Query = 2131427404;
 			
-			// aapt resource value: 0x7f0c0097
-			public const int Platform_ThemeOverlay_AppCompat_Light = 2131493015;
+			// aapt resource value: 0x7f0b004d
+			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Text = 2131427405;
 			
-			// aapt resource value: 0x7f0c0034
-			public const int Platform_V11_AppCompat = 2131492916;
+			// aapt resource value: 0x7f0b004e
+			public const int RtlOverlay_Widget_AppCompat_SearchView_MagIcon = 2131427406;
 			
-			// aapt resource value: 0x7f0c0035
-			public const int Platform_V11_AppCompat_Light = 2131492917;
+			// aapt resource value: 0x7f0b004f
+			public const int RtlUnderlay_Widget_AppCompat_ActionButton = 2131427407;
 			
-			// aapt resource value: 0x7f0c003c
-			public const int Platform_V14_AppCompat = 2131492924;
+			// aapt resource value: 0x7f0b0050
+			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131427408;
 			
-			// aapt resource value: 0x7f0c003d
-			public const int Platform_V14_AppCompat_Light = 2131492925;
+			// aapt resource value: 0x7f0b017c
+			public const int SpinnerItem = 2131427708;
 			
-			// aapt resource value: 0x7f0c0036
-			public const int Platform_Widget_AppCompat_Spinner = 2131492918;
+			// aapt resource value: 0x7f0b017d
+			public const int SpinnerItem_DropDownItem = 2131427709;
 			
-			// aapt resource value: 0x7f0c017f
-			public const int RadChartBaseStyle = 2131493247;
+			// aapt resource value: 0x7f0b00d1
+			public const int TextAppearance_AppCompat = 2131427537;
 			
-			// aapt resource value: 0x7f0c0172
-			public const int RadScrollViewStyle = 2131493234;
+			// aapt resource value: 0x7f0b00d2
+			public const int TextAppearance_AppCompat_Body1 = 2131427538;
 			
-			// aapt resource value: 0x7f0c0173
-			public const int RadScrollViewTheme = 2131493235;
+			// aapt resource value: 0x7f0b00d3
+			public const int TextAppearance_AppCompat_Body2 = 2131427539;
 			
-			// aapt resource value: 0x7f0c0043
-			public const int RtlOverlay_DialogWindowTitle_AppCompat = 2131492931;
+			// aapt resource value: 0x7f0b00d4
+			public const int TextAppearance_AppCompat_Button = 2131427540;
 			
-			// aapt resource value: 0x7f0c0044
-			public const int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = 2131492932;
+			// aapt resource value: 0x7f0b00d5
+			public const int TextAppearance_AppCompat_Caption = 2131427541;
 			
-			// aapt resource value: 0x7f0c0045
-			public const int RtlOverlay_Widget_AppCompat_DialogTitle_Icon = 2131492933;
+			// aapt resource value: 0x7f0b00d6
+			public const int TextAppearance_AppCompat_Display1 = 2131427542;
 			
-			// aapt resource value: 0x7f0c0046
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem = 2131492934;
+			// aapt resource value: 0x7f0b00d7
+			public const int TextAppearance_AppCompat_Display2 = 2131427543;
 			
-			// aapt resource value: 0x7f0c0047
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = 2131492935;
+			// aapt resource value: 0x7f0b00d8
+			public const int TextAppearance_AppCompat_Display3 = 2131427544;
 			
-			// aapt resource value: 0x7f0c0048
-			public const int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = 2131492936;
+			// aapt resource value: 0x7f0b00d9
+			public const int TextAppearance_AppCompat_Display4 = 2131427545;
 			
-			// aapt resource value: 0x7f0c0049
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown = 2131492937;
+			// aapt resource value: 0x7f0b00da
+			public const int TextAppearance_AppCompat_Headline = 2131427546;
 			
-			// aapt resource value: 0x7f0c004a
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = 2131492938;
+			// aapt resource value: 0x7f0b00db
+			public const int TextAppearance_AppCompat_Inverse = 2131427547;
 			
-			// aapt resource value: 0x7f0c004b
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = 2131492939;
+			// aapt resource value: 0x7f0b00dc
+			public const int TextAppearance_AppCompat_Large = 2131427548;
 			
-			// aapt resource value: 0x7f0c004c
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Query = 2131492940;
+			// aapt resource value: 0x7f0b00dd
+			public const int TextAppearance_AppCompat_Large_Inverse = 2131427549;
 			
-			// aapt resource value: 0x7f0c004d
-			public const int RtlOverlay_Widget_AppCompat_Search_DropDown_Text = 2131492941;
+			// aapt resource value: 0x7f0b00de
+			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131427550;
 			
-			// aapt resource value: 0x7f0c004e
-			public const int RtlOverlay_Widget_AppCompat_SearchView_MagIcon = 2131492942;
+			// aapt resource value: 0x7f0b00df
+			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131427551;
 			
-			// aapt resource value: 0x7f0c004f
-			public const int RtlUnderlay_Widget_AppCompat_ActionButton = 2131492943;
+			// aapt resource value: 0x7f0b00e0
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131427552;
 			
-			// aapt resource value: 0x7f0c0050
-			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131492944;
+			// aapt resource value: 0x7f0b00e1
+			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131427553;
 			
-			// aapt resource value: 0x7f0c017c
-			public const int SpinnerItem = 2131493244;
+			// aapt resource value: 0x7f0b00e2
+			public const int TextAppearance_AppCompat_Medium = 2131427554;
 			
-			// aapt resource value: 0x7f0c017d
-			public const int SpinnerItem_DropDownItem = 2131493245;
+			// aapt resource value: 0x7f0b00e3
+			public const int TextAppearance_AppCompat_Medium_Inverse = 2131427555;
 			
-			// aapt resource value: 0x7f0c00d1
-			public const int TextAppearance_AppCompat = 2131493073;
+			// aapt resource value: 0x7f0b00e4
+			public const int TextAppearance_AppCompat_Menu = 2131427556;
 			
-			// aapt resource value: 0x7f0c00d2
-			public const int TextAppearance_AppCompat_Body1 = 2131493074;
+			// aapt resource value: 0x7f0b00e5
+			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131427557;
 			
-			// aapt resource value: 0x7f0c00d3
-			public const int TextAppearance_AppCompat_Body2 = 2131493075;
+			// aapt resource value: 0x7f0b00e6
+			public const int TextAppearance_AppCompat_SearchResult_Title = 2131427558;
 			
-			// aapt resource value: 0x7f0c00d4
-			public const int TextAppearance_AppCompat_Button = 2131493076;
+			// aapt resource value: 0x7f0b00e7
+			public const int TextAppearance_AppCompat_Small = 2131427559;
 			
-			// aapt resource value: 0x7f0c00d5
-			public const int TextAppearance_AppCompat_Caption = 2131493077;
+			// aapt resource value: 0x7f0b00e8
+			public const int TextAppearance_AppCompat_Small_Inverse = 2131427560;
 			
-			// aapt resource value: 0x7f0c00d6
-			public const int TextAppearance_AppCompat_Display1 = 2131493078;
+			// aapt resource value: 0x7f0b00e9
+			public const int TextAppearance_AppCompat_Subhead = 2131427561;
 			
-			// aapt resource value: 0x7f0c00d7
-			public const int TextAppearance_AppCompat_Display2 = 2131493079;
+			// aapt resource value: 0x7f0b00ea
+			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131427562;
 			
-			// aapt resource value: 0x7f0c00d8
-			public const int TextAppearance_AppCompat_Display3 = 2131493080;
+			// aapt resource value: 0x7f0b00eb
+			public const int TextAppearance_AppCompat_Title = 2131427563;
 			
-			// aapt resource value: 0x7f0c00d9
-			public const int TextAppearance_AppCompat_Display4 = 2131493081;
+			// aapt resource value: 0x7f0b00ec
+			public const int TextAppearance_AppCompat_Title_Inverse = 2131427564;
 			
-			// aapt resource value: 0x7f0c00da
-			public const int TextAppearance_AppCompat_Headline = 2131493082;
+			// aapt resource value: 0x7f0b00ed
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131427565;
 			
-			// aapt resource value: 0x7f0c00db
-			public const int TextAppearance_AppCompat_Inverse = 2131493083;
+			// aapt resource value: 0x7f0b00ee
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131427566;
 			
-			// aapt resource value: 0x7f0c00dc
-			public const int TextAppearance_AppCompat_Large = 2131493084;
+			// aapt resource value: 0x7f0b00ef
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131427567;
 			
-			// aapt resource value: 0x7f0c00dd
-			public const int TextAppearance_AppCompat_Large_Inverse = 2131493085;
+			// aapt resource value: 0x7f0b00f0
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131427568;
 			
-			// aapt resource value: 0x7f0c00de
-			public const int TextAppearance_AppCompat_Light_SearchResult_Subtitle = 2131493086;
+			// aapt resource value: 0x7f0b00f1
+			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131427569;
 			
-			// aapt resource value: 0x7f0c00df
-			public const int TextAppearance_AppCompat_Light_SearchResult_Title = 2131493087;
+			// aapt resource value: 0x7f0b00f2
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131427570;
 			
-			// aapt resource value: 0x7f0c00e0
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = 2131493088;
+			// aapt resource value: 0x7f0b00f3
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131427571;
 			
-			// aapt resource value: 0x7f0c00e1
-			public const int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = 2131493089;
+			// aapt resource value: 0x7f0b00f4
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131427572;
 			
-			// aapt resource value: 0x7f0c00e2
-			public const int TextAppearance_AppCompat_Medium = 2131493090;
+			// aapt resource value: 0x7f0b00f5
+			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131427573;
 			
-			// aapt resource value: 0x7f0c00e3
-			public const int TextAppearance_AppCompat_Medium_Inverse = 2131493091;
+			// aapt resource value: 0x7f0b00f6
+			public const int TextAppearance_AppCompat_Widget_Button = 2131427574;
 			
-			// aapt resource value: 0x7f0c00e4
-			public const int TextAppearance_AppCompat_Menu = 2131493092;
+			// aapt resource value: 0x7f0b00f7
+			public const int TextAppearance_AppCompat_Widget_Button_Inverse = 2131427575;
 			
-			// aapt resource value: 0x7f0c00e5
-			public const int TextAppearance_AppCompat_SearchResult_Subtitle = 2131493093;
+			// aapt resource value: 0x7f0b00f8
+			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131427576;
 			
-			// aapt resource value: 0x7f0c00e6
-			public const int TextAppearance_AppCompat_SearchResult_Title = 2131493094;
+			// aapt resource value: 0x7f0b00f9
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131427577;
 			
-			// aapt resource value: 0x7f0c00e7
-			public const int TextAppearance_AppCompat_Small = 2131493095;
+			// aapt resource value: 0x7f0b00fa
+			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131427578;
 			
-			// aapt resource value: 0x7f0c00e8
-			public const int TextAppearance_AppCompat_Small_Inverse = 2131493096;
+			// aapt resource value: 0x7f0b00fb
+			public const int TextAppearance_AppCompat_Widget_Switch = 2131427579;
 			
-			// aapt resource value: 0x7f0c00e9
-			public const int TextAppearance_AppCompat_Subhead = 2131493097;
+			// aapt resource value: 0x7f0b00fc
+			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131427580;
 			
-			// aapt resource value: 0x7f0c00ea
-			public const int TextAppearance_AppCompat_Subhead_Inverse = 2131493098;
+			// aapt resource value: 0x7f0b015c
+			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131427676;
 			
-			// aapt resource value: 0x7f0c00eb
-			public const int TextAppearance_AppCompat_Title = 2131493099;
+			// aapt resource value: 0x7f0b015d
+			public const int TextAppearance_Design_Counter = 2131427677;
 			
-			// aapt resource value: 0x7f0c00ec
-			public const int TextAppearance_AppCompat_Title_Inverse = 2131493100;
+			// aapt resource value: 0x7f0b015e
+			public const int TextAppearance_Design_Counter_Overflow = 2131427678;
 			
-			// aapt resource value: 0x7f0c00ed
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Menu = 2131493101;
+			// aapt resource value: 0x7f0b015f
+			public const int TextAppearance_Design_Error = 2131427679;
 			
-			// aapt resource value: 0x7f0c00ee
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle = 2131493102;
+			// aapt resource value: 0x7f0b0160
+			public const int TextAppearance_Design_Hint = 2131427680;
 			
-			// aapt resource value: 0x7f0c00ef
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = 2131493103;
+			// aapt resource value: 0x7f0b0161
+			public const int TextAppearance_Design_Snackbar_Message = 2131427681;
 			
-			// aapt resource value: 0x7f0c00f0
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title = 2131493104;
+			// aapt resource value: 0x7f0b0162
+			public const int TextAppearance_Design_Tab = 2131427682;
 			
-			// aapt resource value: 0x7f0c00f1
-			public const int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = 2131493105;
+			// aapt resource value: 0x7f0b003e
+			public const int TextAppearance_StatusBar_EventContent = 2131427390;
 			
-			// aapt resource value: 0x7f0c00f2
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle = 2131493106;
+			// aapt resource value: 0x7f0b003f
+			public const int TextAppearance_StatusBar_EventContent_Info = 2131427391;
 			
-			// aapt resource value: 0x7f0c00f3
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = 2131493107;
+			// aapt resource value: 0x7f0b0040
+			public const int TextAppearance_StatusBar_EventContent_Line2 = 2131427392;
 			
-			// aapt resource value: 0x7f0c00f4
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title = 2131493108;
+			// aapt resource value: 0x7f0b0041
+			public const int TextAppearance_StatusBar_EventContent_Time = 2131427393;
 			
-			// aapt resource value: 0x7f0c00f5
-			public const int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = 2131493109;
+			// aapt resource value: 0x7f0b0042
+			public const int TextAppearance_StatusBar_EventContent_Title = 2131427394;
 			
-			// aapt resource value: 0x7f0c00f6
-			public const int TextAppearance_AppCompat_Widget_Button = 2131493110;
+			// aapt resource value: 0x7f0b00fd
+			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131427581;
 			
-			// aapt resource value: 0x7f0c00f7
-			public const int TextAppearance_AppCompat_Widget_Button_Inverse = 2131493111;
+			// aapt resource value: 0x7f0b00fe
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131427582;
 			
-			// aapt resource value: 0x7f0c00f8
-			public const int TextAppearance_AppCompat_Widget_DropDownItem = 2131493112;
+			// aapt resource value: 0x7f0b00ff
+			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131427583;
 			
-			// aapt resource value: 0x7f0c00f9
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131493113;
+			// aapt resource value: 0x7f0b0100
+			public const int Theme_AppCompat = 2131427584;
 			
-			// aapt resource value: 0x7f0c00fa
-			public const int TextAppearance_AppCompat_Widget_PopupMenu_Small = 2131493114;
+			// aapt resource value: 0x7f0b0101
+			public const int Theme_AppCompat_CompactMenu = 2131427585;
 			
-			// aapt resource value: 0x7f0c00fb
-			public const int TextAppearance_AppCompat_Widget_Switch = 2131493115;
+			// aapt resource value: 0x7f0b001f
+			public const int Theme_AppCompat_DayNight = 2131427359;
 			
-			// aapt resource value: 0x7f0c00fc
-			public const int TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131493116;
+			// aapt resource value: 0x7f0b0020
+			public const int Theme_AppCompat_DayNight_DarkActionBar = 2131427360;
 			
-			// aapt resource value: 0x7f0c015c
-			public const int TextAppearance_Design_CollapsingToolbar_Expanded = 2131493212;
+			// aapt resource value: 0x7f0b0021
+			public const int Theme_AppCompat_DayNight_Dialog = 2131427361;
 			
-			// aapt resource value: 0x7f0c015d
-			public const int TextAppearance_Design_Counter = 2131493213;
+			// aapt resource value: 0x7f0b0022
+			public const int Theme_AppCompat_DayNight_Dialog_Alert = 2131427362;
 			
-			// aapt resource value: 0x7f0c015e
-			public const int TextAppearance_Design_Counter_Overflow = 2131493214;
+			// aapt resource value: 0x7f0b0023
+			public const int Theme_AppCompat_DayNight_Dialog_MinWidth = 2131427363;
 			
-			// aapt resource value: 0x7f0c015f
-			public const int TextAppearance_Design_Error = 2131493215;
+			// aapt resource value: 0x7f0b0024
+			public const int Theme_AppCompat_DayNight_DialogWhenLarge = 2131427364;
 			
-			// aapt resource value: 0x7f0c0160
-			public const int TextAppearance_Design_Hint = 2131493216;
+			// aapt resource value: 0x7f0b0025
+			public const int Theme_AppCompat_DayNight_NoActionBar = 2131427365;
 			
-			// aapt resource value: 0x7f0c0161
-			public const int TextAppearance_Design_Snackbar_Message = 2131493217;
+			// aapt resource value: 0x7f0b0102
+			public const int Theme_AppCompat_Dialog = 2131427586;
 			
-			// aapt resource value: 0x7f0c0162
-			public const int TextAppearance_Design_Tab = 2131493218;
+			// aapt resource value: 0x7f0b0103
+			public const int Theme_AppCompat_Dialog_Alert = 2131427587;
 			
-			// aapt resource value: 0x7f0c003e
-			public const int TextAppearance_StatusBar_EventContent = 2131492926;
+			// aapt resource value: 0x7f0b0104
+			public const int Theme_AppCompat_Dialog_MinWidth = 2131427588;
 			
-			// aapt resource value: 0x7f0c003f
-			public const int TextAppearance_StatusBar_EventContent_Info = 2131492927;
+			// aapt resource value: 0x7f0b0105
+			public const int Theme_AppCompat_DialogWhenLarge = 2131427589;
 			
-			// aapt resource value: 0x7f0c0040
-			public const int TextAppearance_StatusBar_EventContent_Line2 = 2131492928;
+			// aapt resource value: 0x7f0b0106
+			public const int Theme_AppCompat_Light = 2131427590;
 			
-			// aapt resource value: 0x7f0c0041
-			public const int TextAppearance_StatusBar_EventContent_Time = 2131492929;
+			// aapt resource value: 0x7f0b0107
+			public const int Theme_AppCompat_Light_DarkActionBar = 2131427591;
 			
-			// aapt resource value: 0x7f0c0042
-			public const int TextAppearance_StatusBar_EventContent_Title = 2131492930;
+			// aapt resource value: 0x7f0b0108
+			public const int Theme_AppCompat_Light_Dialog = 2131427592;
 			
-			// aapt resource value: 0x7f0c00fd
-			public const int TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131493117;
+			// aapt resource value: 0x7f0b0109
+			public const int Theme_AppCompat_Light_Dialog_Alert = 2131427593;
 			
-			// aapt resource value: 0x7f0c00fe
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131493118;
+			// aapt resource value: 0x7f0b010a
+			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131427594;
 			
-			// aapt resource value: 0x7f0c00ff
-			public const int TextAppearance_Widget_AppCompat_Toolbar_Title = 2131493119;
+			// aapt resource value: 0x7f0b010b
+			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131427595;
 			
-			// aapt resource value: 0x7f0c0100
-			public const int Theme_AppCompat = 2131493120;
+			// aapt resource value: 0x7f0b010c
+			public const int Theme_AppCompat_Light_NoActionBar = 2131427596;
 			
-			// aapt resource value: 0x7f0c0101
-			public const int Theme_AppCompat_CompactMenu = 2131493121;
+			// aapt resource value: 0x7f0b010d
+			public const int Theme_AppCompat_NoActionBar = 2131427597;
 			
-			// aapt resource value: 0x7f0c001f
-			public const int Theme_AppCompat_DayNight = 2131492895;
+			// aapt resource value: 0x7f0b0163
+			public const int Theme_Design = 2131427683;
 			
-			// aapt resource value: 0x7f0c0020
-			public const int Theme_AppCompat_DayNight_DarkActionBar = 2131492896;
+			// aapt resource value: 0x7f0b0164
+			public const int Theme_Design_BottomSheetDialog = 2131427684;
 			
-			// aapt resource value: 0x7f0c0021
-			public const int Theme_AppCompat_DayNight_Dialog = 2131492897;
+			// aapt resource value: 0x7f0b0165
+			public const int Theme_Design_Light = 2131427685;
 			
-			// aapt resource value: 0x7f0c0022
-			public const int Theme_AppCompat_DayNight_Dialog_Alert = 2131492898;
+			// aapt resource value: 0x7f0b0166
+			public const int Theme_Design_Light_BottomSheetDialog = 2131427686;
 			
-			// aapt resource value: 0x7f0c0023
-			public const int Theme_AppCompat_DayNight_Dialog_MinWidth = 2131492899;
+			// aapt resource value: 0x7f0b0167
+			public const int Theme_Design_Light_NoActionBar = 2131427687;
 			
-			// aapt resource value: 0x7f0c0024
-			public const int Theme_AppCompat_DayNight_DialogWhenLarge = 2131492900;
+			// aapt resource value: 0x7f0b0168
+			public const int Theme_Design_NoActionBar = 2131427688;
 			
-			// aapt resource value: 0x7f0c0025
-			public const int Theme_AppCompat_DayNight_NoActionBar = 2131492901;
+			// aapt resource value: 0x7f0b0000
+			public const int Theme_MediaRouter = 2131427328;
 			
-			// aapt resource value: 0x7f0c0102
-			public const int Theme_AppCompat_Dialog = 2131493122;
+			// aapt resource value: 0x7f0b0001
+			public const int Theme_MediaRouter_Light = 2131427329;
 			
-			// aapt resource value: 0x7f0c0103
-			public const int Theme_AppCompat_Dialog_Alert = 2131493123;
+			// aapt resource value: 0x7f0b0002
+			public const int Theme_MediaRouter_Light_DarkControlPanel = 2131427330;
 			
-			// aapt resource value: 0x7f0c0104
-			public const int Theme_AppCompat_Dialog_MinWidth = 2131493124;
+			// aapt resource value: 0x7f0b0003
+			public const int Theme_MediaRouter_LightControlPanel = 2131427331;
 			
-			// aapt resource value: 0x7f0c0105
-			public const int Theme_AppCompat_DialogWhenLarge = 2131493125;
+			// aapt resource value: 0x7f0b010e
+			public const int ThemeOverlay_AppCompat = 2131427598;
 			
-			// aapt resource value: 0x7f0c0106
-			public const int Theme_AppCompat_Light = 2131493126;
+			// aapt resource value: 0x7f0b010f
+			public const int ThemeOverlay_AppCompat_ActionBar = 2131427599;
 			
-			// aapt resource value: 0x7f0c0107
-			public const int Theme_AppCompat_Light_DarkActionBar = 2131493127;
+			// aapt resource value: 0x7f0b0110
+			public const int ThemeOverlay_AppCompat_Dark = 2131427600;
 			
-			// aapt resource value: 0x7f0c0108
-			public const int Theme_AppCompat_Light_Dialog = 2131493128;
+			// aapt resource value: 0x7f0b0111
+			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131427601;
 			
-			// aapt resource value: 0x7f0c0109
-			public const int Theme_AppCompat_Light_Dialog_Alert = 2131493129;
+			// aapt resource value: 0x7f0b0112
+			public const int ThemeOverlay_AppCompat_Light = 2131427602;
 			
-			// aapt resource value: 0x7f0c010a
-			public const int Theme_AppCompat_Light_Dialog_MinWidth = 2131493130;
+			// aapt resource value: 0x7f0b0113
+			public const int Widget_AppCompat_ActionBar = 2131427603;
 			
-			// aapt resource value: 0x7f0c010b
-			public const int Theme_AppCompat_Light_DialogWhenLarge = 2131493131;
+			// aapt resource value: 0x7f0b0114
+			public const int Widget_AppCompat_ActionBar_Solid = 2131427604;
 			
-			// aapt resource value: 0x7f0c010c
-			public const int Theme_AppCompat_Light_NoActionBar = 2131493132;
+			// aapt resource value: 0x7f0b0115
+			public const int Widget_AppCompat_ActionBar_TabBar = 2131427605;
 			
-			// aapt resource value: 0x7f0c010d
-			public const int Theme_AppCompat_NoActionBar = 2131493133;
+			// aapt resource value: 0x7f0b0116
+			public const int Widget_AppCompat_ActionBar_TabText = 2131427606;
 			
-			// aapt resource value: 0x7f0c0191
-			public const int Theme_ChartTheme = 2131493265;
+			// aapt resource value: 0x7f0b0117
+			public const int Widget_AppCompat_ActionBar_TabView = 2131427607;
 			
-			// aapt resource value: 0x7f0c0163
-			public const int Theme_Design = 2131493219;
+			// aapt resource value: 0x7f0b0118
+			public const int Widget_AppCompat_ActionButton = 2131427608;
 			
-			// aapt resource value: 0x7f0c0164
-			public const int Theme_Design_BottomSheetDialog = 2131493220;
+			// aapt resource value: 0x7f0b0119
+			public const int Widget_AppCompat_ActionButton_CloseMode = 2131427609;
 			
-			// aapt resource value: 0x7f0c0165
-			public const int Theme_Design_Light = 2131493221;
+			// aapt resource value: 0x7f0b011a
+			public const int Widget_AppCompat_ActionButton_Overflow = 2131427610;
 			
-			// aapt resource value: 0x7f0c0166
-			public const int Theme_Design_Light_BottomSheetDialog = 2131493222;
+			// aapt resource value: 0x7f0b011b
+			public const int Widget_AppCompat_ActionMode = 2131427611;
 			
-			// aapt resource value: 0x7f0c0167
-			public const int Theme_Design_Light_NoActionBar = 2131493223;
+			// aapt resource value: 0x7f0b011c
+			public const int Widget_AppCompat_ActivityChooserView = 2131427612;
 			
-			// aapt resource value: 0x7f0c0168
-			public const int Theme_Design_NoActionBar = 2131493224;
+			// aapt resource value: 0x7f0b011d
+			public const int Widget_AppCompat_AutoCompleteTextView = 2131427613;
 			
-			// aapt resource value: 0x7f0c0000
-			public const int Theme_MediaRouter = 2131492864;
+			// aapt resource value: 0x7f0b011e
+			public const int Widget_AppCompat_Button = 2131427614;
 			
-			// aapt resource value: 0x7f0c0001
-			public const int Theme_MediaRouter_Light = 2131492865;
+			// aapt resource value: 0x7f0b011f
+			public const int Widget_AppCompat_Button_Borderless = 2131427615;
 			
-			// aapt resource value: 0x7f0c0002
-			public const int Theme_MediaRouter_Light_DarkControlPanel = 2131492866;
+			// aapt resource value: 0x7f0b0120
+			public const int Widget_AppCompat_Button_Borderless_Colored = 2131427616;
 			
-			// aapt resource value: 0x7f0c0003
-			public const int Theme_MediaRouter_LightControlPanel = 2131492867;
+			// aapt resource value: 0x7f0b0121
+			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131427617;
 			
-			// aapt resource value: 0x7f0c010e
-			public const int ThemeOverlay_AppCompat = 2131493134;
+			// aapt resource value: 0x7f0b0122
+			public const int Widget_AppCompat_Button_Colored = 2131427618;
 			
-			// aapt resource value: 0x7f0c010f
-			public const int ThemeOverlay_AppCompat_ActionBar = 2131493135;
+			// aapt resource value: 0x7f0b0123
+			public const int Widget_AppCompat_Button_Small = 2131427619;
 			
-			// aapt resource value: 0x7f0c0110
-			public const int ThemeOverlay_AppCompat_Dark = 2131493136;
+			// aapt resource value: 0x7f0b0124
+			public const int Widget_AppCompat_ButtonBar = 2131427620;
 			
-			// aapt resource value: 0x7f0c0111
-			public const int ThemeOverlay_AppCompat_Dark_ActionBar = 2131493137;
+			// aapt resource value: 0x7f0b0125
+			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131427621;
 			
-			// aapt resource value: 0x7f0c0112
-			public const int ThemeOverlay_AppCompat_Light = 2131493138;
+			// aapt resource value: 0x7f0b0126
+			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131427622;
 			
-			// aapt resource value: 0x7f0c0113
-			public const int Widget_AppCompat_ActionBar = 2131493139;
+			// aapt resource value: 0x7f0b0127
+			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131427623;
 			
-			// aapt resource value: 0x7f0c0114
-			public const int Widget_AppCompat_ActionBar_Solid = 2131493140;
+			// aapt resource value: 0x7f0b0128
+			public const int Widget_AppCompat_CompoundButton_Switch = 2131427624;
 			
-			// aapt resource value: 0x7f0c0115
-			public const int Widget_AppCompat_ActionBar_TabBar = 2131493141;
+			// aapt resource value: 0x7f0b0129
+			public const int Widget_AppCompat_DrawerArrowToggle = 2131427625;
 			
-			// aapt resource value: 0x7f0c0116
-			public const int Widget_AppCompat_ActionBar_TabText = 2131493142;
+			// aapt resource value: 0x7f0b012a
+			public const int Widget_AppCompat_DropDownItem_Spinner = 2131427626;
 			
-			// aapt resource value: 0x7f0c0117
-			public const int Widget_AppCompat_ActionBar_TabView = 2131493143;
+			// aapt resource value: 0x7f0b012b
+			public const int Widget_AppCompat_EditText = 2131427627;
 			
-			// aapt resource value: 0x7f0c0118
-			public const int Widget_AppCompat_ActionButton = 2131493144;
+			// aapt resource value: 0x7f0b012c
+			public const int Widget_AppCompat_ImageButton = 2131427628;
 			
-			// aapt resource value: 0x7f0c0119
-			public const int Widget_AppCompat_ActionButton_CloseMode = 2131493145;
+			// aapt resource value: 0x7f0b012d
+			public const int Widget_AppCompat_Light_ActionBar = 2131427629;
 			
-			// aapt resource value: 0x7f0c011a
-			public const int Widget_AppCompat_ActionButton_Overflow = 2131493146;
+			// aapt resource value: 0x7f0b012e
+			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131427630;
 			
-			// aapt resource value: 0x7f0c011b
-			public const int Widget_AppCompat_ActionMode = 2131493147;
+			// aapt resource value: 0x7f0b012f
+			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131427631;
 			
-			// aapt resource value: 0x7f0c011c
-			public const int Widget_AppCompat_ActivityChooserView = 2131493148;
+			// aapt resource value: 0x7f0b0130
+			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131427632;
 			
-			// aapt resource value: 0x7f0c011d
-			public const int Widget_AppCompat_AutoCompleteTextView = 2131493149;
+			// aapt resource value: 0x7f0b0131
+			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131427633;
 			
-			// aapt resource value: 0x7f0c011e
-			public const int Widget_AppCompat_Button = 2131493150;
+			// aapt resource value: 0x7f0b0132
+			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131427634;
 			
-			// aapt resource value: 0x7f0c011f
-			public const int Widget_AppCompat_Button_Borderless = 2131493151;
+			// aapt resource value: 0x7f0b0133
+			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131427635;
 			
-			// aapt resource value: 0x7f0c0120
-			public const int Widget_AppCompat_Button_Borderless_Colored = 2131493152;
+			// aapt resource value: 0x7f0b0134
+			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131427636;
 			
-			// aapt resource value: 0x7f0c0121
-			public const int Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131493153;
+			// aapt resource value: 0x7f0b0135
+			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131427637;
 			
-			// aapt resource value: 0x7f0c0122
-			public const int Widget_AppCompat_Button_Colored = 2131493154;
+			// aapt resource value: 0x7f0b0136
+			public const int Widget_AppCompat_Light_ActionButton = 2131427638;
 			
-			// aapt resource value: 0x7f0c0123
-			public const int Widget_AppCompat_Button_Small = 2131493155;
+			// aapt resource value: 0x7f0b0137
+			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131427639;
 			
-			// aapt resource value: 0x7f0c0124
-			public const int Widget_AppCompat_ButtonBar = 2131493156;
+			// aapt resource value: 0x7f0b0138
+			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131427640;
 			
-			// aapt resource value: 0x7f0c0125
-			public const int Widget_AppCompat_ButtonBar_AlertDialog = 2131493157;
+			// aapt resource value: 0x7f0b0139
+			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131427641;
 			
-			// aapt resource value: 0x7f0c0126
-			public const int Widget_AppCompat_CompoundButton_CheckBox = 2131493158;
+			// aapt resource value: 0x7f0b013a
+			public const int Widget_AppCompat_Light_ActivityChooserView = 2131427642;
 			
-			// aapt resource value: 0x7f0c0127
-			public const int Widget_AppCompat_CompoundButton_RadioButton = 2131493159;
+			// aapt resource value: 0x7f0b013b
+			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131427643;
 			
-			// aapt resource value: 0x7f0c0128
-			public const int Widget_AppCompat_CompoundButton_Switch = 2131493160;
+			// aapt resource value: 0x7f0b013c
+			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131427644;
 			
-			// aapt resource value: 0x7f0c0129
-			public const int Widget_AppCompat_DrawerArrowToggle = 2131493161;
+			// aapt resource value: 0x7f0b013d
+			public const int Widget_AppCompat_Light_ListPopupWindow = 2131427645;
 			
-			// aapt resource value: 0x7f0c012a
-			public const int Widget_AppCompat_DropDownItem_Spinner = 2131493162;
+			// aapt resource value: 0x7f0b013e
+			public const int Widget_AppCompat_Light_ListView_DropDown = 2131427646;
 			
-			// aapt resource value: 0x7f0c012b
-			public const int Widget_AppCompat_EditText = 2131493163;
+			// aapt resource value: 0x7f0b013f
+			public const int Widget_AppCompat_Light_PopupMenu = 2131427647;
 			
-			// aapt resource value: 0x7f0c012c
-			public const int Widget_AppCompat_ImageButton = 2131493164;
+			// aapt resource value: 0x7f0b0140
+			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131427648;
 			
-			// aapt resource value: 0x7f0c012d
-			public const int Widget_AppCompat_Light_ActionBar = 2131493165;
+			// aapt resource value: 0x7f0b0141
+			public const int Widget_AppCompat_Light_SearchView = 2131427649;
 			
-			// aapt resource value: 0x7f0c012e
-			public const int Widget_AppCompat_Light_ActionBar_Solid = 2131493166;
+			// aapt resource value: 0x7f0b0142
+			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131427650;
 			
-			// aapt resource value: 0x7f0c012f
-			public const int Widget_AppCompat_Light_ActionBar_Solid_Inverse = 2131493167;
+			// aapt resource value: 0x7f0b0143
+			public const int Widget_AppCompat_ListPopupWindow = 2131427651;
 			
-			// aapt resource value: 0x7f0c0130
-			public const int Widget_AppCompat_Light_ActionBar_TabBar = 2131493168;
+			// aapt resource value: 0x7f0b0144
+			public const int Widget_AppCompat_ListView = 2131427652;
 			
-			// aapt resource value: 0x7f0c0131
-			public const int Widget_AppCompat_Light_ActionBar_TabBar_Inverse = 2131493169;
+			// aapt resource value: 0x7f0b0145
+			public const int Widget_AppCompat_ListView_DropDown = 2131427653;
 			
-			// aapt resource value: 0x7f0c0132
-			public const int Widget_AppCompat_Light_ActionBar_TabText = 2131493170;
+			// aapt resource value: 0x7f0b0146
+			public const int Widget_AppCompat_ListView_Menu = 2131427654;
 			
-			// aapt resource value: 0x7f0c0133
-			public const int Widget_AppCompat_Light_ActionBar_TabText_Inverse = 2131493171;
+			// aapt resource value: 0x7f0b0147
+			public const int Widget_AppCompat_PopupMenu = 2131427655;
 			
-			// aapt resource value: 0x7f0c0134
-			public const int Widget_AppCompat_Light_ActionBar_TabView = 2131493172;
+			// aapt resource value: 0x7f0b0148
+			public const int Widget_AppCompat_PopupMenu_Overflow = 2131427656;
 			
-			// aapt resource value: 0x7f0c0135
-			public const int Widget_AppCompat_Light_ActionBar_TabView_Inverse = 2131493173;
+			// aapt resource value: 0x7f0b0149
+			public const int Widget_AppCompat_PopupWindow = 2131427657;
 			
-			// aapt resource value: 0x7f0c0136
-			public const int Widget_AppCompat_Light_ActionButton = 2131493174;
+			// aapt resource value: 0x7f0b014a
+			public const int Widget_AppCompat_ProgressBar = 2131427658;
 			
-			// aapt resource value: 0x7f0c0137
-			public const int Widget_AppCompat_Light_ActionButton_CloseMode = 2131493175;
+			// aapt resource value: 0x7f0b014b
+			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131427659;
 			
-			// aapt resource value: 0x7f0c0138
-			public const int Widget_AppCompat_Light_ActionButton_Overflow = 2131493176;
+			// aapt resource value: 0x7f0b014c
+			public const int Widget_AppCompat_RatingBar = 2131427660;
 			
-			// aapt resource value: 0x7f0c0139
-			public const int Widget_AppCompat_Light_ActionMode_Inverse = 2131493177;
+			// aapt resource value: 0x7f0b014d
+			public const int Widget_AppCompat_RatingBar_Indicator = 2131427661;
 			
-			// aapt resource value: 0x7f0c013a
-			public const int Widget_AppCompat_Light_ActivityChooserView = 2131493178;
+			// aapt resource value: 0x7f0b014e
+			public const int Widget_AppCompat_RatingBar_Small = 2131427662;
 			
-			// aapt resource value: 0x7f0c013b
-			public const int Widget_AppCompat_Light_AutoCompleteTextView = 2131493179;
+			// aapt resource value: 0x7f0b014f
+			public const int Widget_AppCompat_SearchView = 2131427663;
 			
-			// aapt resource value: 0x7f0c013c
-			public const int Widget_AppCompat_Light_DropDownItem_Spinner = 2131493180;
+			// aapt resource value: 0x7f0b0150
+			public const int Widget_AppCompat_SearchView_ActionBar = 2131427664;
 			
-			// aapt resource value: 0x7f0c013d
-			public const int Widget_AppCompat_Light_ListPopupWindow = 2131493181;
+			// aapt resource value: 0x7f0b0151
+			public const int Widget_AppCompat_SeekBar = 2131427665;
 			
-			// aapt resource value: 0x7f0c013e
-			public const int Widget_AppCompat_Light_ListView_DropDown = 2131493182;
+			// aapt resource value: 0x7f0b0152
+			public const int Widget_AppCompat_Spinner = 2131427666;
 			
-			// aapt resource value: 0x7f0c013f
-			public const int Widget_AppCompat_Light_PopupMenu = 2131493183;
+			// aapt resource value: 0x7f0b0153
+			public const int Widget_AppCompat_Spinner_DropDown = 2131427667;
 			
-			// aapt resource value: 0x7f0c0140
-			public const int Widget_AppCompat_Light_PopupMenu_Overflow = 2131493184;
+			// aapt resource value: 0x7f0b0154
+			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131427668;
 			
-			// aapt resource value: 0x7f0c0141
-			public const int Widget_AppCompat_Light_SearchView = 2131493185;
+			// aapt resource value: 0x7f0b0155
+			public const int Widget_AppCompat_Spinner_Underlined = 2131427669;
 			
-			// aapt resource value: 0x7f0c0142
-			public const int Widget_AppCompat_Light_Spinner_DropDown_ActionBar = 2131493186;
+			// aapt resource value: 0x7f0b0156
+			public const int Widget_AppCompat_TextView_SpinnerItem = 2131427670;
 			
-			// aapt resource value: 0x7f0c0143
-			public const int Widget_AppCompat_ListPopupWindow = 2131493187;
+			// aapt resource value: 0x7f0b0157
+			public const int Widget_AppCompat_Toolbar = 2131427671;
 			
-			// aapt resource value: 0x7f0c0144
-			public const int Widget_AppCompat_ListView = 2131493188;
+			// aapt resource value: 0x7f0b0158
+			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131427672;
 			
-			// aapt resource value: 0x7f0c0145
-			public const int Widget_AppCompat_ListView_DropDown = 2131493189;
+			// aapt resource value: 0x7f0b0169
+			public const int Widget_Design_AppBarLayout = 2131427689;
 			
-			// aapt resource value: 0x7f0c0146
-			public const int Widget_AppCompat_ListView_Menu = 2131493190;
+			// aapt resource value: 0x7f0b016a
+			public const int Widget_Design_BottomSheet_Modal = 2131427690;
 			
-			// aapt resource value: 0x7f0c0147
-			public const int Widget_AppCompat_PopupMenu = 2131493191;
+			// aapt resource value: 0x7f0b016b
+			public const int Widget_Design_CollapsingToolbar = 2131427691;
 			
-			// aapt resource value: 0x7f0c0148
-			public const int Widget_AppCompat_PopupMenu_Overflow = 2131493192;
+			// aapt resource value: 0x7f0b016c
+			public const int Widget_Design_CoordinatorLayout = 2131427692;
 			
-			// aapt resource value: 0x7f0c0149
-			public const int Widget_AppCompat_PopupWindow = 2131493193;
+			// aapt resource value: 0x7f0b016d
+			public const int Widget_Design_FloatingActionButton = 2131427693;
 			
-			// aapt resource value: 0x7f0c014a
-			public const int Widget_AppCompat_ProgressBar = 2131493194;
+			// aapt resource value: 0x7f0b016e
+			public const int Widget_Design_NavigationView = 2131427694;
 			
-			// aapt resource value: 0x7f0c014b
-			public const int Widget_AppCompat_ProgressBar_Horizontal = 2131493195;
+			// aapt resource value: 0x7f0b016f
+			public const int Widget_Design_ScrimInsetsFrameLayout = 2131427695;
 			
-			// aapt resource value: 0x7f0c014c
-			public const int Widget_AppCompat_RatingBar = 2131493196;
+			// aapt resource value: 0x7f0b0170
+			public const int Widget_Design_Snackbar = 2131427696;
 			
-			// aapt resource value: 0x7f0c014d
-			public const int Widget_AppCompat_RatingBar_Indicator = 2131493197;
+			// aapt resource value: 0x7f0b0159
+			public const int Widget_Design_TabLayout = 2131427673;
 			
-			// aapt resource value: 0x7f0c014e
-			public const int Widget_AppCompat_RatingBar_Small = 2131493198;
+			// aapt resource value: 0x7f0b0171
+			public const int Widget_Design_TextInputLayout = 2131427697;
 			
-			// aapt resource value: 0x7f0c014f
-			public const int Widget_AppCompat_SearchView = 2131493199;
+			// aapt resource value: 0x7f0b0004
+			public const int Widget_MediaRouter_ChooserText = 2131427332;
 			
-			// aapt resource value: 0x7f0c0150
-			public const int Widget_AppCompat_SearchView_ActionBar = 2131493200;
+			// aapt resource value: 0x7f0b0005
+			public const int Widget_MediaRouter_ChooserText_Primary = 2131427333;
 			
-			// aapt resource value: 0x7f0c0151
-			public const int Widget_AppCompat_SeekBar = 2131493201;
+			// aapt resource value: 0x7f0b0006
+			public const int Widget_MediaRouter_ChooserText_Primary_Dark = 2131427334;
 			
-			// aapt resource value: 0x7f0c0152
-			public const int Widget_AppCompat_Spinner = 2131493202;
+			// aapt resource value: 0x7f0b0007
+			public const int Widget_MediaRouter_ChooserText_Primary_Light = 2131427335;
 			
-			// aapt resource value: 0x7f0c0153
-			public const int Widget_AppCompat_Spinner_DropDown = 2131493203;
+			// aapt resource value: 0x7f0b0008
+			public const int Widget_MediaRouter_ChooserText_Secondary = 2131427336;
 			
-			// aapt resource value: 0x7f0c0154
-			public const int Widget_AppCompat_Spinner_DropDown_ActionBar = 2131493204;
+			// aapt resource value: 0x7f0b0009
+			public const int Widget_MediaRouter_ChooserText_Secondary_Dark = 2131427337;
 			
-			// aapt resource value: 0x7f0c0155
-			public const int Widget_AppCompat_Spinner_Underlined = 2131493205;
+			// aapt resource value: 0x7f0b000a
+			public const int Widget_MediaRouter_ChooserText_Secondary_Light = 2131427338;
 			
-			// aapt resource value: 0x7f0c0156
-			public const int Widget_AppCompat_TextView_SpinnerItem = 2131493206;
+			// aapt resource value: 0x7f0b000b
+			public const int Widget_MediaRouter_ControllerText = 2131427339;
 			
-			// aapt resource value: 0x7f0c0157
-			public const int Widget_AppCompat_Toolbar = 2131493207;
+			// aapt resource value: 0x7f0b000c
+			public const int Widget_MediaRouter_ControllerText_Primary = 2131427340;
 			
-			// aapt resource value: 0x7f0c0158
-			public const int Widget_AppCompat_Toolbar_Button_Navigation = 2131493208;
+			// aapt resource value: 0x7f0b000d
+			public const int Widget_MediaRouter_ControllerText_Primary_Dark = 2131427341;
 			
-			// aapt resource value: 0x7f0c0169
-			public const int Widget_Design_AppBarLayout = 2131493225;
+			// aapt resource value: 0x7f0b000e
+			public const int Widget_MediaRouter_ControllerText_Primary_Light = 2131427342;
 			
-			// aapt resource value: 0x7f0c016a
-			public const int Widget_Design_BottomSheet_Modal = 2131493226;
+			// aapt resource value: 0x7f0b000f
+			public const int Widget_MediaRouter_ControllerText_Secondary = 2131427343;
 			
-			// aapt resource value: 0x7f0c016b
-			public const int Widget_Design_CollapsingToolbar = 2131493227;
+			// aapt resource value: 0x7f0b0010
+			public const int Widget_MediaRouter_ControllerText_Secondary_Dark = 2131427344;
 			
-			// aapt resource value: 0x7f0c016c
-			public const int Widget_Design_CoordinatorLayout = 2131493228;
+			// aapt resource value: 0x7f0b0011
+			public const int Widget_MediaRouter_ControllerText_Secondary_Light = 2131427345;
 			
-			// aapt resource value: 0x7f0c016d
-			public const int Widget_Design_FloatingActionButton = 2131493229;
+			// aapt resource value: 0x7f0b0012
+			public const int Widget_MediaRouter_ControllerText_Title = 2131427346;
 			
-			// aapt resource value: 0x7f0c016e
-			public const int Widget_Design_NavigationView = 2131493230;
+			// aapt resource value: 0x7f0b0013
+			public const int Widget_MediaRouter_ControllerText_Title_Dark = 2131427347;
 			
-			// aapt resource value: 0x7f0c016f
-			public const int Widget_Design_ScrimInsetsFrameLayout = 2131493231;
+			// aapt resource value: 0x7f0b0014
+			public const int Widget_MediaRouter_ControllerText_Title_Light = 2131427348;
 			
-			// aapt resource value: 0x7f0c0170
-			public const int Widget_Design_Snackbar = 2131493232;
+			// aapt resource value: 0x7f0b0015
+			public const int Widget_MediaRouter_Light_MediaRouteButton = 2131427349;
 			
-			// aapt resource value: 0x7f0c0159
-			public const int Widget_Design_TabLayout = 2131493209;
-			
-			// aapt resource value: 0x7f0c0171
-			public const int Widget_Design_TextInputLayout = 2131493233;
-			
-			// aapt resource value: 0x7f0c0004
-			public const int Widget_MediaRouter_ChooserText = 2131492868;
-			
-			// aapt resource value: 0x7f0c0005
-			public const int Widget_MediaRouter_ChooserText_Primary = 2131492869;
-			
-			// aapt resource value: 0x7f0c0006
-			public const int Widget_MediaRouter_ChooserText_Primary_Dark = 2131492870;
-			
-			// aapt resource value: 0x7f0c0007
-			public const int Widget_MediaRouter_ChooserText_Primary_Light = 2131492871;
-			
-			// aapt resource value: 0x7f0c0008
-			public const int Widget_MediaRouter_ChooserText_Secondary = 2131492872;
-			
-			// aapt resource value: 0x7f0c0009
-			public const int Widget_MediaRouter_ChooserText_Secondary_Dark = 2131492873;
-			
-			// aapt resource value: 0x7f0c000a
-			public const int Widget_MediaRouter_ChooserText_Secondary_Light = 2131492874;
-			
-			// aapt resource value: 0x7f0c000b
-			public const int Widget_MediaRouter_ControllerText = 2131492875;
-			
-			// aapt resource value: 0x7f0c000c
-			public const int Widget_MediaRouter_ControllerText_Primary = 2131492876;
-			
-			// aapt resource value: 0x7f0c000d
-			public const int Widget_MediaRouter_ControllerText_Primary_Dark = 2131492877;
-			
-			// aapt resource value: 0x7f0c000e
-			public const int Widget_MediaRouter_ControllerText_Primary_Light = 2131492878;
-			
-			// aapt resource value: 0x7f0c000f
-			public const int Widget_MediaRouter_ControllerText_Secondary = 2131492879;
-			
-			// aapt resource value: 0x7f0c0010
-			public const int Widget_MediaRouter_ControllerText_Secondary_Dark = 2131492880;
-			
-			// aapt resource value: 0x7f0c0011
-			public const int Widget_MediaRouter_ControllerText_Secondary_Light = 2131492881;
-			
-			// aapt resource value: 0x7f0c0012
-			public const int Widget_MediaRouter_ControllerText_Title = 2131492882;
-			
-			// aapt resource value: 0x7f0c0013
-			public const int Widget_MediaRouter_ControllerText_Title_Dark = 2131492883;
-			
-			// aapt resource value: 0x7f0c0014
-			public const int Widget_MediaRouter_ControllerText_Title_Light = 2131492884;
-			
-			// aapt resource value: 0x7f0c0015
-			public const int Widget_MediaRouter_Light_MediaRouteButton = 2131492885;
-			
-			// aapt resource value: 0x7f0c0016
-			public const int Widget_MediaRouter_MediaRouteButton = 2131492886;
+			// aapt resource value: 0x7f0b0016
+			public const int Widget_MediaRouter_MediaRouteButton = 2131427350;
 			
 			static Style()
 			{
@@ -15175,31 +12743,6 @@ namespace YallaParkingMobile.Droid
 			}
 			
 			private Style()
-			{
-			}
-		}
-		
-		public partial class Xml
-		{
-			
-			// aapt resource value: 0x7f060000
-			public const int chart_palettes_dark_selected = 2131099648;
-			
-			// aapt resource value: 0x7f060001
-			public const int chart_palettes_default_dark = 2131099649;
-			
-			// aapt resource value: 0x7f060002
-			public const int chart_palettes_default_light = 2131099650;
-			
-			// aapt resource value: 0x7f060003
-			public const int chart_palettes_light_selected = 2131099651;
-			
-			static Xml()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Xml()
 			{
 			}
 		}
@@ -15887,100 +13430,6 @@ namespace YallaParkingMobile.Droid
 			// aapt resource value: 3
 			public const int AppCompatTheme_windowNoTitle = 3;
 			
-			public static int[] AreaSeries = new int[] {
-					2130772325};
-			
-			// aapt resource value: 0
-			public const int AreaSeries_fillColor = 0;
-			
-			public static int[] Axis = new int[] {
-					2130772328,
-					2130772331,
-					2130772332,
-					2130772333,
-					2130772334,
-					2130772335,
-					2130772336,
-					2130772340,
-					2130772349,
-					2130772350,
-					2130772351,
-					2130772352,
-					2130772353,
-					2130772354,
-					2130772355,
-					2130772356};
-			
-			// aapt resource value: 12
-			public const int Axis_axisLabelFitMode = 12;
-			
-			// aapt resource value: 9
-			public const int Axis_axisLastLabelVisibility = 9;
-			
-			// aapt resource value: 13
-			public const int Axis_axisTitle = 13;
-			
-			// aapt resource value: 1
-			public const int Axis_labelColor = 1;
-			
-			// aapt resource value: 5
-			public const int Axis_labelFont = 5;
-			
-			// aapt resource value: 6
-			public const int Axis_labelFontStyle = 6;
-			
-			// aapt resource value: 7
-			public const int Axis_labelFormat = 7;
-			
-			// aapt resource value: 15
-			public const int Axis_labelInterval = 15;
-			
-			// aapt resource value: 3
-			public const int Axis_labelMargin = 3;
-			
-			// aapt resource value: 11
-			public const int Axis_labelOffset = 11;
-			
-			// aapt resource value: 8
-			public const int Axis_labelRotationAngle = 8;
-			
-			// aapt resource value: 2
-			public const int Axis_labelSize = 2;
-			
-			// aapt resource value: 4
-			public const int Axis_lineThickness = 4;
-			
-			// aapt resource value: 10
-			public const int Axis_majorTickOffset = 10;
-			
-			// aapt resource value: 0
-			public const int Axis_showLabels = 0;
-			
-			// aapt resource value: 14
-			public const int Axis_tickThickness = 14;
-			
-			public static int[] BarSeries = new int[] {
-					2130772325,
-					2130772326,
-					2130772337,
-					2130772338,
-					2130772339};
-			
-			// aapt resource value: 3
-			public const int BarSeries_areBarsRounded = 3;
-			
-			// aapt resource value: 0
-			public const int BarSeries_fillColor = 0;
-			
-			// aapt resource value: 4
-			public const int BarSeries_roundBarsRadius = 4;
-			
-			// aapt resource value: 1
-			public const int BarSeries_strokeColor = 1;
-			
-			// aapt resource value: 2
-			public const int BarSeries_strokeWidth = 2;
-			
 			public static int[] BottomSheetBehavior_Params = new int[] {
 					2130772241,
 					2130772242};
@@ -16062,198 +13511,6 @@ namespace YallaParkingMobile.Droid
 			
 			// aapt resource value: 11
 			public const int CardView_contentPaddingTop = 11;
-			
-			public static int[] CartesianAxis = new int[] {
-					2130772359,
-					2130772360};
-			
-			// aapt resource value: 0
-			public const int CartesianAxis_horizontalLocation = 0;
-			
-			// aapt resource value: 1
-			public const int CartesianAxis_verticalLocation = 1;
-			
-			public static int[] CartesianCustomAnnotation = new int[] {
-					2130772367,
-					2130772368,
-					2130772369,
-					2130772370,
-					2130772371};
-			
-			// aapt resource value: 2
-			public const int CartesianCustomAnnotation_content = 2;
-			
-			// aapt resource value: 3
-			public const int CartesianCustomAnnotation_horizontalAlignment = 3;
-			
-			// aapt resource value: 0
-			public const int CartesianCustomAnnotation_horizontalOffset = 0;
-			
-			// aapt resource value: 4
-			public const int CartesianCustomAnnotation_verticalAlignment = 4;
-			
-			// aapt resource value: 1
-			public const int CartesianCustomAnnotation_verticalOffset = 1;
-			
-			public static int[] CartesianPlotBandAnnotation = new int[] {
-					2130772325};
-			
-			// aapt resource value: 0
-			public const int CartesianPlotBandAnnotation_fillColor = 0;
-			
-			public static int[] CartesianStrokedAnnotation = new int[] {
-					2130772326,
-					2130772337,
-					2130772366};
-			
-			// aapt resource value: 2
-			public const int CartesianStrokedAnnotation_label = 2;
-			
-			// aapt resource value: 0
-			public const int CartesianStrokedAnnotation_strokeColor = 0;
-			
-			// aapt resource value: 1
-			public const int CartesianStrokedAnnotation_strokeWidth = 1;
-			
-			public static int[] CategoricalAxis = new int[] {
-					2130772329,
-					2130772330,
-					2130772358};
-			
-			// aapt resource value: 0
-			public const int CategoricalAxis_gapLength = 0;
-			
-			// aapt resource value: 2
-			public const int CategoricalAxis_majorTickInterval = 2;
-			
-			// aapt resource value: 1
-			public const int CategoricalAxis_plotMode = 1;
-			
-			public static int[] CategoricalSeries = new int[] {
-					2130772348};
-			
-			// aapt resource value: 0
-			public const int CategoricalSeries_combineMode = 0;
-			
-			public static int[] CategoricalStrokedSeries = new int[] {
-					2130772326,
-					2130772337};
-			
-			// aapt resource value: 0
-			public const int CategoricalStrokedSeries_strokeColor = 0;
-			
-			// aapt resource value: 1
-			public const int CategoricalStrokedSeries_strokeWidth = 1;
-			
-			public static int[] ChartAnnotation = new int[] {
-					2130772327};
-			
-			// aapt resource value: 0
-			public const int ChartAnnotation_clipToPlotArea = 0;
-			
-			public static int[] ChartSeries = new int[] {
-					2130772327,
-					2130772328,
-					2130772331,
-					2130772332,
-					2130772335,
-					2130772336,
-					2130772340};
-			
-			// aapt resource value: 0
-			public const int ChartSeries_clipToPlotArea = 0;
-			
-			// aapt resource value: 2
-			public const int ChartSeries_labelColor = 2;
-			
-			// aapt resource value: 4
-			public const int ChartSeries_labelFont = 4;
-			
-			// aapt resource value: 5
-			public const int ChartSeries_labelFontStyle = 5;
-			
-			// aapt resource value: 6
-			public const int ChartSeries_labelFormat = 6;
-			
-			// aapt resource value: 3
-			public const int ChartSeries_labelSize = 3;
-			
-			// aapt resource value: 1
-			public const int ChartSeries_showLabels = 1;
-			
-			public static int[] ChartTheme = new int[] {
-					2130772372,
-					2130772373,
-					2130772374,
-					2130772375,
-					2130772376,
-					2130772377,
-					2130772378,
-					2130772379,
-					2130772380,
-					2130772381,
-					2130772382,
-					2130772383,
-					2130772384,
-					2130772385,
-					2130772386,
-					2130772387,
-					2130772388,
-					2130772389};
-			
-			// aapt resource value: 12
-			public const int ChartTheme_AreaSeriesStyle = 12;
-			
-			// aapt resource value: 0
-			public const int ChartTheme_AxisStyle = 0;
-			
-			// aapt resource value: 8
-			public const int ChartTheme_BarSeriesStyle = 8;
-			
-			// aapt resource value: 1
-			public const int ChartTheme_CartesianAxisStyle = 1;
-			
-			// aapt resource value: 16
-			public const int ChartTheme_CartesianCustomAnnotationStyle = 16;
-			
-			// aapt resource value: 15
-			public const int ChartTheme_CartesianPlotBandAnnotationStyle = 15;
-			
-			// aapt resource value: 14
-			public const int ChartTheme_CartesianStrokedAnnotationStyle = 14;
-			
-			// aapt resource value: 2
-			public const int ChartTheme_CategoricalAxisStyle = 2;
-			
-			// aapt resource value: 10
-			public const int ChartTheme_CategoricalSeriesStyle = 10;
-			
-			// aapt resource value: 11
-			public const int ChartTheme_CategoricalStrokedSeriesStyle = 11;
-			
-			// aapt resource value: 13
-			public const int ChartTheme_ChartAnnotationStyle = 13;
-			
-			// aapt resource value: 6
-			public const int ChartTheme_ChartSeriesStyle = 6;
-			
-			// aapt resource value: 3
-			public const int ChartTheme_DateTimeCategoricalAxisStyle = 3;
-			
-			// aapt resource value: 4
-			public const int ChartTheme_DateTimeContinuousAxisStyle = 4;
-			
-			// aapt resource value: 7
-			public const int ChartTheme_LineAxisStyle = 7;
-			
-			// aapt resource value: 5
-			public const int ChartTheme_RadChartBaseStyle = 5;
-			
-			// aapt resource value: 9
-			public const int ChartTheme_RangeBarSeriesStyle = 9;
-			
-			// aapt resource value: 17
-			public const int ChartTheme_TestBarSeriesStyle = 17;
 			
 			public static int[] CollapsingAppBarLayout_LayoutParams = new int[] {
 					2130772243,
@@ -16369,38 +13626,6 @@ namespace YallaParkingMobile.Droid
 			// aapt resource value: 3
 			public const int CoordinatorLayout_LayoutParams_layout_keyline = 3;
 			
-			public static int[] DateTimeCategoricalAxis = new int[] {
-					2130772361,
-					2130772362};
-			
-			// aapt resource value: 0
-			public const int DateTimeCategoricalAxis_dateFormat = 0;
-			
-			// aapt resource value: 1
-			public const int DateTimeCategoricalAxis_dateTimeComponent = 1;
-			
-			public static int[] DateTimeContinuousAxis = new int[] {
-					2130772329,
-					2130772330,
-					2130772363,
-					2130772364,
-					2130772365};
-			
-			// aapt resource value: 0
-			public const int DateTimeContinuousAxis_gapLength = 0;
-			
-			// aapt resource value: 3
-			public const int DateTimeContinuousAxis_majorStep = 3;
-			
-			// aapt resource value: 4
-			public const int DateTimeContinuousAxis_majorStepUnit = 4;
-			
-			// aapt resource value: 2
-			public const int DateTimeContinuousAxis_maximumTicks = 2;
-			
-			// aapt resource value: 1
-			public const int DateTimeContinuousAxis_plotMode = 1;
-			
 			public static int[] DesignTheme = new int[] {
 					2130772264,
 					2130772265,
@@ -16496,12 +13721,6 @@ namespace YallaParkingMobile.Droid
 			
 			// aapt resource value: 2
 			public const int ForegroundLinearLayout_foregroundInsidePadding = 2;
-			
-			public static int[] LineAxis = new int[] {
-					2130772357};
-			
-			// aapt resource value: 0
-			public const int LineAxis_lineColor = 0;
 			
 			public static int[] LinearLayoutCompat = new int[] {
 					16842927,
@@ -16907,32 +14126,6 @@ namespace YallaParkingMobile.Droid
 			// aapt resource value: 7
 			public const int RadCalendarView_weekNumberDisplayMode = 7;
 			
-			public static int[] RadChartViewBase = new int[] {
-					2130772342,
-					2130772343,
-					2130772344,
-					2130772345,
-					2130772346,
-					2130772347};
-			
-			// aapt resource value: 1
-			public const int RadChartViewBase_chartZoom = 1;
-			
-			// aapt resource value: 3
-			public const int RadChartViewBase_clipToBounds = 3;
-			
-			// aapt resource value: 4
-			public const int RadChartViewBase_emptyContent = 4;
-			
-			// aapt resource value: 2
-			public const int RadChartViewBase_maxZoom = 2;
-			
-			// aapt resource value: 5
-			public const int RadChartViewBase_palette = 5;
-			
-			// aapt resource value: 0
-			public const int RadChartViewBase_pan = 0;
-			
 			public static int[] RadScrollView = new int[] {
 					2130772310,
 					2130772311};
@@ -16954,28 +14147,6 @@ namespace YallaParkingMobile.Droid
 			
 			// aapt resource value: 0
 			public const int RadSegmentedView_rad_segmented_view_type = 0;
-			
-			public static int[] RangeBarSeries = new int[] {
-					2130772325,
-					2130772326,
-					2130772337,
-					2130772338,
-					2130772339};
-			
-			// aapt resource value: 3
-			public const int RangeBarSeries_areBarsRounded = 3;
-			
-			// aapt resource value: 0
-			public const int RangeBarSeries_fillColor = 0;
-			
-			// aapt resource value: 4
-			public const int RangeBarSeries_roundBarsRadius = 4;
-			
-			// aapt resource value: 1
-			public const int RangeBarSeries_strokeColor = 1;
-			
-			// aapt resource value: 2
-			public const int RangeBarSeries_strokeWidth = 2;
 			
 			public static int[] RecyclerView = new int[] {
 					16842948,

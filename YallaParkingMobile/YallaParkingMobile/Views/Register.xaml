@@ -36,6 +36,8 @@
                     Height="*" />
                 <RowDefinition
                     Height="*" />
+                <RowDefinition
+                    Height="*" />
 
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -90,9 +92,17 @@
                 IsPassword="True"
                 x:Name="Password" />
 
+            <control:BorderlessEntry
+                Grid.Row="6"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Placeholder="Confirm Password"
+                IsPassword="True"
+                x:Name="ConfirmPassword" />
+
             <ContentView
                 Padding="0,5,0,0"
-                Grid.Row="6"
+                Grid.Row="7"
                 Grid.Column="1"
                 Grid.ColumnSpan="3">
                 <Button
@@ -105,7 +115,7 @@
             </ContentView>
             <ContentView
                 Padding="0,5,0,0"
-                Grid.Row="7"
+                Grid.Row="8"
                 Grid.Column="1"
                 Grid.ColumnSpan="3">
                 <Button

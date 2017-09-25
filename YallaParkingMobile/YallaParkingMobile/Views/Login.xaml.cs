@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using YallaParkingMobile.Model;
 using YallaParkingMobile.Utility;
 
 namespace YallaParkingMobile {
@@ -23,9 +24,31 @@ namespace YallaParkingMobile {
         }
 		
 		async void NextButton_Clicked(object sender, EventArgs e) {
-            Analytics.TrackEvent("Next button clicked, submitting login details");                        
+            Analytics.TrackEvent("Next button clicked, submitting login details");
 
-            await Navigation.PushAsync(new Home());
+            if (string.IsNullOrWhiteSpace(this.EmailAddress.Text)) {
+                await DisplayAlert("E-mail Required", "Please ensure you provide your email address", "Ok");
+                return;
+            } else if (string.IsNullOrWhiteSpace(this.Password.Text)) {
+                await DisplayAlert("Password Required", "Please ensure you provide your password", "Ok");
+                return;
+            }
+
+            var model = new LoginModel {                
+                EmailAddress = this.EmailAddress.Text,
+                Password = this.Password.Text
+            };
+
+            var result = await ServiceUtility.Login(model);
+
+            if (result.IsSuccessStatusCode) {
+                await Navigation.PushAsync(new Home());
+            } else if(result.StatusCode == System.Net.HttpStatusCode.Forbidden){
+                await DisplayAlert("Verification Required", "Verification required, please enter the code sent to you on the following screen", "Ok");
+                await Navigation.PushAsync(new RegisterConfirm());
+            } else {
+                await DisplayAlert("Login Failed", "Login failed for the e-mail address and password provided, please try again.", "Ok");                
+            }            
         }
 		
 		async void FacebookButton_Clicked(object sender, EventArgs e) {

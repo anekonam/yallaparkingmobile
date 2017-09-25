@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:YallaParkingMobile"
+    xmlns:control="clr-namespace:YallaParkingMobile.Control"
+    x:Class="YallaParkingMobile.RegisterConfirm"
+    Title="Verification Code">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="*" />
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+                <ColumnDefinition
+                    Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ContentView
+                Padding="0,40,0,0"
+                Grid.Row="1"
+                Grid.Column="0"
+                Grid.ColumnSpan="5">
+                <Label
+                    Style="{StaticResource Header}"
+                    VerticalTextAlignment="Start"
+                    Text="Verify Number" />
+            </ContentView>
+
+            <control:BorderlessEntry
+                Grid.Row="2"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                Placeholder="Verification Code"
+                IsPassword="True"
+                Keyboard="Numeric"                
+                x:Name="VerificationCode" />
+
+            <Label
+                Grid.Row="3"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                HorizontalTextAlignment="Center"
+                Text="Enter the verification code which was sent to your phone and click the button below." />
+
+            <ContentView
+                Padding="0,5,0,0"
+                Grid.Row="4"
+                Grid.Column="1"
+                Grid.ColumnSpan="3">
+                <Button
+                    x:Name="VerifyButton"
+                    Clicked="VerifyButton_Clicked"
+                    Style="{StaticResource GreenButton}"
+                    Text="Next"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center" />
+            </ContentView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
