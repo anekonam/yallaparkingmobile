@@ -246,13 +246,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <EmbeddedResource Include="Views\Verify.xaml">
       <Generator>MSBuild:Compile</Generator>
-=======
-    <EmbeddedResource Include="Views\RegisterConfirm.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
->>>>>>> 4e94d6c... * YallaParkingMobile.iOS.csproj: SDK fix.
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
