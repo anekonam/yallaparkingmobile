@@ -10,8 +10,8 @@ using YallaParkingMobile.Model;
 using YallaParkingMobile.Utility;
 
 namespace YallaParkingMobile {
-    public partial class RegisterConfirm : ContentPage {
-        public RegisterConfirm() {
+    public partial class VerifyNumber : ContentPage {
+        public VerifyNumber() {
             InitializeComponent();
             Analytics.TrackEvent("Viewing Verify Number Page");
         }    
@@ -24,7 +24,7 @@ namespace YallaParkingMobile {
                 return;
             } 
             
-            var success = await ServiceUtility.RegisterConfirm(this.VerificationCode.Text);
+            var success = await ServiceUtility.Verify(this.VerificationCode.Text);
 
             if (success) {
                 await Navigation.PushAsync(new Home());

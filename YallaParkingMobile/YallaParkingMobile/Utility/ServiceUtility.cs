@@ -91,15 +91,15 @@ namespace YallaParkingMobile.Utility {
             }            
         }
 
-        public static async Task<bool> RegisterConfirm(string code) {
+        public static async Task<bool> Verify(string code) {
             InitHttpClient();
 
-            var confirmModel = new {
+            var verify = new {
                 RegisterCode = code
             };
 
             try {
-                var response = await client.PostAsync("/api/account/registerConfirm", confirmModel.AsJson()); 
+                var response = await client.PostAsync("/api/account/verify", verify.AsJson()); 
                 
                 if (response.IsSuccessStatusCode) {
                     return true;

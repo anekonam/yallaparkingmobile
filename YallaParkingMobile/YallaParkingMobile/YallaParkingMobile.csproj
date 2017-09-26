@@ -63,8 +63,8 @@
     <Compile Include="Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\RegisterConfirm.xaml.cs">
-      <DependentUpon>RegisterConfirm.xaml</DependentUpon>
+    <Compile Include="Views\Verify.xaml.cs">
+      <DependentUpon>Verify.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
@@ -246,7 +246,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Views\RegisterConfirm.xaml">
+    <EmbeddedResource Include="Views\Verify.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

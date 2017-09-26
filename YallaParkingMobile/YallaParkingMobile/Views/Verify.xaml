@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:YallaParkingMobile"
     xmlns:control="clr-namespace:YallaParkingMobile.Control"
-    x:Class="YallaParkingMobile.RegisterConfirm"
+    x:Class="YallaParkingMobile.Verify"
     Title="Verification Code">
     <ContentPage.Content>
         <Grid>
