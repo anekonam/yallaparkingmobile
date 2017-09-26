@@ -27,7 +27,7 @@ namespace YallaParkingMobile {
             var success = await ServiceUtility.RegisterConfirm(this.VerificationCode.Text);
 
             if (success) {
-                await Navigation.PushAsync(new Login());
+                await Navigation.PushAsync(new Home());
             } else {
                 await DisplayAlert("Verification Failed", "Verification failed, please try again", "Ok");
             }

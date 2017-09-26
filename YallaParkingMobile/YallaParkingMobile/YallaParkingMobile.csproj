@@ -39,6 +39,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Extensions\ImageResourceExtension.cs" />
+    <Compile Include="Model\TokenModel.cs" />
     <Compile Include="Model\LoginModel.cs" />
     <Compile Include="Model\RegisterModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

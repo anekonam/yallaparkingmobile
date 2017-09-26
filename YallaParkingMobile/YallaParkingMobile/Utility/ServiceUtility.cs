@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -27,47 +28,83 @@ namespace YallaParkingMobile.Utility {
             if (!string.IsNullOrWhiteSpace(token)) {
                 client.DefaultRequestHeaders.Add("Authorization", string.Format("bearer {0}", token));
             }
+        }        
+
+        public static async Task<bool> RequestToken(string username, string password) {
+            InitHttpClient();
+
+            try {
+                var content = new FormUrlEncodedContent(new[] {
+                    new KeyValuePair<string, string>("grant_type", "password"),
+                    new KeyValuePair<string, string>("username", username),
+                    new KeyValuePair<string, string>("password", password)
+                });
+
+                var response = await client.PostAsync("/token", content);
+
+                if (response.IsSuccessStatusCode) {
+                    var tokenResponse = await response.Content.ReadAsStringAsync();
+                    var token = JsonConvert.DeserializeObject<TokenModel>(tokenResponse);
+
+                    PropertyUtility.SetValue("Token", token.Access_Token);
+                    return true;
+                }
+
+                return false;
+            } catch {
+                return false;
+            }            
         }
 
         public static async Task<HttpResponseMessage> Login(LoginModel model) {
             InitHttpClient();
 
             try {
-                var result = await client.PostAsync("/api/account/login", model.AsJson());
-                return result;
-            } catch {
-            }
+                var response = await client.PostAsync("/api/account/login", model.AsJson());
 
-            return null;
+                if (response.IsSuccessStatusCode || response.StatusCode == System.Net.HttpStatusCode.Forbidden) {
+                    var result = await RequestToken(model.EmailAddress, model.Password);
+                    response.StatusCode = result ? response.StatusCode : System.Net.HttpStatusCode.Unauthorized;
+                    return response;
+                }
+
+                return response;
+            } catch {
+                return null;
+            }            
         }
 
         public static async Task<bool> Register(RegisterModel model) {
             InitHttpClient();
 
             try {                
-                var result = await client.PostAsync("/api/account/register", model.AsJson());
+                var response = await client.PostAsync("/api/account/register", model.AsJson());
 
-                if (result.IsSuccessStatusCode) {
-                    return true;
+                if (response.IsSuccessStatusCode) {
+                    var result = await RequestToken(model.EmailAddress, model.Password);
+                    return result;
                 }
-            } catch{                
-            }
 
-            return false;
+                return false;
+            } catch{
+                return false;
+            }            
         }
 
         public static async Task<bool> RegisterConfirm(string code) {
             InitHttpClient();
 
             try {
-                var result = await client.PostAsync("/api/account/registerConfirm", code.AsJson());                
-                if (result.IsSuccessStatusCode) {
+                var response = await client.PostAsync("/api/account/registerConfirm", code.AsJson()); 
+                
+                if (response.IsSuccessStatusCode) {
                     return true;
                 }
-            } catch {                
-            }
 
-            return false;
+                return false;
+            } catch {
+                return false;
+            }            
         }
 
         private static StringContent AsJson(this object o) => new StringContent(JsonConvert.SerializeObject(o), Encoding.UTF8, "application/json");

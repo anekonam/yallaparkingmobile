@@ -51,7 +51,10 @@
                 Grid.ColumnSpan="3"
                 Placeholder="Verification Code"
                 IsPassword="True"
-                Keyboard="Numeric"                
+                Keyboard="Numeric"
+                TextColor="#ff8e30"
+                FontSize="20"
+                HorizontalTextAlignment="Center"
                 x:Name="VerificationCode" />
 
             <Label

@@ -17,9 +17,9 @@ namespace YallaParkingMobile {
             InitializeComponent();
 
             var onboarding = PropertyUtility.GetValue("OnboardingComplete") == "true";
-            var loggedIn = PropertyUtility.GetValue("LoggedIn") == "true";
+            var token = PropertyUtility.GetValue("Token");
 
-            if (loggedIn) {
+            if (!string.IsNullOrWhiteSpace(token)) {
                 Analytics.TrackEvent("Skipping login sequence, navigating to Home");
                 MainPage = new NavigationPage(new Home()) {
                     BarTextColor = Color.FromRgb(255, 142, 48)
