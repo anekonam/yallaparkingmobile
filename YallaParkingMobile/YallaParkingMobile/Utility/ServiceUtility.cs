@@ -94,8 +94,12 @@ namespace YallaParkingMobile.Utility {
         public static async Task<bool> RegisterConfirm(string code) {
             InitHttpClient();
 
+            var confirmModel = new {
+                RegisterCode = code
+            };
+
             try {
-                var response = await client.PostAsync("/api/account/registerConfirm", code.AsJson()); 
+                var response = await client.PostAsync("/api/account/registerConfirm", confirmModel.AsJson()); 
                 
                 if (response.IsSuccessStatusCode) {
                     return true;
