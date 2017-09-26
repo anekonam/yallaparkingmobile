@@ -39,7 +39,7 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>i386, x86_64</MtouchArch>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
@@ -225,7 +225,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\YallaParkingMobile\YallaParkingMobile.csproj">
-      <Project>{a01581b2-7772-4ad3-aaa3-70f5c6a483c8}</Project>
+      <Project>{E6981EF4-43A2-4201-A9A6-F2BEBE7248B4}</Project>
       <Name>YallaParkingMobile</Name>
     </ProjectReference>
   </ItemGroup>
