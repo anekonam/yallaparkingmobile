@@ -12,7 +12,6 @@ namespace YallaParkingMobile.Utility {
             return GetObjectValue(key) != null ? GetObjectValue(key).ToString() : null;
         }
 
-
         public static void SetValue(string key, string value) {
             Application.Current.Properties[key] = value;
         }

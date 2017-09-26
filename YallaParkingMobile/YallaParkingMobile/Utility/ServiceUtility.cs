@@ -23,7 +23,7 @@ namespace YallaParkingMobile.Utility {
 
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-            var token = PropertyUtility.GetValue("token");
+            var token = PropertyUtility.GetValue("Token");
 
             if (!string.IsNullOrWhiteSpace(token)) {
                 client.DefaultRequestHeaders.Add("Authorization", string.Format("bearer {0}", token));
