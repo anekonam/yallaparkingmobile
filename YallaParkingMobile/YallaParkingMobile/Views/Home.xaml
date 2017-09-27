@@ -39,7 +39,7 @@
                             SuggestMode="Suggest"
                             CompletionMode="StartsWith"
                             TextColor="#ff8e30"
-                            SuggestionItemSelected="Search_SuggestionItemSelected"
+                            SuggestionItemSelected="Search_SuggestionItemSelected"                            
                             Watermark="Search for parking by area or building..." />
                         <StackLayout
                             Padding="4"

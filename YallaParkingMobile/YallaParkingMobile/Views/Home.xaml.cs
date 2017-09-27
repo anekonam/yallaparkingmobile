@@ -29,54 +29,14 @@ namespace YallaParkingMobile {
 
             CrossGeolocator.Current.PositionChanged += Current_PositionChanged;
 
-            SearchDate.Date = DateTime.Now;
+            SearchDate.Date = DateTime.Now;            
 
-            Search.ItemsSource = new List<string>(){
-              "Al Furjan",
-              "Al Furjan Masakin",
-              "Dubai Airport Free Zone",
-              "Churchill Towers",
-              "Clover Bay Tower 1",
-              "The Citadel Tower",
-              "Ontario Tower",
-              "Prime Tower",
-              "Executive Towers",
-              "Oxford Tower",
-              "The Bay Gate",
-              "Ubora Towers",
-              "Park Tower",
-              "The Lofts",
-              "Index Tower",
-              "8 Boulevard Walk",
-              "Claren Tower",
-              "Central Park Towers",
-              "Reehan 7",
-              "Dorra Bay",
-              "Marina Pinnacle",
-              "DoubleTree by Hilton Hotel Dubai",
-              "Sulafa Tower",
-              "Al Sahab Tower 1",
-              "Lago Vista Block C",
-              "DoubleTree by Hilton Hotel Dubai",
-              "Fortune Tower",
-              "Global Lake View Tower",
-              "Lake Terrace Tower",
-              "Saba 3 Tower",
-              "Jebel Ali Village",
-              "Al Qusais",
-              "Business Bay",
-              "Trade Centre",
-              "Downtown Dubai",
-              "Dubai Marina",
-              "Dubai Production City",
-              "Jumeirah Beach Residences",
-              "Jumeirah Lakes Towers"
-            };            
-            
             LoadData();            
         }
 
         async void LoadData(string query = null) {
+            Search.ItemsSource = await ServiceUtility.PropertyAreas();
+
             BusyIndicator.IsBusy = true;
             await Task.Delay(2000);
 
@@ -101,25 +61,17 @@ namespace YallaParkingMobile {
                 this.Map.Pins.Add(pin);
             }
 
+            if (this.Map.Pins.Any()) {                
+                Map.MoveToRegion(MapSpan.FromCenterAndRadius(this.Map.Pins.First().Position, Distance.FromMiles(1)));
+            }
+
             BusyIndicator.IsBusy = false;           
         }
 
         async void Search_SuggestionItemSelected(object sender, Telerik.XamarinForms.Input.AutoComplete.SuggestionItemSelectedEventArgs e) {
             var address = e.DataItem.ToString();
 
-            LoadData(address);            
-
-            if (!string.IsNullOrWhiteSpace(address)) {
-                address = string.Format("{0}, Dubai", address);
-                var geocoder = new Geocoder();
-                var positions = await geocoder.GetPositionsForAddressAsync(address);
-
-                if (positions != null && positions.Any()) {
-                    foreach (var position in positions) {
-                        Map.MoveToRegion(MapSpan.FromCenterAndRadius(position, Distance.FromMiles(1)));
-                    }
-                }
-            }
+            LoadData(address);                        
         }
 
         private void UpdateCurrentLocation() {

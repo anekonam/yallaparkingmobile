@@ -150,6 +150,23 @@ namespace YallaParkingMobile.Utility {
             return null;
         }
 
+        public static async Task<List<string>> PropertyAreas() {
+            InitHttpClient();
+
+            try {
+                var response = await client.GetAsync("/api/parking/properties");
+
+                if (response.IsSuccessStatusCode) {
+                    var propertyResponse = await response.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<List<string>>(propertyResponse);
+                }
+            } catch {
+                return null;
+            }
+
+            return null;
+        }
+
         private static StringContent AsJson(this object o) => new StringContent(JsonConvert.SerializeObject(o), Encoding.UTF8, "application/json");
 
     }   
