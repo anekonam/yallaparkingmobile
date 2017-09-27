@@ -10,6 +10,7 @@
     NavigationPage.HasBackButton="False">
     <ContentPage.ToolbarItems>
         <ToolbarItem
+            x:Name="MenuButton"
             Activated="Button_Clicked"
             Order="Primary"
             Priority="0"

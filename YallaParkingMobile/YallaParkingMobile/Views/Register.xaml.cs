@@ -13,7 +13,15 @@ namespace YallaParkingMobile {
     public partial class Register : ContentPage {
         public Register() {
             InitializeComponent();
-            Analytics.TrackEvent("Viewing Registration Page");
+            Analytics.TrackEvent("Viewing Registration Page");                        
+        }
+
+        protected override void OnAppearing() {
+            this.Name.Text = null;
+            this.EmailAddress.Text = null;
+            this.PhoneNumber.Text = null;
+            this.Password.Text = null;
+            this.ConfirmPassword.Text = null;
         }
 
         private bool IsValidEmail(string email) {            

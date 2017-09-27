@@ -23,23 +23,27 @@ namespace YallaParkingMobile.iOS {
             var leftNativeButtons = (navigationItem.LeftBarButtonItems ?? new UIBarButtonItem[] { }).ToList();
             var rightNativeButtons = (navigationItem.RightBarButtonItems ?? new UIBarButtonItem[] { }).ToList();
 
-            rightNativeButtons.ForEach(nativeItem =>
-            {
-                var info = GetButtonInfo(itemsInfo, nativeItem.Title);
+            try {
+                if (rightNativeButtons != null && rightNativeButtons.Any()) {
+                    rightNativeButtons.ForEach(nativeItem => {
+                        var info = GetButtonInfo(itemsInfo, nativeItem.Title);
 
-                if (info == null || info.Priority != 0) {
-                    if (info.Priority == 1)
-                        nativeItem.Style = UIBarButtonItemStyle.Done;
+                        if (info!=null && info.Priority != 0) {
+                            nativeItem.Style = UIBarButtonItemStyle.Done;
+                            return;
+                        }
 
-                    return;
+                        rightNativeButtons.Remove(nativeItem);
+                        leftNativeButtons.Add(nativeItem);
+                    });
+
+                    navigationItem.RightBarButtonItems = rightNativeButtons.ToArray();
+                    navigationItem.LeftBarButtonItems = leftNativeButtons.ToArray();
                 }
-
-                rightNativeButtons.Remove(nativeItem);
-                leftNativeButtons.Add(nativeItem);
-            });
-
-            navigationItem.RightBarButtonItems = rightNativeButtons.ToArray();
-            navigationItem.LeftBarButtonItems = leftNativeButtons.ToArray();
+            } catch {
+                navigationItem.RightBarButtonItems = rightNativeButtons.ToArray();
+                navigationItem.LeftBarButtonItems = leftNativeButtons.ToArray();
+            }
         }
 
         private ToolbarItem GetButtonInfo(IList<ToolbarItem> items, string name) {
