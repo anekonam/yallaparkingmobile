@@ -17,26 +17,20 @@ namespace YallaParkingMobile.iOS {
         public override void ViewWillAppear(bool animated) {
             base.ViewWillAppear(animated);
 
-            var contentPage = this.Element as ContentPage;
-            if (contentPage == null || NavigationController == null) {
-                return;
-            }
-
-            var itemsInfo = contentPage.ToolbarItems;
+            var itemsInfo = (this.Element as ContentPage).ToolbarItems;
 
             var navigationItem = this.NavigationController.TopViewController.NavigationItem;
             var leftNativeButtons = (navigationItem.LeftBarButtonItems ?? new UIBarButtonItem[] { }).ToList();
             var rightNativeButtons = (navigationItem.RightBarButtonItems ?? new UIBarButtonItem[] { }).ToList();
 
-            rightNativeButtons.ForEach(nativeItem => {
-                // [Hack] Get Xamarin private field "item"
-                var field = nativeItem.GetType().GetField("item", BindingFlags.NonPublic | BindingFlags.Instance);
-                if (field == null) {
-                    return;
-                }
+            rightNativeButtons.ForEach(nativeItem =>
+            {
+                var info = GetButtonInfo(itemsInfo, nativeItem.Title);
 
-                var info = field.GetValue(nativeItem) as ToolbarItem;
-                if (info != null && info.Priority != 0) {
+                if (info == null || info.Priority != 0) {
+                    if (info.Priority == 1)
+                        nativeItem.Style = UIBarButtonItemStyle.Done;
+
                     return;
                 }
 
@@ -48,5 +42,11 @@ namespace YallaParkingMobile.iOS {
             navigationItem.LeftBarButtonItems = leftNativeButtons.ToArray();
         }
 
+        private ToolbarItem GetButtonInfo(IList<ToolbarItem> items, string name) {
+            if (string.IsNullOrEmpty(name) || items == null)
+                return null;
+
+            return items.ToList().Where(itemData => name.Equals(itemData.Name)).FirstOrDefault();
+        }
     }
 }
