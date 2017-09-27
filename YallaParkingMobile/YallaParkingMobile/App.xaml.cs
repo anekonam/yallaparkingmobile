@@ -8,7 +8,6 @@ using System.Text;
 
 using Xamarin.Forms;
 using YallaParkingMobile.Utility;
-using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Distribute;
 
 namespace YallaParkingMobile {
@@ -21,7 +20,7 @@ namespace YallaParkingMobile {
 
             if (!string.IsNullOrWhiteSpace(token)) {
                 Analytics.TrackEvent("Skipping login sequence, navigating to Home");
-                MainPage = new NavigationPage(new Home()) {
+               MainPage = new NavigationPage(new Home()) {
                     BarTextColor = Color.FromRgb(255, 142, 48)
                 };
             } else if (onboarding) {

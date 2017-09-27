@@ -78,6 +78,7 @@ namespace YallaParkingMobile {
         async void LoadData() {
             BusyIndicator.IsBusy = true;
             await Task.Delay(2000);
+            var profile = await ServiceUtility.Profile();
             BusyIndicator.IsBusy = false;
         }
 
@@ -187,6 +188,7 @@ namespace YallaParkingMobile {
         }
 
         private async void Logout_Clicked(object sender, EventArgs e) {
+            PropertyUtility.RemoveKey("token");
             await Navigation.PushAsync(new Login());
         }
 

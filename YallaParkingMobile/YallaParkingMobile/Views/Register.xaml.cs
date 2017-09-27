@@ -48,10 +48,16 @@ namespace YallaParkingMobile {
                 PhoneNumber = this.PhoneNumberPrefix.Text + this.PhoneNumber.Text
             };
 
+			Activity.IsRunning = true;
+			Activity.IsVisible = true;
+
             var success = await ServiceUtility.Register(model);
 
+            Activity.IsRunning = false;
+            Activity.IsVisible = false;
+
             if (success) {
-                await Navigation.PushAsync(new RegisterConfirm());
+                await Navigation.PushAsync(new Verify());
             } else {
                 await DisplayAlert("Regiser Failed", "Registration failed, please try again", "Ok");
             }
