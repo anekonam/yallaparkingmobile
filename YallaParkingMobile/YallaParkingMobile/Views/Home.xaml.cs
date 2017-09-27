@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
+using YallaParkingMobile.Model;
 using YallaParkingMobile.Utility;
 
 namespace YallaParkingMobile {
@@ -75,17 +76,38 @@ namespace YallaParkingMobile {
             LoadData();            
         }
 
-        async void LoadData() {
+        async void LoadData(string query = null) {
             BusyIndicator.IsBusy = true;
             await Task.Delay(2000);
-            var profile = await ServiceUtility.Profile();
-            BusyIndicator.IsBusy = false;
+
+            var search = new SearchModel {
+                Name = query,
+                StartDate = this.SearchDate.Date.Add(this.SearchTime.Time),
+                Hours = (int)this.HoursSlider.Value
+            };
+
+            var properties = await ServiceUtility.Search(search);
+
+            this.Map.Pins.Clear();
+
+            foreach(var property in properties) {
+                var pin = new Pin {
+                    Position = new Xamarin.Forms.Maps.Position(property.Latitude ?? 0.0, property.Longitude ?? 0.0),
+                    Label = string.Format("{0} (AED {1}/hr)", property.Name, property.ShortTermParkingPrice),
+                    Address = property.AreaName,
+                    Type = PinType.SearchResult
+                };
+
+                this.Map.Pins.Add(pin);
+            }
+
+            BusyIndicator.IsBusy = false;           
         }
 
         async void Search_SuggestionItemSelected(object sender, Telerik.XamarinForms.Input.AutoComplete.SuggestionItemSelectedEventArgs e) {
-            LoadData();
-
             var address = e.DataItem.ToString();
+
+            LoadData(address);            
 
             if (!string.IsNullOrWhiteSpace(address)) {
                 address = string.Format("{0}, Dubai", address);
