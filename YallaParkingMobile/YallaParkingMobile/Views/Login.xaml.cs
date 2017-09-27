@@ -39,13 +39,19 @@ namespace YallaParkingMobile {
                 Password = this.Password.Text
             };
 
+            Activity.IsRunning = true;
+			Activity.IsVisible = true;
+
             var result = await ServiceUtility.Login(model);
+
+            Activity.IsRunning = false;
+            Activity.IsVisible = false;
 
             if (result.IsSuccessStatusCode) {
                 await Navigation.PushAsync(new Home());
             } else if(result.StatusCode == System.Net.HttpStatusCode.Forbidden){
                 await DisplayAlert("Verification Required", "Verification required, please enter the code sent to you on the following screen", "Ok");
-                await Navigation.PushAsync(new RegisterConfirm());
+                await Navigation.PushAsync(new Verify());
             } else {
                 await DisplayAlert("Login Failed", "Login failed for the e-mail address and password provided, please try again.", "Ok");                
             }            

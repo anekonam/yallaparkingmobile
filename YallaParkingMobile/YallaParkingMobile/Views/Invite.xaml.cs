@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
+using YallaParkingMobile.Utility;
 
 namespace YallaParkingMobile {
     public partial class Invite : ContentPage {        
@@ -38,6 +39,7 @@ namespace YallaParkingMobile {
         }
 
         private async void Invite_Clicked(object sender, EventArgs e) {
+            PropertyUtility.RemoveKey("token");
             await Navigation.PushAsync(new Invite());
         }
 

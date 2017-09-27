@@ -10,8 +10,8 @@ using YallaParkingMobile.Model;
 using YallaParkingMobile.Utility;
 
 namespace YallaParkingMobile {
-    public partial class VerifyNumber : ContentPage {
-        public VerifyNumber() {
+    public partial class Verify : ContentPage {
+        public Verify() {
             InitializeComponent();
             Analytics.TrackEvent("Viewing Verify Number Page");
         }    
@@ -22,9 +22,15 @@ namespace YallaParkingMobile {
             if (string.IsNullOrWhiteSpace(this.VerificationCode.Text)) {
                 await DisplayAlert("Verification Code Required", "Please ensure you provide your verification code", "Ok");
                 return;
-            } 
-            
+            }
+
+			Activity.IsRunning = true;
+			Activity.IsVisible = true;
+
             var success = await ServiceUtility.Verify(this.VerificationCode.Text);
+
+            Activity.IsRunning = false;
+			Activity.IsVisible = false;
 
             if (success) {
                 await Navigation.PushAsync(new Home());
@@ -34,6 +40,7 @@ namespace YallaParkingMobile {
         }
 				
         async void ToolbarItem_Activated(object sender, EventArgs e) {
+            var profile = await ServiceUtility.Profile();
             await Navigation.PushAsync(new Home());
         }
     }

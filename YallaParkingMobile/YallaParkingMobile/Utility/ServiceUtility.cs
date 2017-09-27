@@ -91,7 +91,7 @@ namespace YallaParkingMobile.Utility {
             }            
         }
 
-        public static async Task<bool> Verify(string code) {
+		public static async Task<bool> Verify(string code) {
             InitHttpClient();
 
             var verify = new {
@@ -110,6 +110,28 @@ namespace YallaParkingMobile.Utility {
                 return false;
             }            
         }
+
+		public static async Task<ProfileModel> Profile()
+		{
+			InitHttpClient();
+
+			try
+			{
+				var response = await client.GetAsync("/api/account/profile");
+
+				if (response.IsSuccessStatusCode)
+				{
+					var profileResponse = await response.Content.ReadAsStringAsync();
+					return JsonConvert.DeserializeObject<ProfileModel>(profileResponse);
+				}
+			}
+			catch
+			{
+				return null;
+			}
+
+            return null;
+		}
 
         private static StringContent AsJson(this object o) => new StringContent(JsonConvert.SerializeObject(o), Encoding.UTF8, "application/json");
 

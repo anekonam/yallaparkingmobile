@@ -16,6 +16,10 @@ namespace YallaParkingMobile.Utility {
             Application.Current.Properties[key] = value;
         }
 
+        public static void RemoveKey(string key) {
+            Application.Current.Properties.Remove(key);
+        }
+
         private static object GetObjectValue(string key) {
             if (Application.Current.Properties.ContainsKey(key)) {
                 return Application.Current.Properties[key];

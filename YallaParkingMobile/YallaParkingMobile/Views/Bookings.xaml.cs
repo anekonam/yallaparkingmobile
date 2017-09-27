@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
+using YallaParkingMobile.Utility;
 
 namespace YallaParkingMobile {
     public partial class Bookings : ContentPage {        
@@ -42,6 +43,7 @@ namespace YallaParkingMobile {
         }
 
         private async void Logout_Clicked(object sender, EventArgs e) {
+            PropertyUtility.RemoveKey("token");
             await Navigation.PushAsync(new Login());
         }
 

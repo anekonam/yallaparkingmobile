@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -35,7 +35,6 @@
                 Height="*" />
             <RowDefinition
                 Height="*" />
-
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition
@@ -49,14 +48,19 @@
             <ColumnDefinition
                 Width="*" />
         </Grid.ColumnDefinitions>
-
+        <ActivityIndicator
+            x:Name="Activity"
+            IsRunning="False"
+            IsVisible="False"
+            Color="#ff8e30"
+            Grid.ColumnSpan="5"
+            Grid.RowSpan="9" />
         <Image
             Source="logo.png"
             Grid.Row="1"
             Grid.Column="1"
             Grid.ColumnSpan="3"
             Aspect="AspectFit" />
-        
         <control:BorderlessEntry
             Grid.Row="3"
             Grid.Column="1"
@@ -64,15 +68,13 @@
             Placeholder="E-mail Address"
             Keyboard="Email"
             x:Name="EmailAddress" />
-
         <control:BorderlessEntry
             Grid.Row="4"
-            Grid.Column="1"            
+            Grid.Column="1"
             Grid.ColumnSpan="3"
-            Placeholder="Password"      
-            IsPassword="True"            
+            Placeholder="Password"
+            IsPassword="True"
             x:Name="Password" />
-
         <ContentView
             Padding="0,5,0,0"
             Grid.Row="6"
@@ -80,13 +82,12 @@
             Grid.ColumnSpan="3">
             <Button
                 x:Name="NextButton"
-				Clicked="NextButton_Clicked"
+                Clicked="NextButton_Clicked"
                 Style="{StaticResource GreenButton}"
                 Text="Log In"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="Center" />
         </ContentView>
-        
         <ContentView
             Padding="0,5,0,0"
             Grid.Row="7"
@@ -94,14 +95,12 @@
             Grid.ColumnSpan="3">
             <Button
                 x:Name="FacebookButton"
-				Clicked="FacebookButton_Clicked"
+                Clicked="FacebookButton_Clicked"
                 Style="{StaticResource FacebookButton}"
                 Text="Log In with Facebook"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="Center" />
         </ContentView>
-
-
         <ContentView
             Padding="0,5,0,0"
             Grid.Row="8"
@@ -116,5 +115,4 @@
                 VerticalOptions="Center" />
         </ContentView>
     </Grid>
-
 </ContentPage>
