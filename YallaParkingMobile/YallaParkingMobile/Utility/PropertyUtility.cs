@@ -13,7 +13,7 @@ namespace YallaParkingMobile.Utility {
         }
 
         public static void SetValue(string key, string value) {
-            Application.Current.Properties[key] = value;
+            Application.Current.Properties[key] = value;            
         }
 
         private static object GetObjectValue(string key) {
