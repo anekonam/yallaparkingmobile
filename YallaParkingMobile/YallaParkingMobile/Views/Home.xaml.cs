@@ -27,7 +27,7 @@ namespace YallaParkingMobile {
 
             UpdateCurrentLocation();
 
-            CrossGeolocator.Current.PositionChanged += Current_PositionChanged;
+            CrossGeolocator.Current.PositionChanged += Current_PositionChanged;            
 
             SearchDate.Date = DateTime.Now;            
 
@@ -52,11 +52,14 @@ namespace YallaParkingMobile {
 
             foreach(var property in properties) {
                 var pin = new Pin {
+                    BindingContext = property,
                     Position = new Xamarin.Forms.Maps.Position(property.Latitude ?? 0.0, property.Longitude ?? 0.0),
                     Label = string.Format("{0} (AED {1}/hr)", property.Name, property.ShortTermParkingPrice),
                     Address = property.AreaName,
-                    Type = PinType.SearchResult
+                    Type = PinType.SearchResult,                    
                 };
+
+                pin.Clicked += Pin_Clicked;
 
                 this.Map.Pins.Add(pin);
             }
@@ -66,6 +69,12 @@ namespace YallaParkingMobile {
             }
 
             BusyIndicator.IsBusy = false;           
+        }
+
+        private void Pin_Clicked(object sender, EventArgs e) {
+            var pin = (Pin)sender;
+            var property = (PropertyModel)pin.BindingContext;
+            DisplayAlert(property.Name, "You are not yet verified to make bookings for this property", "Ok");
         }
 
         async void Search_SuggestionItemSelected(object sender, Telerik.XamarinForms.Input.AutoComplete.SuggestionItemSelectedEventArgs e) {
