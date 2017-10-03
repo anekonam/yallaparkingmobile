@@ -167,6 +167,27 @@ namespace YallaParkingMobile.Utility {
             return null;
         }
 
+        public static async Task<DiscountModel> DiscountCode(string code) {
+            InitHttpClient();
+
+            var discountModel = new DiscountModel{
+                DiscountCode = code
+            };
+
+            try {
+                var response = await client.PostAsync("/api/parking/discount", discountModel.AsJson());
+
+                if (response.IsSuccessStatusCode) {
+                    var discountResponse = await response.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<DiscountModel>(discountResponse);
+                }
+
+                return discountModel;
+            } catch {
+                return discountModel;
+            }
+        }
+
         private static StringContent AsJson(this object o) => new StringContent(JsonConvert.SerializeObject(o), Encoding.UTF8, "application/json");
 
     }   

@@ -63,7 +63,7 @@
             Grid.Row="6"
             Grid.Column="1"
             Grid.ColumnSpan="2"
-            Text="With Yalla Parking, it really is that simple" />
+            Text="With YallaParking, it really is that simple" />
 
         <ContentView
             Padding="20,0,0,20"

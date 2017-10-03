@@ -105,6 +105,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="BorderlessPickerRenderer.cs" />
     <Compile Include="BorderlessEntryRenderer.cs" />
     <Compile Include="ContentPageRenderer.cs" />
     <Compile Include="Main.cs" />

@@ -38,7 +38,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Control\BorderlessPicker.cs" />
     <Compile Include="Extensions\ImageResourceExtension.cs" />
+    <Compile Include="Model\DiscountModel.cs" />
     <Compile Include="Model\SearchModel.cs" />
     <Compile Include="Model\PropertyModel.cs" />
     <Compile Include="Model\TokenModel.cs" />
@@ -64,6 +66,9 @@
     </Compile>
     <Compile Include="Views\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\BookParking.xaml.cs">
+      <DependentUpon>BookParking.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Verify.xaml.cs">
       <DependentUpon>Verify.xaml</DependentUpon>
@@ -251,6 +256,11 @@
   <ItemGroup>
     <EmbeddedResource Include="Views\Verify.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\BookParking.xaml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

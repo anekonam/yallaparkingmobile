@@ -62,7 +62,7 @@
             Grid.Row="6"
             Grid.Column="1"
             Grid.ColumnSpan="2"
-            Text="Find more than 700 Yalla Parking spots across Dubai" />
+            Text="Find more than 700 YallaParking spots across Dubai" />
 
         <ContentView
             Padding="20,0,0,20"

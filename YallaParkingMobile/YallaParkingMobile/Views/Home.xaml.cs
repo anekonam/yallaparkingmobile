@@ -29,9 +29,14 @@ namespace YallaParkingMobile {
 
             CrossGeolocator.Current.PositionChanged += Current_PositionChanged;            
 
-            SearchDate.Date = DateTime.Now;            
+            SearchDate.Date = DateTime.Now;
+            Search.Unfocused += Search_Unfocused;
 
             LoadData();            
+        }
+
+        private void Search_Unfocused(object sender, FocusEventArgs e) {
+            LoadData(Search.Text);
         }
 
         async void LoadData(string query = null) {
@@ -71,15 +76,20 @@ namespace YallaParkingMobile {
             BusyIndicator.IsBusy = false;           
         }
 
-        private void Pin_Clicked(object sender, EventArgs e) {
+        private async void Pin_Clicked(object sender, EventArgs e) {
             var pin = (Pin)sender;
             var property = (PropertyModel)pin.BindingContext;
-            DisplayAlert(property.Name, "You are not yet verified to make bookings for this property", "Ok");
+
+            property.StartDate = this.SearchDate.Date.Add(this.SearchTime.Time);
+            property.Hours = (int)this.HoursSlider.Value;
+
+            var bookParking = new BookParking();
+            bookParking.BindingContext = property;
+            await Navigation.PushAsync(bookParking);
         }
 
         async void Search_SuggestionItemSelected(object sender, Telerik.XamarinForms.Input.AutoComplete.SuggestionItemSelectedEventArgs e) {
             var address = e.DataItem.ToString();
-
             LoadData(address);                        
         }
 

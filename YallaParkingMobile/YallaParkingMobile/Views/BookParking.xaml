@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:YallaParkingMobile"
+    xmlns:control="clr-namespace:YallaParkingMobile.Control"
+    x:Class="YallaParkingMobile.BookParking"
+    Title="Booking Summary">
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="150" />
+                <RowDefinition
+                    Height="300" />
+                <RowDefinition
+                    Height="100" />
+                <RowDefinition
+                    Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid
+                Grid.Row="0"
+                Padding="30">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="0.3*" />
+                    <ColumnDefinition
+                        Width="0.7*" />
+                </Grid.ColumnDefinitions>
+                <Image
+                    Grid.Column="0"
+                    Aspect="AspectFill"
+                    x:Name="PropertyImage">
+                </Image>
+                <StackLayout
+                    Padding="10,0,0,0"
+                    Grid.Column="1">
+                    <Label
+                        x:Name="PropertyName"
+                        HorizontalTextAlignment="Start"
+                        Text="{Binding Name}" />
+                    <Label
+                        x:Name="PropertyArea"
+                        HorizontalTextAlignment="Start"
+                        FontSize="12"
+                        Text="{Binding PropertyArea}" />
+                    <Label
+                        HorizontalTextAlignment="Start"
+                        FontSize="12"
+                        Text="Dubai, UAE" />
+                    <ContentView
+                        Margin="0,10,0,0"
+                        Padding="5"
+                        BackgroundColor="#ff8e30">
+                        <Label
+                            x:Name="BookingTime"
+                            TextColor="White"
+                            FontSize="10"
+                            HorizontalTextAlignment="Start"
+                            Text="{Binding BookingTime}" />
+                    </ContentView>
+                </StackLayout>
+            </Grid>
+            <TableView
+                x:Name="OrderSummary"
+                Intent="Settings"
+                Grid.Row="1">
+                <TableRoot>
+                    <TableSection
+                        Title="Order Summary">
+                        <EntryCell
+                            LabelColor="#a1a1b4"
+                            Label="Number of hours"
+                            HorizontalTextAlignment="End"
+                            IsEnabled="False"
+                            Text="{Binding Hours}" />
+                        <EntryCell
+                            LabelColor="#a1a1b4"
+                            Label="Price per hour"
+                            HorizontalTextAlignment="End"
+                            IsEnabled="False"
+                            Text="{Binding ShortTermParkingPrice, StringFormat='AED {0:n2}'}" />
+                        <EntryCell
+                            x:Name="DiscountCode"
+                            LabelColor="#a1a1b4"
+                            Label="Promotional Code"
+                            HorizontalTextAlignment="End"
+                            Placeholder="Code"
+                            Text="{Binding DiscountCode, Mode=TwoWay}" />
+                        <ViewCell
+                            x:Name="ApplyCodeCell">
+                            <Button
+                                x:Name="ApplyCodeButton"
+                                Clicked="ApplyCodeButton_Clicked"
+                                Style="{StaticResource GreenButton}"
+                                Text="Apply Code"
+                                Margin="5"
+                                HorizontalOptions="EndAndExpand"
+                                VerticalOptions="Center" />
+                        </ViewCell>
+                        <EntryCell
+                            Label="Discount"
+                            LabelColor="#a1a1b4"
+                            HorizontalTextAlignment="End"
+                            IsEnabled="False"
+                            Text="{Binding Discount, StringFormat='(AED {0:n2})'}" />
+                        <EntryCell
+                            Label="Total"
+                            HorizontalTextAlignment="End"
+                            IsEnabled="False"
+                            LabelColor="Black"
+                            Text="{Binding TotalPrice, StringFormat='AED {0:n2}'}">
+                        </EntryCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <TableView
+                x:Name="SelectVehicle"
+                Intent="Settings"
+                Grid.Row="2">
+                <TableRoot>
+                    <TableSection
+                        Title="Select Vehicle">
+                        <ViewCell>
+                            <Picker
+                                x:Name="VehicleSelect"                                
+                                HorizontalOptions="FillAndExpand">
+                            </Picker>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+            <ContentView
+                Padding="10"
+                Grid.Row="3">
+                <Button
+                    x:Name="BookButton"
+                    Style="{StaticResource GreenButton}"
+                    Text="Book Now"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center" />
+            </ContentView>
+        </Grid>
+    </ScrollView>
+</ContentPage>
