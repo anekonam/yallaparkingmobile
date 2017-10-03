@@ -6,6 +6,7 @@ using UIKit;
 using Xamarin.Forms;
 using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Distribute;
+using ImageCircle.Forms.Plugin.iOS;
 
 [assembly: ExportRenderer(typeof(Telerik.XamarinForms.Primitives.RadSideDrawer), typeof(Telerik.XamarinForms.PrimitivesRenderer.iOS.SideDrawerRenderer))]
 namespace YallaParkingMobile.iOS {
@@ -27,6 +28,7 @@ namespace YallaParkingMobile.iOS {
             global::Xamarin.Forms.Forms.Init();            
             Xamarin.FormsMaps.Init();
 
+            ImageCircleRenderer.Init();
             Distribute.DontCheckForUpdatesInDebug();
             MobileCenter.Start("cb01c0e7-1e13-4db0-a7ab-b6e6bfc6aea3", typeof(Distribute));
 

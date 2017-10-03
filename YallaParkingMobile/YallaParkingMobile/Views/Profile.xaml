@@ -1,9 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"    
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
     xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
     x:Class="YallaParkingMobile.Profile"
     Title="My Profile"
     NavigationPage.HasBackButton="False">
@@ -17,11 +18,152 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <telerikPrimitives:RadSideDrawer
-            x:Name="Menu"            
+            x:Name="Menu"
             DrawerLength="200"
             BackgroundColor="White">
             <telerikPrimitives:RadSideDrawer.MainContent>
-                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                            Height="200" />
+                        <RowDefinition
+                            Height="*" />
+                    </Grid.RowDefinitions>
+                    <StackLayout>
+                        <controls:CircleImage
+                            Margin="10"
+                            WidthRequest="100"
+                            HeightRequest="100"
+                            BorderColor="#a1a1b4"
+                            BorderThickness="1"
+                            HorizontalOptions="Center"
+                            Source="http://www.freeiconspng.com/uploads/profile-icon-9.png"
+                            Aspect="AspectFill">
+                        </controls:CircleImage>
+                        <Label                            
+                            x:Name="ProfileName"
+                            Style="{StaticResource Header}" />
+                    </StackLayout>
+                    <TableView
+                        x:Name="ProfileMenu"
+                        Intent="Settings"
+                        Grid.Row="1">
+                        <TableRoot>
+                            <TableSection>
+                                <ViewCell
+                                    x:Name="UpdateProfile"
+                                    Height="80">
+                                    <StackLayout
+                                        Margin="10"
+                                        Orientation="Horizontal">
+                                        <Image
+                                            Source="updateProfile.png"
+                                            VerticalOptions="Center" />
+                                        <Label
+                                            Margin="10,0,0,0"
+                                            VerticalOptions="Center"
+                                            Text="Update Profile" />
+                                    </StackLayout>
+                                </ViewCell>
+                                <ViewCell
+                                    x:Name="VerifyProfile"
+                                    Height="80">
+                                    <StackLayout
+                                        Margin="10"
+                                        Orientation="Horizontal">
+                                        <Image
+                                            Source="verify.png"
+                                            VerticalOptions="Center" />
+                                        <Label
+                                            Margin="10,0,0,0"
+                                            VerticalOptions="Center"
+                                            Text="Verify Profile" />
+                                    </StackLayout>
+                                </ViewCell>
+                                <ViewCell
+                                    x:Name="Garage"
+                                    Height="80">
+                                    <StackLayout
+                                        Margin="10"
+                                        Orientation="Horizontal">
+                                        <Image
+                                            Source="garage.png"
+                                            VerticalOptions="Center" />
+                                        <Label
+                                            Margin="10,0,0,0"
+                                            VerticalOptions="Center"
+                                            Text="Garage" />
+                                    </StackLayout>
+                                </ViewCell>
+                                <ViewCell
+                                    x:Name="Wallet"
+                                    Height="80">
+                                    <StackLayout
+                                        Margin="10"
+                                        Orientation="Horizontal">
+                                        <Image
+                                            Source="wallet.png"
+                                            VerticalOptions="Center" />
+                                        <Label
+                                            Margin="10,0,0,0"
+                                            VerticalOptions="Center"
+                                            Text="Wallet" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </TableSection>
+                            <TableSection>
+                                <ViewCell
+                                    x:Name="Terms"
+                                    Height="80">
+                                    <StackLayout
+                                        Margin="10"
+                                        Orientation="Horizontal">
+                                        <Image
+                                            Source="terms.png"
+                                            VerticalOptions="Center" />
+                                        <Label
+                                            Margin="10,0,0,0"
+                                            VerticalOptions="Center"
+                                            Text="Terms &amp; Conditions" />
+                                    </StackLayout>
+                                </ViewCell>
+                                <ViewCell
+                                    x:Name="PrivacyPolicy"
+                                    Height="80">
+                                    <StackLayout
+                                        Margin="10"
+                                        Orientation="Horizontal">
+                                        <Image
+                                            Source="privacy.png"
+                                            VerticalOptions="Center" />
+                                        <Label
+                                            Margin="10,0,0,0"
+                                            VerticalOptions="Center"
+                                            Text="Privacy Policy" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </TableSection>
+                            <TableSection>
+                                <ViewCell
+                                    x:Name="Contact"
+                                    Tapped="Handle_ContactTapped"
+                                    Height="80">
+                                    <StackLayout
+                                        Margin="10"
+                                        Orientation="Horizontal">
+                                        <Image
+                                            Source="contact.png"
+                                            VerticalOptions="Center" />
+                                        <Label
+                                            Margin="10,0,0,0"
+                                            VerticalOptions="Center"
+                                            Text="Contact Us" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </TableSection>
+                        </TableRoot>
+                    </TableView>
+                </Grid>
             </telerikPrimitives:RadSideDrawer.MainContent>
             <telerikPrimitives:RadSideDrawer.DrawerContent>
                 <StackLayout>

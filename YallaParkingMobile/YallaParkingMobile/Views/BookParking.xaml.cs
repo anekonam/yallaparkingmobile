@@ -26,7 +26,6 @@ namespace YallaParkingMobile {
             }
 
             NavigationPage.SetBackButtonTitle(this, " ");
-            this.VehicleSelect.ItemsSource = new string[] { "Car 1", "Car 2", "Car 3"};
         }
 
         private async void ApplyCodeButton_Clicked(object sender, EventArgs e) {

@@ -9,6 +9,7 @@ using Android.OS;
 
 using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Distribute;
+using ImageCircle.Forms.Plugin.Droid;
 
 namespace YallaParkingMobile.Droid {
     [Activity(Label = "YallaParkingMobile", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
@@ -20,6 +21,7 @@ namespace YallaParkingMobile.Droid {
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
+            ImageCircleRenderer.Init();
             Xamarin.FormsMaps.Init(this, bundle);
             LoadApplication(new App());
 

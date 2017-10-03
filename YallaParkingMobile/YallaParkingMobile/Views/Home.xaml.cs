@@ -171,8 +171,7 @@ namespace YallaParkingMobile {
             await Navigation.PushAsync(new Bookings());
         }
 
-        private async void MyProfile_Clicked(object sender, EventArgs e) {
-            await DisplayAlert("Profile Error", "Unable to retrieve your profile details, please check your internet connection and try again", "OK").ConfigureAwait(false);
+        private async void MyProfile_Clicked(object sender, EventArgs e) {           
             await Navigation.PushAsync(new Profile());
         }
 

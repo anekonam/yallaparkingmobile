@@ -15,11 +15,23 @@ using Xamarin.Forms.Maps;
 using YallaParkingMobile.Utility;
 
 namespace YallaParkingMobile {
-    public partial class Profile : ContentPage {        
+    public partial class Profile : ContentPage {
+
         public Profile() {
             InitializeComponent();
-            Analytics.TrackEvent("Viewing Profile Page");            
-        }       
+            Analytics.TrackEvent("Viewing Profile Page");
+
+            this.Appearing += Handle_Appearing;
+        }
+
+        async void Handle_Appearing(object sender, EventArgs e) {
+            var profile = await ServiceUtility.Profile();
+            this.ProfileName.Text = profile.Name;
+        }
+
+        void Handle_ContactTapped(object sender, System.EventArgs e) {
+            Device.OpenUri(new Uri("tel:+971566595697"));
+        }
 
         private void Button_Clicked(object sender, EventArgs e) {
             Menu.IsOpen = !Menu.IsOpen;
@@ -34,7 +46,6 @@ namespace YallaParkingMobile {
         }
 
         private async void MyProfile_Clicked(object sender, EventArgs e) {
-            await DisplayAlert("Profile Error", "Unable to retrieve your profile details, please check your internet connection and try again", "OK").ConfigureAwait(false);
             await Navigation.PushAsync(new Profile());
         }
 
