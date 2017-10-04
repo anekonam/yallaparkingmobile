@@ -31,8 +31,15 @@ namespace YallaParkingMobile {
             }                
         }       
         async void UpdateButton_Clicked(object sender, EventArgs e) {
+            Activity.IsVisible = true;
+            Activity.IsRunning = true;
+
             await ServiceUtility.UpdateProfile(this.ProfileModel);
+           
             await this.Navigation.PopAsync();
+
+            Activity.IsRunning = false;
+            Activity.IsVisible = false;
         }
     }
 }
