@@ -92,10 +92,14 @@ namespace YallaParkingMobile {
                     this.ProfileImage.Source = ImageSource.FromStream(() => stream);
                 }
             }
+
+            await ServiceUtility.UpdateProfile(this.ProfileModel);
         }      
 
-        private void UpdateProfile_Tapped(object sender, EventArgs e) {
-            
+        async void UpdateProfile_Tapped(object sender, EventArgs e) {
+            var updateProfile = new UpdateProfile();
+            updateProfile.BindingContext = this.ProfileModel;
+            await Navigation.PushAsync(updateProfile);
         }
 
         async void VerifyProfile_Tapped(object sender, EventArgs e) {
