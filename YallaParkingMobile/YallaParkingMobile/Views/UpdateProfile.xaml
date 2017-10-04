@@ -16,7 +16,8 @@
                 Height="Auto" />
         </Grid.RowDefinitions>
     </Grid>
-    <TableView>
+    <TableView
+        Grid.Row="0">
         <TableSection
             Title="Profile Details">
             <EntryCell
@@ -38,6 +39,7 @@
     </TableView>
     <Button
         Grid.Row="1"
+        Padding="10"
         x:Name="UpdateButton"
         Style="{StaticResource GreenButton}"
         Text="Update Profile"
