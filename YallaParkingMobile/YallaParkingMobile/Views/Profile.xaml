@@ -48,6 +48,13 @@
                         <Label                            
                             x:Name="ProfileName"
                             Text="{Binding Name}"
+                            TextColor="Black"
+                            HorizontalOptions="Center"
+                            Style="{StaticResource Header}" />
+                        <Label 
+                            Margin="0,5,0,0"                            
+                            HorizontalOptions="Center"
+                            Text="{Binding VerifiedString}"
                             Style="{StaticResource Header}" />
                     </StackLayout>
                     <TableView

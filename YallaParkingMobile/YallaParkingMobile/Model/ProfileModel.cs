@@ -28,6 +28,7 @@ namespace YallaParkingMobile.Model {
                     if (this.PropertyChanged != null) {
                         PropertyChanged(this, new PropertyChangedEventArgs("EmiratesId"));
                         PropertyChanged(this, new PropertyChangedEventArgs("Verified"));
+                        PropertyChanged(this, new PropertyChangedEventArgs("VerifiedString"));
                     }
                 }
             }
@@ -36,6 +37,12 @@ namespace YallaParkingMobile.Model {
         public bool Verified {
             get {
                 return !string.IsNullOrWhiteSpace(this.EmiratesId);
+            }
+        }
+
+        public string VerifiedString {
+            get {
+                return this.Verified ? "Verified" : "Not Verified";
             }
         }
 
