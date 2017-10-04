@@ -114,9 +114,10 @@
                             <TableSection>
                                 <ViewCell
                                     x:Name="Terms"
-                                    Height="80">
+                                    Height="80"
+                                    Tapped="Terms_Tapped">
                                     <StackLayout
-                                        Margin="10"
+                                        Margin="10"                                        
                                         Orientation="Horizontal">
                                         <Image
                                             Source="terms.png"
@@ -125,21 +126,6 @@
                                             Margin="10,0,0,0"
                                             VerticalOptions="Center"
                                             Text="Terms &amp; Conditions" />
-                                    </StackLayout>
-                                </ViewCell>
-                                <ViewCell
-                                    x:Name="PrivacyPolicy"
-                                    Height="80">
-                                    <StackLayout
-                                        Margin="10"
-                                        Orientation="Horizontal">
-                                        <Image
-                                            Source="privacy.png"
-                                            VerticalOptions="Center" />
-                                        <Label
-                                            Margin="10,0,0,0"
-                                            VerticalOptions="Center"
-                                            Text="Privacy Policy" />
                                     </StackLayout>
                                 </ViewCell>
                             </TableSection>

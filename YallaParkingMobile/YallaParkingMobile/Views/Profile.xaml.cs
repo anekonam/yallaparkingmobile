@@ -27,11 +27,7 @@ namespace YallaParkingMobile {
         async void Handle_Appearing(object sender, EventArgs e) {
             var profile = await ServiceUtility.Profile();
             this.ProfileName.Text = profile.Name;
-        }
-
-        void Handle_ContactTapped(object sender, System.EventArgs e) {
-            Device.OpenUri(new Uri("tel:+971566595697"));
-        }
+        }       
 
         private void Button_Clicked(object sender, EventArgs e) {
             Menu.IsOpen = !Menu.IsOpen;
@@ -56,6 +52,14 @@ namespace YallaParkingMobile {
         private async void Logout_Clicked(object sender, EventArgs e) {
             PropertyUtility.RemoveKey("token");
             await Navigation.PushAsync(new Login());
-        }       
+        }
+
+        private void Terms_Tapped(object sender, EventArgs e) {
+            Device.OpenUri(new Uri("https://yallaparking.com/home/terms"));
+        }
+
+        private void Contact_Tapped(object sender, System.EventArgs e) {
+            Device.OpenUri(new Uri("tel:+971566595697"));
+        }
     }
 }
