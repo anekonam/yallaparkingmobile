@@ -16,6 +16,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using YallaParkingMobile.Model;
 using YallaParkingMobile.Utility;
+using Plugin.Media.Abstractions;
 
 namespace YallaParkingMobile {
     public partial class Profile : ContentPage {
@@ -39,6 +40,10 @@ namespace YallaParkingMobile {
 
             if (!string.IsNullOrWhiteSpace(profile.ProfilePicture)) {
                 this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profile.ProfilePictureBase)));
+            }
+
+            if (profile.Verified){
+                VerifyProfile.View.IsVisible = false;
             }
         }       
 
@@ -76,7 +81,8 @@ namespace YallaParkingMobile {
             }
 
             var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions {
-                SaveToAlbum = false
+                PhotoSize = PhotoSize.Small,
+                SaveToAlbum = false                    
             });
 
             if (file == null) {
