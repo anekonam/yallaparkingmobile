@@ -89,6 +89,7 @@ namespace YallaParkingMobile {
                 if (this.ProfileModel != null) {
                     this.ProfileModel.ProfilePicture = Convert.ToBase64String(stream.ToArray());
                     this.ProfileImage.Source = ImageSource.FromStream(() => stream);
+                    await ServiceUtility.UpdateProfile(this.ProfileModel);
                 }
             }
         }      
@@ -123,6 +124,7 @@ namespace YallaParkingMobile {
 
                     if (this.ProfileModel != null) {
                         this.ProfileModel.EmiratesId = Convert.ToBase64String(stream.ToArray());
+                        await ServiceUtility.UpdateProfile(this.ProfileModel);
                     }
                 }
                 await DisplayAlert("Profile Verified", "Your profile is now verified.", "OK");
