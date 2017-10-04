@@ -31,17 +31,23 @@
                     </Grid.RowDefinitions>
                     <StackLayout>
                         <controls:CircleImage
+                            x:Name="ProfileImage"                           
                             Margin="10"
                             WidthRequest="100"
                             HeightRequest="100"
                             BorderColor="#a1a1b4"
                             BorderThickness="1"
-                            HorizontalOptions="Center"
+                            HorizontalOptions="Center"                            
                             Source="http://www.freeiconspng.com/uploads/profile-icon-9.png"
                             Aspect="AspectFill">
+                            <controls:CircleImage.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="ProfileImage_Tapped" />
+                            </controls:CircleImage.GestureRecognizers>
                         </controls:CircleImage>
                         <Label                            
                             x:Name="ProfileName"
+                            Text="{Binding Name}"
                             Style="{StaticResource Header}" />
                     </StackLayout>
                     <TableView
@@ -52,7 +58,8 @@
                             <TableSection>
                                 <ViewCell
                                     x:Name="UpdateProfile"
-                                    Height="80">
+                                    Height="80"
+                                    Tapped="UpdateProfile_Tapped">
                                     <StackLayout
                                         Margin="10"
                                         Orientation="Horizontal">
@@ -67,7 +74,8 @@
                                 </ViewCell>
                                 <ViewCell
                                     x:Name="VerifyProfile"
-                                    Height="80">
+                                    Height="80"                                    
+                                    Tapped="VerifyProfile_Tapped">
                                     <StackLayout
                                         Margin="10"
                                         Orientation="Horizontal">
@@ -82,7 +90,8 @@
                                 </ViewCell>
                                 <ViewCell
                                     x:Name="Garage"
-                                    Height="80">
+                                    Height="80"
+                                    Tapped="Garage_Tapped">
                                     <StackLayout
                                         Margin="10"
                                         Orientation="Horizontal">
@@ -97,7 +106,8 @@
                                 </ViewCell>
                                 <ViewCell
                                     x:Name="Wallet"
-                                    Height="80">
+                                    Height="80"
+                                    Tapped="Wallet_Tapped">
                                     <StackLayout
                                         Margin="10"
                                         Orientation="Horizontal">

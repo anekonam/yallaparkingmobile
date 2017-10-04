@@ -2,16 +2,19 @@
 using Microsoft.Azure.Mobile.Crashes;
 using Plugin.Geolocator;
 using Plugin.Geolocator.Abstractions;
+using Plugin.Media;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
+using YallaParkingMobile.Model;
 using YallaParkingMobile.Utility;
 
 namespace YallaParkingMobile {
@@ -24,9 +27,19 @@ namespace YallaParkingMobile {
             this.Appearing += Handle_Appearing;
         }
 
+        public ProfileModel ProfileModel {
+            get {
+                return (ProfileModel)this.BindingContext;
+            }                
+        }
+
         async void Handle_Appearing(object sender, EventArgs e) {
             var profile = await ServiceUtility.Profile();
-            this.ProfileName.Text = profile.Name;
+            this.BindingContext = profile;
+
+            if (!string.IsNullOrWhiteSpace(profile.Photo)) {
+                this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profile.PhotoBase)));
+            }
         }       
 
         private void Button_Clicked(object sender, EventArgs e) {
@@ -52,6 +65,76 @@ namespace YallaParkingMobile {
         private async void Logout_Clicked(object sender, EventArgs e) {
             PropertyUtility.RemoveKey("token");
             await Navigation.PushAsync(new Login());
+        }
+
+        async void ProfileImage_Tapped(object sender, EventArgs e) {
+            await CrossMedia.Current.Initialize();
+
+            if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported) {
+                await DisplayAlert("No Camera", "No camera available.", "OK");
+                return;
+            }
+
+            var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions {
+                SaveToAlbum = false
+            });
+
+            if (file == null) {
+                return;
+            }
+
+            using (MemoryStream stream = new MemoryStream()) {
+                file.GetStream().CopyTo(stream);
+
+                if (this.ProfileModel != null) {
+                    this.ProfileModel.Photo = Convert.ToBase64String(stream.ToArray());
+                }
+            }
+        }      
+
+        private void UpdateProfile_Tapped(object sender, EventArgs e) {
+
+        }
+
+        async void VerifyProfile_Tapped(object sender, EventArgs e) {
+            if (string.IsNullOrWhiteSpace(ProfileModel.EmiratesId)) {
+                await DisplayAlert("Profile Verification", "We take the security of our community very seriously. Please upload pictures of your Emirates ID (front & back) in order to start parking. Don't worry these are stored securely on our encrypted servers.", "OK");
+
+                await CrossMedia.Current.Initialize();
+
+                if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported) {
+                    await DisplayAlert("No Camera", "No camera available.", "OK");
+                    return;
+                }
+
+                var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions {
+                    SaveToAlbum = false
+                });
+
+                if (file == null) {
+                    return;
+                }
+
+                using (MemoryStream stream = new MemoryStream()) {
+                    file.GetStream().CopyTo(stream);
+
+                    if (this.ProfileModel != null) {
+                        this.ProfileModel.EmiratesId = Convert.ToBase64String(stream.ToArray());
+                    }
+                }
+                await DisplayAlert("Profile Verified", "Your profile is now verified.", "OK");
+            } else {
+                await DisplayAlert("Profile Verified", "Your profile is already verified.", "OK");
+            }
+        }
+
+
+        private void Garage_Tapped(object sender, EventArgs e) {
+
+        }
+
+        private void Wallet_Tapped(object sender, EventArgs e) {
+
         }
 
         private void Terms_Tapped(object sender, EventArgs e) {
