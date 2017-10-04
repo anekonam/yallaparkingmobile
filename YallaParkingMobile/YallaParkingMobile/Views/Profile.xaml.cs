@@ -87,13 +87,10 @@ namespace YallaParkingMobile {
                 file.GetStream().CopyTo(stream);
 
                 if (this.ProfileModel != null) {
-                    var photoData = stream.ToArray();
-                    this.ProfileModel.Photo = Convert.ToBase64String(photoData);
+                    this.ProfileModel.ProfilePicture = Convert.ToBase64String(stream.ToArray());
                     this.ProfileImage.Source = ImageSource.FromStream(() => stream);
                 }
             }
-
-            await ServiceUtility.UpdateProfile(this.ProfileModel);
         }      
 
         async void UpdateProfile_Tapped(object sender, EventArgs e) {

@@ -46,11 +46,11 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-        public string Photo { get; set; }
+        public string ProfilePicture { get; set; }
 
-        public string PhotoBase {
+        public string ProfilePictureBase {
             get {
-                return !string.IsNullOrWhiteSpace(this.Photo) && this.Photo.Contains(",") ? this.Photo.Split(',')[1] : this.Photo;
+                return !string.IsNullOrWhiteSpace(this.ProfilePicture) && this.ProfilePicture.Contains(",") ? this.ProfilePicture.Split(',')[1] : this.Photo;
             }
         }
     }
