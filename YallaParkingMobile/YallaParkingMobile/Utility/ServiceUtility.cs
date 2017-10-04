@@ -99,7 +99,7 @@ namespace YallaParkingMobile.Utility {
             };
 
             try {
-                var response = await client.PostAsync("/api/account/verify", verify.AsJson()); 
+                var response = await client.PostAsync("/api/account/verify", verify.AsJson());
                 
                 if (response.IsSuccessStatusCode) {
                     return true;
@@ -132,6 +132,23 @@ namespace YallaParkingMobile.Utility {
 
             return null;
 		}
+
+        public static async Task<ProfileModel> UpdateProfile(ProfileModel model) {
+            InitHttpClient();
+
+            try {
+                var response = await client.PostAsync("/api/account/update", model.AsJson());
+
+                if (response.IsSuccessStatusCode) {
+                    var profileResponse = await response.Content.ReadAsStringAsync();
+                    return JsonConvert.DeserializeObject<ProfileModel>(profileResponse);
+                }
+            } catch {
+                return null;
+            }
+
+            return null;
+        }
 
         public static async Task<List<PropertyModel>> Search(SearchModel search) {
             InitHttpClient();

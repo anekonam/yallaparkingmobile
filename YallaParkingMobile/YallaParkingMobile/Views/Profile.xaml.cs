@@ -93,7 +93,7 @@ namespace YallaParkingMobile {
         }      
 
         private void UpdateProfile_Tapped(object sender, EventArgs e) {
-
+            
         }
 
         async void VerifyProfile_Tapped(object sender, EventArgs e) {

@@ -58,6 +58,9 @@
     <Compile Include="Views\Bookings.xaml.cs">
       <DependentUpon>Bookings.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UpdateProfile.xaml.cs">
+      <DependentUpon>UpdateProfile.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
     </Compile>
@@ -270,6 +273,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\BookParking.xaml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\UpdateProfile.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
