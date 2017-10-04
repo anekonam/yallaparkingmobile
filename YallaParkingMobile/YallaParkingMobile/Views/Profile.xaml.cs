@@ -87,7 +87,9 @@ namespace YallaParkingMobile {
                 file.GetStream().CopyTo(stream);
 
                 if (this.ProfileModel != null) {
-                    this.ProfileModel.Photo = Convert.ToBase64String(stream.ToArray());
+                    var photoData = stream.ToArray();
+                    this.ProfileModel.Photo = Convert.ToBase64String(photoData);
+                    this.ProfileImage.Source = ImageSource.FromStream(() => stream);
                 }
             }
         }      
