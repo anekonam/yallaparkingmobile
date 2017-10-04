@@ -15,6 +15,11 @@
             <RowDefinition
                 Height="Auto" />
         </Grid.RowDefinitions>
+        <ActivityIndicator
+            x:Name="Activity"
+            IsRunning="False"
+            IsVisible="False"
+            Color="#ff8e30" />
     <TableView
         Grid.Row="0">
         <TableSection

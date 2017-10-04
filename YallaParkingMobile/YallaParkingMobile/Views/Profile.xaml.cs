@@ -37,8 +37,8 @@ namespace YallaParkingMobile {
             var profile = await ServiceUtility.Profile();
             this.BindingContext = profile;
 
-            if (!string.IsNullOrWhiteSpace(profile.Photo)) {
-                this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profile.PhotoBase)));
+            if (!string.IsNullOrWhiteSpace(profile.ProfilePicture)) {
+                this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profile.ProfilePictureBase)));
             }
         }       
 
