@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <?xml version="1.0"?>
 <doc>
     <assembly>
@@ -23,3 +24,30 @@
         </member>
     </members>
 </doc>
+=======
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ImageCircle.Forms.Plugin.WindowsPhone</name>
+    </assembly>
+    <members>
+        <member name="T:ImageCircle.Forms.Plugin.WindowsPhone.ImageCircleRenderer">
+            <summary>
+            ImageCircle Implementation
+            </summary>
+        </member>
+        <member name="M:ImageCircle.Forms.Plugin.WindowsPhone.ImageCircleRenderer.Init">
+            <summary>
+            Used for registration with dependency service
+            </summary>
+        </member>
+        <member name="M:ImageCircle.Forms.Plugin.WindowsPhone.ImageCircleRenderer.OnElementPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+    </members>
+</doc>
+>>>>>>> Stashed changes

@@ -149,7 +149,7 @@
                             <TableSection>
                                 <ViewCell
                                     x:Name="Contact"
-                                    Tapped="Handle_ContactTapped"
+                                    Tapped="Contact_Tapped"
                                     Height="80">
                                     <StackLayout
                                         Margin="10"
