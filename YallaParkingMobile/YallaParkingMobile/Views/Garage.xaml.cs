@@ -64,12 +64,17 @@ namespace YallaParkingMobile {
 
         async void Delete_Clicked(object sender, System.EventArgs e) {
             var userCar = ((MenuItem)sender).BindingContext as UserCarModel;
-            var result = await ServiceUtility.DeleteUserCar(userCar);
 
-            if(!result){
-                await DisplayAlert("Delete Car Error", "Unable to delete car", "Ok");
-            } else{
-                await LoadCars();
+            if (userCar != null) {
+                this.BusyIndicator.IsBusy = true;
+                var result = await ServiceUtility.DeleteUserCar(userCar);
+                this.BusyIndicator.IsBusy = false;
+
+                if (!result) {
+                    await DisplayAlert("Delete Car Error", "Unable to delete car", "Ok");
+                } else {
+                    this.GarageModel.UserCars.Remove(userCar);
+                }
             }
         }
     }

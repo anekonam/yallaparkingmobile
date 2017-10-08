@@ -334,7 +334,7 @@
     <BundleResource Include="Resources\booking.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\car.png" />
+    <BundleResource Include="Resources\menu-car.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\editPictureIcon.png" />
@@ -379,9 +379,6 @@
     <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\Contents.json">
       <InProject>false</InProject>
     </ImageAsset>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\menu-car.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\menu-logout.png" />

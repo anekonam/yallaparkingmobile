@@ -63,67 +63,72 @@
                 </Grid>
             </telerikPrimitives:RadSideDrawer.MainContent>
             <telerikPrimitives:RadSideDrawer.DrawerContent>
-                <StackLayout>
+                 <StackLayout>
                     <StackLayout
-                        Margin="40, 10, 10, 10"
+                        Margin="20, 10, 10, 10"
                         Orientation="Horizontal">
                         <Image
                             Margin="0,0,5,0"
                             Source="menu-car.png" />
                         <Button
                             x:Name="FindParking"
+                            FontSize="18"
                             Text="Find Parking"
-                            TextColor="#a1a1b4"
+                            TextColor="#ff8e30"
                             HorizontalOptions="Start"
                             Clicked="FindParking_Clicked" />
                     </StackLayout>
                     <StackLayout
-                        Margin="40, 10, 10, 10"
+                        Margin="20, 10, 10, 10"
                         Orientation="Horizontal">
                         <Image
                             Margin="0,0,5,0"
                             Source="menu-bookings.png" />
                         <Button
                             x:Name="MyBookings"
+                            FontSize="18"
                             Text="My Bookings"
                             TextColor="#ff8e30"
                             HorizontalOptions="Start"
                             Clicked="MyBookings_Clicked" />
                     </StackLayout>
                     <StackLayout
-                        Margin="40, 10, 10, 10"
+                        Margin="20, 10, 10, 10"
                         Orientation="Horizontal">
                         <Image
                             Margin="0,0,5,0"
                             Source="menu-profile.png" />
                         <Button
                             x:Name="MyProfile"
+                            FontSize="18"
                             Text="My Profile"
                             TextColor="#ff8e30"
                             HorizontalOptions="Start"
                             Clicked="MyProfile_Clicked" />
                     </StackLayout>
                     <StackLayout
-                        Margin="40, 10, 10, 10"
+                        Margin="20, 10, 10, 10"
                         Orientation="Horizontal">
                         <Image
                             Margin="0,0,5,0"
                             Source="menu-invite.png" />
                         <Button
                             x:Name="InviteButton"
+                            FontSize="18"
                             Text="Invite"
                             TextColor="#ff8e30"
                             HorizontalOptions="Start"
                             Clicked="Invite_Clicked" />
                     </StackLayout>
                     <StackLayout
-                        Margin="40, 10, 10, 10"
+                        Margin="20, 10, 10, 10"
                         Orientation="Horizontal">
                         <Image
                             Margin="0,0,5,0"
                             Source="menu-logout.png" />
                         <Button
                             x:Name="Logout"
+                            FontSize="18"
                             Text="Logout"
                             TextColor="#a1a1b4"
                             HorizontalOptions="Start"
