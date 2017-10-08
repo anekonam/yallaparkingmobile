@@ -34,16 +34,16 @@ namespace YallaParkingMobile {
         }
 
         async void Handle_Appearing(object sender, System.EventArgs e) {
+            this.BusyIndicator.IsBusy = true;
             await LoadCars();
         }
 
         async Task LoadCars(){
-            this.BusyIndicator.IsBusy = true;
 			var userCars = await ServiceUtility.GetUserCars();
 
-            if (userCars != null && userCars.Any()) {
-                this.GarageModel.UserCars = new ObservableCollection<UserCarModel>(userCars);
-            }
+			if (userCars != null && userCars.Any()) {
+				this.GarageModel.UserCars = new ObservableCollection<UserCarModel>(userCars);
+			}
 
             this.BusyIndicator.IsBusy = false;
         }
@@ -63,16 +63,15 @@ namespace YallaParkingMobile {
         }
 
         async void Delete_Clicked(object sender, System.EventArgs e) {
-            var userCar = ((MenuItem)sender).BindingContext as UserCarModel;
+			var item = (MenuItem)sender;
+            var userCar = item.CommandParameter as UserCarModel;
 
             if (userCar != null) {
-                this.BusyIndicator.IsBusy = true;
                 var result = await ServiceUtility.DeleteUserCar(userCar);
-                this.BusyIndicator.IsBusy = false;
 
                 if (!result) {
                     await DisplayAlert("Delete Car Error", "Unable to delete car", "Ok");
-                } else {
+                } else{
                     this.GarageModel.UserCars.Remove(userCar);
                 }
             }

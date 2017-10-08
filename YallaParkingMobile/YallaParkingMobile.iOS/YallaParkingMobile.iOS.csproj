@@ -221,6 +221,7 @@
     <BundleResource Include="Resources\TVR-logo.png" />
     <BundleResource Include="Resources\Volkswagen-logo.png" />
     <BundleResource Include="Resources\Volvo-logo.png" />
+    <BundleResource Include="Resources\car.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Plugin.Geolocator, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">

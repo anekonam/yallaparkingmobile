@@ -67,13 +67,14 @@
                                 x:Name="ProfileSection">
                                 <ViewCell
                                     x:Name="UpdateProfile"
-                                    Height="80"
+                                    Height="120"
                                     Tapped="UpdateProfile_Tapped">
                                     <StackLayout
                                         Margin="10"
                                         Orientation="Horizontal">
                                         <Image
                                             Source="updateProfile.png"
+                                            Aspect="AspectFill"
                                             VerticalOptions="Center" />
                                         <Label
                                             Margin="10,0,0,0"
@@ -83,13 +84,14 @@
                                 </ViewCell>
                                 <ViewCell
                                     x:Name="VerifyProfile"
-                                    Height="80"
+                                    Height="120"
                                     Tapped="VerifyProfile_Tapped">
                                     <StackLayout
                                         Margin="10"
                                         Orientation="Horizontal">
                                         <Image
                                             Source="verify.png"
+                                            Aspect="AspectFit"
                                             VerticalOptions="Center" />
                                         <Label
                                             Margin="10,0,0,0"
@@ -99,13 +101,14 @@
                                 </ViewCell>
                                 <ViewCell
                                     x:Name="Garage"
-                                    Height="80"
+                                    Height="120"
                                     Tapped="Garage_Tapped">
                                     <StackLayout
                                         Margin="10"
                                         Orientation="Horizontal">
                                         <Image
                                             Source="garage.png"
+                                            Aspect="AspectFit"
                                             VerticalOptions="Center" />
                                         <Label
                                             Margin="10,0,0,0"
@@ -115,13 +118,14 @@
                                 </ViewCell>
                                 <ViewCell
                                     x:Name="Wallet"
-                                    Height="80"
+                                    Height="120"
                                     Tapped="Wallet_Tapped">
                                     <StackLayout
                                         Margin="10"
                                         Orientation="Horizontal">
                                         <Image
                                             Source="wallet.png"
+                                            Aspect="AspectFit"
                                             VerticalOptions="Center" />
                                         <Label
                                             Margin="10,0,0,0"
@@ -133,13 +137,14 @@
                             <TableSection>
                                 <ViewCell
                                     x:Name="Terms"
-                                    Height="80"
+                                    Height="120"
                                     Tapped="Terms_Tapped">
                                     <StackLayout
                                         Margin="10"
                                         Orientation="Horizontal">
                                         <Image
                                             Source="terms.png"
+                                            Aspect="AspectFit"
                                             VerticalOptions="Center" />
                                         <Label
                                             Margin="10,0,0,0"
@@ -152,12 +157,13 @@
                                 <ViewCell
                                     x:Name="Contact"
                                     Tapped="Contact_Tapped"
-                                    Height="80">
+                                    Height="120">
                                     <StackLayout
                                         Margin="10"
                                         Orientation="Horizontal">
                                         <Image
                                             Source="contact.png"
+                                            Aspect="AspectFit"
                                             VerticalOptions="Center" />
                                         <Label
                                             Margin="10,0,0,0"

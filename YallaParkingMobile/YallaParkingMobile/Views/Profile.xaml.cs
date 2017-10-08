@@ -43,6 +43,12 @@ namespace YallaParkingMobile {
 
 			this.BindingContext = profile;
 
+            if (profile.Verified){
+                if (this.ProfileSection.Contains(VerifyProfile)) {
+                    this.ProfileSection.Remove(VerifyProfile);
+                }
+            }
+
 			if (!string.IsNullOrWhiteSpace(profile.ProfilePicture)) {
 				this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profile.ProfilePictureBase)));
 			}

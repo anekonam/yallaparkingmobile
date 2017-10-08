@@ -43,7 +43,8 @@
                                         x:Name="CarDelete"
                                         Text="Delete"
                                         IsDestructive="true"
-                                        Clicked="Delete_Clicked" />
+                                        CommandParameter="{Binding .}"
+                                        Clicked="Delete_Clicked"/>
                                 </ImageCell.ContextActions>
                             </ImageCell>
                         </DataTemplate>
