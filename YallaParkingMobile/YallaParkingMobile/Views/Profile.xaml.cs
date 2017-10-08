@@ -50,7 +50,8 @@ namespace YallaParkingMobile {
             }
 
 			if (!string.IsNullOrWhiteSpace(profile.ProfilePicture)) {
-				this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profile.ProfilePictureBase)));
+				var profileImage = !string.IsNullOrWhiteSpace(this.ProfileModel.ProfilePicture) && this.ProfileModel.ProfilePicture.Contains(",") ? this.ProfileModel.ProfilePicture.Split(',')[1] : this.ProfileModel.ProfilePicture;
+				this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profileImage)));
 			}
         }
 
@@ -88,8 +89,8 @@ namespace YallaParkingMobile {
             }
 
             var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions {
-                PhotoSize = PhotoSize.Custom,
-                MaxWidthHeight = 100,
+                PhotoSize = PhotoSize.MaxWidthHeight,
+                MaxWidthHeight = 80,
                 SaveToAlbum = false
             });
 
@@ -102,10 +103,12 @@ namespace YallaParkingMobile {
 
                 if (this.ProfileModel != null) {
                     this.ProfileModel.ProfilePicture = Convert.ToBase64String(stream.ToArray());
-                    this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(this.ProfileModel.ProfilePictureBase)));
-                    await ServiceUtility.UpdateProfile(this.ProfileModel);
+                    var profileImage = !string.IsNullOrWhiteSpace(this.ProfileModel.ProfilePicture) && this.ProfileModel.ProfilePicture.Contains(",") ? this.ProfileModel.ProfilePicture.Split(',')[1] : this.ProfileModel.ProfilePicture;
+                    this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profileImage)));
                 }
             }
+
+            await ServiceUtility.UpdateProfile(this.ProfileModel);
         }
 
         async void UpdateProfile_Tapped(object sender, EventArgs e) {

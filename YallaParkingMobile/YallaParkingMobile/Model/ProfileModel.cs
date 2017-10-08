@@ -47,11 +47,5 @@ namespace YallaParkingMobile.Model {
         }
 
         public string ProfilePicture { get; set; }
-
-        public string ProfilePictureBase {
-            get {
-                return !string.IsNullOrWhiteSpace(this.ProfilePicture) && this.ProfilePicture.Contains(",") ? this.ProfilePicture.Split(',')[1] : this.ProfilePicture;
-            }
-        }
     }
 }

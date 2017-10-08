@@ -55,7 +55,7 @@
                     Margin="10"
                     x:Name="AddNewButton"
                     Style="{StaticResource GreenButton}"
-                    Text="Add New Car"
+                    Text="Add New Vehicle"
                     Clicked="AddNewButton_Clicked"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="Center" />
