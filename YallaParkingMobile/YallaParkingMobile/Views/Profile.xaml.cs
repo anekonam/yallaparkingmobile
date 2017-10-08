@@ -89,8 +89,7 @@ namespace YallaParkingMobile {
             }
 
             var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions {
-                PhotoSize = PhotoSize.MaxWidthHeight,
-                MaxWidthHeight = 80,
+                PhotoSize = PhotoSize.Small,
                 SaveToAlbum = false
             });
 
