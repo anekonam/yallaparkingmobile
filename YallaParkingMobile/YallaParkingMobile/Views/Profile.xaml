@@ -5,6 +5,7 @@
     xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
     xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
     xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+    xmlns:control="clr-namespace:YallaParkingMobile.Control;assembly=YallaParkingMobile"
     x:Class="YallaParkingMobile.Profile"
     Title="My Profile"
     NavigationPage.HasBackButton="False">
@@ -31,13 +32,13 @@
                     </Grid.RowDefinitions>
                     <StackLayout>
                         <controls:CircleImage
-                            x:Name="ProfileImage"                           
+                            x:Name="ProfileImage"
                             Margin="10"
                             WidthRequest="100"
                             HeightRequest="100"
                             BorderColor="#a1a1b4"
                             BorderThickness="1"
-                            HorizontalOptions="Center"                            
+                            HorizontalOptions="Center"
                             Source="http://www.freeiconspng.com/uploads/profile-icon-9.png"
                             Aspect="AspectFill">
                             <controls:CircleImage.GestureRecognizers>
@@ -45,24 +46,25 @@
                                     Tapped="ProfileImage_Tapped" />
                             </controls:CircleImage.GestureRecognizers>
                         </controls:CircleImage>
-                        <Label                            
+                        <Label
                             x:Name="ProfileName"
                             Text="{Binding Name}"
                             TextColor="Black"
                             HorizontalOptions="Center"
                             Style="{StaticResource Header}" />
-                        <Label 
-                            Margin="0,5,0,0"                            
+                        <Label
+                            Margin="0,5,0,0"
                             HorizontalOptions="Center"
                             Text="{Binding VerifiedString}"
                             Style="{StaticResource Header}" />
                     </StackLayout>
-                    <TableView
+                    <control:MenuTableView
                         x:Name="ProfileMenu"
                         Intent="Settings"
                         Grid.Row="1">
                         <TableRoot>
-                            <TableSection>
+                            <TableSection
+                                x:Name="ProfileSection">
                                 <ViewCell
                                     x:Name="UpdateProfile"
                                     Height="80"
@@ -81,7 +83,7 @@
                                 </ViewCell>
                                 <ViewCell
                                     x:Name="VerifyProfile"
-                                    Height="80"                                    
+                                    Height="80"
                                     Tapped="VerifyProfile_Tapped">
                                     <StackLayout
                                         Margin="10"
@@ -134,7 +136,7 @@
                                     Height="80"
                                     Tapped="Terms_Tapped">
                                     <StackLayout
-                                        Margin="10"                                        
+                                        Margin="10"
                                         Orientation="Horizontal">
                                         <Image
                                             Source="terms.png"
@@ -165,7 +167,7 @@
                                 </ViewCell>
                             </TableSection>
                         </TableRoot>
-                    </TableView>
+                    </control:MenuTableView>
                 </Grid>
             </telerikPrimitives:RadSideDrawer.MainContent>
             <telerikPrimitives:RadSideDrawer.DrawerContent>

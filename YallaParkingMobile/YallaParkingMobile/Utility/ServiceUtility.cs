@@ -207,5 +207,54 @@ namespace YallaParkingMobile.Utility {
 
         private static StringContent AsJson(this object o) => new StringContent(JsonConvert.SerializeObject(o), Encoding.UTF8, "application/json");
 
+		public static async Task<List<UserCarModel>> GetUserCars() {
+			InitHttpClient();
+
+			try {
+                var response = await client.GetAsync("/api/account/getUserCars");
+
+				if (response.IsSuccessStatusCode) {
+					var profileResponse = await response.Content.ReadAsStringAsync();
+					return JsonConvert.DeserializeObject<List<UserCarModel>>(profileResponse);
+				}
+			} catch {
+				return null;
+			}
+
+			return null;
+		}
+
+		public static async Task<UserCarModel> UpdateUserCar(UserCarModel model) {
+			InitHttpClient();
+
+			try {
+				var response = await client.PostAsync("/api/account/updateUserCar", model.AsJson());
+
+				if (response.IsSuccessStatusCode) {
+					var profileResponse = await response.Content.ReadAsStringAsync();
+					return JsonConvert.DeserializeObject<UserCarModel>(profileResponse);
+				}
+			} catch {
+				return null;
+			}
+
+			return null;
+		}
+
+		public static async Task<bool> DeleteUserCar(UserCarModel model) {
+			InitHttpClient();
+
+			try {
+				var response = await client.PostAsync("/api/account/deleteUserCar", model.AsJson());
+
+                if (response.IsSuccessStatusCode) {					
+                    return true;
+				}
+			} catch {
+                return false;
+			}
+
+            return false;
+		}
     }   
 }

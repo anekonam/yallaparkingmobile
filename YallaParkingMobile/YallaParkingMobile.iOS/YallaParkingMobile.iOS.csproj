@@ -119,6 +119,8 @@
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork@2x" />
     <None Include="packages.config" />
+    <Compile Include="BorderlessPickerRenderer.cs" />
+    <Compile Include="MenuTableViewRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -144,6 +146,81 @@
     <BundleResource Include="Resources\terms.png" />
     <BundleResource Include="Resources\privacy.png" />
     <BundleResource Include="Resources\contact.png" />
+    <BundleResource Include="Resources\Alfa-Romeo-logo.png" />
+    <BundleResource Include="Resources\Aston-Martin-logo.png" />
+    <BundleResource Include="Resources\Audi-logo.png" />
+    <BundleResource Include="Resources\BAIC-Motor-logo.png" />
+    <BundleResource Include="Resources\Bentley-logo.png" />
+    <BundleResource Include="Resources\BMW-logo.png" />
+    <BundleResource Include="Resources\Brilliance-logo.png" />
+    <BundleResource Include="Resources\Bugatti-logo.png" />
+    <BundleResource Include="Resources\Buick-logo.png" />
+    <BundleResource Include="Resources\Cadillac-logo.png" />
+    <BundleResource Include="Resources\Caterham-logo.png" />
+    <BundleResource Include="Resources\Changan-logo.png" />
+    <BundleResource Include="Resources\Chery-logo.png" />
+    <BundleResource Include="Resources\Chevrolet-logo.png" />
+    <BundleResource Include="Resources\Chrysler-logo.png" />
+    <BundleResource Include="Resources\Citroen-logo.png" />
+    <BundleResource Include="Resources\Corvette-logo.png" />
+    <BundleResource Include="Resources\Daewoo-logo.png" />
+    <BundleResource Include="Resources\Daihatsu-logo.png" />
+    <BundleResource Include="Resources\Dodge-logo.png" />
+    <BundleResource Include="Resources\Ferrari-logo.png" />
+    <BundleResource Include="Resources\Fiat-logo.png" />
+    <BundleResource Include="Resources\Fisker-logo.png" />
+    <BundleResource Include="Resources\Ford-logo.png" />
+    <BundleResource Include="Resources\Foton-logo.png" />
+    <BundleResource Include="Resources\Geely-logo.png" />
+    <BundleResource Include="Resources\GMC-logo.png" />
+    <BundleResource Include="Resources\Honda-logo.png" />
+    <BundleResource Include="Resources\Hummer-logo.png" />
+    <BundleResource Include="Resources\Hyundai-logo.png" />
+    <BundleResource Include="Resources\Infiniti-logo.png" />
+    <BundleResource Include="Resources\Isuzu-logo.png" />
+    <BundleResource Include="Resources\Jaguar-logo.png" />
+    <BundleResource Include="Resources\Jeep-logo.png" />
+    <BundleResource Include="Resources\Jiangling-logo.png" />
+    <BundleResource Include="Resources\Kia-logo.png" />
+    <BundleResource Include="Resources\Koenigsegg-logo.png" />
+    <BundleResource Include="Resources\Lamborghini-logo.png" />
+    <BundleResource Include="Resources\Lancia-logo.png" />
+    <BundleResource Include="Resources\Land-Rover-logo.png" />
+    <BundleResource Include="Resources\Lexus-logo.png" />
+    <BundleResource Include="Resources\Lincoln-logo.png" />
+    <BundleResource Include="Resources\Lotus-logo.png" />
+    <BundleResource Include="Resources\Maserati-logo.png" />
+    <BundleResource Include="Resources\Maybach-logo.png" />
+    <BundleResource Include="Resources\Mazda-logo.png" />
+    <BundleResource Include="Resources\McLaren-logo.png" />
+    <BundleResource Include="Resources\Mercedes-Benz-logo.png" />
+    <BundleResource Include="Resources\Mercury-logo.png" />
+    <BundleResource Include="Resources\MG-logo.png" />
+    <BundleResource Include="Resources\Mini-logo.png" />
+    <BundleResource Include="Resources\Mitsubishi-logo-1.png" />
+    <BundleResource Include="Resources\Mitsubishi-logo.png" />
+    <BundleResource Include="Resources\Nissan-logo.png" />
+    <BundleResource Include="Resources\Opel-logo.png" />
+    <BundleResource Include="Resources\Peugeot-logo.png" />
+    <BundleResource Include="Resources\Pontiac-logo.png" />
+    <BundleResource Include="Resources\Porsche-logo.png" />
+    <BundleResource Include="Resources\Ram-logo.png" />
+    <BundleResource Include="Resources\Renault-logo.png" />
+    <BundleResource Include="Resources\Rolls-Royce-logo.png" />
+    <BundleResource Include="Resources\Saab-logo.png" />
+    <BundleResource Include="Resources\Seat-logo.png" />
+    <BundleResource Include="Resources\Skoda-logo.png" />
+    <BundleResource Include="Resources\Smart-logo.png" />
+    <BundleResource Include="Resources\Spyker-logo.png" />
+    <BundleResource Include="Resources\SsangYong-logo.png" />
+    <BundleResource Include="Resources\Subaru-logo.png" />
+    <BundleResource Include="Resources\Suzuki-logo.png" />
+    <BundleResource Include="Resources\Tata-logo.png" />
+    <BundleResource Include="Resources\Tesla-logo.png" />
+    <BundleResource Include="Resources\Toyota-logo.png" />
+    <BundleResource Include="Resources\TVR-logo.png" />
+    <BundleResource Include="Resources\Volkswagen-logo.png" />
+    <BundleResource Include="Resources\Volvo-logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Plugin.Geolocator, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -252,9 +329,6 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\verified.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\adele.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\booking.png" />

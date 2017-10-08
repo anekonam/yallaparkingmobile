@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+    xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+    xmlns:control="clr-namespace:YallaParkingMobile.Control;assembly=YallaParkingMobile"
+    x:Class="YallaParkingMobile.UpdateCarDetails"
+    Title="Update Car Details">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="*">
+            </RowDefinition>
+            <RowDefinition
+                Height="Auto" />
+        </Grid.RowDefinitions>
+        <ActivityIndicator
+            x:Name="Activity"
+            IsRunning="False"
+            IsVisible="False"
+            Color="#ff8e30" />
+        <TableView
+            Grid.Row="0">
+            <TableSection>
+                <control:PickerCell
+                    x:Name="Make"
+                    Label="Make"
+                    BindingContext="{Binding}"/>
+                <EntryCell
+                    LabelColor="#a1a1b4"
+                    Label="Model"
+                    HorizontalTextAlignment="End"
+                    Text="{Binding ModelNumber, Mode=TwoWay}" />
+                <EntryCell
+                    LabelColor="#a1a1b4"
+                    Label="Reg. Number"
+                    HorizontalTextAlignment="End"
+                    Text="{Binding RegistrationNumber, Mode=TwoWay}" />
+                <EntryCell
+                    LabelColor="#a1a1b4"
+                    Label="Color"
+                    HorizontalTextAlignment="End"
+                    Text="{Binding Color, Mode=TwoWay}" />
+            </TableSection>
+        </TableView>
+        <Button
+            Grid.Row="1"
+            Margin="10"
+            x:Name="SaveButton"
+            Style="{StaticResource GreenButton}"
+            Text="Save"
+            Clicked="UpdateButton_Clicked"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Center" />
+    </Grid>
+</ContentPage>

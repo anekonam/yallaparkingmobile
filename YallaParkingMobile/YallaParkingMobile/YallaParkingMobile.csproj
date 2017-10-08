@@ -95,11 +95,28 @@
       <DependentUpon>SignupPage3.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\ProfileModel.cs" />
+    <Compile Include="Views\Garage.xaml.cs">
+      <DependentUpon>Garage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\GarageModel.cs" />
+    <Compile Include="Views\UpdateCarDetails.xaml.cs">
+      <DependentUpon>UpdateCarDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\PickerCell.cs" />
+    <Compile Include="Control\MenuTableView.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Garage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UpdateCarDetails.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

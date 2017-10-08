@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -50,7 +50,7 @@
                         Margin="40"
                         Grid.Row="2"
                         HorizontalTextAlignment="Center"
-                        Text="Get 25% off your booking when you an invite a friend. Your friend gets 25% off too" />
+                        Text="Get 25% off your booking when you invite a friend. Your friend gets 25% off too" />
                     <ContentView
                         Padding="40"
                         Grid.Row="3">

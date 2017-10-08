@@ -31,21 +31,22 @@ namespace YallaParkingMobile {
         public ProfileModel ProfileModel {
             get {
                 return (ProfileModel)this.BindingContext;
-            }                
+            }
         }
 
         async void Handle_Appearing(object sender, EventArgs e) {
-            var profile = await ServiceUtility.Profile();
-            this.BindingContext = profile;
+            await LoadProfile();
+        }
 
-            if (!string.IsNullOrWhiteSpace(profile.ProfilePicture)) {
-                this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profile.ProfilePictureBase)));
-            }
+        async Task LoadProfile(){
+			var profile = await ServiceUtility.Profile();
 
-            if (profile.Verified){
-                VerifyProfile.View.IsVisible = false;
-            }
-        }       
+			this.BindingContext = profile;
+
+			if (!string.IsNullOrWhiteSpace(profile.ProfilePicture)) {
+				this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profile.ProfilePictureBase)));
+			}
+        }
 
         private void Button_Clicked(object sender, EventArgs e) {
             Menu.IsOpen = !Menu.IsOpen;
@@ -81,8 +82,9 @@ namespace YallaParkingMobile {
             }
 
             var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions {
-                PhotoSize = PhotoSize.Small,
-                SaveToAlbum = false                    
+                PhotoSize = PhotoSize.Custom,
+                MaxWidthHeight = 100,
+                SaveToAlbum = false
             });
 
             if (file == null) {
@@ -94,11 +96,11 @@ namespace YallaParkingMobile {
 
                 if (this.ProfileModel != null) {
                     this.ProfileModel.ProfilePicture = Convert.ToBase64String(stream.ToArray());
-                    this.ProfileImage.Source = ImageSource.FromStream(() => stream);
+                    this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(this.ProfileModel.ProfilePictureBase)));
                     await ServiceUtility.UpdateProfile(this.ProfileModel);
                 }
             }
-        }      
+        }
 
         async void UpdateProfile_Tapped(object sender, EventArgs e) {
             var updateProfile = new UpdateProfile();
@@ -140,7 +142,10 @@ namespace YallaParkingMobile {
         }
 
 
-        private void Garage_Tapped(object sender, EventArgs e) {
+        async void Garage_Tapped(object sender, EventArgs e) {
+            var garage = new Garage();
+            garage.BindingContext = new GarageModel();
+            await Navigation.PushAsync(garage);
 
         }
 
