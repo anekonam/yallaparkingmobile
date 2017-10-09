@@ -35,12 +35,12 @@
                 <Label
                     x:Name="PropertyName"
                     HorizontalTextAlignment="Start"
-                    Text="{Binding Name}" />
+                    Text="{Binding Property.Name}" />
                 <Label
                     x:Name="PropertyArea"
                     HorizontalTextAlignment="Start"
                     FontSize="12"
-                    Text="{Binding PropertyArea}" />
+                    Text="{Binding Property.PropertyArea}" />
                 <Label
                     HorizontalTextAlignment="Start"
                     FontSize="12"
@@ -54,44 +54,46 @@
                         TextColor="White"
                         FontSize="10"
                         HorizontalTextAlignment="Start"
-                        Text="{Binding BookingTime}" />
+                        Text="{Binding Property.BookingTime}" />
                 </ContentView>
             </StackLayout>
         </Grid>
-        <TableView
+        <control:MenuTableView
             x:Name="OrderSummary"
             Intent="Settings"
             Grid.Row="1">
             <TableRoot>
                 <TableSection
+                    x:Name="Order"
                     Title="Order Summary">
                     <EntryCell
                         LabelColor="#a1a1b4"
                         Label="Number of hours"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
-                        Text="{Binding Hours}" />
+                        Text="{Binding Property.Hours}" />
                     <EntryCell
                         LabelColor="#a1a1b4"
                         Label="Price per hour"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
-                        Text="{Binding ShortTermParkingPrice, StringFormat='AED {0:n2}'}" />
+                        Text="{Binding Property.ShortTermParkingPrice, StringFormat='AED {0:n2}'}" />
                     <EntryCell
                         x:Name="DiscountCode"
                         LabelColor="#a1a1b4"
                         Label="Promotional Code"
                         HorizontalTextAlignment="End"
                         Placeholder="Code"
-                        Text="{Binding DiscountCode, Mode=TwoWay}" />
+                        Text="{Binding Property.DiscountCode, Mode=TwoWay}" />
                     <ViewCell
                         x:Name="ApplyCodeCell"
                         Height="80">
                         <Button
                             x:Name="ApplyCodeButton"
                             Clicked="ApplyCodeButton_Clicked"
-                            Style="{StaticResource GreenButton}"
+                            Style="{StaticResource GreyTextButton}"
                             Text="Apply Code"
+                            FontSize="12"
                             Margin="5"
                             HorizontalOptions="EndAndExpand"
                             VerticalOptions="Center" />
@@ -101,45 +103,53 @@
                         LabelColor="#a1a1b4"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
-                        Text="{Binding Discount, StringFormat='(AED {0:n2})'}" />
+                        Text="{Binding Property.Discount, StringFormat='(AED {0:n2})'}" />
                     <EntryCell
                         Label="Total"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
                         LabelColor="Black"
-                        Text="{Binding TotalPrice, StringFormat='AED {0:n2}'}">
+                        Text="{Binding Property.TotalPrice, StringFormat='AED {0:n2}'}">
                     </EntryCell>
                 </TableSection>
                 <TableSection
                     Title="Select Vehicle">
                     <ViewCell
-                        Height="30">
-                        <Label
-                            Margin="10"
-                            Text="Vehicle 1"
-                            VerticalOptions="Center"
-                            HorizontalOptions="Start" />
+                        Height="300">
+                        <ListView
+                            x:Name="Cars"
+                            HasUnevenRows="true"
+                            HeightRequest="300"
+                            VerticalOptions="FillAndExpand"
+                            ItemsSource="{Binding UserCars}"
+                            SelectedItem="{Binding SelectedUserCar,Mode=TwoWay}">
+                            <ListView.SeparatorVisibility>None</ListView.SeparatorVisibility>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ImageCell
+                                        ImageSource="{Binding Image}"
+                                        Text="{Binding MakeAndModel}"
+                                        Detail="{Binding RegAndColor}">
+                                    </ImageCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
                     </ViewCell>
-                    <ViewCell
-                        Height="30">
-                        <Label
-                            Margin="10"
-                            Text="Vehicle 2"
-                            VerticalOptions="Center"
-                            HorizontalOptions="Start" />
-                    </ViewCell>
-                    <ViewCell
-                        Height="30">
-                        <Label
-                            Margin="10"
-                            Text="Vehicle 3"
-                            VerticalOptions="Center"
-                            HorizontalOptions="Start" />
+                    <ViewCell>
+                        <Button
+                            x:Name="AddNewButton"
+                            Style="{StaticResource GreyTextButton}"
+                            Text="Add New Vehicle"
+                            FontSize="12"
+                            Clicked="AddNewButton_Clicked"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Center" />
                     </ViewCell>
                 </TableSection>
             </TableRoot>
-        </TableView>
+        </control:MenuTableView>
         <ContentView
+            IsVisible="{Binding CanBook}"
             Padding="10"
             Grid.Row="2">
             <Grid>
@@ -154,6 +164,7 @@
                     x:Name="ParkButton"
                     Style="{StaticResource GreenButton}"
                     Text="Park Now"
+                    Clicked="Park_Clicked"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="Center" />
                 <Button
@@ -161,6 +172,7 @@
                     x:Name="BookButton"
                     Style="{StaticResource GreenButton}"
                     Text="Book Now"
+                    Clicked="Book_Clicked"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="Center" />
             </Grid>

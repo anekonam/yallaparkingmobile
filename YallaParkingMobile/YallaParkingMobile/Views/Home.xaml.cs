@@ -32,7 +32,10 @@ namespace YallaParkingMobile {
             SearchDate.Date = DateTime.Now;
             Search.Unfocused += Search_Unfocused;
 
-            LoadData();            
+            LoadData();
+
+            HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
+
         }
 
         private void Search_Unfocused(object sender, FocusEventArgs e) {
@@ -84,7 +87,7 @@ namespace YallaParkingMobile {
             property.Hours = (int)this.HoursSlider.Value;
 
             var bookParking = new BookParking();
-            bookParking.BindingContext = property;
+            bookParking.BindingContext = new BookParkingModel(property);
             await Navigation.PushAsync(bookParking);
         }
 

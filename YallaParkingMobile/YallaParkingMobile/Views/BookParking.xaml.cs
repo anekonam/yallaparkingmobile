@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using YallaParkingMobile.Model;
 using YallaParkingMobile.Utility;
+using System.Collections.ObjectModel;
 
 namespace YallaParkingMobile {
     public partial class BookParking : ContentPage {
@@ -18,14 +19,24 @@ namespace YallaParkingMobile {
             Appearing += BookParking_Appearing;                     
         }
 
-        private void BookParking_Appearing(object sender, EventArgs e) {
-            var property = (PropertyModel)this.BindingContext;
+        public BookParkingModel Model{
+            get{
+                return (BookParkingModel)this.BindingContext;
+            }
+        }
 
-            if (!string.IsNullOrWhiteSpace(property.ImageBase)) {
-                this.PropertyImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(property.ImageBase)));
+        async void BookParking_Appearing(object sender, EventArgs e) {            
+            if (!string.IsNullOrWhiteSpace(this.Model.Property.ImageBase)) {
+                this.PropertyImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(this.Model.Property.ImageBase)));
             }
 
             NavigationPage.SetBackButtonTitle(this, " ");
+
+            var userCars = await ServiceUtility.GetUserCars();
+
+			if (userCars != null && userCars.Any()) {
+                this.Model.UserCars = new ObservableCollection<UserCarModel>(userCars);
+			}
         }
 
         private async void ApplyCodeButton_Clicked(object sender, EventArgs e) {
@@ -35,11 +46,11 @@ namespace YallaParkingMobile {
                 var discountResponse = await ServiceUtility.DiscountCode(discountCode);
 
                 if (discountResponse.Discount.HasValue) {
-                    var property = (PropertyModel)this.BindingContext;
-                    property.Discount = property.TotalPrice * (discountResponse.Discount.Value / 100);
+                    this.Model.Property.Discount = this.Model.Property.TotalPrice * (discountResponse.Discount.Value / 100);
                     this.ApplyCodeButton.IsVisible = false;
                     this.DiscountCode.IsEnabled = false;
-                    this.ApplyCodeCell.Height = 0;
+                    Order.Remove(DiscountCode);
+                    Order.Remove(ApplyCodeCell);
                     await DisplayAlert("Promotional Code Validated", "Your promotional code has been successfully validated.", "Ok");                   
                 } else {
                     await DisplayAlert("Invalid Promotional Code", "Invalid or expired promotional code provided.", "Ok");
@@ -47,6 +58,21 @@ namespace YallaParkingMobile {
             } else {
                 await DisplayAlert("No Promotional Code", "No promotional code provided.", "Ok");
             }
+        }
+
+		async void AddNewButton_Clicked(object sender, EventArgs e) {
+			var updateCarDetails = new UpdateCarDetails();
+			var userCar = new UserCarModel();
+			updateCarDetails.BindingContext = userCar;
+			await Navigation.PushAsync(updateCarDetails);
+		}
+
+		async void Park_Clicked(object sender, System.EventArgs e) {
+            await Navigation.PopAsync();
+		}
+
+        async void Book_Clicked(object sender, System.EventArgs e) {
+            await Navigation.PopAsync();
         }
     }
 }

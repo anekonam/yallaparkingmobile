@@ -104,6 +104,8 @@
     </Compile>
     <Compile Include="Control\PickerCell.cs" />
     <Compile Include="Control\MenuTableView.cs" />
+    <Compile Include="Model\BookParkingModel.cs" />
+    <Compile Include="Model\UserCarModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">

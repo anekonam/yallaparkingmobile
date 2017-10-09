@@ -27,7 +27,7 @@ namespace YallaParkingMobile {
             Analytics.TrackEvent("Viewing Garage Page");
         }
 
-        public GarageModel GarageModel {
+        public GarageModel Model {
             get {
                 return (GarageModel)this.BindingContext;
             }                
@@ -42,7 +42,7 @@ namespace YallaParkingMobile {
 			var userCars = await ServiceUtility.GetUserCars();
 
 			if (userCars != null && userCars.Any()) {
-				this.GarageModel.UserCars = new ObservableCollection<UserCarModel>(userCars);
+				this.Model.UserCars = new ObservableCollection<UserCarModel>(userCars);
 			}
 
             this.BusyIndicator.IsBusy = false;
@@ -72,7 +72,7 @@ namespace YallaParkingMobile {
                 if (!result) {
                     await DisplayAlert("Delete Car Error", "Unable to delete car", "Ok");
                 } else{
-                    this.GarageModel.UserCars.Remove(userCar);
+                    this.Model.UserCars.Remove(userCar);
                 }
             }
         }
