@@ -39,6 +39,8 @@ namespace YallaParkingMobile {
         }
 
         async Task LoadProfile(){
+            this.BusyIndicator.IsBusy = true;
+
 			var profile = await ServiceUtility.Profile();
 
 			this.BindingContext = profile;
@@ -53,6 +55,8 @@ namespace YallaParkingMobile {
 				var profileImage = !string.IsNullOrWhiteSpace(this.ProfileModel.ProfilePicture) && this.ProfileModel.ProfilePicture.Contains(",") ? this.ProfileModel.ProfilePicture.Split(',')[1] : this.ProfileModel.ProfilePicture;
 				this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profileImage)));
 			}
+
+            this.BusyIndicator.IsBusy = false;
         }
 
         private void Button_Clicked(object sender, EventArgs e) {
