@@ -28,7 +28,7 @@ namespace YallaParkingMobile {
             this.Appearing += Handle_Appearing;
         }
 
-        public ProfileModel ProfileModel {
+        public ProfileModel Model {
             get {
                 return (ProfileModel)this.BindingContext;
             }
@@ -39,7 +39,9 @@ namespace YallaParkingMobile {
         }
 
         async Task LoadProfile(){
-            this.BusyIndicator.IsBusy = true;
+            if (this.Model == null) {
+                this.BusyIndicator.IsBusy = true;
+            }
 
 			var profile = await ServiceUtility.Profile();
 
@@ -52,7 +54,7 @@ namespace YallaParkingMobile {
             }
 
 			if (!string.IsNullOrWhiteSpace(profile.ProfilePicture)) {
-				var profileImage = !string.IsNullOrWhiteSpace(this.ProfileModel.ProfilePicture) && this.ProfileModel.ProfilePicture.Contains(",") ? this.ProfileModel.ProfilePicture.Split(',')[1] : this.ProfileModel.ProfilePicture;
+				var profileImage = !string.IsNullOrWhiteSpace(this.Model.ProfilePicture) && this.Model.ProfilePicture.Contains(",") ? this.Model.ProfilePicture.Split(',')[1] : this.Model.ProfilePicture;
 				this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profileImage)));
 			}
 
@@ -104,24 +106,24 @@ namespace YallaParkingMobile {
             using (MemoryStream stream = new MemoryStream()) {
                 file.GetStream().CopyTo(stream);
 
-                if (this.ProfileModel != null) {
-                    this.ProfileModel.ProfilePicture = Convert.ToBase64String(stream.ToArray());
-                    var profileImage = !string.IsNullOrWhiteSpace(this.ProfileModel.ProfilePicture) && this.ProfileModel.ProfilePicture.Contains(",") ? this.ProfileModel.ProfilePicture.Split(',')[1] : this.ProfileModel.ProfilePicture;
+                if (this.Model != null) {
+                    this.Model.ProfilePicture = Convert.ToBase64String(stream.ToArray());
+                    var profileImage = !string.IsNullOrWhiteSpace(this.Model.ProfilePicture) && this.Model.ProfilePicture.Contains(",") ? this.Model.ProfilePicture.Split(',')[1] : this.Model.ProfilePicture;
                     this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profileImage)));
                 }
             }
 
-            await ServiceUtility.UpdateProfile(this.ProfileModel);
+            await ServiceUtility.UpdateProfile(this.Model);
         }
 
         async void UpdateProfile_Tapped(object sender, EventArgs e) {
             var updateProfile = new UpdateProfile();
-            updateProfile.BindingContext = this.ProfileModel;
+            updateProfile.BindingContext = this.Model;
             await Navigation.PushAsync(updateProfile);
         }
 
         async void VerifyProfile_Tapped(object sender, EventArgs e) {
-            if (string.IsNullOrWhiteSpace(ProfileModel.EmiratesId)) {
+            if (string.IsNullOrWhiteSpace(this.Model.EmiratesId)) {
                 await DisplayAlert("Profile Verification", "We take the security of our community very seriously. Please upload pictures of your Emirates ID (front & back) in order to start parking. Don't worry these are stored securely on our encrypted servers.", "OK");
 
                 await CrossMedia.Current.Initialize();
@@ -142,9 +144,9 @@ namespace YallaParkingMobile {
                 using (MemoryStream stream = new MemoryStream()) {
                     file.GetStream().CopyTo(stream);
 
-                    if (this.ProfileModel != null) {
-                        this.ProfileModel.EmiratesId = Convert.ToBase64String(stream.ToArray());
-                        await ServiceUtility.UpdateProfile(this.ProfileModel);
+                    if (this.Model != null) {
+                        this.Model.EmiratesId = Convert.ToBase64String(stream.ToArray());
+                        await ServiceUtility.UpdateProfile(this.Model);
                     }
                 }
                 await DisplayAlert("Profile Verified", "Your profile is now verified.", "OK");

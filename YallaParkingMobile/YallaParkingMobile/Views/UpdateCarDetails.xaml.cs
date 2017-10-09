@@ -107,6 +107,8 @@ namespace YallaParkingMobile {
 
             picker.SetBinding(Picker.SelectedItemProperty, "Make", BindingMode.TwoWay);
             this.Make.Picker = picker;
+
+            NavigationPage.SetBackButtonTitle(this, "Back");
         }
 
         public UserCarModel Model {

@@ -5,7 +5,7 @@
     xmlns:local="clr-namespace:YallaParkingMobile"
     xmlns:control="clr-namespace:YallaParkingMobile.Control"
     x:Class="YallaParkingMobile.BookParking"
-    Title="Booking Summary">
+    Title="Details">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition
