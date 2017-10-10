@@ -29,6 +29,8 @@
                             Height="Auto" />
                         <RowDefinition
                             Height="*" />
+                        <RowDefinition
+                            Height="Auto" />
                     </Grid.RowDefinitions>
                     <StackLayout
                         Padding="4"
@@ -42,7 +44,9 @@
                             SuggestionItemSelected="Search_SuggestionItemSelected"
                             Watermark="Search for parking by area or building..." />
                         <StackLayout
+                            x:Name="SearchDateTime"
                             Padding="4"
+                            IsVisible="false"
                             Orientation="Horizontal">
                             <DatePicker
                                 x:Name="SearchDate"
@@ -95,6 +99,37 @@
                                 MapType="Street" />
                         </telerikPrimitives:RadBusyIndicator.Content>
                     </telerikPrimitives:RadBusyIndicator>
+                    <Grid
+                        Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="*" />
+                            <ColumnDefinition
+                                Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Button
+                            Grid.Column="0"
+                            Style="{StaticResource GreenButton}"
+                            Text="Park Now"
+                            BorderRadius="0"
+                            Margin="0"
+                            FontSize="20"
+                            Clicked="ParkNow_Clicked"
+                            BackgroundColor="#ff8e30"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Center" />
+                        <Button
+                            Grid.Column="1"
+                            Style="{StaticResource GreenButton}"
+                            Text="Park Later"
+                            BorderRadius="0"
+                            Margin="0"
+                            FontSize="20"
+                            Clicked="ParkLater_Clicked"
+                            BackgroundColor="#ff8e30"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Center" />
+                    </Grid>
                 </Grid>
             </telerikPrimitives:RadSideDrawer.MainContent>
             <telerikPrimitives:RadSideDrawer.DrawerContent>

@@ -164,6 +164,7 @@
                     x:Name="ParkButton"
                     Style="{StaticResource GreenButton}"
                     Text="Park Now"
+                    BorderRadius="4,"
                     Clicked="Park_Clicked"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="Center" />

@@ -17,6 +17,10 @@ using YallaParkingMobile.Utility;
 
 namespace YallaParkingMobile {
     public partial class Home : ContentPage {
+        void Handle_Clicked(object sender, System.EventArgs e) {
+            throw new NotImplementedException();
+        }
+
         private Xamarin.Forms.Maps.Position mapPosition;
 
         public Home() {
@@ -166,6 +170,14 @@ namespace YallaParkingMobile {
             Menu.IsOpen = !Menu.IsOpen;
         }
 
+		private void ParkNow_Clicked(object sender, EventArgs e) {
+            SearchDateTime.IsVisible = false;
+		}
+
+		private void ParkLater_Clicked(object sender, EventArgs e) {
+			SearchDateTime.IsVisible = true;
+		}
+
         private async void FindParking_Clicked(object sender, EventArgs e) {
             await Navigation.PushAsync(new Home());
         }
@@ -198,5 +210,6 @@ namespace YallaParkingMobile {
         private void DatePicker_DateSelected(object sender, DateChangedEventArgs e) {
             LoadData();
         }
+
     }
 }
