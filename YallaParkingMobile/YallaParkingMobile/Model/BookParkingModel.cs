@@ -6,16 +6,55 @@ using System.Threading.Tasks;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using Xamarin.Forms;
+using YallaParkingMobile.Utility;
 
 namespace YallaParkingMobile.Model {
 
     public class BookParkingModel : INotifyPropertyChanged {
 
-        public BookParkingModel(PropertyModel property) {
+        public BookParkingModel(PropertyModel property, bool parkingNow = true) {
             this.Property = property;
+            this.ParkingNow = parkingNow;
         }
 
-        public PropertyModel Property { get; set; }
+        private bool parkingNow = true;
+        public bool ParkingNow{
+            get{
+                return parkingNow;
+            } set{
+                if(parkingNow!=value){
+                    parkingNow = value;
+
+                    if (PropertyChanged != null) {
+                        PropertyChanged(this, new PropertyChangedEventArgs("ParkingNow"));
+                        PropertyChanged(this, new PropertyChangedEventArgs("Booking"));
+                        PropertyChanged(this, new PropertyChangedEventArgs("BookText"));
+                    }
+                }
+            }
+        }
+
+        public bool Booking{
+            get{
+                return !this.ParkingNow;
+            }
+        }
+
+        private PropertyModel property = new PropertyModel();
+		public PropertyModel Property {
+			get {
+				return property;
+			}
+			set {
+				if (property != value) {
+					property = value;
+
+					if (PropertyChanged != null) {
+						PropertyChanged(this, new PropertyChangedEventArgs("Property"));
+					}
+				}
+			}
+		}
 
         private UserCarModel selectedUserCar;
 		public UserCarModel SelectedUserCar {
@@ -29,6 +68,8 @@ namespace YallaParkingMobile.Model {
 					if (PropertyChanged != null) {
 						PropertyChanged(this, new PropertyChangedEventArgs("SelectedUserCar"));
                         PropertyChanged(this, new PropertyChangedEventArgs("CanBook"));
+                        PropertyChanged(this, new PropertyChangedEventArgs("ParkingNow"));
+                        PropertyChanged(this, new PropertyChangedEventArgs("Booking"));
 					}
 				}
 			}
@@ -50,10 +91,30 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+        public string BookText{
+            get{
+                return this.ParkingNow ? "Park Now" : "Book Now";
+            }
+        }
+
         public bool CanBook{
             get{
                 return this.Property != null && this.SelectedUserCar != null;
             }
+        }
+
+        public async Task<bool> BookParking(){
+            var model = new BookingModel {
+                UserCarId = this.SelectedUserCar.UserCarId.Value,
+                PropertyId = this.Property.PropertyId,
+                Start = this.Property.StartDate,
+                End = this.Property.EndDate,
+                Price = this.Property.ShortTermParkingPrice,
+                Discount = this.Property.Discount,
+                Hours = this.Property.Hours
+            };
+
+            return await ServiceUtility.Book(model);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

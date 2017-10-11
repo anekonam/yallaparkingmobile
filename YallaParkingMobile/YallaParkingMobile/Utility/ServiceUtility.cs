@@ -256,5 +256,61 @@ namespace YallaParkingMobile.Utility {
 
             return false;
 		}
+
+		public static async Task<bool> Book(BookingModel model) {
+			InitHttpClient();
+
+			try {
+				var response = await client.PostAsync("/api/parking/book", model.AsJson());
+
+				if (response.IsSuccessStatusCode) {
+                    return true;
+				}
+			} catch {
+                return false;
+			}
+
+            return false;
+		}
+
+		public static async Task<bool> Entry(int propertyId) {
+			InitHttpClient();
+
+			try {
+                var model = new {
+                    PropertyId = propertyId
+                };
+
+				var response = await client.PostAsync("/api/parking/entry", model.AsJson());
+
+				if (response.IsSuccessStatusCode) {
+					return true;
+				}
+			} catch {
+				return false;
+			}
+
+			return false;
+		}
+
+		public static async Task<bool> Exit(int propertyId) {
+			InitHttpClient();
+
+			try {
+				var model = new {
+					PropertyId = propertyId
+				};
+
+				var response = await client.PostAsync("/api/parking/exit", model.AsJson());
+
+				if (response.IsSuccessStatusCode) {
+					return true;
+				}
+			} catch {
+				return false;
+			}
+
+			return false;
+		}
     }   
 }

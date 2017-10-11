@@ -41,10 +41,11 @@ namespace YallaParkingMobile {
 
 		async void Handle_Appearing(object sender, System.EventArgs e) {
             this.Search.ItemsSource = await ServiceUtility.PropertyAreas();
+            await LoadData();
 		}
 
         async void Search_Unfocused(object sender, FocusEventArgs e) {
-            LoadData(Search.Text);
+            await LoadData(Search.Text);
         }
 
         async Task LoadData(string query = null) {
@@ -87,13 +88,13 @@ namespace YallaParkingMobile {
 
             if (SearchDateTime.IsVisible) {
                 property.StartDate = this.SearchDate.Date.Add(this.SearchTime.Time);
-                property.Hours = (int)this.HoursSlider.Value;
             } else{
                 property.StartDate = DateTime.UtcNow;
             }
 
-            var bookParking = new BookParking();
-            bookParking.BindingContext = new BookParkingModel(property);
+            property.Hours = (int)this.HoursSlider.Value;
+
+            var bookParking = new BookParking(new BookParkingModel(property, !SearchDateTime.IsVisible));
             await Navigation.PushAsync(bookParking);
         }
 

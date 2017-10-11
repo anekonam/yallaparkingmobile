@@ -120,12 +120,16 @@ namespace YallaParkingMobile {
         async void UpdateButton_Clicked(object sender, EventArgs e) {
             if(string.IsNullOrWhiteSpace(this.Model.Make)){
                 await DisplayAlert("Make Required", "Please select a car Make", "Ok");
+                return;
             } else if(string.IsNullOrWhiteSpace((this.Model.ModelNumber))){
                 await DisplayAlert("Model Required", "Please provide a car Model", "Ok");
+                return;
             } else if (string.IsNullOrWhiteSpace((this.Model.RegistrationNumber))) {
 				await DisplayAlert("Registration Required", "Please provide a car Registration", "Ok");
+                return;
             } else if (string.IsNullOrWhiteSpace((this.Model.Color))) {
 				await DisplayAlert("Colour Required", "Please provide a car Colour", "Ok");
+                return;
 			}
                
             Activity.IsVisible = true;

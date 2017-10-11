@@ -13,15 +13,23 @@ using System.Collections.ObjectModel;
 namespace YallaParkingMobile {
     public partial class BookParking : ContentPage {
         public BookParking() {
-            InitializeComponent();
-            Analytics.TrackEvent("Viewing Booking Page");
-
-            Appearing += BookParking_Appearing;                     
+            InitializeComponent();             
         }
+
+        public BookParking(BookParkingModel model) {
+            this.Model = model;
+
+			InitializeComponent();
+			Analytics.TrackEvent("Viewing Booking Page");
+
+			Appearing += BookParking_Appearing;
+		}
 
         public BookParkingModel Model{
             get{
                 return (BookParkingModel)this.BindingContext;
+            } set{
+                this.BindingContext = value;
             }
         }
 
@@ -67,12 +75,16 @@ namespace YallaParkingMobile {
 			await Navigation.PushAsync(updateCarDetails);
 		}
 
-		async void Park_Clicked(object sender, System.EventArgs e) {
-            await Navigation.PopAsync();
-		}
-
         async void Book_Clicked(object sender, System.EventArgs e) {
-            await Navigation.PopAsync();
+            var booking = await Model.BookParking();
+
+            if(!booking){
+                await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
+            }
+
+            await DisplayAlert("Booking Confirmed", "Your booking has been confirmed", "Ok");
+
+            await Navigation.PushAsync(new Bookings());
         }
     }
 }

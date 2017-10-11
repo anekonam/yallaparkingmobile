@@ -56,13 +56,13 @@ namespace YallaParkingMobile {
 				scanPage.IsScanning = false;
 
 				// Pop the page and show the result
-				Device.BeginInvokeOnMainThread(() => {
+				Device.BeginInvokeOnMainThread(async () => {
                     if (!scanFinished) {
                         scanFinished = true;
-                        Navigation.PopAsync();
-                        DisplayAlert("Scanned Barcode", result.Text, "OK");
+                        await DisplayAlert("Scan Test", "Result:" + result.Text, "Ok");
+                        await Navigation.PopAsync();
                     }
-				});
+                });
 			};
 
 			// Navigate to our scanner page

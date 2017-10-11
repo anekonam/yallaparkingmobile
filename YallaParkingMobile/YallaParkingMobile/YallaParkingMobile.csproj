@@ -107,6 +107,7 @@
     <Compile Include="Model\BookParkingModel.cs" />
     <Compile Include="Model\UserCarModel.cs" />
     <Compile Include="Model\HomeModel.cs" />
+    <Compile Include="Model\BookingModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">

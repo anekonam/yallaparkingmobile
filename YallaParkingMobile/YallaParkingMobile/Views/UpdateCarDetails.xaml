@@ -5,7 +5,7 @@
     xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
     xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
     xmlns:control="clr-namespace:YallaParkingMobile.Control;assembly=YallaParkingMobile"
-    x:Class="YallaParkingMobile.UpdateCarDetails"   
+    x:Class="YallaParkingMobile.UpdateCarDetails"
     Title="Vehicle Details">
     <Grid>
         <Grid.RowDefinitions>
@@ -26,7 +26,7 @@
                 <control:PickerCell
                     x:Name="Make"
                     Label="Make"
-                    BindingContext="{Binding}"/>
+                    BindingContext="{Binding}" />
                 <EntryCell
                     LabelColor="#a1a1b4"
                     Label="Model"
