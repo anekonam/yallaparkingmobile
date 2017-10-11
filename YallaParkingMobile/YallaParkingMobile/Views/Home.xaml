@@ -83,8 +83,7 @@
                         AnimationContentHeightRequest="50"
                         AnimationContentWidthRequest="50"
                         AnimationContentColor="#ff8e30"
-                        Grid.Row="1"
-                        IsBusy="True">
+                        Grid.Row="1">
                         <telerikPrimitives:RadBusyIndicator.BusyContent>
                             <Label
                                 Text="Searching for parking spaces..." />

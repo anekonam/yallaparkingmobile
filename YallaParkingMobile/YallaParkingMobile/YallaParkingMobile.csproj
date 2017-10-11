@@ -106,6 +106,7 @@
     <Compile Include="Control\MenuTableView.cs" />
     <Compile Include="Model\BookParkingModel.cs" />
     <Compile Include="Model\UserCarModel.cs" />
+    <Compile Include="Model\HomeModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">

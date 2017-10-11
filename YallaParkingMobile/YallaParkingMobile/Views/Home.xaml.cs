@@ -36,8 +36,6 @@ namespace YallaParkingMobile {
             SearchDate.Date = DateTime.Now;
             Search.Unfocused += Search_Unfocused;
 
-            LoadData();
-
             HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
 
         }
@@ -46,11 +44,10 @@ namespace YallaParkingMobile {
             LoadData(Search.Text);
         }
 
-        async void LoadData(string query = null) {
+        async Task LoadData(string query = null) {
             Search.ItemsSource = await ServiceUtility.PropertyAreas();
 
             BusyIndicator.IsBusy = true;
-            await Task.Delay(2000);
 
             var search = new SearchModel {
                 Name = query,
@@ -97,7 +94,7 @@ namespace YallaParkingMobile {
 
         async void Search_SuggestionItemSelected(object sender, Telerik.XamarinForms.Input.AutoComplete.SuggestionItemSelectedEventArgs e) {
             var address = e.DataItem.ToString();
-            LoadData(address);                        
+            await LoadData(address);                        
         }
 
         private void UpdateCurrentLocation() {
