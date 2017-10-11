@@ -323,6 +323,21 @@
     <Reference Include="Plugin.Media">
       <HintPath>..\..\packages\Xam.Plugin.Media.3.0.1\lib\Xamarin.iOS10\Plugin.Media.dll</HintPath>
     </Reference>
+    <Reference Include="ZXing.Net.Mobile.Core">
+      <HintPath>..\..\packages\ZXing.Net.Mobile.2.2.9\lib\Xamarin.iOS10\ZXing.Net.Mobile.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.portable">
+      <HintPath>..\..\packages\ZXing.Net.Mobile.2.2.9\lib\Xamarin.iOS10\zxing.portable.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXingNetMobile">
+      <HintPath>..\..\packages\ZXing.Net.Mobile.2.2.9\lib\Xamarin.iOS10\ZXingNetMobile.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.Net.Mobile.Forms">
+      <HintPath>..\..\packages\ZXing.Net.Mobile.Forms.2.2.9\lib\Xamarin.iOS10\ZXing.Net.Mobile.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.Net.Mobile.Forms.iOS">
+      <HintPath>..\..\packages\ZXing.Net.Mobile.Forms.2.2.9\lib\Xamarin.iOS10\ZXing.Net.Mobile.Forms.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\YallaParkingMobile\YallaParkingMobile.csproj">

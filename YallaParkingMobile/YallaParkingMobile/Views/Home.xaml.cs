@@ -37,16 +37,17 @@ namespace YallaParkingMobile {
             Search.Unfocused += Search_Unfocused;
 
             HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
-
         }
 
-        private void Search_Unfocused(object sender, FocusEventArgs e) {
+		async void Handle_Appearing(object sender, System.EventArgs e) {
+            this.Search.ItemsSource = await ServiceUtility.PropertyAreas();
+		}
+
+        async void Search_Unfocused(object sender, FocusEventArgs e) {
             LoadData(Search.Text);
         }
 
         async Task LoadData(string query = null) {
-            Search.ItemsSource = await ServiceUtility.PropertyAreas();
-
             BusyIndicator.IsBusy = true;
 
             var search = new SearchModel {

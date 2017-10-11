@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using YallaParkingMobile.Utility;
+using ZXing.Net.Mobile.Forms;
 
 namespace YallaParkingMobile {
     public partial class Bookings : ContentPage {        
@@ -47,7 +48,21 @@ namespace YallaParkingMobile {
         }
 
         private async void SearchButton_Clicked(object sender, EventArgs e) {
-            await Navigation.PushAsync(new Home());
+			var scanPage = new ZXingScannerPage();
+
+			scanPage.OnScanResult += (result) => {
+				// Stop scanning
+				scanPage.IsScanning = false;
+
+				// Pop the page and show the result
+				Device.BeginInvokeOnMainThread(() => {
+					Navigation.PopAsync();
+					DisplayAlert("Scanned Barcode", result.Text, "OK");
+				});
+			};
+
+			// Navigate to our scanner page
+			await Navigation.PushAsync(scanPage);
         }
     }
 }

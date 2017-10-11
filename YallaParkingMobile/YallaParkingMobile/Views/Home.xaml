@@ -7,6 +7,7 @@
     xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
     x:Class="YallaParkingMobile.Home"
     Title="Find Parking"
+    Appearing="Handle_Appearing"
     NavigationPage.HasBackButton="False">
     <ContentPage.ToolbarItems>
         <ToolbarItem

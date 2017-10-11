@@ -23,10 +23,17 @@ namespace YallaParkingMobile.Droid {
             global::Xamarin.Forms.Forms.Init(this, bundle);
             ImageCircleRenderer.Init();
             Xamarin.FormsMaps.Init(this, bundle);
+            ZXing.Net.Mobile.Forms.Android.Platform.Init();
             LoadApplication(new App());
 
             MobileCenter.Start("7543c5d7-d484-4a54-a528-26d0bb7744e3", typeof(Distribute));
         }
+
+		public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults) {
+			global::ZXing.Net.Mobile.Forms.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+		}
     }
+
+	
 }
 
