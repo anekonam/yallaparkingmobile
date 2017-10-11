@@ -55,6 +55,7 @@ namespace YallaParkingMobile {
 
                 if (discountResponse.Discount.HasValue) {
                     this.Model.Property.Discount = this.Model.Property.TotalPrice * (discountResponse.Discount.Value / 100);
+                    this.Model.Discount = discountResponse.Discount.Value;
                     this.ApplyCodeButton.IsVisible = false;
                     this.DiscountCode.IsEnabled = false;
                     Order.Remove(DiscountCode);

@@ -40,6 +40,8 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+        public decimal Discount { get; set; }
+
         private PropertyModel property = new PropertyModel();
 		public PropertyModel Property {
 			get {
@@ -110,7 +112,7 @@ namespace YallaParkingMobile.Model {
                 Start = this.Property.StartDate,
                 End = this.Property.EndDate,
                 Price = this.Property.ShortTermParkingPrice,
-                Discount = this.Property.Discount,
+                Discount = this.Discount,
                 Hours = this.Property.Hours
             };
 
