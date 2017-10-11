@@ -105,6 +105,8 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+        public string BookingNumber { get; set; }
+
         public async Task<bool> BookParking(){
             var model = new BookingModel {
                 UserCarId = this.SelectedUserCar.UserCarId.Value,
@@ -116,7 +118,10 @@ namespace YallaParkingMobile.Model {
                 Hours = this.Property.Hours
             };
 
-            return await ServiceUtility.Book(model);
+            this.BookingNumber = await ServiceUtility.Book(model);
+            this.BookingNumber = string.Format("#{0}", this.BookingNumber).Replace("\"", "");
+
+            return !string.IsNullOrWhiteSpace((this.BookingNumber));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

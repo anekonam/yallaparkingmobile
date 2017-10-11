@@ -108,6 +108,9 @@
     <Compile Include="Model\UserCarModel.cs" />
     <Compile Include="Model\HomeModel.cs" />
     <Compile Include="Model\BookingModel.cs" />
+    <Compile Include="Views\BookingConfirmation.cs">
+      <DependentUpon>BookingConfirmation.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -119,6 +122,10 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\UpdateCarDetails.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\BookingConfirmation.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

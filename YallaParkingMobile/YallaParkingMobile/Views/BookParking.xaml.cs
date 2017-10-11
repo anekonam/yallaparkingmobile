@@ -79,13 +79,13 @@ namespace YallaParkingMobile {
         async void Book_Clicked(object sender, System.EventArgs e) {
             var booking = await Model.BookParking();
 
-            if(!booking){
+            if (!booking) {
                 await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
+            } else {
+                var bookingConfirmation = new BookingConfirmation();
+                bookingConfirmation.BindingContext = Model.BookingNumber;
+                await Navigation.PushAsync(bookingConfirmation);
             }
-
-            await DisplayAlert("Booking Confirmed", "Your booking has been confirmed", "Ok");
-
-            await Navigation.PushAsync(new Bookings());
         }
     }
 }

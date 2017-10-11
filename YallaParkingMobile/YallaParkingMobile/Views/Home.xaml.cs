@@ -17,10 +17,7 @@ using YallaParkingMobile.Utility;
 
 namespace YallaParkingMobile {
     public partial class Home : ContentPage {
-        void Handle_Clicked(object sender, System.EventArgs e) {
-            throw new NotImplementedException();
-        }
-
+      
         private Xamarin.Forms.Maps.Position mapPosition;
 
         public Home() {
@@ -34,7 +31,6 @@ namespace YallaParkingMobile {
             CrossGeolocator.Current.PositionChanged += Current_PositionChanged;            
 
             SearchDate.Date = DateTime.Now;
-            Search.Unfocused += Search_Unfocused;
 
             HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
         }
@@ -43,10 +39,6 @@ namespace YallaParkingMobile {
             this.Search.ItemsSource = await ServiceUtility.PropertyAreas();
             await LoadData();
 		}
-
-        async void Search_Unfocused(object sender, FocusEventArgs e) {
-            await LoadData(Search.Text);
-        }
 
         async Task LoadData(string query = null) {
             BusyIndicator.IsBusy = true;
@@ -210,8 +202,8 @@ namespace YallaParkingMobile {
             Hours.Text = string.Format("{0} hours", HoursSlider.Value);
         }
 
-        private void DatePicker_DateSelected(object sender, DateChangedEventArgs e) {
-            LoadData();
+        async void DatePicker_DateSelected(object sender, DateChangedEventArgs e) {
+            await LoadData();
         }
 
     }

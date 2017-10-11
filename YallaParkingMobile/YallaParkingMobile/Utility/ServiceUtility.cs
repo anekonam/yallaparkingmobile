@@ -257,20 +257,21 @@ namespace YallaParkingMobile.Utility {
             return false;
 		}
 
-		public static async Task<bool> Book(BookingModel model) {
+		public static async Task<string> Book(BookingModel model) {
 			InitHttpClient();
 
 			try {
 				var response = await client.PostAsync("/api/parking/book", model.AsJson());
 
 				if (response.IsSuccessStatusCode) {
-                    return true;
+                    var booking = await response.Content.ReadAsStringAsync();
+                    return booking;
 				}
 			} catch {
-                return false;
+                return null;
 			}
 
-            return false;
+            return null;
 		}
 
 		public static async Task<bool> Entry(int propertyId) {

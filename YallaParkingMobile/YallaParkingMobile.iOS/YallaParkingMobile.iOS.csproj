@@ -224,6 +224,7 @@
     <BundleResource Include="Resources\Volvo-logo.png" />
     <BundleResource Include="Resources\car.png" />
     <BundleResource Include="Resources\timeSelector.png" />
+    <BundleResource Include="Resources\bookingConfirmed.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Plugin.Geolocator, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">

@@ -34,7 +34,7 @@
                     </Grid.RowDefinitions>
                     <Image
                         Margin="40"
-                        Source="booking.png"
+                        Source="bookingConfirmed.png"
                         Grid.Row="0"
                         VerticalOptions="Center"
                         Aspect="AspectFit" />
