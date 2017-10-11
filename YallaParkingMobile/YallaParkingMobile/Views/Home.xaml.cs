@@ -85,8 +85,12 @@ namespace YallaParkingMobile {
             var pin = (Pin)sender;
             var property = (PropertyModel)pin.BindingContext;
 
-            property.StartDate = this.SearchDate.Date.Add(this.SearchTime.Time);
-            property.Hours = (int)this.HoursSlider.Value;
+            if (SearchDateTime.IsVisible) {
+                property.StartDate = this.SearchDate.Date.Add(this.SearchTime.Time);
+                property.Hours = (int)this.HoursSlider.Value;
+            } else{
+                property.StartDate = DateTime.UtcNow;
+            }
 
             var bookParking = new BookParking();
             bookParking.BindingContext = new BookParkingModel(property);

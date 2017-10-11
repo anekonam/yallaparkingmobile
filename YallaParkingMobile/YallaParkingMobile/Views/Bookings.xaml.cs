@@ -49,6 +49,7 @@ namespace YallaParkingMobile {
 
         private async void SearchButton_Clicked(object sender, EventArgs e) {
 			var scanPage = new ZXingScannerPage();
+            bool scanFinished = false;
 
 			scanPage.OnScanResult += (result) => {
 				// Stop scanning
@@ -56,8 +57,11 @@ namespace YallaParkingMobile {
 
 				// Pop the page and show the result
 				Device.BeginInvokeOnMainThread(() => {
-					Navigation.PopAsync();
-					DisplayAlert("Scanned Barcode", result.Text, "OK");
+                    if (!scanFinished) {
+                        scanFinished = true;
+                        Navigation.PopAsync();
+                        DisplayAlert("Scanned Barcode", result.Text, "OK");
+                    }
 				});
 			};
 
