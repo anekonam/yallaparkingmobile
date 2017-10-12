@@ -35,7 +35,7 @@ namespace YallaParkingMobile {
 
         async void BookParking_Appearing(object sender, EventArgs e) {            
             if (!string.IsNullOrWhiteSpace(this.Model.Property.ImageBase)) {
-                this.PropertyImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(this.Model.Property.ImageBase)));
+                this.PropertyImage.Source = ImageSource.FromUri(new Uri("http://yallaparking-new.insiso.co.uk/property/image/" + Model.Property.PropertyId));
             }
 
             NavigationPage.SetBackButtonTitle(this, " ");

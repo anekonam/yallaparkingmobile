@@ -38,8 +38,7 @@
                         Grid.Row="0">
                         <telerikInput:RadAutoComplete
                             x:Name="Search"
-                            BackgroundColor="White"
-                            SuggestMode="Suggest"
+                            BackgroundColor="White"                           
                             CompletionMode="StartsWith"
                             TextColor="#ff8e30"
                             SuggestionItemSelected="Search_SuggestionItemSelected"
