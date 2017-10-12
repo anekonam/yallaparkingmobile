@@ -104,6 +104,12 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+		public bool NotCompleted {
+			get {
+                return !this.Completed;
+			}
+		}
+
         public decimal Price { get; set; }
 
         public decimal? Discount { get; set; }
