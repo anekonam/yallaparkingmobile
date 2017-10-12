@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -6,6 +6,7 @@
     xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
     x:Class="YallaParkingMobile.Bookings"
     Title="My Bookings"
+    Appearing="Handle_Appearing"
     NavigationPage.HasBackButton="False">
     <ContentPage.ToolbarItems>
         <ToolbarItem
@@ -21,51 +22,152 @@
             DrawerLength="200"
             BackgroundColor="White">
             <telerikPrimitives:RadSideDrawer.MainContent>
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition
-                            Height="*" />
-                        <RowDefinition
-                            Height="Auto" />
-                        <RowDefinition
-                            Height="Auto" />
-                        <RowDefinition
-                            Height="*" />
-                    </Grid.RowDefinitions>
-                    <Image
-                        Margin="40"
-                        Source="bookingConfirmed.png"
-                        Grid.Row="0"
-                        VerticalOptions="Center"
-                        Aspect="AspectFit" />
-                    <ContentView
-                        Padding="0,40,0,0"
-                        Grid.Row="1">
+                <telerikPrimitives:RadBusyIndicator
+                    x:Name="BusyIndicator"
+                    AnimationContentHeightRequest="50"
+                    AnimationContentWidthRequest="50"
+                    AnimationContentColor="#ff8e30"
+                    IsBusy="{Binding IsBusy}">
+                    <telerikPrimitives:RadBusyIndicator.BusyContent>
                         <Label
-                            Style="{StaticResource Header}"
-                            VerticalTextAlignment="Center"
-                            Text="No Bookings Yet" />
-                    </ContentView>
-                    <Label
-                        Margin="40"
-                        Grid.Row="2"
-                        HorizontalTextAlignment="Center"
-                        Text="You haven't booked or completed any parking yet, start searching for parking below" />
-                    <ContentView
-                        Padding="40"
-                        Grid.Row="3">
-                        <Button
-                            x:Name="SearchButton"
-                            Clicked="SearchButton_Clicked"
-                            Style="{StaticResource GreenButton}"
-                            Text="Search Parking"
-                            HorizontalOptions="Fill"
-                            VerticalOptions="End" />
-                    </ContentView>
-                </Grid>
+                            Text="Loading bookings..." />
+                    </telerikPrimitives:RadBusyIndicator.BusyContent>
+                    <telerikPrimitives:RadBusyIndicator.Content>
+                        <Grid>
+                            <Grid
+                                IsVisible="{Binding HasNoBookings}">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition
+                                        Height="*" />
+                                    <RowDefinition
+                                        Height="Auto" />
+                                    <RowDefinition
+                                        Height="Auto" />
+                                    <RowDefinition
+                                        Height="*" />
+                                </Grid.RowDefinitions>
+                                <Image
+                                    Margin="40"
+                                    Source="bookingConfirmed.png"
+                                    Grid.Row="0"
+                                    VerticalOptions="Center"
+                                    Aspect="AspectFit" />
+                                <ContentView
+                                    Padding="0,40,0,0"
+                                    Grid.Row="1">
+                                    <Label
+                                        Style="{StaticResource Header}"
+                                        VerticalTextAlignment="Center"
+                                        Text="No Bookings Yet" />
+                                </ContentView>
+                                <Label
+                                    Margin="40"
+                                    Grid.Row="2"
+                                    HorizontalTextAlignment="Center"
+                                    Text="You haven't booked or completed any parking yet, start searching for parking below" />
+                                <ContentView
+                                    Padding="40"
+                                    Grid.Row="3">
+                                    <Button
+                                        x:Name="SearchButton"
+                                        Clicked="SearchButton_Clicked"
+                                        Style="{StaticResource GreenButton}"
+                                        Text="Search Parking"
+                                        HorizontalOptions="Fill"
+                                        VerticalOptions="End" />
+                                </ContentView>
+                            </Grid>
+                            <ListView
+                                x:Name="BookingList"
+                                HasUnevenRows="true"
+                                SeparatorVisibility="None"
+                                ItemSelected="Handle_ItemSelected"
+                                IsVisible="{Binding HasBookings}"
+                                ItemsSource="{Binding Bookings}">
+                                <ListView.SeparatorVisibility>None</ListView.SeparatorVisibility>
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell
+                                            Height="125">
+                                            <Grid
+                                                VerticalOptions="FillAndExpand"
+                                                ColumnSpacing="10"
+                                                RowSpacing="10"
+                                                Padding="10">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition
+                                                        Width="0.3*" />
+                                                    <ColumnDefinition
+                                                        Width="*" />
+                                                    <ColumnDefinition
+                                                        Width="Auto" />
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition
+                                                        Height="Auto" />
+                                                    <RowDefinition
+                                                        Height="Auto" />
+                                                </Grid.RowDefinitions>
+                                                <StackLayout
+                                                    VerticalOptions="FillAndExpand">
+                                                    <Image
+                                                        HeightRequest="80"
+                                                        Aspect="AspectFill"
+                                                        Source="{Binding PropertyImage}" />
+                                                </StackLayout>
+                                                <StackLayout
+                                                    VerticalOptions="CenterAndExpand"
+                                                    Grid.Column="1">
+                                                    <Label
+                                                        HorizontalOptions="StartAndExpand"
+                                                        FontSize="16"
+                                                        TextColor="Black"
+                                                        Text="{Binding PropertyName}"
+                                                        Style="{StaticResource Header}" />
+                                                    <Label
+                                                        FontSize="12"
+                                                        HorizontalOptions="StartAndExpand"
+                                                        Text="{Binding PropertyPropertyArea}" />
+                                                    <Label
+                                                        FontSize="12"
+                                                        HorizontalOptions="StartAndExpand"
+                                                        Text="{Binding PropertyCity}" />
+                                                </StackLayout>
+                                                <Image
+                                                    Grid.Column="2"
+                                                    VerticalOptions="Center"
+                                                    Aspect="AspectFit"
+                                                    Source="disclaimer.png" />
+                                                <Label
+                                                    Grid.Row="1"
+                                                    FontSize="12"
+                                                    VerticalOptions="Start"
+                                                    HorizontalOptions="Center"
+                                                    Text="{Binding Number}" />
+                                                <ContentView
+                                                    Grid.Row="1"
+                                                    Grid.Column="1"
+                                                    Grid.ColumnSpan="2"
+                                                    Padding="8"
+                                                    Margin="10,0,0,0"
+                                                    BackgroundColor="#ff8e30">
+                                                    <Label
+                                                        TextColor="White"
+                                                        FontSize="13"
+                                                        HorizontalTextAlignment="Start"
+                                                        Text="{Binding BookingTime}" />
+                                                </ContentView>
+                                            </Grid>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </Grid>
+                    </telerikPrimitives:RadBusyIndicator.Content>
+                </telerikPrimitives:RadBusyIndicator>
             </telerikPrimitives:RadSideDrawer.MainContent>
             <telerikPrimitives:RadSideDrawer.DrawerContent>
-                  <StackLayout>
+                <StackLayout>
                     <StackLayout
                         Margin="20, 10, 10, 10"
                         Orientation="Horizontal">

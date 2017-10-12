@@ -13,19 +13,50 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using YallaParkingMobile.Utility;
-using ZXing.Net.Mobile.Forms;
 using YallaParkingMobile.Model;
 
 namespace YallaParkingMobile {
     public partial class Bookings : ContentPage {        
         public Bookings() {
-            InitializeComponent();
-            Analytics.TrackEvent("Viewing Booking Page");          
-        }       
+            InitializeComponent();         
+        }
+
+        public Bookings(BookingsModel model) {
+            this.Model = model;
+
+			InitializeComponent();
+
+			Analytics.TrackEvent("Viewing Booking Page");
+		}
+
+        public BookingsModel Model{
+            get{
+                return (BookingsModel)this.BindingContext;
+            } set{
+                this.BindingContext = value;
+            }
+        }
+
+        async void Handle_Appearing(object sender, System.EventArgs e) {
+            await this.Model.GetBookings();
+        }
+
+        async void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e) {
+            var model = (BookingModel)e.SelectedItem;
+            var bookingDetail = new BookingDetail(model);
+            await Navigation.PushAsync(bookingDetail);
+        }
 
         private void Button_Clicked(object sender, EventArgs e) {
             Menu.IsOpen = !Menu.IsOpen;
         }
+
+		private async void SearchButton_Clicked(object sender, EventArgs e) {
+			var model = new HomeModel();
+			var home = new Home(model);
+
+			await Navigation.PushAsync(home);
+		}
 
         private async void FindParking_Clicked(object sender, EventArgs e) {
             var model = new HomeModel();
@@ -35,7 +66,10 @@ namespace YallaParkingMobile {
         }
 
         private async void MyBookings_Clicked(object sender, EventArgs e) {
-            await Navigation.PushAsync(new Bookings());
+			var model = new BookingsModel();
+			var bookings = new Bookings(model);
+
+			await Navigation.PushAsync(bookings);
         }
 
         private async void MyProfile_Clicked(object sender, EventArgs e) {            
@@ -51,26 +85,6 @@ namespace YallaParkingMobile {
             await Navigation.PushAsync(new Login());
         }
 
-        private async void SearchButton_Clicked(object sender, EventArgs e) {
-			var scanPage = new ZXingScannerPage();
-            bool scanFinished = false;
-
-			scanPage.OnScanResult += (result) => {
-				// Stop scanning
-				scanPage.IsScanning = false;
-
-				// Pop the page and show the result
-				Device.BeginInvokeOnMainThread(async () => {
-                    if (!scanFinished) {
-                        scanFinished = true;
-                        await DisplayAlert("Scan Test", "Result:" + result.Text, "Ok");
-                        await Navigation.PopAsync();
-                    }
-                });
-			};
-
-			// Navigate to our scanner page
-			await Navigation.PushAsync(scanPage);
-        }
+       
     }
 }

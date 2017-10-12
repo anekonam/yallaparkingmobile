@@ -122,6 +122,7 @@
     <Compile Include="BorderlessPickerRenderer.cs" />
     <Compile Include="MenuTableViewRenderer.cs" />
     <Compile Include="Effect\SliderEffect.cs" />
+    <None Include="Resources\disclaimer.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />

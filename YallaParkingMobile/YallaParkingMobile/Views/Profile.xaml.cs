@@ -71,7 +71,10 @@ namespace YallaParkingMobile {
         }
 
         private async void MyBookings_Clicked(object sender, EventArgs e) {
-            await Navigation.PushAsync(new Bookings());
+			var model = new BookingsModel();
+			var bookings = new Bookings(model);
+
+			await Navigation.PushAsync(bookings);
         }
 
         private async void MyProfile_Clicked(object sender, EventArgs e) {

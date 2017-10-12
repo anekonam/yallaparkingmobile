@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:YallaParkingMobile"
+    xmlns:control="clr-namespace:YallaParkingMobile.Control"
+    x:Class="YallaParkingMobile.BookingDetail"
+    Appearing="Handle_Appearing"
+    Title="Details">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="150" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid
+            Grid.Row="0"
+            Padding="30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="0.3*" />
+                <ColumnDefinition
+                    Width="0.7*" />
+            </Grid.ColumnDefinitions>
+            <Image
+                Grid.Column="0"
+                Aspect="AspectFill"
+                Source="{Binding PropertyImage}">
+            </Image>
+            <StackLayout
+                Padding="10,0,0,0"
+                Grid.Column="1">
+                <Label
+                    HorizontalTextAlignment="Start"
+                    Text="{Binding PropertyName}" />
+                <Label
+                    x:Name="PropertyArea"
+                    HorizontalTextAlignment="Start"
+                    FontSize="12"
+                    Text="{Binding PropertyPropertyArea}" />
+                <Label
+                    HorizontalTextAlignment="Start"
+                    FontSize="12"
+                    Text="Dubai, UAE" />
+                <ContentView
+                    Margin="0,10,0,0"
+                    Padding="5"
+                    IsVisible="{Binding NotCompleted}"
+                    HorizontalOptions="EndAndExpand"
+                    BackgroundColor="#ff8e30">
+                    <Label
+                        TextColor="White"
+                        FontSize="10"
+                        IsVisible="{Binding NotCompleted}"
+                        Text="{Binding BookingTime}" />
+                </ContentView>
+                <ContentView
+                    Margin="0,10,0,0"
+                    Padding="5"
+                    IsVisible="{Binding Completed}"
+                    HorizontalOptions="EndAndExpand"
+                    BackgroundColor="Green">
+                    <Label
+                        TextColor="White"
+                        FontSize="10"
+                        Text="Completed" />
+                </ContentView>
+            </StackLayout>
+        </Grid>
+        <control:MenuTableView
+            x:Name="OrderSummary"
+            Intent="Settings"
+            Grid.Row="1">
+            <TableRoot>
+                <TableSection
+                    x:Name="Order"
+                    Title="Order Summary">
+                    <EntryCell
+                        LabelColor="#a1a1b4"
+                        Label="Number of hours"
+                        HorizontalTextAlignment="End"
+                        IsEnabled="False"
+                        Text="{Binding Hours}" />
+                    <EntryCell
+                        LabelColor="#a1a1b4"
+                        Label="Price per hour"
+                        HorizontalTextAlignment="End"
+                        IsEnabled="False"
+                        Text="{Binding Price, StringFormat='AED {0:n2}'}" />
+                    <EntryCell
+                        Label="Discount"
+                        LabelColor="#a1a1b4"
+                        HorizontalTextAlignment="End"
+                        IsEnabled="False"
+                        Text="{Binding Discount, StringFormat='(AED {0:n2})'}" />
+                    <EntryCell
+                        Label="Total"
+                        HorizontalTextAlignment="End"
+                        IsEnabled="False"
+                        LabelColor="Black"
+                        Text="{Binding TotalPrice, StringFormat='AED {0:n2}'}">
+                    </EntryCell>
+                </TableSection>
+                <TableSection
+                    Title="Vehicle">
+                    <ImageCell
+                        ImageSource="{Binding UserCarImage}"
+                        Text="{Binding UserCarMakeAndModel}"
+                        Detail="{Binding UserCarRegAndColor}">
+                    </ImageCell>
+                </TableSection>
+            </TableRoot>
+        </control:MenuTableView>
+        <Grid
+            Padding="10"
+            Grid.Row="2">
+            <Button
+                x:Name="EntryButton"
+                Style="{StaticResource GreenButton}"
+                IsVisible="{Binding CanEnter}"
+                Text="Yalla, I'm Here"
+                Clicked="ScanEntry_Clicked"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center" />
+            <Button
+                x:Name="ExitButton"
+                Style="{StaticResource GreenButton}"
+                IsVisible="{Binding CanExit}"
+                Text="Yalla, I'm Leaving"
+                Clicked="ScanExit_Clicked"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center" />
+        </Grid>
+    </Grid>
+</ContentPage>

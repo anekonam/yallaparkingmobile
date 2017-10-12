@@ -313,5 +313,41 @@ namespace YallaParkingMobile.Utility {
 
 			return false;
 		}
-    }   
+
+		public static async Task<List<BookingModel>> GetBookings() {
+			InitHttpClient();
+
+			try {
+				var response = await client.GetAsync("/api/account/bookings");
+
+				if (response.IsSuccessStatusCode) {
+					var profileResponse = await response.Content.ReadAsStringAsync();
+					return JsonConvert.DeserializeObject<List<BookingModel>>(profileResponse);
+				}
+			} catch {
+				return null;
+			}
+
+			return null;
+		}
+
+		public static async Task<BookingModel> GetBooking(int propertyParkingId) {
+			InitHttpClient();
+
+			try {
+                var response = await client.GetAsync("/api/account/booking/"+propertyParkingId);
+
+				if (response.IsSuccessStatusCode) {
+					var profileResponse = await response.Content.ReadAsStringAsync();
+					return JsonConvert.DeserializeObject<BookingModel>(profileResponse);
+				}
+			} catch {
+				return null;
+			}
+
+			return null;
+		}
+
+
+	}   
 }
