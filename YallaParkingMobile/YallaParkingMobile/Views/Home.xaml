@@ -47,7 +47,7 @@
                         <StackLayout
                             x:Name="SearchDateTime"
                             Padding="4"
-                            IsVisible="false"
+                            IsVisible="{Binding ParkLater}"
                             Orientation="Horizontal">
                             <DatePicker
                                 x:Name="SearchDate"
@@ -67,14 +67,15 @@
                             Orientation="Horizontal">
                             <Label
                                 x:Name="Hours"
-                                Margin="0,0,10,0"
+                                Margin="0,5,10,0"
+                                VerticalOptions="Start"
+                                FontSize="20"
                                 Text="2 Hours" />
                             <Slider
                                 x:Name="HoursSlider"
                                 Maximum="24"
                                 Minimum="1"
                                 Value="2"
-                                Margin="0,5,0,0"
                                 ValueChanged="HoursSlider_ValueChanged"
                                 HorizontalOptions="FillAndExpand" />
                         </StackLayout>
@@ -100,7 +101,8 @@
                         </telerikPrimitives:RadBusyIndicator.Content>
                     </telerikPrimitives:RadBusyIndicator>
                     <Grid
-                        Grid.Row="2">
+                        Grid.Row="2"
+                        ColumnSpacing="0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition
                                 Width="*" />
@@ -113,6 +115,7 @@
                             Text="Park Now"
                             BorderRadius="0"
                             Margin="0"
+                            HeightRequest="60"
                             FontSize="20"
                             Clicked="ParkNow_Clicked"
                             BackgroundColor="#ff8e30"
@@ -124,9 +127,9 @@
                             Text="Park Later"
                             BorderRadius="0"
                             Margin="0"
+                            HeightRequest="60"
                             FontSize="20"
                             Clicked="ParkLater_Clicked"
-                            BackgroundColor="#ff8e30"
                             HorizontalOptions="FillAndExpand"
                             VerticalOptions="Center" />
                     </Grid>

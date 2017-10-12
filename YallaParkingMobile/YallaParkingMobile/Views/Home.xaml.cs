@@ -22,17 +22,32 @@ namespace YallaParkingMobile {
 
         public Home() {
             InitializeComponent();
-            Analytics.TrackEvent("Viewing Home Page");
+        }
 
-            PropertyUtility.SetValue("LoggedIn", "true");
+        public Home (HomeModel model){
+            this.Model = model;
 
-            UpdateCurrentLocation();
+            InitializeComponent();
 
-            CrossGeolocator.Current.PositionChanged += Current_PositionChanged;            
+			Analytics.TrackEvent("Viewing Home Page");
 
-            SearchDate.Date = DateTime.Now;
+			PropertyUtility.SetValue("LoggedIn", "true");
 
-            HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
+			UpdateCurrentLocation();
+
+			CrossGeolocator.Current.PositionChanged += Current_PositionChanged;
+
+			SearchDate.Date = DateTime.Now;
+
+			HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
+        }
+
+        public HomeModel Model{
+            get{
+                return (HomeModel)this.BindingContext;
+            } set{
+                this.BindingContext = value;
+            }
         }
 
 		async void Handle_Appearing(object sender, System.EventArgs e) {
@@ -165,16 +180,24 @@ namespace YallaParkingMobile {
             Menu.IsOpen = !Menu.IsOpen;
         }
 
-		private void ParkNow_Clicked(object sender, EventArgs e) {
-            SearchDateTime.IsVisible = false;
+		private async void ParkNow_Clicked(object sender, EventArgs e) {
+			var model = new HomeModel();
+			var home = new Home(model);
+
+			await Navigation.PushAsync(home);
 		}
 
-		private void ParkLater_Clicked(object sender, EventArgs e) {
-			SearchDateTime.IsVisible = true;
+		private async void ParkLater_Clicked(object sender, EventArgs e) {
+			var model = new HomeModel(false);
+			var home = new Home(model);
+
+			await Navigation.PushAsync(home);
 		}
 
         private async void FindParking_Clicked(object sender, EventArgs e) {
-            await Navigation.PushAsync(new Home());
+			var home = new Home();
+			home.BindingContext = new HomeModel();
+			await Navigation.PushAsync(home);
         }
 
         private async void MyBookings_Clicked(object sender, EventArgs e) {

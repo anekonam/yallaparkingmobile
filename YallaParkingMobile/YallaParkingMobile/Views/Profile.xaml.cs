@@ -66,7 +66,8 @@ namespace YallaParkingMobile {
         }
 
         private async void FindParking_Clicked(object sender, EventArgs e) {
-            await Navigation.PushAsync(new Home());
+			var home = new Home(new HomeModel());
+			await Navigation.PushAsync(home);
         }
 
         private async void MyBookings_Clicked(object sender, EventArgs e) {

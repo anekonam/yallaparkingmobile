@@ -33,7 +33,8 @@ namespace YallaParkingMobile {
 			Activity.IsVisible = false;
 
             if (success) {
-                await Navigation.PushAsync(new Home());
+				var home = new Home(new HomeModel());
+				await Navigation.PushAsync(home);
             } else {
                 await DisplayAlert("Verification Failed", "Verification failed, please try again", "Ok");
             }
@@ -41,7 +42,8 @@ namespace YallaParkingMobile {
 				
         async void ToolbarItem_Activated(object sender, EventArgs e) {
             var profile = await ServiceUtility.Profile();
-            await Navigation.PushAsync(new Home());
+			var home = new Home(new HomeModel());
+			await Navigation.PushAsync(home);
         }
     }
 }

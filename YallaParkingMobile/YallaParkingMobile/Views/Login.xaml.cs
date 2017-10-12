@@ -48,7 +48,8 @@ namespace YallaParkingMobile {
             Activity.IsVisible = false;
 
             if (result.IsSuccessStatusCode) {
-                await Navigation.PushAsync(new Home());
+				var home = new Home(new HomeModel());
+				await Navigation.PushAsync(home);
             } else if(result.StatusCode == System.Net.HttpStatusCode.Forbidden){
                 await DisplayAlert("Verification Required", "Verification required, please enter the code sent to you on the following screen", "Ok");
                 await Navigation.PushAsync(new Verify());
@@ -58,9 +59,9 @@ namespace YallaParkingMobile {
         }
 		
 		async void FacebookButton_Clicked(object sender, EventArgs e) {
-            Analytics.TrackEvent("Facebook button clicked, submitting Facebook login details");                        
+            Analytics.TrackEvent("Facebook button clicked, submitting Facebook login details");
 
-            await Navigation.PushAsync(new Home());
+			
         }
 
         async void ToolbarItem_Activated(object sender, EventArgs e) {

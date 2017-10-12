@@ -3,8 +3,8 @@ using System.ComponentModel;
 namespace YallaParkingMobile.Model {
     public class HomeModel:INotifyPropertyChanged {
 
-        public HomeModel(){
-            
+        public HomeModel(bool parkNow = true){
+            this.ParkNow = parkNow;
         }
 
         private bool parkNow;
@@ -14,8 +14,18 @@ namespace YallaParkingMobile.Model {
             } set{
                 if(parkNow!=value){
                     parkNow = value;
-                    PropertyChanged(this, new PropertyChangedEventArgs("ParkNow"));
+
+                    if (PropertyChanged != null) {
+                        PropertyChanged(this, new PropertyChangedEventArgs("ParkNow"));
+                        PropertyChanged(this, new PropertyChangedEventArgs("ParkLater"));
+                    }
                 }
+            }
+        }
+
+        public bool ParkLater{
+            get{
+                return !this.ParkNow;
             }
         }
 
