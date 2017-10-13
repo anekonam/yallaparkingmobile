@@ -227,6 +227,8 @@
     <BundleResource Include="Resources\timeSelector.png" />
     <BundleResource Include="Resources\bookingConfirmed.png" />
     <BundleResource Include="Resources\verifiedIllustration.png" />
+    <BundleResource Include="Resources\Visa-logo.png" />
+    <BundleResource Include="Resources\Mastercard-logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Plugin.Geolocator, Version=4.0.1.0, Culture=neutral, processorArchitecture=MSIL">
