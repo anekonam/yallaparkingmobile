@@ -88,7 +88,8 @@ namespace YallaParkingMobile {
 							await ServiceUtility.Exit(Model.PropertyId);
                             await this.RefreshBooking();
 							await DisplayAlert("Valid Scan", "Your scan has been validated for exit from your parking space", "Ok");
-							await Navigation.PopAsync();
+                            await Navigation.PopAsync();
+                            await Navigation.PushAsync(new ConfirmExit());
 						} else {
 							await DisplayAlert("Invalid Scan", "The QR code scanned does not match the property for this booking", "Ok");
 							await Navigation.PopAsync();

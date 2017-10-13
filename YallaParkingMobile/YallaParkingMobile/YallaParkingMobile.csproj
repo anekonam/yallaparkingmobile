@@ -115,6 +115,17 @@
     <Compile Include="Views\BookingDetail.xaml.cs">
       <DependentUpon>BookingDetail.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Wallet.xaml.cs">
+      <DependentUpon>Wallet.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\UserCardModel.cs" />
+    <Compile Include="Model\WalletModel.cs" />
+    <Compile Include="Views\UpdateCardDetails.xaml.cs">
+      <DependentUpon>UpdateCardDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ConfirmExit.xaml.cs">
+      <DependentUpon>ConfirmExit.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -134,6 +145,18 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\BookingDetail.xaml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Wallet.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UpdateCardDetails.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ConfirmExit.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>

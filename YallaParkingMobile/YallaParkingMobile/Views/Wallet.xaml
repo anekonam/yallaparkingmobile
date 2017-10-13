@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+    xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+    xmlns:control="clr-namespace:YallaParkingMobile.Control;assembly=YallaParkingMobile"
+    x:Class="YallaParkingMobile.Wallet"
+    Title="Wallet"
+    Appearing="Handle_Appearing"
+    NavigationPage.HasBackButton="true">
+    <telerikPrimitives:RadBusyIndicator
+        x:Name="BusyIndicator"
+        AnimationContentHeightRequest="50"
+        AnimationContentWidthRequest="50"
+        AnimationContentColor="#ff8e30"
+        IsBusy="True">
+        <telerikPrimitives:RadBusyIndicator.BusyContent>
+            <Label
+                Text="Loading wallet..." />
+        </telerikPrimitives:RadBusyIndicator.BusyContent>
+        <telerikPrimitives:RadBusyIndicator.Content>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="Auto" />
+                </Grid.RowDefinitions>
+                <ListView
+                    x:Name="Cards"
+                    ItemTapped="Handle_ItemTapped"
+                    ItemsSource="{Binding UserCards}">
+                    <ListView.SeparatorVisibility>None</ListView.SeparatorVisibility>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ImageCell
+                                ImageSource="{Binding Image}"
+                                Text="{Binding Name}"
+                                Detail="{Binding LastFourDigits}">
+                                <ImageCell.ContextActions>
+                                    <MenuItem
+                                        x:Name="CardDelete"
+                                        Text="Delete"
+                                        IsDestructive="true"
+                                        CommandParameter="{Binding .}"
+                                        Clicked="Delete_Clicked"/>
+                                </ImageCell.ContextActions>
+                            </ImageCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button
+                    Grid.Row="1"
+                    Margin="10"
+                    x:Name="AddNewButton"
+                    Style="{StaticResource GreenButton}"
+                    Text="Add New Card"
+                    Clicked="AddNewButton_Clicked"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center" />
+            </Grid>
+        </telerikPrimitives:RadBusyIndicator.Content>
+    </telerikPrimitives:RadBusyIndicator>
+</ContentPage>

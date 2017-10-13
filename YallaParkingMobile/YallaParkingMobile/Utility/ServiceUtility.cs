@@ -257,6 +257,56 @@ namespace YallaParkingMobile.Utility {
             return false;
 		}
 
+		public static async Task<List<UserCardModel>> GetUserCards() {
+			InitHttpClient();
+
+			try {
+				var response = await client.GetAsync("/api/account/getUserCards");
+
+				if (response.IsSuccessStatusCode) {
+					var profileResponse = await response.Content.ReadAsStringAsync();
+					return JsonConvert.DeserializeObject<List<UserCardModel>>(profileResponse);
+				}
+			} catch {
+				return null;
+			}
+
+			return null;
+		}
+
+		public static async Task<UserCardModel> UpdateUserCard(UserCardModel model) {
+			InitHttpClient();
+
+			try {
+				var response = await client.PostAsync("/api/account/updateUserCard", model.AsJson());
+
+				if (response.IsSuccessStatusCode) {
+					var profileResponse = await response.Content.ReadAsStringAsync();
+					return JsonConvert.DeserializeObject<UserCardModel>(profileResponse);
+				}
+			} catch {
+				return null;
+			}
+
+			return null;
+		}
+
+		public static async Task<bool> DeleteUserCard(UserCardModel model) {
+			InitHttpClient();
+
+			try {
+				var response = await client.PostAsync("/api/account/deleteUserCard", model.AsJson());
+
+				if (response.IsSuccessStatusCode) {
+					return true;
+				}
+			} catch {
+				return false;
+			}
+
+			return false;
+		}
+
 		public static async Task<string> Book(BookingModel model) {
 			InitHttpClient();
 

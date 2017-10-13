@@ -167,7 +167,10 @@ namespace YallaParkingMobile {
 
         }
 
-        private void Wallet_Tapped(object sender, EventArgs e) {
+        async void Wallet_Tapped(object sender, EventArgs e) {
+            var wallet = new Wallet();
+            wallet.BindingContext = new WalletModel();
+            await Navigation.PushAsync(wallet);
 
         }
 
