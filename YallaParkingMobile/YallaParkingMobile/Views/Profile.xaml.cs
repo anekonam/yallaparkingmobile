@@ -138,6 +138,7 @@ namespace YallaParkingMobile {
                 }
 
                 var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions {
+                    PhotoSize = PhotoSize.Small,
                     SaveToAlbum = false
                 });
 
@@ -153,10 +154,9 @@ namespace YallaParkingMobile {
                         await ServiceUtility.UpdateProfile(this.Model);
                     }
                 }
-                await DisplayAlert("Profile Verified", "Your profile is now verified.", "OK");
-            } else {
-                await DisplayAlert("Profile Verified", "Your profile is already verified.", "OK");
-            }
+
+                await Navigation.PushAsync(new ProfileVerify());
+            } 
         }
 
 

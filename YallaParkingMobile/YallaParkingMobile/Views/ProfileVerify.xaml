@@ -3,7 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:YallaParkingMobile"
-    x:Class="YallaParkingMobile.ConfirmExit"
+    x:Class="YallaParkingMobile.ProfileVerify"
     NavigationPage.HasNavigationBar="False">
 
     <Grid>
@@ -41,7 +41,7 @@
 
 
         <Image
-            Source="car.png"
+            Source="verifiedIllustration.png"
             Grid.Row="2"
             Grid.Column="1"
             Grid.ColumnSpan="2"
@@ -56,30 +56,24 @@
             <Label
                 Style="{StaticResource Header}"
                 VerticalTextAlignment="Start"
-                Text="Parking Complete" />
+                Text="Verified" />
         </ContentView>
 
         <Label            
             Grid.Row="6"
             Grid.Column="1"
             Grid.ColumnSpan="2"
-            Text="Thank you for using Yalla Parking" />
-
-        <Label            
-            Grid.Row="7"
-            Grid.Column="1"
-            Grid.ColumnSpan="2"
-            Text="we hope to see you again soon" />
+            Text="You are now a verified user you can start booking spaces!" />
 
         <ContentView
             Padding="0,0,20,20"
             Grid.Row="8"
             Grid.Column="3">
             <Button
-                x:Name="Yalla"
-                Clicked="YallaButton_Clicked"
+                x:Name="Done"
+                Clicked="DoneButton_Clicked"
                 Style="{StaticResource GreenTextButton}"
-                Text="Yalla"
+                Text="Done"
                 HorizontalOptions="Start"
                 VerticalOptions="End"
                 TextColor="#5fd25f" />

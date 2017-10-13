@@ -126,6 +126,9 @@
     <Compile Include="Views\ConfirmExit.xaml.cs">
       <DependentUpon>ConfirmExit.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ProfileVerify.xaml.cs">
+      <DependentUpon>ProfileVerify.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -156,6 +159,10 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ConfirmExit.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ProfileVerify.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
