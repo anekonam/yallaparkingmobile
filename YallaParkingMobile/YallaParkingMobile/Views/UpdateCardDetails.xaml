@@ -37,17 +37,15 @@
                     Label="Card Number"
                     HorizontalTextAlignment="End"
                     Text="{Binding Number, Mode=TwoWay}" />
-                <EntryCell
-                    LabelColor="#a1a1b4"
+                <control:PickerCell
+                    x:Name="ExpireMonth"
                     Label="Expiry Month"
-                    HorizontalTextAlignment="End"
-                    Text="{Binding ExpireMonth, Mode=TwoWay}" />
-                <EntryCell
-                    LabelColor="#a1a1b4"
+                    BindingContext="{Binding}" />
+                <control:PickerCell
+                    x:Name="ExpireYear"
                     Label="Expiry Year"
-                    HorizontalTextAlignment="End"
-                    Text="{Binding ExpireYear, Mode=TwoWay}" />
-                 <EntryCell
+                    BindingContext="{Binding}" />
+                <EntryCell
                     LabelColor="#a1a1b4"
                     Label="CVC"
                     HorizontalTextAlignment="End"

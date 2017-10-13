@@ -25,7 +25,7 @@ namespace YallaParkingMobile {
             InitializeComponent();
             Analytics.TrackEvent("Viewing Update Card Details Page");
 
-            var picker = new BorderlessPicker {
+            var brandPicker = new BorderlessPicker {
                 Title = "Select Brand...",
                 ItemsSource = new List<string>{
                     "Visa",
@@ -34,8 +34,36 @@ namespace YallaParkingMobile {
                 }
             };
 
-            picker.SetBinding(Picker.SelectedItemProperty, "Brand", BindingMode.TwoWay);
-            this.Brand.Picker = picker;
+            brandPicker.SetBinding(Picker.SelectedItemProperty, "Brand", BindingMode.TwoWay);
+            this.Brand.Picker = brandPicker;
+
+            var months = new List<string>();
+
+            for (var i = 0; i < 12;i++){
+                months.Add((i + 1).ToString());
+            }
+
+			var monthPicker = new BorderlessPicker {
+                Title = "Select Month...",
+				ItemsSource = months
+			};
+
+			monthPicker.SetBinding(Picker.SelectedItemProperty, "ExpireMonth", BindingMode.TwoWay);
+            this.ExpireMonth.Picker = monthPicker;
+
+			var years = new List<string>();
+
+			for (var i = 0; i < 10; i++) {
+                years.Add(DateTime.Now.AddYears(i).Year.ToString());
+			}
+
+			var yearPicker = new BorderlessPicker {
+                Title = "Select Year...",
+				ItemsSource = years
+			};
+
+			yearPicker.SetBinding(Picker.SelectedItemProperty, "ExpireYear", BindingMode.TwoWay);
+			this.ExpireYear.Picker = yearPicker;
 
             NavigationPage.SetBackButtonTitle(this, "Back");
         }

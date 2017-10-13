@@ -14,7 +14,7 @@ namespace YallaParkingMobile {
         }        
 
         async void DoneButton_Clicked(object sender, EventArgs e) {
-            await Navigation.PopAsync();
+            await Navigation.PushAsync(new Profile());
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using YallaParkingMobile.Model;
 
 namespace YallaParkingMobile {
     public partial class ConfirmExit : ContentPage {
@@ -14,8 +15,10 @@ namespace YallaParkingMobile {
         }        
 
         async void YallaButton_Clicked(object sender, EventArgs e) {
-            Analytics.TrackEvent("Yalla button clicked, exiting");
-            await Navigation.PopAsync();
+			var model = new BookingsModel();
+			var bookings = new Bookings(model);
+
+			await Navigation.PushAsync(bookings);
         }
     }
 }
