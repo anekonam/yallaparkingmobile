@@ -1,90 +1,56 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:YallaParkingMobile"
     x:Class="YallaParkingMobile.ConfirmExit"
     NavigationPage.HasNavigationBar="False">
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition
                 Height="*" />
             <RowDefinition
-                Height="*" />
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
             <RowDefinition
                 Height="*" />
-            <RowDefinition
-                Height="*" />
-            <RowDefinition
-                Height="*" />
-            <RowDefinition
-                Height="*" />
-            <RowDefinition
-                Height="*" />
-            <RowDefinition
-                Height="*" />
-            <RowDefinition
-                Height="*" />
-
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition
-                Width="*" />
-            <ColumnDefinition
-                Width="*" />
-            <ColumnDefinition
-                Width="*" />
-            <ColumnDefinition
-                Width="*" />
-        </Grid.ColumnDefinitions>
-
-
         <Image
+            Margin="40"
             Source="car.png"
-            Grid.Row="2"
-            Grid.Column="1"
-            Grid.ColumnSpan="2"
-            Grid.RowSpan="3"
+            Grid.Row="0"
+            VerticalOptions="Center"
             Aspect="AspectFit" />
-
         <ContentView
             Padding="0,40,0,0"
-            Grid.Row="5"
-            Grid.Column="0"
-            Grid.ColumnSpan="4">
+            Grid.Row="1">
             <Label
                 Style="{StaticResource Header}"
-                VerticalTextAlignment="Start"
+                VerticalTextAlignment="Center"
                 Text="Parking Complete" />
         </ContentView>
-
-        <Label            
-            Grid.Row="6"
-            Grid.Column="1"
-            Grid.ColumnSpan="2"
-            Text="Thank you for using Yalla Parking" />
-
-        <Label            
-            Grid.Row="7"
-            Grid.Column="1"
-            Grid.ColumnSpan="2"
-            Text="we hope to see you again soon" />
-
+        <StackLayout
+            Grid.Row="2">
+            <Label
+                Margin="40,20,40,20"
+                HorizontalTextAlignment="Center"
+                Text="Thank you for using YallaParking" />
+            <Label
+                Margin="40,10,40,0"
+                HorizontalTextAlignment="Center"
+                Text="We hope to see you again soon!" />
+        </StackLayout>
         <ContentView
-            Padding="0,0,20,20"
-            Grid.Row="8"
-            Grid.Column="3">
+            Padding="40"
+            Grid.Row="3">
             <Button
-                x:Name="Yalla"
+                x:Name="YallaButton"
                 Clicked="YallaButton_Clicked"
-                Style="{StaticResource GreenTextButton}"
+                Style="{StaticResource GreenButton}"
                 Text="Yalla"
-                HorizontalOptions="Start"
-                VerticalOptions="End"
-                TextColor="#5fd25f" />
+                HorizontalOptions="Fill"
+                VerticalOptions="End" />
         </ContentView>
-
     </Grid>
-
 </ContentPage>

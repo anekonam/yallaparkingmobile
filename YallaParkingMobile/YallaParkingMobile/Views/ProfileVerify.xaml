@@ -1,84 +1,52 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <ContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:YallaParkingMobile"
     x:Class="YallaParkingMobile.ProfileVerify"
     NavigationPage.HasNavigationBar="False">
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition
                 Height="*" />
             <RowDefinition
-                Height="*" />
+                Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
             <RowDefinition
                 Height="*" />
-            <RowDefinition
-                Height="*" />
-            <RowDefinition
-                Height="*" />
-            <RowDefinition
-                Height="*" />
-            <RowDefinition
-                Height="*" />
-            <RowDefinition
-                Height="*" />
-            <RowDefinition
-                Height="*" />
-
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition
-                Width="*" />
-            <ColumnDefinition
-                Width="*" />
-            <ColumnDefinition
-                Width="*" />
-            <ColumnDefinition
-                Width="*" />
-        </Grid.ColumnDefinitions>
-
-
         <Image
+            Margin="40"
             Source="verifiedIllustration.png"
-            Grid.Row="2"
-            Grid.Column="1"
-            Grid.ColumnSpan="2"
-            Grid.RowSpan="3"
+            Grid.Row="0"
+            VerticalOptions="Center"
             Aspect="AspectFit" />
-
         <ContentView
             Padding="0,40,0,0"
-            Grid.Row="5"
-            Grid.Column="0"
-            Grid.ColumnSpan="4">
+            Grid.Row="1">
             <Label
                 Style="{StaticResource Header}"
-                VerticalTextAlignment="Start"
-                Text="Verified" />
+                VerticalTextAlignment="Center"
+                Text="Parking Complete" />
         </ContentView>
-
-        <Label            
-            Grid.Row="6"
-            Grid.Column="1"
-            Grid.ColumnSpan="2"
-            Text="You are now a verified user you can start booking spaces!" />
-
+        <StackLayout
+            Grid.Row="2">
+            <Label
+                Margin="40,20,40,20"
+                HorizontalTextAlignment="Center"
+                Text="You are now a verified user you can start booking spaces!" />
+        </StackLayout>
         <ContentView
-            Padding="0,0,20,20"
-            Grid.Row="8"
-            Grid.Column="3">
+            Padding="40"
+            Grid.Row="3">
             <Button
-                x:Name="Done"
+                x:Name="DoneButton"
                 Clicked="DoneButton_Clicked"
-                Style="{StaticResource GreenTextButton}"
+                Style="{StaticResource GreenButton}"
                 Text="Done"
-                HorizontalOptions="Start"
-                VerticalOptions="End"
-                TextColor="#5fd25f" />
+                HorizontalOptions="Fill"
+                VerticalOptions="End" />
         </ContentView>
-
     </Grid>
-
 </ContentPage>
