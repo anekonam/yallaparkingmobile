@@ -6,7 +6,8 @@
     xmlns:control="clr-namespace:YallaParkingMobile.Control"
     x:Class="YallaParkingMobile.BookParking"
     Title="Details">
-    <Grid>
+    <Grid
+        RowSpacing="0">
         <Grid.RowDefinitions>
             <RowDefinition
                 Height="150" />
@@ -149,17 +150,14 @@
                 </TableSection>
             </TableRoot>
         </control:MenuTableView>
-        <ContentView
-            Padding="10"
-            Grid.Row="2">
-            <Button
-                x:Name="BookButton"
-                Style="{StaticResource GreenButton}"
-                IsVisible="{Binding CanBook}"
-                Text="{Binding BookText}"
-                Clicked="Book_Clicked"
-                HorizontalOptions="FillAndExpand"
-                VerticalOptions="Center" />
-        </ContentView>
+        <Button
+            x:Name="BookButton"
+            Style="{StaticResource GreenButton}"
+            IsVisible="{Binding CanBook}"
+            Text="{Binding BookText}"
+            Clicked="Book_Clicked"
+            HorizontalOptions="FillAndExpand"
+            Grid.Row="2"
+            VerticalOptions="Center" />
     </Grid>
 </ContentPage>

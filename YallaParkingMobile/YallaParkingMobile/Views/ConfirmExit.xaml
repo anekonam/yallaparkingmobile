@@ -17,7 +17,7 @@
                 Height="Auto" />
         </Grid.RowDefinitions>
         <Image
-            Margin="40"
+            Margin="80"
             Source="car.png"
             Grid.Row="0"
             VerticalOptions="Center"

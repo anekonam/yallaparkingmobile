@@ -7,7 +7,8 @@
     x:Class="YallaParkingMobile.BookingDetail"
     Appearing="Handle_Appearing"
     Title="Details">
-    <Grid>
+    <Grid
+        RowSpacing="0">
         <Grid.RowDefinitions>
             <RowDefinition
                 Height="125" />
@@ -137,7 +138,6 @@
             </TableRoot>
         </control:MenuTableView>
         <Grid
-            Padding="10"
             Grid.Row="2">
             <Button
                 x:Name="EntryButton"
