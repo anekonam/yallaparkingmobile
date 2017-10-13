@@ -10,7 +10,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition
-                Height="150" />
+                Height="125" />
             <RowDefinition
                 Height="*" />
             <RowDefinition
@@ -18,43 +18,65 @@
         </Grid.RowDefinitions>
         <Grid
             Grid.Row="0"
-            Padding="30">
+            ColumnSpacing="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition
-                    Width="0.3*" />
+                    Width="0.4*" />
                 <ColumnDefinition
-                    Width="0.7*" />
+                    Width="*" />
             </Grid.ColumnDefinitions>
-            <Image
-                Grid.Column="0"
-                Aspect="AspectFill"
-                Source="{Binding PropertyImage}">
-            </Image>
+            <StackLayout>
+                <Image
+                    Grid.Column="0"
+                    Margin="10,10,10,5"
+                    Aspect="AspectFill"
+                    Source="{Binding PropertyImage}">
+                </Image>
+                <Label
+                    FontSize="12"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center"
+                    Text="{Binding Number}" />
+            </StackLayout>
             <StackLayout
-                Padding="10,0,0,0"
                 Grid.Column="1">
-                <Label
-                    HorizontalTextAlignment="Start"
-                    Text="{Binding PropertyName}" />
-                <Label
-                    x:Name="PropertyArea"
-                    HorizontalTextAlignment="Start"
-                    FontSize="12"
-                    Text="{Binding PropertyPropertyArea}" />
-                <Label
-                    HorizontalTextAlignment="Start"
-                    FontSize="12"
-                    Text="Dubai, UAE" />
+                <StackLayout
+                    VerticalOptions="Center"
+                    Padding="0,20,0,0">
+                    <Label
+                        HorizontalTextAlignment="Start"
+                        TextColor="Black"
+                        Text="{Binding PropertyName}" />
+                    <Label
+                        x:Name="PropertyArea"
+                        HorizontalTextAlignment="Start"
+                        FontSize="12"
+                        Text="{Binding PropertyPropertyArea}" />
+                    <Label
+                        HorizontalTextAlignment="Start"
+                        FontSize="12"
+                        Text="Dubai, UAE" />
+                </StackLayout>
                 <ContentView
-                    Margin="0,10,0,0"
+                    Margin="0,5,0,0"
                     Padding="5"
-                    IsVisible="{Binding NotCompleted}"
+                    IsVisible="{Binding Pending}"
                     HorizontalOptions="EndAndExpand"
                     BackgroundColor="#ff8e30">
                     <Label
                         TextColor="White"
-                        FontSize="10"
-                        IsVisible="{Binding NotCompleted}"
+                        FontSize="12"
+                        Text="{Binding BookingTime}" />
+                </ContentView>
+                <ContentView
+                    Margin="0,10,0,0"
+                    Padding="5"
+                    IsVisible="{Binding Active}"
+                    HorizontalOptions="EndAndExpand"
+                    BackgroundColor="#ff8e30">
+                    <Label
+                        TextColor="White"
+                        FontSize="12"
                         Text="{Binding BookingTime}" />
                 </ContentView>
                 <ContentView
@@ -62,10 +84,10 @@
                     Padding="5"
                     IsVisible="{Binding Completed}"
                     HorizontalOptions="EndAndExpand"
-                    BackgroundColor="Green">
+                    BackgroundColor="#5FD25F">
                     <Label
                         TextColor="White"
-                        FontSize="10"
+                        FontSize="14"
                         Text="Completed" />
                 </ContentView>
             </StackLayout>

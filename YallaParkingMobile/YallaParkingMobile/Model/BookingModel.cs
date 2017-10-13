@@ -52,7 +52,16 @@ namespace YallaParkingMobile.Model {
 
         public string PropertyCity { get; set; }
 
-        public string Number { get; set; }
+        private string number;
+        public string Number {
+            get{
+                return string.Format("#{0}", number);
+            } set{
+                if(number!=value){
+                    number = value;
+                }
+            }
+        }
 
         public DateTime Start { get; set; }
 
@@ -71,12 +80,12 @@ namespace YallaParkingMobile.Model {
         public string Status{
             get{
                 if(this.EntryTime.HasValue && !this.ExitTime.HasValue){
-                    return "Active";
+                    return "1,Active";
                 } else if(this.EntryTime.HasValue && this.ExitTime.HasValue){
-                    return "Completed";
+                    return "3,Completed";
                 }
 
-                return "Pending";
+                return "2,Pending";
             }
         }
 
@@ -98,17 +107,25 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+		public bool Pending {
+			get {
+                return this.Status.Contains("Pending");
+			}
+		}
+
+		public bool Active {
+			get {
+                return this.Status.Contains("Active");
+			}
+		}
+
         public bool Completed{
             get{
-                return this.EntryTime.HasValue && this.ExitTime.HasValue;
+                return this.Status.Contains("Completed");
             }
         }
 
-		public bool NotCompleted {
-			get {
-                return !this.Completed;
-			}
-		}
+		
 
         public decimal Price { get; set; }
 

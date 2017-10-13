@@ -24,7 +24,8 @@
             DrawerLength="200"
             BackgroundColor="White">
             <telerikPrimitives:RadSideDrawer.MainContent>
-                <Grid>
+                <Grid
+                    RowSpacing="0">
                     <Grid.RowDefinitions>
                         <RowDefinition
                             Height="Auto" />

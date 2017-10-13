@@ -58,10 +58,10 @@
 	<string>Can we use your location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We are using your location</string>
-  <key>NSCameraUsageDescription</key>
-  <string>This app needs access to the camera to take photos</string>
-  <key>NSPhotoLibraryUsageDescription</key>
-  <string>This app needs access to photos</string>
+	<key>NSCameraUsageDescription</key>
+	<string>This app needs access to the camera to take photos</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app needs access to photos</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -71,5 +71,7 @@
 			</array>
 		</dict>
 	</array>
+	<key>CFBundleName</key>
+	<string>YallaParking</string>
 </dict>
 </plist>
