@@ -39,7 +39,7 @@ namespace YallaParkingMobile {
 
 			SearchDate.Date = DateTime.Now;
             SearchDate.MinimumDate = DateTime.Now;
-            SearchTime.Time = new TimeSpan(DateTime.Now.Hour+1, 0,0);
+            SearchTime.Time = TimeSpan.FromHours(DateTime.Now.Hour < 23 ? DateTime.Now.Hour + 1 : 0);
 
 
 			HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
@@ -78,24 +78,28 @@ namespace YallaParkingMobile {
 
             this.Map.Pins.Clear();
 
-            foreach(var property in properties) {
-                var pin = new Pin {
-                    BindingContext = property,
-                    Position = new Xamarin.Forms.Maps.Position(property.Latitude ?? 0.0, property.Longitude ?? 0.0),
-                    Label = string.Format("{0} (AED {1}/hr)", property.Name, property.ShortTermParkingPrice),
-                    Address = property.AreaName,
-                    Type = PinType.SearchResult,                    
-                };
+            if (properties != null) {
+                foreach (var property in properties) {
+                    var pin = new Pin {
+                        BindingContext = property,
+                        Position = new Xamarin.Forms.Maps.Position(property.Latitude ?? 0.0, property.Longitude ?? 0.0),
+                        Label = string.Format("{0} (AED {1}/hr)", property.Name, property.ShortTermParkingPrice),
+                        Address = property.AreaName,
+                        Type = PinType.SearchResult,
+                    };
 
-                pin.Clicked += Pin_Clicked;
+                    pin.Clicked += Pin_Clicked;
 
-                this.Map.Pins.Add(pin);
+                    this.Map.Pins.Add(pin);
+                }
             }
 
 			var geocoder = new Geocoder();
 			var positions = await geocoder.GetPositionsForAddressAsync(query + ", Dubai");
 
-			if (positions.Any()) {
+            if(!string.IsNullOrWhiteSpace(query) && this.Map.Pins!=null && this.Map.Pins.Any(p => p.Label.Contains(query))){
+                Map.MoveToRegion(MapSpan.FromCenterAndRadius(this.Map.Pins.First(p => p.Label.Contains(query)).Position, Distance.FromMiles(1)));
+            } else if (positions.Any()) {
 				Map.MoveToRegion(MapSpan.FromCenterAndRadius(positions.First(), Distance.FromMiles(1)));
 			}
 

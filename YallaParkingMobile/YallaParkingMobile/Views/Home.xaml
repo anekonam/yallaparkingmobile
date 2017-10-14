@@ -53,7 +53,7 @@
                             Orientation="Horizontal">
                             <DatePicker
                                 x:Name="SearchDate"
-                                Format="dd-MMM-yyyy"
+                                Format="ddddd dd MMM"
                                 TextColor="#ff8e30"
                                 DateSelected="DatePicker_DateSelected"
                                 HorizontalOptions="FillAndExpand">
