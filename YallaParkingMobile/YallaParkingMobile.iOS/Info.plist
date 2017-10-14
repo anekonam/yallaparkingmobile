@@ -32,8 +32,12 @@
 	<true/>
 	<key>XSLaunchImageAssets</key>
 	<string>Resources/Media.xcassets/LaunchImages.launchimage</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>We are using your location</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>We are using your location</string>
 	<key>NSLocationUsageDescription</key>
-	<string>Can we use your location</string>
+	<string>This permission is required for this application</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>We are using your location</string>
 	<key>NSCameraUsageDescription</key>
