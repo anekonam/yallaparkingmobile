@@ -34,8 +34,6 @@
 	<true/>
 	<key>XSLaunchImageAssets</key>
 	<string>Resources/Media.xcassets/LaunchImages.launchimage</string>
-	<key>XSAppIconAssets</key>
-	<string>Resources/Media.xcassets/AppIcon.appiconset</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Can we use your location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
@@ -55,5 +53,7 @@
 	</array>
 	<key>CFBundleName</key>
 	<string>YallaParking</string>
+	<key>XSAppIconAssets</key>
+	<string>Resources/Media.xcassets/AppIcon.appiconset</string>
 </dict>
 </plist>
