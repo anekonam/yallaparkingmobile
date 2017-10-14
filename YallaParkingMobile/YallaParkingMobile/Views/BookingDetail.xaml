@@ -97,7 +97,8 @@
             x:Name="OrderSummary"
             Intent="Settings"
             Grid.Row="1">
-            <TableRoot>
+            <TableRoot
+                x:Name="TableView">
                 <TableSection
                     x:Name="Order"
                     Title="Order Summary">
@@ -126,6 +127,36 @@
                         LabelColor="Black"
                         Text="{Binding TotalPrice, StringFormat='AED {0:n2}'}">
                     </EntryCell>
+                </TableSection>
+                <TableSection
+                    x:Name="ValidateParking"
+                    Title="Validate Parking">
+                    <ViewCell>
+                        <Grid>
+                            <Button
+                                x:Name="ValidateButton"
+                                IsVisible="{Binding CanValidate}"
+                                Style="{StaticResource GreyTextButton}"
+                                Text="Scan QR Code to Validate Your Parking"
+                                FontSize="13"
+                                Clicked="Validate_Clicked"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="Center" />
+                            <StackLayout
+                                Orientation="Horizontal"
+                                IsVisible="{Binding Validated}">
+                                <Image
+                                    Source="validated.png"
+                                    VerticalOptions="Center"
+                                    Aspect="AspectFit" />
+                                <Label
+                                    Margin="5,0,0,0"
+                                    TextColor="#5fd25f"
+                                    VerticalOptions="Center"
+                                    Text="Your parking has been validated" />
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
                 </TableSection>
                 <TableSection
                     Title="Vehicle">

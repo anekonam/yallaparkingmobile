@@ -6,6 +6,10 @@ namespace YallaParkingMobile.Model {
 
         public int PropertyParkingId { get; set; }
 
+        public int? ValidatorUserId { get; set; }
+
+        public int[] ValidatorUserIds { get; set; }
+
         public int UserCarId { get; set; }
 
 		public ImageSource UserCarImage {
@@ -86,6 +90,24 @@ namespace YallaParkingMobile.Model {
                 }
 
                 return "2,Pending";
+            }
+        }
+
+        public bool Validated{
+            get{
+                return this.ValidatorUserId.HasValue;
+            }
+        }
+
+        public bool Discounted{
+            get{
+                return this.Discount.HasValue && this.Discount.Value > 0 && !this.ValidatorUserId.HasValue;
+            }
+        }
+
+        public bool CanValidate{
+            get{
+                return !this.ValidatorUserId.HasValue && (!this.Discount.HasValue || this.Discount.Value == 0);
             }
         }
 

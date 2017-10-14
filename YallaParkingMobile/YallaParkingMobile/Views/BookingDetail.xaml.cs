@@ -39,6 +39,12 @@ namespace YallaParkingMobile {
 
         public async Task RefreshBooking(){
             this.Model = await ServiceUtility.GetBooking(this.Model.PropertyParkingId);
+
+            if (this.Model.Discounted || !this.Model.Active) {
+				if (this.TableView.Contains(this.ValidateParking)) {
+					this.TableView.Remove(this.ValidateParking);
+				}
+            }
         }
 
 		private async void ScanEntry_Clicked(object sender, EventArgs e) {
@@ -99,5 +105,37 @@ namespace YallaParkingMobile {
 			// Navigate to our scanner page
 			await Navigation.PushAsync(scanPage);
 		}
+
+        private async void Validate_Clicked(object sender, System.EventArgs e) {
+			var scanPage = new ZXingScannerPage();
+			bool scanFinished = false;
+
+			scanPage.OnScanResult += (result) => {
+				// Stop scanning
+				scanPage.IsScanning = false;
+
+				// Pop the page and show the result
+				Device.BeginInvokeOnMainThread(async () => {
+					if (!scanFinished) {
+						scanFinished = true;
+
+                        var validatorUserId = Model.ValidatorUserIds.Any(u => u.ToString() == result.Text) ?
+                                                   Model.ValidatorUserIds.First(u => u.ToString() == result.Text) : (int?)null;                                  
+
+                        if (validatorUserId.HasValue) {
+                            await ServiceUtility.Validate(Model.PropertyParkingId, validatorUserId.Value);
+							await this.RefreshBooking();
+							await Navigation.PopAsync();
+						} else {
+							await DisplayAlert("Invalid Scan", "The QR code scanned does not match a validator for this booking", "Ok");
+							await Navigation.PopAsync();
+						}
+					}
+				});
+			};
+
+			// Navigate to our scanner page
+			await Navigation.PushAsync(scanPage);
+        }
     }
 }

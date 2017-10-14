@@ -224,6 +224,7 @@
     <BundleResource Include="Resources\MasterCard-logo.png" />
     <BundleResource Include="Resources\Icon-Notification%403x.png" />
     <BundleResource Include="Resources\Icon%402x.png" />
+    <BundleResource Include="Resources\validated.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -151,11 +151,11 @@ namespace YallaParkingMobile {
 
                     if (this.Model != null) {
                         this.Model.EmiratesId = Convert.ToBase64String(stream.ToArray());
-                        await ServiceUtility.UpdateProfile(this.Model);
+                        await ServiceUtility.UpdateProfile(this.Model);                        
+                        await Navigation.PushAsync(new ProfileVerify());
                     }
                 }
 
-                await Navigation.PushAsync(new ProfileVerify());
             } 
         }
 

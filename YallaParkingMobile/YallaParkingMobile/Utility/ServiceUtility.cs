@@ -364,6 +364,28 @@ namespace YallaParkingMobile.Utility {
 			return false;
 		}
 
+		public static async Task<bool> Validate(int propertyParkingId, int userId) {
+			InitHttpClient();
+
+			try {
+				var model = new {
+                    PropertyParkingId = propertyParkingId,
+                    UserId = userId
+				};
+
+				var response = await client.PostAsync("/api/parking/validate", model.AsJson());
+
+				if (response.IsSuccessStatusCode) {
+					return true;
+				}
+			} catch {
+				return false;
+			}
+
+			return false;
+		}
+
+
 		public static async Task<List<BookingModel>> GetBookings() {
 			InitHttpClient();
 
