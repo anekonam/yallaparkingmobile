@@ -38,8 +38,12 @@ namespace YallaParkingMobile {
 			CrossGeolocator.Current.PositionChanged += Current_PositionChanged;
 
 			SearchDate.Date = DateTime.Now;
+            SearchDate.MinimumDate = DateTime.Now;
+            SearchTime.Time = new TimeSpan(DateTime.Now.Hour+1, 0,0);
+
 
 			HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
+
         }
 
         public HomeModel Model{
@@ -56,11 +60,18 @@ namespace YallaParkingMobile {
 		}
 
         async Task LoadData(string query = null) {
-            BusyIndicator.IsBusy = true;
+           var startDate = this.SearchDate.Date.Add(this.SearchTime.Time);
 
-            var search = new SearchModel {
+            if(startDate < DateTime.Now){
+                await DisplayAlert("Invalid Time", "You cannot select a time in the past for booking", "Ok");
+                return;
+            }
+
+			BusyIndicator.IsBusy = true;
+
+			var search = new SearchModel {
                 Name = query,
-                StartDate = this.SearchDate.Date.Add(this.SearchTime.Time),
+                StartDate = startDate,
                 Hours = (int)this.HoursSlider.Value
             };
 
@@ -86,7 +97,11 @@ namespace YallaParkingMobile {
                 Map.MoveToRegion(MapSpan.FromCenterAndRadius(this.Map.Pins.First().Position, Distance.FromMiles(1)));
             }
 
-            BusyIndicator.IsBusy = false;           
+            BusyIndicator.IsBusy = false;
+
+            if(!Map.IsVisible){
+                Map.IsVisible = true;
+            }
         }
 
         private async void Pin_Clicked(object sender, EventArgs e) {
@@ -229,7 +244,7 @@ namespace YallaParkingMobile {
         }
 
         async void DatePicker_DateSelected(object sender, DateChangedEventArgs e) {
-            await LoadData();
+            await LoadData(this.Search.Text);
         }
 
     }

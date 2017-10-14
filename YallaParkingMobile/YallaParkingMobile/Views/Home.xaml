@@ -58,7 +58,6 @@
                             </DatePicker>
                             <TimePicker
                                 x:Name="SearchTime"
-                                Time="10:00"
                                 TextColor="#ff8e30"
                                 HorizontalOptions="FillAndExpand" />
                         </StackLayout>
@@ -92,9 +91,10 @@
                         </telerikPrimitives:RadBusyIndicator.BusyContent>
                         <telerikPrimitives:RadBusyIndicator.Content>
                             <maps:Map
+                                x:Name="Map"
                                 WidthRequest="320"
                                 HeightRequest="200"
-                                x:Name="Map"
+                                IsVisible="false"
                                 IsShowingUser="true"
                                 VerticalOptions="FillAndExpand"
                                 MapType="Street" />
