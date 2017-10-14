@@ -61,10 +61,15 @@ namespace YallaParkingMobile {
 						scanFinished = true;
 
                         if(result.Text == Model.PropertyId.ToString()){
-                            await ServiceUtility.Entry(Model.PropertyId);
-							await this.RefreshBooking();
-                            await DisplayAlert("Valid Scan", "Your scan has been validated for entry to your parking space", "Ok");
-                            await Navigation.PopAsync();
+                            var entry = await ServiceUtility.Entry(Model.PropertyId);
+
+                            if (entry) {
+                                await this.RefreshBooking();
+                                await DisplayAlert("Valid Scan", "Your scan has been validated for entry to your parking space", "Ok");
+                                await Navigation.PopAsync();
+                            } else{
+								await DisplayAlert("Entry Error", "There was an error entering the parking space, please try again", "Ok");
+                            }
                         } else{
                             await DisplayAlert("Invalid Scan", "The QR code scanned does not match the property for this booking", "Ok");
                             await Navigation.PopAsync();
@@ -91,9 +96,14 @@ namespace YallaParkingMobile {
 						scanFinished = true;
 
 						if (result.Text == Model.PropertyId.ToString()) {
-							await ServiceUtility.Exit(Model.PropertyId);
-                            await this.RefreshBooking();
-                            await Navigation.PushAsync(new ConfirmExit());
+							var exit = await ServiceUtility.Exit(Model.PropertyId);
+
+                            if (exit) {
+                                await this.RefreshBooking();
+                                await Navigation.PushAsync(new ConfirmExit());
+                            } else{
+                                await DisplayAlert("Exit Error", "There was an error leaving the parking space, please try again", "Ok");
+                            }
 						} else {
 							await DisplayAlert("Invalid Scan", "The QR code scanned does not match the property for this booking", "Ok");
 							await Navigation.PopAsync();
@@ -123,9 +133,14 @@ namespace YallaParkingMobile {
                                                    Model.ValidatorUserIds.First(u => u.ToString() == result.Text) : (int?)null;                                  
 
                         if (validatorUserId.HasValue) {
-                            await ServiceUtility.Validate(Model.PropertyParkingId, validatorUserId.Value);
-							await this.RefreshBooking();
-							await Navigation.PopAsync();
+                            var validated = await ServiceUtility.Validate(Model.PropertyParkingId, validatorUserId.Value);
+
+                            if (validated) {
+                                await this.RefreshBooking();
+                                await Navigation.PopAsync();
+                            } else{
+								await DisplayAlert("Validate Error", "There was an error validating your parking, please try again", "Ok");
+                            }
 						} else {
 							await DisplayAlert("Invalid Scan", "The QR code scanned does not match a validator for this booking", "Ok");
 							await Navigation.PopAsync();
