@@ -5,6 +5,7 @@
     xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
     xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
     xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+    xmlns:control="clr-namespace:YallaParkingMobile.Control;assembly=YallaParkingMobile"
     x:Class="YallaParkingMobile.Home"
     Title="Find Parking"
     Appearing="Handle_Appearing"
@@ -42,6 +43,7 @@
                             BackgroundColor="White"                           
                             CompletionMode="StartsWith"
                             TextColor="#ff8e30"
+                            FilteredItemsChanged="Handle_FilteredItemsChanged"
                             SuggestionItemSelected="Search_SuggestionItemSelected"
                             Watermark="Search for parking by area or building..." />
                         <StackLayout

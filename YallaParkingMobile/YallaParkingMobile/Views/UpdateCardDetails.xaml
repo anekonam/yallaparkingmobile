@@ -35,6 +35,7 @@
                 <EntryCell
                     LabelColor="#a1a1b4"
                     Label="Card Number"
+                    Keyboard="Numeric"
                     HorizontalTextAlignment="End"
                     Text="{Binding Number, Mode=TwoWay}" />
                 <control:PickerCell
@@ -48,6 +49,7 @@
                 <EntryCell
                     LabelColor="#a1a1b4"
                     Label="CVC"
+                    Keyboard="Numeric"
                     HorizontalTextAlignment="End"
                     Text="{Binding Cvc, Mode=TwoWay}" />
             </TableSection>

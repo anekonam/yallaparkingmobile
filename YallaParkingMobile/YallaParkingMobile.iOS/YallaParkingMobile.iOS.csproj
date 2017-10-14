@@ -221,7 +221,7 @@
     <BundleResource Include="Resources\bookingConfirmed.png" />
     <BundleResource Include="Resources\verifiedIllustration.png" />
     <BundleResource Include="Resources\Visa-logo.png" />
-    <BundleResource Include="Resources\Mastercard-logo.png" />
+    <BundleResource Include="Resources\MasterCard-logo.png" />
     <BundleResource Include="Resources\Icon-Notification%403x.png" />
     <BundleResource Include="Resources\Icon%402x.png" />
   </ItemGroup>

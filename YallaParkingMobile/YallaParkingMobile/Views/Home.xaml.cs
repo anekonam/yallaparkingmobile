@@ -59,13 +59,12 @@ namespace YallaParkingMobile {
             await LoadData();
 		}
 
+        async void Handle_FilteredItemsChanged(object sender, Telerik.XamarinForms.Input.AutoComplete.FilteredItemsChangedEventArgs e) {
+            await LoadData(this.Search.Text);
+        }
+
         async Task LoadData(string query = null) {
            var startDate = this.SearchDate.Date.Add(this.SearchTime.Time);
-
-            if(startDate < DateTime.Now){
-                await DisplayAlert("Invalid Time", "You cannot select a time in the past for booking", "Ok");
-                return;
-            }
 
 			BusyIndicator.IsBusy = true;
 
@@ -93,9 +92,12 @@ namespace YallaParkingMobile {
                 this.Map.Pins.Add(pin);
             }
 
-            if (this.Map.Pins.Any()) {                
-                Map.MoveToRegion(MapSpan.FromCenterAndRadius(this.Map.Pins.First().Position, Distance.FromMiles(1)));
-            }
+			var geocoder = new Geocoder();
+			var positions = await geocoder.GetPositionsForAddressAsync(query + ", Dubai");
+
+			if (positions.Any()) {
+				Map.MoveToRegion(MapSpan.FromCenterAndRadius(positions.First(), Distance.FromMiles(1)));
+			}
 
             BusyIndicator.IsBusy = false;
 
@@ -122,6 +124,7 @@ namespace YallaParkingMobile {
 
         async void Search_SuggestionItemSelected(object sender, Telerik.XamarinForms.Input.AutoComplete.SuggestionItemSelectedEventArgs e) {
             var address = e.DataItem.ToString();
+            this.Search.Text = address;
             await LoadData(address);                        
         }
 
