@@ -47,6 +47,8 @@ namespace YallaParkingMobile {
 
 			SearchDate.Date = DateTime.Now;
             SearchDate.MinimumDate = DateTime.Now;
+
+            HoursSlider.Maximum = (int)Math.Ceiling((DateTime.Now.Date.AddDays(1) - DateTime.Now).TotalHours);
             SearchTime.Time = TimeSpan.FromHours(DateTime.Now.Hour < 23 ? DateTime.Now.Hour + 1 : 0);
 
 			HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
@@ -253,7 +255,11 @@ namespace YallaParkingMobile {
 
             HoursSlider.Value = newStep * 1.0;
 
-            Hours.Text = string.Format("{0} hours", HoursSlider.Value);
+            if ((int)HoursSlider.Value == (int)HoursSlider.Maximum) {
+                Hours.Text = "All Day";
+            } else {
+                Hours.Text = string.Format("{0} hours", HoursSlider.Value);
+            }
         }
 
         async void DatePicker_DateSelected(object sender, DateChangedEventArgs e) {

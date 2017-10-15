@@ -140,6 +140,7 @@
                                                 <Label
                                                     Grid.Row="1"
                                                     FontSize="12"
+                                                    Margin="0,5,0,0"
                                                     VerticalOptions="Start"
                                                     HorizontalOptions="Center"
                                                     Text="{Binding Number}" />
@@ -161,14 +162,13 @@
                                                     Grid.Column="1"
                                                     Grid.ColumnSpan="2"
                                                     Padding="8"
-                                                    Margin="10,0,0,0"
                                                     IsVisible="{Binding Active}"
                                                     BackgroundColor="#ff8e30">
                                                     <Label
                                                         TextColor="White"
                                                         FontSize="13"
                                                         HorizontalTextAlignment="Start"
-                                                        Text="{Binding BookingTime}" />
+                                                        Text="{Binding RemainingTime}" />
                                                 </ContentView>
                                                 <ContentView
                                                     Grid.Row="1"

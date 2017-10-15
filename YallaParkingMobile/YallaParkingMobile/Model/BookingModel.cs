@@ -71,6 +71,19 @@ namespace YallaParkingMobile.Model {
 
         public DateTime End { get; set; }
 
+        public string RemainingTime{
+            get{
+                if(this.End > DateTime.Now){
+                    var timeSpan = this.End - DateTime.Now;
+                    var hours = int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", ""));
+                    var minutes = int.Parse(new DateTime(timeSpan.Ticks).ToString("mm"));
+                    return string.Format("{0} {1} {2} {3} left", hours, hours > 1 ? "hrs" : "hr", minutes, minutes > 1 ? "mins" : "min");
+                }
+
+                return "Ended";
+            }
+        }
+
 		public string BookingTime {
 			get {
 				return string.Format("{0} to {1}", this.Start.ToString("dd-MMM-yy HH:mm"), this.End.ToString("dd-MMM-yy HH:mm"));
