@@ -112,6 +112,7 @@
                                 Width="*" />
                         </Grid.ColumnDefinitions>
                         <Button
+                            x:Name="ParkNowButton"
                             Grid.Column="0"
                             Style="{StaticResource GreenButton}"
                             Text="Park Now"
@@ -124,6 +125,7 @@
                             HorizontalOptions="FillAndExpand"
                             VerticalOptions="Center" />
                         <Button
+                            x:Name="ParkLaterButton"
                             Grid.Column="1"
                             Style="{StaticResource GreenButton}"
                             Text="Park Later"
@@ -131,6 +133,7 @@
                             Margin="0"
                             HeightRequest="60"
                             FontSize="20"
+                            BackgroundColor="#ff8e30"
                             Clicked="ParkLater_Clicked"
                             HorizontalOptions="FillAndExpand"
                             VerticalOptions="Center" />

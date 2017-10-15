@@ -143,7 +143,9 @@
                                 HorizontalOptions="FillAndExpand"
                                 VerticalOptions="Center" />
                             <StackLayout
+                                Padding="12,8,8,8"
                                 Orientation="Horizontal"
+                                VerticalOptions="Center"
                                 IsVisible="{Binding Validated}">
                                 <Image
                                     Source="validated.png"

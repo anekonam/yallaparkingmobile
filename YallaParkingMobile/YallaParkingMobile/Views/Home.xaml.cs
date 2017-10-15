@@ -29,6 +29,14 @@ namespace YallaParkingMobile {
 
             InitializeComponent();
 
+			if (this.Model.ParkNow) {
+				this.Title = "Find Parking Now";
+				this.ParkLaterButton.Opacity = 0.8;
+			} else {
+				this.Title = "Find Parking Later";
+				this.ParkNowButton.Opacity = 0.8;
+			}
+
 			Analytics.TrackEvent("Viewing Home Page");
 
 			PropertyUtility.SetValue("LoggedIn", "true");
@@ -41,9 +49,7 @@ namespace YallaParkingMobile {
             SearchDate.MinimumDate = DateTime.Now;
             SearchTime.Time = TimeSpan.FromHours(DateTime.Now.Hour < 23 ? DateTime.Now.Hour + 1 : 0);
 
-
 			HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
-
         }
 
         public HomeModel Model{
@@ -54,7 +60,7 @@ namespace YallaParkingMobile {
             }
         }
 
-		async void Handle_Appearing(object sender, System.EventArgs e) {
+		async void Handle_Appearing(object sender, System.EventArgs e) {			
             this.Search.ItemsSource = await ServiceUtility.PropertyAreas();
             await LoadData();
 		}

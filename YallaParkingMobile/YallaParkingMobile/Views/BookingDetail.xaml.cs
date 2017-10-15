@@ -44,6 +44,10 @@ namespace YallaParkingMobile {
 				if (this.TableView.Contains(this.ValidateParking)) {
 					this.TableView.Remove(this.ValidateParking);
 				}
+            } else{
+				if (!this.TableView.Contains(this.ValidateParking)) {
+                    this.TableView.Insert(1, this.ValidateParking);
+				}
             }
         }
 
