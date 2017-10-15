@@ -125,7 +125,7 @@
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
                         LabelColor="Black"
-                        Text="{Binding TotalPrice, StringFormat='AED {0:n2}'}">
+                        Text="{Binding Total, StringFormat='AED {0:n2}'}">
                     </EntryCell>
                 </TableSection>
                 <TableSection

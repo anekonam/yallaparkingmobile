@@ -12,15 +12,15 @@ namespace YallaParkingMobile.Model {
 
         public int UserCarId { get; set; }
 
-		public ImageSource UserCarImage {
-			get {
+        public ImageSource UserCarImage {
+            get {
                 if (!string.IsNullOrWhiteSpace(this.UserCarMake)) {
-					return ImageSource.FromFile(string.Format("{0}-logo.png", this.UserCarMake.Replace(" ", "-")));
-				}
+                    return ImageSource.FromFile(string.Format("{0}-logo.png", this.UserCarMake.Replace(" ", "-")));
+                }
 
-				return null;
-			}
-		}
+                return null;
+            }
+        }
 
         public string UserCarMake { get; set; }
 
@@ -30,22 +30,22 @@ namespace YallaParkingMobile.Model {
 
         public string UserCarRegistrationNumber { get; set; }
 
-		public string UserCarMakeAndModel {
-			get {
-				return string.Format("{0} {1}", this.UserCarMake, this.UserCarModelNumber);
-			}
-		}
+        public string UserCarMakeAndModel {
+            get {
+                return string.Format("{0} {1}", this.UserCarMake, this.UserCarModelNumber);
+            }
+        }
 
-		public string UserCarRegAndColor {
-			get {
-				return string.Format("{0} {1}", this.UserCarColor, this.UserCarRegistrationNumber);
-			}
-		}
+        public string UserCarRegAndColor {
+            get {
+                return string.Format("{0} {1}", this.UserCarColor, this.UserCarRegistrationNumber);
+            }
+        }
 
         public int PropertyId { get; set; }
 
         public ImageSource PropertyImage {
-            get{
+            get {
                 return ImageSource.FromUri(new Uri("http://yallaparking-new.insiso.co.uk/property/image/" + this.PropertyId.ToString()));
             }
         }
@@ -58,10 +58,11 @@ namespace YallaParkingMobile.Model {
 
         private string number;
         public string Number {
-            get{
+            get {
                 return string.Format("#{0}", number);
-            } set{
-                if(number!=value){
+            }
+            set {
+                if (number != value) {
                     number = value;
                 }
             }
@@ -71,11 +72,11 @@ namespace YallaParkingMobile.Model {
 
         public DateTime End { get; set; }
 
-        public string RemainingTime{
-            get{
-                if(this.End > DateTime.Now){
+        public string RemainingTime {
+            get {
+                if (this.End > DateTime.Now) {
                     var timeSpan = this.End - DateTime.Now;
-                    var hours = timeSpan.TotalHours >=1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", "")) : 0;
+                    var hours = timeSpan.TotalHours >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", "")) : 0;
                     var minutes = timeSpan.TotalMinutes >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("mm")) : 0;
                     return string.Format("{0} {1} {2} {3} left", hours, hours == 1 ? "hr" : "hrs", minutes, minutes == 1 ? "min" : "mins");
                 }
@@ -84,21 +85,21 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-		public string BookingTime {
-			get {
-				return string.Format("{0} to {1}", this.Start.ToString("dd-MMM-yy HH:mm"), this.End.ToString("dd-MMM-yy HH:mm"));
-			}
-		}
+        public string BookingTime {
+            get {
+                return string.Format("{0} to {1}", this.Start.ToString("dd-MMM-yy HH:mm"), this.End.ToString("dd-MMM-yy HH:mm"));
+            }
+        }
 
         public DateTime? EntryTime { get; set; }
 
         public DateTime? ExitTime { get; set; }
 
-        public string Status{
-            get{
-                if(this.EntryTime.HasValue && !this.ExitTime.HasValue){
+        public string Status {
+            get {
+                if (this.EntryTime.HasValue && !this.ExitTime.HasValue) {
                     return "1,Active";
-                } else if(this.EntryTime.HasValue && this.ExitTime.HasValue){
+                } else if (this.EntryTime.HasValue && this.ExitTime.HasValue) {
                     return "3,Completed";
                 }
 
@@ -106,74 +107,86 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-        public bool Validated{
-            get{
+        public bool Validated {
+            get {
                 return this.ValidatorUserId.HasValue;
             }
         }
 
-        public bool Discounted{
-            get{
+        public bool Discounted {
+            get {
                 return this.Discount.HasValue && this.Discount.Value > 0 && !this.ValidatorUserId.HasValue;
             }
         }
 
-        public bool CanValidate{
-            get{
+        public bool CanValidate {
+            get {
                 return !this.ValidatorUserId.HasValue && (!this.Discount.HasValue || this.Discount.Value == 0);
             }
         }
 
-        public bool CanEnter{
-            get{
+        public bool CanEnter {
+            get {
                 return !this.EntryTime.HasValue;
             }
         }
 
-        public bool CanExit{
-            get{
+        public bool CanExit {
+            get {
                 return this.EntryTime.HasValue && !this.ExitTime.HasValue;
             }
         }
 
-        public bool CanCancel{
-            get{
+        public bool CanCancel {
+            get {
                 return !this.EntryTime.HasValue && !this.ExitTime.HasValue;
             }
         }
 
-		public bool Pending {
-			get {
+        public bool Pending {
+            get {
                 return this.Status.Contains("Pending");
-			}
-		}
+            }
+        }
 
-		public bool Active {
-			get {
+        public bool Active {
+            get {
                 return this.Status.Contains("Active");
-			}
-		}
+            }
+        }
 
-        public bool Completed{
-            get{
+        public bool Completed {
+            get {
                 return this.Status.Contains("Completed");
             }
         }
 
-		
+
 
         public decimal Price { get; set; }
 
         public decimal? Discount { get; set; }
 
-        public decimal DiscountValue{
-            get{
+        public decimal DiscountValue {
+            get {
                 return this.Discount.HasValue && this.Hours.HasValue ? (decimal)this.Hours.Value * this.Price * (this.Discount.Value / 100) : 0;
             }
         }
 
         public double? Hours { get; set; }
 
+        public decimal? EstimatedTotalPrice {
+            get {
+                return this.Hours.HasValue ? this.Price * (decimal)this.Hours.Value : 0.0M;
+            }
+        }
+
         public decimal? TotalPrice { get; set; }
+
+        public decimal? Total{
+            get{
+                return this.Completed ? this.TotalPrice : this.EstimatedTotalPrice;
+            }
+        }
     }
 }

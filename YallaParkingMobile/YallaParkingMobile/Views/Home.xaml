@@ -41,8 +41,8 @@
                         <telerikInput:RadAutoComplete
                             x:Name="Search"
                             BackgroundColor="White"                           
-                            CompletionMode="StartsWith"
-                            TextColor="#ff8e30"
+                            CompletionMode="Contains"
+                            TextColor="#ff8e30"                     
                             FilteredItemsChanged="Handle_FilteredItemsChanged"
                             SuggestionItemSelected="Search_SuggestionItemSelected"
                             Watermark="Search for parking by area or building..." />

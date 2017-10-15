@@ -14,6 +14,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using YallaParkingMobile.Model;
 using YallaParkingMobile.Utility;
+using Telerik.XamarinForms.Input.AutoComplete;
 
 namespace YallaParkingMobile {
     public partial class Home : ContentPage {
@@ -67,7 +68,8 @@ namespace YallaParkingMobile {
             await LoadData();
 		}
 
-        async void Handle_FilteredItemsChanged(object sender, Telerik.XamarinForms.Input.AutoComplete.FilteredItemsChangedEventArgs e) {
+        async void Handle_FilteredItemsChanged(object sender, Telerik.XamarinForms.Input.AutoComplete.FilteredItemsChangedEventArgs e) { 
+            
             await LoadData(this.Search.Text);
         }
 
