@@ -37,7 +37,7 @@
                             <ImageCell
                                 ImageSource="{Binding Image}"
                                 Text="{Binding Name}"
-                                Detail="{Binding EncodedNumber}">
+                                Detail="{Binding EncodedCardNumber}">
                                 <ImageCell.ContextActions>
                                     <MenuItem
                                         x:Name="CardDelete"
