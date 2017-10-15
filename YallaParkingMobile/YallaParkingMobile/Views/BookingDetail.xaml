@@ -119,7 +119,7 @@
                         LabelColor="#a1a1b4"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
-                        Text="{Binding Discount, StringFormat='(AED {0:n2})'}" />
+                        Text="{Binding DiscountValue, StringFormat='(AED {0:n2})'}" />
                     <EntryCell
                         Label="Total"
                         HorizontalTextAlignment="End"

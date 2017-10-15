@@ -75,9 +75,9 @@ namespace YallaParkingMobile.Model {
             get{
                 if(this.End > DateTime.Now){
                     var timeSpan = this.End - DateTime.Now;
-                    var hours = int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", ""));
-                    var minutes = int.Parse(new DateTime(timeSpan.Ticks).ToString("mm"));
-                    return string.Format("{0} {1} {2} {3} left", hours, hours > 1 ? "hrs" : "hr", minutes, minutes > 1 ? "mins" : "min");
+                    var hours = timeSpan.TotalHours >=1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", "")) : 0;
+                    var minutes = timeSpan.TotalMinutes >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("mm")) : 0;
+                    return string.Format("{0} {1} {2} {3} left", hours, hours == 1 ? "hr" : "hrs", minutes, minutes == 1 ? "min" : "mins");
                 }
 
                 return "Ended";
@@ -165,6 +165,12 @@ namespace YallaParkingMobile.Model {
         public decimal Price { get; set; }
 
         public decimal? Discount { get; set; }
+
+        public decimal DiscountValue{
+            get{
+                return this.Discount.HasValue && this.Hours.HasValue ? (decimal)this.Hours.Value * this.Price * (this.Discount.Value / 100) : 0;
+            }
+        }
 
         public double? Hours { get; set; }
 
