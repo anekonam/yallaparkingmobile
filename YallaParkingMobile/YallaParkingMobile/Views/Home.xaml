@@ -18,12 +18,12 @@
             <telerikPrimitives:RadSideDrawer.MainContent>
                 <Grid
                     RowSpacing="0">
-                    <Grid.RowDefinitions>                       
+                    <Grid.RowDefinitions>
                         <RowDefinition
                             Height="*" />
                         <RowDefinition
                             Height="Auto" />
-                    </Grid.RowDefinitions>                  
+                    </Grid.RowDefinitions>
                     <telerikPrimitives:RadBusyIndicator
                         x:Name="BusyIndicator"
                         AnimationContentHeightRequest="50"
@@ -42,76 +42,101 @@
                                 IsVisible="false"
                                 IsShowingUser="true"
                                 VerticalOptions="FillAndExpand"
-                                MapType="Street" />                             
+                                MapType="Street" />
                         </telerikPrimitives:RadBusyIndicator.Content>
                     </telerikPrimitives:RadBusyIndicator>
-                     <StackLayout
-                        Margin="10"
-                        BackgroundColor="White"
-                        VerticalOptions="Start"
+                    <Frame
+                        Margin="15,30,15,0"
                         Padding="4"
-                        Grid.Row="0">
-                        <Grid>
+                        CornerRadius="8"
+                        VerticalOptions="Start"
+                        BackgroundColor="White">
+                        <Grid
+                            RowSpacing="0"
+                            ColumnSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+                                    Height="Auto" />
+                                <RowDefinition
+                                    Height="2" />
+                                <RowDefinition
+                                    Height="Auto" />
+                                <RowDefinition
+                                    Height="Auto" />
+                            </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition
                                     Width="40" />
+                                <ColumnDefinition
+                                    Width="2" />
                                 <ColumnDefinition
                                     Width="*" />
                             </Grid.ColumnDefinitions>
                             <Button
                                 Image="hamburgerMenu.png"
                                 BackgroundColor="White"
-                                BorderColor="#ff8e30"
-                                VerticalOptions="Center"
-                                HorizontalOptions="Center"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand"
                                 Clicked="Button_Clicked"
                                 Style="{StaticResource GreenButton}" />
+                            <BoxView
+                                Grid.Column="1"
+                                BackgroundColor="#fefefe" />
                             <telerikInput:RadAutoComplete
                                 x:Name="Search"
-                                Grid.Column="1"
-                                BackgroundColor="White"                           
+                                Grid.Column="2"
+                                BackgroundColor="White"
                                 CompletionMode="Contains"
-                                TextColor="#ff8e30"                     
+                                TextColor="#767684"
                                 FilteredItemsChanged="Handle_FilteredItemsChanged"
                                 SuggestionItemSelected="Search_SuggestionItemSelected"
                                 Watermark="Search for parking area or building..." />
-                        </Grid>
-                        <StackLayout
-                            x:Name="SearchDateTime"
-                            Padding="4"
-                            VerticalOptions="Start"
-                            IsVisible="{Binding ParkLater}"
-                            Orientation="Horizontal">
-                            <DatePicker
-                                x:Name="SearchDate"
-                                Format="ddddd dd MMM"
-                                TextColor="#ff8e30"
-                                DateSelected="DatePicker_DateSelected"
-                                HorizontalOptions="FillAndExpand">
-                            </DatePicker>
-                            <TimePicker
-                                x:Name="SearchTime"
-                                TextColor="#ff8e30"
-                                HorizontalOptions="FillAndExpand" />
-                        </StackLayout>
-                        <StackLayout
-                            Padding="8"
-                            Orientation="Horizontal">
-                            <Label
-                                x:Name="Hours"
-                                Margin="0,5,10,0"
+                            <BoxView
+                                Grid.Column="0"
+                                Grid.Row="1"
+                                Grid.ColumnSpan="3"
+                                BackgroundColor="#fefefe" />
+                            <StackLayout
+                                x:Name="SearchDateTime"
+                                Padding="8"
+                                Grid.Row="2"
+                                Grid.ColumnSpan="3"
                                 VerticalOptions="Start"
-                                FontSize="20"
-                                Text="2 Hours" />
-                            <Slider
-                                x:Name="HoursSlider"
-                                Maximum="24"
-                                Minimum="1"
-                                Value="2"
-                                ValueChanged="HoursSlider_ValueChanged"
-                                HorizontalOptions="FillAndExpand" />
-                        </StackLayout>
-                    </StackLayout>
+                                IsVisible="{Binding ParkLater}"
+                                Orientation="Horizontal">
+                                <control:BorderlessDatePicker
+                                    x:Name="SearchDate"
+                                    Format="ddddd dd MMM"
+                                    TextColor="#767684" 
+                                    DateSelected="DatePicker_DateSelected"
+                                    HorizontalOptions="StartAndExpand" />
+                                <control:BorderlessTimePicker
+                                    x:Name="SearchTime"
+                                    TextColor="#767684"
+                                    HorizontalOptions="StartAndExpand" />
+                            </StackLayout>
+                            <StackLayout
+                                Padding="8"
+                                Grid.Row="3"
+                                Grid.ColumnSpan="3"
+                                Orientation="Horizontal">
+                                <Label
+                                    x:Name="Hours"
+                                    Margin="0,5,10,0"
+                                    VerticalOptions="Start"
+                                    FontSize="16"
+                                    TextColor="#767684"
+                                    Text="2 Hours" />
+                                <Slider
+                                    x:Name="HoursSlider"
+                                    Maximum="24"
+                                    Minimum="1"
+                                    Value="2"
+                                    ValueChanged="HoursSlider_ValueChanged"
+                                    HorizontalOptions="FillAndExpand" />
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
                     <Grid
                         Grid.Row="1"
                         ColumnSpacing="0">

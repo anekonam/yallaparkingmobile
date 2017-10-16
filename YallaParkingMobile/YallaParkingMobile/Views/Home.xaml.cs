@@ -32,14 +32,6 @@ namespace YallaParkingMobile {
 
             NavigationPage.SetHasNavigationBar(this, false);
 
-			if (this.Model.ParkNow) {
-				this.Title = "Find Parking Now";
-				this.ParkLaterButton.Opacity = 0.8;
-			} else {
-				this.Title = "Find Parking Later";
-				this.ParkNowButton.Opacity = 0.8;
-			}
-
 			Analytics.TrackEvent("Viewing Home Page");
 
 			PropertyUtility.SetValue("LoggedIn", "true");
@@ -55,6 +47,8 @@ namespace YallaParkingMobile {
             HoursSlider.Maximum = maxHours >=1 ? maxHours : 1;
             SearchTime.Time = TimeSpan.FromHours(DateTime.Now.Hour < 23 ? DateTime.Now.Hour + 1 : 0);
 
+            SearchDate.Effects.Add(Effect.Resolve(("Effects.BorderlessEffect")));
+            SearchTime.Effects.Add(Effect.Resolve(("Effects.BorderlessEffect")));
 			HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
         }
 

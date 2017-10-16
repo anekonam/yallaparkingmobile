@@ -129,6 +129,8 @@
     <Compile Include="Views\ProfileVerify.xaml.cs">
       <DependentUpon>ProfileVerify.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Control\BorderlessDatePicker.cs" />
+    <Compile Include="Control\BorderlessTimePicker.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
