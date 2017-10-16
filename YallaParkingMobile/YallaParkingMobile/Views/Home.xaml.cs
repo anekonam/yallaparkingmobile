@@ -65,13 +65,13 @@ namespace YallaParkingMobile {
             await LoadData();
 		}
 
-        async void Handle_FilteredItemsChanged(object sender, Telerik.XamarinForms.Input.AutoComplete.FilteredItemsChangedEventArgs e) { 
-            
+        async void Handle_FilteredItemsChanged(object sender, Telerik.XamarinForms.Input.AutoComplete.FilteredItemsChangedEventArgs e) {             
             await LoadData(this.Search.Text);
         }
 
         async Task LoadData(string query = null) {
-           var startDate = this.SearchDate.Date.Add(this.SearchTime.Time);
+            var startDate = this.SearchDate.Date;
+            startDate.Date.Add(this.SearchTime.Time);
 
 			BusyIndicator.IsBusy = true;
 
@@ -106,9 +106,11 @@ namespace YallaParkingMobile {
 
             if(!string.IsNullOrWhiteSpace(query) && this.Map.Pins!=null && this.Map.Pins.Any(p => p.Label.Contains(query))){
                 Map.MoveToRegion(MapSpan.FromCenterAndRadius(this.Map.Pins.First(p => p.Label.Contains(query)).Position, Distance.FromMiles(1)));
-            } else if (positions.Any()) {
+            } else if (!string.IsNullOrWhiteSpace(query) && positions.Any()) {
 				Map.MoveToRegion(MapSpan.FromCenterAndRadius(positions.First(), Distance.FromMiles(1)));
-			}
+            } else{
+                UpdateCurrentLocation();
+            }
 
             BusyIndicator.IsBusy = false;
 
@@ -152,7 +154,9 @@ namespace YallaParkingMobile {
         }
 
         private void Current_PositionChanged(object sender, PositionEventArgs e) {
-            UpdateCurrentLocation();
+            if (string.IsNullOrWhiteSpace(this.Search.Text)) {
+                UpdateCurrentLocation();
+            }
         }
 
         private async Task<Plugin.Geolocator.Abstractions.Position> GetCurrentLocation() {
