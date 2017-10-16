@@ -48,8 +48,6 @@ namespace YallaParkingMobile {
 
 			PropertyUtility.SetValue("LoggedIn", "true");
 
-			UpdateCurrentLocation();
-
 			CrossGeolocator.Current.PositionChanged += Current_PositionChanged;
 
 			SearchDate.Date = DateTime.Now;
@@ -72,9 +70,16 @@ namespace YallaParkingMobile {
             }
         }
 
-		async void Handle_Appearing(object sender, System.EventArgs e) {			
-            this.Search.ItemsSource = await ServiceUtility.PropertyAreas();
-            await LoadData();
+		async void Handle_Appearing(object sender, System.EventArgs e) {
+			var query = PropertyUtility.GetValue("query");
+			var hours = PropertyUtility.GetValue("hours");
+
+            if(!string.IsNullOrWhiteSpace(hours)){
+                this.HoursSlider.Value = int.Parse(hours);
+            }
+
+			this.Search.ItemsSource = await ServiceUtility.PropertyAreas();
+            await LoadData(query);
 		}
 
         async void Handle_FilteredItemsChanged(object sender, Telerik.XamarinForms.Input.AutoComplete.FilteredItemsChangedEventArgs e) {             
@@ -82,6 +87,8 @@ namespace YallaParkingMobile {
         }
 
         async Task LoadData(string query = null) {
+            this.Model.SelectedProperty = null;
+
             var startDate = this.SearchDate.Date;
             startDate.Date.Add(this.SearchTime.Time);
 
@@ -92,6 +99,9 @@ namespace YallaParkingMobile {
                 StartDate = startDate,
                 Hours = (int)this.HoursSlider.Value
             };
+
+            PropertyUtility.SetValue("query", search.Name);
+            PropertyUtility.SetValue("hours", search.Hours.ToString());
 
             var properties = await ServiceUtility.Search(search);
 
@@ -131,20 +141,11 @@ namespace YallaParkingMobile {
             }
         }
 
-        private async void Pin_Clicked(object sender, EventArgs e) {
+        private void Pin_Clicked(object sender, EventArgs e) {
             var pin = (Pin)sender;
             var property = (PropertyModel)pin.BindingContext;
 
-            if (SearchDateTime.IsVisible) {
-                property.StartDate = this.SearchDate.Date.Add(this.SearchTime.Time);
-            } else{
-                property.StartDate = DateTime.UtcNow;
-            }
-
-            property.Hours = (int)this.HoursSlider.Value;
-
-            var bookParking = new BookParking(new BookParkingModel(property, !SearchDateTime.IsVisible));
-            await Navigation.PushAsync(bookParking);
+            this.Model.SelectedProperty = property;
         }
 
         async void Search_SuggestionItemSelected(object sender, Telerik.XamarinForms.Input.AutoComplete.SuggestionItemSelectedEventArgs e) {
@@ -219,6 +220,21 @@ namespace YallaParkingMobile {
             Analytics.TrackEvent(output);
 
             return position;
+        }
+
+        private async void Next_Clicked(object sender, System.EventArgs e) {
+            var property = this.Model.SelectedProperty;
+
+			if (SearchDateTime.IsVisible) {
+				property.StartDate = this.SearchDate.Date.Add(this.SearchTime.Time);
+			} else {
+				property.StartDate = DateTime.UtcNow;
+			}
+
+			property.Hours = (int)this.HoursSlider.Value;
+
+			var bookParking = new BookParking(new BookParkingModel(property, !SearchDateTime.IsVisible));
+			await Navigation.PushAsync(bookParking);
         }
 
         private void Button_Clicked(object sender, EventArgs e) {

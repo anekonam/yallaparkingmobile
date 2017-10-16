@@ -29,6 +29,35 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+        private PropertyModel selectedProperty;
+        public PropertyModel SelectedProperty{
+            get{
+                return selectedProperty;
+            } set{
+                if(selectedProperty!=value){
+                    selectedProperty = value;
+
+                    if (PropertyChanged != null) {
+                        PropertyChanged(this, new PropertyChangedEventArgs("SelectedProperty"));
+                        PropertyChanged(this, new PropertyChangedEventArgs("HasSelectedProperty"));
+                        PropertyChanged(this, new PropertyChangedEventArgs("NotSelectedProperty"));
+                    }
+                }
+            }
+        }
+
+        public bool HasSelectedProperty{
+            get{
+                return this.SelectedProperty != null;
+            }
+        }
+
+        public bool NotSelectedProperty{
+            get{
+                return !this.HasSelectedProperty;
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
     }
 }

@@ -157,6 +157,7 @@
                             FontSize="20"
                             Clicked="ParkNow_Clicked"
                             BackgroundColor="#ff8e30"
+                            IsVisible="{Binding NotSelectedProperty}"
                             HorizontalOptions="FillAndExpand"
                             VerticalOptions="Center" />
                         <Button
@@ -169,7 +170,22 @@
                             HeightRequest="60"
                             FontSize="20"
                             BackgroundColor="#ff8e30"
+                            IsVisible="{Binding NotSelectedProperty}"
                             Clicked="ParkLater_Clicked"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Center" />
+                         <Button
+                            x:Name="NextButton"
+                            Grid.ColumnSpan="2"
+                            Style="{StaticResource GreenButton}"
+                            Text="Next"
+                            BorderRadius="0"
+                            Margin="0"
+                            HeightRequest="60"
+                            FontSize="20"
+                            BackgroundColor="#ff8e30"
+                            IsVisible="{Binding HasSelectedProperty}"
+                            Clicked="Next_Clicked"
                             HorizontalOptions="FillAndExpand"
                             VerticalOptions="Center" />
                     </Grid>
