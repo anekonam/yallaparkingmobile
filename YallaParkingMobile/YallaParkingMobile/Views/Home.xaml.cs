@@ -30,6 +30,18 @@ namespace YallaParkingMobile {
 
             InitializeComponent();
 
+            if(this.Model.ParkNow){
+                this.ParkNowButton.BackgroundColor = Color.White;
+                this.ParkNowButton.BorderWidth = 1;
+                this.ParkNowButton.BorderColor = Color.FromHex("#ff8e30");
+                this.ParkNowButton.TextColor = Color.FromHex("#ff8e30");
+            } else{
+				this.ParkLaterButton.BackgroundColor = Color.White;
+                this.ParkLaterButton.BorderWidth = 1;
+				this.ParkLaterButton.BorderColor = Color.FromHex("#ff8e30");
+				this.ParkLaterButton.TextColor = Color.FromHex("#ff8e30");
+            }
+
             NavigationPage.SetHasNavigationBar(this, false);
 
 			Analytics.TrackEvent("Viewing Home Page");
