@@ -20,42 +20,72 @@
                 Text="Loading garage..." />
         </telerikPrimitives:RadBusyIndicator.BusyContent>
         <telerikPrimitives:RadBusyIndicator.Content>
-            <Grid>
+            <Grid
+                Padding="0,15,0,0"
+                BackgroundColor="#fafcfe">
                 <Grid.RowDefinitions>
                     <RowDefinition
-                        Height="*" />
+                        Height="Auto" />
                     <RowDefinition
                         Height="Auto" />
                 </Grid.RowDefinitions>
                 <ListView
                     x:Name="Cars"
                     ItemTapped="Handle_ItemTapped"
+                    HasUnevenRows="true"
+                    VerticalOptions="Start"
+                    BackgroundColor="White"
                     ItemsSource="{Binding UserCars}">
                     <ListView.SeparatorVisibility>None</ListView.SeparatorVisibility>
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <ImageCell
-                                ImageSource="{Binding Image}"
-                                Text="{Binding MakeAndModel}"
-                                Detail="{Binding RegAndColor}">
-                                <ImageCell.ContextActions>
-                                    <MenuItem
-                                        x:Name="CarDelete"
-                                        Text="Delete"
-                                        IsDestructive="true"
-                                        CommandParameter="{Binding .}"
-                                        Clicked="Delete_Clicked"/>
-                                </ImageCell.ContextActions>
-                            </ImageCell>
+                            <ViewCell
+                                Height="60">
+                                <Grid
+                                    VerticalOptions="FillAndExpand"
+                                    ColumnSpacing="10"
+                                    RowSpacing="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition
+                                            Width="0.3*" />
+                                        <ColumnDefinition
+                                            Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition
+                                            Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Image
+                                        HeightRequest="40"
+                                        Margin="28,10,10,10"
+                                        Aspect="AspectFill"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"
+                                        Source="{Binding Image}" />
+                                    <StackLayout
+                                        VerticalOptions="CenterAndExpand"
+                                        Grid.Column="1">
+                                        <Label
+                                            HorizontalOptions="StartAndExpand"
+                                            FontSize="16"
+                                            TextColor="Black"
+                                            Text="{Binding MakeAndModel}"
+                                            Style="{StaticResource Header}" />
+                                        <Label
+                                            FontSize="12"
+                                            HorizontalOptions="StartAndExpand"
+                                            Text="{Binding RegistrationNumber}" />
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
                 <Button
                     Grid.Row="1"
-                    Margin="10"
                     x:Name="AddNewButton"
-                    Style="{StaticResource GreenButton}"
-                    Text="Add New Vehicle"
+                    Style="{StaticResource GreyTextButton}"
+                    Text="+ New Vehicle"
                     Clicked="AddNewButton_Clicked"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="Center" />

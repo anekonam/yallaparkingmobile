@@ -23,7 +23,11 @@ namespace YallaParkingMobile {
 
         public UpdateCardDetails() {
             InitializeComponent();
+
             Analytics.TrackEvent("Viewing Update Card Details Page");
+
+            this.CardNumber.Placeholder = "•••• •••• •••• ••••";
+            this.Cvc.Placeholder = "•••";
 
             var brandPicker = new BorderlessPicker {
                 Title = "Select Brand...",

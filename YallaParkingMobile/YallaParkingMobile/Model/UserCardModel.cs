@@ -24,6 +24,12 @@ namespace YallaParkingMobile.Model {
 
 		public string ExpireYear { get; set; }
 
+        public string ExpireMonthYear{
+            get{
+                return string.Format("{0}/{1}", this.ExpireMonth, this.ExpireYear);
+            }
+        }
+
         public string Number { get; set; }
 
         public string Cvc { get; set; }
@@ -32,7 +38,7 @@ namespace YallaParkingMobile.Model {
 
         public string EncodedCardNumber{
             get{
-                return string.Format("****-****-****-{0}", this.LastFourDigits);
+                return string.Format("**** **** **** {0}", this.LastFourDigits).Replace('*', '\u2022');
             }
         }
 

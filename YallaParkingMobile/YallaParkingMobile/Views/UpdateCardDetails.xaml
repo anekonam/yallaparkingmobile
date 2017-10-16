@@ -20,7 +20,7 @@
             IsRunning="False"
             IsVisible="False"
             Color="#ff8e30" />
-        <TableView
+        <control:MenuTableView
             Grid.Row="0">
             <TableSection>
                 <control:PickerCell
@@ -33,6 +33,7 @@
                     HorizontalTextAlignment="End"
                     Text="{Binding Name, Mode=TwoWay}" />
                 <EntryCell
+                    x:Name="CardNumber"
                     LabelColor="#a1a1b4"
                     Label="Card Number"
                     Keyboard="Numeric"
@@ -47,13 +48,14 @@
                     Label="Expiry Year"
                     BindingContext="{Binding}" />
                 <EntryCell
+                    x:Name="Cvc"
                     LabelColor="#a1a1b4"
                     Label="CVC"
                     Keyboard="Numeric"
                     HorizontalTextAlignment="End"
                     Text="{Binding Cvc, Mode=TwoWay}" />
             </TableSection>
-        </TableView>
+        </control:MenuTableView>
         <Button
             Grid.Row="1"
             Margin="10"

@@ -5,8 +5,9 @@
     xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
     xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
     xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+    xmlns:control="clr-namespace:YallaParkingMobile.Control;assembly=YallaParkingMobile"
     x:Class="YallaParkingMobile.UpdateProfile"
-    Title="Update Profile">
+    Title="My Profile">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition
@@ -20,35 +21,28 @@
             IsRunning="False"
             IsVisible="False"
             Color="#ff8e30" />
-    <TableView
-        Grid.Row="0">
-        <TableSection
-            Title="Profile Details">
-            <EntryCell
-                LabelColor="#a1a1b4"
-                Label="Name"
-                HorizontalTextAlignment="End"                
-                Text="{Binding Name, Mode=TwoWay}" />
-            <EntryCell
-                LabelColor="#a1a1b4"
-                Label="E-mail Address"
-                HorizontalTextAlignment="End"                
-                Text="{Binding EmailAddress, Mode=TwoWay}" />
-            <EntryCell
-                LabelColor="#a1a1b4"
-                Label="Phone"
-                HorizontalTextAlignment="End"                
-                Text="{Binding PhoneNumber, Mode=TwoWay}" />
-        </TableSection>
-    </TableView>
-    <Button
-        Grid.Row="1"
-        Margin="10"
-        x:Name="UpdateButton"
-        Style="{StaticResource GreenButton}"
-        Text="Update Profile"
-        Clicked="UpdateButton_Clicked"
-        HorizontalOptions="FillAndExpand"
-        VerticalOptions="Center" />
-        </Grid>
+        <control:MenuTableView
+            Grid.Row="0">
+            <TableSection>
+                <EntryCell
+                    LabelColor="#a1a1b4"
+                    Label="Name"
+                    IsEnabled="false"
+                    HorizontalTextAlignment="End"
+                    Text="{Binding Name, Mode=TwoWay}" />
+                <EntryCell
+                    LabelColor="#a1a1b4"
+                    Label="E-mail Address"
+                    IsEnabled="false"
+                    HorizontalTextAlignment="End"
+                    Text="{Binding EmailAddress, Mode=TwoWay}" />
+                <EntryCell
+                    LabelColor="#a1a1b4"
+                    Label="Phone"
+                    HorizontalTextAlignment="End"
+                    IsEnabled="false"
+                    Text="{Binding PhoneNumber, Mode=TwoWay}" />
+            </TableSection>
+        </control:MenuTableView>
+    </Grid>
 </ContentPage>

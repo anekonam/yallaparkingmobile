@@ -20,7 +20,7 @@
             IsRunning="False"
             IsVisible="False"
             Color="#ff8e30" />
-        <TableView
+        <control:MenuTableView
             Grid.Row="0">
             <TableSection>
                 <control:PickerCell
@@ -43,7 +43,7 @@
                     HorizontalTextAlignment="End"
                     Text="{Binding Color, Mode=TwoWay}" />
             </TableSection>
-        </TableView>
+        </control:MenuTableView>
         <Button
             Grid.Row="1"
             Margin="10"

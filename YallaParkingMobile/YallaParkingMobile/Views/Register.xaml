@@ -16,122 +16,124 @@
         </ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition
-                    Height="*" />
-                <RowDefinition
-                    Height="*" />
-                <RowDefinition
-                    Height="*" />
-                <RowDefinition
-                    Height="*" />
-                <RowDefinition
-                    Height="*" />
-                <RowDefinition
-                    Height="*" />
-                <RowDefinition
-                    Height="*" />
-                <RowDefinition
-                    Height="*" />
-                <RowDefinition
-                    Height="*" />
-                <RowDefinition
-                    Height="*" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition
-                    Width="*" />
-                <ColumnDefinition
-                    Width="*" />
-                <ColumnDefinition
-                    Width="*" />
-                <ColumnDefinition
-                    Width="*" />
-                <ColumnDefinition
-                    Width="*" />
-            </Grid.ColumnDefinitions>
-            <ActivityIndicator
-                x:Name="Activity"
-                IsRunning="False"
-                IsVisible="False"
-                Color="#ff8e30"
-                Grid.ColumnSpan="5"
-                Grid.RowSpan="9" />
-            <Image
-                Source="logo.png"
-                Grid.Row="1"
-                Grid.Column="1"
-                Grid.ColumnSpan="3"
-                Aspect="AspectFit" />
-            <control:BorderlessEntry
-                Grid.Row="2"
-                Grid.Column="1"
-                Grid.ColumnSpan="3"
-                Placeholder="Name"
-                x:Name="Name" />
-            <control:BorderlessEntry
-                Grid.Row="3"
-                Grid.Column="1"
-                Grid.ColumnSpan="3"
-                Placeholder="E-mail Address"
-                Keyboard="Email"
-                x:Name="EmailAddress" />
-            <StackLayout
-                Grid.Row="4"
-                Grid.Column="1"
-                Orientation="Horizontal"
-                Grid.ColumnSpan="3">
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="*" />
+                </Grid.ColumnDefinitions>
+                <ActivityIndicator
+                    x:Name="Activity"
+                    IsRunning="False"
+                    IsVisible="False"
+                    Color="#ff8e30"
+                    Grid.ColumnSpan="5"
+                    Grid.RowSpan="9" />
+                <Image
+                    Source="logo.png"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3"
+                    Aspect="AspectFit" />
                 <control:BorderlessEntry
-                    IsEnabled="False"
-                    Text="+971"
-                    Keyboard="Telephone"
-                    x:Name="PhoneNumberPrefix" />
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3"
+                    Placeholder="Name"
+                    x:Name="Name" />
                 <control:BorderlessEntry
-                    Placeholder="Phone Number"
-                    Keyboard="Telephone"
-                    x:Name="PhoneNumber" />
-            </StackLayout>
-            <control:BorderlessEntry
-                Grid.Row="5"
-                Grid.Column="1"
-                Grid.ColumnSpan="3"
-                Placeholder="Password"
-                IsPassword="True"
-                x:Name="Password" />
-            <control:BorderlessEntry
-                Grid.Row="6"
-                Grid.Column="1"
-                Grid.ColumnSpan="3"
-                Placeholder="Confirm Password"
-                IsPassword="True"
-                x:Name="ConfirmPassword" />
-            <ContentView
-                Padding="0,5,0,0"
-                Grid.Row="7"
-                Grid.Column="1"
-                Grid.ColumnSpan="3">
-                <Button
-                    x:Name="NextButton"
-                    Clicked="NextButton_Clicked"
-                    Style="{StaticResource GreenButton}"
-                    Text="Next"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="Center" />
-            </ContentView>
-            <ContentView
-                Padding="0,5,0,0"
-                Grid.Row="8"
-                Grid.Column="1"
-                Grid.ColumnSpan="3">
-                <Button
-                    x:Name="FacebookButton"
-                    Clicked="FacebookButton_Clicked"
-                    Style="{StaticResource FacebookButton}"
-                    Text="Sign Up with Facebook"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="Center" />
-            </ContentView>
-        </Grid>
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3"
+                    Placeholder="E-mail Address"
+                    Keyboard="Email"
+                    x:Name="EmailAddress" />
+                <StackLayout
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    Grid.ColumnSpan="3">
+                    <control:BorderlessEntry
+                        IsEnabled="False"
+                        Text="+971"
+                        Keyboard="Telephone"
+                        x:Name="PhoneNumberPrefix" />
+                    <control:BorderlessEntry
+                        Placeholder="Phone Number"
+                        Keyboard="Telephone"
+                        x:Name="PhoneNumber" />
+                </StackLayout>
+                <control:BorderlessEntry
+                    Grid.Row="5"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3"
+                    Placeholder="Password"
+                    IsPassword="True"
+                    x:Name="Password" />
+                <control:BorderlessEntry
+                    Grid.Row="6"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3"
+                    Placeholder="Confirm Password"
+                    IsPassword="True"
+                    x:Name="ConfirmPassword" />
+                <ContentView
+                    Padding="0,5,0,0"
+                    Grid.Row="7"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3">
+                    <Button
+                        x:Name="NextButton"
+                        Clicked="NextButton_Clicked"
+                        Style="{StaticResource GreenButton}"
+                        Text="Next"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center" />
+                </ContentView>
+                <ContentView
+                    Padding="0,5,0,0"
+                    Grid.Row="8"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="3">
+                    <Button
+                        x:Name="FacebookButton"
+                        Clicked="FacebookButton_Clicked"
+                        Style="{StaticResource FacebookButton}"
+                        Text="Sign Up with Facebook"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Center" />
+                </ContentView>
+            </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -10,15 +10,6 @@
     Title="Find Parking"
     Appearing="Handle_Appearing"
     NavigationPage.HasBackButton="False">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem
-            x:Name="MenuButton"
-            Activated="Button_Clicked"
-            Order="Primary"
-            Priority="0"
-            Icon="hamburgerMenu.png">
-        </ToolbarItem>
-    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <telerikPrimitives:RadSideDrawer
             x:Name="Menu"
@@ -27,28 +18,68 @@
             <telerikPrimitives:RadSideDrawer.MainContent>
                 <Grid
                     RowSpacing="0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition
-                            Height="Auto" />
+                    <Grid.RowDefinitions>                       
                         <RowDefinition
                             Height="*" />
                         <RowDefinition
                             Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <StackLayout
+                    </Grid.RowDefinitions>                  
+                    <telerikPrimitives:RadBusyIndicator
+                        x:Name="BusyIndicator"
+                        AnimationContentHeightRequest="50"
+                        AnimationContentWidthRequest="50"
+                        AnimationContentColor="#ff8e30"
+                        Grid.Row="0">
+                        <telerikPrimitives:RadBusyIndicator.BusyContent>
+                            <Label
+                                Text="Searching for parking spaces..." />
+                        </telerikPrimitives:RadBusyIndicator.BusyContent>
+                        <telerikPrimitives:RadBusyIndicator.Content>
+                            <maps:Map
+                                x:Name="Map"
+                                WidthRequest="320"
+                                HeightRequest="200"
+                                IsVisible="false"
+                                IsShowingUser="true"
+                                VerticalOptions="FillAndExpand"
+                                MapType="Street" />                             
+                        </telerikPrimitives:RadBusyIndicator.Content>
+                    </telerikPrimitives:RadBusyIndicator>
+                     <StackLayout
+                        Margin="10"
+                        BackgroundColor="White"
+                        VerticalOptions="Start"
                         Padding="4"
                         Grid.Row="0">
-                        <telerikInput:RadAutoComplete
-                            x:Name="Search"
-                            BackgroundColor="White"                           
-                            CompletionMode="Contains"
-                            TextColor="#ff8e30"                     
-                            FilteredItemsChanged="Handle_FilteredItemsChanged"
-                            SuggestionItemSelected="Search_SuggestionItemSelected"
-                            Watermark="Search for parking by area or building..." />
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    Width="40" />
+                                <ColumnDefinition
+                                    Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Button
+                                Image="hamburgerMenu.png"
+                                BackgroundColor="White"
+                                BorderColor="#ff8e30"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                Clicked="Button_Clicked"
+                                Style="{StaticResource GreenButton}" />
+                            <telerikInput:RadAutoComplete
+                                x:Name="Search"
+                                Grid.Column="1"
+                                BackgroundColor="White"                           
+                                CompletionMode="Contains"
+                                TextColor="#ff8e30"                     
+                                FilteredItemsChanged="Handle_FilteredItemsChanged"
+                                SuggestionItemSelected="Search_SuggestionItemSelected"
+                                Watermark="Search for parking area or building..." />
+                        </Grid>
                         <StackLayout
                             x:Name="SearchDateTime"
                             Padding="4"
+                            VerticalOptions="Start"
                             IsVisible="{Binding ParkLater}"
                             Orientation="Horizontal">
                             <DatePicker
@@ -81,29 +112,8 @@
                                 HorizontalOptions="FillAndExpand" />
                         </StackLayout>
                     </StackLayout>
-                    <telerikPrimitives:RadBusyIndicator
-                        x:Name="BusyIndicator"
-                        AnimationContentHeightRequest="50"
-                        AnimationContentWidthRequest="50"
-                        AnimationContentColor="#ff8e30"
-                        Grid.Row="1">
-                        <telerikPrimitives:RadBusyIndicator.BusyContent>
-                            <Label
-                                Text="Searching for parking spaces..." />
-                        </telerikPrimitives:RadBusyIndicator.BusyContent>
-                        <telerikPrimitives:RadBusyIndicator.Content>
-                            <maps:Map
-                                x:Name="Map"
-                                WidthRequest="320"
-                                HeightRequest="200"
-                                IsVisible="false"
-                                IsShowingUser="true"
-                                VerticalOptions="FillAndExpand"
-                                MapType="Street" />
-                        </telerikPrimitives:RadBusyIndicator.Content>
-                    </telerikPrimitives:RadBusyIndicator>
                     <Grid
-                        Grid.Row="2"
+                        Grid.Row="1"
                         ColumnSpacing="0">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition
