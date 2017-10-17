@@ -59,13 +59,15 @@ namespace YallaParkingMobile {
 			Activity.IsRunning = true;
 			Activity.IsVisible = true;
 
-            var success = await ServiceUtility.Register(model);
+            var result = await ServiceUtility.Register(model);
 
             Activity.IsRunning = false;
             Activity.IsVisible = false;
 
-            if (success) {
+            if (result.IsSuccessStatusCode) {
                 await Navigation.PushAsync(new Verify());
+            } else if(result.StatusCode == System.Net.HttpStatusCode.Conflict){
+                await DisplayAlert("E-mail Address Exists", "The e-mail address provided is already registered, please enter an alternative e-mail address", "Ok");
             } else {
                 await DisplayAlert("Regiser Failed", "Registration failed, please try again", "Ok");
             }

@@ -227,6 +227,8 @@
     <BundleResource Include="Resources\Icon-Notification%403x.png" />
     <BundleResource Include="Resources\Icon%402x.png" />
     <BundleResource Include="Resources\validated.png" />
+    <BundleResource Include="Resources\pin.png" />
+    <BundleResource Include="Resources\currentLocation.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

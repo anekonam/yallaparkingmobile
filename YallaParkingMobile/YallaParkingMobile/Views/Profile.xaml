@@ -50,7 +50,7 @@
                                     BorderColor="#a1a1b4"
                                     BorderThickness="1"
                                     HorizontalOptions="Center"
-                                    Source="http://www.freeiconspng.com/uploads/profile-icon-9.png"
+                                    Source="menu-profile.png"
                                     Aspect="AspectFill">
                                     <controls:CircleImage.GestureRecognizers>
                                         <TapGestureRecognizer
@@ -189,13 +189,32 @@
                     </telerikPrimitives:RadBusyIndicator.Content>
                 </telerikPrimitives:RadBusyIndicator>
             </telerikPrimitives:RadSideDrawer.MainContent>
-            <telerikPrimitives:RadSideDrawer.DrawerContent>
-                <StackLayout>
+           <telerikPrimitives:RadSideDrawer.DrawerContent>
+                <StackLayout
+                    Margin="0,10,0,0">
+                    <controls:CircleImage
+                        x:Name="ProfileMenuImage"
+                        Margin="10"
+                        WidthRequest="80"
+                        HeightRequest="80"
+                        BorderColor="#a1a1b4"
+                        BorderThickness="1"
+                        HorizontalOptions="Center"
+                        Source="menu-profile.png"
+                        Aspect="AspectFill">
+                    </controls:CircleImage>
+                    <Label
+                        x:Name="ProfileMenuName"
+                        HorizontalOptions="Center"
+                        Text="{Binding Name}"
+                        Style="{StaticResource Header}" />
                     <StackLayout
                         Margin="20, 10, 10, 10"
                         Orientation="Horizontal">
                         <Image
                             Margin="0,0,5,0"
+                            HeightRequest="30"
+                            VerticalOptions="Center"
                             Source="menu-car.png" />
                         <Button
                             x:Name="FindParking"
@@ -210,6 +229,8 @@
                         Orientation="Horizontal">
                         <Image
                             Margin="0,0,5,0"
+                            HeightRequest="30"
+                            VerticalOptions="Center"
                             Source="menu-bookings.png" />
                         <Button
                             x:Name="MyBookings"
@@ -224,6 +245,8 @@
                         Orientation="Horizontal">
                         <Image
                             Margin="0,0,5,0"
+                            HeightRequest="30"
+                            VerticalOptions="Center"
                             Source="menu-profile.png" />
                         <Button
                             x:Name="MyProfile"
@@ -238,6 +261,8 @@
                         Orientation="Horizontal">
                         <Image
                             Margin="0,0,5,0"
+                            HeightRequest="30"
+                            VerticalOptions="Center"
                             Source="menu-invite.png" />
                         <Button
                             x:Name="Invite"
@@ -252,12 +277,14 @@
                         Orientation="Horizontal">
                         <Image
                             Margin="0,0,5,0"
+                            HeightRequest="30"
+                            VerticalOptions="Center"
                             Source="menu-logout.png" />
                         <Button
                             x:Name="Logout"
                             FontSize="18"
                             Text="Logout"
-                            TextColor="#a1a1b4"
+                            TextColor="#ff8e30"
                             HorizontalOptions="Start"
                             Clicked="Logout_Clicked" />
                     </StackLayout>

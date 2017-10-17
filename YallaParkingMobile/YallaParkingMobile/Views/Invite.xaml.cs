@@ -19,11 +19,20 @@ namespace YallaParkingMobile {
     public partial class Invite : ContentPage {        
         public Invite() {
             InitializeComponent();
-            Analytics.TrackEvent("Viewing Invite Page");          
+            Analytics.TrackEvent("Viewing Invite Page");
         }       
 
         private void Button_Clicked(object sender, EventArgs e) {
             Menu.IsOpen = !Menu.IsOpen;
+        }
+
+        void Handle_Appearing(object sender, System.EventArgs e) {
+			var profile = await ServiceUtility.Profile();
+			this.ProfileName.Text = profile.Name;
+			if (!string.IsNullOrWhiteSpace(profile.ProfilePicture)) {
+				var profileImage = !string.IsNullOrWhiteSpace(profile.ProfilePicture) && profile.ProfilePicture.Contains(",") ? profile.ProfilePicture.Split(',')[1] : profile.ProfilePicture;
+				this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profileImage)));
+			}
         }
 
         private async void FindParking_Clicked(object sender, EventArgs e) {

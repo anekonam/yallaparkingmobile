@@ -39,6 +39,13 @@ namespace YallaParkingMobile {
 
         async void Handle_Appearing(object sender, System.EventArgs e) {
             await this.Model.GetBookings();
+
+			var profile = await ServiceUtility.Profile();
+			this.ProfileName.Text = profile.Name;
+			if (!string.IsNullOrWhiteSpace(profile.ProfilePicture)) {
+				var profileImage = !string.IsNullOrWhiteSpace(profile.ProfilePicture) && profile.ProfilePicture.Contains(",") ? profile.ProfilePicture.Split(',')[1] : profile.ProfilePicture;
+				this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profileImage)));
+			}
         }
 
         async void Handle_ItemSelected(object sender, Xamarin.Forms.SelectedItemChangedEventArgs e) {

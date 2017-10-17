@@ -74,7 +74,7 @@ namespace YallaParkingMobile.Utility {
             }            
         }
 
-        public static async Task<bool> Register(RegisterModel model) {
+        public static async Task<HttpResponseMessage> Register(RegisterModel model) {
             InitHttpClient();
 
             try {                
@@ -82,12 +82,13 @@ namespace YallaParkingMobile.Utility {
 
                 if (response.IsSuccessStatusCode) {
                     var result = await RequestToken(model.EmailAddress, model.Password);
-                    return result;
+					response.StatusCode = result ? response.StatusCode : System.Net.HttpStatusCode.Unauthorized;
+					return response;
                 }
 
-                return false;
+                return response;
             } catch{
-                return false;
+                return null;
             }            
         }
 

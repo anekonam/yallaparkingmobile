@@ -15,6 +15,7 @@ using Xamarin.Forms.Maps;
 using YallaParkingMobile.Model;
 using YallaParkingMobile.Utility;
 using Telerik.XamarinForms.Input.AutoComplete;
+using System.IO;
 
 namespace YallaParkingMobile {
     public partial class Home : ContentPage {
@@ -94,6 +95,13 @@ namespace YallaParkingMobile {
 
 			this.Search.ItemsSource = await ServiceUtility.PropertyAreas();
             await LoadData(query);
+
+            var profile = await ServiceUtility.Profile();
+            this.ProfileName.Text = profile.Name;
+			if (!string.IsNullOrWhiteSpace(profile.ProfilePicture)) {
+				var profileImage = !string.IsNullOrWhiteSpace(profile.ProfilePicture) && profile.ProfilePicture.Contains(",") ? profile.ProfilePicture.Split(',')[1] : profile.ProfilePicture;
+				this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profileImage)));
+			}
 		}
 
         async void Handle_FilteredItemsChanged(object sender, Telerik.XamarinForms.Input.AutoComplete.FilteredItemsChangedEventArgs e) {             
@@ -162,6 +170,10 @@ namespace YallaParkingMobile {
             this.Model.SelectedProperty = property;
         }
 
+		private void Location_Clicked(object sender, EventArgs e) {
+            UpdateCurrentLocation();
+		}
+
         async void Search_SuggestionItemSelected(object sender, Telerik.XamarinForms.Input.AutoComplete.SuggestionItemSelectedEventArgs e) {
             var address = e.DataItem.ToString();
             this.Search.Text = address;
@@ -175,8 +187,10 @@ namespace YallaParkingMobile {
                     new Xamarin.Forms.Maps.Position(position.Latitude, position.Longitude) :
                     new Xamarin.Forms.Maps.Position(25.1985, 55.2796);
 
-
-                Map.MoveToRegion(MapSpan.FromCenterAndRadius(mapPosition, Distance.FromMiles(1)));
+                Device.StartTimer(TimeSpan.FromMilliseconds(500), () => {
+                    Map.MoveToRegion(MapSpan.FromCenterAndRadius(mapPosition, Distance.FromMiles(1)));
+                    return false;
+                });
             });
         }
 
