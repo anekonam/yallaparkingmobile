@@ -40,6 +40,7 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell
+                                StyleId="disclosure"
                                 Height="60">
                                 <Grid
                                     VerticalOptions="FillAndExpand"
@@ -49,7 +50,7 @@
                                         <ColumnDefinition
                                             Width="0.3*" />
                                         <ColumnDefinition
-                                            Width="*" />
+                                            Width="*" />                                        
                                     </Grid.ColumnDefinitions>
                                     <Grid.RowDefinitions>
                                         <RowDefinition
@@ -75,7 +76,7 @@
                                             FontSize="12"
                                             HorizontalOptions="StartAndExpand"
                                             Text="{Binding RegistrationNumber}" />
-                                    </StackLayout>
+                                    </StackLayout>                                   
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>

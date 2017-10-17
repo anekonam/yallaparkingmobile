@@ -56,6 +56,8 @@ namespace YallaParkingMobile.Model {
 
         public string PropertyCity { get; set; }
 
+        public int PropertyEntryBufferMinutes { get; set; }
+
         private string number;
         public string Number {
             get {

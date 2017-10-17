@@ -36,9 +36,9 @@
             <StackLayout
                 Grid.Row="2">
                 <Label
+                    x:Name="Instruction"
                     Margin="40,20,40,20"
-                    HorizontalTextAlignment="Center"
-                    Text="Please arrive 15 minutes prior" />
+                    HorizontalTextAlignment="Center" />
                 <Label
                     Margin="40,10,40,0"
                     HorizontalTextAlignment="Center"
@@ -48,7 +48,7 @@
                     HorizontalTextAlignment="Center"
                     FontSize="16"
                     Style="{StaticResource Header}"
-                    Text="{Binding}" />
+                    Text="{Binding Number}" />
             </StackLayout>
             <ContentView
                 Padding="40"

@@ -98,11 +98,9 @@
                                                 RowSpacing="5">
                                                 <Grid.ColumnDefinitions>
                                                     <ColumnDefinition
-                                                        Width="0.4*" />
-                                                    <ColumnDefinition
                                                         Width="*" />
                                                     <ColumnDefinition
-                                                        Width="Auto" />
+                                                        Width="*" />
                                                 </Grid.ColumnDefinitions>
                                                 <Grid.RowDefinitions>
                                                     <RowDefinition
@@ -110,11 +108,11 @@
                                                     <RowDefinition
                                                         Height="Auto" />
                                                 </Grid.RowDefinitions>
-                                                 <Image
-                                                        HeightRequest="80"
-                                                    Margin="10,10,10,0"
-                                                        Aspect="AspectFill"
-                                                        Source="{Binding PropertyImage}" />
+                                                <Image
+                                                    HeightRequest="80"
+                                                    Margin="5"
+                                                    Aspect="AspectFill"
+                                                    Source="{Binding PropertyImage}" />
                                                 <StackLayout
                                                     VerticalOptions="CenterAndExpand"
                                                     Grid.Column="1">
@@ -133,11 +131,6 @@
                                                         HorizontalOptions="StartAndExpand"
                                                         Text="{Binding PropertyCity}" />
                                                 </StackLayout>
-                                                <Image
-                                                    Grid.Column="2"
-                                                    VerticalOptions="Center"
-                                                    Aspect="AspectFit"
-                                                    Source="disclaimer.png" />
                                                 <Label
                                                     Grid.Row="1"
                                                     FontSize="12"
@@ -150,6 +143,7 @@
                                                     Grid.Column="1"
                                                     Grid.ColumnSpan="2"
                                                     Padding="8"
+                                                    VerticalOptions="Start"
                                                     IsVisible="{Binding Pending}"
                                                     BackgroundColor="#ff8e30">
                                                     <Label
@@ -163,6 +157,7 @@
                                                     Grid.Column="1"
                                                     Grid.ColumnSpan="2"
                                                     Padding="8"
+                                                    VerticalOptions="Start"
                                                     IsVisible="{Binding Active}"
                                                     BackgroundColor="#ff8e30">
                                                     <Label
@@ -176,6 +171,7 @@
                                                     Grid.Column="1"
                                                     Grid.ColumnSpan="2"
                                                     Padding="8"
+                                                    VerticalOptions="Start"
                                                     IsVisible="{Binding Completed}"
                                                     BackgroundColor="#5FD25F">
                                                     <Label

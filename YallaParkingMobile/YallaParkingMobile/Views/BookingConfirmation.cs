@@ -14,16 +14,30 @@ using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using YallaParkingMobile.Utility;
 using ZXing.Net.Mobile.Forms;
+using YallaParkingMobile.Model;
 
 namespace YallaParkingMobile {
     public partial class BookingConfirmation : ContentPage {        
         public BookingConfirmation() {
-            InitializeComponent();
-            Analytics.TrackEvent("Viewing Booking Confirmation");          
-        }       
+            InitializeComponent();        
+        }
 
-       
-        private async void DoneButton_Clicked(object sender, EventArgs e) {
+		public BookingConfirmation(int entryMinutes) {
+			InitializeComponent();
+			Analytics.TrackEvent("Viewing Booking Confirmation");
+
+            this.Instruction.Text = string.Format("No need to rush, you can arrive {0} minutes before your bookings starts for free!", entryMinutes);
+		}
+
+        public BookingModel Model{
+            get{
+                return (BookingModel)this.BindingContext;
+            } set{
+                this.BindingContext = value;
+            }
+        }
+
+		private async void DoneButton_Clicked(object sender, EventArgs e) {
 			await Navigation.PushAsync(new Home());
         }
     }

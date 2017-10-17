@@ -74,5 +74,7 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+        public int EntryBufferMinutes { get; set; }
+
     }
 }
