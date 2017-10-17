@@ -51,6 +51,7 @@ namespace YallaParkingMobile.Control {
 
 			_base.Children.Add(_label, 0, 0);
 
+            this.StyleId = "none";
 			this.View = _base;
 
         }

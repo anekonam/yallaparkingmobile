@@ -40,7 +40,6 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell
-                                StyleId="disclosure"
                                 Height="60">
                                 <Grid
                                     VerticalOptions="FillAndExpand"
