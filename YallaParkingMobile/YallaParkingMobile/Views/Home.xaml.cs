@@ -30,23 +30,15 @@ namespace YallaParkingMobile {
 
             InitializeComponent();
 
-            if(this.Model.ParkNow){
-                this.ParkNowButton.BackgroundColor = Color.White;
-                this.ParkNowButton.BorderWidth = 1;
-                this.ParkNowButton.BorderColor = Color.FromHex("#ff8e30");
-                this.ParkNowButton.TextColor = Color.FromHex("#ff8e30");
-            } else{
-				this.ParkLaterButton.BackgroundColor = Color.White;
-                this.ParkLaterButton.BorderWidth = 1;
-				this.ParkLaterButton.BorderColor = Color.FromHex("#ff8e30");
-				this.ParkLaterButton.TextColor = Color.FromHex("#ff8e30");
-            }
+            UpdateButtonStates();
 
             NavigationPage.SetHasNavigationBar(this, false);
 
 			Analytics.TrackEvent("Viewing Home Page");
 
 			PropertyUtility.SetValue("LoggedIn", "true");
+            PropertyUtility.RemoveKey("query");
+            PropertyUtility.RemoveKey("hours");
 
 			CrossGeolocator.Current.PositionChanged += Current_PositionChanged;
 
@@ -68,6 +60,28 @@ namespace YallaParkingMobile {
             } set{
                 this.BindingContext = value;
             }
+        }
+
+        private void UpdateButtonStates(){
+			if (this.Model.ParkNow) {
+				this.ParkNowButton.BackgroundColor = Color.White;
+				this.ParkNowButton.BorderWidth = 1;
+				this.ParkNowButton.BorderColor = Color.FromHex("#ff8e30");
+				this.ParkNowButton.TextColor = Color.FromHex("#ff8e30");
+
+				this.ParkLaterButton.BackgroundColor = Color.FromHex("#ff8e30");
+				this.ParkLaterButton.BorderWidth = 0;
+				this.ParkLaterButton.TextColor = Color.White;
+			} else {
+				this.ParkNowButton.BackgroundColor = Color.FromHex("#ff8e30");
+				this.ParkNowButton.BorderWidth = 0;
+				this.ParkNowButton.TextColor = Color.White;
+
+				this.ParkLaterButton.BackgroundColor = Color.White;
+				this.ParkLaterButton.BorderWidth = 1;
+				this.ParkLaterButton.BorderColor = Color.FromHex("#ff8e30");
+				this.ParkLaterButton.TextColor = Color.FromHex("#ff8e30");
+			}
         }
 
 		async void Handle_Appearing(object sender, System.EventArgs e) {
@@ -241,18 +255,14 @@ namespace YallaParkingMobile {
             Menu.IsOpen = !Menu.IsOpen;
         }
 
-		private async void ParkNow_Clicked(object sender, EventArgs e) {
-			var model = new HomeModel();
-			var home = new Home(model);
-
-			await Navigation.PushAsync(home);
+		private void ParkNow_Clicked(object sender, EventArgs e) {
+            this.Model.ParkNow = true;
+            UpdateButtonStates();
 		}
 
-		private async void ParkLater_Clicked(object sender, EventArgs e) {
-			var model = new HomeModel(false);
-			var home = new Home(model);
-
-			await Navigation.PushAsync(home);
+		private void ParkLater_Clicked(object sender, EventArgs e) {
+            this.Model.ParkNow = false;
+            UpdateButtonStates();
 		}
 
         private async void FindParking_Clicked(object sender, EventArgs e) {
