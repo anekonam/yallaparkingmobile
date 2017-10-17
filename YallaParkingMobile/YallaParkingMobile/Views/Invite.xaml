@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
     xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
     x:Class="YallaParkingMobile.Invite"
     Title="Invite"
     Appearing="Handle_Appearing"
@@ -82,7 +83,7 @@
                         HorizontalOptions="Center"
                         Style="{StaticResource Header}" />
                     <StackLayout
-                        Margin="20, 10, 10, 10"
+                        Margin="20, 20, 10, 10"
                         Orientation="Horizontal">
                         <Image
                             Margin="0,0,5,0"
@@ -138,7 +139,7 @@
                             VerticalOptions="Center"
                             Source="menu-invite.png" />
                         <Button
-                            x:Name="Invite"
+                            x:Name="InviteButton"
                             FontSize="18"
                             Text="Invite"
                             TextColor="#ff8e30"

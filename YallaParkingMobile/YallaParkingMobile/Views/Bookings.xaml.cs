@@ -14,6 +14,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using YallaParkingMobile.Utility;
 using YallaParkingMobile.Model;
+using System.IO;
 
 namespace YallaParkingMobile {
     public partial class Bookings : ContentPage {        

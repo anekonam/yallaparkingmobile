@@ -229,7 +229,7 @@
                         HorizontalOptions="Center"
                         Style="{StaticResource Header}" />
                     <StackLayout
-                        Margin="20, 10, 10, 10"
+                        Margin="20, 20, 10, 10"
                         Orientation="Horizontal">
                         <Image
                             Margin="0,0,5,0"
@@ -242,6 +242,7 @@
                             Text="Find Parking"
                             TextColor="#ff8e30"
                             HorizontalOptions="Start"
+                            VerticalOptions="Center"
                             Clicked="FindParking_Clicked" />
                     </StackLayout>
                     <StackLayout
@@ -258,6 +259,7 @@
                             Text="My Bookings"
                             TextColor="#ff8e30"
                             HorizontalOptions="Start"
+                             VerticalOptions="Center"
                             Clicked="MyBookings_Clicked" />
                     </StackLayout>
                     <StackLayout
@@ -274,6 +276,7 @@
                             Text="My Profile"
                             TextColor="#ff8e30"
                             HorizontalOptions="Start"
+                            VerticalOptions="Center"
                             Clicked="MyProfile_Clicked" />
                     </StackLayout>
                     <StackLayout
@@ -290,6 +293,7 @@
                             Text="Invite"
                             TextColor="#ff8e30"
                             HorizontalOptions="Start"
+                            VerticalOptions="Center"
                             Clicked="Invite_Clicked" />
                     </StackLayout>
                     <StackLayout
@@ -306,6 +310,7 @@
                             Text="Logout"
                             TextColor="#ff8e30"
                             HorizontalOptions="Start"
+                            VerticalOptions="Center"
                             Clicked="Logout_Clicked" />
                     </StackLayout>
                 </StackLayout>

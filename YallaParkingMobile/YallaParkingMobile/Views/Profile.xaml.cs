@@ -56,6 +56,7 @@ namespace YallaParkingMobile {
 			if (!string.IsNullOrWhiteSpace(profile.ProfilePicture)) {
 				var profileImage = !string.IsNullOrWhiteSpace(this.Model.ProfilePicture) && this.Model.ProfilePicture.Contains(",") ? this.Model.ProfilePicture.Split(',')[1] : this.Model.ProfilePicture;
 				this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profileImage)));
+                this.ProfileMenuImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profileImage)));
 			}
 
             this.BusyIndicator.IsBusy = false;
