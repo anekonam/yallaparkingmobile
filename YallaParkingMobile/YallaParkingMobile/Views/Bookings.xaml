@@ -94,11 +94,11 @@
                                             Height="130">
                                             <Grid
                                                 VerticalOptions="FillAndExpand"
-                                                ColumnSpacing="10"
+                                                ColumnSpacing="5"
                                                 RowSpacing="5">
                                                 <Grid.ColumnDefinitions>
                                                     <ColumnDefinition
-                                                        Width="*" />
+                                                        Width="0.7*" />
                                                     <ColumnDefinition
                                                         Width="*" />
                                                 </Grid.ColumnDefinitions>
@@ -115,6 +115,7 @@
                                                     Source="{Binding PropertyImage}" />
                                                 <StackLayout
                                                     VerticalOptions="CenterAndExpand"
+                                                    HorizontalOptions="StartAndExpand"
                                                     Grid.Column="1">
                                                     <Label
                                                         HorizontalOptions="StartAndExpand"
@@ -143,6 +144,7 @@
                                                     Grid.Column="1"
                                                     Grid.ColumnSpan="2"
                                                     Padding="8"
+                                                    Margin="0,0,-30,0"
                                                     VerticalOptions="Start"
                                                     IsVisible="{Binding Pending}"
                                                     BackgroundColor="#ff8e30">
@@ -157,6 +159,7 @@
                                                     Grid.Column="1"
                                                     Grid.ColumnSpan="2"
                                                     Padding="8"
+                                                    Margin="0,0,-30,0"
                                                     VerticalOptions="Start"
                                                     IsVisible="{Binding Active}"
                                                     BackgroundColor="#ff8e30">
@@ -171,6 +174,7 @@
                                                     Grid.Column="1"
                                                     Grid.ColumnSpan="2"
                                                     Padding="8"
+                                                    Margin="0,0,-30,0"
                                                     VerticalOptions="Start"
                                                     IsVisible="{Binding Completed}"
                                                     BackgroundColor="#5FD25F">
