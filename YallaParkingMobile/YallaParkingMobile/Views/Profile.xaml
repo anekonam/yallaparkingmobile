@@ -81,10 +81,10 @@
                                             Height="120"
                                             Tapped="UpdateProfile_Tapped">
                                             <StackLayout
-                                                Margin="10"
+                                                Margin="10,5,5,5"
                                                 Orientation="Horizontal">
                                                 <Image
-                                                    Source="updateProfile.png"
+                                                    Source="menu-profile.png"
                                                     Aspect="AspectFill"
                                                     VerticalOptions="Center" />
                                                 <Label
@@ -98,7 +98,7 @@
                                             Height="120"
                                             Tapped="VerifyProfile_Tapped">
                                             <StackLayout
-                                                Margin="10"
+                                                Margin="10,5,5,5"
                                                 Orientation="Horizontal">
                                                 <Image
                                                     Source="verify.png"
@@ -115,7 +115,7 @@
                                             Height="120"
                                             Tapped="Garage_Tapped">
                                             <StackLayout
-                                                Margin="10"
+                                                Margin="10,5,5,5"
                                                 Orientation="Horizontal">
                                                 <Image
                                                     Source="garage.png"
@@ -132,7 +132,7 @@
                                             Height="120"
                                             Tapped="Wallet_Tapped">
                                             <StackLayout
-                                                Margin="10"
+                                                Margin="10,5,5,5"
                                                 Orientation="Horizontal">
                                                 <Image
                                                     Source="wallet.png"
@@ -151,7 +151,7 @@
                                             Height="120"
                                             Tapped="Terms_Tapped">
                                             <StackLayout
-                                                Margin="10"
+                                                Margin="10,5,5,5"
                                                 Orientation="Horizontal">
                                                 <Image
                                                     Source="terms.png"
@@ -170,7 +170,7 @@
                                             Tapped="Contact_Tapped"
                                             Height="120">
                                             <StackLayout
-                                                Margin="10"
+                                                 Margin="10,5,5,5"
                                                 Orientation="Horizontal">
                                                 <Image
                                                     Source="contact.png"
