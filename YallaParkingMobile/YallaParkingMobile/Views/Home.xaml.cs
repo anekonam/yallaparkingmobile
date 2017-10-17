@@ -300,12 +300,7 @@ namespace YallaParkingMobile {
         private async void Invite_Clicked(object sender, EventArgs e) {
             await Navigation.PushAsync(new Invite());
         }
-
-        private async void Logout_Clicked(object sender, EventArgs e) {
-            PropertyUtility.RemoveKey("token");
-            await Navigation.PushAsync(new Login());
-        }
-
+              
         private void HoursSlider_ValueChanged(object sender, ValueChangedEventArgs e) {
             var newStep = Math.Round(e.NewValue / 1.0);
 

@@ -86,11 +86,6 @@ namespace YallaParkingMobile {
             await Navigation.PushAsync(new Invite());
         }
 
-        private async void Logout_Clicked(object sender, EventArgs e) {
-            PropertyUtility.RemoveKey("token");
-            await Navigation.PushAsync(new Login());
-        }
-
         async void ProfileImage_Tapped(object sender, EventArgs e) {
             await CrossMedia.Current.Initialize();
 
@@ -182,5 +177,11 @@ namespace YallaParkingMobile {
         private void Contact_Tapped(object sender, System.EventArgs e) {
             Device.OpenUri(new Uri("tel:+971566595697"));
         }
-    }
+
+		private async void Logout_Tapped(object sender, EventArgs e) {
+			PropertyUtility.RemoveKey("token");
+			await Navigation.PushAsync(new Login());
+		}
+
+	}
 }

@@ -275,22 +275,6 @@
                             HorizontalOptions="Start"
                             Clicked="Invite_Clicked" />
                     </StackLayout>
-                    <StackLayout
-                        Margin="20, 10, 10, 10"
-                        Orientation="Horizontal">
-                        <Image
-                            Margin="0,0,5,0"
-                            HeightRequest="30"
-                            VerticalOptions="Center"
-                            Source="menu-logout.png" />
-                        <Button
-                            x:Name="Logout"
-                            FontSize="18"
-                            Text="Logout"
-                            TextColor="#ff8e30"
-                            HorizontalOptions="Start"
-                            Clicked="Logout_Clicked" />
-                    </StackLayout>
                 </StackLayout>
             </telerikPrimitives:RadSideDrawer.DrawerContent>
         </telerikPrimitives:RadSideDrawer>

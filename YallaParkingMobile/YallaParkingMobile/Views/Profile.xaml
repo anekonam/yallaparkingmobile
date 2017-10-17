@@ -162,9 +162,7 @@
                                                     VerticalOptions="Center"
                                                     Text="Terms &amp; Conditions" />
                                             </StackLayout>
-                                        </ViewCell>
-                                    </TableSection>
-                                    <TableSection>
+                                        </ViewCell>                                  
                                         <ViewCell
                                             x:Name="Contact"
                                             Tapped="Contact_Tapped"
@@ -180,6 +178,25 @@
                                                     Margin="10,0,0,0"
                                                     VerticalOptions="Center"
                                                     Text="Contact Us" />
+                                            </StackLayout>
+                                        </ViewCell>
+                                    </TableSection>
+                                     <TableSection>
+                                        <ViewCell
+                                            x:Name="Logout"
+                                            Tapped="Logout_Tapped"
+                                            Height="120">
+                                            <StackLayout
+                                                 Margin="10,5,5,5"
+                                                Orientation="Horizontal">
+                                                <Image
+                                                    Source="menu-logout.png"
+                                                    Aspect="AspectFit"
+                                                    VerticalOptions="Center" />
+                                                <Label
+                                                    Margin="10,0,0,0"
+                                                    VerticalOptions="Center"
+                                                    Text="Log Out" />
                                             </StackLayout>
                                         </ViewCell>
                                     </TableSection>
@@ -271,22 +288,6 @@
                             TextColor="#ff8e30"
                             HorizontalOptions="Start"
                             Clicked="Invite_Clicked" />
-                    </StackLayout>
-                    <StackLayout
-                        Margin="20, 10, 10, 10"
-                        Orientation="Horizontal">
-                        <Image
-                            Margin="0,0,5,0"
-                            HeightRequest="30"
-                            VerticalOptions="Center"
-                            Source="menu-logout.png" />
-                        <Button
-                            x:Name="Logout"
-                            FontSize="18"
-                            Text="Logout"
-                            TextColor="#ff8e30"
-                            HorizontalOptions="Start"
-                            Clicked="Logout_Clicked" />
                     </StackLayout>
                 </StackLayout>
             </telerikPrimitives:RadSideDrawer.DrawerContent>

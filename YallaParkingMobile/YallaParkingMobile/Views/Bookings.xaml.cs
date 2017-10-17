@@ -88,11 +88,5 @@ namespace YallaParkingMobile {
             await Navigation.PushAsync(new Invite());
         }
 
-        private async void Logout_Clicked(object sender, EventArgs e) {
-            PropertyUtility.RemoveKey("token");
-            await Navigation.PushAsync(new Login());
-        }
-
-       
     }
 }
