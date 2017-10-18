@@ -28,9 +28,9 @@ namespace YallaParkingMobile.Model {
 
 		public string UserCardName { get; set; }
 
-		public string UserCardExpireMonth { get; set; }
+		public int UserCardExpireMonth { get; set; }
 
-		public string UserCardExpireYear { get; set; }
+		public int UserCardExpireYear { get; set; }
 
 		public string UserCardExpireMonthYear {
 			get {
