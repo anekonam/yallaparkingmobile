@@ -25,22 +25,7 @@ namespace YallaParkingMobile {
             InitializeComponent();
 
             Analytics.TrackEvent("Viewing Update Card Details Page");
-
-            this.CardNumber.Placeholder = "•••• •••• •••• ••••";
-            this.Cvc.Placeholder = "•••";
-
-            var brandPicker = new BorderlessPicker {
-                Title = "Select Brand...",
-                ItemsSource = new List<string>{
-                    "Visa",
-                    "MasterCard",
-                    "American Express",
-                }
-            };
-
-            brandPicker.SetBinding(Picker.SelectedItemProperty, "Brand", BindingMode.TwoWay);
-            this.Brand.Picker = brandPicker;
-
+         
             var months = new List<string>();
 
             for (var i = 0; i < 12;i++){
@@ -76,13 +61,32 @@ namespace YallaParkingMobile {
             get {
                 return (UserCardModel)this.BindingContext;
             }                
-        }   
+        }
+
+        void Handle_Appearing(object sender, System.EventArgs e) {
+			if (!this.Model.IsNew) {
+				if (CardDetails.Contains(CardNumber)) {
+					CardDetails.Remove(CardNumber);
+				}
+
+				if (CardDetails.Contains(Cvc)) {
+					CardDetails.Remove(Cvc);
+				}
+			} else {
+				if (CardDetails.Contains(EncodedCardNumber)) {
+					CardDetails.Remove(EncodedCardNumber);
+				}
+
+				this.CardNumber.Placeholder = "•••• •••• •••• ••••";
+				this.Cvc.Placeholder = "•••";
+			}
+
+		}
+
+
 
         async void UpdateButton_Clicked(object sender, EventArgs e) {
-            if(string.IsNullOrWhiteSpace(this.Model.Brand)){
-                await DisplayAlert("Brand Required", "Please select a Brand", "Ok");
-                return;
-            } else if(string.IsNullOrWhiteSpace((this.Model.Name))){
+            if(string.IsNullOrWhiteSpace((this.Model.Name))){
                 await DisplayAlert("Name Required", "Please provide a Name", "Ok");
                 return;
             } else if (string.IsNullOrWhiteSpace((this.Model.ExpireMonth))) {
@@ -102,12 +106,17 @@ namespace YallaParkingMobile {
             Activity.IsVisible = true;
             Activity.IsRunning = true;
 
-            await ServiceUtility.UpdateUserCard(this.Model);
-           
-            await this.Navigation.PopAsync();
+            var userCard = await ServiceUtility.UpdateUserCard(this.Model);
 
-            Activity.IsRunning = false;
-            Activity.IsVisible = false;
+			Activity.IsRunning = false;
+			Activity.IsVisible = false;
+
+            if (userCard == null) {
+                await DisplayAlert("Card Save Error", "Unable to save your card details, please ensure your card details are valid", "Ok");
+            } else {
+                await this.Navigation.PopAsync();
+            }
+
         }
     }
 }

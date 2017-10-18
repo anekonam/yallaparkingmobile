@@ -162,11 +162,96 @@
                 </TableSection>
                 <TableSection
                     Title="Vehicle">
-                    <ImageCell
-                        ImageSource="{Binding UserCarImage}"
-                        Text="{Binding UserCarMakeAndModel}"
-                        Detail="{Binding UserCarRegAndColor}">
-                    </ImageCell>
+                    <ViewCell
+                        Height="60">
+                        <Grid
+                            VerticalOptions="FillAndExpand"
+                            ColumnSpacing="10"
+                            RowSpacing="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    Width="0.3*" />
+                                <ColumnDefinition
+                                    Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+                                    Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image
+                                HeightRequest="40"
+                                Margin="28,10,10,10"
+                                Aspect="AspectFill"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                Source="{Binding UserCarImage}" />
+                            <StackLayout
+                                VerticalOptions="CenterAndExpand"
+                                Grid.Column="1">
+                                <Label
+                                    HorizontalOptions="StartAndExpand"
+                                    FontSize="16"
+                                    TextColor="Black"
+                                    Text="{Binding UserCarMakeAndModel}"
+                                    Style="{StaticResource Header}" />
+                                <Label
+                                    FontSize="12"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="{Binding UserCarRegistrationNumber}" />
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+                <TableSection
+                    Title="Payment Method">
+                    <ViewCell
+                        Height="60">
+                        <Grid
+                            VerticalOptions="FillAndExpand"
+                            ColumnSpacing="10"
+                            RowSpacing="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    Width="0.3*" />
+                                <ColumnDefinition
+                                    Width="*" />
+                                <ColumnDefinition
+                                    Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+                                    Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Image
+                                HeightRequest="40"
+                                Margin="28,10,10,10"
+                                Aspect="AspectFit"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                Source="{Binding UserCardImage}" />
+                            <StackLayout
+                                VerticalOptions="CenterAndExpand"
+                                Grid.Column="1">
+                                <Label
+                                    HorizontalOptions="StartAndExpand"
+                                    FontSize="16"
+                                    TextColor="Black"
+                                    Text="{Binding UserCardName}"
+                                    Style="{StaticResource Header}" />
+                                <Label
+                                    FontSize="13"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="{Binding UserCardEncodedCardNumber}" />
+                            </StackLayout>
+                            <Label
+                                Grid.Column="2"
+                                FontSize="13"
+                                VerticalOptions="Center"
+                                HorizontalOptions="EndAndExpand"
+                                Margin="0,0,28,0"
+                                Text="{Binding UserCardExpireMonthYear}" />
+                        </Grid>
+                    </ViewCell>
                 </TableSection>
             </TableRoot>
         </control:MenuTableView>

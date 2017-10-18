@@ -47,7 +47,7 @@ namespace YallaParkingMobile {
             SearchDate.MinimumDate = DateTime.Now;
 
             var maxHours = (int)Math.Ceiling((DateTime.Now.Date.AddDays(1) - DateTime.Now).TotalHours);
-            HoursSlider.Maximum = maxHours >=1 ? maxHours : 1;
+            HoursSlider.Maximum = maxHours >=2 ? maxHours : 2;
             SearchTime.Time = TimeSpan.FromHours(DateTime.Now.Hour < 23 ? DateTime.Now.Hour + 1 : 0);
 
             SearchDate.Effects.Add(Effect.Resolve(("Effects.BorderlessEffect")));

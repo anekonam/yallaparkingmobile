@@ -14,6 +14,39 @@ namespace YallaParkingMobile.Model {
 
         public int UserCardId { get; set; }
 
+        public string UserCardBrand { get; set; }
+
+		public ImageSource UserCardImage {
+			get {
+				if (!string.IsNullOrWhiteSpace(this.UserCardBrand)) {
+					return ImageSource.FromFile(string.Format("{0}-logo.png", this.UserCardBrand.Replace(" ", "-")));
+				}
+
+				return null;
+			}
+		}
+
+		public string UserCardName { get; set; }
+
+		public string UserCardExpireMonth { get; set; }
+
+		public string UserCardExpireYear { get; set; }
+
+		public string UserCardExpireMonthYear {
+			get {
+				return string.Format("{0}/{1}", this.UserCardExpireMonth, this.UserCardExpireYear);
+			}
+		}
+        		
+
+		public string UserCardLastFourDigits { get; set; }
+
+		public string UserCardEncodedCardNumber {
+			get {
+				return string.Format("**** **** **** {0}", this.UserCardLastFourDigits).Replace('*', '\u2022');
+			}
+		}
+
         public ImageSource UserCarImage {
             get {
                 if (!string.IsNullOrWhiteSpace(this.UserCarMake)) {

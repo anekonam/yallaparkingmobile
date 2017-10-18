@@ -284,7 +284,7 @@ namespace YallaParkingMobile.Utility {
 				if (response.IsSuccessStatusCode) {
 					var profileResponse = await response.Content.ReadAsStringAsync();
 					return JsonConvert.DeserializeObject<UserCardModel>(profileResponse);
-				}
+                } 
 			} catch {
 				return null;
 			}

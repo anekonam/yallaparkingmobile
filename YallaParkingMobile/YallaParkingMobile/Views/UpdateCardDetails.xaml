@@ -6,7 +6,8 @@
     xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
     xmlns:control="clr-namespace:YallaParkingMobile.Control;assembly=YallaParkingMobile"
     x:Class="YallaParkingMobile.UpdateCardDetails"
-    Title="Card Details">
+    Title="Card Details"
+    Appearing="Handle_Appearing">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition
@@ -22,30 +23,38 @@
             Color="#ff8e30" />
         <control:MenuTableView
             Grid.Row="0">
-            <TableSection>
-                <control:PickerCell
-                    x:Name="Brand"
-                    Label="Brand"
-                    BindingContext="{Binding}" />
+            <TableSection
+                x:Name="CardDetails">                
                 <EntryCell
                     LabelColor="#a1a1b4"
                     Label="Name"
                     HorizontalTextAlignment="End"
+                    IsEnabled="{Binding IsNew}"
                     Text="{Binding Name, Mode=TwoWay}" />
                 <EntryCell
                     x:Name="CardNumber"
                     LabelColor="#a1a1b4"
                     Label="Card Number"
-                    Keyboard="Numeric"
+                    Keyboard="Numeric"            
                     HorizontalTextAlignment="End"
                     Text="{Binding Number, Mode=TwoWay}" />
+                <EntryCell
+                    x:Name="EncodedCardNumber"
+                    LabelColor="#a1a1b4"
+                    Label="Card Number"
+                    Keyboard="Numeric"
+                    IsEnabled="false"
+                    HorizontalTextAlignment="End"
+                    Text="{Binding EncodedCardNumber, Mode=TwoWay}" />
                 <control:PickerCell
                     x:Name="ExpireMonth"
                     Label="Expiry Month"
+                    IsEnabled="{Binding IsNew}"
                     BindingContext="{Binding}" />
                 <control:PickerCell
                     x:Name="ExpireYear"
                     Label="Expiry Year"
+                    IsEnabled="{Binding IsNew}"
                     BindingContext="{Binding}" />
                 <EntryCell
                     x:Name="Cvc"
@@ -63,6 +72,7 @@
             Style="{StaticResource GreenButton}"
             Text="Save"
             Clicked="UpdateButton_Clicked"
+            IsVisible="{Binding IsNew}"
             HorizontalOptions="FillAndExpand"
             VerticalOptions="Center" />
     </Grid>

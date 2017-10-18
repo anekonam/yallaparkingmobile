@@ -6,6 +6,12 @@ namespace YallaParkingMobile.Model {
         
 		public int? UserCardId { get; set; }
 
+        public bool IsNew{
+            get{
+                return !this.UserCardId.HasValue;
+            }
+        }
+
 		public ImageSource Image {
 			get {
 				if (!string.IsNullOrWhiteSpace(this.Brand)) {

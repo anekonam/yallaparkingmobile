@@ -135,12 +135,16 @@ namespace YallaParkingMobile {
             Activity.IsVisible = true;
             Activity.IsRunning = true;
 
-            await ServiceUtility.UpdateUserCar(this.Model);
-           
-            await this.Navigation.PopAsync();
+			var userCar = await ServiceUtility.UpdateUserCar(this.Model);
 
-            Activity.IsRunning = false;
-            Activity.IsVisible = false;
+			Activity.IsRunning = false;
+			Activity.IsVisible = false;
+
+			if (userCar == null) {
+				await DisplayAlert("Car Save Error", "Unable to save your car details, please ensure your card details are valid", "Ok");
+			} else {
+				await this.Navigation.PopAsync();
+			}
         }
     }
 }

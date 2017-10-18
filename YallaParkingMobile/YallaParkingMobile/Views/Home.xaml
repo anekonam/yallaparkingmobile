@@ -132,7 +132,7 @@
                                     x:Name="HoursSlider"
                                     Maximum="24"
                                     Minimum="1"
-                                    Value="2"
+                                    Value="1"
                                     ValueChanged="HoursSlider_ValueChanged"
                                     HorizontalOptions="FillAndExpand" />
                             </StackLayout>
