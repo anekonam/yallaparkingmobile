@@ -117,6 +117,7 @@
                 <TableSection
                     Title="Select Vehicle">
                     <ViewCell
+                        StyleId="none"
                         Height="300">
                         <ListView
                             x:Name="Cars"
@@ -128,22 +129,136 @@
                             <ListView.SeparatorVisibility>None</ListView.SeparatorVisibility>
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <ImageCell
-                                        ImageSource="{Binding Image}"
-                                        Text="{Binding MakeAndModel}"
-                                        Detail="{Binding RegAndColor}">
-                                    </ImageCell>
+                                    <ViewCell
+                                        Height="60">
+                                        <Grid
+                                            VerticalOptions="FillAndExpand"
+                                            ColumnSpacing="10"
+                                            RowSpacing="5">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition
+                                                    Width="0.3*" />
+                                                <ColumnDefinition
+                                                    Width="*" />
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition
+                                                    Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Image
+                                                HeightRequest="40"
+                                                Margin="28,10,10,10"
+                                                Aspect="AspectFill"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="Center"
+                                                Source="{Binding Image}" />
+                                            <StackLayout
+                                                VerticalOptions="CenterAndExpand"
+                                                Grid.Column="1">
+                                                <Label
+                                                    HorizontalOptions="StartAndExpand"
+                                                    FontSize="16"
+                                                    TextColor="Black"
+                                                    Text="{Binding MakeAndModel}"
+                                                    Style="{StaticResource Header}" />
+                                                <Label
+                                                    FontSize="12"
+                                                    HorizontalOptions="StartAndExpand"
+                                                    Text="{Binding RegistrationNumber}" />
+                                            </StackLayout>
+                                        </Grid>
+                                    </ViewCell>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
                     </ViewCell>
-                    <ViewCell>
+                    <ViewCell
+                        StyleId="none">
                         <Button
-                            x:Name="AddNewButton"
+                            x:Name="AddNewCarButton"
                             Style="{StaticResource GreyTextButton}"
                             Text="Add New Vehicle"
                             FontSize="12"
-                            Clicked="AddNewButton_Clicked"
+                            Clicked="AddNewCarButton_Clicked"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Center" />
+                    </ViewCell>
+                </TableSection>
+                <TableSection                    
+                    Title="Select Card">
+                    <ViewCell                        
+                        StyleId="none"
+                        Height="300">
+                        <ListView
+                            x:Name="Cards"
+                            HasUnevenRows="true"
+                            HeightRequest="300"
+                            VerticalOptions="FillAndExpand"
+                            ItemsSource="{Binding UserCards}"
+                            SelectedItem="{Binding SelectedUserCard,Mode=TwoWay}">
+                            <ListView.SeparatorVisibility>None</ListView.SeparatorVisibility>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell
+                                        Height="60">
+                                        <Grid
+                                            VerticalOptions="FillAndExpand"
+                                            ColumnSpacing="10"
+                                            RowSpacing="5">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition
+                                                    Width="0.3*" />
+                                                <ColumnDefinition
+                                                    Width="*" />
+                                                <ColumnDefinition
+                                                    Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition
+                                                    Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Image
+                                                HeightRequest="40"
+                                                Margin="28,10,10,10"
+                                                Aspect="AspectFit"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="Center"
+                                                Source="{Binding Image}" />
+                                            <StackLayout
+                                                VerticalOptions="CenterAndExpand"
+                                                Grid.Column="1">
+                                                <Label
+                                                    HorizontalOptions="StartAndExpand"
+                                                    FontSize="16"
+                                                    TextColor="Black"
+                                                    Text="{Binding Name}"
+                                                    Style="{StaticResource Header}" />
+                                                <Label
+                                                    FontSize="13"
+                                                    HorizontalOptions="StartAndExpand"
+                                                    Text="{Binding EncodedCardNumber}" />
+                                            </StackLayout>
+                                            <Label
+                                                Grid.Column="2"
+                                                FontSize="13"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="EndAndExpand"
+                                                Margin="0,0,28,0"
+                                                Text="{Binding ExpireMonthYear}" />
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ViewCell>
+                    <ViewCell
+                        StyleId="none">
+                        <Button
+                            x:Name="AddNewCardButton"
+                            Style="{StaticResource GreyTextButton}"
+                            Text="Add New Card"
+                            FontSize="12"
+                            Clicked="AddNewCardButton_Clicked"
                             HorizontalOptions="FillAndExpand"
                             VerticalOptions="Center" />
                     </ViewCell>

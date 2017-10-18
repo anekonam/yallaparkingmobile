@@ -93,6 +93,41 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+		private UserCardModel selectedUserCard;
+		public UserCardModel SelectedUserCard {
+			get {
+				return selectedUserCard;
+			}
+			set {
+				if (selectedUserCard != value) {
+					selectedUserCard = value;
+
+					if (PropertyChanged != null) {
+						PropertyChanged(this, new PropertyChangedEventArgs("SelectedUserCard"));
+						PropertyChanged(this, new PropertyChangedEventArgs("CanBook"));
+						PropertyChanged(this, new PropertyChangedEventArgs("ParkingNow"));
+						PropertyChanged(this, new PropertyChangedEventArgs("Booking"));
+					}
+				}
+			}
+		}
+
+		private ObservableCollection<UserCardModel> userCards = new ObservableCollection<UserCardModel>();
+		public ObservableCollection<UserCardModel> UserCards {
+			get {
+				return userCards;
+			}
+			set {
+				if (userCards != value) {
+					userCards = value;
+
+					if (PropertyChanged != null) {
+						PropertyChanged(this, new PropertyChangedEventArgs("UserCards"));
+					}
+				}
+			}
+		}
+
         public string BookText{
             get{
                 return this.ParkingNow ? "Park Now" : "Book Now";
@@ -101,7 +136,7 @@ namespace YallaParkingMobile.Model {
 
         public bool CanBook{
             get{
-                return this.Property != null && this.SelectedUserCar != null;
+                return this.Property != null && this.SelectedUserCar != null && this.SelectedUserCard!=null;
             }
         }
 
@@ -110,6 +145,7 @@ namespace YallaParkingMobile.Model {
         public async Task<bool> BookParking(){
             var model = new BookingModel {
                 UserCarId = this.SelectedUserCar.UserCarId.Value,
+                UserCardId = this.SelectedUserCard.UserCardId.Value,
                 PropertyId = this.Property.PropertyId,
                 Start = this.Property.StartDate,
                 End = this.Property.EndDate,

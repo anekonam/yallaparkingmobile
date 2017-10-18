@@ -43,6 +43,12 @@ namespace YallaParkingMobile {
 			if (userCars != null && userCars.Any()) {
                 this.Model.UserCars = new ObservableCollection<UserCarModel>(userCars);
 			}
+
+			var userCards = await ServiceUtility.GetUserCards();
+
+			if (userCards != null && userCards.Any()) {
+				this.Model.UserCards = new ObservableCollection<UserCardModel>(userCards);
+			}
         }
 
         private async void ApplyCodeButton_Clicked(object sender, EventArgs e) {
@@ -67,11 +73,18 @@ namespace YallaParkingMobile {
             }
         }
 
-		async void AddNewButton_Clicked(object sender, EventArgs e) {
+		async void AddNewCarButton_Clicked(object sender, EventArgs e) {
 			var updateCarDetails = new UpdateCarDetails();
 			var userCar = new UserCarModel();
 			updateCarDetails.BindingContext = userCar;
 			await Navigation.PushAsync(updateCarDetails);
+		}
+
+		async void AddNewCardButton_Clicked(object sender, EventArgs e) {
+			var updateCardDetails = new UpdateCardDetails();
+			var userCard = new UserCardModel();
+			updateCardDetails.BindingContext = userCard;
+			await Navigation.PushAsync(updateCardDetails);
 		}
 
         async void Book_Clicked(object sender, System.EventArgs e) {

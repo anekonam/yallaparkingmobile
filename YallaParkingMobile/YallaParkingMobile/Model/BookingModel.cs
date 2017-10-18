@@ -12,6 +12,8 @@ namespace YallaParkingMobile.Model {
 
         public int UserCarId { get; set; }
 
+        public int UserCardId { get; set; }
+
         public ImageSource UserCarImage {
             get {
                 if (!string.IsNullOrWhiteSpace(this.UserCarMake)) {

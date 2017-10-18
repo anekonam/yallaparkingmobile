@@ -48,7 +48,7 @@
                     HorizontalTextAlignment="Center"
                     FontSize="16"
                     Style="{StaticResource Header}"
-                    Text="{Binding Number}" />
+                    Text="{Binding}" />
             </StackLayout>
             <ContentView
                 Padding="40"

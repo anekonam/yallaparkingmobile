@@ -98,6 +98,7 @@ namespace YallaParkingMobile {
 
             var profile = await ServiceUtility.Profile();
             this.ProfileName.Text = profile.Name;
+
 			if (!string.IsNullOrWhiteSpace(profile.ProfilePicture)) {
 				var profileImage = !string.IsNullOrWhiteSpace(profile.ProfilePicture) && profile.ProfilePicture.Contains(",") ? profile.ProfilePicture.Split(',')[1] : profile.ProfilePicture;
 				this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profileImage)));
@@ -109,7 +110,9 @@ namespace YallaParkingMobile {
         }
 
         async Task LoadData(string query = null) {
-            this.Model.SelectedProperty = null;
+            if (this.Model != null) {
+                this.Model.SelectedProperty = null;
+            }
 
             var startDate = this.SearchDate.Date;
             startDate.Date.Add(this.SearchTime.Time);
