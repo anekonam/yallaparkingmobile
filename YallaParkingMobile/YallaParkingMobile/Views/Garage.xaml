@@ -21,7 +21,6 @@
         </telerikPrimitives:RadBusyIndicator.BusyContent>
         <telerikPrimitives:RadBusyIndicator.Content>
             <Grid
-                Padding="0,15,0,0"
                 BackgroundColor="#fafcfe">
                 <Grid.RowDefinitions>
                     <RowDefinition
@@ -39,12 +38,12 @@
                     <ListView.SeparatorVisibility>None</ListView.SeparatorVisibility>
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <ViewCell
-                                Height="60">
+                            <ViewCell>
                                 <Grid
                                     VerticalOptions="FillAndExpand"
                                     ColumnSpacing="10"
-                                    RowSpacing="5">
+                                    RowSpacing="8"
+                                    Padding="10,10,10,10">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition
                                             Width="0.3*" />

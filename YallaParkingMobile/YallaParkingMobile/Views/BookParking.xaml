@@ -129,8 +129,7 @@
                             <ListView.SeparatorVisibility>None</ListView.SeparatorVisibility>
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <ViewCell
-                                        Height="60">
+                                    <ViewCell>
                                         <Grid
                                             VerticalOptions="FillAndExpand"
                                             ColumnSpacing="10"
@@ -160,11 +159,13 @@
                                                     FontSize="16"
                                                     TextColor="Black"
                                                     Text="{Binding MakeAndModel}"
-                                                    Style="{StaticResource Header}" />
+                                                    Style="{StaticResource Header}" 
+                                                    />
                                                 <Label
                                                     FontSize="12"
                                                     HorizontalOptions="StartAndExpand"
-                                                    Text="{Binding RegistrationNumber}" />
+                                                    Text="{Binding RegistrationNumber}"
+                                                    />
                                             </StackLayout>
                                         </Grid>
                                     </ViewCell>

@@ -27,7 +27,7 @@
                 x:Name="CardDetails">                
                 <EntryCell
                     LabelColor="#a1a1b4"
-                    Label="Name"
+                    Label="Name On Card"
                     HorizontalTextAlignment="End"
                     IsEnabled="{Binding IsNew}"
                     Text="{Binding Name, Mode=TwoWay}" />
@@ -59,12 +59,21 @@
                 <EntryCell
                     x:Name="Cvc"
                     LabelColor="#a1a1b4"
-                    Label="CVC"
+                    Label="CVV"
                     Keyboard="Numeric"
                     HorizontalTextAlignment="End"
                     Text="{Binding Cvc, Mode=TwoWay}" />
             </TableSection>
         </control:MenuTableView>
+            <StackLayout
+                Margin="20,20,20,20"
+                Orientation="Horizontal">
+                <Label
+                    Margin="10,0,0,0"
+                    VerticalOptions="Center"
+                    FontSize ="18"
+                    Text="* Your payment details are stored securely *" />
+            </StackLayout>
         <Button
             Grid.Row="1"
             Margin="10"

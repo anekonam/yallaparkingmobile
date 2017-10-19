@@ -16,6 +16,7 @@ using YallaParkingMobile.Model;
 using YallaParkingMobile.Utility;
 using Telerik.XamarinForms.Input.AutoComplete;
 using System.IO;
+using Telerik.XamarinForms.Common;
 
 namespace YallaParkingMobile {
     public partial class Home : ContentPage {
@@ -69,19 +70,24 @@ namespace YallaParkingMobile {
 				this.ParkNowButton.BorderWidth = 1;
 				this.ParkNowButton.BorderColor = Color.FromHex("#ff8e30");
 				this.ParkNowButton.TextColor = Color.FromHex("#ff8e30");
+                this.ParkNowButton.FontAttributes = FontAttributes.Bold;
 
 				this.ParkLaterButton.BackgroundColor = Color.FromHex("#ff8e30");
 				this.ParkLaterButton.BorderWidth = 0;
 				this.ParkLaterButton.TextColor = Color.White;
+                this.ParkLaterButton.FontAttributes = FontAttributes.None;
+
 			} else {
 				this.ParkNowButton.BackgroundColor = Color.FromHex("#ff8e30");
 				this.ParkNowButton.BorderWidth = 0;
 				this.ParkNowButton.TextColor = Color.White;
-
+                this.ParkNowButton.FontAttributes = FontAttributes.None;
+                 
 				this.ParkLaterButton.BackgroundColor = Color.White;
 				this.ParkLaterButton.BorderWidth = 1;
 				this.ParkLaterButton.BorderColor = Color.FromHex("#ff8e30");
 				this.ParkLaterButton.TextColor = Color.FromHex("#ff8e30");
+                this.ParkLaterButton.FontAttributes = FontAttributes.Bold;
 			}
         }
 
