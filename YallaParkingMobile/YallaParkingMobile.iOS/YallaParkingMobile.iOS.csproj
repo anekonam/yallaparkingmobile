@@ -237,6 +237,7 @@
     <BundleResource Include="Resources\pin.png" />
     <BundleResource Include="Resources\currentLocation.png" />
     <BundleResource Include="Resources\mapPinSelected.png" />
+    <BundleResource Include="Resources\Lock.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

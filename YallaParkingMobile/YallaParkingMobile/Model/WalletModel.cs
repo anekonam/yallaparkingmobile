@@ -25,6 +25,18 @@ namespace YallaParkingMobile.Model {
 			}
 		}
 
+		public bool HasCards {
+			get {
+				return this.UserCards != null && this.UserCards.Any();
+			}
+		}
+
+		public bool HasNoCards {
+			get {
+				return !this.HasCards;
+			}
+		}
+
 		public event PropertyChangedEventHandler PropertyChanged;
 	}
 }

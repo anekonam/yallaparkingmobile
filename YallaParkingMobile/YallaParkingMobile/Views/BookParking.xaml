@@ -117,8 +117,9 @@
                 <TableSection
                     Title="Select Vehicle">
                     <ViewCell
-                        StyleId="none"
-                        Height="300">
+                        StyleId="none">
+                        <StackLayout
+                            HeightRequest="300">
                         <ListView
                             x:Name="Cars"
                             HasUnevenRows="true"
@@ -172,6 +173,7 @@
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
+                            </StackLayout>
                     </ViewCell>
                     <ViewCell
                         StyleId="none">
@@ -194,6 +196,7 @@
                             x:Name="Cards"
                             HasUnevenRows="true"
                             HeightRequest="300"
+                            RowHeight="50"
                             VerticalOptions="FillAndExpand"
                             ItemsSource="{Binding UserCards}"
                             SelectedItem="{Binding SelectedUserCard,Mode=TwoWay}">
