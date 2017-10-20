@@ -119,11 +119,12 @@
                                     Format="ddddd dd MMM"
                                     TextColor="#767684"
                                     DateSelected="DatePicker_DateSelected"
-                                    HorizontalOptions="StartAndExpand" />
+                                    HorizontalOptions="Start" />
+                                <Label Text="at"  TextColor="#767684" HorizontalOptions="Start"/>
                                 <control:BorderlessTimePicker
                                     x:Name="SearchTime"
                                     TextColor="#767684"
-                                    HorizontalOptions="StartAndExpand" />
+                                    HorizontalOptions="Start" />
                             </StackLayout>
                             <StackLayout
                                 Padding="8"

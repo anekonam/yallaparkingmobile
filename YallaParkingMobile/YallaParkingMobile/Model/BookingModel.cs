@@ -1,4 +1,5 @@
 ﻿using System;
+using Humanizer;
 using Xamarin.Forms;
 
 namespace YallaParkingMobile.Model {
@@ -122,9 +123,15 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+
         public string BookingTime {
             get {
-                return string.Format("{0} to {1}", this.Start.ToString("dd-MMM-yy HH:mm"), this.End.ToString("dd-MMM-yy HH:mm"));
+                if(this.Start.Date == DateTime.Now.Date){
+                    return String.Join(" to ",String.Format("{0} {1: HH:mm}", "Today", this.Start),String.Format("{0} {1: HH:mm}", "Today", this.End));
+                } else{
+                    return String.Join(" to ",String.Format("{0} {1} {2:MMM HH:mm}", this.Start.ToString("ddd"), this.Start.Day.Ordinalize(), this.Start) ,
+                                       String.Format("{0} {1} {2:MMM HH:mm}", this.End.ToString("ddd"), this.End.Day.Ordinalize(), this.End));
+                }
             }
         }
 

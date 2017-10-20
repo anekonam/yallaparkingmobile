@@ -80,6 +80,7 @@
                     Clicked="VerifyButton_Clicked"
                     Style="{StaticResource GreenButton}"
                     Text="Next"
+                    BorderRadius="5"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="Center" />
             </ContentView>

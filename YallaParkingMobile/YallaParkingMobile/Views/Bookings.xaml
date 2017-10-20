@@ -91,7 +91,7 @@
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <ViewCell
-                                            Height="130">
+                                            Height="140">
                                             <Grid
                                                 VerticalOptions="FillAndExpand"
                                                 ColumnSpacing="5"
@@ -140,28 +140,32 @@
                                                     VerticalOptions="Start"
                                                     HorizontalOptions="Center"
                                                     Text="{Binding Number}" />
-                                                <ContentView
+                                                <Frame
                                                     Grid.Row="1"
                                                     Grid.Column="1"
                                                     Grid.ColumnSpan="2"
                                                     Padding="8"
-                                                    Margin="0,0,-30,0"
+                                                    CornerRadius="5"
+                                                    Margin="0,0,-40,0"
+                                                    HasShadow="false"
                                                     VerticalOptions="Start"
                                                     IsVisible="{Binding Pending}"
                                                     BackgroundColor="#ff8e30">
                                                     <Label
                                                         TextColor="White"
-                                                        FontSize="13"
+                                                        FontSize="12"
                                                         HorizontalTextAlignment="Start"
                                                         Text="{Binding BookingTime}" />
-                                                </ContentView>
-                                                <ContentView
+                                                </Frame>
+                                                <Frame
                                                     Grid.Row="1"
                                                     Grid.Column="1"
                                                     Grid.ColumnSpan="2"
                                                     Padding="8"
-                                                    Margin="0,0,-30,0"
+                                                    Margin="0,0,-40,0"
                                                     VerticalOptions="Start"
+                                                    CornerRadius="5"
+                                                    HasShadow="false"
                                                     IsVisible="{Binding Active}"
                                                     BackgroundColor="#ff8e30">
                                                     <Label
@@ -169,14 +173,16 @@
                                                         FontSize="13"
                                                         HorizontalTextAlignment="Start"
                                                         Text="{Binding RemainingTime}" />
-                                                </ContentView>
-                                                <ContentView
+                                                </Frame>
+                                                <Frame
                                                     Grid.Row="1"
                                                     Grid.Column="1"
                                                     Grid.ColumnSpan="2"
                                                     Padding="8"
-                                                    Margin="0,0,-30,0"
+                                                    Margin="0,0,-40,0"
                                                     VerticalOptions="Start"
+                                                    CornerRadius="5"
+                                                    HasShadow="false"
                                                     IsVisible="{Binding Completed}"
                                                     BackgroundColor="#5FD25F">
                                                     <Label
@@ -184,7 +190,7 @@
                                                         FontSize="13"
                                                         HorizontalTextAlignment="Start"
                                                         Text="Completed" />
-                                                </ContentView>
+                                                </Frame>
                                             </Grid>
                                         </ViewCell>
                                     </DataTemplate>

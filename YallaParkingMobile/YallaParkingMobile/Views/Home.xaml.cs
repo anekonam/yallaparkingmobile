@@ -174,7 +174,7 @@ namespace YallaParkingMobile {
             var startDate = this.SearchDate.Date;
             startDate.Date.Add(this.SearchTime.Time);
 
-            BusyIndicator.IsBusy = true;
+            BusyIndicator.IsBusy = false;
 
             var search = new SearchModel {
                 StartDate = startDate,

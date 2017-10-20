@@ -92,6 +92,26 @@ namespace YallaParkingMobile.Utility {
             }            
         }
 
+		public static async Task<HttpResponseMessage> ResetPassword(string emailAddress) {
+			InitHttpClient();
+
+			try {
+                var model = new {
+                    EmailAddress = emailAddress
+                };
+
+				var response = await client.PostAsync("/api/account/resetPassword", model.AsJson());
+
+				if (response.IsSuccessStatusCode) {					
+					return response;
+				}
+
+				return response;
+			} catch {
+				return null;
+			}
+		}
+
 		public static async Task<bool> Verify(string code) {
             InitHttpClient();
 

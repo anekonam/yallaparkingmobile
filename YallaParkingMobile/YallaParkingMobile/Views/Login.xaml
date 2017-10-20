@@ -87,6 +87,7 @@
                     Style="{StaticResource GreenButton}"
                     Text="Log In"
                     HorizontalOptions="FillAndExpand"
+                    BorderRadius="5"
                     VerticalOptions="Center" />
             </ContentView>
             <ContentView
@@ -100,6 +101,7 @@
                     Style="{StaticResource FacebookButton}"
                     Text="Log In with Facebook"
                     HorizontalOptions="FillAndExpand"
+                    BorderRadius="5"
                     VerticalOptions="Center" />
             </ContentView>
             <ContentView
@@ -113,6 +115,7 @@
                     Style="{StaticResource GreyTextButton}"
                     Text="Forgotten Password"
                     HorizontalOptions="FillAndExpand"
+                    BorderRadius="5"
                     VerticalOptions="Center" />
             </ContentView>
         </Grid>

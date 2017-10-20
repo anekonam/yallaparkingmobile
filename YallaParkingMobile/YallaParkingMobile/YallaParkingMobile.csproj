@@ -131,7 +131,7 @@
     </Compile>
     <Compile Include="Control\BorderlessDatePicker.cs" />
     <Compile Include="Control\BorderlessTimePicker.cs" />
-    <Compile Include="Control\BorderlessEntry %28copy%29.cs" />
+    <Compile Include="Control\BorderlessEntry.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -203,9 +203,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Control\BorderlessEntry.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\Login.xaml">
@@ -321,6 +318,9 @@
     </Reference>
     <Reference Include="TK.CustomMap">
       <HintPath>..\..\packages\TK.CustomMap.1.5.1\lib\portable-net45+win8+wpa81+wp8\TK.CustomMap.dll</HintPath>
+    </Reference>
+    <Reference Include="Humanizer">
+      <HintPath>..\..\packages\Humanizer.Core.2.2.0\lib\netstandard1.0\Humanizer.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -54,7 +54,7 @@
                 <control:PickerCell
                     x:Name="ExpireYear"
                     Label="Expiry Year"
-                    IsEnabled="{Binding IsNew}"
+                     IsEnabled="{Binding IsNew}"
                     BindingContext="{Binding}" />
                 <EntryCell
                     x:Name="Cvc"
@@ -65,22 +65,21 @@
                     Text="{Binding Cvc, Mode=TwoWay}" />
             </TableSection>
         </control:MenuTableView>
-          <Grid>
-              <StackLayout
-                  Margin="20,20,20,20"
-                  Orientation="Horizontal">
-                  <Image
-                      Source="lock.png"
-                      Aspect="AspectFit"
-                      HeightRequest="40"
-                      VerticalOptions="Center" />
-                  <Label
-                      Margin="10,0,0,0"
-                      VerticalOptions="Center"
-                      FontSize ="18"
-                    Text="* Your payment details are stored securely *"  />
-              </StackLayout>
-            </Grid>
+        <Grid>
+           <Image
+               Margin="0,80,0,0"
+               Source="Lock.png"
+                HeightRequest="60"
+               VerticalOptions="Center"
+               Aspect="AspectFit" 
+               Grid.Row="2"/>
+          <Label
+              Grid.Row="3"
+              Margin="0,0,0,90"
+              HorizontalTextAlignment="Center"
+              FontSize ="18"
+              Text="Your payment details are stored securely" />
+           </Grid>
         <Button
             Grid.Row="1"
             Margin="10"
