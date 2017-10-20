@@ -17,6 +17,7 @@ using YallaParkingMobile.Utility;
 using Telerik.XamarinForms.Input.AutoComplete;
 using System.IO;
 using DurianCode.PlacesSearchBar;
+using TK.CustomMap;
 
 namespace YallaParkingMobile {
     public partial class Home : ContentPage {
@@ -187,20 +188,24 @@ namespace YallaParkingMobile {
 
             this.Map.Pins.Clear();
 
+            var pins = new List<TKCustomMapPin>();
 
             if (properties != null) {
                 foreach (var property in properties) {
-                    var pin = new Pin {
+                    var pin = new TKCustomMapPin {
                         BindingContext = property,
                         Position = new Xamarin.Forms.Maps.Position(property.Latitude ?? 0.0, property.Longitude ?? 0.0),
-                        Label = string.Format("{0} (AED {1}/hr)", property.Name, property.ShortTermParkingPrice),
-                        Address = property.AreaName
+                        Title = string.Format("{0} (AED {1:n0}/hr)", property.Name, property.ShortTermParkingPrice),
+                        Subtitle = property.AreaName,
+                        Image = ImageSource.FromFile("pin.png"),
+                        ShowCallout = true
                     };
 
-                    pin.Clicked += Pin_Clicked;
-
-                    this.Map.Pins.Add(pin);
+                    pins.Add(pin);
                 }
+                              
+
+                this.Map.CustomPins = pins;
             }
 
             BusyIndicator.IsBusy = false;
@@ -210,11 +215,10 @@ namespace YallaParkingMobile {
             }
         }
 
-        private void Pin_Clicked(object sender, EventArgs e) {
-            var pin = (Pin)sender;
-            var property = (PropertyModel)pin.BindingContext;
+        void Handle_PinSelected(object sender, TK.CustomMap.TKGenericEventArgs<TK.CustomMap.TKCustomMapPin> e) {
+            var property = (PropertyModel)this.Map.SelectedPin.BindingContext;
 
-            this.Model.SelectedProperty = property;
+			this.Model.SelectedProperty = property;
         }
 
         private void Location_Clicked(object sender, EventArgs e) {

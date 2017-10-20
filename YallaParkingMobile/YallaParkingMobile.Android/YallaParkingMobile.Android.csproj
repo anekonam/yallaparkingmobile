@@ -262,6 +262,12 @@
     <Reference Include="DurianCode.PlacesSearchBar">
       <HintPath>..\..\packages\DurianCode.PlacesSearchBar.1.0.0\lib\portable45-net45+win8+wp8+wpa81\DurianCode.PlacesSearchBar.dll</HintPath>
     </Reference>
+    <Reference Include="TK.CustomMap.Android">
+      <HintPath>..\..\packages\TK.CustomMap.1.5.1\lib\MonoAndroid10\TK.CustomMap.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="TK.CustomMap">
+      <HintPath>..\..\packages\TK.CustomMap.1.5.1\lib\MonoAndroid10\TK.CustomMap.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

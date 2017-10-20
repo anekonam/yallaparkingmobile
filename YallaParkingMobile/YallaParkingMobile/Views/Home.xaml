@@ -8,6 +8,7 @@
     xmlns:places="clr-namespace:DurianCode.PlacesSearchBar;assembly=DurianCode.PlacesSearchBar"
     xmlns:control="clr-namespace:YallaParkingMobile.Control;assembly=YallaParkingMobile"
     xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+    xmlns:customMap="clr-namespace:TK.CustomMap;assembly=TK.CustomMap"
     x:Class="YallaParkingMobile.Home"
     Title="Find Parking"
     Appearing="Handle_Appearing"
@@ -37,13 +38,14 @@
                                 Text="Searching for parking spaces..." />
                         </telerikPrimitives:RadBusyIndicator.BusyContent>
                         <telerikPrimitives:RadBusyIndicator.Content>
-                            <maps:Map
+                            <customMap:TKCustomMap
                                 x:Name="Map"
                                 WidthRequest="320"
                                 HeightRequest="200"
                                 IsVisible="false"
                                 IsShowingUser="true"
                                 VerticalOptions="FillAndExpand"
+                                PinSelected="Handle_PinSelected"
                                 MapType="Street" />
                         </telerikPrimitives:RadBusyIndicator.Content>
                     </telerikPrimitives:RadBusyIndicator>

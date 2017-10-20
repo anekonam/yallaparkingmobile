@@ -7,6 +7,7 @@ using Xamarin.Forms;
 using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Distribute;
 using ImageCircle.Forms.Plugin.iOS;
+using TK.CustomMap.iOSUnified;
 
 [assembly: ExportRenderer(typeof(Telerik.XamarinForms.Primitives.RadSideDrawer), typeof(Telerik.XamarinForms.PrimitivesRenderer.iOS.SideDrawerRenderer))]
 namespace YallaParkingMobile.iOS {
@@ -27,7 +28,7 @@ namespace YallaParkingMobile.iOS {
         public override bool FinishedLaunching(UIApplication app, NSDictionary options) {
             global::Xamarin.Forms.Forms.Init();            
             Xamarin.FormsMaps.Init();
-			
+			TKCustomMapRenderer.InitMapRenderer();
             ImageCircleRenderer.Init();
             ZXing.Net.Mobile.Forms.iOS.Platform.Init();
             Distribute.DontCheckForUpdatesInDebug();

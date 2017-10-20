@@ -363,6 +363,12 @@
     <Reference Include="DurianCode.PlacesSearchBar">
       <HintPath>..\..\packages\DurianCode.PlacesSearchBar.1.0.0\lib\portable45-net45+win8+wp8+wpa81\DurianCode.PlacesSearchBar.dll</HintPath>
     </Reference>
+    <Reference Include="TK.CustomMap">
+      <HintPath>..\..\packages\TK.CustomMap.1.5.1\lib\Xamarin.iOS10\TK.CustomMap.dll</HintPath>
+    </Reference>
+    <Reference Include="TK.CustomMap.iOSUnified">
+      <HintPath>..\..\packages\TK.CustomMap.1.5.1\lib\Xamarin.iOS10\TK.CustomMap.iOSUnified.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\YallaParkingMobile\YallaParkingMobile.csproj">
