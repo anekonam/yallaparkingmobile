@@ -56,7 +56,7 @@
                                     </Grid.RowDefinitions>
                                     <Image
                                         HeightRequest="40"
-                                        Margin="28,10,10,10"
+                                        Margin="10,10,10,10"
                                         Aspect="AspectFill"
                                         VerticalOptions="Center"
                                         HorizontalOptions="Center"

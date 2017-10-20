@@ -94,7 +94,7 @@
                                     </Grid.RowDefinitions>
                                     <Image
                                         HeightRequest="40"
-                                        Margin="28,10,10,10"
+                                        Margin="10,10,10,10"
                                         Aspect="AspectFit"
                                         VerticalOptions="Center"
                                         HorizontalOptions="Center"
