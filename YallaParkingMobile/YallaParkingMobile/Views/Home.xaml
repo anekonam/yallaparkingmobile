@@ -93,6 +93,7 @@
                                 FontSize="14"
                                 Margin="0"
                                 HeightRequest="25"
+                                WidthRequest="200"
                                 BackgroundColor="White"
                                 TextColor="#ff8e30"
                                 IsVisible="true" />
