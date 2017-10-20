@@ -55,7 +55,8 @@ namespace YallaParkingMobile {
             SearchTime.Time = TimeSpan.FromHours(DateTime.Now.Hour < 23 ? DateTime.Now.Hour + 1 : 0);
 
 			Search.ApiKey = GooglePlacesApiKey;
-			Search.Type = PlaceType.All;
+            Search.Type = PlaceType.All;
+            Search.Bias = new LocationBias(25.2048, 55.2708, 4200000);
 			Search.PlacesRetrieved += Search_Bar_PlacesRetrieved;
 			Search.TextChanged += Search_Bar_TextChanged;
 			Search.MinimumSearchText = 2;
@@ -195,6 +196,8 @@ namespace YallaParkingMobile {
                         Label = string.Format("{0} (AED {1}/hr)", property.Name, property.ShortTermParkingPrice),
                         Address = property.AreaName
                     };
+
+                    pin.Clicked += Pin_Clicked;
 
                     this.Map.Pins.Add(pin);
                 }

@@ -131,6 +131,7 @@
     <Compile Include="BorderlessDatePickerRenderer.cs" />
     <Compile Include="BorderlessTimePickerRenderer.cs" />
     <Compile Include="StandardViewCellRenderer.cs" />
+    <Compile Include="PlacesBarRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
