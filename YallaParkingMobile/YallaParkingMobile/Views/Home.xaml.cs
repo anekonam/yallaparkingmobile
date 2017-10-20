@@ -16,106 +16,155 @@ using YallaParkingMobile.Model;
 using YallaParkingMobile.Utility;
 using Telerik.XamarinForms.Input.AutoComplete;
 using System.IO;
-using Telerik.XamarinForms.Common;
+using DurianCode.PlacesSearchBar;
 
 namespace YallaParkingMobile {
     public partial class Home : ContentPage {
-      
+
         private Xamarin.Forms.Maps.Position mapPosition;
+        private string GooglePlacesApiKey = "AIzaSyA43kZXPoNReO1PXx9TJ14UZ2EUkZ_zyKU";
 
         public Home() {
             InitializeComponent();
         }
 
-        public Home (HomeModel model){
+        public Home(HomeModel model) {
             this.Model = model;
 
             InitializeComponent();
 
             UpdateButtonStates();
 
+            UpdateCurrentLocation();
+
             NavigationPage.SetHasNavigationBar(this, false);
 
-			Analytics.TrackEvent("Viewing Home Page");
+            Analytics.TrackEvent("Viewing Home Page");
 
-			PropertyUtility.SetValue("LoggedIn", "true");
+            PropertyUtility.SetValue("LoggedIn", "true");
             PropertyUtility.RemoveKey("query");
             PropertyUtility.RemoveKey("hours");
 
-			CrossGeolocator.Current.PositionChanged += Current_PositionChanged;
+            CrossGeolocator.Current.PositionChanged += Current_PositionChanged;
 
-			SearchDate.Date = DateTime.Now;
+            SearchDate.Date = DateTime.Now;
             SearchDate.MinimumDate = DateTime.Now;
 
             var maxHours = (int)Math.Ceiling((DateTime.Now.Date.AddDays(1) - DateTime.Now).TotalHours);
-            HoursSlider.Maximum = maxHours >=2 ? maxHours : 2;
+            HoursSlider.Maximum = maxHours >= 2 ? maxHours : 2;
             SearchTime.Time = TimeSpan.FromHours(DateTime.Now.Hour < 23 ? DateTime.Now.Hour + 1 : 0);
+
+			Search.ApiKey = GooglePlacesApiKey;
+			Search.Type = PlaceType.All;
+			Search.PlacesRetrieved += Search_Bar_PlacesRetrieved;
+			Search.TextChanged += Search_Bar_TextChanged;
+			Search.MinimumSearchText = 2;
+			Search.Placeholder = "Search parking area or building...";
+			PlaceList.ItemSelected += Results_List_ItemSelected;           
 
             SearchDate.Effects.Add(Effect.Resolve(("Effects.BorderlessEffect")));
             SearchTime.Effects.Add(Effect.Resolve(("Effects.BorderlessEffect")));
-			HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
+            HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
         }
 
-        public HomeModel Model{
-            get{
+        void Search_Bar_PlacesRetrieved(object sender, AutoCompleteResult result) {
+             PlaceList.ItemsSource = result.AutoCompletePlaces;
+
+            if (result.AutoCompletePlaces != null && result.AutoCompletePlaces.Count > 0) {
+                PlaceList.IsVisible = true;
+                PlaceFrame.IsVisible = true;
+            }
+        }
+
+        void Search_Bar_TextChanged(object sender, TextChangedEventArgs e) {
+            if (string.IsNullOrWhiteSpace(e.NewTextValue)) {
+                PlaceList.IsVisible = false;
+                PlaceFrame.IsVisible = false;
+            } else {
+                PlaceList.IsVisible = true;
+                PlaceFrame.IsVisible = true;
+            }
+        }
+
+        async void Results_List_ItemSelected(object sender, SelectedItemChangedEventArgs e) {
+            if (e.SelectedItem == null)
+                return;
+
+            var prediction = (AutoCompletePrediction)e.SelectedItem;
+            PlaceList.SelectedItem = null;
+            PlaceList.IsVisible = false;
+            PlaceFrame.IsVisible = false;
+
+            var place = await Places.GetPlace(prediction.Place_ID, GooglePlacesApiKey);
+
+            if (place != null) {
+                var mapPosition = new Xamarin.Forms.Maps.Position(place.Latitude, place.Longitude);
+                Map.MoveToRegion(MapSpan.FromCenterAndRadius(mapPosition, Distance.FromMiles(1)));
+            }
+        }
+
+        public HomeModel Model {
+            get {
                 return (HomeModel)this.BindingContext;
-            } set{
+            }
+            set {
                 this.BindingContext = value;
             }
         }
 
-        private void UpdateButtonStates(){
-			if (this.Model.ParkNow) {
-				this.ParkNowButton.BackgroundColor = Color.White;
-				this.ParkNowButton.BorderWidth = 1;
-				this.ParkNowButton.BorderColor = Color.FromHex("#ff8e30");
-				this.ParkNowButton.TextColor = Color.FromHex("#ff8e30");
+        private void UpdateButtonStates() {
+            if (this.Model.ParkNow) {
+                this.ParkNowButton.BackgroundColor = Color.White;
+                this.ParkNowButton.BorderWidth = 1;
+                this.ParkNowButton.BorderColor = Color.FromHex("#ff8e30");
+                this.ParkNowButton.TextColor = Color.FromHex("#ff8e30");
                 this.ParkNowButton.FontAttributes = FontAttributes.Bold;
 
-				this.ParkLaterButton.BackgroundColor = Color.FromHex("#ff8e30");
-				this.ParkLaterButton.BorderWidth = 0;
-				this.ParkLaterButton.TextColor = Color.White;
+                this.ParkLaterButton.BackgroundColor = Color.FromHex("#ff8e30");
+                this.ParkLaterButton.BorderWidth = 0;
+                this.ParkLaterButton.TextColor = Color.White;
                 this.ParkLaterButton.FontAttributes = FontAttributes.None;
 
-			} else {
-				this.ParkNowButton.BackgroundColor = Color.FromHex("#ff8e30");
-				this.ParkNowButton.BorderWidth = 0;
-				this.ParkNowButton.TextColor = Color.White;
+                this.SearchDateTime.IsVisible = false;
+                this.SearchFrame.HeightRequest = 110;
+
+            } else {
+                this.ParkNowButton.BackgroundColor = Color.FromHex("#ff8e30");
+                this.ParkNowButton.BorderWidth = 0;
+                this.ParkNowButton.TextColor = Color.White;
                 this.ParkNowButton.FontAttributes = FontAttributes.None;
-                 
-				this.ParkLaterButton.BackgroundColor = Color.White;
-				this.ParkLaterButton.BorderWidth = 1;
-				this.ParkLaterButton.BorderColor = Color.FromHex("#ff8e30");
-				this.ParkLaterButton.TextColor = Color.FromHex("#ff8e30");
+
+                this.ParkLaterButton.BackgroundColor = Color.White;
+                this.ParkLaterButton.BorderWidth = 1;
+                this.ParkLaterButton.BorderColor = Color.FromHex("#ff8e30");
+                this.ParkLaterButton.TextColor = Color.FromHex("#ff8e30");
                 this.ParkLaterButton.FontAttributes = FontAttributes.Bold;
-			}
+
+                this.SearchDateTime.IsVisible = true;
+                this.SearchFrame.HeightRequest = 150;
+            }
         }
 
-		async void Handle_Appearing(object sender, System.EventArgs e) {
-			var query = PropertyUtility.GetValue("query");
-			var hours = PropertyUtility.GetValue("hours");
+        async void Handle_Appearing(object sender, System.EventArgs e) {			
+            var query = PropertyUtility.GetValue("query");
+            var hours = PropertyUtility.GetValue("hours");
 
-            if(!string.IsNullOrWhiteSpace(hours)){
+            if (!string.IsNullOrWhiteSpace(hours)) {
                 this.HoursSlider.Value = int.Parse(hours);
             }
 
-			this.Search.ItemsSource = await ServiceUtility.PropertyAreas();
-            await LoadData(query);
+            await LoadData();
 
             var profile = await ServiceUtility.Profile();
             this.ProfileName.Text = profile.Name;
 
-			if (!string.IsNullOrWhiteSpace(profile.ProfilePicture)) {
-				var profileImage = !string.IsNullOrWhiteSpace(profile.ProfilePicture) && profile.ProfilePicture.Contains(",") ? profile.ProfilePicture.Split(',')[1] : profile.ProfilePicture;
-				this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profileImage)));
-			}
-		}
-
-        async void Handle_FilteredItemsChanged(object sender, Telerik.XamarinForms.Input.AutoComplete.FilteredItemsChangedEventArgs e) {             
-            await LoadData(this.Search.Text);
+            if (!string.IsNullOrWhiteSpace(profile.ProfilePicture)) {
+                var profileImage = !string.IsNullOrWhiteSpace(profile.ProfilePicture) && profile.ProfilePicture.Contains(",") ? profile.ProfilePicture.Split(',')[1] : profile.ProfilePicture;
+                this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profileImage)));
+            }
         }
 
-        async Task LoadData(string query = null) {
+        async Task LoadData() {
             if (this.Model != null) {
                 this.Model.SelectedProperty = null;
             }
@@ -123,10 +172,9 @@ namespace YallaParkingMobile {
             var startDate = this.SearchDate.Date;
             startDate.Date.Add(this.SearchTime.Time);
 
-			BusyIndicator.IsBusy = true;
+            BusyIndicator.IsBusy = true;
 
-			var search = new SearchModel {
-                Name = query,
+            var search = new SearchModel {
                 StartDate = startDate,
                 Hours = (int)this.HoursSlider.Value
             };
@@ -138,36 +186,23 @@ namespace YallaParkingMobile {
 
             this.Map.Pins.Clear();
 
+
             if (properties != null) {
                 foreach (var property in properties) {
                     var pin = new Pin {
                         BindingContext = property,
                         Position = new Xamarin.Forms.Maps.Position(property.Latitude ?? 0.0, property.Longitude ?? 0.0),
                         Label = string.Format("{0} (AED {1}/hr)", property.Name, property.ShortTermParkingPrice),
-                        Address = property.AreaName,
-                        Type = PinType.SearchResult,
+                        Address = property.AreaName
                     };
-
-                    pin.Clicked += Pin_Clicked;
 
                     this.Map.Pins.Add(pin);
                 }
             }
 
-			var geocoder = new Geocoder();
-			var positions = await geocoder.GetPositionsForAddressAsync(query + ", Dubai");
-
-            if(!string.IsNullOrWhiteSpace(query) && this.Map.Pins!=null && this.Map.Pins.Any(p => p.Label.Contains(query))){
-                Map.MoveToRegion(MapSpan.FromCenterAndRadius(this.Map.Pins.First(p => p.Label.Contains(query)).Position, Distance.FromMiles(1)));
-            } else if (!string.IsNullOrWhiteSpace(query) && positions.Any()) {
-				Map.MoveToRegion(MapSpan.FromCenterAndRadius(positions.First(), Distance.FromMiles(1)));
-            } else{
-                UpdateCurrentLocation();
-            }
-
             BusyIndicator.IsBusy = false;
 
-            if(!Map.IsVisible){
+            if (!Map.IsVisible) {
                 Map.IsVisible = true;
             }
         }
@@ -179,15 +214,10 @@ namespace YallaParkingMobile {
             this.Model.SelectedProperty = property;
         }
 
-		private void Location_Clicked(object sender, EventArgs e) {
+        private void Location_Clicked(object sender, EventArgs e) {
             UpdateCurrentLocation();
-		}
-
-        async void Search_SuggestionItemSelected(object sender, Telerik.XamarinForms.Input.AutoComplete.SuggestionItemSelectedEventArgs e) {
-            var address = e.DataItem.ToString();
-            this.Search.Text = address;
-            await LoadData(address);                        
         }
+
 
         private void UpdateCurrentLocation() {
             this.GetCurrentLocation().ContinueWith(response => {
@@ -197,7 +227,7 @@ namespace YallaParkingMobile {
                     new Xamarin.Forms.Maps.Position(25.1985, 55.2796);
 
                 Device.StartTimer(TimeSpan.FromMilliseconds(500), () => {
-                    Map.MoveToRegion(MapSpan.FromCenterAndRadius(mapPosition, Distance.FromMiles(1)));
+                    Map.MoveToRegion(MapSpan.FromCenterAndRadius(mapPosition, Distance.FromMeters(300)));
                     return false;
                 });
             });
@@ -259,57 +289,66 @@ namespace YallaParkingMobile {
             return position;
         }
 
+        void searchBarTextChanged(object sender, TextChangedEventArgs textChangedEventArgs) {
+            // Has Backspace or Cancel has been pressed?
+            if (textChangedEventArgs.NewTextValue == string.Empty) {
+                // Cancel pressed
+                if (textChangedEventArgs.OldTextValue.Length > 1) { } else { }
+
+            }
+        }
+
         private async void Next_Clicked(object sender, System.EventArgs e) {
             var property = this.Model.SelectedProperty;
 
-			if (SearchDateTime.IsVisible) {
-				property.StartDate = this.SearchDate.Date.Add(this.SearchTime.Time);
-			} else {
-				property.StartDate = DateTime.UtcNow;
-			}
+            if (SearchDateTime.IsVisible) {
+                property.StartDate = this.SearchDate.Date.Add(this.SearchTime.Time);
+            } else {
+                property.StartDate = DateTime.UtcNow;
+            }
 
-			property.Hours = (int)this.HoursSlider.Value;
+            property.Hours = (int)this.HoursSlider.Value;
 
-			var bookParking = new BookParking(new BookParkingModel(property, !SearchDateTime.IsVisible));
-			await Navigation.PushAsync(bookParking);
+            var bookParking = new BookParking(new BookParkingModel(property, !SearchDateTime.IsVisible));
+            await Navigation.PushAsync(bookParking);
         }
 
         private void Button_Clicked(object sender, EventArgs e) {
             Menu.IsOpen = !Menu.IsOpen;
         }
 
-		private void ParkNow_Clicked(object sender, EventArgs e) {
+        private void ParkNow_Clicked(object sender, EventArgs e) {
             this.Model.ParkNow = true;
             UpdateButtonStates();
-		}
+        }
 
-		private void ParkLater_Clicked(object sender, EventArgs e) {
+        private void ParkLater_Clicked(object sender, EventArgs e) {
             this.Model.ParkNow = false;
             UpdateButtonStates();
-		}
+        }
 
         private async void FindParking_Clicked(object sender, EventArgs e) {
-			var model = new HomeModel();
-			var home = new Home(model);
+            var model = new HomeModel();
+            var home = new Home(model);
 
-			await Navigation.PushAsync(home);
+            await Navigation.PushAsync(home);
         }
 
         private async void MyBookings_Clicked(object sender, EventArgs e) {
-			var model = new BookingsModel();
-			var bookings = new Bookings(model);
+            var model = new BookingsModel();
+            var bookings = new Bookings(model);
 
-			await Navigation.PushAsync(bookings);
+            await Navigation.PushAsync(bookings);
         }
 
-        private async void MyProfile_Clicked(object sender, EventArgs e) {           
+        private async void MyProfile_Clicked(object sender, EventArgs e) {
             await Navigation.PushAsync(new Profile());
         }
 
         private async void Invite_Clicked(object sender, EventArgs e) {
             await Navigation.PushAsync(new Invite());
         }
-              
+
         private void HoursSlider_ValueChanged(object sender, ValueChangedEventArgs e) {
             var newStep = Math.Round(e.NewValue / 1.0);
 
@@ -323,7 +362,7 @@ namespace YallaParkingMobile {
         }
 
         async void DatePicker_DateSelected(object sender, DateChangedEventArgs e) {
-            await LoadData(this.Search.Text);
+            await LoadData();
         }
 
     }

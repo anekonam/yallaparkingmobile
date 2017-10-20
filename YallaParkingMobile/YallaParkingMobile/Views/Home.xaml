@@ -5,6 +5,7 @@
     xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
     xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
     xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+    xmlns:places="clr-namespace:DurianCode.PlacesSearchBar;assembly=DurianCode.PlacesSearchBar"
     xmlns:control="clr-namespace:YallaParkingMobile.Control;assembly=YallaParkingMobile"
     xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
     x:Class="YallaParkingMobile.Home"
@@ -47,9 +48,11 @@
                         </telerikPrimitives:RadBusyIndicator.Content>
                     </telerikPrimitives:RadBusyIndicator>
                     <Frame
+                        x:Name="SearchFrame"
                         Margin="15,30,15,0"
                         Padding="4"
                         CornerRadius="8"
+                        HeightRequest="110"
                         VerticalOptions="Start"
                         BackgroundColor="White">
                         <Grid
@@ -60,7 +63,7 @@
                                     Height="Auto" />
                                 <RowDefinition
                                     Height="2" />
-                                <RowDefinition
+                                <RowDefinition                                   
                                     Height="Auto" />
                                 <RowDefinition
                                     Height="Auto" />
@@ -83,27 +86,30 @@
                             <BoxView
                                 Grid.Column="1"
                                 BackgroundColor="#fefefe" />
-                            <telerikInput:RadAutoComplete
-                                x:Name="Search"
+                            <places:PlacesBar
+                                Grid.Row="0"
                                 Grid.Column="2"
+                                x:Name="Search"
+                                FontSize="14"
+                                Margin="0"
+                                HeightRequest="25"
                                 BackgroundColor="White"
-                                CompletionMode="Contains"
-                                TextColor="#767684"
-                                FilteredItemsChanged="Handle_FilteredItemsChanged"
-                                SuggestionItemSelected="Search_SuggestionItemSelected"
-                                Watermark="Search for parking area or building..." />
+                                TextColor="#ff8e30"
+                                IsVisible="true" />
                             <BoxView
                                 Grid.Column="0"
                                 Grid.Row="1"
                                 Grid.ColumnSpan="3"
                                 BackgroundColor="#fefefe" />
                             <StackLayout
+                                Margin="0,10,0,0"
+                                Grid.Row="2"
+                                Grid.ColumnSpan="3">
+                            <StackLayout
                                 x:Name="SearchDateTime"
                                 Padding="8"
-                                Grid.Row="2"
-                                Grid.ColumnSpan="3"
                                 VerticalOptions="Start"
-                                IsVisible="{Binding ParkLater}"
+                                IsVisible="false"
                                 Orientation="Horizontal">
                                 <control:BorderlessDatePicker
                                     x:Name="SearchDate"
@@ -118,8 +124,6 @@
                             </StackLayout>
                             <StackLayout
                                 Padding="8"
-                                Grid.Row="3"
-                                Grid.ColumnSpan="3"
                                 Orientation="Horizontal">
                                 <Label
                                     x:Name="Hours"
@@ -136,7 +140,30 @@
                                     ValueChanged="HoursSlider_ValueChanged"
                                     HorizontalOptions="FillAndExpand" />
                             </StackLayout>
+                                </StackLayout>
                         </Grid>
+                    </Frame>
+                    <Frame
+                        x:Name="PlaceFrame"
+                        Margin="15,0,15,0"
+                        Padding="4"
+                        CornerRadius="8"
+                        IsVisible="false"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        BackgroundColor="White">
+                    <ListView
+                        x:Name="PlaceList"
+                        IsVisible="false"
+                        HeightRequest="200"
+                        SeparatorVisibility="None">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextCell
+                                    Text="{Binding Description}" />
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
                     </Frame>
                     <Frame
                         Margin="15"
@@ -259,7 +286,7 @@
                             Text="My Bookings"
                             TextColor="#ff8e30"
                             HorizontalOptions="Start"
-                             VerticalOptions="Center"
+                            VerticalOptions="Center"
                             Clicked="MyBookings_Clicked" />
                     </StackLayout>
                     <StackLayout
