@@ -83,7 +83,7 @@
                     Grid.ColumnSpan="3">
                     <control:BorderlessEntry
                         IsEnabled="False"
-                        Text="+44"
+                        Text="+971"
                         Keyboard="Telephone"
                         x:Name="PhoneNumberPrefix" />
                     <control:BorderlessEntry

@@ -180,6 +180,7 @@ namespace YallaParkingMobile {
 
 		private async void Logout_Tapped(object sender, EventArgs e) {
 			PropertyUtility.RemoveKey("token");
+            PropertyUtility.RemoveKey("LoggedIn");
 			await Navigation.PushAsync(new Login());
 		}
 

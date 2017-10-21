@@ -17,9 +17,9 @@ namespace YallaParkingMobile {
             InitializeComponent();
 
             var onboarding = PropertyUtility.GetValue("OnboardingComplete") == "true";
-            var token = PropertyUtility.GetValue("Token");
+            var loggedIn = PropertyUtility.GetValue("LoggedIn") == "true";
 
-            if (!string.IsNullOrWhiteSpace(token)) {
+            if (loggedIn) {
                 Analytics.TrackEvent("Skipping login sequence, navigating to Home");
                 var model = new HomeModel();
                 MainPage = new NavigationPage(new Home(model)) {
