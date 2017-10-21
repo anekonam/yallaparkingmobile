@@ -103,6 +103,8 @@ namespace YallaParkingMobile {
                 var mapPosition = new Xamarin.Forms.Maps.Position(place.Latitude, place.Longitude);
                 Map.MoveToRegion(MapSpan.FromCenterAndRadius(mapPosition, Distance.FromMiles(1)));
             }
+
+            this.Search.Unfocus();
         }
 
         public HomeModel Model {
@@ -234,7 +236,7 @@ namespace YallaParkingMobile {
                     new Xamarin.Forms.Maps.Position(25.1985, 55.2796);
 
                 Device.StartTimer(TimeSpan.FromMilliseconds(500), () => {
-                    Map.MoveToRegion(MapSpan.FromCenterAndRadius(mapPosition, Distance.FromMeters(300)));
+                    Map.MoveToRegion(MapSpan.FromCenterAndRadius(mapPosition, Distance.FromMeters(Model.ParkNow ? 300 : 800)));
                     return false;
                 });
             });
@@ -327,11 +329,19 @@ namespace YallaParkingMobile {
         private void ParkNow_Clicked(object sender, EventArgs e) {
             this.Model.ParkNow = true;
             UpdateButtonStates();
+
+			if (string.IsNullOrWhiteSpace(this.Search.Text)) {
+				UpdateCurrentLocation();
+			}
         }
 
         private void ParkLater_Clicked(object sender, EventArgs e) {
             this.Model.ParkNow = false;
             UpdateButtonStates();
+
+            if (string.IsNullOrWhiteSpace(this.Search.Text)) {
+                UpdateCurrentLocation();
+            }
         }
 
         private async void FindParking_Clicked(object sender, EventArgs e) {

@@ -13,7 +13,9 @@ namespace YallaParkingMobile {
     public partial class Register : ContentPage {
         public Register() {
             InitializeComponent();
-            Analytics.TrackEvent("Viewing Registration Page");                        
+            Analytics.TrackEvent("Viewing Registration Page");
+
+            PropertyUtility.SetValue("LoggedIn", "false");
         }
 
         protected override void OnAppearing() {
@@ -72,12 +74,7 @@ namespace YallaParkingMobile {
                 await DisplayAlert("Regiser Failed", "Registration failed, please try again", "Ok");
             }
         }
-		
-		async void FacebookButton_Clicked(object sender, EventArgs e) {
-            Analytics.TrackEvent("Facebook button clicked, submitting Facebook registration details");                        
-            //await Navigation.PushAsync(new Home());
-        }
-
+				
         async void ToolbarItem_Activated(object sender, EventArgs e) {
             await Navigation.PushAsync(new Login());
         }
