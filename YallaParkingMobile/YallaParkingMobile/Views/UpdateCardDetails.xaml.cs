@@ -80,7 +80,6 @@ namespace YallaParkingMobile {
 				this.CardNumber.Placeholder = "•••• •••• •••• ••••";
 				this.Cvc.Placeholder = "•••";
 			}
-
 		}
 
 

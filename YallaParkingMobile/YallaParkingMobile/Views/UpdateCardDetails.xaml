@@ -11,12 +11,14 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition
-                Height="*">
-            </RowDefinition>
+                Height="*" />
+             <RowDefinition
+                Height="0.5*" />
             <RowDefinition
                 Height="Auto" />
         </Grid.RowDefinitions>
         <ActivityIndicator
+            Grid.RowSpan="3"
             x:Name="Activity"
             IsRunning="False"
             IsVisible="False"
@@ -24,10 +26,10 @@
         <control:MenuTableView
             Grid.Row="0">
             <TableSection
-                x:Name="CardDetails">                
+                x:Name="CardDetails">
                 <EntryCell
                     LabelColor="#a1a1b4"
-                    Label="Name On Card"
+                    Label="Name on Card"
                     HorizontalTextAlignment="End"
                     IsEnabled="{Binding IsNew}"
                     Text="{Binding Name, Mode=TwoWay}" />
@@ -35,7 +37,7 @@
                     x:Name="CardNumber"
                     LabelColor="#a1a1b4"
                     Label="Card Number"
-                    Keyboard="Numeric"            
+                    Keyboard="Numeric"
                     HorizontalTextAlignment="End"
                     Text="{Binding Number, Mode=TwoWay}" />
                 <EntryCell
@@ -54,7 +56,7 @@
                 <control:PickerCell
                     x:Name="ExpireYear"
                     Label="Expiry Year"
-                     IsEnabled="{Binding IsNew}"
+                    IsEnabled="{Binding IsNew}"
                     BindingContext="{Binding}" />
                 <EntryCell
                     x:Name="Cvc"
@@ -65,23 +67,22 @@
                     Text="{Binding Cvc, Mode=TwoWay}" />
             </TableSection>
         </control:MenuTableView>
-        <Grid>
-           <Image
-               Margin="0,80,0,0"
-               Source="Lock.png"
+        <StackLayout
+            VerticalOptions="Center"
+            Grid.Row="1">
+            <Image
+                Source="Lock.png"
                 HeightRequest="60"
-               VerticalOptions="Center"
-               Aspect="AspectFit" 
-               Grid.Row="2"/>
-          <Label
-              Grid.Row="3"
-              Margin="0,0,0,90"
-              HorizontalTextAlignment="Center"
-              FontSize ="18"
-              Text="Your payment details are stored securely" />
-           </Grid>
+                VerticalOptions="Center"
+                Aspect="AspectFit" />
+            <Label
+                Margin="0,10,0,0"
+                HorizontalTextAlignment="Center"
+                FontSize="18"
+                Text="Your payment details are stored securely" />
+        </StackLayout>
         <Button
-            Grid.Row="1"
+            Grid.Row="2"
             Margin="10"
             x:Name="SaveButton"
             Style="{StaticResource GreenButton}"
