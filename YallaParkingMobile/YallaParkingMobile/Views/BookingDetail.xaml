@@ -96,6 +96,7 @@
         <control:MenuTableView
             x:Name="OrderSummary"
             Intent="Settings"
+            HasUnevenRows="true"
             Grid.Row="1">
             <TableRoot
                 x:Name="TableView">
@@ -163,11 +164,13 @@
                 <TableSection
                     Title="Vehicle">
                     <ViewCell
-                        Height="60">
+                        StyleId="none"
+                        Height="80">
                         <Grid
                             VerticalOptions="FillAndExpand"
                             ColumnSpacing="10"
-                            RowSpacing="5">
+                            RowSpacing="8"
+                            Padding="10">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition
                                     Width="0.3*" />
@@ -180,8 +183,8 @@
                             </Grid.RowDefinitions>
                             <Image
                                 HeightRequest="40"
-                                Margin="28,10,10,10"
-                                Aspect="AspectFill"
+                                Margin="10,10,10,10"
+                                Aspect="AspectFit"
                                 VerticalOptions="Center"
                                 HorizontalOptions="Center"
                                 Source="{Binding UserCarImage}" />
@@ -205,7 +208,7 @@
                 <TableSection
                     Title="Payment Method">
                     <ViewCell
-                        Height="60">
+                        Height="70">
                         <Grid
                             VerticalOptions="FillAndExpand"
                             ColumnSpacing="10"
@@ -224,13 +227,13 @@
                             </Grid.RowDefinitions>
                             <Image
                                 HeightRequest="40"
-                                Margin="28,10,10,10"
+                                Margin="10,10,10,10"
                                 Aspect="AspectFit"
                                 VerticalOptions="Center"
                                 HorizontalOptions="Center"
                                 Source="{Binding UserCardImage}" />
                             <StackLayout
-                                VerticalOptions="CenterAndExpand"
+                                VerticalOptions="Center"
                                 Grid.Column="1">
                                 <Label
                                     HorizontalOptions="StartAndExpand"

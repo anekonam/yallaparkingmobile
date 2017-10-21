@@ -36,9 +36,7 @@
                     <RowDefinition
                         Height="*" />
                     <RowDefinition
-                        Height="*" />
-                    <RowDefinition
-                        Height="*" />
+                        Height="*" />                   
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition
@@ -85,7 +83,7 @@
                     Grid.ColumnSpan="3">
                     <control:BorderlessEntry
                         IsEnabled="False"
-                        Text="+971"
+                        Text="+44"
                         Keyboard="Telephone"
                         x:Name="PhoneNumberPrefix" />
                     <control:BorderlessEntry
@@ -117,19 +115,6 @@
                         Clicked="NextButton_Clicked"
                         Style="{StaticResource GreenButton}"
                         Text="Next"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="Center" />
-                </ContentView>
-                <ContentView
-                    Padding="0,5,0,0"
-                    Grid.Row="8"
-                    Grid.Column="1"
-                    Grid.ColumnSpan="3">
-                    <Button
-                        x:Name="FacebookButton"
-                        Clicked="FacebookButton_Clicked"
-                        Style="{StaticResource FacebookButton}"
-                        Text="Sign Up with Facebook"
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="Center" />
                 </ContentView>
