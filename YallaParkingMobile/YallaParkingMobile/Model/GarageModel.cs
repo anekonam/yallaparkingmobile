@@ -22,8 +22,22 @@ namespace YallaParkingMobile.Model {
 
 					if (PropertyChanged != null) {
 						PropertyChanged(this, new PropertyChangedEventArgs("UserCars"));
+						PropertyChanged(this, new PropertyChangedEventArgs("HasCars"));
+						PropertyChanged(this, new PropertyChangedEventArgs("HasNoCars"));
 					}
 				}
+			}
+		}
+
+		public bool HasCars {
+			get {
+				return this.UserCars != null && this.UserCars.Any();
+			}
+		}
+
+		public bool HasNoCars {
+			get {
+				return !this.HasCars;
 			}
 		}
 

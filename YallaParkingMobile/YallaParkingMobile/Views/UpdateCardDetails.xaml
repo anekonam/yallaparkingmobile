@@ -68,17 +68,21 @@
             </TableSection>
         </control:MenuTableView>
         <StackLayout
+            Margin="10,0,10,0"
+            Orientation="Horizontal"
+            HorizontalOptions="Center"
             VerticalOptions="Center"
             Grid.Row="1">
             <Image
                 Source="Lock.png"
-                HeightRequest="60"
+                HeightRequest="20"
                 VerticalOptions="Center"
                 Aspect="AspectFit" />
             <Label
-                Margin="0,10,0,0"
+                Margin="5,0,0,0"
                 HorizontalTextAlignment="Center"
-                FontSize="18"
+                VerticalOptions="Center"
+                FontSize="16"
                 Text="Your payment details are stored securely" />
         </StackLayout>
         <Button

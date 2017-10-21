@@ -28,12 +28,47 @@
                     <RowDefinition
                         Height="Auto" />
                 </Grid.RowDefinitions>
+                <Grid
+                    BackgroundColor="White"
+                    IsVisible="{Binding HasNoCars}"
+                    VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                            Height="*" />
+                        <RowDefinition
+                            Height="Auto" />
+                        <RowDefinition
+                            Height="Auto" />
+                        <RowDefinition
+                            Height="*" />
+                    </Grid.RowDefinitions>
+                    <Image
+                        Margin="40"
+                        Source="garage.png"
+                        Grid.Row="0"
+                        VerticalOptions="Center"
+                        Aspect="AspectFit" />
+                    <ContentView
+                        Padding="0,40,0,0"
+                        Grid.Row="1">
+                        <Label
+                            Style="{StaticResource Header}"
+                            VerticalTextAlignment="Center"
+                            Text="No cars in your garage" />
+                    </ContentView>
+                    <Label
+                        Margin="40"
+                        Grid.Row="2"
+                        HorizontalTextAlignment="Center"
+                        Text="In order to make bookings, you will first need to add a car to your garage" />
+                </Grid>
                 <ListView
                     x:Name="Cars"
                     ItemTapped="Handle_ItemTapped"
                     HasUnevenRows="true"
                     VerticalOptions="Start"
                     BackgroundColor="White"
+                    IsVisible="{Binding HasCars}"
                     ItemsSource="{Binding UserCars}">
                     <ListView.SeparatorVisibility>None</ListView.SeparatorVisibility>
                     <ListView.ItemTemplate>
@@ -85,6 +120,7 @@
                     x:Name="AddNewButton"
                     Style="{StaticResource GreyTextButton}"
                     Text="+ New Vehicle"
+                    FontSize="20"
                     Clicked="AddNewButton_Clicked"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="Center" />

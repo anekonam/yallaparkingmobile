@@ -28,40 +28,40 @@
                     <RowDefinition
                         Height="Auto" />
                 </Grid.RowDefinitions>
-                      <Grid
-                       BackgroundColor="White"
-                       IsVisible="{Binding HasNoCards}"
-                       VerticalOptions="FillAndExpand">
-                       <Grid.RowDefinitions>
-                           <RowDefinition
-                               Height="*" />
-                           <RowDefinition
-                               Height="Auto" />
-                           <RowDefinition
-                               Height="Auto" />
-                           <RowDefinition
-                               Height="*" />
-                       </Grid.RowDefinitions>
-                        <Image
-                            Margin="40"
-                            Source="wallet.png"
-                            Grid.Row="0"
-                            VerticalOptions="Center"
-                            Aspect="AspectFit" />
-                       <ContentView
-                           Padding="0,40,0,0"
-                           Grid.Row="1">
-                           <Label
-                               Style="{StaticResource Header}"
-                               VerticalTextAlignment="Center"
-                               Text="No Cards in your wallet" />
-                       </ContentView>
-                       <Label
-                           Margin="40"
-                           Grid.Row="2"
-                           HorizontalTextAlignment="Center"
-                           Text="In order to make bookings, you will first need to add a card to your Wallet" />
-                        </Grid>
+                <Grid
+                    BackgroundColor="White"
+                    IsVisible="{Binding HasNoCards}"
+                    VerticalOptions="FillAndExpand">
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                            Height="*" />
+                        <RowDefinition
+                            Height="Auto" />
+                        <RowDefinition
+                            Height="Auto" />
+                        <RowDefinition
+                            Height="*" />
+                    </Grid.RowDefinitions>
+                    <Image
+                        Margin="40"
+                        Source="wallet.png"
+                        Grid.Row="0"
+                        VerticalOptions="Center"
+                        Aspect="AspectFit" />
+                    <ContentView
+                        Padding="0,40,0,0"
+                        Grid.Row="1">
+                        <Label
+                            Style="{StaticResource Header}"
+                            VerticalTextAlignment="Center"
+                            Text="No cards in your wallet" />
+                    </ContentView>
+                    <Label
+                        Margin="40"
+                        Grid.Row="2"
+                        HorizontalTextAlignment="Center"
+                        Text="In order to make bookings, you will first need to add a card to your wallet" />
+                </Grid>
                 <ListView
                     x:Name="Cards"
                     BackgroundColor="White"

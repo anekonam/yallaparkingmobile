@@ -53,7 +53,7 @@ namespace YallaParkingMobile {
 
             var maxHours = (int)Math.Ceiling((DateTime.Now.Date.AddDays(1) - DateTime.Now).TotalHours);
             HoursSlider.Maximum = maxHours >= 2 ? maxHours : 2;
-            SearchTime.Time = TimeSpan.FromHours(DateTime.Now.Hour < 23 ? DateTime.Now.Hour + 1 : 0);
+            SearchTime.Time = new TimeSpan(DateTime.Now.Hour, DateTime.Now.Minute, 0);
 
 			Search.ApiKey = GooglePlacesApiKey;
             Search.Type = PlaceType.All;
@@ -67,6 +67,20 @@ namespace YallaParkingMobile {
             SearchDate.Effects.Add(Effect.Resolve(("Effects.BorderlessEffect")));
             SearchTime.Effects.Add(Effect.Resolve(("Effects.BorderlessEffect")));
             HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
+
+			SearchTime.PropertyChanged += (sender, e) =>
+			{
+				if (e.PropertyName == TimePicker.TimeProperty.PropertyName) {
+                    var maximumHours = 24 - this.SearchTime.Time.Hours;
+					HoursSlider.Maximum = maximumHours >= 2 ? maximumHours : 2;
+
+					if ((int)HoursSlider.Value == (int)HoursSlider.Maximum) {
+						Hours.Text = "All Day";
+					} else {
+						Hours.Text = string.Format("{0} hours", HoursSlider.Value);
+					}
+				}
+			};
         }
 
         void Search_Bar_PlacesRetrieved(object sender, AutoCompleteResult result) {
