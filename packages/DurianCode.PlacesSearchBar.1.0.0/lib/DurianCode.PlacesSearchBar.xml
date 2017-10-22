@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DurianCode.PlacesSearchBar</name>
+    </assembly>
+    <members>
+        <member name="T:DurianCode.PlacesSearchBar.PlacesRetrievedEventHandler">
+             <summary>
+             Places retrieved event handler.
+             </summary>
+            </member>
+        <member name="T:DurianCode.PlacesSearchBar.PlacesBar">
+             <summary>
+             Places bar.
+             </summary>
+            </member>
+        <member name="F:DurianCode.PlacesSearchBar.PlacesBar.placeType">
+             <summary>
+             The place type.
+             </summary>
+            </member>
+        <member name="F:DurianCode.PlacesSearchBar.PlacesBar.locationBias">
+             <summary>
+             The location bias.
+             </summary>
+            </member>
+        <member name="F:DurianCode.PlacesSearchBar.PlacesBar.apiKey">
+             <summary>
+             The API key.
+             </summary>
+            </member>
+        <member name="F:DurianCode.PlacesSearchBar.PlacesBar.minimumSearchText">
+             <summary>
+             The minimum search text.
+             </summary>
+            </member>
+        <member name="P:DurianCode.PlacesSearchBar.PlacesBar.Type">
+             <summary>
+             Gets or sets the place type.
+             </summary>
+             <value>The type.</value>
+            </member>
+        <member name="P:DurianCode.PlacesSearchBar.PlacesBar.Bias">
+             <summary>
+             Gets or sets the location bias.
+             </summary>
+             <value>The bias.</value>
+            </member>
+        <member name="P:DurianCode.PlacesSearchBar.PlacesBar.ApiKey">
+             <summary>
+             Gets or sets the API key.
+             </summary>
+             <value>The API key.</value>
+            </member>
+        <member name="P:DurianCode.PlacesSearchBar.PlacesBar.MinimumSearchText">
+             <summary>
+             Gets or sets the minimum search text.
+             </summary>
+             <value>The minimum search text.</value>
+            </member>
+        <member name="F:DurianCode.PlacesSearchBar.PlacesBar.PlacesRetrieved">
+             <summary>
+             The places retrieved handler.
+             </summary>
+            </member>
+        <member name="M:DurianCode.PlacesSearchBar.PlacesBar.#ctor">
+             <summary>
+             Initializes a new instance of the <see cref="T:DurianCode.PlacesSearchBar.PlacesBar" /> class.
+             </summary>
+            </member>
+        <member name="M:DurianCode.PlacesSearchBar.PlacesBar.OnTextChanged(System.Object,Xamarin.Forms.TextChangedEventArgs)">
+             <summary>
+             Handles changes to search text.
+             </summary>
+             <param name="sender">Sender.</param>
+             <param name="e">E.</param>
+            </member>
+        <member name="M:DurianCode.PlacesSearchBar.PlacesBar.GetPlaces(System.String)">
+             <summary>
+             Calls the Google Places API to retrieve autofill suggestions
+             </summary>
+             <returns>The places.</returns>
+             <param name="newTextValue">New text value.</param>
+            </member>
+        <member name="M:DurianCode.PlacesSearchBar.PlacesBar.CreatePredictionsUri(System.String)">
+             <summary>
+             Creates the predictions URI.
+             </summary>
+             <returns>The predictions URI.</returns>
+             <param name="newTextValue">New text value.</param>
+            </member>
+        <member name="M:DurianCode.PlacesSearchBar.PlacesBar.PlaceTypeValue(DurianCode.PlacesSearchBar.PlaceType)">
+             <summary>
+             Returns a string representation of the specified place type.
+             </summary>
+             <returns>The type value.</returns>
+             <param name="type">Type.</param>
+            </member>
+        <member name="T:DurianCode.PlacesSearchBar.LocationBias">
+             <summary>
+             LocationBias object enables location biasing for PlacesBar Google Places API requests
+             </summary>
+            </member>
+        <member name="F:DurianCode.PlacesSearchBar.LocationBias.latitude">
+             <summary>
+             The latitude.
+             </summary>
+            </member>
+        <member name="F:DurianCode.PlacesSearchBar.LocationBias.longitude">
+             <summary>
+             The longitude.
+             </summary>
+            </member>
+        <member name="F:DurianCode.PlacesSearchBar.LocationBias.radius">
+             <summary>
+             The radius.
+             </summary>
+            </member>
+        <member name="M:DurianCode.PlacesSearchBar.LocationBias.#ctor(System.Double,System.Double,System.Int32)">
+             <summary>
+             Initializes a new instance of the <see cref="T:DurianCode.PlacesSearchBar.LocationBias" /> class.
+             </summary>
+             <param name="latitude">Latitude.</param>
+             <param name="longitude">Longitude.</param>
+             <param name="radius">Radius.</param>
+            </member>
+        <member name="M:DurianCode.PlacesSearchBar.LocationBias.ToString">
+             <summary>
+             Returns a formatted <see cref="T:System.String" /> 
+             that represents the current <see cref="T:DurianCode.PlacesSearchBar.LocationBias" /> for PlacesBar API calls.
+             </summary>
+             <returns>A formatted <see cref="T:System.String" /> 
+             that represents the current <see cref="T:DurianCode.PlacesSearchBar.LocationBias" /> for PlacesBar API calls..</returns>
+            </member>
+        <member name="T:DurianCode.PlacesSearchBar.PlaceType">
+             <summary>
+             Place type.
+             </summary>
+            </member>
+        <member name="F:DurianCode.PlacesSearchBar.PlaceType.All">
+            <summary>Get all place types</summary>
+            </member>
+        <member name="F:DurianCode.PlacesSearchBar.PlaceType.Geocode">
+            <summary>Get geocode place types</summary>
+            </member>
+        <member name="F:DurianCode.PlacesSearchBar.PlaceType.Address">
+            <summary>Get address place types</summary>
+            </member>
+        <member name="F:DurianCode.PlacesSearchBar.PlaceType.Establishment">
+            <summary>Get establishment place types</summary>
+            </member>
+        <member name="F:DurianCode.PlacesSearchBar.PlaceType.Regions">
+            <summary>Get regional place types</summary>
+            </member>
+        <member name="F:DurianCode.PlacesSearchBar.PlaceType.Cities">
+            <summary>Get city place types</summary>
+            </member>
+        <member name="T:DurianCode.PlacesSearchBar.AutoCompletePrediction">
+             <summary>
+             Auto complete prediction.
+             </summary>
+            </member>
+        <member name="P:DurianCode.PlacesSearchBar.AutoCompletePrediction.Description">
+             <summary>
+             Gets or sets the description.
+             </summary>
+             <value>The description.</value>
+            </member>
+        <member name="P:DurianCode.PlacesSearchBar.AutoCompletePrediction.ID">
+             <summary>
+             Gets or sets the identifier.
+             </summary>
+             <value>The identifier.</value>
+            </member>
+        <member name="P:DurianCode.PlacesSearchBar.AutoCompletePrediction.Place_ID">
+             <summary>
+             Gets or sets the place identifier.
+             </summary>
+             <value>The place identifier.</value>
+            </member>
+        <member name="P:DurianCode.PlacesSearchBar.AutoCompletePrediction.Reference">
+             <summary>
+             Gets or sets the reference.
+             </summary>
+             <value>The reference.</value>
+            </member>
+        <member name="T:DurianCode.PlacesSearchBar.AutoCompleteResult">
+             <summary>
+             Auto complete result.
+             </summary>
+            </member>
+        <member name="P:DurianCode.PlacesSearchBar.AutoCompleteResult.Status">
+             <summary>
+             Gets or sets the status.
+             </summary>
+             <value>The status.</value>
+            </member>
+        <member name="P:DurianCode.PlacesSearchBar.AutoCompleteResult.AutoCompletePlaces">
+             <summary>
+             Gets or sets the auto complete places.
+             </summary>
+             <value>The auto complete places.</value>
+            </member>
+        <member name="T:DurianCode.PlacesSearchBar.Places">
+             <summary>
+             Places.
+             </summary>
+            </member>
+        <member name="M:DurianCode.PlacesSearchBar.Places.GetPlace(System.String,System.String)">
+             <summary>
+             Gets the place.
+             </summary>
+             <returns>The place.</returns>
+             <param name="placeID">Place identifier.</param>
+             <param name="apiKey">API key.</param>
+            </member>
+        <member name="M:DurianCode.PlacesSearchBar.Places.CreateDetailsRequestUri(System.String,System.String)">
+             <summary>
+             Creates the details request URI.
+             </summary>
+             <returns>The details request URI.</returns>
+             <param name="place_id">Place identifier.</param>
+             <param name="apiKey">API key.</param>
+            </member>
+        <member name="T:DurianCode.PlacesSearchBar.Place">
+             <summary>
+             Place.
+             </summary>
+            </member>
+        <member name="P:DurianCode.PlacesSearchBar.Place.Name">
+             <summary>
+             Gets or sets the name.
+             </summary>
+             <value>The name.</value>
+            </member>
+        <member name="P:DurianCode.PlacesSearchBar.Place.Latitude">
+             <summary>
+             Gets or sets the latitude.
+             </summary>
+             <value>The latitude.</value>
+            </member>
+        <member name="P:DurianCode.PlacesSearchBar.Place.Longitude">
+             <summary>
+             Gets or sets the longitude.
+             </summary>
+             <value>The longitude.</value>
+            </member>
+        <member name="P:DurianCode.PlacesSearchBar.Place.Raw">
+             <summary>
+             Gets or sets the raw.
+             </summary>
+             <value>The raw.</value>
+            </member>
+        <member name="M:DurianCode.PlacesSearchBar.Place.#ctor(Newtonsoft.Json.Linq.JObject)">
+             <summary>
+             Initializes a new instance of the <see cref="T:DurianCode.PlacesSearchBar.Place" /> class.
+             </summary>
+             <param name="jsonObject">Json object.</param>
+            </member>
+    </members>
+</doc>

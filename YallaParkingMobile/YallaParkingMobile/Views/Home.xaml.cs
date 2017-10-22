@@ -74,7 +74,7 @@ namespace YallaParkingMobile {
                     var maximumHours = 24 - this.SearchTime.Time.Hours;
 					HoursSlider.Maximum = maximumHours >= 2 ? maximumHours : 2;
 
-					if ((int)HoursSlider.Value == (int)HoursSlider.Maximum) {
+					if ((int)HoursSlider.Value == (int)HoursSlider.Maximum || (int)HoursSlider.Value >= 8) {
 						Hours.Text = "All Day";
 					} else {
 						Hours.Text = string.Format("{0} hours", HoursSlider.Value);
@@ -250,7 +250,7 @@ namespace YallaParkingMobile {
                     new Xamarin.Forms.Maps.Position(25.1985, 55.2796);
 
                 Device.StartTimer(TimeSpan.FromMilliseconds(500), () => {
-                    Map.MoveToRegion(MapSpan.FromCenterAndRadius(mapPosition, Distance.FromMeters(Model.ParkNow ? 300 : 800)));
+                    Map.MoveToRegion(MapSpan.FromCenterAndRadius(mapPosition, Distance.FromMeters(Model.ParkNow ? 300 : 400)));
                     return false;
                 });
             });
@@ -385,7 +385,7 @@ namespace YallaParkingMobile {
 
             HoursSlider.Value = newStep * 1.0;
 
-            if ((int)HoursSlider.Value == (int)HoursSlider.Maximum) {
+            if ((int)HoursSlider.Value == (int)HoursSlider.Maximum || (int)HoursSlider.Value >= 8) {
                 Hours.Text = "All Day";
             } else {
                 Hours.Text = string.Format("{0} hours", HoursSlider.Value);
