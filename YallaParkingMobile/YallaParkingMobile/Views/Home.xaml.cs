@@ -24,6 +24,7 @@ namespace YallaParkingMobile {
 
         private Xamarin.Forms.Maps.Position mapPosition;
         private string GooglePlacesApiKey = "AIzaSyBMhWyhCQgULXVczTr2IfCBh2GCn5hCMyQ";
+        private TKCustomMapPin currentPin;
 
         public Home() {
             InitializeComponent();
@@ -52,6 +53,7 @@ namespace YallaParkingMobile {
             SearchDate.MinimumDate = DateTime.Now;
 
             var maxHours = (int)Math.Ceiling((DateTime.Now.Date.AddDays(1) - DateTime.Now).TotalHours);
+            maxHours = maxHours >= 8 ? 8 : maxHours;
             HoursSlider.Maximum = maxHours >= 2 ? maxHours : 2;
             SearchTime.Time = new TimeSpan(DateTime.Now.Hour, DateTime.Now.Minute, 0);
 
@@ -72,6 +74,7 @@ namespace YallaParkingMobile {
 			{
 				if (e.PropertyName == TimePicker.TimeProperty.PropertyName) {
                     var maximumHours = 24 - this.SearchTime.Time.Hours;
+                    maximumHours = maximumHours >= 8 ? 8 : maximumHours;
 					HoursSlider.Maximum = maximumHours >= 2 ? maximumHours : 2;
 
 					if ((int)HoursSlider.Value == (int)HoursSlider.Maximum || (int)HoursSlider.Value >= 8) {
@@ -211,9 +214,9 @@ namespace YallaParkingMobile {
                     var pin = new TKCustomMapPin {
                         BindingContext = property,
                         Position = new Xamarin.Forms.Maps.Position(property.Latitude ?? 0.0, property.Longitude ?? 0.0),
-                        Title = string.Format("{0} (AED {1:n0}/hr)", property.Name, property.ShortTermParkingPrice),
+                        Title = property.Name,
                         Subtitle = property.AreaName,
-                        Image = ImageSource.FromFile("pin.png"),
+                        Image = ImageSource.FromUri(new Uri(string.Format("http://yallaparking-new.insiso.co.uk/image/pin?price={0}&selected=false", (int)property.ShortTermParkingPrice))),
                         ShowCallout = true
                     };
 
@@ -229,12 +232,20 @@ namespace YallaParkingMobile {
             if (!Map.IsVisible) {
                 Map.IsVisible = true;
             }
-        }
+        }   
 
         void Handle_PinSelected(object sender, TK.CustomMap.TKGenericEventArgs<TK.CustomMap.TKCustomMapPin> e) {
-            var property = (PropertyModel)this.Map.SelectedPin.BindingContext;
+            if (currentPin != null) {                
+                var customPin = this.Map.CustomPins.First(p => p == currentPin);
+                var pinProperty = (PropertyModel)customPin.BindingContext;
+                customPin.Image = ImageSource.FromUri(new Uri(string.Format("http://yallaparking-new.insiso.co.uk/image/pin?price={0}&selected=false", (int)pinProperty.ShortTermParkingPrice)));
+            }
 
+            var property = (PropertyModel)this.Map.SelectedPin.BindingContext;
 			this.Model.SelectedProperty = property;
+
+            this.Map.SelectedPin.Image = ImageSource.FromUri(new Uri(string.Format("http://yallaparking-new.insiso.co.uk/image/pin?price={0}&selected=true", (int)property.ShortTermParkingPrice)));
+            currentPin = this.Map.SelectedPin;
         }
 
         private void Location_Clicked(object sender, EventArgs e) {
