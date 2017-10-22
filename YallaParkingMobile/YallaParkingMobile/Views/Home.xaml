@@ -44,7 +44,8 @@
                                 HeightRequest="200"
                                 IsVisible="false"
                                 IsShowingUser="true"
-                                VerticalOptions="FillAndExpand"
+                                VerticalOptions="FillAndExpand" 
+                                MapClicked="Map_MapClicked"
                                 PinSelected="Handle_PinSelected"
                                 MapType="Street" />
                         </telerikPrimitives:RadBusyIndicator.Content>
