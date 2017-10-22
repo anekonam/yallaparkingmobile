@@ -71,7 +71,7 @@ namespace YallaParkingMobile {
             } else if(result.StatusCode == System.Net.HttpStatusCode.Conflict){
                 await DisplayAlert("E-mail Address Exists", "The e-mail address provided is already registered, please enter an alternative e-mail address", "Ok");
             } else {
-                await DisplayAlert("Regiser Failed", "Registration failed, please try again", "Ok");
+                await DisplayAlert("Registration Failed", "Registration failed, please try again", "Ok");
             }
         }
 				
