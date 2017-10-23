@@ -108,12 +108,24 @@ namespace YallaParkingMobile.Model {
 
         public DateTime Start { get; set; }
 
+        public DateTime StartLocal{
+            get{
+                return this.Start.ToLocalTime();
+            }
+        }
+
         public DateTime End { get; set; }
+
+        public DateTime EndLocal{
+            get{
+                return this.End.ToLocalTime();
+            }
+        }
 
         public string RemainingTime {
             get {
-                if (this.End > DateTime.Now) {
-                    var timeSpan = this.End - DateTime.Now;
+                if (this.End > DateTime.UtcNow) {
+                    var timeSpan = this.End - DateTime.UtcNow;
                     var hours = timeSpan.TotalHours >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", "")) : 0;
                     var minutes = timeSpan.TotalMinutes >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("mm")) : 0;
                     return string.Format("{0} {1} {2} {3} left", hours, hours == 1 ? "hr" : "hrs", minutes, minutes == 1 ? "min" : "mins");
@@ -126,11 +138,11 @@ namespace YallaParkingMobile.Model {
 
 		public string BookingTime {
 			get {
-				if (this.Start.Date == DateTime.Now.Date) {
-					return String.Join(" to ", String.Format("{0} {1: HH:mm}", "Today", this.Start), String.Format("{0: HH:mm}", this.End));
+				if (this.Start.Date == DateTime.UtcNow.Date) {
+					return String.Join(" to ", String.Format("{0} {1: HH:mm}", "Today", this.StartLocal), String.Format("{0: HH:mm}", this.EndLocal));
 				} else {
-					return String.Join(" to ", String.Format("{0} {1} {2:MMM HH:mm}", this.Start.ToString("ddd"), this.Start.Day.Ordinalize(), this.Start),
-									   String.Format("{0} {1:MMM HH:mm}", this.End.Day.Ordinalize(), this.End));
+					return String.Join(" to ", String.Format("{0} {1} {2:MMM HH:mm}", this.StartLocal.ToString("ddd"), this.StartLocal.Day.Ordinalize(), this.StartLocal),
+									   String.Format("{0} {1:MMM HH:mm}", this.EndLocal.Day.Ordinalize(), this.EndLocal));
 				}
 			}
 		}
@@ -145,6 +157,8 @@ namespace YallaParkingMobile.Model {
                     return "1,Active";
                 } else if (this.EntryTime.HasValue && this.ExitTime.HasValue) {
                     return "3,Completed";
+                } else if(this.Cancelled.HasValue){
+                    return "4, Cancelled";
                 }
 
                 return "2,Pending";
@@ -153,7 +167,7 @@ namespace YallaParkingMobile.Model {
 
         public bool Validated {
             get {
-                return this.ValidatorUserId.HasValue;
+                return !this.Cancelled.HasValue && this.ValidatorUserId.HasValue;
             }
         }
 
@@ -165,27 +179,33 @@ namespace YallaParkingMobile.Model {
 
         public bool CanValidate {
             get {
-                return !this.ValidatorUserId.HasValue && (!this.Discount.HasValue || this.Discount.Value == 0);
+                return !this.Cancelled.HasValue && !this.ValidatorUserId.HasValue && (!this.Discount.HasValue || this.Discount.Value == 0);
             }
         }
 
         public bool CanEnter {
             get {
-                return !this.EntryTime.HasValue;
+                return !this.Cancelled.HasValue && !this.Cancelled.HasValue && !this.EntryTime.HasValue;
             }
         }
 
         public bool CanExit {
             get {
-                return this.EntryTime.HasValue && !this.ExitTime.HasValue;
+                return !this.Cancelled.HasValue && this.EntryTime.HasValue && !this.ExitTime.HasValue;
             }
         }
 
         public bool CanCancel {
             get {
-                return !this.EntryTime.HasValue && !this.ExitTime.HasValue;
+                return !this.Cancelled.HasValue && !this.EntryTime.HasValue && !this.ExitTime.HasValue;
             }
         }
+
+		public bool IsCancelled {
+			get {
+				return this.Status.Contains("Cancelled");
+			}
+		}
 
         public bool Pending {
             get {
@@ -232,5 +252,15 @@ namespace YallaParkingMobile.Model {
                 return this.Completed ? this.TotalPrice : this.EstimatedTotalPrice;
             }
         }
+
+        public DateTime? Cancelled { get; set; }
+
+        public string CancelledDetail{
+            get{
+                return this.Cancelled.HasValue ? string.Format("Cancelled {0} {1} {2:MMM HH:mm}", this.Cancelled.Value.ToLocalTime().ToString("ddd"), this.Cancelled.Value.ToLocalTime().Day.Ordinalize(), this.Cancelled.Value.ToLocalTime()) : null;
+            }
+        }
+
+        public decimal? CancellationCharge { get; set; }
     }
 }

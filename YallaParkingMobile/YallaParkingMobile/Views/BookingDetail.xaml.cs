@@ -156,5 +156,20 @@ namespace YallaParkingMobile {
 			// Navigate to our scanner page
 			await Navigation.PushAsync(scanPage);
         }
+
+		private async void Cancel_Clicked(object sender, EventArgs e) {
+            var confirm = await DisplayAlert("Cancel Booking", "Are you sure you wish to cancel your booking? Please note this may incur a cancellation fine", "Yes", "No");
+
+            if (confirm){
+                var result = await ServiceUtility.Cancel(this.Model.PropertyParkingId);
+
+                if(result){
+                    await this.RefreshBooking();
+                    await DisplayAlert("Booking Cancelled", "Your booking has been successfully cancelled", "Ok");                    
+                } else{
+					await DisplayAlert("Booking Cancellation Error", "There was a problem cancelling your booking, please try again", "Ok");
+				}
+            }
+		}
     }
 }

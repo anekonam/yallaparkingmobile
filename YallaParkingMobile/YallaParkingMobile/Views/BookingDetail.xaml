@@ -122,6 +122,23 @@
                     HorizontalTextAlignment="Start"
                     Text="Completed" />
             </Frame>
+            <Frame
+                Grid.Row="1"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                Padding="8"
+                Margin="0,0,-50,0"
+                VerticalOptions="Start"
+                CornerRadius="5"
+                HasShadow="false"
+                IsVisible="{Binding IsCancelled}"
+                BackgroundColor="#ff4134">
+                <Label
+                    TextColor="White"
+                    FontSize="13"
+                    HorizontalTextAlignment="Start"
+                    Text="{Binding CancelledDetail}" />
+            </Frame>
         </Grid>
         <control:MenuTableView
             x:Name="OrderSummary"
@@ -289,7 +306,7 @@
                 </TableSection>
             </TableRoot>
         </control:MenuTableView>
-        <Grid
+        <StackLayout
             Grid.Row="2">
             <Button
                 x:Name="EntryButton"
@@ -297,6 +314,7 @@
                 IsVisible="{Binding CanEnter}"
                 Text="Yalla, I'm Here"
                 Clicked="ScanEntry_Clicked"
+                Margin="0"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="Center" />
             <Button
@@ -305,8 +323,19 @@
                 IsVisible="{Binding CanExit}"
                 Text="Yalla, I'm Leaving"
                 Clicked="ScanExit_Clicked"
+                Margin="0"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="Center" />
-        </Grid>
+            <Button
+                x:Name="CancelButton"
+                Style="{StaticResource GreenButton}"
+                BackgroundColor="#ff4134"
+                IsVisible="{Binding CanCancel}"
+                Text="Cancel Booking"
+                Clicked="Cancel_Clicked"
+                Margin="0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center" />
+        </StackLayout>
     </Grid>
 </ContentPage>

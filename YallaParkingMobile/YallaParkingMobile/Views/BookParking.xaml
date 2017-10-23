@@ -131,7 +131,6 @@
                                 x:Name="Cars"
                                 HasUnevenRows="true"
                                 VerticalOptions="FillAndExpand"
-                                HeightRequest="300"
                                 ItemsSource="{Binding UserCars}"
                                 SelectedItem="{Binding SelectedUserCar,Mode=TwoWay}">
                                 <ListView.SeparatorVisibility>None</ListView.SeparatorVisibility>

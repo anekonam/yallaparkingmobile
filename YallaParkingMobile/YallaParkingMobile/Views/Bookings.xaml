@@ -197,6 +197,23 @@
                                                         HorizontalTextAlignment="Start"
                                                         Text="Completed" />
                                                 </Frame>
+                                                <Frame
+                                                    Grid.Row="1"
+                                                    Grid.Column="1"
+                                                    Grid.ColumnSpan="2"
+                                                    Padding="8"
+                                                    Margin="0,0,-50,0"
+                                                    VerticalOptions="Start"
+                                                    CornerRadius="5"
+                                                    HasShadow="false"
+                                                    IsVisible="{Binding IsCancelled}"
+                                                    BackgroundColor="#ff4134">
+                                                    <Label
+                                                        TextColor="White"
+                                                        FontSize="13"
+                                                        HorizontalTextAlignment="Start"
+                                                        Text="{Binding CancelledDetail}" />
+                                                </Frame>
                                             </Grid>
                                         </ViewCell>
                                     </DataTemplate>
