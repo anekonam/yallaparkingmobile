@@ -141,7 +141,7 @@
                                         VerticalOptions="Start"
                                         FontSize="16"
                                         TextColor="#767684"
-                                        Text="2 Hours" />
+                                        Text="1 hour" />
                                     <Slider
                                         x:Name="HoursSlider"
                                         Maximum="24"
@@ -231,13 +231,13 @@
                             HorizontalOptions="FillAndExpand"
                             VerticalOptions="Center" />
                         <StackLayout
+                            IsVisible="{Binding HasSelectedProperty}"
                             Grid.ColumnSpan="2">
                             <Frame
                                 CornerRadius="8"
                                 Margin="0"
                                 HeightRequest="110"
                                 Padding="0"
-                                IsVisible="{Binding HasSelectedProperty}"
                                 HasShadow="false">
                                 <Grid
                                     Grid.ColumnSpacing="0">

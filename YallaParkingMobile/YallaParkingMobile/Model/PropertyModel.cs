@@ -65,10 +65,10 @@ namespace YallaParkingMobile.Model {
 		public string BookingTime {
 			get {
 				if (this.StartDate.Date == DateTime.Now.Date) {
-					return String.Join(" to ", String.Format("{0} {1: HH:mm}", "Today", this.StartDate), String.Format("{0} {1: HH:mm}", "Today", this.EndDate));
+					return String.Join(" to ", String.Format("{0} {1: HH:mm}", "Today", this.StartDate), String.Format("{0: HH:mm}", this.EndDate));
 				} else {
 					return String.Join(" to ", String.Format("{0} {1} {2:MMM HH:mm}", this.StartDate.ToString("ddd"), this.StartDate.Day.Ordinalize(), this.StartDate),
-									   String.Format("{0} {1} {2:MMM HH:mm}", this.EndDate.ToString("ddd"), this.EndDate.Day.Ordinalize(), this.EndDate));
+									   String.Format("{0} {1:MMM HH:mm}", this.EndDate.Day.Ordinalize(), this.EndDate));
 				}
 			}
 		}

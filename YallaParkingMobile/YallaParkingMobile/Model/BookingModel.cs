@@ -124,16 +124,16 @@ namespace YallaParkingMobile.Model {
         }
 
 
-        public string BookingTime {
-            get {
-                if(this.Start.Date == DateTime.Now.Date){
-                    return String.Join(" to ",String.Format("{0} {1: HH:mm}", "Today", this.Start),String.Format("{0} {1: HH:mm}", "Today", this.End));
-                } else{
-                    return String.Join(" to ",String.Format("{0} {1} {2:MMM HH:mm}", this.Start.ToString("ddd"), this.Start.Day.Ordinalize(), this.Start) ,
-                                       String.Format("{0} {1} {2:MMM HH:mm}", this.End.ToString("ddd"), this.End.Day.Ordinalize(), this.End));
-                }
-            }
-        }
+		public string BookingTime {
+			get {
+				if (this.Start.Date == DateTime.Now.Date) {
+					return String.Join(" to ", String.Format("{0} {1: HH:mm}", "Today", this.Start), String.Format("{0: HH:mm}", this.End));
+				} else {
+					return String.Join(" to ", String.Format("{0} {1} {2:MMM HH:mm}", this.Start.ToString("ddd"), this.Start.Day.Ordinalize(), this.Start),
+									   String.Format("{0} {1:MMM HH:mm}", this.End.Day.Ordinalize(), this.End));
+				}
+			}
+		}
 
         public DateTime? EntryTime { get; set; }
 
