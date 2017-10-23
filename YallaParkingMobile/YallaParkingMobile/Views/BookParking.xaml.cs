@@ -42,6 +42,7 @@ namespace YallaParkingMobile {
 
 			if (userCars != null && userCars.Any()) {
                 this.Model.UserCars = new ObservableCollection<UserCarModel>(userCars);
+                this.CarCell.Height = this.Model.UserCars.Count < 3 ? this.Model.UserCars.Count * 150 : 300; 
 			}
 
 			var userCards = await ServiceUtility.GetUserCards();

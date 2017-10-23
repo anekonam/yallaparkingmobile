@@ -24,7 +24,7 @@
             Padding="10,10,10,10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition
-                    Width="0.7*" />
+                    Width="0.9*" />
                 <ColumnDefinition
                     Width="*" />
             </Grid.ColumnDefinitions>
@@ -238,7 +238,7 @@
                 <TableSection
                     Title="Payment Method">
                     <ViewCell
-                        StyleId="None"
+                        StyleId="none"
                         Height="70">
                         <Grid
                             VerticalOptions="FillAndExpand"

@@ -123,14 +123,15 @@
                 <TableSection
                     Title="Select Vehicle">
                     <ViewCell
+                        x:Name="CarCell"
                         StyleId="none"
-                        Height="200">
+                        Height="100">
                         <StackLayout>
                             <ListView
                                 x:Name="Cars"
                                 HasUnevenRows="true"
-                                HeightRequest="300"
                                 VerticalOptions="FillAndExpand"
+                                HeightRequest="300"
                                 ItemsSource="{Binding UserCars}"
                                 SelectedItem="{Binding SelectedUserCar,Mode=TwoWay}">
                                 <ListView.SeparatorVisibility>None</ListView.SeparatorVisibility>

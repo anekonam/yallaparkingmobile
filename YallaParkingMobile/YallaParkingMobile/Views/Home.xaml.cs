@@ -118,7 +118,7 @@ namespace YallaParkingMobile {
 
             if (place != null) {
                 var mapPosition = new Xamarin.Forms.Maps.Position(place.Latitude, place.Longitude);
-                Map.MoveToRegion(MapSpan.FromCenterAndRadius(mapPosition, Distance.FromMiles(1)));
+                Map.MoveToRegion(MapSpan.FromCenterAndRadius(mapPosition, Distance.FromMeters(800)));
             }
 
             this.Search.Unfocus();
@@ -250,7 +250,7 @@ namespace YallaParkingMobile {
                 this.Map.SelectedPin.Image = ImageSource.FromUri(new Uri(string.Format("http://yallaparking-new.insiso.co.uk/image/pin?price={0}&selected=true", (int)property.ShortTermParkingPrice)));
                 currentPin = this.Map.SelectedPin;
 
-                Map.MoveToRegion(MapSpan.FromCenterAndRadius(e.Value.Position, Distance.FromMeters(300)));
+                Map.MoveToRegion(MapSpan.FromCenterAndRadius(e.Value.Position, Distance.FromMeters(400)));
             } else {
                 this.Map.SelectedPin = null;
                 this.Model.SelectedProperty = null;
