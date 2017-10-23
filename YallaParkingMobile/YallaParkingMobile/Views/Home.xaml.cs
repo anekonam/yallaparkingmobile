@@ -214,10 +214,9 @@ namespace YallaParkingMobile {
                     var pin = new TKCustomMapPin {
                         BindingContext = property,
                         Position = new Xamarin.Forms.Maps.Position(property.Latitude ?? 0.0, property.Longitude ?? 0.0),
-                        Title = property.Name,
-                        Subtitle = property.AreaName,
+                        Anchor = new Point(0.5, 1),
                         Image = ImageSource.FromUri(new Uri(string.Format("http://yallaparking-new.insiso.co.uk/image/pin?price={0}&selected=false", (int)property.ShortTermParkingPrice))),
-                        ShowCallout = true
+                        ShowCallout = false
                     };
                     
                     pins.Add(pin);
@@ -236,9 +235,12 @@ namespace YallaParkingMobile {
 
         void Handle_PinSelected(object sender, TK.CustomMap.TKGenericEventArgs<TK.CustomMap.TKCustomMapPin> e) {
             if (currentPin != null) {                
-                var customPin = this.Map.CustomPins.First(p => p == currentPin);
-                var pinProperty = (PropertyModel)customPin.BindingContext;
-                customPin.Image = ImageSource.FromUri(new Uri(string.Format("http://yallaparking-new.insiso.co.uk/image/pin?price={0}&selected=false", (int)pinProperty.ShortTermParkingPrice)));
+                var customPin = this.Map.CustomPins.FirstOrDefault(p => p == currentPin);
+
+                if (customPin != null) {
+                    var pinProperty = (PropertyModel)customPin.BindingContext;
+                    customPin.Image = ImageSource.FromUri(new Uri(string.Format("http://yallaparking-new.insiso.co.uk/image/pin?price={0}&selected=false", (int)pinProperty.ShortTermParkingPrice)));
+                }
             }
 
             if (e.Value != currentPin) {
@@ -247,6 +249,8 @@ namespace YallaParkingMobile {
 
                 this.Map.SelectedPin.Image = ImageSource.FromUri(new Uri(string.Format("http://yallaparking-new.insiso.co.uk/image/pin?price={0}&selected=true", (int)property.ShortTermParkingPrice)));
                 currentPin = this.Map.SelectedPin;
+
+                Map.MoveToRegion(MapSpan.FromCenterAndRadius(e.Value.Position, Distance.FromMeters(300)));
             } else {
                 this.Map.SelectedPin = null;
                 this.Model.SelectedProperty = null;

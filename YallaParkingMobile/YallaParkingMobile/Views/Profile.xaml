@@ -50,7 +50,7 @@
                                     BorderColor="#a1a1b4"
                                     BorderThickness="1"
                                     HorizontalOptions="Center"
-                                    Source="menu-profile.png"
+                                    Source="menu-profile.png"                                   
                                     Aspect="AspectFill">
                                     <controls:CircleImage.GestureRecognizers>
                                         <TapGestureRecognizer

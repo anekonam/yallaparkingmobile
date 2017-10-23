@@ -18,18 +18,22 @@
         </Grid.RowDefinitions>
         <Grid
             Grid.Row="0"
-            Padding="30">
+            Grid.ColumnSpacing="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition
                     Width="0.3*" />
                 <ColumnDefinition
                     Width="0.7*" />
             </Grid.ColumnDefinitions>
-            <Image
-                Grid.Column="0"
+            <Frame
+                Margin="10"
+                Padding="0"
+                CornerRadius="8">
+            <Image                
                 Aspect="AspectFill"
                 x:Name="PropertyImage">
             </Image>
+                </Frame>
             <StackLayout
                 Padding="10,0,0,0"
                 Grid.Column="1">

@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
+using Humanizer;
 
 namespace YallaParkingMobile.Model {
 
@@ -60,19 +62,23 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-        public string BookingTime {
-            get {
-                return string.Format("{0} to {1}", this.StartDate.ToString("dd-MMM-yy HH:mm"), this.EndDate.ToString("dd-MMM-yy HH:mm"));
-            }
-        }
+		public string BookingTime {
+			get {
+				if (this.StartDate.Date == DateTime.Now.Date) {
+					return String.Join(" to ", String.Format("{0} {1: HH:mm}", "Today", this.StartDate), String.Format("{0} {1: HH:mm}", "Today", this.EndDate));
+				} else {
+					return String.Join(" to ", String.Format("{0} {1} {2:MMM HH:mm}", this.StartDate.ToString("ddd"), this.StartDate.Day.Ordinalize(), this.StartDate),
+									   String.Format("{0} {1} {2:MMM HH:mm}", this.EndDate.ToString("ddd"), this.EndDate.Day.Ordinalize(), this.EndDate));
+				}
+			}
+		}
 
-        public string Image { get; set; }
+		public ImageSource Image {
+			get {
+				return ImageSource.FromUri(new Uri("http://yallaparking-new.insiso.co.uk/property/image/" + this.PropertyId));
 
-        public string ImageBase {
-            get {
-                return !string.IsNullOrWhiteSpace(this.Image) ? this.Image.Split(',')[1] : this.Image;
-            }
-        }
+			}
+		}
 
         public int EntryBufferMinutes { get; set; }
 

@@ -44,7 +44,7 @@
                                 HeightRequest="200"
                                 IsVisible="false"
                                 IsShowingUser="true"
-                                VerticalOptions="FillAndExpand" 
+                                VerticalOptions="FillAndExpand"
                                 MapClicked="Map_MapClicked"
                                 PinSelected="Handle_PinSelected"
                                 MapType="Street" />
@@ -52,7 +52,7 @@
                     </telerikPrimitives:RadBusyIndicator>
                     <Frame
                         x:Name="SearchFrame"
-                        Margin="15,30,15,0"
+                        Margin="15,20,15,0"
                         Padding="4"
                         CornerRadius="8"
                         HeightRequest="110"
@@ -230,20 +230,106 @@
                             Clicked="ParkLater_Clicked"
                             HorizontalOptions="FillAndExpand"
                             VerticalOptions="Center" />
-                        <Button
-                            x:Name="NextButton"
-                            Grid.ColumnSpan="2"
-                            Style="{StaticResource GreenButton}"
-                            Text="Next"
-                            BorderRadius="0"
-                            Margin="0"
-                            HeightRequest="60"
-                            FontSize="20"
-                            BackgroundColor="#ff8e30"
-                            IsVisible="{Binding HasSelectedProperty}"
-                            Clicked="Next_Clicked"
-                            HorizontalOptions="FillAndExpand"
-                            VerticalOptions="Center" />
+                        <StackLayout
+                            Grid.ColumnSpan="2">
+                            <Frame
+                                CornerRadius="8"
+                                Margin="0"
+                                HeightRequest="110"
+                                Padding="0"
+                                IsVisible="{Binding HasSelectedProperty}"
+                                HasShadow="false">
+                                <Grid
+                                    Grid.ColumnSpacing="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition
+                                            Width="0.3*" />
+                                        <ColumnDefinition
+                                            Width="0.7*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Frame
+                                        Margin="5,10,5,5"
+                                        Padding="0"
+                                        HeightRequest="80"
+                                        CornerRadius="8">
+                                        <Image
+                                            Aspect="AspectFill"
+                                            x:Name="PropertyImage"
+                                            Source="{Binding SelectedProperty.Image}">
+                                        </Image>
+                                    </Frame>
+                                    <StackLayout
+                                        Padding="10,0,0,0"
+                                        VerticalOptions="Center"
+                                        Grid.Column="1">
+                                        <Label
+                                            x:Name="PropertyName"
+                                            HorizontalTextAlignment="Start"
+                                            TextColor="Black"
+                                            Text="{Binding SelectedProperty.Name}" />
+                                        <Label
+                                            x:Name="PropertyArea"
+                                            HorizontalTextAlignment="Start"
+                                            FontSize="12"
+                                            Text="{Binding SelectedProperty.PropertyArea}" />
+                                        <Label
+                                            HorizontalTextAlignment="Start"
+                                            FontSize="12"
+                                            Text="Dubai, UAE" />
+                                    </StackLayout>
+                                    <Frame
+                                        Grid.Column="1"
+                                        Margin="0,-20,20,0"
+                                        HeightRequest="20"
+                                        WidthRequest="100"
+                                        Padding="8"
+                                        HorizontalOptions="End"
+                                        VerticalOptions="Start"
+                                        BackgroundColor="#ff8e30"
+                                        CornerRadius="8">
+                                        <StackLayout
+                                            Orientation="Horizontal"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="Center">
+                                            <Label
+                                                TextColor="White"
+                                                Text="AED"
+                                                Margin="0"
+                                                FontAttributes="Bold"
+                                                VerticalOptions="CenterAndExpand"
+                                                FontSize="14" />
+                                            <Label
+                                                TextColor="White"
+                                                FontSize="20"
+                                                Margin="0"
+                                                FontAttributes="Bold"
+                                                VerticalOptions="CenterAndExpand"
+                                                Text="{Binding SelectedProperty.ShortTermParkingPrice, StringFormat='{0:n0}'}" />
+                                            <Label
+                                                TextColor="White"
+                                                Text="/hr"
+                                                Margin="-5,0,0,0"
+                                                FontAttributes="Bold"
+                                                VerticalOptions="CenterAndExpand"
+                                                FontSize="14" />
+                                        </StackLayout>
+                                    </Frame>
+                                </Grid>
+                            </Frame>
+                            <Button
+                                x:Name="NextButton"
+                                Style="{StaticResource GreenButton}"
+                                Text="Next"
+                                BorderRadius="0"
+                                Margin="0"
+                                HeightRequest="60"
+                                FontSize="20"
+                                BackgroundColor="#ff8e30"
+                                IsVisible="{Binding HasSelectedProperty}"
+                                Clicked="Next_Clicked"
+                                HorizontalOptions="FillAndExpand"
+                                VerticalOptions="Center" />
+                        </StackLayout>
                     </Grid>
                 </Grid>
             </telerikPrimitives:RadSideDrawer.MainContent>
