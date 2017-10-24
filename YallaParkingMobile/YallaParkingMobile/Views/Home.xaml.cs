@@ -25,6 +25,7 @@ namespace YallaParkingMobile {
         private Xamarin.Forms.Maps.Position mapPosition;
         private string GooglePlacesApiKey = "AIzaSyBMhWyhCQgULXVczTr2IfCBh2GCn5hCMyQ";
         private TKCustomMapPin currentPin = null;
+        private IGeolocator locator = null;
 
         public Home() {
             InitializeComponent();
@@ -45,11 +46,7 @@ namespace YallaParkingMobile {
 
             PropertyUtility.SetValue("LoggedIn", "true");
             PropertyUtility.RemoveKey("query");
-            PropertyUtility.RemoveKey("hours");
-
-            var locator = CrossGeolocator.Current;
-            locator.PositionChanged += Current_PositionChanged;
-            locator.StartListeningAsync(TimeSpan.FromSeconds(10), 50);
+            PropertyUtility.RemoveKey("hours");             
 
             SearchDate.Date = DateTime.Now;
             SearchDate.MinimumDate = DateTime.Now;
@@ -168,7 +165,11 @@ namespace YallaParkingMobile {
             }
         }
 
-        async void Handle_Appearing(object sender, System.EventArgs e) {			
+        async void Handle_Appearing(object sender, System.EventArgs e) {
+			locator = CrossGeolocator.Current;
+			locator.PositionChanged += Current_PositionChanged;
+			await locator.StartListeningAsync(TimeSpan.FromSeconds(10), 50);
+
             var query = PropertyUtility.GetValue("query");
             var hours = PropertyUtility.GetValue("hours");
 
@@ -184,6 +185,15 @@ namespace YallaParkingMobile {
             if (!string.IsNullOrWhiteSpace(profile.ProfilePicture)) {
                 var profileImage = !string.IsNullOrWhiteSpace(profile.ProfilePicture) && profile.ProfilePicture.Contains(",") ? profile.ProfilePicture.Split(',')[1] : profile.ProfilePicture;
                 this.ProfileImage.Source = ImageSource.FromStream(() => new MemoryStream(Convert.FromBase64String(profileImage)));
+            }
+        }
+
+        async void Handle_Disappearing(object sender, System.EventArgs e) {
+            locator = CrossGeolocator.Current;
+            locator.PositionChanged += Current_PositionChanged;
+
+            if (locator.IsListening) {
+                await locator.StopListeningAsync();
             }
         }
 

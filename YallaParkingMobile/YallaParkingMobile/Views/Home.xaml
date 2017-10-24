@@ -12,6 +12,7 @@
     x:Class="YallaParkingMobile.Home"
     Title="Find Parking"
     Appearing="Handle_Appearing"
+    Disappearing="Handle_Disappearing"
     NavigationPage.HasBackButton="False">
     <ContentPage.Content>
         <telerikPrimitives:RadSideDrawer

@@ -277,6 +277,12 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+        public bool HasDistance{
+            get{
+                return this.Distance.HasValue;
+            }
+        }
+
         private Position currentLocation;
         public Position CurrentLocation {
             get {
@@ -288,6 +294,8 @@ namespace YallaParkingMobile.Model {
                     if(PropertyChanged!=null){
 						PropertyChanged(this, new PropertyChangedEventArgs("CurrentLocation"));
                         PropertyChanged(this, new PropertyChangedEventArgs("CanEnter"));
+                        PropertyChanged(this, new PropertyChangedEventArgs("Distance"));
+                        PropertyChanged(this, new PropertyChangedEventArgs("HasDistance"));
                     }
                 }
             }

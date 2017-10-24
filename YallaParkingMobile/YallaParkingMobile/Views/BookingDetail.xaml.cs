@@ -19,6 +19,8 @@ using System.Diagnostics;
 
 namespace YallaParkingMobile {
     public partial class BookingDetail : ContentPage {
+        private IGeolocator locator = null;
+
         public BookingDetail() {
             InitializeComponent();             
         }
@@ -28,17 +30,13 @@ namespace YallaParkingMobile {
 
 			InitializeComponent();
 			Analytics.TrackEvent("Viewing Booking Page - " + Model.Number);
-
-            Task.Delay(10000).ContinueWith(task => UpdateCurrentLocation());
-
-			var locator = CrossGeolocator.Current;
-			locator.PositionChanged += Current_PositionChanged;
-			locator.StartListeningAsync(TimeSpan.FromSeconds(10), 50);
         }
 
-	    void Current_PositionChanged(object sender, PositionEventArgs e) {
+       
+        void Current_PositionChanged(object sender, PositionEventArgs e) {
 			UpdateCurrentLocation();
 		}
+
 
 		private async Task<Plugin.Geolocator.Abstractions.Position> GetCurrentLocation() {
 			Plugin.Geolocator.Abstractions.Position position = null;
@@ -94,7 +92,9 @@ namespace YallaParkingMobile {
 			this.GetCurrentLocation().ContinueWith(response => {
                 this.Model.CurrentLocation = response.Result;
 
-                Task.Delay(10000).ContinueWith(task => UpdateCurrentLocation());
+                if (locator.IsListening) {
+                    Task.Delay(10000).ContinueWith(task => UpdateCurrentLocation());
+                }
 			});
 		}
 
@@ -108,10 +108,25 @@ namespace YallaParkingMobile {
         }
 
 		async void Handle_Appearing(object sender, System.EventArgs e) {
+			UpdateCurrentLocation();
+
+			locator = CrossGeolocator.Current;
+			locator.PositionChanged += Current_PositionChanged;
+			await locator.StartListeningAsync(TimeSpan.FromSeconds(10), 50);
+
             await this.RefreshBooking();
 		}
 
-        public async Task RefreshBooking(){
+		async void Handle_Disappearing(object sender, System.EventArgs e) {            
+            locator.PositionChanged -= Current_PositionChanged;
+
+			if (locator.IsListening) {
+				await locator.StopListeningAsync();
+			}
+		}
+
+
+		public async Task RefreshBooking(){
             this.Model = await ServiceUtility.GetBooking(this.Model.PropertyParkingId);
 
             if (this.Model.Discounted || !this.Model.Active) {
