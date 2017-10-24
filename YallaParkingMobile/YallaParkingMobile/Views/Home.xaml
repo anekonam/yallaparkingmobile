@@ -120,6 +120,7 @@
                                         x:Name="SearchDate"
                                         Format="ddddd dd MMM"
                                         TextColor="#767684"
+                                        WidthRequest="150"
                                         DateSelected="DatePicker_DateSelected"
                                         HorizontalOptions="Start" />
                                     <Label
