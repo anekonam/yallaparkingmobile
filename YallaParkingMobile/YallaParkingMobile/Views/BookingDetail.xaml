@@ -307,7 +307,8 @@
             </TableRoot>
         </control:MenuTableView>
         <StackLayout
-            Grid.Row="2">
+            Grid.Row="2"
+            Margin="10">
             <Button
                 x:Name="EntryButton"
                 Style="{StaticResource GreenButton}"

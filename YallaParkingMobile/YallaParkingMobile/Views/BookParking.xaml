@@ -277,6 +277,7 @@
         </control:MenuTableView>
         <Button
             x:Name="BookButton"
+            Margin="10"
             Style="{StaticResource GreenButton}"
             IsVisible="{Binding CanBook}"
             Text="{Binding BookText}"

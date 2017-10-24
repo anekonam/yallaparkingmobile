@@ -10,6 +10,12 @@ using YallaParkingMobile.Model;
 using YallaParkingMobile.Utility;
 using System.Collections.ObjectModel;
 using ZXing.Net.Mobile.Forms;
+using Plugin.Geolocator;
+using Plugin.Geolocator.Abstractions;
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
+using System.Diagnostics;
+
 
 namespace YallaParkingMobile {
     public partial class BookingDetail : ContentPage {
@@ -21,7 +27,75 @@ namespace YallaParkingMobile {
             this.Model = model;
 
 			InitializeComponent();
-			Analytics.TrackEvent("Viewing Booking Page - "+Model.Number);
+			Analytics.TrackEvent("Viewing Booking Page - " + Model.Number);
+
+            Task.Delay(10000).ContinueWith(task => UpdateCurrentLocation());
+
+			var locator = CrossGeolocator.Current;
+			locator.PositionChanged += Current_PositionChanged;
+			locator.StartListeningAsync(TimeSpan.FromSeconds(10), 50);
+        }
+
+	    void Current_PositionChanged(object sender, PositionEventArgs e) {
+			UpdateCurrentLocation();
+		}
+
+		private async Task<Plugin.Geolocator.Abstractions.Position> GetCurrentLocation() {
+			Plugin.Geolocator.Abstractions.Position position = null;
+
+			try {
+				var status = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Location);
+
+				if (await CrossPermissions.Current.ShouldShowRequestPermissionRationaleAsync(Permission.Location)) {
+					await DisplayAlert("Location Required", "In order to use this application you must be able to share your location.", "OK");
+				}
+
+				var results = await CrossPermissions.Current.RequestPermissionsAsync(Permission.Location);
+				//Best practice to always check that the key exists
+				if (results.ContainsKey(Permission.Location)) {
+					status = results[Permission.Location];
+				}
+
+				var locator = CrossGeolocator.Current;
+
+				if (status == PermissionStatus.Granted) {
+					locator.DesiredAccuracy = 100;
+
+					position = await locator.GetLastKnownLocationAsync();
+
+					if (position != null) {
+						return position;
+					}
+
+					if (!locator.IsGeolocationAvailable || !locator.IsGeolocationEnabled) {
+						return null;
+					}
+
+					position = await locator.GetPositionAsync(TimeSpan.FromSeconds(20), null, true);
+				}
+			} catch (Exception ex) {
+				Debug.WriteLine(ex);
+			}
+
+			if (position == null) {
+				return position;
+			}
+
+			var output = string.Format("Time: {0} \nLat: {1} \nLong: {2} \nAltitude: {3} \nAltitude Accuracy: {4} \nAccuracy: {5} \nHeading: {6} \nSpeed: {7}",
+				position.Timestamp, position.Latitude, position.Longitude,
+				position.Altitude, position.AltitudeAccuracy, position.Accuracy, position.Heading, position.Speed);
+
+			Analytics.TrackEvent(output);
+
+			return position;
+		}
+
+		private void UpdateCurrentLocation() {
+			this.GetCurrentLocation().ContinueWith(response => {
+                this.Model.CurrentLocation = response.Result;
+
+                Task.Delay(10000).ContinueWith(task => UpdateCurrentLocation());
+			});
 		}
 
         public BookingModel Model {

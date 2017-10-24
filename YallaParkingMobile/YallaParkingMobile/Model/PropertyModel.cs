@@ -9,7 +9,7 @@ using Humanizer;
 
 namespace YallaParkingMobile.Model {
 
-    public class PropertyModel:INotifyPropertyChanged {
+    public class PropertyModel : INotifyPropertyChanged {
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -29,7 +29,7 @@ namespace YallaParkingMobile.Model {
 
         public decimal ShortTermParkingPrice { get; set; }
 
-        private decimal discount;        
+        private decimal discount;
         public decimal Discount {
             get {
                 return discount;
@@ -62,23 +62,23 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-		public string BookingTime {
-			get {
-				if (this.StartDate.Date == DateTime.Now.Date) {
-					return String.Join(" to ", String.Format("{0} {1: HH:mm}", "Today", this.StartDate), String.Format("{0: HH:mm}", this.EndDate));
-				} else {
-					return String.Join(" to ", String.Format("{0} {1} {2:MMM HH:mm}", this.StartDate.ToString("ddd"), this.StartDate.Day.Ordinalize(), this.StartDate),
-									   String.Format("{0} {1:MMM HH:mm}", this.EndDate.Day.Ordinalize(), this.EndDate));
-				}
-			}
-		}
+        public string BookingTime {
+            get {
+                if (this.StartDate.Date == DateTime.Now.Date) {
+                    return String.Join(" to ", String.Format("{0} {1: HH:mm}", "Today", this.StartDate.ToLocalTime()), String.Format("{0: HH:mm}", this.EndDate.ToLocalTime()));
+                } else {
+                    return String.Join(" to ", String.Format("{0} {1} {2:MMM HH:mm}", this.StartDate.ToLocalTime().ToString("ddd"), this.StartDate.ToLocalTime().Day.Ordinalize(), this.StartDate.ToLocalTime()),
+                                       String.Format("{0} {1:MMM HH:mm}", this.EndDate.ToLocalTime().Day.Ordinalize(), this.EndDate.ToLocalTime()));
+                }
+            }
+        }
 
-		public ImageSource Image {
-			get {
-				return ImageSource.FromUri(new Uri("http://yallaparking-new.insiso.co.uk/property/image/" + this.PropertyId));
+        public ImageSource Image {
+            get {
+                return ImageSource.FromUri(new Uri("http://yallaparking-new.insiso.co.uk/property/image/" + this.PropertyId));
 
-			}
-		}
+            }
+        }
 
         public int EntryBufferMinutes { get; set; }
 

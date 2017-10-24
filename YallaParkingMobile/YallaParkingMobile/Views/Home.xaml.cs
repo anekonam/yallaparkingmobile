@@ -47,7 +47,9 @@ namespace YallaParkingMobile {
             PropertyUtility.RemoveKey("query");
             PropertyUtility.RemoveKey("hours");
 
-            CrossGeolocator.Current.PositionChanged += Current_PositionChanged;
+            var locator = CrossGeolocator.Current;
+            locator.PositionChanged += Current_PositionChanged;
+            locator.StartListeningAsync(TimeSpan.FromSeconds(10), 50);
 
             SearchDate.Date = DateTime.Now;
             SearchDate.MinimumDate = DateTime.Now;
@@ -117,8 +119,8 @@ namespace YallaParkingMobile {
             var place = await Places.GetPlace(prediction.Place_ID, GooglePlacesApiKey);
 
             if (place != null) {
-                var mapPosition = new Xamarin.Forms.Maps.Position(place.Latitude, place.Longitude);
-                Map.MoveToRegion(MapSpan.FromCenterAndRadius(mapPosition, Distance.FromMeters(800)));
+                var position = new Xamarin.Forms.Maps.Position(place.Latitude, place.Longitude);
+                Map.MoveToRegion(MapSpan.FromCenterAndRadius(position, Distance.FromMeters(800)));
             }
 
             this.Search.Unfocus();

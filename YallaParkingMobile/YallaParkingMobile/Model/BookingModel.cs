@@ -1,9 +1,11 @@
 ﻿using System;
 using Humanizer;
 using Xamarin.Forms;
+using System.ComponentModel;
+using Plugin.Geolocator.Abstractions;
 
 namespace YallaParkingMobile.Model {
-    public class BookingModel {
+    public class BookingModel:INotifyPropertyChanged {
 
         public int PropertyParkingId { get; set; }
 
@@ -92,9 +94,16 @@ namespace YallaParkingMobile.Model {
 
         public string PropertyCity { get; set; }
 
-        public int PropertyEntryBufferMinutes { get; set; }
+        public double PropertyLatitude { get; set; }
+
+        public double PropertyLongitude { get; set; }
+
+        public int PropertyShortTermParkingEntryBufferMinutes { get; set; }
 
         private string number;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
         public string Number {
             get {
                 return string.Format("#{0}", number);
@@ -185,7 +194,8 @@ namespace YallaParkingMobile.Model {
 
         public bool CanEnter {
             get {
-                return !this.Cancelled.HasValue && !this.Cancelled.HasValue && !this.EntryTime.HasValue;
+                var timeToBooking = (this.Start - DateTime.UtcNow).TotalMinutes;
+                return timeToBooking <= this.PropertyShortTermParkingEntryBufferMinutes && this.Distance.HasValue && this.Distance <= 300 && !this.Cancelled.HasValue && !this.Cancelled.HasValue && !this.EntryTime.HasValue;
             }
         }
 
@@ -225,8 +235,6 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-
-
         public decimal Price { get; set; }
 
         public decimal? Discount { get; set; }
@@ -262,5 +270,27 @@ namespace YallaParkingMobile.Model {
         }
 
         public decimal? CancellationCharge { get; set; }
+
+        public double? Distance{
+            get{
+                return this.CurrentLocation != null ? this.CurrentLocation.CalculateDistance(new Position(this.PropertyLatitude, this.PropertyLongitude)) : (double?)null;
+            }
+        }
+
+        private Position currentLocation;
+        public Position CurrentLocation {
+            get {
+                return currentLocation;
+            } set{
+                if(currentLocation!=value){
+                    currentLocation = value;
+
+                    if(PropertyChanged!=null){
+						PropertyChanged(this, new PropertyChangedEventArgs("CurrentLocation"));
+                        PropertyChanged(this, new PropertyChangedEventArgs("CanEnter"));
+                    }
+                }
+            }
+        }
     }
 }
