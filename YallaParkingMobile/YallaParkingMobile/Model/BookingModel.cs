@@ -100,6 +100,12 @@ namespace YallaParkingMobile.Model {
 
         public int PropertyShortTermParkingEntryBufferMinutes { get; set; }
 
+        public string PropertyShortTermParkingEntranceMethod { get; set; }
+
+        public string PropertyShortTermParkingAccessInfo { get; set; }
+
+        public string PropertyShortTermParkingDetails { get; set; }
+
         private string number;
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -194,8 +200,7 @@ namespace YallaParkingMobile.Model {
 
         public bool CanEnter {
             get {
-                var timeToBooking = (this.Start - DateTime.UtcNow).TotalMinutes;
-                return timeToBooking <= this.PropertyShortTermParkingEntryBufferMinutes && this.Distance.HasValue && this.Distance <= 300 && !this.Cancelled.HasValue && !this.Cancelled.HasValue && !this.EntryTime.HasValue;
+                return !this.Cancelled.HasValue && !this.Cancelled.HasValue && !this.EntryTime.HasValue;
             }
         }
 
@@ -257,6 +262,10 @@ namespace YallaParkingMobile.Model {
 
         public decimal? Total{
             get{
+                if (this.Cancelled.HasValue) {
+                    return this.CancellationCharge.HasValue ? this.CancellationCharge.Value : 0.0M;
+                } 
+
                 return this.Completed ? this.TotalPrice : this.EstimatedTotalPrice;
             }
         }
@@ -293,9 +302,8 @@ namespace YallaParkingMobile.Model {
 
                     if(PropertyChanged!=null){
 						PropertyChanged(this, new PropertyChangedEventArgs("CurrentLocation"));
-                        PropertyChanged(this, new PropertyChangedEventArgs("CanEnter"));
                         PropertyChanged(this, new PropertyChangedEventArgs("Distance"));
-                        PropertyChanged(this, new PropertyChangedEventArgs("HasDistance"));
+						PropertyChanged(this, new PropertyChangedEventArgs("HasDistance"));
                     }
                 }
             }

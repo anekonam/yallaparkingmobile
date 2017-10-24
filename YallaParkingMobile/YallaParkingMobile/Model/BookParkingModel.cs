@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using Xamarin.Forms;
 using YallaParkingMobile.Utility;
+using Plugin.Geolocator.Abstractions;
 
 namespace YallaParkingMobile.Model {
 
@@ -38,7 +39,7 @@ namespace YallaParkingMobile.Model {
             get{
                 return !this.ParkingNow;
             }
-        }
+        } 	
 
         public decimal Discount { get; set; }
 
@@ -161,5 +162,37 @@ namespace YallaParkingMobile.Model {
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
+
+
+		public double? Distance {
+			get {
+                return this.CurrentLocation != null && this.Property.Latitude.HasValue && this.Property.Longitude.HasValue ? 
+                           this.CurrentLocation.CalculateDistance(new Position(this.Property.Latitude.Value, this.Property.Longitude.Value)) : (double?)null;
+			}
+		}
+
+		public bool HasDistance {
+			get {
+				return this.Distance.HasValue;
+			}
+		}       
+
+		private Position currentLocation;
+		public Position CurrentLocation {
+			get {
+				return currentLocation;
+			}
+			set {
+				if (currentLocation != value) {
+					currentLocation = value;
+
+					if (PropertyChanged != null) {
+						PropertyChanged(this, new PropertyChangedEventArgs("CurrentLocation"));
+						PropertyChanged(this, new PropertyChangedEventArgs("Distance"));
+                        PropertyChanged(this, new PropertyChangedEventArgs("HasDistance"));
+					}
+				}
+			}
+		}
     }
 }

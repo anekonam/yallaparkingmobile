@@ -29,6 +29,14 @@ namespace YallaParkingMobile.Model {
 
         public decimal ShortTermParkingPrice { get; set; }
 
+        public string ShortTermParkingEntranceMethod { get; set; }
+
+        public string ShortTermParkingAccessInfo { get; set; }
+
+        public string ShortTermParkingDetails { get; set; }
+
+        public string PropertyFeatures { get; set; }
+
         private decimal discount;
         public decimal Discount {
             get {

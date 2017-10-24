@@ -368,15 +368,15 @@ namespace YallaParkingMobile {
         private async void Next_Clicked(object sender, System.EventArgs e) {
             var property = this.Model.SelectedProperty;
 
-            if (SearchDateTime.IsVisible) {
-                property.StartDate = this.SearchDate.Date.Add(this.SearchTime.Time);
-            } else {
+            if (Model.ParkNow) {
                 property.StartDate = DateTime.UtcNow;
+            } else{
+                property.StartDate = SearchDate.Date;
             }
 
             property.Hours = (int)this.HoursSlider.Value;
 
-            var bookParking = new BookParking(new BookParkingModel(property, !SearchDateTime.IsVisible));
+            var bookParking = new BookingPreview(new BookParkingModel(property, !SearchDateTime.IsVisible));
             await Navigation.PushAsync(bookParking);
         }
 

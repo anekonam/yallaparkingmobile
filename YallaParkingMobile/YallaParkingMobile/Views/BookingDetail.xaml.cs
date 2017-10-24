@@ -30,13 +30,8 @@ namespace YallaParkingMobile {
 
 			InitializeComponent();
 			Analytics.TrackEvent("Viewing Booking Page - " + Model.Number);
-        }
-
-       
-        void Current_PositionChanged(object sender, PositionEventArgs e) {
-			UpdateCurrentLocation();
 		}
-
+             
 
 		private async Task<Plugin.Geolocator.Abstractions.Position> GetCurrentLocation() {
 			Plugin.Geolocator.Abstractions.Position position = null;
@@ -54,7 +49,7 @@ namespace YallaParkingMobile {
 					status = results[Permission.Location];
 				}
 
-				var locator = CrossGeolocator.Current;
+				locator = CrossGeolocator.Current;
 
 				if (status == PermissionStatus.Granted) {
 					locator.DesiredAccuracy = 100;
@@ -91,10 +86,6 @@ namespace YallaParkingMobile {
 		private void UpdateCurrentLocation() {
 			this.GetCurrentLocation().ContinueWith(response => {
                 this.Model.CurrentLocation = response.Result;
-
-                if (locator.IsListening) {
-                    Task.Delay(10000).ContinueWith(task => UpdateCurrentLocation());
-                }
 			});
 		}
 
@@ -107,23 +98,11 @@ namespace YallaParkingMobile {
             }
         }
 
-		async void Handle_Appearing(object sender, System.EventArgs e) {
-			UpdateCurrentLocation();
-
-			locator = CrossGeolocator.Current;
-			locator.PositionChanged += Current_PositionChanged;
-			await locator.StartListeningAsync(TimeSpan.FromSeconds(10), 50);
-
+		async void Handle_Appearing(object sender, System.EventArgs e) {			
             await this.RefreshBooking();
-		}
 
-		async void Handle_Disappearing(object sender, System.EventArgs e) {            
-            locator.PositionChanged -= Current_PositionChanged;
-
-			if (locator.IsListening) {
-				await locator.StopListeningAsync();
-			}
-		}
+			UpdateCurrentLocation();
+		}        	
 
 
 		public async Task RefreshBooking(){
@@ -141,38 +120,45 @@ namespace YallaParkingMobile {
         }
 
 		private async void ScanEntry_Clicked(object sender, EventArgs e) {
-			var scanPage = new ZXingScannerPage();
-			bool scanFinished = false;
+            var timeToBooking = (this.Model.Start - DateTime.UtcNow).TotalMinutes;
 
-			scanPage.OnScanResult += (result) => {
-				// Stop scanning
-				scanPage.IsScanning = false;
+            if (timeToBooking > 30) {
+                await DisplayAlert("You're Early", "Hey eager beaver, you're early. You can only scan in within 30 minutes of a booking. You will start being charged from the time you scan in", "Ok");
+            } else {
 
-				// Pop the page and show the result
-				Device.BeginInvokeOnMainThread(async () => {
-					if (!scanFinished) {
-						scanFinished = true;
+                var scanPage = new ZXingScannerPage();
+                bool scanFinished = false;
 
-                        if(result.Text == Model.PropertyId.ToString()){
-                            var entry = await ServiceUtility.Entry(Model.PropertyId);
+                scanPage.OnScanResult += (result) => {
+                    // Stop scanning
+                    scanPage.IsScanning = false;
 
-                            if (entry) {
-                                await this.RefreshBooking();
-                                await DisplayAlert("Valid Scan", "Your scan has been validated for entry to your parking space", "Ok");
+                    // Pop the page and show the result
+                    Device.BeginInvokeOnMainThread(async () => {
+                        if (!scanFinished) {
+                            scanFinished = true;
+
+                            if (result.Text == Model.PropertyId.ToString()) {
+                                var entry = await ServiceUtility.Entry(Model.PropertyId);
+
+                                if (entry) {
+                                    await this.RefreshBooking();
+                                    await DisplayAlert("Valid Scan", "Your scan has been validated for entry to your parking space", "Ok");
+                                    await Navigation.PopAsync();
+                                } else {
+                                    await DisplayAlert("Entry Error", "There was an error entering the parking space, please try again", "Ok");
+                                }
+                            } else {
+                                await DisplayAlert("Invalid Scan", "The QR code scanned does not match the property for this booking", "Ok");
                                 await Navigation.PopAsync();
-                            } else{
-								await DisplayAlert("Entry Error", "There was an error entering the parking space, please try again", "Ok");
                             }
-                        } else{
-                            await DisplayAlert("Invalid Scan", "The QR code scanned does not match the property for this booking", "Ok");
-                            await Navigation.PopAsync();
                         }
-					}
-				});
-			};
+                    });
+                };
 
-			// Navigate to our scanner page
-			await Navigation.PushAsync(scanPage);
+                // Navigate to our scanner page
+                await Navigation.PushAsync(scanPage);
+            }
 		}
 
 		private async void ScanExit_Clicked(object sender, EventArgs e) {

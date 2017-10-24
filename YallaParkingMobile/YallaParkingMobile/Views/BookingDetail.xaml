@@ -6,7 +6,6 @@
     xmlns:control="clr-namespace:YallaParkingMobile.Control"
     x:Class="YallaParkingMobile.BookingDetail"
     Appearing="Handle_Appearing"
-    Disappearing="Handle_Disappearing"
     Title="Details">
     <Grid
         RowSpacing="0">
@@ -175,6 +174,12 @@
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
                         Text="{Binding DiscountValue, StringFormat='(AED {0:n2})'}" />
+                    <EntryCell
+                        Label="Cancellation Fee"
+                        LabelColor="#a1a1b4"
+                        HorizontalTextAlignment="End"
+                        IsEnabled="False"
+                        Text="{Binding CancellationCharge, StringFormat='AED {0:n2}'}" />
                     <EntryCell
                         Label="Total"
                         HorizontalTextAlignment="End"
