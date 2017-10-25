@@ -37,6 +37,36 @@ namespace YallaParkingMobile.Model {
 
         public string PropertyFeatures { get; set; }
 
+        public bool IsUncovered {
+            get {
+                return !string.IsNullOrEmpty(this.PropertyFeatures) && this.PropertyFeatures.Contains("Uncovered");
+            }
+        }
+
+        public bool IsCovered {
+            get {
+                return !string.IsNullOrEmpty(this.PropertyFeatures) && this.PropertyFeatures.Contains("Covered");
+            }
+        }
+
+        public bool IsElectricChargingPoint {
+            get {
+                return !string.IsNullOrEmpty(this.PropertyFeatures) && this.PropertyFeatures.Contains("Electricity");
+            }
+        }
+
+        public bool IsNearMetro {
+            get {
+                return !string.IsNullOrEmpty(this.PropertyFeatures) && this.PropertyFeatures.Contains("Metro");
+            }
+        }
+
+        public bool IsSecurity {
+            get {
+                return !string.IsNullOrEmpty(this.PropertyFeatures) && this.PropertyFeatures.Contains("Security");
+            }
+        }
+
         private decimal discount;
         public decimal Discount {
             get {
@@ -73,10 +103,10 @@ namespace YallaParkingMobile.Model {
         public string BookingTime {
             get {
                 if (this.StartDate.Date == DateTime.Now.Date) {
-                    return String.Join(" to ", String.Format("{0} {1: HH:mm}", "Today", this.StartDate.ToLocalTime()), String.Format("{0: HH:mm}", this.EndDate.ToLocalTime()));
+                    return String.Join(" to ", String.Format("{0} {1: HH:mm}", "Today", this.StartDate), String.Format("{0: HH:mm}", this.EndDate));
                 } else {
-                    return String.Join(" to ", String.Format("{0} {1} {2:MMM HH:mm}", this.StartDate.ToLocalTime().ToString("ddd"), this.StartDate.ToLocalTime().Day.Ordinalize(), this.StartDate.ToLocalTime()),
-                                       String.Format("{0} {1:MMM HH:mm}", this.EndDate.ToLocalTime().Day.Ordinalize(), this.EndDate.ToLocalTime()));
+                    return String.Join(" to ", String.Format("{0} {1} {2:MMM HH:mm}", this.StartDate.ToString("ddd"), this.StartDate.Day.Ordinalize(), this.StartDate),
+                                       String.Format("{0:HH:mm}", this.EndDate));
                 }
             }
         }

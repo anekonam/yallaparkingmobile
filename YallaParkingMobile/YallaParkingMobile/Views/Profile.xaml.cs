@@ -133,25 +133,44 @@ namespace YallaParkingMobile {
                     return;
                 }
 
-                var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions {
+                var frontFile = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions {
                     PhotoSize = PhotoSize.Small,
                     SaveToAlbum = false
                 });
 
-                if (file == null) {
+                if (frontFile == null) {
                     return;
                 }
 
                 using (MemoryStream stream = new MemoryStream()) {
-                    file.GetStream().CopyTo(stream);
+                    frontFile.GetStream().CopyTo(stream);
 
                     if (this.Model != null) {
-                        this.Model.EmiratesId = Convert.ToBase64String(stream.ToArray());
-                        await ServiceUtility.UpdateProfile(this.Model);                        
-                        await Navigation.PushAsync(new ProfileVerify());
+                        this.Model.EmiratesId = Convert.ToBase64String(stream.ToArray());                        	
                     }
                 }
 
+				await DisplayAlert("Emirates ID Front/Back", "Please turn your card over and take a picture of the opposite side of the card", "OK");
+
+				var backFile = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions {
+					PhotoSize = PhotoSize.Small,
+					SaveToAlbum = false
+				});
+
+				if (backFile == null) {
+					return;
+				}
+
+				using (MemoryStream stream = new MemoryStream()) {
+					backFile.GetStream().CopyTo(stream);
+
+					if (this.Model != null) {
+						this.Model.EmiratesIdBack = Convert.ToBase64String(stream.ToArray());
+					}
+				}
+
+				await ServiceUtility.UpdateProfile(this.Model);
+				await Navigation.PushAsync(new ProfileVerify());
             } 
         }
 

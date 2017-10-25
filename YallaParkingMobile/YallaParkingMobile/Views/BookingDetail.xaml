@@ -161,7 +161,7 @@
                         Label="Number of hours"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
-                        Text="{Binding Hours}" />
+                        Text="{Binding TotalHours}" />
                     <EntryCell
                         LabelColor="#a1a1b4"
                         Label="Price per hour"

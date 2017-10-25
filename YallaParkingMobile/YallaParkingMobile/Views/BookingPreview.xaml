@@ -220,7 +220,7 @@
                                 Grid.Column="1"
                                 Orientation="Horizontal">
                                 <Image
-                                    Source="lock.png"
+                                    Source="Lock.png"
                                     HeightRequest="16"
                                     Aspect="AspectFit"
                                     VerticalOptions="Center" />

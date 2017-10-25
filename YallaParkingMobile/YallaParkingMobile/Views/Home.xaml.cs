@@ -272,9 +272,12 @@ namespace YallaParkingMobile {
 
         private void Map_MapClicked(object sender, TKGenericEventArgs<Xamarin.Forms.Maps.Position> e) {
             if (currentPin != null) {
-                var customPin = this.Map.CustomPins.First(p => p == currentPin);
-                var pinProperty = (PropertyModel)customPin.BindingContext;
-                customPin.Image = ImageSource.FromUri(new Uri(string.Format("http://yallaparking-new.insiso.co.uk/image/pin?price={0}&selected=false", (int)pinProperty.ShortTermParkingPrice)));
+                var customPin = this.Map.CustomPins.FirstOrDefault(p => p == currentPin);
+				
+                if (customPin != null) {
+					var pinProperty = (PropertyModel)customPin.BindingContext;
+					customPin.Image = ImageSource.FromUri(new Uri(string.Format("http://yallaparking-new.insiso.co.uk/image/pin?price={0}&selected=false", (int)pinProperty.ShortTermParkingPrice)));
+				}
 
                 this.Map.SelectedPin = null;
                 this.Model.SelectedProperty = null;
@@ -369,9 +372,9 @@ namespace YallaParkingMobile {
             var property = this.Model.SelectedProperty;
 
             if (Model.ParkNow) {
-                property.StartDate = DateTime.UtcNow;
+                property.StartDate = DateTime.Now;
             } else{
-                property.StartDate = SearchDate.Date;
+                property.StartDate = SearchDate.Date.Add(SearchTime.Time);
             }
 
             property.Hours = (int)this.HoursSlider.Value;

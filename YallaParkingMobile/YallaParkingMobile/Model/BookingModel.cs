@@ -3,6 +3,7 @@ using Humanizer;
 using Xamarin.Forms;
 using System.ComponentModel;
 using Plugin.Geolocator.Abstractions;
+using System.Collections.Generic;
 
 namespace YallaParkingMobile.Model {
     public class BookingModel:INotifyPropertyChanged {
@@ -105,6 +106,8 @@ namespace YallaParkingMobile.Model {
         public string PropertyShortTermParkingAccessInfo { get; set; }
 
         public string PropertyShortTermParkingDetails { get; set; }
+
+
 
         private string number;
 
@@ -251,6 +254,18 @@ namespace YallaParkingMobile.Model {
         }
 
         public double? Hours { get; set; }
+
+		public string TotalHours { 
+            get{
+                if(this.Hours.HasValue && this.Hours < 8){
+                    return this.Hours.ToString();
+                } else if (this.Hours.HasValue && this.Hours >= 8){
+                    return "All Day";
+                }
+
+                return this.Hours.ToString();
+            }
+        }
 
         public decimal? EstimatedTotalPrice {
             get {

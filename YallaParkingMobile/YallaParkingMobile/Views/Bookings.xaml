@@ -101,7 +101,7 @@
                                                     <ColumnDefinition
                                                         Width="0.9*" />
                                                     <ColumnDefinition
-                                                        Width="*" />
+                                                        Width="Auto" />
                                                 </Grid.ColumnDefinitions>
                                                 <Grid.RowDefinitions>
                                                     <RowDefinition
@@ -125,6 +125,7 @@
                                                     HorizontalOptions="StartAndExpand"
                                                     Grid.Column="1">
                                                     <Label
+                                                        LineBreakMode="NoWrap"
                                                         HorizontalOptions="StartAndExpand"
                                                         FontSize="16"
                                                         TextColor="Black"

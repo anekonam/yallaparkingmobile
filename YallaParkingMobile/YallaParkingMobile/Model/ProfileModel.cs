@@ -34,9 +34,28 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-        public bool Verified {
+		private string emiratesIdBack { get; set; }
+		public string EmiratesIdBack {
+			get {
+				return emiratesIdBack;
+			}
+			set {
+				if (emiratesIdBack != value) {
+					emiratesIdBack = value;
+
+					if (this.PropertyChanged != null) {
+						PropertyChanged(this, new PropertyChangedEventArgs("EmiratesIdBack"));
+						PropertyChanged(this, new PropertyChangedEventArgs("Verified"));
+						PropertyChanged(this, new PropertyChangedEventArgs("VerifiedString"));
+					}
+				}
+			}
+		}
+
+
+		public bool Verified {
             get {
-                return !string.IsNullOrWhiteSpace(this.EmiratesId);
+                return !string.IsNullOrWhiteSpace(this.EmiratesId) && !string.IsNullOrWhiteSpace(this.EmiratesIdBack);
             }
         }
 
