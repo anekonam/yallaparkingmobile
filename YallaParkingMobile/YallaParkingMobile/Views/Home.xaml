@@ -149,6 +149,7 @@
                                         Maximum="24"
                                         Minimum="1"
                                         Value="1"
+                                        Scale="1"
                                         ValueChanged="HoursSlider_ValueChanged"
                                         HorizontalOptions="FillAndExpand" />
                                 </StackLayout>
@@ -288,6 +289,7 @@
                                         HorizontalOptions="End"
                                         VerticalOptions="Start"
                                         BackgroundColor="#ff8e30"
+                                        IsVisible="{Binding Hourly}"
                                         CornerRadius="8">
                                         <StackLayout
                                             Orientation="Horizontal"
@@ -310,6 +312,44 @@
                                             <Label
                                                 TextColor="White"
                                                 Text="/hr"
+                                                Margin="-5,0,0,0"
+                                                FontAttributes="Bold"
+                                                VerticalOptions="CenterAndExpand"
+                                                FontSize="14" />
+                                        </StackLayout>
+                                    </Frame>
+                                    <Frame
+                                        Grid.Column="1"
+                                        Margin="0,-20,20,0"
+                                        HeightRequest="20"
+                                        WidthRequest="150"
+                                        Padding="8"
+                                        HorizontalOptions="End"
+                                        VerticalOptions="Start"
+                                        BackgroundColor="#ff8e30"
+                                        IsVisible="{Binding AllDay}"
+                                        CornerRadius="8">
+                                        <StackLayout
+                                            Orientation="Horizontal"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="Center">
+                                            <Label
+                                                TextColor="White"
+                                                Text="AED"
+                                                Margin="0"
+                                                FontAttributes="Bold"
+                                                VerticalOptions="CenterAndExpand"
+                                                FontSize="14" />
+                                            <Label
+                                                TextColor="White"
+                                                FontSize="20"
+                                                Margin="0"
+                                                FontAttributes="Bold"
+                                                VerticalOptions="CenterAndExpand"
+                                                Text="{Binding SelectedProperty.ShortTermParkingFullDayPrice, StringFormat='{0:n0}'}" />
+                                            <Label
+                                                TextColor="White"
+                                                Text="/day"
                                                 Margin="-5,0,0,0"
                                                 FontAttributes="Bold"
                                                 VerticalOptions="CenterAndExpand"

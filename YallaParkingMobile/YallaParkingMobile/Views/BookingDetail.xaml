@@ -153,6 +153,46 @@
             Grid.Row="1">
             <TableRoot
                 x:Name="TableView">
+                  <TableSection
+                    x:Name="Access"
+                    Title="Access">
+                    <ViewCell
+                        StyleId="none">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+                                    Height="Auto" />
+                                <RowDefinition
+                                    Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <StackLayout
+                                Padding="10"
+                                Orientation="Horizontal">
+                                <Image
+                                    Source="security.png"
+                                    Aspect="AspectFit"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    Margin="10,0,0,0"
+                                    VerticalOptions="Center"
+                                    Text="Security guard with a QR code to scan" />
+                            </StackLayout>                           
+                            <StackLayout
+                                Grid.Row="2"
+                                Padding="10"
+                                Orientation="Horizontal">
+                                <Image
+                                    Source="information.png"
+                                    Aspect="AspectFit"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    Margin="10,0,0,0"
+                                    VerticalOptions="Center"
+                                    Text="Entrace at mezzanine floor" />
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
                 <TableSection
                     x:Name="Order"
                     Title="Order Summary">
@@ -163,8 +203,16 @@
                         IsEnabled="False"
                         Text="{Binding TotalHours}" />
                     <EntryCell
+                        x:Name="PriceHour"
                         LabelColor="#a1a1b4"
                         Label="Price per hour"
+                        HorizontalTextAlignment="End"
+                        IsEnabled="False"
+                        Text="{Binding Price, StringFormat='AED {0:n2}'}" />
+                    <EntryCell
+                        x:Name="PriceDay"
+                        LabelColor="#a1a1b4"
+                        Label="Price per day"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
                         Text="{Binding Price, StringFormat='AED {0:n2}'}" />
@@ -175,6 +223,7 @@
                         IsEnabled="False"
                         Text="{Binding DiscountValue, StringFormat='(AED {0:n2})'}" />
                     <EntryCell
+                        x:Name="CancellationCharge"
                         Label="Cancellation Fee"
                         LabelColor="#a1a1b4"
                         HorizontalTextAlignment="End"

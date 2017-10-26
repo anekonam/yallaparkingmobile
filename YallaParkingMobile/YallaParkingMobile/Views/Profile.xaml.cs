@@ -123,55 +123,9 @@ namespace YallaParkingMobile {
         }
 
         async void VerifyProfile_Tapped(object sender, EventArgs e) {
-            if (string.IsNullOrWhiteSpace(this.Model.EmiratesId)) {
-                await DisplayAlert("Profile Verification", "We take the security of our community very seriously. Please upload pictures of your Emirates ID (front & back) in order to start parking. Don't worry these are stored securely on our encrypted servers.", "OK");
-
-                await CrossMedia.Current.Initialize();
-
-                if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported) {
-                    await DisplayAlert("No Camera", "No camera available.", "OK");
-                    return;
-                }
-
-                var frontFile = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions {
-                    PhotoSize = PhotoSize.Small,
-                    SaveToAlbum = false
-                });
-
-                if (frontFile == null) {
-                    return;
-                }
-
-                using (MemoryStream stream = new MemoryStream()) {
-                    frontFile.GetStream().CopyTo(stream);
-
-                    if (this.Model != null) {
-                        this.Model.EmiratesId = Convert.ToBase64String(stream.ToArray());                        	
-                    }
-                }
-
-				await DisplayAlert("Emirates ID Front/Back", "Please turn your card over and take a picture of the opposite side of the card", "OK");
-
-				var backFile = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions {
-					PhotoSize = PhotoSize.Small,
-					SaveToAlbum = false
-				});
-
-				if (backFile == null) {
-					return;
-				}
-
-				using (MemoryStream stream = new MemoryStream()) {
-					backFile.GetStream().CopyTo(stream);
-
-					if (this.Model != null) {
-						this.Model.EmiratesIdBack = Convert.ToBase64String(stream.ToArray());
-					}
-				}
-
-				await ServiceUtility.UpdateProfile(this.Model);
-				await Navigation.PushAsync(new ProfileVerify());
-            } 
+            var emiratesScan = new EmiratesScan(false);
+            emiratesScan.BindingContext = this.Model;
+            await Navigation.PushAsync(emiratesScan);
         }
 
 

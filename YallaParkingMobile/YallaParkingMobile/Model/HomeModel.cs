@@ -46,6 +46,29 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+		private bool allDay;
+		public bool AllDay {
+			get {
+				return allDay;
+			}
+			set {
+				if (allDay != value) {
+					allDay = value;
+
+					if (PropertyChanged != null) {
+						PropertyChanged(this, new PropertyChangedEventArgs("AllDay"));
+                        PropertyChanged(this, new PropertyChangedEventArgs("Hourly"));
+					}
+				}
+			}
+		}
+
+        public bool Hourly{
+            get{
+                return !this.AllDay;
+            }
+        }
+
         public bool HasSelectedProperty{
             get{
                 return this.SelectedProperty != null;

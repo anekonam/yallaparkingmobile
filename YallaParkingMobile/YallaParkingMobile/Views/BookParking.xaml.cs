@@ -24,6 +24,16 @@ namespace YallaParkingMobile {
             Analytics.TrackEvent("Viewing Booking Page");
 
             Appearing += BookParking_Appearing;
+
+            if(this.Model.AllDay){
+                if(Order.Contains(PriceHour)){
+                    Order.Remove(PriceHour);
+                } 
+            } else{
+                if(Order.Contains(PriceDay)){
+                    Order.Remove(PriceDay);
+                }
+            }
         }
 
         public BookParkingModel Model {
@@ -111,7 +121,7 @@ namespace YallaParkingMobile {
                                     if (entry) {
                                         await DisplayAlert("Valid Scan", "Your scan has been validated for entry to your parking space", "Ok");
 
-										var bookingConfirmation = new BookingConfirmation(15);
+										var bookingConfirmation = new BookingConfirmation(0);
 										bookingConfirmation.BindingContext = Model.BookingNumber;
 										await Navigation.PushAsync(bookingConfirmation);
                                     } else {

@@ -122,7 +122,7 @@
                                                 </Frame>
                                                 <StackLayout
                                                     VerticalOptions="CenterAndExpand"
-                                                    HorizontalOptions="StartAndExpand"
+                                                    HorizontalOptions="FillAndExpand"
                                                     Grid.Column="1">
                                                     <Label
                                                         LineBreakMode="NoWrap"

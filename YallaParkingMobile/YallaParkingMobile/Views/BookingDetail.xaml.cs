@@ -30,6 +30,22 @@ namespace YallaParkingMobile {
 
 			InitializeComponent();
 			Analytics.TrackEvent("Viewing Booking Page - " + Model.Number);
+
+			if (this.Model.Hours >= 8) {
+				if (Order.Contains(PriceHour)) {
+					Order.Remove(PriceHour);
+				}
+			} else {
+				if (Order.Contains(PriceDay)) {
+					Order.Remove(PriceDay);
+				}
+			}
+
+            if(!this.Model.Cancelled.HasValue){
+				if (Order.Contains(CancellationCharge)) {
+					Order.Remove(CancellationCharge);
+				}
+            }
 		}
              
 

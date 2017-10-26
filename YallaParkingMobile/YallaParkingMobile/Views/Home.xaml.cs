@@ -26,6 +26,7 @@ namespace YallaParkingMobile {
         private string GooglePlacesApiKey = "AIzaSyBMhWyhCQgULXVczTr2IfCBh2GCn5hCMyQ";
         private TKCustomMapPin currentPin = null;
         private IGeolocator locator = null;
+        private bool loading = false;
 
         public Home() {
             InitializeComponent();
@@ -76,7 +77,7 @@ namespace YallaParkingMobile {
                     maximumHours = maximumHours >= 8 ? 8 : maximumHours;
 					HoursSlider.Maximum = maximumHours >= 2 ? maximumHours : 2;
 
-					if ((int)HoursSlider.Value == (int)HoursSlider.Maximum || (int)HoursSlider.Value >= 8) {
+					if ((int)HoursSlider.Value >= 8) {
 						Hours.Text = "All Day";
 					} else {
 						Hours.Text = string.Format("{0} hours", HoursSlider.Value);
@@ -198,50 +199,58 @@ namespace YallaParkingMobile {
         }
 
         async Task LoadData() {
-            if (this.Model != null) {
-                this.Model.SelectedProperty = null;
-            }
+            if (!loading) {
 
-            var startDate = this.SearchDate.Date;
-            startDate.Date.Add(this.SearchTime.Time);
-
-            BusyIndicator.IsBusy = false;
-
-            var search = new SearchModel {
-                StartDate = startDate,
-                Hours = (int)this.HoursSlider.Value
-            };
-
-            PropertyUtility.SetValue("query", search.Name);
-            PropertyUtility.SetValue("hours", search.Hours.ToString());
-
-            var properties = await ServiceUtility.Search(search);
-
-            this.Map.Pins.Clear();
-
-            var pins = new List<TKCustomMapPin>();
-
-            if (properties != null) {
-                foreach (var property in properties) {
-                    var pin = new TKCustomMapPin {
-                        BindingContext = property,
-                        Position = new Xamarin.Forms.Maps.Position(property.Latitude ?? 0.0, property.Longitude ?? 0.0),
-                        Anchor = new Point(0.5, 1),
-                        Image = ImageSource.FromUri(new Uri(string.Format("http://yallaparking-new.insiso.co.uk/image/pin?price={0}&selected=false", (int)property.ShortTermParkingPrice))),
-                        ShowCallout = false
-                    };
-                    
-                    pins.Add(pin);
+                if (this.Model != null) {
+                    this.Model.SelectedProperty = null;
                 }
-                              
 
-                this.Map.CustomPins = pins;
-            }            
+                var startDate = this.SearchDate.Date;
+                startDate.Date.Add(this.SearchTime.Time);
 
-            BusyIndicator.IsBusy = false;
+                BusyIndicator.IsBusy = false;
 
-            if (!Map.IsVisible) {
-                Map.IsVisible = true;
+                var search = new SearchModel {
+                    StartDate = startDate,
+                    Hours = (int)this.HoursSlider.Value
+                };
+
+                PropertyUtility.SetValue("query", search.Name);
+                PropertyUtility.SetValue("hours", search.Hours.ToString());
+
+                loading = true;
+
+                var properties = await ServiceUtility.Search(search);
+
+                this.Map.Pins.Clear();
+
+                var pins = new List<TKCustomMapPin>();
+
+                if (properties != null) {
+                    foreach (var property in properties) {
+                        var pin = new TKCustomMapPin {
+                            BindingContext = property,
+                            Position = new Xamarin.Forms.Maps.Position(property.Latitude ?? 0.0, property.Longitude ?? 0.0),
+                            Anchor = new Point(0.5, 1),
+                            Image = ImageSource.FromUri(new Uri(string.Format("http://yallaparking-new.insiso.co.uk/image/pin?price={0}&unit={1}&selected=false",
+                                                                              (int)HoursSlider.Value >= 8 ? (int)property.ShortTermParkingFullDayPrice : (int)property.ShortTermParkingPrice, (int)HoursSlider.Value >= 8 ? "day" : "hr"))),
+                            ShowCallout = false
+                        };
+
+                        pins.Add(pin);
+                    }
+
+
+                    this.Map.CustomPins = pins;
+                }
+
+                BusyIndicator.IsBusy = false;
+
+                if (!Map.IsVisible) {
+                    Map.IsVisible = true;
+                }
+
+                loading = false;
             }
         }   
 
@@ -251,7 +260,7 @@ namespace YallaParkingMobile {
 
                 if (customPin != null) {
                     var pinProperty = (PropertyModel)customPin.BindingContext;
-                    customPin.Image = ImageSource.FromUri(new Uri(string.Format("http://yallaparking-new.insiso.co.uk/image/pin?price={0}&selected=false", (int)pinProperty.ShortTermParkingPrice)));
+                    customPin.Image = ImageSource.FromUri(new Uri(string.Format("http://yallaparking-new.insiso.co.uk/image/pin?price={0}&unit={1}&selected=false", (int)HoursSlider.Value >= 8 ? (int)pinProperty.ShortTermParkingFullDayPrice : (int)pinProperty.ShortTermParkingPrice, (int)HoursSlider.Value >= 8 ? "day" : "hr")));
                 }
             }
 
@@ -259,7 +268,7 @@ namespace YallaParkingMobile {
                 var property = (PropertyModel)this.Map.SelectedPin.BindingContext;
                 this.Model.SelectedProperty = property;
 
-                this.Map.SelectedPin.Image = ImageSource.FromUri(new Uri(string.Format("http://yallaparking-new.insiso.co.uk/image/pin?price={0}&selected=true", (int)property.ShortTermParkingPrice)));
+                this.Map.SelectedPin.Image = ImageSource.FromUri(new Uri(string.Format("http://yallaparking-new.insiso.co.uk/image/pin?price={0}&unit={1}&selected=true", (int)HoursSlider.Value >= 8 ? (int)this.Model.SelectedProperty.ShortTermParkingFullDayPrice : (int)this.Model.SelectedProperty.ShortTermParkingPrice, (int)HoursSlider.Value >= 8 ? "day" : "hr")));
                 currentPin = this.Map.SelectedPin;
 
                 Map.MoveToRegion(MapSpan.FromCenterAndRadius(e.Value.Position, Distance.FromMeters(400)));
@@ -276,7 +285,7 @@ namespace YallaParkingMobile {
 				
                 if (customPin != null) {
 					var pinProperty = (PropertyModel)customPin.BindingContext;
-					customPin.Image = ImageSource.FromUri(new Uri(string.Format("http://yallaparking-new.insiso.co.uk/image/pin?price={0}&selected=false", (int)pinProperty.ShortTermParkingPrice)));
+					customPin.Image = ImageSource.FromUri(new Uri(string.Format("http://yallaparking-new.insiso.co.uk/image/pin?price={0}&unit={1}&selected=false", (int)HoursSlider.Value >= 8 ? (int)pinProperty.ShortTermParkingFullDayPrice : (int)pinProperty.ShortTermParkingPrice, (int)HoursSlider.Value >= 8 ? "day" : "hr")));
 				}
 
                 this.Map.SelectedPin = null;
@@ -427,15 +436,22 @@ namespace YallaParkingMobile {
             await Navigation.PushAsync(new Invite());
         }
 
-        private void HoursSlider_ValueChanged(object sender, ValueChangedEventArgs e) {
-            var newStep = Math.Round(e.NewValue / 1.0);
+        private async void HoursSlider_ValueChanged(object sender, ValueChangedEventArgs e) {
+            var hoursText = Hours.Text;
 
-            HoursSlider.Value = newStep * 1.0;
+			var newStep = Math.Round(e.NewValue / 1.0);
+			HoursSlider.Value = newStep * 1.0;
 
-            if ((int)HoursSlider.Value == (int)HoursSlider.Maximum || (int)HoursSlider.Value >= 8) {
-                Hours.Text = "All Day";
-            } else {
-                Hours.Text = string.Format("{0} hours", HoursSlider.Value);
+			if ((int)HoursSlider.Value >= 8) {
+				Hours.Text = "All Day";
+                this.Model.AllDay = true;
+			} else {
+				Hours.Text = string.Format("{0} hours", HoursSlider.Value);
+                this.Model.AllDay = false;
+			}
+
+            if(hoursText!=Hours.Text){
+                await LoadData();
             }
         }
 

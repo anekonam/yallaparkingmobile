@@ -26,7 +26,11 @@ namespace YallaParkingMobile {
 			InitializeComponent();
 			Analytics.TrackEvent("Viewing Booking Confirmation");
 
-            this.Instruction.Text = string.Format("No need to rush, you can arrive {0} minutes before your bookings starts for free!", entryMinutes);
+            if (entryMinutes > 0) {
+                this.Instruction.Text = string.Format("No need to rush, you can arrive {0} minutes before your bookings starts for free!", entryMinutes);
+            } else{
+                this.Instruction.Text = string.Format("Your parking space location is on the mezzanine floor");
+            }
 		}
 
         public BookingModel Model{

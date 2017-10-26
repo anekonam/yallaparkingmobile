@@ -71,6 +71,18 @@ namespace YallaParkingMobile.Model {
 			}
 		}
 
+        public bool AllDay{
+            get{
+                return this.Property.Hours >= 8;
+            }
+        }
+
+        public bool Hourly{
+            get{
+                return !AllDay;
+            }
+        }
+
         private UserCarModel selectedUserCar;
 		public UserCarModel SelectedUserCar {
 			get {
@@ -162,7 +174,7 @@ namespace YallaParkingMobile.Model {
                 PropertyId = this.Property.PropertyId,
                 Start = this.Property.StartDate.ToUniversalTime(),
                 End = this.Property.EndDate.ToUniversalTime(),
-                Price = this.Property.ShortTermParkingPrice,
+                Price = this.Property.Hours >= 8 ? this.Property.ShortTermParkingFullDayPrice : this.Property.ShortTermParkingPrice,
                 Discount = this.Discount,
                 Hours = this.Property.Hours
             };

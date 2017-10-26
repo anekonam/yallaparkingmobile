@@ -69,6 +69,7 @@
             HorizontalOptions="End"
             VerticalOptions="Start"
             BackgroundColor="#ff8e30"
+            IsVisible="{Binding Hourly}"
             CornerRadius="8">
             <StackLayout
                 Orientation="Horizontal"
@@ -97,6 +98,43 @@
                     FontSize="14" />
             </StackLayout>
         </Frame>
+         <Frame
+            Margin="0,-5,-10,0"
+            HeightRequest="20"
+            WidthRequest="150"
+            Padding="8"
+            HorizontalOptions="End"
+            VerticalOptions="Start"
+            BackgroundColor="#ff8e30"
+            IsVisible="{Binding AllDay}"
+            CornerRadius="8">
+            <StackLayout
+                Orientation="Horizontal"
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+                <Label
+                    TextColor="White"
+                    Text="AED"
+                    Margin="0"
+                    FontAttributes="Bold"
+                    VerticalOptions="CenterAndExpand"
+                    FontSize="14" />
+                <Label
+                    TextColor="White"
+                    FontSize="20"
+                    Margin="0"
+                    FontAttributes="Bold"
+                    VerticalOptions="CenterAndExpand"
+                    Text="{Binding Property.ShortTermParkingFullDayPrice, StringFormat='{0:n0}'}" />
+                <Label
+                    TextColor="White"
+                    Text="/day"
+                    Margin="-5,0,0,0"
+                    FontAttributes="Bold"
+                    VerticalOptions="CenterAndExpand"
+                    FontSize="14" />
+            </StackLayout>
+        </Frame>
         <control:MenuTableView
             x:Name="OrderSummary"
             Intent="Settings"
@@ -104,7 +142,7 @@
             Grid.Row="1">
             <TableRoot>
                 <TableSection
-                    x:Name="Order"
+                    x:Name="Access"
                     Title="Access">
                     <ViewCell
                         StyleId="none">

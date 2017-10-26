@@ -29,6 +29,8 @@ namespace YallaParkingMobile.Model {
 
         public decimal ShortTermParkingPrice { get; set; }
 
+        public decimal ShortTermParkingFullDayPrice { get; set; }
+
         public string ShortTermParkingEntranceMethod { get; set; }
 
         public string ShortTermParkingAccessInfo { get; set; }
@@ -86,6 +88,10 @@ namespace YallaParkingMobile.Model {
 
         public decimal TotalPrice {
             get {
+                if(this.Hours >= 8){
+                    return this.ShortTermParkingFullDayPrice - this.Discount;
+                }
+
                 return (this.Hours * this.ShortTermParkingPrice) - this.Discount;
             }
         }

@@ -269,7 +269,15 @@ namespace YallaParkingMobile.Model {
 
         public decimal? EstimatedTotalPrice {
             get {
-                return this.Hours.HasValue ? this.Price * (decimal)this.Hours.Value : 0.0M;
+                if(this.Hours.HasValue){
+                    if(this.Hours.Value >= 8){
+                        return this.Price;
+                    } else{
+                        return this.Price * (decimal)this.Hours.Value;
+                    }
+                }
+
+                return (decimal?)null;
             }
         }
 

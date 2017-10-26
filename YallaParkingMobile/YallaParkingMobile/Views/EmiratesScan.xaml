@@ -3,8 +3,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:YallaParkingMobile"
-    x:Class="YallaParkingMobile.ProfileVerify"
-    NavigationPage.HasNavigationBar="False">
+    x:Class="YallaParkingMobile.EmiratesScan"
+    Title="Scan Front">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition
@@ -26,16 +26,18 @@
             Padding="0,40,0,0"
             Grid.Row="1">
             <Label
+                x:Name="Heading"
                 Style="{StaticResource Header}"
                 VerticalTextAlignment="Center"
-                Text="Profile Verified" />
+                Text="Scan Emirates ID (Front)" />
         </ContentView>
         <StackLayout
             Grid.Row="2">
             <Label
+                x:Name="Instruction"
                 Margin="40,0,40,20"
                 HorizontalTextAlignment="Center"
-                Text="You are now a verified user you can start booking spaces!" />
+                Text="Please take a picture of the front of your Emirates ID" />
         </StackLayout>
         <ContentView
             Padding="40"
@@ -44,7 +46,7 @@
                 x:Name="DoneButton"
                 Clicked="DoneButton_Clicked"
                 Style="{StaticResource GreenButton}"
-                Text="Done"
+                Text="Take Picture"
                 HorizontalOptions="Fill"
                 VerticalOptions="End" />
         </ContentView>

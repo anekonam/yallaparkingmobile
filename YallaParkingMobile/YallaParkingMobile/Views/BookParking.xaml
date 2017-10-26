@@ -83,11 +83,19 @@
                         IsEnabled="False"
                         Text="{Binding TotalHours}" />
                     <EntryCell
+                        x:Name="PriceHour"
                         LabelColor="#a1a1b4"
                         Label="Price per hour"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
                         Text="{Binding Property.ShortTermParkingPrice, StringFormat='AED {0:n2}'}" />
+                     <EntryCell
+                        x:Name="PriceDay"
+                        LabelColor="#a1a1b4"
+                        Label="Price per day"
+                        HorizontalTextAlignment="End"
+                        IsEnabled="False"
+                        Text="{Binding Property.ShortTermParkingFullDayPrice, StringFormat='AED {0:n2}'}" />
                     <EntryCell
                         x:Name="DiscountCode"
                         LabelColor="#a1a1b4"
