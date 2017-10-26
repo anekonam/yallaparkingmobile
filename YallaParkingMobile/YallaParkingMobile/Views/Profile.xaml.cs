@@ -38,12 +38,15 @@ namespace YallaParkingMobile {
             await LoadProfile();
         }
 
+        public ProfileModel UserProfile { get; set; }
+
         async Task LoadProfile(){
             if (this.Model == null) {
                 this.BusyIndicator.IsBusy = true;
             }
 
 			var profile = await ServiceUtility.Profile();
+            this.UserProfile = profile;
 
 			this.BindingContext = profile;
 
@@ -83,7 +86,9 @@ namespace YallaParkingMobile {
         }
 
         private async void Invite_Clicked(object sender, EventArgs e) {
-            await Navigation.PushAsync(new Invite());
+			var inviteCode = new Invite();
+			inviteCode.BindingContext = this.UserProfile;
+            await Navigation.PushAsync(inviteCode);
         }
 
         async void ProfileImage_Tapped(object sender, EventArgs e) {

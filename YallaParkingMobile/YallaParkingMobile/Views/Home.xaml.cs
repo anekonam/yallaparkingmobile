@@ -166,6 +166,8 @@ namespace YallaParkingMobile {
             }
         }
 
+        public ProfileModel UserProfile { get; set; }
+
         async void Handle_Appearing(object sender, System.EventArgs e) {
 			locator = CrossGeolocator.Current;
 			locator.PositionChanged += Current_PositionChanged;
@@ -182,6 +184,7 @@ namespace YallaParkingMobile {
 
             var profile = await ServiceUtility.Profile();
             this.ProfileName.Text = profile.Name;
+            this.UserProfile = profile;
 
             if (!string.IsNullOrWhiteSpace(profile.ProfilePicture)) {
                 var profileImage = !string.IsNullOrWhiteSpace(profile.ProfilePicture) && profile.ProfilePicture.Contains(",") ? profile.ProfilePicture.Split(',')[1] : profile.ProfilePicture;
@@ -433,7 +436,9 @@ namespace YallaParkingMobile {
         }
 
         private async void Invite_Clicked(object sender, EventArgs e) {
-            await Navigation.PushAsync(new Invite());
+            var inviteCode = new Invite();
+			inviteCode.BindingContext = this.UserProfile;
+			await Navigation.PushAsync(inviteCode);
         }
 
         private async void HoursSlider_ValueChanged(object sender, ValueChangedEventArgs e) {

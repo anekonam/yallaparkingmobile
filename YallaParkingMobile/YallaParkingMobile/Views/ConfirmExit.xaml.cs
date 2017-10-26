@@ -9,10 +9,20 @@ using YallaParkingMobile.Model;
 
 namespace YallaParkingMobile {
     public partial class ConfirmExit : ContentPage {
-        public ConfirmExit() {
+        public ConfirmExit(BookingModel model) {
+            this.Model = model;
             InitializeComponent();
             Analytics.TrackEvent("Viewing Confirm Exit page");
-        }        
+        }
+
+		public BookingModel Model {
+			get {
+				return (BookingModel)this.BindingContext;
+			}
+			set {
+				this.BindingContext = value;
+			}
+		}
 
         async void YallaButton_Clicked(object sender, EventArgs e) {
 			var model = new BookingsModel();

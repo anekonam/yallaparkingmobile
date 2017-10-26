@@ -46,7 +46,7 @@
                         <Label
                             Style="{StaticResource Header}"
                             VerticalTextAlignment="Center"
-                            Text="YP781624" />
+                            Text="{Binding InviteCode}" />
                     </ContentView>
                     <Label
                         Margin="40"
@@ -60,7 +60,8 @@
                             Style="{StaticResource GreenButton}"
                             Text="Invite Now"
                             HorizontalOptions="Fill"
-                            VerticalOptions="End" />
+                            VerticalOptions="End" 
+                           Clicked="InviteNow_Clicked" />
                     </ContentView>
                 </Grid>
             </telerikPrimitives:RadSideDrawer.MainContent>

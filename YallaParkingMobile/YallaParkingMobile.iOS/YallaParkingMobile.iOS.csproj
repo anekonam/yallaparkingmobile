@@ -378,6 +378,9 @@
     <Reference Include="TK.CustomMap.iOSUnified">
       <HintPath>..\..\packages\TK.CustomMap.1.5.1\lib\Xamarin.iOS10\TK.CustomMap.iOSUnified.dll</HintPath>
     </Reference>
+    <Reference Include="Plugin.Share.Abstractions">
+      <HintPath>..\..\packages\Plugin.Share.7.0.1\lib\Xamarin.iOS10\Plugin.Share.Abstractions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\YallaParkingMobile\YallaParkingMobile.csproj">

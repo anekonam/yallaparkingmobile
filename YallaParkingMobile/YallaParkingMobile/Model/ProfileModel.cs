@@ -16,6 +16,8 @@ namespace YallaParkingMobile.Model {
 
         public string PhoneNumber { get; set; }
 
+        public string InviteCode { get; set; }
+
         private string emiratesId { get; set; }
         public string EmiratesId {
             get {

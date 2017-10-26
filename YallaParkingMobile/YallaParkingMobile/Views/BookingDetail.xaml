@@ -51,6 +51,7 @@
                 Grid.Column="1">
                 <Label
                     HorizontalOptions="StartAndExpand"
+                    LineBreakMode="NoWrap"
                     FontSize="16"
                     TextColor="Black"
                     Text="{Binding PropertyName}"

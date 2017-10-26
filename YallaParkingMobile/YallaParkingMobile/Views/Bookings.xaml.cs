@@ -38,10 +38,13 @@ namespace YallaParkingMobile {
             }
         }
 
+        public ProfileModel Profile { get; set; }
+
         async void Handle_Appearing(object sender, System.EventArgs e) {
             await this.Model.GetBookings();
 
 			var profile = await ServiceUtility.Profile();
+            this.Profile = profile;
 			this.ProfileName.Text = profile.Name;
 			if (!string.IsNullOrWhiteSpace(profile.ProfilePicture)) {
 				var profileImage = !string.IsNullOrWhiteSpace(profile.ProfilePicture) && profile.ProfilePicture.Contains(",") ? profile.ProfilePicture.Split(',')[1] : profile.ProfilePicture;
@@ -85,7 +88,9 @@ namespace YallaParkingMobile {
         }
 
         private async void Invite_Clicked(object sender, EventArgs e) {
-            await Navigation.PushAsync(new Invite());
+			var inviteCode = new Invite();
+            inviteCode.BindingContext = this.Profile;
+			await Navigation.PushAsync(inviteCode);
         }
 
     }
