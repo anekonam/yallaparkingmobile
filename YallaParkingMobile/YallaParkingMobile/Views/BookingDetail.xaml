@@ -12,6 +12,8 @@
         <Grid.RowDefinitions>
             <RowDefinition
                 Height="150" />
+             <RowDefinition
+                Height="Auto" />
             <RowDefinition
                 Height="*" />
             <RowDefinition
@@ -147,11 +149,32 @@
                     Text="{Binding CancelledDetail}" />
             </Frame>
         </Grid>
+        <StackLayout
+            Padding="8"
+            Grid.Row="1"
+            Orientation="Horizontal">
+            <Label
+                x:Name="Hours"
+                Margin="0,5,10,0"
+                VerticalOptions="Start"
+                FontSize="16"
+                TextColor="#767684"
+                Text="1 hour" />
+            <Slider
+                x:Name="HoursSlider"
+                Maximum="24"
+                Minimum="1"
+                Value="1"
+                Scale="1"
+                IsVisible="{Binding Pending}"
+                ValueChanged="HoursSlider_ValueChanged"
+                HorizontalOptions="FillAndExpand" />
+        </StackLayout>
         <control:MenuTableView
             x:Name="OrderSummary"
             Intent="Settings"
             HasUnevenRows="true"
-            Grid.Row="1">
+            Grid.Row="2">
             <TableRoot
                 x:Name="TableView">
                 <TableSection
@@ -377,7 +400,7 @@
             </TableRoot>
         </control:MenuTableView>
         <StackLayout
-            Grid.Row="2"
+            Grid.Row="3"
             Margin="10">
             <Button
                 x:Name="EntryButton"

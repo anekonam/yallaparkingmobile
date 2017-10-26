@@ -124,6 +124,10 @@ namespace YallaParkingMobile {
             this.Search.Unfocus();
         }
 
+        void Handle_Tapped(object sender, System.EventArgs e) {
+            this.SearchDate.Focus();
+        }
+
         public HomeModel Model {
             get {
                 return (HomeModel)this.BindingContext;

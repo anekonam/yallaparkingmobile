@@ -112,26 +112,39 @@
                                 Grid.ColumnSpan="3">
                                 <StackLayout
                                     x:Name="SearchDateTime"
-                                    Padding="8"
+                                    Padding="6"
                                     VerticalOptions="Start"
                                     IsVisible="false"
                                     Orientation="Horizontal">
+                                    <Image
+                                        Margin="0,0,5,0"
+                                        HeightRequest="30"
+                                        VerticalOptions="Center"
+                                        Source="menu-bookings.png">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                                Tapped="Handle_Tapped" />
+                                        </Image.GestureRecognizers>
+                                    </Image>
                                     <control:BorderlessDatePicker
                                         x:Name="SearchDate"
-                                        Format="ddddd dd MMM"
+                                        Format="ddd dd MMM"
                                         TextColor="#767684"
-                                        WidthRequest="150"
+                                        WidthRequest="90"
+                                        VerticalOptions="Center"
                                         DateSelected="DatePicker_DateSelected"
                                         HorizontalOptions="Start" />
                                     <Label
                                         Text="at"
                                         FontSize="18"
-                                        Margin="0,0,3,2"
+                                        Margin="0,0,5,2"
                                         TextColor="#767684"
+                                        VerticalOptions="Center"
                                         HorizontalOptions="Start" />
                                     <control:BorderlessTimePicker
                                         x:Name="SearchTime"
                                         TextColor="#767684"
+                                        VerticalOptions="Center"
                                         HorizontalOptions="Start" />
                                 </StackLayout>
                                 <StackLayout

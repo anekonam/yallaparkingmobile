@@ -345,6 +345,23 @@ namespace YallaParkingMobile.Utility {
             return null;
 		}
 
+		public static async Task<bool> Update(BookingModel model) {
+			InitHttpClient();
+
+			try {
+				var response = await client.PostAsync("/api/parking/update", model.AsJson());
+
+				if (response.IsSuccessStatusCode) {
+					var booking = await response.Content.ReadAsStringAsync();
+					return true;
+				}
+			} catch {
+                return false;
+			}
+
+            return false;
+		}
+
 		public static async Task<bool> Entry(int propertyId) {
 			InitHttpClient();
 

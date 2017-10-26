@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
+    xmlns:telerikInput="clr-namespace:Telerik.XamarinForms.Input;assembly=Telerik.XamarinForms.Input"
+    x:Class="YallaParkingMobile.ExtendConfirmation"
+    Title="Booking Extended">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="*" />
+            </Grid.RowDefinitions>
+            <Image
+                Margin="40"
+                Source="extend.png"
+                Grid.Row="0"
+                VerticalOptions="Center"
+                Aspect="AspectFit" />
+            <ContentView
+                Padding="0,40,0,0"
+                Grid.Row="1">
+                <Label
+                    Style="{StaticResource Header}"
+                    VerticalTextAlignment="Center"
+                    Text="Extension Success" />
+            </ContentView>
+            <StackLayout
+                Grid.Row="2">
+                <Label
+                    Margin="40,10,40,0"
+                    HorizontalTextAlignment="Center"     
+                    Text="You have extended your booking for" />
+                <Label
+                    x:Name="Instruction"
+                    Margin="40,10,40,20"
+                    HorizontalTextAlignment="Center" />                                
+            </StackLayout>
+            <ContentView
+                Padding="40"
+                Grid.Row="3">
+                <Button
+                    x:Name="DoneButton"
+                    Clicked="DoneButton_Clicked"
+                    Style="{StaticResource GreenButton}"
+                    Text="Done"
+                    HorizontalOptions="Fill"
+                    VerticalOptions="End" />
+            </ContentView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
