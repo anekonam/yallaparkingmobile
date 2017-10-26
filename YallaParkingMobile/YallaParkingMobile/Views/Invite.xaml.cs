@@ -46,13 +46,10 @@ namespace YallaParkingMobile {
         }
 
 		private async void InviteNow_Clicked(object sender, EventArgs e) {
-
-               await CrossShare.Current.Share(new ShareMessage {
-                    Title = "Test",
-                    Text =string.Format("Discount Code - {0}",Model.InviteCode),
-                    Url="www.insiso.co.uk"
-                });
-
+			await CrossShare.Current.Share(new ShareMessage {
+				Title = "YallaParking Invite",
+				Text = string.Format("Hey, you can join me on YallaParking and get 25% discount on your first booking using my code {0}", Model.InviteCode)
+			});
 		}
 
         private async void FindParking_Clicked(object sender, EventArgs e) {

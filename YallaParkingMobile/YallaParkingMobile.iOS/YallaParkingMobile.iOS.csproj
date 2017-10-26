@@ -379,7 +379,10 @@
       <HintPath>..\..\packages\TK.CustomMap.1.5.1\lib\Xamarin.iOS10\TK.CustomMap.iOSUnified.dll</HintPath>
     </Reference>
     <Reference Include="Plugin.Share.Abstractions">
-      <HintPath>..\..\packages\Plugin.Share.7.0.1\lib\Xamarin.iOS10\Plugin.Share.Abstractions.dll</HintPath>
+      <HintPath>..\..\packages\Plugin.Share.5.0.0\lib\Xamarin.iOS10\Plugin.Share.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Share">
+      <HintPath>..\..\packages\Plugin.Share.5.0.0\lib\Xamarin.iOS10\Plugin.Share.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
