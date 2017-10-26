@@ -36,6 +36,7 @@ namespace YallaParkingMobile {
                 var profile = await ServiceUtility.Profile();
                 var emiratesScan = new EmiratesScan(false);
                 emiratesScan.BindingContext = profile;
+                await Navigation.PushAsync(new Profile());
 				await Navigation.PushAsync(emiratesScan);
             } else {
                 await DisplayAlert("Verification Failed", "Verification failed, please try again", "Ok");
