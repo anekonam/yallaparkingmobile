@@ -195,7 +195,7 @@ namespace YallaParkingMobile {
 
                             if (exit) {
                                 await this.RefreshBooking();
-                                await Navigation.PushAsync(new ConfirmExit());
+                                await Navigation.PushAsync(new ConfirmExit(new BookingModel()));
                             } else{
                                 await DisplayAlert("Exit Error", "There was an error leaving the parking space, please try again", "Ok");
                             }

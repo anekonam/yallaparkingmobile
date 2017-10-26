@@ -183,6 +183,23 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+        public string ParkingTime{
+            get{
+                if(this.EntryTime.HasValue && this.ExitTime.HasValue){
+                    TimeSpan difference = this.ExitTime.Value - this.EntryTime.Value;
+                    return string.Format("You parked for {0}:{1} minutes", difference.Hours, difference.Minutes);
+                }
+
+                return string.Empty;
+            }
+        }
+
+        public string ParkingCharge{
+            get{
+                return string.Format("You will be charged AED {0}", this.DiscountValue);
+            }
+        }
+
         public bool Validated {
             get {
                 return !this.Cancelled.HasValue && this.ValidatorUserId.HasValue;
