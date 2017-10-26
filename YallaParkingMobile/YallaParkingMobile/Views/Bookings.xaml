@@ -196,7 +196,7 @@
                                                         TextColor="White"
                                                         FontSize="13"
                                                         HorizontalTextAlignment="Start"
-                                                        Text="Completed" />
+                                                        Text="CompletedDetail" />
                                                 </Frame>
                                                 <Frame
                                                     Grid.Row="1"

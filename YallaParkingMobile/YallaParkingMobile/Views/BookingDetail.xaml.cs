@@ -46,6 +46,12 @@ namespace YallaParkingMobile {
 					Order.Remove(CancellationCharge);
 				}
             }
+
+            if(!this.Model.Pending){
+                if(TableView.Contains(CancellationPolicy)){
+                    TableView.Remove(CancellationPolicy);
+                }
+            }
 		}
              
 
@@ -195,7 +201,7 @@ namespace YallaParkingMobile {
 
                             if (exit) {
                                 await this.RefreshBooking();
-                                await Navigation.PushAsync(new ConfirmExit(new BookingModel()));
+                                await Navigation.PushAsync(new ConfirmExit(this.Model));
                             } else{
                                 await DisplayAlert("Exit Error", "There was an error leaving the parking space, please try again", "Ok");
                             }
@@ -249,7 +255,7 @@ namespace YallaParkingMobile {
         }
 
 		private async void Cancel_Clicked(object sender, EventArgs e) {
-            var confirm = await DisplayAlert("Cancel Booking", "Are you sure you wish to cancel your booking? Please note this may incur a cancellation fine", "Yes", "No");
+            var confirm = await DisplayAlert("Cancel Booking", "Are you sure you wish to cancel your booking? Please note this may incur a late cancellation charge", "Yes", "No");
 
             if (confirm){
                 var result = await ServiceUtility.Cancel(this.Model.PropertyParkingId);

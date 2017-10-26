@@ -179,7 +179,7 @@ namespace YallaParkingMobile.Model {
                     return "4, Cancelled";
                 }
 
-                return "2,Pending";
+                return "2,Upcoming";
             }
         }
 
@@ -244,7 +244,7 @@ namespace YallaParkingMobile.Model {
 
         public bool Pending {
             get {
-                return this.Status.Contains("Pending");
+                return this.Status.Contains("Upcoming");
             }
         }
 
@@ -310,6 +310,12 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+		public string CompletedDetail {
+			get {
+                return this.ExitTime.HasValue ? string.Format("Completed {0} {1} {2:MMM HH:mm}", this.ExitTime.Value.ToLocalTime().ToString("ddd"), this.ExitTime.Value.ToLocalTime().Day.Ordinalize(), this.ExitTime.Value.ToLocalTime()) : null;
+			}
+		}
+
         public DateTime? Cancelled { get; set; }
 
         public string CancelledDetail{
@@ -317,6 +323,12 @@ namespace YallaParkingMobile.Model {
                 return this.Cancelled.HasValue ? string.Format("Cancelled {0} {1} {2:MMM HH:mm}", this.Cancelled.Value.ToLocalTime().ToString("ddd"), this.Cancelled.Value.ToLocalTime().Day.Ordinalize(), this.Cancelled.Value.ToLocalTime()) : null;
             }
         }
+
+		public string CancellationPolicy {
+			get {
+                return "At least 3 hours prior to your booking";
+			}
+		}
 
         public decimal? CancellationCharge { get; set; }
 

@@ -127,7 +127,7 @@
                     TextColor="White"
                     FontSize="13"
                     HorizontalTextAlignment="Start"
-                    Text="Completed" />
+                    Text="{Binding CompletedDetail}" />
             </Frame>
             <Frame
                 Grid.Row="1"
@@ -154,7 +154,7 @@
             Grid.Row="1">
             <TableRoot
                 x:Name="TableView">
-                  <TableSection
+                <TableSection
                     x:Name="Access"
                     Title="Access">
                     <ViewCell
@@ -170,21 +170,23 @@
                                 Padding="10"
                                 Orientation="Horizontal">
                                 <Image
-                                    Source="security.png"
+                                    Source="qrcode.png"
                                     Aspect="AspectFit"
+                                    HeightRequest="30"
                                     VerticalOptions="Center" />
                                 <Label
                                     Margin="10,0,0,0"
                                     VerticalOptions="Center"
                                     Text="Security guard with a QR code to scan" />
-                            </StackLayout>                           
+                            </StackLayout>
                             <StackLayout
                                 Grid.Row="2"
                                 Padding="10"
                                 Orientation="Horizontal">
                                 <Image
-                                    Source="information.png"
+                                    Source="entrance.png"
                                     Aspect="AspectFit"
+                                    HeightRequest="30"
                                     VerticalOptions="Center" />
                                 <Label
                                     Margin="10,0,0,0"
@@ -222,7 +224,7 @@
                         LabelColor="#a1a1b4"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
-                        Text="{Binding DiscountValue, StringFormat='(AED {0:n2})'}" />
+                        Text="{Binding DiscountValue, StringFormat='-AED {0:n2}'}" />
                     <EntryCell
                         x:Name="CancellationCharge"
                         Label="Cancellation Fee"
@@ -365,6 +367,12 @@
                                 Text="{Binding UserCardExpireMonthYear}" />
                         </Grid>
                     </ViewCell>
+                </TableSection>
+                <TableSection
+                    x:Name="CancellationPolicy"
+                    Title="Cancellation Policy">
+                    <TextCell
+                        Detail="{Binding CancellationPolicy}" />
                 </TableSection>
             </TableRoot>
         </control:MenuTableView>

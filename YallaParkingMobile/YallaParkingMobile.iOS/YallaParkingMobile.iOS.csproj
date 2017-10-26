@@ -246,6 +246,13 @@
     <BundleResource Include="Resources\locationGrey.png" />
     <BundleResource Include="Resources\camera.png" />
     <BundleResource Include="Resources\carGrey.png" />
+    <BundleResource Include="Resources\cctv.png" />
+    <BundleResource Include="Resources\covered.png" />
+    <BundleResource Include="Resources\electric.png" />
+    <BundleResource Include="Resources\entrance.png" />
+    <BundleResource Include="Resources\metro.png" />
+    <BundleResource Include="Resources\qrcode.png" />
+    <BundleResource Include="Resources\uncovered.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

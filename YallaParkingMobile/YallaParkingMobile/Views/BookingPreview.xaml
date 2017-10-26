@@ -157,8 +157,9 @@
                                 Padding="10"
                                 Orientation="Horizontal">
                                 <Image
-                                    Source="security.png"
+                                    Source="qrcode.png"
                                     Aspect="AspectFit"
+                                    HeightRequest="30"
                                     VerticalOptions="Center" />
                                 <Label
                                     Margin="10,0,0,0"
@@ -170,8 +171,9 @@
                                 Padding="10"
                                 Orientation="Horizontal">
                                 <Image
-                                    Source="time.png"
+                                    Source="menu-booking.png"
                                     Aspect="AspectFit"
+                                    HeightRequest="30"
                                     VerticalOptions="Center" />
                                 <Label
                                     Margin="10,0,0,0"
@@ -183,13 +185,14 @@
                                 Padding="10"
                                 Orientation="Horizontal">
                                 <Image
-                                    Source="information.png"
+                                    Source="entrance.png"
+                                    HeightRequest="30"
                                     Aspect="AspectFit"
                                     VerticalOptions="Center" />
                                 <Label
                                     Margin="10,0,0,0"
                                     VerticalOptions="Center"
-                                    Text="Entrace at mezzanine floor" />
+                                    Text="Entrance at mezzanine floor" />
                             </StackLayout>
                         </Grid>
                     </ViewCell>
@@ -218,21 +221,23 @@
                                 Padding="10"
                                 Orientation="Horizontal">
                                 <Image
-                                    Source="locationGrey.png"
+                                    Source="covered.png"
                                     Aspect="AspectFit"
+                                    HeightRequest="30"
                                     VerticalOptions="Center" />
                                 <Label
                                     Margin="10,0,0,0"
                                     VerticalOptions="Center"
-                                    Text="Mezzanine Floor" />
+                                    Text="Covered" />
                             </StackLayout>
                             <StackLayout
                                 Padding="10"
                                 Grid.Column="1"
                                 Orientation="Horizontal">
                                 <Image
-                                    Source="camera.png"
+                                    Source="cctv.png"
                                     Aspect="AspectFit"
+                                    HeightRequest="30"
                                     VerticalOptions="Center" />
                                 <Label
                                     Margin="10,0,0,0"
@@ -244,36 +249,9 @@
                                 Grid.Row="1"
                                 Orientation="Horizontal">
                                 <Image
-                                    Source="eye.png"
+                                    Source="electric.png"
                                     Aspect="AspectFit"
-                                    VerticalOptions="Center" />
-                                <Label
-                                    Margin="10,0,0,0"
-                                    VerticalOptions="Center"
-                                    Text="Security guard" />
-                            </StackLayout>
-                            <StackLayout
-                                Padding="10"
-                                Grid.Row="1"
-                                Grid.Column="1"
-                                Orientation="Horizontal">
-                                <Image
-                                    Source="Lock.png"
-                                    HeightRequest="16"
-                                    Aspect="AspectFit"
-                                    VerticalOptions="Center" />
-                                <Label
-                                    Margin="10,0,0,0"
-                                    VerticalOptions="Center"
-                                    Text="Private parking" />
-                            </StackLayout>
-                            <StackLayout
-                                Padding="10"
-                                Grid.Row="2"
-                                Orientation="Horizontal">
-                                <Image
-                                    Source="bolt.png"
-                                    Aspect="AspectFit"
+                                    HeightRequest="30"
                                     VerticalOptions="Center" />
                                 <Label
                                     Margin="10,0,0,0"
@@ -282,17 +260,18 @@
                             </StackLayout>
                             <StackLayout
                                 Padding="10"
-                                Grid.Row="2"
+                                Grid.Row="1"
                                 Grid.Column="1"
                                 Orientation="Horizontal">
                                 <Image
-                                    Source="carGrey.png"
+                                    Source="metro.png"
                                     Aspect="AspectFit"
+                                    HeightRequest="30"
                                     VerticalOptions="Center" />
                                 <Label
                                     Margin="10,0,0,0"
                                     VerticalOptions="Center"
-                                    Text="Car wash" />
+                                    Text="Near metro" />
                             </StackLayout>
                         </Grid>
                     </ViewCell>
