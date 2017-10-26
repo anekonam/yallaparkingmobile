@@ -196,7 +196,7 @@ namespace YallaParkingMobile.Model {
 
         public string ParkingCharge{
             get{
-                return string.Format("You will be charged AED {0}", this.DiscountValue);
+                return string.Format("You will be charged AED {0}", this.TotalPrice);
             }
         }
 

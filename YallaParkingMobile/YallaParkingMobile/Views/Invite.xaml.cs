@@ -47,10 +47,6 @@ namespace YallaParkingMobile {
 
 		private async void InviteNow_Clicked(object sender, EventArgs e) {
 
-            if (!CrossShare.IsSupported) {
-                return;
-            }
-
                await CrossShare.Current.Share(new ShareMessage {
                     Title = "Test",
                     Text =string.Format("Discount Code - {0}",Model.InviteCode),

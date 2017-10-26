@@ -31,7 +31,7 @@ namespace YallaParkingMobile.iOS {
 			TKCustomMapRenderer.InitMapRenderer();
             ImageCircleRenderer.Init();
             ZXing.Net.Mobile.Forms.iOS.Platform.Init();
-            Distribute.DontCheckForUpdatesInDebug();
+            Distribute.DontCheckForUpdatesInDebug();           
             MobileCenter.Start("cb01c0e7-1e13-4db0-a7ab-b6e6bfc6aea3", typeof(Distribute));
 
             LoadApplication(new App());
