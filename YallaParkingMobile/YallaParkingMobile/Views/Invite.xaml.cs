@@ -48,7 +48,8 @@ namespace YallaParkingMobile {
 		private async void InviteNow_Clicked(object sender, EventArgs e) {
 			await CrossShare.Current.Share(new ShareMessage {
 				Title = "YallaParking Invite",
-				Text = string.Format("Hey, you can join me on YallaParking and get 25% discount on your first booking using my code {0}", Model.InviteCode)
+				Text = string.Format("Hey, you can join me on YallaParking and get 25% discount on your first booking using my code {0}", Model.InviteCode),
+                Url = "www.yallaparking.com"
 			});
 		}
 
