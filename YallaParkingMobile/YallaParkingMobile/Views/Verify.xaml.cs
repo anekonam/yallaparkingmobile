@@ -33,17 +33,13 @@ namespace YallaParkingMobile {
 			Activity.IsVisible = false;
 
             if (success) {
-				var home = new Home(new HomeModel());
-				await Navigation.PushAsync(home);
+                var profile = await ServiceUtility.Profile();
+                var emiratesScan = new EmiratesScan(false);
+                emiratesScan.BindingContext = profile;
+				await Navigation.PushAsync(emiratesScan);
             } else {
                 await DisplayAlert("Verification Failed", "Verification failed, please try again", "Ok");
             }
-        }
-				
-        async void ToolbarItem_Activated(object sender, EventArgs e) {
-            var profile = await ServiceUtility.Profile();
-			var home = new Home(new HomeModel());
-			await Navigation.PushAsync(home);
-        }
+        }				      
     }
 }
