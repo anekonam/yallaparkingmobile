@@ -41,6 +41,26 @@ namespace YallaParkingMobile.Model {
             }
         } 	
 
+        public string Description{
+            get{
+                var description = "* This is an approximate order summary. The actual cost will";
+                return description;
+            }
+        }
+
+		public string Description1 {
+			get {
+				var description1 = "be calculated based on your scan in & out time *";
+				return description1;
+			}
+		}
+
+        public bool HasDiscount{
+            get{
+                return this.Property.Discount > 0;
+            }
+        }
+
         public decimal Discount { get; set; }
 
         private PropertyModel property = new PropertyModel();
@@ -55,6 +75,37 @@ namespace YallaParkingMobile.Model {
 					if (PropertyChanged != null) {
 						PropertyChanged(this, new PropertyChangedEventArgs("Property"));
 					}
+				}
+			}
+		}
+
+		public string EntranceMethod {
+			get {
+                if (!string.IsNullOrWhiteSpace(this.Property.ShortTermParkingEntranceMethod)){
+					return this.Property.ShortTermParkingEntranceMethod;
+				} else {
+					return "N/A";
+				}
+			}
+		}
+
+		public string AccessInfo {
+			get {
+                if (!string.IsNullOrWhiteSpace(this.Property.ShortTermParkingAccessInfo)){
+					return this.Property.ShortTermParkingAccessInfo;
+				} else {
+					return "N/A";
+
+				}
+			}
+		}
+
+		public string Details {
+			get {
+                if (!string.IsNullOrWhiteSpace(this.Property.ShortTermParkingDetails)){
+					return this.Property.ShortTermParkingDetails;
+				} else {
+					return "N/A";
 				}
 			}
 		}

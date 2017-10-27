@@ -154,6 +154,7 @@
                                     Height="Auto" />
                             </Grid.RowDefinitions>
                             <StackLayout
+                                Grid.Row="1"
                                 Padding="10"
                                 Orientation="Horizontal">
                                 <Image
@@ -164,14 +165,13 @@
                                 <Label
                                     Margin="10,0,0,0"
                                     VerticalOptions="Center"
-                                    Text="Security guard with a QR code to scan" />
+                                    Text="{Binding EntranceMethod}" />
                             </StackLayout>
-                            <StackLayout
-                                Grid.Row="1"
+                             <StackLayout
                                 Padding="10"
                                 Orientation="Horizontal">
                                 <Image
-                                    Source="menu-booking.png"
+                                    Source="Clock-Time.png"
                                     Aspect="AspectFit"
                                     HeightRequest="30"
                                     VerticalOptions="Center" />
@@ -192,7 +192,7 @@
                                 <Label
                                     Margin="10,0,0,0"
                                     VerticalOptions="Center"
-                                    Text="Entrance at mezzanine floor" />
+                                    Text="{Binding AccessInfo}" />
                             </StackLayout>
                         </Grid>
                     </ViewCell>
@@ -284,7 +284,7 @@
                         <Label
                             Margin="10"
                             HorizontalTextAlignment="Start"                           
-                            Text="The parking located at the the heart of the first Jumeirah towers has its entrance undergraund for the 5th avenue in Dubai Marina. There is a security guard who will let you in through the mezzanine floor. Users can use the stairs or the elevator to access the tower." />
+                            Text="{Binding Details}" />
                     </ViewCell>
                 </TableSection>
             </TableRoot>

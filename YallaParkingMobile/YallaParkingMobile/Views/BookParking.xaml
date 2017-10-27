@@ -128,6 +128,16 @@
                         LabelColor="Black"
                         Text="{Binding Property.TotalPrice, StringFormat='AED {0:n2}'}">
                     </EntryCell>
+                    <TextCell
+                        Height="20"
+                        Detail ="{Binding Description}"
+                        DetailColor ="#a1a1b4">
+                    </TextCell>
+                    <TextCell
+                        Height="20 "
+                        Detail ="{Binding Description1}"
+                        DetailColor ="#a1a1b4">
+                    </TextCell>
                 </TableSection>
                 <TableSection
                     Title="Select Vehicle">

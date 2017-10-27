@@ -20,6 +20,7 @@
             Margin="80"
             Source="car.png"
             Grid.Row="0"
+            HeightRequest="60"
             VerticalOptions="Center"
             Aspect="AspectFit" />
         <ContentView
@@ -33,15 +34,15 @@
         <StackLayout
             Grid.Row="2">
             <Label
-                Margin="40,20,40,20"
+                Margin="40,10,40,10"
                 HorizontalTextAlignment="Center"
                 Text="Thank you for using YallaParking" />
             <Label
-                Margin="40,20,40,20"
+                Margin="40,10,40,10"
                 HorizontalTextAlignment="Center"
                 Text="{Binding ParkingTime}" />
             <Label
-                Margin="40,20,40,20"
+                Margin="40,10,40,10"
                 HorizontalTextAlignment="Center"
                 Text="{Binding ParkingCharge}" />
             <Label

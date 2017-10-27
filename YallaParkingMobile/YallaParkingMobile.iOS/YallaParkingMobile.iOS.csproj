@@ -254,6 +254,7 @@
     <BundleResource Include="Resources\qrcode.png" />
     <BundleResource Include="Resources\uncovered.png" />
     <BundleResource Include="Resources\extend.png" />
+    <BundleResource Include="Resources\Clock-Time.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

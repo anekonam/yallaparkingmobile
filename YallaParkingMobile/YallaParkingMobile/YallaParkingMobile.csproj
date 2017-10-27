@@ -141,6 +141,12 @@
     <Compile Include="Views\ExtendConfirmation.cs">
       <DependentUpon>ExtendConfirmation.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\UserCars.xaml.cs">
+      <DependentUpon>UserCars.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UserCards.xaml.cs">
+      <DependentUpon>UserCards.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -186,6 +192,14 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\ExtendConfirmation.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserCars.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\UserCards.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

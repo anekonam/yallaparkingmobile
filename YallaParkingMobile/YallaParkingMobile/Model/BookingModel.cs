@@ -4,6 +4,7 @@ using Xamarin.Forms;
 using System.ComponentModel;
 using Plugin.Geolocator.Abstractions;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
 
 namespace YallaParkingMobile.Model {
     public class BookingModel:INotifyPropertyChanged {
@@ -107,6 +108,38 @@ namespace YallaParkingMobile.Model {
 
         public string PropertyShortTermParkingDetails { get; set; }
 
+        public string PropertyShortTermParkingCancelMinutes { get; set; }
+
+        public string EntranceMethod{
+            get{
+                if(!string.IsNullOrWhiteSpace(this.PropertyShortTermParkingEntranceMethod)){
+                    return this.PropertyShortTermParkingEntranceMethod;
+                } else{
+                    return "N/A";
+                }
+            }
+        }
+
+        public string AccessInfo {
+			get {
+                if (!string.IsNullOrWhiteSpace(this.PropertyShortTermParkingAccessInfo)){
+					return this.PropertyShortTermParkingAccessInfo;
+				} else {
+                    return "N/A";
+
+				}
+			}
+		}
+
+		public string Details {
+			get {
+                if (!string.IsNullOrWhiteSpace(this.PropertyShortTermParkingDetails)){
+					return this.PropertyShortTermParkingDetails;
+				} else {
+                    return "N/A";
+				}
+			}
+		}
 
 
         private string number;
@@ -187,7 +220,7 @@ namespace YallaParkingMobile.Model {
             get{
                 if(this.EntryTime.HasValue && this.ExitTime.HasValue){
                     TimeSpan difference = this.ExitTime.Value - this.EntryTime.Value;
-                    return string.Format("You parked for {0}:{1} minutes", difference.Hours, difference.Minutes);
+                    return string.Format("You parked for {0} hr {1} mins", difference.Hours, difference.Minutes);
                 }
 
                 return string.Empty;
@@ -196,7 +229,24 @@ namespace YallaParkingMobile.Model {
 
         public string ParkingCharge{
             get{
-                return string.Format("You will be charged AED {0}", this.TotalPrice);
+                if (this.TotalPrice.HasValue) {
+                    var price = this.TotalPrice.Value.ToString("n2");
+                    return string.Format("You will be charged AED {0}", price);
+                }
+
+                return null;
+            }
+        }
+
+        public string ParkingCompleteDetails{
+            get{
+                if(this.Completed && this.TotalPrice.HasValue && this.EntryTime.HasValue && this.ExitTime.HasValue){
+                    var price = this.TotalPrice.Value.ToString("n2");
+                    TimeSpan difference = this.ExitTime.Value - this.EntryTime.Value;
+
+                    return string.Format("You parked for {0} hr {1} mins and you paid AED {2}", difference.Hours, difference.Minutes, price);
+				}
+				return null;
             }
         }
 
@@ -244,6 +294,12 @@ namespace YallaParkingMobile.Model {
 
         public bool Pending {
             get {
+                return this.Status.Contains("Upcoming") || this.Status.Contains("Active");
+            }
+        }
+
+        public bool CancellationMessage{
+            get{
                 return this.Status.Contains("Upcoming");
             }
         }
@@ -326,7 +382,7 @@ namespace YallaParkingMobile.Model {
 
 		public string CancellationPolicy {
 			get {
-                return "At least 3 hours prior to your booking";
+                return string.Format("At least {0} mins prior to your booking",this.PropertyShortTermParkingCancelMinutes);
 			}
 		}
 

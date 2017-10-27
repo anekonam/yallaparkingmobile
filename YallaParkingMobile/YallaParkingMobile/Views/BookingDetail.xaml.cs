@@ -48,40 +48,43 @@ namespace YallaParkingMobile {
 				}
             }
 
-            if(!this.Model.Pending){
-                if(TableView.Contains(CancellationPolicy)){
-                    TableView.Remove(CancellationPolicy);
-                }
+            if(!this.Model.CancellationMessage){
+                TableView.Remove(CancellationPolicy);
             }
 
-            var maxHours = (int)Math.Ceiling((this.Model.Start.Date.AddDays(1) - this.Model.Start).TotalHours);
-			maxHours = maxHours >= 8 ? 8 : maxHours;
-			HoursSlider.Maximum = maxHours >= 2 ? maxHours : 2;
-            HoursSlider.Minimum = this.Model.Hours.Value;
+			if (!this.Model.Completed) {
+				TableView.Remove(ParkingDetails);
+			}
+                       
+            HoursSlider.Value = this.Model.Hours.HasValue ? this.Model.Hours.Value : 0;
             HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
+
+            if (Model.Hours >= 8) {
+                HoursSlider.IsEnabled = false;
+            }
 
 			Hours.PropertyChanged += async (sender, e) => {
                 if (e.PropertyName == Label.TextProperty.PropertyName) {
 
-                    if ((int)HoursSlider.Value != Model.Hours && !extending) {
-                        extending = true;
+                    if ((int)HoursSlider.Value != Model.Hours && !extending) {                       
+                            extending = true;
 
-                        bool confirm = await DisplayAlert("Extend Parking", "Are you sure you wish to extend your parking to " + (int)HoursSlider.Value + " hours?", "Yes", "No");
+                            bool confirm = await DisplayAlert("Extend Parking", "Are you sure you wish to extend your parking to " + (int)HoursSlider.Value + " hours?", "Yes", "No");
 
-                        if (confirm) {
-                            var extensionHours = (int)HoursSlider.Value - this.Model.Hours;
-                            this.Model.Hours = (int)HoursSlider.Value;
-                            this.Model.End = this.Model.End.AddHours(extensionHours.Value);
+                            if (confirm) {
+                                var extensionHours = (int)HoursSlider.Value - this.Model.Hours;
+                                this.Model.Hours = (int)HoursSlider.Value;
+                                this.Model.End = this.Model.End.AddHours(extensionHours.Value);
 
-                            var result = await ServiceUtility.Update(this.Model);
+                                var result = await ServiceUtility.Update(this.Model);
 
-                            if (result) {
-                                var extension = string.Format("{0} {1} from {2:h:mm tt} to {3:h:mm tt}", extensionHours, extensionHours == 1 ? "hour" : "hours", this.Model.StartLocal, this.Model.EndLocal);
-                                await Navigation.PushAsync(new ExtendConfirmation(extension));
-                            }
-                        }
+                                if (result) {
+                                    var extension = string.Format("{0} {1} from {2:h:mm tt} to {3:h:mm tt}", extensionHours, extensionHours == 1 ? "hour" : "hours", this.Model.StartLocal, this.Model.EndLocal);
+                                    await Navigation.PushAsync(new ExtendConfirmation(extension));
+                                }
+                            } 
 
-                        extending = false;
+                            extending = false;
                     }
 				}
 			};
@@ -158,10 +161,12 @@ namespace YallaParkingMobile {
 
             await this.RefreshBooking();
 
-			var maxHours = (int)Math.Ceiling((this.Model.Start.Date.AddDays(1) - this.Model.Start).TotalHours);
-			maxHours = maxHours >= 8 ? 8 : maxHours;
-			HoursSlider.Maximum = maxHours >= 2 ? maxHours : 2;
-			HoursSlider.Minimum = this.Model.Hours.Value;
+			HoursSlider.Value = this.Model.Hours.HasValue ? this.Model.Hours.Value : 0;
+			HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
+
+			if (Model.Hours >= 8) {
+				HoursSlider.IsEnabled = false;
+			}
 
 			UpdateCurrentLocation();
 		}        	
@@ -294,7 +299,7 @@ namespace YallaParkingMobile {
 			await Navigation.PushAsync(scanPage);
         }
 
-		private async void HoursSlider_ValueChanged(object sender, ValueChangedEventArgs e) {
+		private void HoursSlider_ValueChanged(object sender, ValueChangedEventArgs e) {
 			var hoursText = Hours.Text;
 
 			var newStep = Math.Round(e.NewValue / 1.0);
@@ -306,7 +311,6 @@ namespace YallaParkingMobile {
 				Hours.Text = string.Format("{0} hours", HoursSlider.Value);			
 			}
 		}
-
 
 		private async void Cancel_Clicked(object sender, EventArgs e) {
             var confirm = await DisplayAlert("Cancel Booking", "Are you sure you wish to cancel your booking? Please note this may incur a late cancellation charge", "Yes", "No");
@@ -321,6 +325,18 @@ namespace YallaParkingMobile {
 					await DisplayAlert("Booking Cancellation Error", "There was a problem cancelling your booking, please try again", "Ok");
 				}
             }
+		}
+
+		async void Car_Tapped(object sender, EventArgs e) {
+			var car = new UserCars();
+			car.BindingContext = new GarageModel();
+			await Navigation.PushAsync(car);
+		}
+
+		async void Card_Tapped(object sender, EventArgs e) {
+			var card = new UserCards();
+			card.BindingContext = new WalletModel();
+			await Navigation.PushAsync(card);
 		}
     }
 }

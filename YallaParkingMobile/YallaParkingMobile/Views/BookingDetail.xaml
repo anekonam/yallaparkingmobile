@@ -28,7 +28,7 @@
                 <ColumnDefinition
                     Width="0.9*" />
                 <ColumnDefinition
-                    Width="*" />
+                    Width="2.0*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition
@@ -152,6 +152,7 @@
         <StackLayout
             Padding="8"
             Grid.Row="1"
+            IsVisible="{Binding Pending}"
             Orientation="Horizontal">
             <Label
                 x:Name="Hours"
@@ -162,11 +163,10 @@
                 Text="1 hour" />
             <Slider
                 x:Name="HoursSlider"
-                Maximum="24"
+                Maximum="8"
                 Minimum="1"
                 Value="1"
                 Scale="1"
-                IsVisible="{Binding Pending}"
                 ValueChanged="HoursSlider_ValueChanged"
                 HorizontalOptions="FillAndExpand" />
         </StackLayout>
@@ -200,10 +200,24 @@
                                 <Label
                                     Margin="10,0,0,0"
                                     VerticalOptions="Center"
-                                    Text="Security guard with a QR code to scan" />
+                                    Text="{Binding EntranceMethod}" />
+                            </StackLayout>
+                             <StackLayout
+                                Grid.Row="2"
+                                Padding="10"
+                                Orientation="Horizontal">
+                                <Image
+                                    Source="Clock-Time.png"
+                                    Aspect="AspectFit"
+                                    HeightRequest="30"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    Margin="10,0,0,0"
+                                    VerticalOptions="Center"
+                                    Text="{Binding BookingTime}" />
                             </StackLayout>
                             <StackLayout
-                                Grid.Row="2"
+                                Grid.Row="3"
                                 Padding="10"
                                 Orientation="Horizontal">
                                 <Image
@@ -214,7 +228,7 @@
                                 <Label
                                     Margin="10,0,0,0"
                                     VerticalOptions="Center"
-                                    Text="Entrace at mezzanine floor" />
+                                    Text="{Binding AccessInfo}" />
                             </StackLayout>
                         </Grid>
                     </ViewCell>
@@ -299,6 +313,7 @@
                     Title="Vehicle">
                     <ViewCell
                         StyleId="none"
+                        Tapped="Car_Tapped"
                         Height="80">
                         <Grid
                             VerticalOptions="FillAndExpand"
@@ -343,6 +358,7 @@
                     Title="Payment Method">
                     <ViewCell
                         StyleId="none"
+                        Tapped="Card_Tapped"
                         Height="70">
                         <Grid
                             VerticalOptions="FillAndExpand"
@@ -396,6 +412,12 @@
                     Title="Cancellation Policy">
                     <TextCell
                         Detail="{Binding CancellationPolicy}" />
+                </TableSection>
+                <TableSection
+                    x:Name="ParkingDetails"
+                    Title="Parking Details">
+                    <TextCell
+                        Detail="{Binding Details}" />
                 </TableSection>
             </TableRoot>
         </control:MenuTableView>

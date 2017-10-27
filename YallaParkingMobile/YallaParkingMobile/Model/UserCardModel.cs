@@ -1,5 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
+using System.Text.RegularExpressions;
+using Telerik.XamarinForms.Common.DataAnnotations;
 
 namespace YallaParkingMobile.Model {
     public class UserCardModel {
@@ -41,6 +43,7 @@ namespace YallaParkingMobile.Model {
         public string Cvc { get; set; }
 
 		public string LastFourDigits { get; set; }
+
 
         public string EncodedCardNumber{
             get{

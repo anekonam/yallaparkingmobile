@@ -352,10 +352,9 @@ namespace YallaParkingMobile.Utility {
 				var response = await client.PostAsync("/api/parking/update", model.AsJson());
 
 				if (response.IsSuccessStatusCode) {
-					var booking = await response.Content.ReadAsStringAsync();
 					return true;
 				}
-			} catch {
+            } catch(System.Exception ex) {
                 return false;
 			}
 
