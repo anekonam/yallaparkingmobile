@@ -313,6 +313,7 @@
                     Title="Vehicle">
                     <ViewCell
                         StyleId="none"
+                        IsEnabled ="{Binding canEdit}"
                         Tapped="Car_Tapped"
                         Height="80">
                         <Grid
@@ -358,6 +359,7 @@
                     Title="Payment Method">
                     <ViewCell
                         StyleId="none"
+                        IsEnabled ="{Binding canEdit}"
                         Tapped="Card_Tapped"
                         Height="70">
                         <Grid

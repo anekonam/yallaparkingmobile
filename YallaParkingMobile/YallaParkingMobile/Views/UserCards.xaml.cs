@@ -22,7 +22,8 @@ using System.Collections.ObjectModel;
 namespace YallaParkingMobile {
     public partial class UserCards : ContentPage {
 
-        public UserCards() {
+        public UserCards(BookingModel model) {
+            this.Booking = model;
             InitializeComponent();
             Analytics.TrackEvent("Viewing User Cards Page");
         }

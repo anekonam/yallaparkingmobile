@@ -328,13 +328,13 @@ namespace YallaParkingMobile {
 		}
 
 		async void Car_Tapped(object sender, EventArgs e) {
-			var car = new UserCars();
+			var car = new UserCars(this.Model);
 			car.BindingContext = new GarageModel();
 			await Navigation.PushAsync(car);
 		}
 
 		async void Card_Tapped(object sender, EventArgs e) {
-			var card = new UserCards();
+			var card = new UserCards(this.Model);
 			card.BindingContext = new WalletModel();
 			await Navigation.PushAsync(card);
 		}

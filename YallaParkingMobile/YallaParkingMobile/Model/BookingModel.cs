@@ -316,6 +316,12 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+        public bool canEdit {
+            get {
+                return this.Status.Contains("Upcoming");
+            }
+        }
+
         public decimal Price { get; set; }
 
         public decimal? Discount { get; set; }
