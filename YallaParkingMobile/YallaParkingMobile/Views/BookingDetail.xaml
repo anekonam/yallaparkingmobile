@@ -185,6 +185,7 @@
                 x:Name="Sumbit"
                 Text="Extend Parking"
                  TextColor="#ff8e30"
+                Clicked="Submit_Clicked"
                 HorizontalOptions="FillAndExpand">
             </Button>
         </StackLayout>

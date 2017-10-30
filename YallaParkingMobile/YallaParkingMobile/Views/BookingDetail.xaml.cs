@@ -319,14 +319,14 @@ namespace YallaParkingMobile {
 			bool confirm = await DisplayAlert("Extend Parking", "Are you sure you wish to extend your parking to " + this.Model.Hours.Value + " hours?", "Yes", "No");
 
 			if (confirm) {
-                var extensionHours = this.Model.OriginalHours - this.Model.Hours;			    
+                var extensionHours = this.Model.Hours - this.Model.OriginalHours;			    
 			    this.Model.End = this.Model.End.AddHours(extensionHours.Value);
 
 			    var result = await ServiceUtility.Update(this.Model);
 
 			    if (result) {
 			        var extension = string.Format("{0} {1} from {2:h:mm tt} to {3:h:mm tt}", extensionHours, extensionHours == 1 ? "hour" : "hours", this.Model.StartLocal, this.Model.EndLocal);
-			        await Navigation.PushAsync(new ExtendConfirmation());
+			        await Navigation.PushAsync(new ExtendConfirmation(extension));
 			    }
 			} 
 
@@ -336,16 +336,10 @@ namespace YallaParkingMobile {
             if (this.Model.Hours < 7) {
                 this.Model.Hours++;
             }
-
-			if ((this.Model.Hours.Value >= 8) {
-				Hours.Text = "All Day";             
-				} else {
-				Hours.Text = string.Format("{0} hours", this.Model.Hours.Value);           
-		     }
-			}
+	    }
 
 		private void Minus_Clicked(object sender, EventArgs e) {
-            if (this.Model.Hours > 1) {
+            if (this.Model.Hours > 1 && this.Model.Hours > this.Model.OriginalHours) {
                 this.Model.Hours--;
             }
 		}
