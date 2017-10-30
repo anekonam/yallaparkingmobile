@@ -56,38 +56,38 @@ namespace YallaParkingMobile {
 				TableView.Remove(ParkingDetails);
 			}
                        
-            HoursSlider.Value = this.Model.Hours.HasValue ? this.Model.Hours.Value : 0;
-            HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
+            //HoursSlider.Value = this.Model.Hours.HasValue ? this.Model.Hours.Value : 0;
+            //HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
 
-            if (Model.Hours >= 8) {
-                HoursSlider.IsEnabled = false;
-            }
+            //if (Model.Hours >= 8) {
+                //HoursSlider.IsEnabled = false;
+            //}
 
-			Hours.PropertyChanged += async (sender, e) => {
-                if (e.PropertyName == Label.TextProperty.PropertyName) {
+			//Hours.PropertyChanged += async (sender, e) => {
+               // if (e.PropertyName == Label.TextProperty.PropertyName) {
 
-                    if ((int)HoursSlider.Value != Model.Hours && !extending) {                       
-                            extending = true;
+                    //if ((int)HoursSlider.Value != Model.Hours && !extending) {                       
+                           // extending = true;
 
-                            bool confirm = await DisplayAlert("Extend Parking", "Are you sure you wish to extend your parking to " + (int)HoursSlider.Value + " hours?", "Yes", "No");
+                            //bool confirm = await DisplayAlert("Extend Parking", "Are you sure you wish to extend your parking to " + (int)HoursSlider.Value + " hours?", "Yes", "No");
 
-                            if (confirm) {
-                                var extensionHours = (int)HoursSlider.Value - this.Model.Hours;
-                                this.Model.Hours = (int)HoursSlider.Value;
-                                this.Model.End = this.Model.End.AddHours(extensionHours.Value);
+                            //if (confirm) {
+                                //var extensionHours = (int)HoursSlider.Value - this.Model.Hours;
+                                //this.Model.Hours = (int)HoursSlider.Value;
+                                //this.Model.End = this.Model.End.AddHours(extensionHours.Value);
 
-                                var result = await ServiceUtility.Update(this.Model);
+                               // var result = await ServiceUtility.Update(this.Model);
 
-                                if (result) {
-                                    var extension = string.Format("{0} {1} from {2:h:mm tt} to {3:h:mm tt}", extensionHours, extensionHours == 1 ? "hour" : "hours", this.Model.StartLocal, this.Model.EndLocal);
-                                    await Navigation.PushAsync(new ExtendConfirmation(extension));
-                                }
-                            } 
+                                //if (result) {
+                                    //var extension = string.Format("{0} {1} from {2:h:mm tt} to {3:h:mm tt}", extensionHours, extensionHours == 1 ? "hour" : "hours", this.Model.StartLocal, this.Model.EndLocal);
+                                    //await Navigation.PushAsync(new ExtendConfirmation(extension));
+                                //}
+                            //} 
 
-                            extending = false;
-                    }
-				}
-			};
+                            //extending = false;
+                    //}
+				//}
+			//};
 		}
              
 
@@ -161,11 +161,13 @@ namespace YallaParkingMobile {
 
             await this.RefreshBooking();
 
-			HoursSlider.Value = this.Model.Hours.HasValue ? this.Model.Hours.Value : 0;
-			HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
+			//HoursSlider.Value = this.Model.Hours.HasValue ? this.Model.Hours.Value : 0;
+			//HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
 
 			if (Model.Hours >= 8) {
-				HoursSlider.IsEnabled = false;
+				Minus.IsEnabled = false;
+                Plus.IsEnabled = false;
+                Sumbit.IsEnabled = false;
 			}
 
 			UpdateCurrentLocation();
@@ -299,17 +301,53 @@ namespace YallaParkingMobile {
 			await Navigation.PushAsync(scanPage);
         }
 
-		private void HoursSlider_ValueChanged(object sender, ValueChangedEventArgs e) {
-			var hoursText = Hours.Text;
+		//private void HoursSlider_ValueChanged(object sender, ValueChangedEventArgs e) {
+			//var hoursText = Hours.Text;
 
-			var newStep = Math.Round(e.NewValue / 1.0);
-			HoursSlider.Value = newStep * 1.0;
+			//var newStep = Math.Round(e.NewValue / 1.0);
+			//HoursSlider.Value = newStep * 1.0;
 
-			if ((int)HoursSlider.Value >= 8) {
-				Hours.Text = "All Day";				
-			} else {
-				Hours.Text = string.Format("{0} hours", HoursSlider.Value);			
+			//if ((int)HoursSlider.Value >= 8) {
+			//	Hours.Text = "All Day";				
+			//} else {
+				//Hours.Text = string.Format("{0} hours", HoursSlider.Value);			
+			//}
+		//}
+
+		private async void Submit_Clicked(object sender, EventArgs e) {
+
+			bool confirm = await DisplayAlert("Extend Parking", "Are you sure you wish to extend your parking to " + this.Model.Hours.Value + " hours?", "Yes", "No");
+
+			if (confirm) {
+                var extensionHours = this.Model.OriginalHours - this.Model.Hours;			    
+			    this.Model.End = this.Model.End.AddHours(extensionHours.Value);
+
+			    var result = await ServiceUtility.Update(this.Model);
+
+			    if (result) {
+			        var extension = string.Format("{0} {1} from {2:h:mm tt} to {3:h:mm tt}", extensionHours, extensionHours == 1 ? "hour" : "hours", this.Model.StartLocal, this.Model.EndLocal);
+			        await Navigation.PushAsync(new ExtendConfirmation());
+			    }
+			} 
+
+		}
+
+        private void Plus_Clicked(object sender, EventArgs e){
+            if (this.Model.Hours < 7) {
+                this.Model.Hours++;
+            }
+
+			if ((this.Model.Hours.Value >= 8) {
+				Hours.Text = "All Day";             
+				} else {
+				Hours.Text = string.Format("{0} hours", this.Model.Hours.Value);           
+		     }
 			}
+
+		private void Minus_Clicked(object sender, EventArgs e) {
+            if (this.Model.Hours > 1) {
+                this.Model.Hours--;
+            }
 		}
 
 		private async void Cancel_Clicked(object sender, EventArgs e) {

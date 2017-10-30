@@ -130,14 +130,14 @@
                                         x:Name="SearchDate"
                                         Format="ddd dd MMM"
                                         TextColor="#767684"
-                                        WidthRequest="90"
+                                        WidthRequest="110"
                                         VerticalOptions="Center"
                                         DateSelected="DatePicker_DateSelected"
                                         HorizontalOptions="Start" />
                                     <Label
                                         Text="at"
                                         FontSize="18"
-                                        Margin="0,0,5,2"
+                                        Margin="-15,0,5,2"
                                         TextColor="#767684"
                                         VerticalOptions="Center"
                                         HorizontalOptions="Start" />

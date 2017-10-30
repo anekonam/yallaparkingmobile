@@ -72,7 +72,8 @@
             Intent="Settings"
             HasUnevenRows="true"
             Grid.Row="1">
-            <TableRoot>
+            <TableRoot
+                x:Name="TableView">
                 <TableSection
                     x:Name="Order"
                     Title="Order Summary">
@@ -140,9 +141,9 @@
                     </TextCell>
                 </TableSection>
                 <TableSection
+                    x:Name="TwoCars"
                     Title="Select Vehicle">
                     <ViewCell
-                        x:Name="CarCell"
                         StyleId="none"
                         Height="150">
                         <StackLayout>
@@ -199,6 +200,9 @@
                             </ListView>
                         </StackLayout>
                     </ViewCell>
+
+                </TableSection>
+                <TableSection>
                     <ViewCell
                         StyleId="none">
                         <Button
@@ -212,6 +216,68 @@
                     </ViewCell>
                 </TableSection>
                 <TableSection
+                    x:Name="OneCar"
+                    Title="Select Vehicle">
+                    <ViewCell
+                        StyleId="none"
+                        Height="75">
+                        <StackLayout>
+                            <ListView
+                                x:Name="Car"
+                                HasUnevenRows="true"
+                                VerticalOptions="FillAndExpand"
+                                ItemsSource="{Binding UserCars}"
+                                SelectedItem="{Binding SelectedUserCar,Mode=TwoWay}">
+                                <ListView.SeparatorVisibility>None</ListView.SeparatorVisibility>
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <Grid
+                                                VerticalOptions="FillAndExpand"
+                                                ColumnSpacing="10"
+                                                RowSpacing="8"
+                                                Padding="10,10,10,10">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition
+                                                        Width="0.3*" />
+                                                    <ColumnDefinition
+                                                        Width="*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition
+                                                        Height="Auto" />
+                                                </Grid.RowDefinitions>
+                                                <Image
+                                                    HeightRequest="40"
+                                                    Margin="10,10,10,10"
+                                                    Aspect="AspectFill"
+                                                    VerticalOptions="Center"
+                                                    HorizontalOptions="Center"
+                                                    Source="{Binding Image}" />
+                                                <StackLayout
+                                                    VerticalOptions="CenterAndExpand"
+                                                    Grid.Column="1">
+                                                    <Label
+                                                        HorizontalOptions="StartAndExpand"
+                                                        FontSize="16"
+                                                        TextColor="Black"
+                                                        Text="{Binding MakeAndModel}"
+                                                        Style="{StaticResource Header}" />
+                                                    <Label
+                                                        FontSize="12"
+                                                        HorizontalOptions="StartAndExpand"
+                                                        Text="{Binding RegistrationNumber}" />
+                                                </StackLayout>
+                                            </Grid>
+                                        </ViewCell>
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection
+                    x:Name="TwoCards"
                     Title="Select Card">
                     <ViewCell
                         StyleId="none"
@@ -219,16 +285,13 @@
                         <ListView
                             x:Name="Cards"
                             HasUnevenRows="true"
-                            HeightRequest="300"
-                            RowHeight="50"
                             VerticalOptions="FillAndExpand"
                             ItemsSource="{Binding UserCards}"
                             SelectedItem="{Binding SelectedUserCard,Mode=TwoWay}">
                             <ListView.SeparatorVisibility>None</ListView.SeparatorVisibility>
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <ViewCell
-                                        Height="60">
+                                    <ViewCell>
                                         <Grid
                                             VerticalOptions="FillAndExpand"
                                             ColumnSpacing="10"
@@ -280,6 +343,76 @@
                             </ListView.ItemTemplate>
                         </ListView>
                     </ViewCell>
+                </TableSection>
+                <TableSection
+                    x:Name="OneCard"
+                    Title="Select Card">
+                    <ViewCell
+                        StyleId="none"
+                        Height="75">
+                        <ListView
+                            x:Name="Card"
+                            HasUnevenRows="true"
+                            VerticalOptions="FillAndExpand"
+                            ItemsSource="{Binding UserCards}"
+                            SelectedItem="{Binding SelectedUserCard,Mode=TwoWay}">
+                            <ListView.SeparatorVisibility>None</ListView.SeparatorVisibility>
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid
+                                            VerticalOptions="FillAndExpand"
+                                            ColumnSpacing="10"
+                                            RowSpacing="5"
+                                            Padding="10,10,10,10">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition
+                                                    Width="0.3*" />
+                                                <ColumnDefinition
+                                                    Width="*" />
+                                                <ColumnDefinition
+                                                    Width="Auto" />
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition
+                                                    Height="Auto" />
+                                            </Grid.RowDefinitions>
+                                            <Image
+                                                HeightRequest="40"
+                                                Margin="10,10,10,10"
+                                                Aspect="AspectFit"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="Center"
+                                                Source="{Binding Image}" />
+                                            <StackLayout
+                                                VerticalOptions="CenterAndExpand"
+                                                Grid.Column="1">
+                                                <Label
+                                                    HorizontalOptions="StartAndExpand"
+                                                    FontSize="16"
+                                                    TextColor="Black"
+                                                    Text="{Binding Name}"
+                                                    Style="{StaticResource Header}" />
+                                                <Label
+                                                    FontSize="13"
+                                                    HorizontalOptions="StartAndExpand"
+                                                    Text="{Binding EncodedCardNumber}" />
+                                            </StackLayout>
+                                            <Label
+                                                Grid.Column="2"
+                                                FontSize="13"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="EndAndExpand"
+                                                Margin="0,0,28,0"
+                                                Text="{Binding ExpireMonthYear}" />
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </ViewCell>
+                </TableSection>
+                <TableSection>
                     <ViewCell
                         StyleId="none">
                         <Button
@@ -291,7 +424,7 @@
                             HorizontalOptions="FillAndExpand"
                             VerticalOptions="Center" />
                     </ViewCell>
-                </TableSection>
+                    </TableSection>
             </TableRoot>
         </control:MenuTableView>
         <Button

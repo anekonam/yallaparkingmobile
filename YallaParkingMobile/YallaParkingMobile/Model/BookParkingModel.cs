@@ -8,6 +8,7 @@ using System.ComponentModel;
 using Xamarin.Forms;
 using YallaParkingMobile.Utility;
 using Plugin.Geolocator.Abstractions;
+using System.Windows.Input;
 
 namespace YallaParkingMobile.Model {
 
@@ -16,6 +17,7 @@ namespace YallaParkingMobile.Model {
         public BookParkingModel(PropertyModel property, bool parkingNow = true) {
             this.Property = property;
             this.ParkingNow = parkingNow;
+
         }
 
         private bool parkingNow = true;
@@ -168,6 +170,10 @@ namespace YallaParkingMobile.Model {
                 }
             }
         }
+
+        public int TotalCar { get; set; }
+
+        public int TotalCard { get; set; }
 
 		private UserCardModel selectedUserCard;
 		public UserCardModel SelectedUserCard {

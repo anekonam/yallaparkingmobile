@@ -100,7 +100,7 @@ namespace YallaParkingMobile.Model {
 
         public double PropertyLongitude { get; set; }
 
-        public int PropertyShortTermParkingEntryBufferMinutes { get; set; }
+        public int? PropertyShortTermParkingEntryBufferMinutes { get; set; }
 
         public string PropertyShortTermParkingEntranceMethod { get; set; }
 
@@ -108,7 +108,7 @@ namespace YallaParkingMobile.Model {
 
         public string PropertyShortTermParkingDetails { get; set; }
 
-        public string PropertyShortTermParkingCancelMinutes { get; set; }
+        public int? PropertyShortTermParkingCancelMinutes { get; set; }
 
         public string EntranceMethod{
             get{
@@ -332,7 +332,22 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-        public double? Hours { get; set; }
+        public double? OriginalHours { get; set; }
+
+        private double? hours;
+        public double? Hours {
+            get{
+                return hours;
+            } set{
+                if(hours!=value){
+                    hours = value;
+					if (PropertyChanged != null) {
+						PropertyChanged(this, new PropertyChangedEventArgs("Hours"));
+					}
+				
+                }
+            }
+        }
 
 		public string TotalHours { 
             get{

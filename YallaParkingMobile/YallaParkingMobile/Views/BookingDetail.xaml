@@ -15,7 +15,7 @@
              <RowDefinition
                 Height="Auto" />
             <RowDefinition
-                Height="*" />
+                Height="Auto" />
             <RowDefinition
                 Height="Auto" />
         </Grid.RowDefinitions>
@@ -154,27 +154,45 @@
             Grid.Row="1"
             IsVisible="{Binding Pending}"
             Orientation="Horizontal">
-            <Label
+            <Button
+                x:Name="Minus"
+                Text="-"
+                FontSize="18"
+                 TextColor="#ff8e30"
+                Clicked = "Minus_Clicked"
+                HorizontalOptions="FillAndExpand" />
+              <Label
                 x:Name="Hours"
-                Margin="0,5,10,0"
+                Margin="0,10,10,0"
                 VerticalOptions="Start"
                 FontSize="16"
                 TextColor="#767684"
-                Text="1 hour" />
-            <Slider
-                x:Name="HoursSlider"
-                Maximum="8"
-                Minimum="1"
-                Value="1"
-                Scale="1"
-                ValueChanged="HoursSlider_ValueChanged"
+                Text="{Binding Hours, StringFormat='{0} hours'}" />
+            <Button
+                x:Name="Plus"
+                Text="+"
+                FontSize="18"
+                TextColor="#ff8e30"
+                Clicked = "Plus_Clicked"
                 HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+        <StackLayout
+            Padding="8"
+            Grid.Row="2"
+            IsVisible="{Binding Pending}"
+            Orientation="Horizontal">
+            <Button 
+                x:Name="Sumbit"
+                Text="Extend Parking"
+                 TextColor="#ff8e30"
+                HorizontalOptions="FillAndExpand">
+            </Button>
         </StackLayout>
         <control:MenuTableView
             x:Name="OrderSummary"
             Intent="Settings"
             HasUnevenRows="true"
-            Grid.Row="2">
+            Grid.Row="3">
             <TableRoot
                 x:Name="TableView">
                 <TableSection
@@ -203,7 +221,7 @@
                                     Text="{Binding EntranceMethod}" />
                             </StackLayout>
                              <StackLayout
-                                Grid.Row="2"
+                                Grid.Row="1"
                                 Padding="10"
                                 Orientation="Horizontal">
                                 <Image
@@ -217,7 +235,7 @@
                                     Text="{Binding BookingTime}" />
                             </StackLayout>
                             <StackLayout
-                                Grid.Row="3"
+                                Grid.Row="2"
                                 Padding="10"
                                 Orientation="Horizontal">
                                 <Image
@@ -424,7 +442,7 @@
             </TableRoot>
         </control:MenuTableView>
         <StackLayout
-            Grid.Row="3"
+            Grid.Row="4"
             Margin="10">
             <Button
                 x:Name="EntryButton"

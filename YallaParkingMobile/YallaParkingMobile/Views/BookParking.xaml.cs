@@ -52,14 +52,39 @@ namespace YallaParkingMobile {
 
             if (userCars != null && userCars.Any()) {
                 this.Model.UserCars = new ObservableCollection<UserCarModel>(userCars);
-                this.CarCell.Height = this.Model.UserCars.Count < 3 ? this.Model.UserCars.Count * 150 : 300;
+				if (this.Model.UserCars.Count == 1) {
+					this.Model.TotalCar = 1;
+				} else if (this.Model.UserCars.Count == 2) {
+					this.Model.TotalCar = 2;
+				} else {
+					this.Model.TotalCar = this.Model.UserCars.Count();
+				}
             }
+
+			if (this.Model.TotalCar == 1) {
+				TableView.Remove(TwoCars);
+			} else if (this.Model.TotalCar >= 2) {
+				TableView.Remove(OneCar);
+			}
 
             var userCards = await ServiceUtility.GetUserCards();
 
             if (userCards != null && userCards.Any()) {
                 this.Model.UserCards = new ObservableCollection<UserCardModel>(userCards);
+				if (this.Model.UserCards.Count == 1) {
+					this.Model.TotalCard = 1;
+				} else if (this.Model.UserCards.Count == 2) {
+					this.Model.TotalCard = 2;
+				} else {
+					this.Model.TotalCard = this.Model.UserCards.Count();
+				}
             }
+
+			if (this.Model.TotalCard == 1) {
+				TableView.Remove(TwoCards);
+			} else if (this.Model.TotalCard >= 2) {
+				TableView.Remove(OneCard);
+			}
         }
 
         private async void ApplyCodeButton_Clicked(object sender, EventArgs e) {

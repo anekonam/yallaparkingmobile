@@ -154,7 +154,6 @@
                                     Height="Auto" />
                             </Grid.RowDefinitions>
                             <StackLayout
-                                Grid.Row="1"
                                 Padding="10"
                                 Orientation="Horizontal">
                                 <Image
@@ -169,6 +168,7 @@
                             </StackLayout>
                              <StackLayout
                                 Padding="10"
+                                Grid.Row="1"
                                 Orientation="Horizontal">
                                 <Image
                                     Source="Clock-Time.png"
@@ -244,6 +244,7 @@
                                     VerticalOptions="Center"
                                     Text="CCTV Cameras" />
                             </StackLayout>
+
                             <StackLayout
                                 Padding="10"
                                 Grid.Row="1"
@@ -272,6 +273,35 @@
                                     Margin="10,0,0,0"
                                     VerticalOptions="Center"
                                     Text="Near metro" />
+                            </StackLayout>
+                            <StackLayout
+                                Grid.Row="2"
+                                Padding="10"
+                                Orientation="Horizontal">
+                                <Image
+                                    Source="uncovered.png"
+                                    Aspect="AspectFit"
+                                    HeightRequest="30"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    Margin="10,0,0,0"
+                                    VerticalOptions="Center"
+                                    Text="Uncovered" />
+                            </StackLayout>
+                            <StackLayout
+                                Padding="10"
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                Orientation="Horizontal">
+                                <Image
+                                    Source="security.png"
+                                    Aspect="AspectFit"
+                                    HeightRequest="30"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    Margin="10,0,0,0"
+                                    VerticalOptions="Center"
+                                    Text="Security" />
                             </StackLayout>
                         </Grid>
                     </ViewCell>
