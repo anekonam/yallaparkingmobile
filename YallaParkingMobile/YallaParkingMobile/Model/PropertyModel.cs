@@ -39,6 +39,8 @@ namespace YallaParkingMobile.Model {
 
         public string PropertyFeatures { get; set; }
 
+        public int? ShortTermParkingEntryBufferMinutes { get; set; }
+
         public bool IsUncovered {
             get {
                 return !string.IsNullOrEmpty(this.PropertyFeatures) && this.PropertyFeatures.Contains("Uncovered");

@@ -29,7 +29,7 @@ namespace YallaParkingMobile {
             if (entryMinutes > 0) {
                 this.Instruction.Text = string.Format("No need to rush, you can arrive {0} minutes before your bookings starts for free!", entryMinutes);
             } else{
-                this.Instruction.Text = string.Format("Your parking space location is on the mezzanine floor");
+                this.Instruction.Text = string.Format("{0}", this.Model.AccessInfo);
             }
 		}
 

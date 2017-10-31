@@ -172,7 +172,7 @@ namespace YallaParkingMobile {
                 if (!booking) {
                     await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
                 } else {
-                    var bookingConfirmation = new BookingConfirmation(15);
+                    var bookingConfirmation = new BookingConfirmation(this.Model.BufferMinutes);
                     bookingConfirmation.BindingContext = Model.BookingNumber;
                     await Navigation.PushAsync(bookingConfirmation);
                 }
