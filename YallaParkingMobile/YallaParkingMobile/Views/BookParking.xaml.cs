@@ -65,7 +65,10 @@ namespace YallaParkingMobile {
 				TableView.Remove(TwoCars);
 			} else if (this.Model.TotalCar >= 2) {
 				TableView.Remove(OneCar);
-			}
+            } else if(this.Model.TotalCar < 1){
+                TableView.Remove(OneCar);
+                TableView.Remove(TwoCars);
+            }
 
             var userCards = await ServiceUtility.GetUserCards();
 
@@ -84,7 +87,10 @@ namespace YallaParkingMobile {
 				TableView.Remove(TwoCards);
 			} else if (this.Model.TotalCard >= 2) {
 				TableView.Remove(OneCard);
-			}
+            } else if(this.Model.TotalCard < 1){
+                TableView.Remove(OneCard);
+                TableView.Remove(TwoCards);
+            }
         }
 
         private async void ApplyCodeButton_Clicked(object sender, EventArgs e) {
@@ -146,7 +152,7 @@ namespace YallaParkingMobile {
                                     if (entry) {
                                         await DisplayAlert("Valid Scan", "Your scan has been validated for entry to your parking space", "Ok");
 
-										var bookingConfirmation = new BookingConfirmation(0);
+										var bookingConfirmation = new BookingConfirmation(this.Model);
 										bookingConfirmation.BindingContext = Model.BookingNumber;
 										await Navigation.PushAsync(bookingConfirmation);
                                     } else {
@@ -172,7 +178,7 @@ namespace YallaParkingMobile {
                 if (!booking) {
                     await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
                 } else {
-                    var bookingConfirmation = new BookingConfirmation(this.Model.BufferMinutes);
+                    var bookingConfirmation = new BookingConfirmation(this.Model);
                     bookingConfirmation.BindingContext = Model.BookingNumber;
                     await Navigation.PushAsync(bookingConfirmation);
                 }

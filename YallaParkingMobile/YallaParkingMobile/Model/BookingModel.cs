@@ -437,5 +437,7 @@ namespace YallaParkingMobile.Model {
                 }
             }
         }
+
+        public DateTime Created { get; set; }
     }
 }

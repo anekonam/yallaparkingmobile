@@ -17,29 +17,27 @@ using ZXing.Net.Mobile.Forms;
 using YallaParkingMobile.Model;
 
 namespace YallaParkingMobile {
-    public partial class BookingConfirmation : ContentPage {        
-        public BookingConfirmation() {
-            InitializeComponent();        
-        }
+    public partial class BookingConfirmation : ContentPage {
 
-		public BookingConfirmation(int entryMinutes) {
+		public BookingConfirmation(BookParkingModel model) {
 			InitializeComponent();
 			Analytics.TrackEvent("Viewing Booking Confirmation");
 
-            if (entryMinutes > 0) {
-                this.Instruction.Text = string.Format("No need to rush, you can arrive {0} minutes before your bookings starts for free!", entryMinutes);
+            if (model.BufferMinutes > 0) {
+                this.Instruction.Text = string.Format("No need to rush, you can arrive {0} minutes before your bookings starts for free!", model.BufferMinutes);
             } else{
-                this.Instruction.Text = string.Format("{0}", this.Model.AccessInfo);
+                this.Instruction.Text = string.Format("{0}", model.AccessInfo);
             }
 		}
 
-        public BookingModel Model{
-            get{
-                return (BookingModel)this.BindingContext;
-            } set{
-                this.BindingContext = value;
-            }
-        }
+		public BookParkingModel Model {
+			get {
+				return (BookParkingModel)this.BindingContext;
+			}
+			set {
+				this.BindingContext = value;
+			}
+		}
 
 		private async void DoneButton_Clicked(object sender, EventArgs e) {
 			var model = new HomeModel();

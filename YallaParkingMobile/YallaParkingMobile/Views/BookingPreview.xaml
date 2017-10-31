@@ -202,7 +202,8 @@
                     Title="Features">
                     <ViewCell
                         StyleId="none">
-                        <Grid>
+                        <Grid
+                            x:Name="featureGrid">
                             <Grid.RowDefinitions>
                                 <RowDefinition
                                     Height="Auto" />

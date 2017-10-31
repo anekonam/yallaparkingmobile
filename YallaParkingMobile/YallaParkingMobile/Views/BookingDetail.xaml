@@ -185,6 +185,7 @@
             Orientation="Horizontal">
             <Button 
                 x:Name="Sumbit"
+                 Margin="0,-25,0,0"
                 Text="Extend Parking"
                  TextColor="#ff8e30"
                 Clicked="Submit_Clicked"
