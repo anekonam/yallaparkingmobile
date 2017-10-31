@@ -81,6 +81,8 @@ namespace YallaParkingMobile.Model {
 			}
 		}
 
+        public string PropertyFeatures { get; set; }
+
 		public string EntranceMethod {
 			get {
                 if (!string.IsNullOrWhiteSpace(this.Property.ShortTermParkingEntranceMethod)){
@@ -123,6 +125,12 @@ namespace YallaParkingMobile.Model {
 				return this.Property.Hours.ToString();
 			}
 		}
+
+        public int BufferMinutes{
+            get{
+                return this.Property.ShortTermParkingEntryTimeBufferMinutes.HasValue ? this.Property.ShortTermParkingEntryTimeBufferMinutes.Value : 0;
+            }
+        }
 
         public bool AllDay{
             get{

@@ -39,7 +39,7 @@ namespace YallaParkingMobile.Model {
 
         public string PropertyFeatures { get; set; }
 
-        public int? ShortTermParkingEntryBufferMinutes { get; set; }
+        public int? ShortTermParkingEntryTimeBufferMinutes { get; set; }
 
         public bool IsUncovered {
             get {
