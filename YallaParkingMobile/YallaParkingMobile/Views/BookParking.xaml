@@ -200,20 +200,6 @@
                             </ListView>
                         </StackLayout>
                     </ViewCell>
-
-                </TableSection>
-                <TableSection>
-                    <ViewCell
-                        StyleId="none">
-                        <Button
-                            x:Name="AddNewCarButton"
-                            Style="{StaticResource GreyTextButton}"
-                            Text="Add New Vehicle"
-                            FontSize="12"
-                            Clicked="AddNewCarButton_Clicked"
-                            HorizontalOptions="FillAndExpand"
-                            VerticalOptions="Center" />
-                    </ViewCell>
                 </TableSection>
                 <TableSection
                     x:Name="OneCar"
@@ -274,6 +260,19 @@
                                 </ListView.ItemTemplate>
                             </ListView>
                         </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection>
+                    <ViewCell
+                        StyleId="none">
+                        <Button
+                            x:Name="AddNewCarButton"
+                            Style="{StaticResource GreyTextButton}"
+                            Text="Add New Vehicle"
+                            FontSize="12"
+                            Clicked="AddNewCarButton_Clicked"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Center" />
                     </ViewCell>
                 </TableSection>
                 <TableSection
