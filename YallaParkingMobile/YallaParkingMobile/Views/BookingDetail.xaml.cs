@@ -20,7 +20,6 @@ using System.Diagnostics;
 namespace YallaParkingMobile {
     public partial class BookingDetail : ContentPage {
         private IGeolocator locator = null;
-        private bool extending = false;
 
         public BookingDetail() {
             InitializeComponent();             
@@ -55,39 +54,6 @@ namespace YallaParkingMobile {
 			if (!this.Model.Completed) {
 				TableView.Remove(ParkingDetails);
 			}
-                       
-            //HoursSlider.Value = this.Model.Hours.HasValue ? this.Model.Hours.Value : 0;
-            //HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
-
-            //if (Model.Hours >= 8) {
-                //HoursSlider.IsEnabled = false;
-            //}
-
-			//Hours.PropertyChanged += async (sender, e) => {
-               // if (e.PropertyName == Label.TextProperty.PropertyName) {
-
-                    //if ((int)HoursSlider.Value != Model.Hours && !extending) {                       
-                           // extending = true;
-
-                            //bool confirm = await DisplayAlert("Extend Parking", "Are you sure you wish to extend your parking to " + (int)HoursSlider.Value + " hours?", "Yes", "No");
-
-                            //if (confirm) {
-                                //var extensionHours = (int)HoursSlider.Value - this.Model.Hours;
-                                //this.Model.Hours = (int)HoursSlider.Value;
-                                //this.Model.End = this.Model.End.AddHours(extensionHours.Value);
-
-                               // var result = await ServiceUtility.Update(this.Model);
-
-                                //if (result) {
-                                    //var extension = string.Format("{0} {1} from {2:h:mm tt} to {3:h:mm tt}", extensionHours, extensionHours == 1 ? "hour" : "hours", this.Model.StartLocal, this.Model.EndLocal);
-                                    //await Navigation.PushAsync(new ExtendConfirmation(extension));
-                                //}
-                            //} 
-
-                            //extending = false;
-                    //}
-				//}
-			//};
 		}
              
 
@@ -157,12 +123,8 @@ namespace YallaParkingMobile {
         }
 
 		async void Handle_Appearing(object sender, System.EventArgs e) {
-            extending = false;
 
             await this.RefreshBooking();
-
-			//HoursSlider.Value = this.Model.Hours.HasValue ? this.Model.Hours.Value : 0;
-			//HoursSlider.Effects.Add(Effect.Resolve(("Effects.SliderEffect")));
 
 			if (Model.Hours >= 8) {
 				Minus.IsEnabled = false;
@@ -300,19 +262,6 @@ namespace YallaParkingMobile {
 			// Navigate to our scanner page
 			await Navigation.PushAsync(scanPage);
         }
-
-		//private void HoursSlider_ValueChanged(object sender, ValueChangedEventArgs e) {
-			//var hoursText = Hours.Text;
-
-			//var newStep = Math.Round(e.NewValue / 1.0);
-			//HoursSlider.Value = newStep * 1.0;
-
-			//if ((int)HoursSlider.Value >= 8) {
-			//	Hours.Text = "All Day";				
-			//} else {
-				//Hours.Text = string.Format("{0} hours", HoursSlider.Value);			
-			//}
-		//}
 
 		private async void Submit_Clicked(object sender, EventArgs e) {
 

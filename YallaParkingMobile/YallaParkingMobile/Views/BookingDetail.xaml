@@ -18,6 +18,8 @@
                 Height="Auto" />
             <RowDefinition
                 Height="Auto" />
+             <RowDefinition
+                Height="Auto" />
         </Grid.RowDefinitions>
         <Grid
             VerticalOptions="FillAndExpand"
