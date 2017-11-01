@@ -20,13 +20,16 @@ namespace YallaParkingMobile {
     public partial class BookingConfirmation : ContentPage {
 
 		public BookingConfirmation(BookParkingModel model) {
+            this.Model = model;
 			InitializeComponent();
 			Analytics.TrackEvent("Viewing Booking Confirmation");
 
             if (model.BufferMinutes > 0) {
                 this.Instruction.Text = string.Format("No need to rush, you can arrive {0} minutes before your bookings starts for free!", model.BufferMinutes);
+                this.BookingReference.Text = model.BookingNumber;
             } else{
                 this.Instruction.Text = string.Format("{0}", model.AccessInfo);
+                this.BookingReference.Text = model.BookingNumber;
             }
 		}
 

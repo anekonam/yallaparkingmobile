@@ -44,11 +44,11 @@
                     HorizontalTextAlignment="Center"
                     Text="Booking Reference" />
                 <Label
+                    x:Name ="BookingReference"
                     Margin="40,10,40,0"
                     HorizontalTextAlignment="Center"
                     FontSize="16"
-                    Style="{StaticResource Header}"
-                    Text="{Binding BookingNumber}" />
+                    Style="{StaticResource Header}"/>
             </StackLayout>
             <ContentView
                 Padding="40"
