@@ -58,7 +58,9 @@ namespace YallaParkingMobile.Model {
         public ObservableCollection<Grouping<string, BookingModel>> BookingsGrouped{
             get{
                 if(this.Bookings!=null){
-                    var bookingsGrouped = this.Bookings.GroupBy(b => b.Status)
+                    var bookingsGrouped = this.Bookings
+                                              .OrderByDescending(b => b.Start)
+                                              .GroupBy(b => b.Status)
                                               .OrderBy(b => b.Key)
                                               .Select(b => new Grouping<string, BookingModel>(b.Key.Split(',')[1], b));
                     

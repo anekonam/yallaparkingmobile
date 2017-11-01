@@ -83,6 +83,18 @@ namespace YallaParkingMobile.Model {
 
         public string PropertyFeatures { get; set; }
 
+        public List<PropertyFeature> PropertyFeatureList{
+            get{
+                if(this.PropertyFeatures!=null){
+                    return this.PropertyFeatures.Contains(",") ?
+                               this.PropertyFeatures.Split(',').Select(p => new PropertyFeature(p)).ToList() :
+                               new List<PropertyFeature> { new PropertyFeature(this.PropertyFeatures) };
+                }
+
+                return null;
+            }
+        }
+
 		public string EntranceMethod {
 			get {
                 if (!string.IsNullOrWhiteSpace(this.Property.ShortTermParkingEntranceMethod)){
@@ -283,5 +295,21 @@ namespace YallaParkingMobile.Model {
 				}
 			}
 		}
+    }
+
+    public class PropertyFeature{
+
+        public PropertyFeature(string name){
+            this.Name = name;
+        }
+
+        public string Name { get; set; }
+
+        public bool IsCovered{
+            get{
+                return this.Name == "Covered";
+            }
+        }
+
     }
 }
