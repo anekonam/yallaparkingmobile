@@ -145,8 +145,6 @@ namespace YallaParkingMobile {
 			if (userCar == null) {
 				await DisplayAlert("Car Save Error", "Unable to save your car details, please ensure your card details are valid", "Ok");
 			} else {
-				var bookParking = new BookParking(this.BookParking);
-				await Navigation.PushAsync(bookParking);
 				await this.Navigation.PopAsync();
 			}
         }

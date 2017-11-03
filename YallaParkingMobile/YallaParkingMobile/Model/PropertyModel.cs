@@ -55,13 +55,13 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-        public bool IsElectricChargingPoint {
+        public bool IsElectric {
             get {
                 return !string.IsNullOrEmpty(this.PropertyFeatures) && this.PropertyFeatures.Contains("Electricity");
             }
         }
 
-        public bool IsNearMetro {
+        public bool IsMetro {
             get {
                 return !string.IsNullOrEmpty(this.PropertyFeatures) && this.PropertyFeatures.Contains("Metro");
             }

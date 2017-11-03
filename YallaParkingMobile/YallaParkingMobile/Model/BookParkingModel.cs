@@ -23,11 +23,12 @@ namespace YallaParkingMobile.Model {
         public bool ParkNow { get; set; }
 
         private bool parkingNow = true;
-        public bool ParkingNow{
-            get{
+        public bool ParkingNow {
+            get {
                 return parkingNow;
-            } set{
-                if(parkingNow!=value){
+            }
+            set {
+                if (parkingNow != value) {
                     parkingNow = value;
 
                     if (PropertyChanged != null) {
@@ -39,28 +40,28 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-        public bool Booking{
-            get{
+        public bool Booking {
+            get {
                 return !this.ParkingNow;
             }
-        } 	
+        }
 
-        public string Description{
-            get{
+        public string Description {
+            get {
                 var description = "* This is an approximate order summary. The actual cost will";
                 return description;
             }
         }
 
-		public string Description1 {
-			get {
-				var description1 = "be calculated based on your scan in & out time *";
-				return description1;
-			}
-		}
+        public string Description1 {
+            get {
+                var description1 = "be calculated based on your scan in & out time *";
+                return description1;
+            }
+        }
 
-        public bool HasDiscount{
-            get{
+        public bool HasDiscount {
+            get {
                 return this.Property.Discount > 0;
             }
         }
@@ -68,46 +69,30 @@ namespace YallaParkingMobile.Model {
         public decimal Discount { get; set; }
 
         private PropertyModel property = new PropertyModel();
-		public PropertyModel Property {
-			get {
-				return property;
-			}
-			set {
-				if (property != value) {
-					property = value;
+        public PropertyModel Property {
+            get {
+                return property;
+            }
+            set {
+                if (property != value) {
+                    property = value;
 
-					if (PropertyChanged != null) {
-						PropertyChanged(this, new PropertyChangedEventArgs("Property"));
-					}
-				}
-			}
-		}
-
-       public string ShortTermPropertyImages { get; set; }
+                    if (PropertyChanged != null) {
+                        PropertyChanged(this, new PropertyChangedEventArgs("Property"));
+                    }
+                }
+            }
+        }
 
 		public List<ShortTermPropertyImage> ShortTermPropertyImageList {
 			get {
-				if (this.ShortTermPropertyImages != null) {
-					return new List<ShortTermPropertyImage> { new ShortTermPropertyImage(this.ShortTermPropertyImages) };
+				if (this.Property.ShortTermPropertyImages != null) {
+					return new List<ShortTermPropertyImage> { new ShortTermPropertyImage(this.Property.ShortTermPropertyImages) };
 				}
 
 				return null;
 			}
 		}
-
-        public string PropertyFeatures { get; set; }
-
-        public List<PropertyFeature> PropertyFeatureList{
-            get{
-                if(this.PropertyFeatures!=null){
-                    return this.PropertyFeatures.Contains(",") ?
-                               this.PropertyFeatures.Split(',').Select(p => new PropertyFeature(p)).ToList() :
-                               new List<PropertyFeature> { new PropertyFeature(this.PropertyFeatures) };
-                }
-
-                return null;
-            }
-        }
 
 		public string EntranceMethod {
 			get {
@@ -317,44 +302,5 @@ namespace YallaParkingMobile.Model {
         }
 
         public string Id { get; set; }
-    }
-
-    public class PropertyFeature{
-
-        public PropertyFeature(string name){
-            this.Name = name;
-        }
-
-        public string Name { get; set; }
-
-        public bool IsCovered{
-            get{
-                return this.Name.Contains("Covered");
-            }
-        }
-
-		public bool IsUncovered {
-			get {
-				return this.Name.Contains("Uncovered");
-			}
-		}
-
-		public bool IsSecurity {
-			get {
-				return this.Name.Contains("Secutiry");
-			}
-		}
-
-		public bool IsElectirc {
-			get {
-				return this.Name.Contains("Electricity");
-			}
-		}
-
-		public bool IsMetro {
-			get {
-				return this.Name.Contains("Metro");
-			}
-		}
     }
 }
