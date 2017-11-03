@@ -183,7 +183,7 @@
         <StackLayout
             Padding="8"
             Grid.Row="2"
-            IsVisible="{Binding Pending}"
+            IsVisible="{Binding ExtensionAvailable}"
             Orientation="Horizontal">
             <Button 
                 x:Name="Sumbit"
