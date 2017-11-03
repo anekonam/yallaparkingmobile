@@ -20,6 +20,8 @@
                 Height="Auto" />
              <RowDefinition
                 Height="Auto" />
+            <RowDefinition
+                Height="Auto" />
         </Grid.RowDefinitions>
         <Grid
             VerticalOptions="FillAndExpand"
@@ -154,7 +156,7 @@
         <StackLayout
             Padding="8"
             Grid.Row="1"
-            IsVisible="{Binding Pending}"
+            IsVisible="{Binding ExtensionAvailable}"
             Orientation="Horizontal">
             <Button
                 x:Name="Minus"
@@ -169,7 +171,7 @@
                 VerticalOptions="Start"
                 FontSize="16"
                 TextColor="#767684"
-                Text="{Binding Hours, StringFormat='{0} hours'}" />
+                Text="{Binding ExtensionHours, StringFormat='{0} hours'}" />
             <Button
                 x:Name="Plus"
                 Text="+"
@@ -187,8 +189,9 @@
                 x:Name="Sumbit"
                  Margin="0,-25,0,0"
                 Text="Extend Parking"
-                 TextColor="#ff8e30"
+                TextColor="#ff8e30"
                 Clicked="Submit_Clicked"
+                IsEnabled="{Binding CanExtend}"
                 HorizontalOptions="FillAndExpand">
             </Button>
         </StackLayout>
@@ -255,6 +258,7 @@
                         </Grid>
                     </ViewCell>
                 </TableSection>
+               
                 <TableSection
                     x:Name="Order"
                     Title="Order Summary">
@@ -437,16 +441,24 @@
                     <TextCell
                         Detail="{Binding CancellationPolicy}" />
                 </TableSection>
-                <TableSection
-                    x:Name="ParkingDetails"
-                    Title="Parking Details">
-                    <TextCell
-                        Detail="{Binding Details}" />
+                 <TableSection
+                    x:Name="OrderDescription"
+                    Title="Description">
+                    <ViewCell
+                        StyleId="none">
+                        <StackLayout
+                            Grid.Row="4">
+                        <Label
+                            Margin="10"
+                            HorizontalTextAlignment="Start"                           
+                            Text="{Binding Details}" />
+                            </StackLayout>
+                    </ViewCell>
                 </TableSection>
             </TableRoot>
         </control:MenuTableView>
         <StackLayout
-            Grid.Row="4"
+            Grid.Row="5"
             Margin="10">
             <Button
                 x:Name="EntryButton"

@@ -82,8 +82,6 @@ namespace YallaParkingMobile {
 			}
 		}
 
-
-
         async void UpdateButton_Clicked(object sender, EventArgs e) {
             if(string.IsNullOrWhiteSpace((this.Model.Name))){
                 await DisplayAlert("Name Required", "Please provide a Name", "Ok");

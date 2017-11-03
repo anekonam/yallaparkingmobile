@@ -4,6 +4,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:YallaParkingMobile"
     xmlns:control="clr-namespace:YallaParkingMobile.Control"
+    xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
+    xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
     x:Class="YallaParkingMobile.BookingPreview"
     Title="Details">
     <Grid
@@ -13,6 +15,8 @@
                 Height="150" />
             <RowDefinition
                 Height="*" />
+            <RowDefinition
+                Height="Auto" />
             <RowDefinition
                 Height="Auto" />
         </Grid.RowDefinitions>
@@ -53,7 +57,7 @@
                     HorizontalTextAlignment="Start"
                     FontSize="12"
                     Text="{Binding Property.City}" />
-                 <Label
+                <Label
                     FontSize="12"
                     HorizontalOptions="FillAndExpand"
                     IsVisible="{Binding HasDistance}"
@@ -98,7 +102,7 @@
                     FontSize="14" />
             </StackLayout>
         </Frame>
-         <Frame
+        <Frame
             Margin="0,-5,-10,0"
             HeightRequest="20"
             WidthRequest="150"
@@ -166,7 +170,7 @@
                                     VerticalOptions="Center"
                                     Text="{Binding EntranceMethod}" />
                             </StackLayout>
-                             <StackLayout
+                            <StackLayout
                                 Padding="10"
                                 Grid.Row="1"
                                 Orientation="Horizontal">
@@ -214,9 +218,7 @@
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition
-                                    Width="*" />
-                                <ColumnDefinition
-                                    Width="*" />
+                                    Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <StackLayout
                                 Padding="10"
@@ -245,7 +247,6 @@
                                     VerticalOptions="Center"
                                     Text="CCTV Cameras" />
                             </StackLayout>
-
                             <StackLayout
                                 Padding="10"
                                 Grid.Row="1"
@@ -295,7 +296,7 @@
                                 Grid.Column="1"
                                 Orientation="Horizontal">
                                 <Image
-                                    Source="security.png"
+                                    Source="security_guard.png"
                                     Aspect="AspectFit"
                                     HeightRequest="30"
                                     VerticalOptions="Center" />
@@ -312,10 +313,13 @@
                     Title="Description">
                     <ViewCell
                         StyleId="none">
-                        <Label
-                            Margin="10"
-                            HorizontalTextAlignment="Start"                           
-                            Text="{Binding Details}" />
+                        <StackLayout
+                            Grid.Row="3">
+                            <Label
+                                Margin="10"
+                                HorizontalTextAlignment="Start"
+                                Text="{Binding Details}" />
+                        </StackLayout>
                     </ViewCell>
                 </TableSection>
             </TableRoot>

@@ -200,6 +200,17 @@
                             </ListView>
                         </StackLayout>
                     </ViewCell>
+                    <ViewCell
+                        StyleId="none">
+                        <Button
+                            x:Name="AddNewCarButton"
+                            Style="{StaticResource GreyTextButton}"
+                            Text="Add New Vehicle"
+                            FontSize="12"
+                            Clicked="AddNewCarButton_Clicked"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Center" />
+                    </ViewCell>
                 </TableSection>
                 <TableSection
                     x:Name="OneCar"
@@ -261,12 +272,10 @@
                             </ListView>
                         </StackLayout>
                     </ViewCell>
-                </TableSection>
-                <TableSection>
                     <ViewCell
                         StyleId="none">
                         <Button
-                            x:Name="AddNewCarButton"
+                            x:Name="AddNewCarButton1"
                             Style="{StaticResource GreyTextButton}"
                             Text="Add New Vehicle"
                             FontSize="12"
@@ -342,6 +351,17 @@
                             </ListView.ItemTemplate>
                         </ListView>
                     </ViewCell>
+                      <ViewCell
+                        StyleId="none">
+                        <Button
+                            x:Name="AddNewCardButton"
+                            Style="{StaticResource GreyTextButton}"
+                            Text="Add New Card"
+                            FontSize="12"
+                            Clicked="AddNewCardButton_Clicked"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Center" />
+                    </ViewCell>
                 </TableSection>
                 <TableSection
                     x:Name="OneCard"
@@ -410,12 +430,10 @@
                             </ListView.ItemTemplate>
                         </ListView>
                     </ViewCell>
-                </TableSection>
-                <TableSection>
-                    <ViewCell
+                      <ViewCell
                         StyleId="none">
                         <Button
-                            x:Name="AddNewCardButton"
+                            x:Name="AddNewCardButton1"
                             Style="{StaticResource GreyTextButton}"
                             Text="Add New Card"
                             FontSize="12"
@@ -423,7 +441,7 @@
                             HorizontalOptions="FillAndExpand"
                             VerticalOptions="Center" />
                     </ViewCell>
-                    </TableSection>
+                </TableSection>
             </TableRoot>
         </control:MenuTableView>
         <Button

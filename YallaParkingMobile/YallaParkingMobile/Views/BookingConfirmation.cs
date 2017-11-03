@@ -24,7 +24,7 @@ namespace YallaParkingMobile {
 			InitializeComponent();
 			Analytics.TrackEvent("Viewing Booking Confirmation");
 
-            if (model.BufferMinutes > 0) {
+            if (model.BufferMinutes > 0 && model.ParkNow) {
                 this.Instruction.Text = string.Format("No need to rush, you can arrive {0} minutes before your bookings starts for free!", model.BufferMinutes);
                 this.BookingReference.Text = model.BookingNumber;
             } else{

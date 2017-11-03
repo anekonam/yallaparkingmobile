@@ -117,7 +117,7 @@ namespace YallaParkingMobile {
             PlaceFrame.IsVisible = false;
 
             var place = await Places.GetPlace(prediction.Place_ID, GooglePlacesApiKey);
-			var pins = this.Map.CustomPins.ToList();
+            var pins = this.Map.CustomPins !=null && this.Map.CustomPins.Any() ? this.Map.CustomPins.ToList() : new List<TKCustomMapPin>();
 			var placePin = pins.FirstOrDefault(p => p.BindingContext.GetType() == typeof(Place));                      
 
             if (place != null) {
@@ -125,7 +125,7 @@ namespace YallaParkingMobile {
                 var position = new Xamarin.Forms.Maps.Position(place.Latitude, place.Longitude);
                 Map.MoveToRegion(MapSpan.FromCenterAndRadius(position, Distance.FromMeters(800)));
 
-                if (!this.Map.CustomPins.Any(p => p.Position.Latitude == place.Latitude && p.Position.Longitude == place.Longitude)) {
+                if (this.Map.CustomPins !=null && !this.Map.CustomPins.Any(p => p.Position.Latitude == place.Latitude && p.Position.Longitude == place.Longitude)) {
                     if (placePin != null && placePin.BindingContext.GetType() == typeof(Place)) {
                         placePin.BindingContext = place;
                         placePin.Title = place.Name;
@@ -430,6 +430,7 @@ namespace YallaParkingMobile {
 
         private async void Next_Clicked(object sender, System.EventArgs e) {
             var property = this.Model.SelectedProperty;
+            var parkNow = this.Model.ParkNow;
 
             if (Model.ParkNow) {
                 property.StartDate = DateTime.Now;
@@ -439,7 +440,7 @@ namespace YallaParkingMobile {
 
             property.Hours = (int)this.HoursSlider.Value;
 
-            var bookParking = new BookingPreview(new BookParkingModel(property, !SearchDateTime.IsVisible));
+            var bookParking = new BookingPreview(new BookParkingModel(property, parkNow, !SearchDateTime.IsVisible));
             await Navigation.PushAsync(bookParking);
         }
 

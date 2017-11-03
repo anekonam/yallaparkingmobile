@@ -117,6 +117,8 @@ namespace YallaParkingMobile {
             }                
         }   
 
+        public BookParkingModel BookParking { get; set; }
+
         async void UpdateButton_Clicked(object sender, EventArgs e) {
             if(string.IsNullOrWhiteSpace(this.Model.Make)){
                 await DisplayAlert("Make Required", "Please select a car Make", "Ok");
@@ -143,6 +145,8 @@ namespace YallaParkingMobile {
 			if (userCar == null) {
 				await DisplayAlert("Car Save Error", "Unable to save your car details, please ensure your card details are valid", "Ok");
 			} else {
+				var bookParking = new BookParking(this.BookParking);
+				await Navigation.PushAsync(bookParking);
 				await this.Navigation.PopAsync();
 			}
         }

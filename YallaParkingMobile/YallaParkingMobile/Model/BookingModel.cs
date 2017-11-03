@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Net.Http.Headers;
 
 namespace YallaParkingMobile.Model {
-    public class BookingModel:INotifyPropertyChanged {
+    public class BookingModel : INotifyPropertyChanged {
 
         public int PropertyParkingId { get; set; }
 
@@ -21,36 +21,36 @@ namespace YallaParkingMobile.Model {
 
         public string UserCardBrand { get; set; }
 
-		public ImageSource UserCardImage {
-			get {
-				if (!string.IsNullOrWhiteSpace(this.UserCardBrand)) {
-					return ImageSource.FromFile(string.Format("{0}-logo.png", this.UserCardBrand.Replace(" ", "-")));
-				}
+        public ImageSource UserCardImage {
+            get {
+                if (!string.IsNullOrWhiteSpace(this.UserCardBrand)) {
+                    return ImageSource.FromFile(string.Format("{0}-logo.png", this.UserCardBrand.Replace(" ", "-")));
+                }
 
-				return null;
-			}
-		}
+                return null;
+            }
+        }
 
-		public string UserCardName { get; set; }
+        public string UserCardName { get; set; }
 
-		public int UserCardExpireMonth { get; set; }
+        public int UserCardExpireMonth { get; set; }
 
-		public int UserCardExpireYear { get; set; }
+        public int UserCardExpireYear { get; set; }
 
-		public string UserCardExpireMonthYear {
-			get {
-				return string.Format("{0}/{1}", this.UserCardExpireMonth, this.UserCardExpireYear);
-			}
-		}
-        		
+        public string UserCardExpireMonthYear {
+            get {
+                return string.Format("{0}/{1}", this.UserCardExpireMonth, this.UserCardExpireYear);
+            }
+        }
 
-		public string UserCardLastFourDigits { get; set; }
 
-		public string UserCardEncodedCardNumber {
-			get {
-				return string.Format("**** **** **** {0}", this.UserCardLastFourDigits).Replace('*', '\u2022');
-			}
-		}
+        public string UserCardLastFourDigits { get; set; }
+
+        public string UserCardEncodedCardNumber {
+            get {
+                return string.Format("**** **** **** {0}", this.UserCardLastFourDigits).Replace('*', '\u2022');
+            }
+        }
 
         public ImageSource UserCarImage {
             get {
@@ -110,36 +110,36 @@ namespace YallaParkingMobile.Model {
 
         public int? PropertyShortTermParkingCancelMinutes { get; set; }
 
-        public string EntranceMethod{
-            get{
-                if(!string.IsNullOrWhiteSpace(this.PropertyShortTermParkingEntranceMethod)){
+        public string EntranceMethod {
+            get {
+                if (!string.IsNullOrWhiteSpace(this.PropertyShortTermParkingEntranceMethod)) {
                     return this.PropertyShortTermParkingEntranceMethod;
-                } else{
+                } else {
                     return "N/A";
                 }
             }
         }
 
         public string AccessInfo {
-			get {
-                if (!string.IsNullOrWhiteSpace(this.PropertyShortTermParkingAccessInfo)){
-					return this.PropertyShortTermParkingAccessInfo;
-				} else {
+            get {
+                if (!string.IsNullOrWhiteSpace(this.PropertyShortTermParkingAccessInfo)) {
+                    return this.PropertyShortTermParkingAccessInfo;
+                } else {
                     return "N/A";
 
-				}
-			}
-		}
+                }
+            }
+        }
 
-		public string Details {
-			get {
-                if (!string.IsNullOrWhiteSpace(this.PropertyShortTermParkingDetails)){
-					return this.PropertyShortTermParkingDetails;
-				} else {
+        public string Details {
+            get {
+                if (!string.IsNullOrWhiteSpace(this.PropertyShortTermParkingDetails)) {
+                    return this.PropertyShortTermParkingDetails;
+                } else {
                     return "N/A";
-				}
-			}
-		}
+                }
+            }
+        }
 
 
         private string number;
@@ -159,16 +159,16 @@ namespace YallaParkingMobile.Model {
 
         public DateTime Start { get; set; }
 
-        public DateTime StartLocal{
-            get{
+        public DateTime StartLocal {
+            get {
                 return this.Start.ToLocalTime();
             }
         }
 
         public DateTime End { get; set; }
 
-        public DateTime EndLocal{
-            get{
+        public DateTime EndLocal {
+            get {
                 return this.End.ToLocalTime();
             }
         }
@@ -187,16 +187,16 @@ namespace YallaParkingMobile.Model {
         }
 
 
-		public string BookingTime {
-			get {
-				if (this.Start.Date == DateTime.UtcNow.Date) {
-					return String.Join(" to ", String.Format("{0} {1: HH:mm}", "Today", this.StartLocal), String.Format("{0: HH:mm}", this.EndLocal));
-				} else {
-					return String.Join(" to ", String.Format("{0} {1} {2:MMM HH:mm}", this.StartLocal.ToString("ddd"), this.StartLocal.Day.Ordinalize(), this.StartLocal),
-									   String.Format("{0} {1:MMM HH:mm}", this.EndLocal.Day.Ordinalize(), this.EndLocal));
-				}
-			}
-		}
+        public string BookingTime {
+            get {
+                if (this.Start.Date == DateTime.UtcNow.Date) {
+                    return String.Join(" to ", String.Format("{0} {1: HH:mm}", "Today", this.StartLocal), String.Format("{0: HH:mm}", this.EndLocal));
+                } else {
+                    return String.Join(" to ", String.Format("{0} {1} {2:MMM HH:mm}", this.StartLocal.ToString("ddd"), this.StartLocal.Day.Ordinalize(), this.StartLocal),
+                                       String.Format("{0} {1:MMM HH:mm}", this.EndLocal.Day.Ordinalize(), this.EndLocal));
+                }
+            }
+        }
 
         public DateTime? EntryTime { get; set; }
 
@@ -208,7 +208,7 @@ namespace YallaParkingMobile.Model {
                     return "1,Active";
                 } else if (this.EntryTime.HasValue && this.ExitTime.HasValue) {
                     return "3,Completed";
-                } else if(this.Cancelled.HasValue){
+                } else if (this.Cancelled.HasValue) {
                     return "4, Cancelled";
                 }
 
@@ -216,9 +216,9 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-        public string ParkingTime{
-            get{
-                if(this.EntryTime.HasValue && this.ExitTime.HasValue){
+        public string ParkingTime {
+            get {
+                if (this.EntryTime.HasValue && this.ExitTime.HasValue) {
                     TimeSpan difference = this.ExitTime.Value - this.EntryTime.Value;
                     return string.Format("You parked for {0} hr {1} mins", difference.Hours, difference.Minutes);
                 }
@@ -227,8 +227,8 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-        public string ParkingCharge{
-            get{
+        public string ParkingCharge {
+            get {
                 if (this.TotalPrice.HasValue) {
                     var price = this.TotalPrice.Value.ToString("n2");
                     return string.Format("You will be charged AED {0}", price);
@@ -238,15 +238,15 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-        public string ParkingCompleteDetails{
-            get{
-                if(this.Completed && this.TotalPrice.HasValue && this.EntryTime.HasValue && this.ExitTime.HasValue){
+        public string ParkingCompleteDetails {
+            get {
+                if (this.Completed && this.TotalPrice.HasValue && this.EntryTime.HasValue && this.ExitTime.HasValue) {
                     var price = this.TotalPrice.Value.ToString("n2");
                     TimeSpan difference = this.ExitTime.Value - this.EntryTime.Value;
 
                     return string.Format("You parked for {0} hr {1} mins and you paid AED {2}", difference.Hours, difference.Minutes, price);
-				}
-				return null;
+                }
+                return null;
             }
         }
 
@@ -286,20 +286,26 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-		public bool IsCancelled {
-			get {
-				return this.Status.Contains("Cancelled");
-			}
-		}
-
-        public bool Pending {
+        public bool IsCancelled {
             get {
-                return this.Status.Contains("Upcoming") || this.Status.Contains("Active");
+                return this.Status.Contains("Cancelled");
             }
         }
 
-        public bool CancellationMessage{
-            get{
+        public bool Pending {
+            get {
+                return this.Status.Contains("Upcoming");
+            }
+        }
+
+		public bool ExtensionAvailable {
+			get {
+                return (this.Status.Contains("Upcoming") || this.Status.Contains("Active")) && this.Hours < 8;
+			}
+		}
+
+        public bool CancellationMessage {
+            get {
                 return this.Status.Contains("Upcoming");
             }
         }
@@ -332,27 +338,48 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-        public double? OriginalHours { get; set; }
-
         private double? hours;
         public double? Hours {
-            get{
+            get {
                 return hours;
-            } set{
-                if(hours!=value){
+            }
+            set {
+                if (hours != value) {
                     hours = value;
-					if (PropertyChanged != null) {
-						PropertyChanged(this, new PropertyChangedEventArgs("Hours"));
-					}
-				
+                    if (PropertyChanged != null) {
+                        PropertyChanged(this, new PropertyChangedEventArgs("Hours"));
+                    }
                 }
             }
         }
 
+        public bool CanExtend {
+            get{
+                return this.ExtensionHours > 0 ;
+            }
+        }
+
+		private int extensionHours;
+        public int ExtensionHours {
+			get {
+				return extensionHours;
+			}
+			set {
+				if (extensionHours != value) {
+					extensionHours = value;
+					if (PropertyChanged != null) {
+						PropertyChanged(this, new PropertyChangedEventArgs("ExtensionHours"));
+                        PropertyChanged(this, new PropertyChangedEventArgs("CanExtend"));
+					}
+				}
+			}
+		}
+
+
 		public string TotalHours { 
             get{
                 if(this.Hours.HasValue && this.Hours < 8){
-                    return this.Hours.ToString();
+                    return string.Format("{0} hours",this.Hours.ToString());
                 } else if (this.Hours.HasValue && this.Hours >= 8){
                     return "All Day";
                 }

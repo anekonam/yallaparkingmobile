@@ -256,6 +256,7 @@
     <BundleResource Include="Resources\extend.png" />
     <BundleResource Include="Resources\Clock-Time.png" />
     <BundleResource Include="Resources\place_holder.png" />
+    <BundleResource Include="Resources\security_guard.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -31,7 +31,7 @@
                     IsBusy="True">
                     <telerikPrimitives:RadBusyIndicator.BusyContent>
                         <Label
-                            Text="Loading garage..." />
+                            Text="Loading profile..." />
                     </telerikPrimitives:RadBusyIndicator.BusyContent>
                     <telerikPrimitives:RadBusyIndicator.Content>
                         <Grid>

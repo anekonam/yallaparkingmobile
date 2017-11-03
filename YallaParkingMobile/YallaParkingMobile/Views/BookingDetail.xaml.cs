@@ -50,13 +50,8 @@ namespace YallaParkingMobile {
             if(!this.Model.CancellationMessage){
                 TableView.Remove(CancellationPolicy);
             }
-
-			if (!this.Model.Completed) {
-				TableView.Remove(ParkingDetails);
-			}
 		}
              
-
 		private async Task<Plugin.Geolocator.Abstractions.Position> GetCurrentLocation() {
 			Plugin.Geolocator.Abstractions.Position position = null;
 
@@ -265,16 +260,15 @@ namespace YallaParkingMobile {
 
 		private async void Submit_Clicked(object sender, EventArgs e) {
 
-			bool confirm = await DisplayAlert("Extend Parking", "Are you sure you wish to extend your parking to " + this.Model.Hours.Value + " hours?", "Yes", "No");
+            bool confirm = await DisplayAlert("Extend Parking", "Are you sure you wish to extend your parking by " + this.Model.ExtensionHours + " " + (this.Model.ExtensionHours == 1 ? "hour" : "hours") +"?", "Yes", "No");
 
-			if (confirm) {
-                var extensionHours = this.Model.Hours - this.Model.OriginalHours;			    
-			    this.Model.End = this.Model.End.AddHours(extensionHours.Value);
-
+			if (confirm) {		    
+                this.Model.End = this.Model.End.AddHours(this.Model.ExtensionHours);
 			    var result = await ServiceUtility.Update(this.Model);
 
 			    if (result) {
-			        var extension = string.Format("{0} {1} from {2:h:mm tt} to {3:h:mm tt}", extensionHours, extensionHours == 1 ? "hour" : "hours", this.Model.StartLocal, this.Model.EndLocal);
+                    var extension = string.Format("{0} {1} from {2:h:mm tt} to {3:h:mm tt}", this.Model.ExtensionHours, this.Model.ExtensionHours == 1 ? "hour" : "hours", this.Model.StartLocal, this.Model.EndLocal);
+                   
 			        await Navigation.PushAsync(new ExtendConfirmation(extension));
 			    }
 			} 
@@ -282,14 +276,18 @@ namespace YallaParkingMobile {
 		}
 
         private void Plus_Clicked(object sender, EventArgs e){
-            if (this.Model.Hours < 7) {
-                this.Model.Hours++;
+            var extendedHours = this.Model.Hours + this.Model.ExtensionHours;
+            var maxHours = (int)Math.Round((DateTime.Now.AddDays(1).Date - this.Model.EndLocal).TotalHours, 0);
+            maxHours = maxHours <= 7 ? maxHours : 7;
+
+            if (extendedHours < maxHours) {
+                this.Model.ExtensionHours++;
             }
 	    }
 
 		private void Minus_Clicked(object sender, EventArgs e) {
-            if (this.Model.Hours > 1 && this.Model.Hours > this.Model.OriginalHours) {
-                this.Model.Hours--;
+            if (this.Model.ExtensionHours > 0) {
+                this.Model.ExtensionHours--;
             }
 		}
 

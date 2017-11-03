@@ -14,11 +14,13 @@ namespace YallaParkingMobile.Model {
 
     public class BookParkingModel : INotifyPropertyChanged {
 
-        public BookParkingModel(PropertyModel property, bool parkingNow = true) {
+        public BookParkingModel(PropertyModel property, bool parkNow, bool parkingNow = true) {
             this.Property = property;
             this.ParkingNow = parkingNow;
-
+            this.ParkNow = parkNow;
         }
+
+        public bool ParkNow { get; set; }
 
         private bool parkingNow = true;
         public bool ParkingNow{
@@ -78,6 +80,18 @@ namespace YallaParkingMobile.Model {
 						PropertyChanged(this, new PropertyChangedEventArgs("Property"));
 					}
 				}
+			}
+		}
+
+       public string ShortTermPropertyImages { get; set; }
+
+		public List<ShortTermPropertyImage> ShortTermPropertyImageList {
+			get {
+				if (this.ShortTermPropertyImages != null) {
+					return new List<ShortTermPropertyImage> { new ShortTermPropertyImage(this.ShortTermPropertyImages) };
+				}
+
+				return null;
 			}
 		}
 
@@ -297,6 +311,14 @@ namespace YallaParkingMobile.Model {
 		}
     }
 
+    public class ShortTermPropertyImage{
+        public ShortTermPropertyImage(string id){
+            this.Id = id;
+        }
+
+        public string Id { get; set; }
+    }
+
     public class PropertyFeature{
 
         public PropertyFeature(string name){
@@ -307,9 +329,32 @@ namespace YallaParkingMobile.Model {
 
         public bool IsCovered{
             get{
-                return this.Name == "Covered";
+                return this.Name.Contains("Covered");
             }
         }
 
+		public bool IsUncovered {
+			get {
+				return this.Name.Contains("Uncovered");
+			}
+		}
+
+		public bool IsSecurity {
+			get {
+				return this.Name.Contains("Secutiry");
+			}
+		}
+
+		public bool IsElectirc {
+			get {
+				return this.Name.Contains("Electricity");
+			}
+		}
+
+		public bool IsMetro {
+			get {
+				return this.Name.Contains("Metro");
+			}
+		}
     }
 }
