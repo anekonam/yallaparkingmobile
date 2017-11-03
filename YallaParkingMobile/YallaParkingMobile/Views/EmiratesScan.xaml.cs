@@ -62,8 +62,8 @@ namespace YallaParkingMobile {
 				if (this.Model != null) {
                     if (back) {
                         this.Model.EmiratesIdBack = Convert.ToBase64String(stream.ToArray());
-						await ServiceUtility.UpdateProfile(this.Model);
 						await Navigation.PushAsync(new ProfileVerify());
+                        await ServiceUtility.UpdateProfile(this.Model);
                     } else {
                         this.Model.EmiratesId = Convert.ToBase64String(stream.ToArray());
                         var emiratesScan = new EmiratesScan(true);

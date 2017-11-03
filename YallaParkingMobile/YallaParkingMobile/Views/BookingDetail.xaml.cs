@@ -21,6 +21,8 @@ namespace YallaParkingMobile {
     public partial class BookingDetail : ContentPage {
         private IGeolocator locator = null;
 
+        private EntryCell cancellationCharge;
+
         public BookingDetail() {
             InitializeComponent();             
         }
@@ -41,10 +43,10 @@ namespace YallaParkingMobile {
 				}
 			}
 
-            if(!this.Model.Cancelled.HasValue){
-				if (Order.Contains(CancellationCharge)) {
-					Order.Remove(CancellationCharge);
-				}
+            Order.Remove(CancellationCharge);
+
+            if(this.Model.Cancelled.HasValue){
+					Order.Add(cancellationCharge);
             }
 
             if(!this.Model.CancellationMessage){

@@ -13,18 +13,32 @@ using ZXing.Net.Mobile.Forms;
 
 namespace YallaParkingMobile {
 	public partial class BookParking : ContentPage {
+
+        private TableSection oneCar;
+        private TableSection twoCars;
+
+		private TableSection oneCard;
+		private TableSection twoCards;
+
         void Handle_Appearing(object sender, System.EventArgs e) {
             throw new NotImplementedException();
         }
 
         public BookParking() {
-			InitializeComponent();
+			InitializeComponent();           
 		}
 
 		public BookParking(BookParkingModel model) {
 			this.Model = model;
 
 			InitializeComponent();
+			
+            this.oneCar = OneCar;
+			this.twoCars = TwoCars;
+
+			this.oneCard = OneCard;
+			this.twoCards = TwoCards;
+
 			Analytics.TrackEvent("Viewing Booking Page");
 
 			Appearing += BookParking_Appearing;
@@ -65,14 +79,14 @@ namespace YallaParkingMobile {
 				}
 			}
 
+			TableView.Remove(TwoCars);
+			TableView.Remove(OneCar);
+
 			if (this.Model.TotalCar == 1) {
-				TableView.Remove(TwoCars);
+                TableView.Add(oneCar);
 			} else if (this.Model.TotalCar >= 2) {
-				TableView.Remove(OneCar);
-			} else if (this.Model.TotalCar < 1) {
-				TableView.Remove(OneCar);
-				TableView.Remove(TwoCars);
-			}
+                TableView.Add(twoCars);
+			} 
 
 			var userCards = await ServiceUtility.GetUserCards();
 
@@ -87,13 +101,13 @@ namespace YallaParkingMobile {
 				}
 			}
 
+			TableView.Remove(TwoCards);
+			TableView.Remove(OneCard);
+
 			if (this.Model.TotalCard == 1) {
-				TableView.Remove(TwoCards);
+				TableView.Add(oneCard);
 			} else if (this.Model.TotalCard >= 2) {
-				TableView.Remove(OneCard);
-			} else if (this.Model.TotalCard < 1) {
-				TableView.Remove(OneCard);
-				TableView.Remove(TwoCards);
+				TableView.Add(twoCards);
 			}
 		}
 
