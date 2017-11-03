@@ -73,6 +73,12 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+		public bool IsCctv {
+			get {
+				return !string.IsNullOrEmpty(this.PropertyFeatures) && this.PropertyFeatures.Contains("CCTV");
+			}
+		}
+
         private decimal discount;
         public decimal Discount {
             get {
