@@ -121,6 +121,16 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+		public string TotalTime {
+			get {
+				if (this.Hours >= 8) {
+					return "All Day";
+				} else {
+					return this.BookingTime;
+				}
+			}
+		}
+
         public ImageSource Image {
             get {
                 return ImageSource.FromUri(new Uri("http://yallaparking-new.insiso.co.uk/property/image/" + this.PropertyId));

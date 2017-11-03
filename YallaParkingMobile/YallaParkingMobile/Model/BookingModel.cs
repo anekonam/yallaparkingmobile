@@ -388,6 +388,16 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+        public string TotalTime{
+            get{
+				if (this.Hours.HasValue && this.Hours >= 8) {
+					return "All Day";
+                } else{
+                    return this.BookingTime;
+                }
+            }
+        }
+
         public decimal? EstimatedTotalPrice {
             get {
                 if(this.Hours.HasValue){

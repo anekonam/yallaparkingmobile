@@ -63,7 +63,7 @@
                         TextColor="White"
                         FontSize="12"
                         HorizontalTextAlignment="Start"
-                        Text="{Binding Property.BookingTime}" />
+                        Text="{Binding Property.TotalTime}" />
                 </Frame>
             </StackLayout>
         </Grid>

@@ -182,7 +182,7 @@
                                 <Label
                                     Margin="10,0,0,0"
                                     VerticalOptions="Center"
-                                    Text="{Binding Property.BookingTime}" />
+                                    Text="{Binding Property.TotalTime}" />
                             </StackLayout>
                             <StackLayout
                                 Grid.Row="2"
