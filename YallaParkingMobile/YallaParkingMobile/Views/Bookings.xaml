@@ -162,7 +162,7 @@
                                                         TextColor="White"
                                                         FontSize="12"
                                                         HorizontalTextAlignment="Start"
-                                                        Text="{Binding BookingTime}" />
+                                                        Text="{Binding TotalTime}" />
                                                 </Frame>
                                                 <Frame
                                                     Grid.Row="1"

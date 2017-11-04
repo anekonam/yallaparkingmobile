@@ -144,6 +144,7 @@
                     x:Name="TwoCars"
                     Title="Select Vehicle">
                     <ViewCell
+                        x:Name="CarTwo"
                         StyleId="none"
                         Height="150">
                         <StackLayout>
@@ -212,10 +213,12 @@
                             VerticalOptions="Center" />
                     </ViewCell>
                 </TableSection>
+
                 <TableSection
                     x:Name="OneCar"
                     Title="Select Vehicle">
                     <ViewCell
+                        x:Name="CarOne"
                         StyleId="none"
                         Height="75">
                         <StackLayout>
@@ -284,6 +287,20 @@
                             VerticalOptions="Center" />
                     </ViewCell>
                 </TableSection>
+                <TableSection
+                    x:Name="AddNewCar">
+                    <ViewCell
+                        StyleId="none">
+                        <Button
+                            x:Name="AddNewCarButton2"
+                            Style="{StaticResource GreyTextButton}"
+                            Text="Add New Vehicle"
+                            FontSize="12"
+                            Clicked="AddNewCarButton_Clicked"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Center" />
+                    </ViewCell>
+                    </TableSection>
                 <TableSection
                     x:Name="TwoCards"
                     Title="Select Card">
@@ -442,6 +459,20 @@
                             VerticalOptions="Center" />
                     </ViewCell>
                 </TableSection>
+                <TableSection
+                    x:Name="AddNewCard">
+                        <ViewCell
+                        StyleId="none">
+                        <Button
+                            x:Name="AddNewCardButton2"
+                            Style="{StaticResource GreyTextButton}"
+                            Text="Add New Card"
+                            FontSize="12"
+                            Clicked="AddNewCardButton_Clicked"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="Center" />
+                    </ViewCell>
+                 </TableSection>    
             </TableRoot>
         </control:MenuTableView>
         <Button

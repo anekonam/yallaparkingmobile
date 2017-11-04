@@ -14,30 +14,34 @@ using ZXing.Net.Mobile.Forms;
 namespace YallaParkingMobile {
 	public partial class BookParking : ContentPage {
 
-        private TableSection oneCar;
-        private TableSection twoCars;
+		private TableSection oneCar;
+		private TableSection twoCars;
+        private TableSection newCar;
 
 		private TableSection oneCard;
 		private TableSection twoCards;
+        private TableSection newCard;
 
-        void Handle_Appearing(object sender, System.EventArgs e) {
-            throw new NotImplementedException();
-        }
+		void Handle_Appearing(object sender, System.EventArgs e) {
+			throw new NotImplementedException();
+		}
 
-        public BookParking() {
-			InitializeComponent();           
+		public BookParking() {
+			InitializeComponent();
 		}
 
 		public BookParking(BookParkingModel model) {
 			this.Model = model;
 
 			InitializeComponent();
-			
-            this.oneCar = OneCar;
+
+			this.oneCar = OneCar;
 			this.twoCars = TwoCars;
+            this.newCar = AddNewCar;
 
 			this.oneCard = OneCard;
 			this.twoCards = TwoCards;
+            this.newCard = AddNewCard;
 
 			Analytics.TrackEvent("Viewing Booking Page");
 
@@ -61,7 +65,7 @@ namespace YallaParkingMobile {
 			set {
 				this.BindingContext = value;
 			}
-        }
+		}
 
 		async void BookParking_Appearing(object sender, EventArgs e) {
 			NavigationPage.SetBackButtonTitle(this, " ");
@@ -81,12 +85,15 @@ namespace YallaParkingMobile {
 
 			TableView.Remove(TwoCars);
 			TableView.Remove(OneCar);
+            TableView.Remove(AddNewCar);
 
-			if (this.Model.TotalCar == 1) {
-                TableView.Add(oneCar);
+            if (this.Model.TotalCar < 1) {
+                TableView.Add(AddNewCar);
+            } else if (this.Model.TotalCar == 1) {
+				TableView.Add(oneCar);
 			} else if (this.Model.TotalCar >= 2) {
-                TableView.Add(twoCars);
-			} 
+				TableView.Add(twoCars);
+			}
 
 			var userCards = await ServiceUtility.GetUserCards();
 
@@ -103,8 +110,11 @@ namespace YallaParkingMobile {
 
 			TableView.Remove(TwoCards);
 			TableView.Remove(OneCard);
+            TableView.Remove(AddNewCard);
 
-			if (this.Model.TotalCard == 1) {
+            if(this.Model.TotalCard < 1){
+                TableView.Add(newCard);
+            } else if (this.Model.TotalCard == 1) {
 				TableView.Add(oneCard);
 			} else if (this.Model.TotalCard >= 2) {
 				TableView.Add(twoCards);

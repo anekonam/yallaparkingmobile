@@ -43,11 +43,10 @@ namespace YallaParkingMobile {
 				}
 			}
 
+            this.cancellationCharge = CancellationCharge;
+
             Order.Remove(CancellationCharge);
 
-            if(this.Model.Cancelled.HasValue){
-					Order.Add(cancellationCharge);
-            }
 
             if(!this.Model.CancellationMessage){
                 TableView.Remove(CancellationPolicy);
@@ -145,6 +144,9 @@ namespace YallaParkingMobile {
                     this.TableView.Insert(1, this.ValidateParking);
 				}
             }
+			if (this.Model.Cancelled.HasValue) {
+				Order.Add(cancellationCharge);
+			}
         }
 
 		private async void ScanEntry_Clicked(object sender, EventArgs e) {
