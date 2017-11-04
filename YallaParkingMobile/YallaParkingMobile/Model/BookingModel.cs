@@ -198,6 +198,16 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+		public string TotalTime {
+			get {
+				if (this.Hours.HasValue && this.Hours >= 8) {
+                    return string.Format("{0} {1} All Day",this.StartLocal.ToString("ddd"), this.StartLocal.Day.Ordinalize());
+				} else {
+					return this.BookingTime;
+				}
+			}
+		}
+
         public DateTime? EntryTime { get; set; }
 
         public DateTime? ExitTime { get; set; }
@@ -388,15 +398,7 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-        public string TotalTime{
-            get{
-				if (this.Hours.HasValue && this.Hours >= 8) {
-					return "All Day";
-                } else{
-                    return this.BookingTime;
-                }
-            }
-        }
+       
 
         public decimal? EstimatedTotalPrice {
             get {

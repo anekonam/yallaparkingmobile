@@ -130,7 +130,7 @@ namespace YallaParkingMobile.Model {
 		public string TotalTime {
 			get {
 				if (this.Hours >= 8) {
-					return "All Day";
+					return string.Format("{0} {1} All Day", this.StartDate.ToString("ddd"), this.StartDate.Day.Ordinalize());
 				} else {
 					return this.BookingTime;
 				}
