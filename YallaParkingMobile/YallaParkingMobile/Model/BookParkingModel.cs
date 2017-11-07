@@ -84,15 +84,7 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-		public List<ShortTermPropertyImage> ShortTermPropertyImageList {
-			get {
-				if (this.Property.ShortTermPropertyImages != null) {
-					return new List<ShortTermPropertyImage> { new ShortTermPropertyImage(this.Property.ShortTermPropertyImages) };
-				}
-
-				return null;
-			}
-		}
+		
 
 		public string EntranceMethod {
 			get {
@@ -296,11 +288,5 @@ namespace YallaParkingMobile.Model {
 		}
     }
 
-    public class ShortTermPropertyImage{
-        public ShortTermPropertyImage(string id){
-            this.Id = id;
-        }
-
-        public string Id { get; set; }
-    }
+   
 }

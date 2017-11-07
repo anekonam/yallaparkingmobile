@@ -6,6 +6,7 @@
     xmlns:control="clr-namespace:YallaParkingMobile.Control"
     xmlns:telerikDataControls="clr-namespace:Telerik.XamarinForms.DataControls;assembly=Telerik.XamarinForms.DataControls"
     xmlns:telerikListView="clr-namespace:Telerik.XamarinForms.DataControls.ListView;assembly=Telerik.XamarinForms.DataControls"
+    xmlns:telerikPrimitives="clr-namespace:Telerik.XamarinForms.Primitives;assembly=Telerik.XamarinForms.Primitives"
     x:Class="YallaParkingMobile.BookingPreview"
     Title="Details">
     <Grid
@@ -15,8 +16,6 @@
                 Height="150" />
             <RowDefinition
                 Height="*" />
-            <RowDefinition
-                Height="Auto" />
             <RowDefinition
                 Height="Auto" />
         </Grid.RowDefinitions>
@@ -215,151 +214,152 @@
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition
                                     Width="Auto" />
-                                 <ColumnDefinition
+                                <ColumnDefinition
                                     Width="Auto" />
                             </Grid.ColumnDefinitions>
                             <StackLayout>
-                            <StackLayout
-                                HorizontalOptions="FillAndExpand"
-                                VerticalOptions="End"
-                                IsVisible ="{Binding Property.IsCovered}"
-                                Padding="10"
-                                Orientation="Vertical">
-                                <Image
-                                    Source="covered.png"
-                                    Aspect="AspectFit"
-                                    HeightRequest="30"
-                                    VerticalOptions="Center" />
-                            </StackLayout>
-                            <StackLayout
-                                 HorizontalOptions="FillAndExpand"
-                                VerticalOptions="End"
-                                IsVisible ="{Binding Property.IsCctv}"
-                                Padding="10"
-                                Orientation="Vertical">
-                                <Image
-                                    Source="cctv.png"
-                                    Aspect="AspectFit"
-                                    HeightRequest="30"
-                                    VerticalOptions="Center" />
-                            </StackLayout>
-                            <StackLayout
-                                 HorizontalOptions="FillAndExpand"
-                                VerticalOptions="End"
-                                IsVisible ="{Binding Property.IsElectric}"
-                                Padding="10"
-                                Orientation="Vertical">
-                                <Image
-                                    Source="electric.png"
-                                    Aspect="AspectFit"
-                                    HeightRequest="30"
-                                    VerticalOptions="Center" />
-                            </StackLayout>
-                            <StackLayout
-                                 HorizontalOptions="FillAndExpand"
-                                VerticalOptions="End"
-                                 IsVisible ="{Binding Property.IsMetro}"
-                                Padding="10"
-                                Orientation="Vertical">
-                                <Image
-                                    Source="metro.png"
-                                    Aspect="AspectFit"
-                                    HeightRequest="30"
-                                    VerticalOptions="Center" />
-                            </StackLayout>
-                            <StackLayout
-                                 HorizontalOptions="FillAndExpand"
-                                VerticalOptions="End"
-                                IsVisible ="{Binding Property.IsUncovered}"
-                                Padding="10"
-                                Orientation="Vertical">
-                                <Image
-                                    Source="uncovered.png"
-                                    Aspect="AspectFit"
-                                    HeightRequest="30"
-                                    VerticalOptions="Center" />
-                            </StackLayout>
-                            <StackLayout
-                                 HorizontalOptions="FillAndExpand"
-                                VerticalOptions="End"
-                                IsVisible ="{Binding IsSecurity}"
-                                Padding="10"
-                                Orientation="Vertical">
-                                <Image
-                                    Source="security_guard.png"
-                                    Aspect="AspectFit"
-                                    HeightRequest="30"
-                                    VerticalOptions="Center" />
-                            </StackLayout>
-                                   </StackLayout>
-                            <StackLayout Grid.Column="1">
                                 <StackLayout
-                                HorizontalOptions="FillAndExpand"
-                                VerticalOptions="End"
-                                IsVisible ="{Binding Property.IsCovered}"
-                                Padding="10"
-                                Orientation="Vertical">
-                                <Label
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="End"
+                                    IsVisible="{Binding Property.IsCovered}"
+                                    Padding="10"
+                                    Orientation="Vertical">
+                                    <Image
+                                        Source="covered.png"
+                                        Aspect="AspectFit"
                                         HeightRequest="30"
-                                    VerticalOptions="Center"
-                                    Text="Covered" />
-                            </StackLayout>
-                            <StackLayout
-                                 HorizontalOptions="FillAndExpand"
-                                VerticalOptions="End"
-                                IsVisible ="{Binding Property.IsCctv}"
-                                Padding="10"
-                                Orientation="Vertical">
-                                <Label
-                                    HeightRequest="30"
-                                    VerticalOptions="Center"
-                                    Text="CCTV Cameras" />
-                            </StackLayout>
-                            <StackLayout
-                                 HorizontalOptions="FillAndExpand"
-                                VerticalOptions="End"
-                                IsVisible ="{Binding Property.IsElectric}"
-                                Padding="10"
-                                Orientation="Vertical">
-                                <Label
-                                    HeightRequest="30"
-                                    VerticalOptions="Center"
-                                    Text="Electric charger" />
-                            </StackLayout>
-                            <StackLayout
-                                 HorizontalOptions="FillAndExpand"
-                                VerticalOptions="End"
-                                 IsVisible ="{Binding Property.IsMetro}"
-                                Padding="10"
-                                Orientation="Vertical">
-                                <Label
-                                    HeightRequest="30"
-                                    VerticalOptions="Center"
-                                    Text="Near metro" />
-                            </StackLayout>
-                            <StackLayout
-                                 HorizontalOptions="FillAndExpand"
-                                VerticalOptions="End"
-                                IsVisible ="{Binding Property.IsUncovered}"
-                                Padding="10"
-                                Orientation="Vertical">
-                                <Label
-                                   HeightRequest="30"
-                                    VerticalOptions="Center"
-                                    Text="Uncovered" />
-                            </StackLayout>
-                            <StackLayout
-                                 HorizontalOptions="FillAndExpand"
-                                VerticalOptions="End"
-                                IsVisible ="{Binding IsSecurity}"
-                                Padding="10"
-                                Orientation="Vertical">
-                                <Label
-                                    HeightRequest="30"
-                                    VerticalOptions="Center"
-                                    Text="Security" />
-                            </StackLayout>
+                                        VerticalOptions="Center" />
                                 </StackLayout>
+                                <StackLayout
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="End"
+                                    IsVisible="{Binding Property.IsCctv}"
+                                    Padding="10"
+                                    Orientation="Vertical">
+                                    <Image
+                                        Source="cctv.png"
+                                        Aspect="AspectFit"
+                                        HeightRequest="30"
+                                        VerticalOptions="Center" />
+                                </StackLayout>
+                                <StackLayout
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="End"
+                                    IsVisible="{Binding Property.IsElectric}"
+                                    Padding="10"
+                                    Orientation="Vertical">
+                                    <Image
+                                        Source="electric.png"
+                                        Aspect="AspectFit"
+                                        HeightRequest="30"
+                                        VerticalOptions="Center" />
+                                </StackLayout>
+                                <StackLayout
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="End"
+                                    IsVisible="{Binding Property.IsMetro}"
+                                    Padding="10"
+                                    Orientation="Vertical">
+                                    <Image
+                                        Source="metro.png"
+                                        Aspect="AspectFit"
+                                        HeightRequest="30"
+                                        VerticalOptions="Center" />
+                                </StackLayout>
+                                <StackLayout
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="End"
+                                    IsVisible="{Binding Property.IsUncovered}"
+                                    Padding="10"
+                                    Orientation="Vertical">
+                                    <Image
+                                        Source="uncovered.png"
+                                        Aspect="AspectFit"
+                                        HeightRequest="30"
+                                        VerticalOptions="Center" />
+                                </StackLayout>
+                                <StackLayout
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="End"
+                                    IsVisible="{Binding IsSecurity}"
+                                    Padding="10"
+                                    Orientation="Vertical">
+                                    <Image
+                                        Source="security_guard.png"
+                                        Aspect="AspectFit"
+                                        HeightRequest="30"
+                                        VerticalOptions="Center" />
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout
+                                Grid.Column="1">
+                                <StackLayout
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="End"
+                                    IsVisible="{Binding Property.IsCovered}"
+                                    Padding="10"
+                                    Orientation="Vertical">
+                                    <Label
+                                        HeightRequest="30"
+                                        VerticalOptions="Center"
+                                        Text="Covered" />
+                                </StackLayout>
+                                <StackLayout
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="End"
+                                    IsVisible="{Binding Property.IsCctv}"
+                                    Padding="10"
+                                    Orientation="Vertical">
+                                    <Label
+                                        HeightRequest="30"
+                                        VerticalOptions="Center"
+                                        Text="CCTV Cameras" />
+                                </StackLayout>
+                                <StackLayout
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="End"
+                                    IsVisible="{Binding Property.IsElectric}"
+                                    Padding="10"
+                                    Orientation="Vertical">
+                                    <Label
+                                        HeightRequest="30"
+                                        VerticalOptions="Center"
+                                        Text="Electric charger" />
+                                </StackLayout>
+                                <StackLayout
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="End"
+                                    IsVisible="{Binding Property.IsMetro}"
+                                    Padding="10"
+                                    Orientation="Vertical">
+                                    <Label
+                                        HeightRequest="30"
+                                        VerticalOptions="Center"
+                                        Text="Near metro" />
+                                </StackLayout>
+                                <StackLayout
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="End"
+                                    IsVisible="{Binding Property.IsUncovered}"
+                                    Padding="10"
+                                    Orientation="Vertical">
+                                    <Label
+                                        HeightRequest="30"
+                                        VerticalOptions="Center"
+                                        Text="Uncovered" />
+                                </StackLayout>
+                                <StackLayout
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="End"
+                                    IsVisible="{Binding IsSecurity}"
+                                    Padding="10"
+                                    Orientation="Vertical">
+                                    <Label
+                                        HeightRequest="30"
+                                        VerticalOptions="Center"
+                                        Text="Security" />
+                                </StackLayout>
+                            </StackLayout>
                         </Grid>
                     </ViewCell>
                 </TableSection>
@@ -368,13 +368,32 @@
                     Title="Description">
                     <ViewCell
                         StyleId="none">
-                        <StackLayout
-                            Grid.Row="3">
+                        <StackLayout>
                             <Label
                                 Margin="10"
                                 HorizontalTextAlignment="Start"
                                 Text="{Binding Details}" />
                         </StackLayout>
+                    </ViewCell>
+                </TableSection>
+                <TableSection>
+                    <ViewCell StyleId="none"
+                        Height="200">
+                        <telerikPrimitives:RadSlideView
+                            x:Name="ImageSlideView"
+                            Grid.Row="1"
+                            ShowButtons="false"
+                            ItemsSource="{Binding Property.Images}">
+                            <telerikPrimitives:RadSlideView.ItemTemplate>
+                                <DataTemplate>
+                                    <ContentView>
+                                        <Image
+                                            Source="{Binding Value}"
+                                            Aspect="AspectFit" />
+                                    </ContentView>
+                                </DataTemplate>
+                            </telerikPrimitives:RadSlideView.ItemTemplate>
+                        </telerikPrimitives:RadSlideView>
                     </ViewCell>
                 </TableSection>
             </TableRoot>

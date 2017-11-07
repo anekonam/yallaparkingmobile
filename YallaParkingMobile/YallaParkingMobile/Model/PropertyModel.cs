@@ -39,7 +39,7 @@ namespace YallaParkingMobile.Model {
 
         public string PropertyFeatures { get; set; }
 
-        public string ShortTermPropertyImages { get; set; }
+        public int[] ShortTermPropertyImages { get; set; }
 
         public int? ShortTermParkingEntryTimeBufferMinutes { get; set; }
 
@@ -143,6 +143,16 @@ namespace YallaParkingMobile.Model {
 
             }
         }
+
+		public List<KeyValuePair<int,ImageSource>> Images {
+			get {
+                return this.ShortTermPropertyImages!=null && this.ShortTermPropertyImages.Any() ? 
+                           this.ShortTermPropertyImages
+                           .Select(i => new KeyValuePair<int, ImageSource>(i, ImageSource.FromUri(new Uri("http://yallaparking-new.insiso.co.uk/property/getImage/" + i))))
+                           .ToList() : null;
+
+			}
+		}
 
         public int EntryBufferMinutes { get; set; }
 
