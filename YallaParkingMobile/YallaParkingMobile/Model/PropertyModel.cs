@@ -119,7 +119,7 @@ namespace YallaParkingMobile.Model {
         public string BookingTime {
             get {
                 if (this.StartDate.Date == DateTime.Now.Date) {
-                    return String.Join(" to ", String.Format("{0} {1: HH:mm}", "Today", this.StartDate), String.Format("{0: HH:mm}", this.EndDate));
+                    return String.Format("{0} {1}", "Today", "Hourly");
                 } else {
                     return String.Join(" to ", String.Format("{0} {1} {2:MMM HH:mm}", this.StartDate.ToString("ddd"), this.StartDate.Day.Ordinalize(), this.StartDate),
                                        String.Format("{0:HH:mm}", this.EndDate));
@@ -129,10 +129,31 @@ namespace YallaParkingMobile.Model {
 
 		public string TotalTime {
 			get {
-				if (this.Hours >= 8) {
-					return string.Format("{0} {1} All Day", this.StartDate.ToString("ddd"), this.StartDate.Day.Ordinalize());
+				if (this.Hours >= 1) {
+                    return String.Format("{0} {1} {2:MMM} All Day", this.StartDate.ToString("ddd"), this.StartDate.Day.Ordinalize(), this.StartDate);
 				} else {
 					return this.BookingTime;
+				}
+			}
+		}
+
+		public string ParkLaterBookingTime {
+			get {
+				if (this.StartDate.Date == DateTime.Now.Date) {
+					return String.Join(" to ", String.Format("{0} {1: HH:mm}", "Today", this.StartDate), String.Format("{0: HH:mm}", this.EndDate));
+				} else {
+					return String.Join(" to ", String.Format("{0} {1} {2:MMM HH:mm}", this.StartDate.ToString("ddd"), this.StartDate.Day.Ordinalize(), this.StartDate),
+									   String.Format("{0:HH:mm}", this.EndDate));
+				}
+			}
+		}
+
+		public string ParkLaterTotalTime {
+			get {
+				if (this.Hours >= 8) {
+					return String.Format("{0} {1} {2:MMM} All Day", this.StartDate.ToString("ddd"), this.StartDate.Day.Ordinalize(), this.StartDate);
+				} else {
+					return this.ParkLaterBookingTime;
 				}
 			}
 		}

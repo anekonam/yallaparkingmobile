@@ -91,7 +91,7 @@
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
                                         <ViewCell
-                                            Height="140">
+                                            Height="170">
                                             <Grid
                                                 VerticalOptions="FillAndExpand"
                                                 ColumnSpacing="10"
@@ -158,11 +158,21 @@
                                                     VerticalOptions="Start"
                                                     IsVisible="{Binding Pending}"
                                                     BackgroundColor="#ff8e30">
+                                                    <Grid
+                                                        RowSpacing="0">
                                                     <Label
+                                                        IsVisible="{Binding ParkNow}"
                                                         TextColor="White"
                                                         FontSize="12"
                                                         HorizontalTextAlignment="Start"
                                                         Text="{Binding TotalTime}" />
+                                                    <Label
+                                                        IsVisible="{Binding ParkLater}"
+                                                        TextColor="White"
+                                                        FontSize="12"
+                                                        HorizontalTextAlignment="Start"
+                                                        Text="{Binding ParkLaterTotalTime}" />
+                                                        </Grid>
                                                 </Frame>
                                                 <Frame
                                                     Grid.Row="1"
@@ -174,12 +184,22 @@
                                                     CornerRadius="5"
                                                     HasShadow="false"
                                                     IsVisible="{Binding Active}"
-                                                    BackgroundColor="#ff8e30">
+                                                    BackgroundColor="#ff8e30"> 
+                                                    <Grid
+                                                        RowSpacing="0">
                                                     <Label
+                                                        IsVisible="{Binding ParkNow}"
+                                                        TextColor="White"
+                                                        FontSize="13"
+                                                        HorizontalTextAlignment="Start"
+                                                        Text="{Binding ActiveTime}" />
+                                                     <Label
+                                                        IsVisible="{Binding ParkLater}"
                                                         TextColor="White"
                                                         FontSize="13"
                                                         HorizontalTextAlignment="Start"
                                                         Text="{Binding RemainingTime}" />
+                                                        </Grid>
                                                 </Frame>
                                                 <Frame
                                                     Grid.Row="1"

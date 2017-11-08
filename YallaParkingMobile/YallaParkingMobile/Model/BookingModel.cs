@@ -186,29 +186,65 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+		public string ActiveTime {
+			get {
+				if (this.EntryTime.HasValue) {
+					var timeSpan = DateTime.UtcNow - this.EntryTime.Value;
+					var totalHours = timeSpan.TotalHours >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", "")) : 0;
+					var minutes = timeSpan.TotalMinutes >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("mm")) : 0;
+					return string.Format("{0} {1} {2} {3} passed", totalHours, totalHours == 1 ? "hr" : "hrs", minutes, minutes == 1 ? "min" : "mins");
+				}
 
-        public string BookingTime {
-            get {
-                if (this.Start.Date == DateTime.UtcNow.Date) {
-                    return String.Join(" to ", String.Format("{0} {1: HH:mm}", "Today", this.StartLocal), String.Format("{0: HH:mm}", this.EndLocal));
-                } else {
-                    return String.Join(" to ", String.Format("{0} {1} {2:MMM HH:mm}", this.StartLocal.ToString("ddd"), this.StartLocal.Day.Ordinalize(), this.StartLocal),
-                                       String.Format("{0} {1:MMM HH:mm}", this.EndLocal.Day.Ordinalize(), this.EndLocal));
-                }
-            }
-        }
+                return string.Empty;
+			}
+		}
+
+
+
+		public string BookingTime {
+			get {
+				if (this.Start.Date == DateTime.Now.Date) {
+					return String.Format("{0} {1}", "Today", "Hourly");
+				} else {
+					return String.Join(" to ", String.Format("{0} {1} {2:MMM HH:mm}", this.StartLocal.ToString("ddd"), this.StartLocal.Date.Day.Ordinalize(), this.StartLocal),
+									   String.Format("{0:HH:mm}", this.EndLocal));
+				}
+			}
+		}
 
 		public string TotalTime {
 			get {
-				if (this.Hours.HasValue && this.Hours >= 8) {
-                    return string.Format("{0} {1} All Day",this.StartLocal.ToString("ddd"), this.StartLocal.Day.Ordinalize());
+				if (this.Hours >= 1) {
+					return String.Format("{0} {1} {2:MMM} Hourly", this.Start.Date.ToString("ddd"), this.Start.Day.Ordinalize(), this.Start.Date);
 				} else {
 					return this.BookingTime;
 				}
 			}
 		}
 
-        public DateTime? EntryTime { get; set; }
+		public string ParkLaterBookingTime {
+			get {
+				if (this.Start.Date.Date == DateTime.Now.Date) {
+					return String.Join(" to ", String.Format("{0} {1: HH:mm}", "Today", this.StartLocal), String.Format("{0: HH:mm}", this.EndLocal));
+				} else {
+					return String.Join(" to ", String.Format("{0} {1} {2:MMM HH:mm}", this.StartLocal.ToString("ddd"), this.StartLocal.Date.Day.Ordinalize(), this.StartLocal),
+									   String.Format("{0:HH:mm}", this.EndLocal));
+				}
+			}
+		}
+
+		public string ParkLaterTotalTime {
+			get {
+				if (this.Hours >= 8) {
+					return String.Format("{0} {1} {2:MMM} All Day", this.Start.Date.ToString("ddd"), this.Start.Date.Day.Ordinalize(), this.Start.Date);
+				} else {
+					return this.ParkLaterBookingTime;
+				}
+			}
+		}
+
+
+		public DateTime? EntryTime { get; set; }
 
         public DateTime? ExitTime { get; set; }
 
@@ -310,7 +346,7 @@ namespace YallaParkingMobile.Model {
 
 		public bool ExtensionAvailable {
 			get {
-                return (this.Status.Contains("Upcoming") || this.Status.Contains("Active")) && this.Hours < 8;
+                return this.Status.Contains("Active") && this.Hours < 8 && this.ParkLater;
 			}
 		}
 
@@ -388,13 +424,21 @@ namespace YallaParkingMobile.Model {
 
 		public string TotalHours { 
             get{
-                if(this.Hours.HasValue && this.Hours < 8){
-                    return string.Format("{0} hours",this.Hours.ToString());
-                } else if (this.Hours.HasValue && this.Hours >= 8){
-                    return "All Day";
+                if (this.ParkLater) {
+                    if (this.Hours.HasValue && this.Hours < 8) {
+                        return string.Format("{0} hours", this.Hours.ToString());
+                    } else if (this.Hours.HasValue && this.Hours >= 8) {
+                        return "All Day";
+                    }
+
+                    return this.Hours.ToString();
+                } else if(this.EntryTime.HasValue){
+                    var entryHours = (int)Math.Floor((DateTime.UtcNow - this.EntryTime.Value).TotalHours);
+                    entryHours = entryHours < 1 ? 1 : entryHours;
+                    return string.Format("{0} hours", entryHours);
                 }
 
-                return this.Hours.ToString();
+                return string.Empty;
             }
         }
 
@@ -402,13 +446,28 @@ namespace YallaParkingMobile.Model {
 
         public decimal? EstimatedTotalPrice {
             get {
-                if(this.Hours.HasValue){
-                    if(this.Hours.Value >= 8){
-                        return this.Price;
-                    } else{
-                        return this.Price * (decimal)this.Hours.Value;
+                if (this.ParkLater) {
+                    if (this.Hours.HasValue) {
+                        if (this.Hours.Value >= 8) {
+                            var total = this.Price - this.DiscountValue;
+							total = total < 0 ? 0 : total;
+							return total;
+                        } else {
+                            var total = (this.Price * (decimal)this.Hours.Value) - this.DiscountValue;
+                            total = total < 0 ? 0 : total;
+                            return total;
+                        }
                     }
-                }
+
+                    return (decimal?)null;
+				} else if (this.EntryTime.HasValue) {
+                    var entryHours = (int)Math.Ceiling((DateTime.UtcNow - this.EntryTime.Value).TotalHours);
+					entryHours = entryHours < 1 ? 1 : entryHours;
+                    var total = this.Price * entryHours;
+                    var discountValue = this.Discount.HasValue ? total * (this.Discount.Value / 100) : 0;
+                    total = total - discountValue;
+                    return total;
+				}
 
                 return (decimal?)null;
             }
@@ -476,6 +535,14 @@ namespace YallaParkingMobile.Model {
                 }
             }
         }
+
+        public bool ParkNow { get; set; }
+
+		public bool ParkLater {
+			get {
+                return !this.ParkNow;
+			}
+		}
 
         public DateTime Created { get; set; }
     }

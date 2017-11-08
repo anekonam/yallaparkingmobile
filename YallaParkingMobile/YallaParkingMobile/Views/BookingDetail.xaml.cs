@@ -122,11 +122,7 @@ namespace YallaParkingMobile {
 
             await this.RefreshBooking();
 
-			if (Model.Hours >= 8) {
-				Minus.IsEnabled = false;
-                Plus.IsEnabled = false;
-                Sumbit.IsEnabled = false;
-			}
+			
 
 			UpdateCurrentLocation();
 		}        	
@@ -281,7 +277,7 @@ namespace YallaParkingMobile {
 
         private void Plus_Clicked(object sender, EventArgs e){
             var extendedHours = this.Model.Hours + this.Model.ExtensionHours;
-            var maxHours = (int)Math.Round((DateTime.Now.AddDays(1).Date - this.Model.EndLocal).TotalHours, 0);
+            var maxHours = (int)Math.Round((DateTime.UtcNow.AddDays(1).Date - DateTime.UtcNow).TotalHours, 0);
             maxHours = maxHours <= 7 ? maxHours : 7;
 
             if (extendedHours < maxHours) {

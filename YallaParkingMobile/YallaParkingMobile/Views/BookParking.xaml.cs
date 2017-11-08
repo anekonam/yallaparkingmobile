@@ -22,6 +22,10 @@ namespace YallaParkingMobile {
 		private TableSection twoCards;
         private TableSection newCard;
 
+        private Frame parkNowTotalTime;
+
+        private Frame parkLaterTotalTime;
+
 		void Handle_Appearing(object sender, System.EventArgs e) {
 			throw new NotImplementedException();
 		}
@@ -34,6 +38,20 @@ namespace YallaParkingMobile {
 			this.Model = model;
 
 			InitializeComponent();
+
+            this.parkNowTotalTime = ParkNowTotalTime;
+            this.parkLaterTotalTime = ParkLaterTotalTime;
+
+
+            if(this.Model.IsParkNow){
+                Stack.Children.Remove(parkNowTotalTime);
+                Order.Remove(ParkNowDiscount);
+            } else{
+                Order.Remove(ParkLaterDiscount);
+                Order.Remove(ParkLaterTotal);
+                Order.Remove(ParkLaterHours);
+                Stack.Children.Remove((ParkLaterTotalTime));
+            }
 
 			this.oneCar = OneCar;
 			this.twoCars = TwoCars;

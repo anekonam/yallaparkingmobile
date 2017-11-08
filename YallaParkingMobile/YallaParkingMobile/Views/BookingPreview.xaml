@@ -172,6 +172,7 @@
                             <StackLayout
                                 Padding="10"
                                 Grid.Row="1"
+                                IsVisible = "{Binding IsParkNow}"
                                 Orientation="Horizontal">
                                 <Image
                                     Source="Clock-Time.png"
@@ -181,7 +182,7 @@
                                 <Label
                                     Margin="10,0,0,0"
                                     VerticalOptions="Center"
-                                    Text="{Binding Property.TotalTime}" />
+                                    Text="{Binding Property.ParkLaterTotalTime}" />
                             </StackLayout>
                             <StackLayout
                                 Grid.Row="2"
@@ -377,11 +378,15 @@
                     </ViewCell>
                 </TableSection>
                 <TableSection>
-                    <ViewCell StyleId="none"
+                    <ViewCell 
+                        StyleId="none"
                         Height="200">
                         <telerikPrimitives:RadSlideView
                             x:Name="ImageSlideView"
                             Grid.Row="1"
+                            Padding="0"
+                            Margin="0"
+                            VerticalOptions="FillAndExpand"
                             ShowButtons="false"
                             ItemsSource="{Binding Property.Images}">
                             <telerikPrimitives:RadSlideView.ItemTemplate>

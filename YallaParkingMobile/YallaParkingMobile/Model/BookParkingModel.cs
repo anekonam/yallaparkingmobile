@@ -66,7 +66,22 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-        public decimal Discount { get; set; }
+        private decimal discount;
+		public decimal Discount {
+            get {
+                return discount;
+            }
+            set {
+                if (discount != value) {
+                    discount = value;
+
+                    if (PropertyChanged != null) {
+                        PropertyChanged(this, new PropertyChangedEventArgs("Discount"));
+                    }
+                }
+            }
+        }
+
 
         private PropertyModel property = new PropertyModel();
         public PropertyModel Property {
@@ -116,8 +131,7 @@ namespace YallaParkingMobile.Model {
 				}
 			}
 		}
-
-		public string TotalHours {
+      public string TotalHours {
 			get {
 				if (this.Property.Hours < 8) {
 					return this.Property.Hours.ToString();
@@ -137,7 +151,7 @@ namespace YallaParkingMobile.Model {
 
         public bool AllDay{
             get{
-                return this.Property.Hours >= 8;
+                return this.ParkNow == true ? this.Property.Hours >= 1 : this.Property.Hours >= 8;
             }
         }
 
@@ -244,7 +258,8 @@ namespace YallaParkingMobile.Model {
                 End = this.Property.EndDate.ToUniversalTime(),
                 Price = this.Property.Hours >= 8 ? this.Property.ShortTermParkingFullDayPrice : this.Property.ShortTermParkingPrice,
                 Discount = this.Discount,
-                Hours = this.Property.Hours
+                Hours = this.Property.Hours,
+                ParkNow = this.ParkNow
             };
 
             this.BookingNumber = await ServiceUtility.Book(model);
@@ -268,6 +283,16 @@ namespace YallaParkingMobile.Model {
 				return this.Distance.HasValue;
 			}
 		}       
+
+        public bool IsParkNow {
+            get {
+                if (!this.ParkNow) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
 
 		private Position currentLocation;
 		public Position CurrentLocation {

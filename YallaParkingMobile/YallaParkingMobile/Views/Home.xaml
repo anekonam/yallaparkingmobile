@@ -134,7 +134,7 @@
                                         VerticalOptions="Center"
                                         DateSelected="DatePicker_DateSelected"
                                         HorizontalOptions="Start" />
-                                    <Label
+                                        <Label
                                         Text="at"
                                         FontSize="18"
                                         Margin="-15,0,5,2"
@@ -149,6 +149,8 @@
                                 </StackLayout>
                                 <StackLayout
                                     Padding="8"
+                                    x:Name="ParkNowSlider"
+                                    IsVisible = "true"
                                     Orientation="Horizontal">
                                     <Label
                                         x:Name="Hours"
@@ -156,14 +158,40 @@
                                         VerticalOptions="Start"
                                         FontSize="16"
                                         TextColor="#767684"
-                                        Text="1 hour" />
+                                        Text="Hourly" />
                                     <Slider
                                         x:Name="HoursSlider"
+                                        Value="0"
+                                        Scale="1"
+                                        ValueChanged="HoursSlider_ValueChanged"
+                                        HorizontalOptions="FillAndExpand" />
+                                    <Label
+                                        x:Name="AllDay"
+                                        Margin="0,5,10,0"
+                                        VerticalOptions="Start"
+                                        FontSize="16"
+                                        TextColor="#767684"
+                                        Text="All Day" />
+                                </StackLayout>
+                                <StackLayout
+                                    Padding="8"
+                                    x:Name="ParkLaterSlider"
+                                     IsVisible="false"
+                                    Orientation="Horizontal">
+                                    <Label
+                                        x:Name="ParkLaterHours"
+                                        Margin="0,5,10,0"
+                                        VerticalOptions="Start"
+                                        FontSize="16"
+                                        TextColor="#767684"
+                                        Text="1 hour" />
+                                    <Slider
+                                        x:Name="ParkLaterHoursSlider"
                                         Maximum="24"
                                         Minimum="1"
                                         Value="1"
                                         Scale="1"
-                                        ValueChanged="HoursSlider_ValueChanged"
+                                        ValueChanged="ParkLaterHoursSlider_ValueChanged"
                                         HorizontalOptions="FillAndExpand" />
                                 </StackLayout>
                             </StackLayout>

@@ -95,11 +95,21 @@
                 VerticalOptions="Start"
                 IsVisible="{Binding Pending}"
                 BackgroundColor="#ff8e30">
-                <Label
+                <Grid
+                    RowSpacing="0">
+                <Label                   
+                    IsVisible="{Binding ParkNow}"
                     TextColor="White"
                     FontSize="12"
                     HorizontalTextAlignment="Start"
                     Text="{Binding TotalTime}" />
+                <Label
+                    IsVisible ="{Binding ParkLater}"
+                    TextColor="White"
+                    FontSize="12"
+                    HorizontalTextAlignment="Start"
+                    Text="{Binding ParkLaterTotalTime}" />
+                    </Grid>
             </Frame>
             <Frame
                 Grid.Row="1"
@@ -111,12 +121,22 @@
                 CornerRadius="5"
                 HasShadow="false"
                 IsVisible="{Binding Active}"
-                BackgroundColor="#ff8e30">
+                BackgroundColor="#ff8e30">    
+                <Grid
+                    RowSpacing="0">
                 <Label
+                    IsVisible="{Binding ParkNow}"
+                    TextColor="White"
+                    FontSize="13"
+                    HorizontalTextAlignment="Start"
+                    Text="{Binding ActiveTime}" />
+                 <Label
+                    IsVisible="{Binding ParkLater}"
                     TextColor="White"
                     FontSize="13"
                     HorizontalTextAlignment="Start"
                     Text="{Binding RemainingTime}" />
+                    </Grid>
             </Frame>
             <Frame
                 Grid.Row="1"
@@ -227,9 +247,10 @@
                                     VerticalOptions="Center"
                                     Text="{Binding EntranceMethod}" />
                             </StackLayout>
-                             <StackLayout
+                            <StackLayout
                                 Grid.Row="1"
                                 Padding="10"
+                                IsVisible ="{Binding ParkLater}"
                                 Orientation="Horizontal">
                                 <Image
                                     Source="Clock-Time.png"
@@ -239,8 +260,8 @@
                                 <Label
                                     Margin="10,0,0,0"
                                     VerticalOptions="Center"
-                                    Text="{Binding TotalTime}" />
-                            </StackLayout>
+                                    Text="{Binding ParkLaterTotalTime}" />
+                                </StackLayout>
                             <StackLayout
                                 Grid.Row="2"
                                 Padding="10"
