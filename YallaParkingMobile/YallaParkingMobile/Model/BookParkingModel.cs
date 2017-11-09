@@ -82,7 +82,6 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-
         private PropertyModel property = new PropertyModel();
         public PropertyModel Property {
             get {
@@ -98,8 +97,6 @@ namespace YallaParkingMobile.Model {
                 }
             }
         }
-
-		
 
 		public string EntranceMethod {
 			get {

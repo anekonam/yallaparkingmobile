@@ -380,7 +380,7 @@
                 <TableSection>
                     <ViewCell 
                         StyleId="none"
-                        Height="200">
+                        Height="150">
                         <telerikPrimitives:RadSlideView
                             x:Name="ImageSlideView"
                             Grid.Row="1"
@@ -391,11 +391,17 @@
                             ItemsSource="{Binding Property.Images}">
                             <telerikPrimitives:RadSlideView.ItemTemplate>
                                 <DataTemplate>
+                                    <Grid>
+                                       <Grid.RowDefinitions>
+                                           <RowDefinition
+                                               Height="150" />
+                                       </Grid.RowDefinitions>
                                     <ContentView>
                                         <Image
                                             Source="{Binding Value}"
-                                            Aspect="AspectFit" />
+                                             Aspect="AspectFill" />
                                     </ContentView>
+                                         </Grid>
                                 </DataTemplate>
                             </telerikPrimitives:RadSlideView.ItemTemplate>
                         </telerikPrimitives:RadSlideView>

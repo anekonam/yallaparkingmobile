@@ -72,8 +72,6 @@ namespace YallaParkingMobile {
                     }
 				}
 			}
-
-			
 		}
     }
 }
