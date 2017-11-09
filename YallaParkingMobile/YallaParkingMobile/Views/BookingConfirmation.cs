@@ -30,6 +30,7 @@ namespace YallaParkingMobile {
             } else{
                 this.Instruction.Text = string.Format("{0}", model.AccessInfo);
                 this.BookingReference.Text = model.BookingNumber;
+
             }
 		}
 

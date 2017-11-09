@@ -5,6 +5,7 @@ using System.ComponentModel;
 using Plugin.Geolocator.Abstractions;
 using System.Collections.Generic;
 using System.Net.Http.Headers;
+using System.Linq;
 
 namespace YallaParkingMobile.Model {
     public class BookingModel : INotifyPropertyChanged {
