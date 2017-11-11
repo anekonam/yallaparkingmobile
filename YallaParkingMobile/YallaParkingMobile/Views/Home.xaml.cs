@@ -205,7 +205,6 @@ namespace YallaParkingMobile {
             }
         }
 
-
         public ProfileModel UserProfile { get; set; }
 
         async void Handle_Appearing(object sender, System.EventArgs e) {
