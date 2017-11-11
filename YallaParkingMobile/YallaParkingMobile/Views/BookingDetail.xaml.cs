@@ -43,6 +43,15 @@ namespace YallaParkingMobile {
 				}
 			}
 
+            if(this.Model.ParkLater){
+                Order.Remove(ParkNow);
+                Order.Remove(ParkNowDiscount);
+            } else{
+                Order.Remove(ParkLaterDiscount);
+                Order.Remove(ParkLater);
+                Order.Remove(ParkLaterTotal);
+            }
+
             this.cancellationCharge = CancellationCharge;
 
             Order.Remove(CancellationCharge);

@@ -284,11 +284,19 @@
                     x:Name="Order"
                     Title="Order Summary">
                     <EntryCell
+                        x:Name="ParkLater"
                         LabelColor="#a1a1b4"
                         Label="Number of hours"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
                         Text="{Binding TotalHours}" />
+                    <EntryCell
+                        x:Name="ParkNow"
+                        LabelColor="#a1a1b4"
+                        Label="Total time spent"
+                        HorizontalTextAlignment="End"
+                        IsEnabled="False"
+                        Text="{Binding ParkNowActiveTime}" />
                     <EntryCell
                         x:Name="PriceHour"
                         LabelColor="#a1a1b4"
@@ -304,11 +312,19 @@
                         IsEnabled="False"
                         Text="{Binding Price, StringFormat='AED {0:n2}'}" />
                     <EntryCell
+                        x:Name="ParkLaterDiscount"
                         Label="Discount"
                         LabelColor="#a1a1b4"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
                         Text="{Binding DiscountValue, StringFormat='-AED {0:n2}'}" />
+                      <EntryCell
+                        x:Name="ParkNowDiscount"
+                        Label="Discount"
+                        LabelColor="#a1a1b4"
+                        HorizontalTextAlignment="End"
+                        IsEnabled="False"
+                        Text="{Binding Discount, StringFormat='{0:n0} %'}" />
                     <EntryCell
                         x:Name="CancellationCharge"
                         Label="Cancellation Fee"
@@ -317,6 +333,7 @@
                         IsEnabled="False"
                         Text="{Binding CancellationCharge, StringFormat='AED {0:n2}'}" />
                     <EntryCell
+                        x:Name="ParkLaterTotal"
                         Label="Total"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"

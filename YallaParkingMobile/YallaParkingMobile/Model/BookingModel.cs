@@ -189,7 +189,7 @@ namespace YallaParkingMobile.Model {
 
 		public string ActiveTime {
 			get {
-				if (this.EntryTime.HasValue) {
+				if (this.EntryTime.HasValue && !this.ExitTime.HasValue) {
 					var timeSpan = DateTime.UtcNow - this.EntryTime.Value;
 					var totalHours = timeSpan.TotalHours >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", "")) : 0;
 					var minutes = timeSpan.TotalMinutes >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("mm")) : 0;
@@ -197,6 +197,19 @@ namespace YallaParkingMobile.Model {
 				}
 
                 return string.Empty;
+			}
+		}
+
+		public string ParkNowActiveTime {
+			get {
+				if (this.EntryTime.HasValue && !this.ExitTime.HasValue) {
+					var timeSpan = DateTime.UtcNow - this.EntryTime.Value;
+					var totalHours = timeSpan.TotalHours >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", "")) : 0;
+					var minutes = timeSpan.TotalMinutes >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("mm")) : 0;
+					return string.Format("{0} {1} {2} {3}", totalHours, totalHours == 1 ? "hr" : "hrs", minutes, minutes == 1 ? "min" : "mins");
+				}
+
+				return string.Empty;
 			}
 		}
 
@@ -427,7 +440,7 @@ namespace YallaParkingMobile.Model {
             get{
                 if (this.ParkLater) {
                     if (this.Hours.HasValue && this.Hours < 8) {
-                        return string.Format("{0} hours", this.Hours.ToString());
+                        return string.Format("{0} {1}", this.Hours.ToString(), this.Hours == 1 ? "hour" : "hours");
                     } else if (this.Hours.HasValue && this.Hours >= 8) {
                         return "All Day";
                     }
@@ -436,7 +449,7 @@ namespace YallaParkingMobile.Model {
                 } else if(this.EntryTime.HasValue){
                     var entryHours = (int)Math.Floor((DateTime.UtcNow - this.EntryTime.Value).TotalHours);
                     entryHours = entryHours < 1 ? 1 : entryHours;
-                    return string.Format("{0} hours", entryHours);
+                    return string.Format("{0} {1}", entryHours,entryHours == 1 ? "hour":"hours");
                 }
 
                 return string.Empty;

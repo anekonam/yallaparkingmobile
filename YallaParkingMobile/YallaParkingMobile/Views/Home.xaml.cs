@@ -213,15 +213,14 @@ namespace YallaParkingMobile {
 
 			if (lc.IsGeolocationEnabled == false) {
 				await DisplayAlert("Notification", "In order to use this application you must be able to share your location.", "Ok");
-			}
-            if (lc.IsGeolocationEnabled == true) {
+			} else {
                 try {
                     var position = await lc.GetPositionAsync(TimeSpan.FromMilliseconds(1000));
                     var latitude = position.Latitude;
                     var longitude = position.Longitude;
-                    await DisplayAlert("Notification ", "Latitude is " + latitude + " Longitude is " + longitude, "Ok");
+                    //await DisplayAlert("Current Location ", "Latitude is " + latitude + " Longitude is " + longitude, "Ok");
                 } catch (Exception ex) {
-                    await DisplayAlert("Notification", "In order to use this application you must be able to share your location.", "Ok");
+                    await DisplayAlert("Location Required", "In order to use this application you must be able to share your location.", "Ok");
                 }
             }
            
