@@ -208,9 +208,23 @@ namespace YallaParkingMobile {
         public ProfileModel UserProfile { get; set; }
 
         async void Handle_Appearing(object sender, System.EventArgs e) {
-			locator = CrossGeolocator.Current;
-			locator.PositionChanged += Current_PositionChanged;
-			await locator.StartListeningAsync(TimeSpan.FromSeconds(10), 50);
+			var lc = CrossGeolocator.Current;
+		     	lc.DesiredAccuracy = 100;
+
+			if (lc.IsGeolocationEnabled == false) {
+				await DisplayAlert("Notification", "In order to use this application you must be able to share your location.", "Ok");
+			}
+            if (lc.IsGeolocationEnabled == true) {
+                try {
+                    var position = await lc.GetPositionAsync(TimeSpan.FromMilliseconds(1000));
+                    var latitude = position.Latitude;
+                    var longitude = position.Longitude;
+                    await DisplayAlert("Notification ", "Latitude is " + latitude + " Longitude is " + longitude, "Ok");
+                } catch (Exception ex) {
+                    await DisplayAlert("Notification", "In order to use this application you must be able to share your location.", "Ok");
+                }
+            }
+           
 
             var query = PropertyUtility.GetValue("query");
             var hours = PropertyUtility.GetValue("hours");
@@ -547,6 +561,20 @@ namespace YallaParkingMobile {
 
         async void DatePicker_DateSelected(object sender, DateChangedEventArgs e) {
             await LoadData();
-        }       
+        }
+
+		public async void GetGPSLocation() {
+			try {
+				var lc = CrossGeolocator.Current;
+				lc.DesiredAccuracy = 100;
+
+                var position = await lc.GetPositionAsync(TimeSpan.FromMilliseconds(30));
+				var latitude = position.Latitude;
+				var longitude = position.Longitude;
+				await DisplayAlert("Notification ", "Latitude is " + latitude + " Longitude is " + longitude, "Ok");
+			} catch (Exception ex) {
+				await DisplayAlert("Notification", "In order to use this application you must be able to share your location.", "Ok");
+			}
+		}
     }
 }
