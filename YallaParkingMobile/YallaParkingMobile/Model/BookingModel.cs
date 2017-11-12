@@ -193,7 +193,7 @@ namespace YallaParkingMobile.Model {
 					var timeSpan = DateTime.UtcNow - this.EntryTime.Value;
 					var totalHours = timeSpan.TotalHours >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", "")) : 0;
 					var minutes = timeSpan.TotalMinutes >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("mm")) : 0;
-					return string.Format("{0} {1} {2} {3} passed", totalHours, totalHours == 1 ? "hr" : "hrs", minutes, minutes == 1 ? "min" : "mins");
+					return string.Format("{0} {1} {2} {3} Parked", totalHours, totalHours == 1 ? "hr" : "hrs", minutes, minutes == 1 ? "min" : "mins");
 				}
 
                 return string.Empty;
