@@ -8,7 +8,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition
-                Height="Auto" />
+                Height="*" />
             <RowDefinition
                 Height="Auto" />
             <RowDefinition
@@ -20,7 +20,6 @@
             Margin="40"
             Source="car.png"
             Grid.Row="0"
-            HeightRequest="140"
             VerticalOptions="Center"
             Aspect="AspectFit" />
         <ContentView
