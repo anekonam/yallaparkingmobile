@@ -104,7 +104,14 @@ namespace YallaParkingMobile {
 
         async void Book_Clicked(object sender, System.EventArgs e) {
             var bookParking = new BookParking(this.Model);
-            await Navigation.PushAsync(bookParking);
+            var emiratesScan = new EmiratesScan(false);
+            var profile = await ServiceUtility.Profile();
+            if (profile != null && (string.IsNullOrWhiteSpace(profile.EmiratesId) || string.IsNullOrWhiteSpace(profile.EmiratesId))) {
+				await DisplayAlert("Emirates ID", "We take the security of our community very seriously. Please upload pictures of your Emirates ID (front & back) in order to start parking.", "Ok");
+				await Navigation.PushAsync(emiratesScan);
+            } else {
+                await Navigation.PushAsync(bookParking);
+            }
         }
     }
 }

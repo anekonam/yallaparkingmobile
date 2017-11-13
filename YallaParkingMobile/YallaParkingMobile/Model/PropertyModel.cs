@@ -130,7 +130,7 @@ namespace YallaParkingMobile.Model {
 		public string TotalTime {
 			get {
 				if (this.Hours >= 1) {
-                    return String.Format("{0} {1} {2:MMM} All Day", this.StartDate.ToString("ddd"), this.StartDate.Day.Ordinalize(), this.StartDate);
+                    return String.Format("{0} {1} {2:MMM} All Day (Until Midnight)", this.StartDate.ToString("ddd"), this.StartDate.Day.Ordinalize(), this.StartDate);
 				} else {
 					return this.BookingTime;
 				}
@@ -151,7 +151,7 @@ namespace YallaParkingMobile.Model {
 		public string ParkLaterTotalTime {
 			get {
 				if (this.Hours >= 8) {
-					return String.Format("{0} {1} {2:MMM} All Day", this.StartDate.ToString("ddd"), this.StartDate.Day.Ordinalize(), this.StartDate);
+					return String.Format("{0} {1} {2:MMM} All Day (Until Midnight)", this.StartDate.ToString("ddd"), this.StartDate.Day.Ordinalize(), this.StartDate);
 				} else {
 					return this.ParkLaterBookingTime;
 				}
