@@ -255,8 +255,8 @@ namespace YallaParkingMobile {
 				});
 			};
 
-			// Navigate to our scanner page
-			await Navigation.PushAsync(scanPage);
+            // Navigate to our scanner page
+            await Navigation.PushAsync(scanPage);
 		}
 
         private async void Validate_Clicked(object sender, System.EventArgs e) {
