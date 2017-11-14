@@ -189,7 +189,9 @@ namespace YallaParkingMobile.Model {
 
 		public string ActiveTime {
 			get {
-				if (this.EntryTime.HasValue && !this.ExitTime.HasValue) {
+                if(this.AllDay){
+                    return String.Format("{0} {1} {2:MMM} All Day (Until Midnight)", this.Start.Date.ToString("ddd"), this.Start.Day.Ordinalize(), this.Start.Date);
+                }else if (this.EntryTime.HasValue && !this.ExitTime.HasValue) {
 					var timeSpan = DateTime.UtcNow - this.EntryTime.Value;
                     var totalDays = timeSpan.TotalDays >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("dd")) : 0;
 					var totalHours = timeSpan.TotalHours >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", "")) : 0;
@@ -203,7 +205,9 @@ namespace YallaParkingMobile.Model {
 
 		public string ParkNowActiveTime {
 			get {
-				if (this.EntryTime.HasValue && !this.ExitTime.HasValue) {
+				if (this.AllDay) {
+					return "All Day (Until Midnight)";
+				} else if (this.EntryTime.HasValue && !this.ExitTime.HasValue) {
 					var timeSpan = DateTime.UtcNow - this.EntryTime.Value;
                     var totalDays = timeSpan.TotalDays >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("dd")) : 0;
 					var totalHours = timeSpan.TotalHours >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", "")) : 0;
@@ -215,6 +219,24 @@ namespace YallaParkingMobile.Model {
 					var totalHours = timeSpan.TotalHours >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", "")) : 0;
 					var minutes = timeSpan.TotalMinutes >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("mm")) : 0;
 					return string.Format("{0} {1} {2} {3}", totalHours, totalHours == 1 ? "hr" : "hrs", minutes, minutes == 1 ? "min" : "mins");
+                }
+
+				return string.Empty;
+			}
+		}
+
+		public string TotalDays {
+			get {
+                if (this.AllDay) {
+                    if (!this.ExitTime.HasValue) {
+                        var timeSpan = DateTime.UtcNow - this.EntryTime.Value;
+                        var totalDays = timeSpan.TotalDays >= 0 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("dd")) : 0;
+                        return string.Format("{0} {1}", totalDays, totalDays == 1 ? "day" : "days");
+                    } else{
+						var timeSpan = this.ExitTime.Value - this.EntryTime.Value;
+						var totalDays = timeSpan.TotalDays >= 0 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("dd")) : 0;
+						return string.Format("{0} {1}", totalDays, totalDays == 1 ? "day" : "days");
+                    }
                 }
 
 				return string.Empty;

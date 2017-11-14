@@ -34,20 +34,26 @@ namespace YallaParkingMobile {
 			Analytics.TrackEvent("Viewing Booking Page - " + Model.Number);
 
 			if (this.Model.Hours >= 8) {
-				if (Order.Contains(PriceHour)) {
-					Order.Remove(PriceHour);
                     Order.Remove(ParkNowPriceDay);
-				}
 			} else {
 				if (Order.Contains(PriceDay)) {
 					Order.Remove(PriceDay);
 				}
 			}
 
+            if(this.Model.AllDay || (this.Model.ParkLater && this.Model.Hours >= 8)){
+                Order.Remove(PriceHour);
+                Order.Remove(ParkNow);
+                Order.Remove(ParkLater);
+            }
+
+            if(!this.Model.AllDay || (this.Model.ParkLater && this.Model.Hours < 8)){
+                Order.Remove(TotalDays);
+            }
+
             if(this.Model.ParkNow && !this.Model.AllDay){
                 Order.Remove(ParkNowPriceDay);
                 Order.Remove(PriceDay);
-                //Order.Remove(ParkNowAllDay);
             }
 
 			if (!this.Model.ParkNow && !this.Model.AllDay) {
@@ -59,26 +65,17 @@ namespace YallaParkingMobile {
 				Order.Remove(PriceDay);
 			}
 
-			if (this.Model.ParkNow && !this.Model.Completed) {
-				Order.Remove(ParkNowTotal);
-			}
-
             if(this.Model.ParkLater){
                 Order.Remove(ParkNow);
-				//Order.Remove(ParkNowAllDay);
-                Order.Remove(ParkNowTotal);
                 Order.Remove(ParkNowDiscount);
             } else{
                 Order.Remove(ParkLaterDiscount);
                 Order.Remove(ParkLater);
-                Order.Remove(ParkLaterTotal);
             }
 
 			if (this.Model.ParkNow && this.Model.AllDay) {
 				Order.Remove(ParkLater);
-				//Order.Remove(ParkNow);
                 Order.Remove(ParkLaterDiscount);
-				Order.Remove(ParkLaterTotal);
 			}
 
             this.cancellationCharge = CancellationCharge;

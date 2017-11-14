@@ -297,7 +297,13 @@
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
                         Text="{Binding ParkNowActiveTime}" />
-                   
+                      <EntryCell
+                        x:Name="TotalDays"
+                        LabelColor="#a1a1b4"
+                        Label="Number of days"
+                        HorizontalTextAlignment="End"
+                        IsEnabled="False"
+                        Text="{Binding TotalDays}" />
                     <EntryCell
                         x:Name="PriceHour"
                         LabelColor="#a1a1b4"
@@ -347,14 +353,7 @@
                         IsEnabled="False"
                         LabelColor="Black"
                         Text="{Binding Total, StringFormat='AED {0:n2}'}"/>
-                    <EntryCell
-                        x:Name="ParkNowTotal"
-                        Label="Total"
-                        HorizontalTextAlignment="End"
-                        IsEnabled="False"
-                        LabelColor="Black"
-                        Text="{Binding Total, StringFormat='AED {0:n2}'}">
-                    </EntryCell>
+                  
                 </TableSection>
                 <TableSection
                     x:Name="ValidateParking"
