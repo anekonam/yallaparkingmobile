@@ -422,7 +422,11 @@ namespace YallaParkingMobile.Model {
 
         public decimal DiscountValue {
             get {
-                return this.Discount.HasValue && this.Hours.HasValue ? (decimal)this.Hours.Value * this.Price * (this.Discount.Value / 100) : 0;
+                if (!this.AllDay) {
+                    return this.Discount.HasValue && this.Hours.HasValue ? (decimal)this.Hours.Value * this.Price * (this.Discount.Value / 100) : 0;
+                } else{
+                    return this.Discount.HasValue? this.Price * (this.Discount.Value / 100) : 0;
+                }
             }
         }
 
@@ -502,14 +506,18 @@ namespace YallaParkingMobile.Model {
                     }
 
                     return (decimal?)null;
-				} else if (this.EntryTime.HasValue) {
+				} else if (this.EntryTime.HasValue && !this.AllDay) {
                     var entryHours = (int)Math.Ceiling((DateTime.UtcNow - this.EntryTime.Value).TotalHours);
 					entryHours = entryHours < 1 ? 1 : entryHours;
                     var total = this.Price * entryHours;
                     var discountValue = this.Discount.HasValue ? total * (this.Discount.Value / 100) : 0;
                     total = total - discountValue;
                     return total;
-				}
+                } else if(this.AllDay && this.ParkNow){
+					var total = this.Price;
+                    var discountValue = this.Discount.HasValue ? this.Price * (this.Discount.Value / 100) : 0;
+                    total = total - discountValue;
+                }
 
                 return (decimal?)null;
             }

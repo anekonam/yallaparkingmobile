@@ -28,7 +28,7 @@ namespace YallaParkingMobile {
                 this.Instruction.Text = string.Format("No need to rush, you can arrive {0} minutes before your bookings starts for free!", model.BufferMinutes);
                 this.BookingReference.Text = model.BookingNumber;
             } else{
-                this.Instruction.Text = string.Format("{0}. Parking Start time is {1}", model.AccessInfo, DateTime.UtcNow);
+                this.Instruction.Text = string.Format("{0}. Parking Start time is {1}", model.AccessInfo, DateTime.UtcNow.ToLocalTime());
                 this.BookingReference.Text = model.BookingNumber;
             }
 		}
