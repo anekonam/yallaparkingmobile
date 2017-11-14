@@ -352,7 +352,6 @@
                         IsEnabled="False"
                         LabelColor="Black"
                         Text="{Binding Total, StringFormat='AED {0:n2}'}"/>
-                  
                 </TableSection>
                 <TableSection
                     x:Name="ValidateParking"

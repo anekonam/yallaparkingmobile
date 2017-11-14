@@ -166,10 +166,13 @@ namespace YallaParkingMobile {
 		public async Task RefreshBooking(){
             this.Model = await ServiceUtility.GetBooking(this.Model.PropertyParkingId);
 
-            if (this.Model.Discounted || !this.Model.Active) {
+            if (this.Model.Discounted || (!this.Model.Active && !this.Model.Completed)) {
 				if (this.TableView.Contains(this.ValidateParking)) {
 					this.TableView.Remove(this.ValidateParking);
 				}
+            } else if(!this.Model.ValidatorUserId.HasValue && this.Model.Completed){
+                this.TableView.Remove(this.ValidateParking);
+                
             } else{
 				if (!this.TableView.Contains(this.ValidateParking)) {
                     this.TableView.Insert(1, this.ValidateParking);
