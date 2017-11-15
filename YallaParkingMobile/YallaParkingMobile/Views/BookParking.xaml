@@ -17,11 +17,11 @@
                 Height="Auto" />
         </Grid.RowDefinitions>
         <Grid
-            Grid.Row="0"
+             Grid.Row="0"
             Grid.ColumnSpacing="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition
-                    Width="0.7*" />
+                    Width="0.5*" />
                 <ColumnDefinition
                     Width="*" />
             </Grid.ColumnDefinitions>

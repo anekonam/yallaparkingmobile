@@ -506,6 +506,7 @@ namespace YallaParkingMobile.Model {
                     }
 
                     return (decimal?)null;
+
 				} else if (this.EntryTime.HasValue && !this.AllDay) {
                     var entryHours = (int)Math.Ceiling((DateTime.UtcNow - this.EntryTime.Value).TotalHours);
 					entryHours = entryHours < 1 ? 1 : entryHours;
@@ -514,9 +515,12 @@ namespace YallaParkingMobile.Model {
                     total = total - discountValue;
                     return total;
                 } else if(this.AllDay && this.ParkNow){
-					var total = this.Price;
+					var entryDays = (int)Math.Ceiling((DateTime.UtcNow - this.EntryTime.Value).TotalDays);
+					var total = this.Price * entryDays;
                     var discountValue = this.Discount.HasValue ? this.Price * (this.Discount.Value / 100) : 0;
+
                     total = total - discountValue;
+					return total;
                 }
 
                 return (decimal?)null;

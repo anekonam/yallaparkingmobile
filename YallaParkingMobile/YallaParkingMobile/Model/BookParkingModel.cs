@@ -133,7 +133,7 @@ namespace YallaParkingMobile.Model {
 				if (this.Property.Hours < 8) {
 					return this.Property.Hours.ToString();
 				} else if (this.Property.Hours >= 8) {
-					return "All Day";
+                    return "All Day (Until Midnight)";
 				}
 
 				return this.Property.Hours.ToString();

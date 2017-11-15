@@ -31,7 +31,7 @@
             Padding="10,10,0,10">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition
-                    Width="*" />
+                    Width="0.5*" />
                 <ColumnDefinition
                     Width="Auto" />
             </Grid.ColumnDefinitions>
