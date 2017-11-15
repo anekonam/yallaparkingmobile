@@ -307,8 +307,8 @@ namespace YallaParkingMobile.Model {
         public string ParkingTime {
             get {
                 if (this.EntryTime.HasValue && this.ExitTime.HasValue) {
-                    TimeSpan difference = this.ExitTime.Value - this.EntryTime.Value;
-                    return string.Format("You parked for {0} hr {1} mins", difference.Hours, difference.Minutes);
+                    TimeSpan difference = this.ExitTime.Value.ToLocalTime() - this.EntryTime.Value.ToLocalTime();
+                    return this.AllDay ? string.Format("You parked for {0} {1}", difference.Days, difference.Days == 1 ? "day" : "days") : string.Format("You parked for {0} hr {1} mins", difference.Hours, difference.Minutes);
                 }
 
                 return string.Empty;
