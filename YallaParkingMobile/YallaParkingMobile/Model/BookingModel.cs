@@ -227,18 +227,19 @@ namespace YallaParkingMobile.Model {
 
 		public string TotalDays {
 			get {
-                if (this.AllDay) {
-                    if (!this.ExitTime.HasValue) {
-                        var timeSpan = DateTime.UtcNow - this.EntryTime.Value;
-                        var totalDays = timeSpan.TotalDays >= 0 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("dd")) : 0;
-                        return string.Format("{0} {1}", totalDays, totalDays == 1 ? "day" : "days");
-                    } else{
+				if (this.AllDay) {
+					if (!this.ExitTime.HasValue && this.EntryTime.HasValue) {
+						var timeSpan = DateTime.UtcNow - this.EntryTime.Value;
+						var totalDays = timeSpan.TotalDays >= 0 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("dd")) : 0;
+						return string.Format("{0} {1}", totalDays, totalDays == 1 ? "day" : "days");
+					} else if(this.ExitTime.HasValue && this.EntryTime.HasValue){
 						var timeSpan = this.ExitTime.Value - this.EntryTime.Value;
 						var totalDays = timeSpan.TotalDays >= 0 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("dd")) : 0;
 						return string.Format("{0} {1}", totalDays, totalDays == 1 ? "day" : "days");
+                    } else{
+                        return "1 day";
                     }
-                }
-
+				}
 				return string.Empty;
 			}
 		}
