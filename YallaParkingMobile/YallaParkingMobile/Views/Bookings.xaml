@@ -101,7 +101,7 @@
                                                     <ColumnDefinition
                                                         Width="*" />
                                                     <ColumnDefinition
-                                                        Width="Auto" />
+                                                        Width="3.5*" />
                                                 </Grid.ColumnDefinitions>
                                                 <Grid.RowDefinitions>
                                                     <RowDefinition

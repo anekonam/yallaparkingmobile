@@ -176,7 +176,9 @@ namespace YallaParkingMobile.Model {
 
         public string RemainingTime {
             get {
-                if (this.End > DateTime.UtcNow) {
+				if (this.AllDay) {
+					return String.Format("{0} {1} {2:MMM} All Day (Until Midnight)", this.Start.Date.ToString("ddd"), this.Start.Day.Ordinalize(), this.Start.Date);
+				} else if (this.End > DateTime.UtcNow) {
                     var timeSpan = this.End - DateTime.UtcNow;
                     var totalHours = timeSpan.TotalHours >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", "")) : 0;
                     var minutes = timeSpan.TotalMinutes >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("mm")) : 0;

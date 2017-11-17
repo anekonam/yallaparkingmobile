@@ -244,6 +244,21 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+        public decimal ParkingPrice{
+            get{
+                if((this.ParkNow && this.Property.Hours >=1) || (this.ParkNow && this.AllDay)){
+                    return this.Property.ShortTermParkingFullDayPrice;
+                } else if (this.ParkNow && !this.AllDay){
+                    return this.Property.ShortTermParkingPrice;
+                } else if((!this.ParkNow && this.Property.Hours >=8) || (!this.ParkNow && this.AllDay)){
+                    return this.Property.ShortTermParkingFullDayPrice;
+				} else if (!this.ParkNow && !this.AllDay) {
+					return this.Property.ShortTermParkingPrice;
+				}
+                return 0;
+			}
+        }
+
         public string BookingNumber { get; set; }
 
         public async Task<bool> BookParking(){
@@ -253,7 +268,7 @@ namespace YallaParkingMobile.Model {
                 PropertyId = this.Property.PropertyId,
                 Start = this.Property.StartDate.ToUniversalTime(),
                 End = this.Property.EndDate.ToUniversalTime(),
-                Price = this.ParkNow && this.AllDay? this.Property.Hours >= 1 ? this.Property.ShortTermParkingFullDayPrice : this.Property.ShortTermParkingPrice : this.Property.Hours >= 8 ? this.Property.ShortTermParkingFullDayPrice : this.Property.ShortTermParkingPrice,
+                Price = this.ParkingPrice,
                 Discount = this.Discount,
                 Hours = this.Property.Hours,
                 ParkNow = this.ParkNow,
