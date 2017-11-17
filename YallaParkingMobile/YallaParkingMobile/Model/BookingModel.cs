@@ -474,7 +474,6 @@ namespace YallaParkingMobile.Model {
 			}
 		}
 
-
 		public string TotalHours { 
             get{
                 if (this.ParkLater) {
@@ -494,8 +493,6 @@ namespace YallaParkingMobile.Model {
                 return string.Empty;
             }
         }
-
-       
 
         public decimal? EstimatedTotalPrice {
             get {
