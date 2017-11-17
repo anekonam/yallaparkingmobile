@@ -14,10 +14,11 @@ namespace YallaParkingMobile.Model {
 
     public class BookParkingModel : INotifyPropertyChanged {
 
-        public BookParkingModel(PropertyModel property, bool parkNow, bool parkingNow = true) {
+        public BookParkingModel(PropertyModel property, bool parkNow, bool allDay, bool parkingNow = true) {
             this.Property = property;
             this.ParkingNow = parkingNow;
             this.ParkNow = parkNow;
+            this.AllDay = allDay;
         }
 
         public bool ParkNow { get; set; }
@@ -146,11 +147,7 @@ namespace YallaParkingMobile.Model {
             }
         }
 
-        public bool AllDay{
-            get{
-                return this.ParkNow == true ? this.Property.Hours >= 1 : this.Property.Hours >= 8;
-            }
-        }
+        public bool AllDay {get; set;}
 
         public bool Hourly{
             get{
@@ -246,11 +243,11 @@ namespace YallaParkingMobile.Model {
 
         public decimal ParkingPrice{
             get{
-                if((this.ParkNow && this.Property.Hours >=1) || (this.ParkNow && this.AllDay)){
+                if((this.ParkNow && this.AllDay){
                     return this.Property.ShortTermParkingFullDayPrice;
                 } else if (this.ParkNow && !this.AllDay){
                     return this.Property.ShortTermParkingPrice;
-                } else if((!this.ParkNow && this.Property.Hours >=8) || (!this.ParkNow && this.AllDay)){
+                } else if(!this.ParkNow && this.AllDay){
                     return this.Property.ShortTermParkingFullDayPrice;
 				} else if (!this.ParkNow && !this.AllDay) {
 					return this.Property.ShortTermParkingPrice;

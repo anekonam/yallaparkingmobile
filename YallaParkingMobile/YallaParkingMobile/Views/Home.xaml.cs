@@ -463,6 +463,7 @@ namespace YallaParkingMobile {
         private async void Next_Clicked(object sender, System.EventArgs e) {
             var property = this.Model.SelectedProperty;
             var parkNow = this.Model.ParkNow;
+            var allDay = this.Model.AllDay;
 
             if (Model.ParkNow) {
                 property.StartDate = DateTime.Now;
@@ -472,9 +473,7 @@ namespace YallaParkingMobile {
                 property.Hours = (int)this.ParkLaterHoursSlider.Value;
             }
 
-
-
-            var bookParking = new BookingPreview(new BookParkingModel(property, parkNow, !SearchDateTime.IsVisible));
+            var bookParking = new BookingPreview(new BookParkingModel(property, parkNow, allDay,!SearchDateTime.IsVisible));
             await Navigation.PushAsync(bookParking);
         }
 
