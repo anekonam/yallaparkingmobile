@@ -243,7 +243,7 @@ namespace YallaParkingMobile.Model {
 
         public decimal ParkingPrice{
             get{
-                if((this.ParkNow && this.AllDay){
+                if(this.ParkNow && this.AllDay){
                     return this.Property.ShortTermParkingFullDayPrice;
                 } else if (this.ParkNow && !this.AllDay){
                     return this.Property.ShortTermParkingPrice;
