@@ -346,7 +346,7 @@
                         IsEnabled="False"
                         Text="{Binding CancellationCharge, StringFormat='AED {0:n2}'}" />
                     <EntryCell
-                        x:Name="ParkLaterTotal"
+                        x:Name="Total"
                         Label="Total"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"

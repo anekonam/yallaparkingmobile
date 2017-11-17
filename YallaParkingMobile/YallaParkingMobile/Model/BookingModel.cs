@@ -191,9 +191,11 @@ namespace YallaParkingMobile.Model {
 
 		public string ActiveTime {
 			get {
-                if(this.AllDay){
+                if(this.AllDay && this.Start.Date.Date == DateTime.Now.Date){
+                    return "Today All Day (Until Midnight)";
+                } else if(this.AllDay && this.Start.Date.Date != DateTime.Now.Date){
                     return String.Format("{0} {1} {2:MMM} All Day (Until Midnight)", this.Start.Date.ToString("ddd"), this.Start.Day.Ordinalize(), this.Start.Date);
-                }else if (this.EntryTime.HasValue && !this.ExitTime.HasValue) {
+                } else if (this.EntryTime.HasValue && !this.ExitTime.HasValue) {
 					var timeSpan = DateTime.UtcNow - this.EntryTime.Value;
                     var totalDays = timeSpan.TotalDays >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("dd")) : 0;
 					var totalHours = timeSpan.TotalHours >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", "")) : 0;
@@ -259,8 +261,10 @@ namespace YallaParkingMobile.Model {
 
 		public string TotalTime {
 			get {
-				if (this.Hours >= 1) {
-					return String.Format("{0} {1} {2:MMM} All Day (Until Midnight)", this.Start.Date.ToString("ddd"), this.Start.Day.Ordinalize(), this.Start.Date);
+				if (this.Hours >= 1 && this.Start.Date.Date == DateTime.Now.Date) {
+					return "Today All Day (Until Midnight)";
+				} else if (this.Hours >= 1 && this.Start.Date.Date != DateTime.Now.Date) {
+					return String.Format("{0} {1} {2:MMM} All Day (Until Midnight)", this.Start.Date.ToString("ddd"), this.Start.Date.Day.Ordinalize(), this.Start.Date);
 				} else {
 					return this.BookingTime;
 				}
@@ -517,7 +521,7 @@ namespace YallaParkingMobile.Model {
                     var discountValue = this.Discount.HasValue ? total * (this.Discount.Value / 100) : 0;
                     total = total - discountValue;
                     return total;
-                } else if(this.AllDay && this.ParkNow){
+                } else if(this.AllDay && this.ParkNow && this.EntryTime.HasValue){
 					var entryDays = (int)Math.Ceiling((DateTime.UtcNow - this.EntryTime.Value).TotalDays);
 					var total = this.Price * entryDays;
                     var discountValue = this.Discount.HasValue ? this.Price * (this.Discount.Value / 100) : 0;

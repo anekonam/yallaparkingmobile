@@ -129,9 +129,11 @@ namespace YallaParkingMobile.Model {
 
 		public string TotalTime {
 			get {
-				if (this.Hours >= 1) {
+                if (this.Hours >= 1 && this.StartDate.Date == DateTime.Now.Date) {
+                    return "Today All Day (Until Midnight)";
+                } else if (this.Hours >= 1 && this.StartDate.Date != DateTime.Now.Date) {
                     return String.Format("{0} {1} {2:MMM} All Day (Until Midnight)", this.StartDate.ToString("ddd"), this.StartDate.Day.Ordinalize(), this.StartDate);
-				} else {
+                } else {
 					return this.BookingTime;
 				}
 			}
