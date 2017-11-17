@@ -197,10 +197,7 @@ namespace YallaParkingMobile.Model {
                     return String.Format("{0} {1} {2:MMM} All Day (Until Midnight)", this.Start.Date.ToString("ddd"), this.Start.Day.Ordinalize(), this.Start.Date);
                 } else if (this.EntryTime.HasValue && !this.ExitTime.HasValue) {
 					var timeSpan = DateTime.UtcNow - this.EntryTime.Value;
-                    var totalDays = timeSpan.TotalDays >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("dd")) : 0;
-					var totalHours = timeSpan.TotalHours >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", "")) : 0;
-					var minutes = timeSpan.TotalMinutes >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("mm")) : 0;
-					return string.Format("{0} {1} {2} {3} Parked", totalHours, totalHours == 1 ? "hr" : "hrs", minutes, minutes == 1 ? "min" : "mins");
+                    return string.Format("{0} {1} {2} {3} {4} {5} Parked", timeSpan.Days, timeSpan.Days == 1 ? "day" : "days", timeSpan.Hours, timeSpan.Hours == 1 ? "hr" : "hrs", timeSpan.Minutes, timeSpan.Minutes == 1 ? "min" : "mins");
 				}
 
                 return string.Empty;
@@ -213,16 +210,10 @@ namespace YallaParkingMobile.Model {
 					return "All Day (Until Midnight)";
 				} else if (this.EntryTime.HasValue && !this.ExitTime.HasValue) {
 					var timeSpan = DateTime.UtcNow - this.EntryTime.Value;
-                    var totalDays = timeSpan.TotalDays >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("dd")) : 0;
-					var totalHours = timeSpan.TotalHours >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", "")) : 0;
-					var minutes = timeSpan.TotalMinutes >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("mm")) : 0;
-					return string.Format("{0} {1} {2} {3}", totalHours, totalHours == 1 ? "hr" : "hrs", minutes, minutes == 1 ? "min" : "mins");
+                    return string.Format("{0} {1} {2} {3} {4} {5}", timeSpan.Days, timeSpan.Days == 1 ? "day" : "days", timeSpan.Hours, timeSpan.Hours == 1 ? "hr" : "hrs", timeSpan.Minutes, timeSpan.Minutes == 1 ? "min" : "mins");
                 } else if(this.Completed && this.EntryTime.HasValue && this.ExitTime.HasValue){
 					var timeSpan =  this.ExitTime.Value - this.EntryTime.Value;
-					var totalDays = timeSpan.TotalDays >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("dd")) : 0;
-					var totalHours = timeSpan.TotalHours >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", "")) : 0;
-					var minutes = timeSpan.TotalMinutes >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("mm")) : 0;
-					return string.Format("{0} {1} {2} {3}", totalHours, totalHours == 1 ? "hr" : "hrs", minutes, minutes == 1 ? "min" : "mins");
+				return string.Format("{0} {1} {2} {3} {4} {5}", timeSpan.Days, timeSpan.Days == 1 ? "day" : "days", timeSpan.Hours, timeSpan.Hours == 1 ? "hr" : "hrs", timeSpan.Minutes, timeSpan.Minutes == 1 ? "min" : "mins");
                 }
 
 				return string.Empty;
