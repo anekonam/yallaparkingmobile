@@ -241,12 +241,13 @@ namespace YallaParkingMobile {
 						if (result.Text == Model.PropertyId.ToString()) {
 							var exit = await ServiceUtility.Exit(Model.PropertyId);
 
-                            if (exit) {
-                                await this.RefreshBooking();
-                                await Navigation.PushAsync(new ConfirmExit(this.Model));
-                            } else{
-                                await DisplayAlert("Exit Error", "There was an error leaving the parking space, please try again", "Ok");
-                            }
+							if (exit) {
+								this.Model.ExitTime = DateTime.UtcNow;
+								await this.RefreshBooking();
+								await Navigation.PushAsync(new ConfirmExit(this.Model));
+							} else {
+								await DisplayAlert("Exit Error", "There was an error leaving the parking space, please try again", "Ok");
+							}
 						} else {
 							await DisplayAlert("Invalid Scan", "The QR code scanned does not match the property for this booking", "Ok");
 							await Navigation.PopAsync();
@@ -255,10 +256,10 @@ namespace YallaParkingMobile {
 				});
 			};
 
-            // Navigate to our scanner page
-            await Navigation.PushAsync(scanPage);
+			// Navigate to our scanner page
+			await Navigation.PushAsync(scanPage);
 		}
-
+      
         private async void Validate_Clicked(object sender, System.EventArgs e) {
 			var scanPage = new ZXingScannerPage();
 			bool scanFinished = false;
