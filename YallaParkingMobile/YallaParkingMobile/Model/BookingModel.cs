@@ -306,7 +306,9 @@ namespace YallaParkingMobile.Model {
             get {
                 if (this.EntryTime.HasValue && this.ExitTime.HasValue) {
                     TimeSpan difference = this.ExitTime.Value.ToLocalTime() - this.EntryTime.Value.ToLocalTime();
-                    return this.AllDay ? string.Format("You parked for {0} {1}", difference.Days, difference.Days == 1 ? "day" : "days") : string.Format("You parked for {0} hr {1} mins", difference.Hours, difference.Minutes);
+                    var totalDays = difference.TotalDays >= 1 ? int.Parse(new DateTime(difference.Ticks).ToString("dd")) : 0;
+                    return this.AllDay ? string.Format("You parked for {0} {1}", totalDays, totalDays == 1 ? "day" : "days") : 
+                               string.Format("You parked for {0} {1} {2} {3} {4} {5}", difference.Days, difference.Days == 1 ? "day" :"days",difference.Hours, difference.Hours == 1 ? "hr" : "hrs",difference.Minutes, difference.Minutes == 1 ? "min" : "mins");
                 }
 
                 return string.Empty;
