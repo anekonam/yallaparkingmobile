@@ -152,7 +152,7 @@ namespace YallaParkingMobile {
 					this.DiscountCode.IsEnabled = false;
 					Order.Remove(DiscountCode);
 					Order.Remove(ApplyCodeCell);
-					await DisplayAlert("Promotional Code Validated", "Your promotional code has been successfully validated.", "Ok");
+					await DisplayAlert("Success!", "Your promotional code has been successfully added.", "Ok");
 				} else {
 					await DisplayAlert("Invalid Promotional Code", "Invalid or expired promotional code provided.", "Ok");
 				}
