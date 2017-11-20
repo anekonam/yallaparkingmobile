@@ -152,7 +152,15 @@ namespace YallaParkingMobile.Model {
 
 		public string ParkLaterTotalTime {
 			get {
-				if (this.Hours >= 8) {
+				double parkinghours = this.Hours;
+
+				var hours = (int)Math.Ceiling(parkinghours);
+
+				var totalPrice = this.ShortTermParkingPrice * (decimal)hours;
+
+				var fullDayPrice = this.ShortTermParkingFullDayPrice;
+
+                if (this.Hours >= 8 || totalPrice >= fullDayPrice) {
 					return String.Format("{0} {1} {2:MMM} All Day (Until Midnight)", this.StartDate.ToString("ddd"), this.StartDate.Day.Ordinalize(), this.StartDate);
 				} else {
 					return this.ParkLaterBookingTime;

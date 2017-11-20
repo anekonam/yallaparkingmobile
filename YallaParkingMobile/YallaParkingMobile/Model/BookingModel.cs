@@ -101,6 +101,10 @@ namespace YallaParkingMobile.Model {
 
         public double PropertyLongitude { get; set; }
 
+		public decimal PropertyShortTermParkingPrice { get; set; }
+
+		public decimal PropertyShortTermParkingFullDayPrice { get; set; }
+
         public int? PropertyShortTermParkingEntryBufferMinutes { get; set; }
 
         public string PropertyShortTermParkingEntranceMethod { get; set; }
@@ -275,7 +279,15 @@ namespace YallaParkingMobile.Model {
 
 		public string ParkLaterTotalTime {
 			get {
-				if (this.Hours >= 8) {
+				double parkinghours = this.Hours.Value;
+
+				var totalHours = (int)Math.Ceiling(parkinghours);
+
+				var totalPrice = this.PropertyShortTermParkingPrice * (decimal)totalHours;
+
+				var fullDayPrice = this.PropertyShortTermParkingFullDayPrice;
+
+				if (this.Hours >= 8 || totalPrice >= fullDayPrice) {
                     return String.Format("{0} {1} {2:MMM} All Day (Until Midnight)", this.Start.Date.ToString("ddd"), this.Start.Date.Day.Ordinalize(), this.Start.Date);
 				} else {
 					return this.ParkLaterBookingTime;
@@ -489,9 +501,17 @@ namespace YallaParkingMobile.Model {
 
         public decimal? EstimatedTotalPrice {
             get {
+				double parkinghours = this.Hours.Value;
+
+				var totalHours = (int)Math.Ceiling(parkinghours);
+
+				var totalPrice = this.PropertyShortTermParkingPrice * (decimal)totalHours;
+
+				var fullDayPrice = this.PropertyShortTermParkingFullDayPrice;
+
                 if (this.ParkLater) {
                     if (this.Hours.HasValue) {
-                        if (this.Hours.Value >= 8) {
+                        if (this.Hours.Value >= 8 || totalPrice >= fullDayPrice) {
                             var total = this.Price - this.DiscountValue;
 							total = total < 0 ? 0 : total;
 							return total;

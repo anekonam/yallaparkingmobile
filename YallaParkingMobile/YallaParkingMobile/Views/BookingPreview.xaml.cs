@@ -29,6 +29,24 @@ namespace YallaParkingMobile {
         public BookingPreview(BookParkingModel model) {
             this.Model = model;
 
+            if (!this.Model.AllDay) {
+                double parkinghours = int.Parse(model.TotalHours);
+
+                var hours = (int)Math.Ceiling(parkinghours);
+
+                var totalPrice = model.ParkingPrice * (decimal)hours;
+
+                model.ParkingHours = parkinghours;
+
+                var fullDayPrice = model.Property.ShortTermParkingFullDayPrice;
+
+                if (!model.AllDay && !model.ParkNow && totalPrice > fullDayPrice) {
+
+                    model.AllDay = true;
+
+                }
+            }
+
             InitializeComponent();
             Analytics.TrackEvent("Viewing Booking Page");
 

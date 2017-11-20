@@ -23,6 +23,13 @@ namespace YallaParkingMobile.Model {
 
         public bool ParkNow { get; set; }
 
+        public bool ParkNowAllDay { 
+            get{
+                return this.ParkNow && !this.AllDay;
+
+            }
+        }
+
         private bool parkingNow = true;
         public bool ParkingNow {
             get {
@@ -131,15 +138,15 @@ namespace YallaParkingMobile.Model {
 		}
       public string TotalHours {
 			get {
-				if (this.Property.Hours < 8) {
+				if (!this.AllDay) {
 					return this.Property.Hours.ToString();
-				} else if (this.Property.Hours >= 8) {
+				} else {
                     return "All Day (Until Midnight)";
 				}
-
-				return this.Property.Hours.ToString();
 			}
 		}
+
+        public double TotalParkingHours { get; set; }
 
         public int BufferMinutes{
             get{
@@ -256,6 +263,18 @@ namespace YallaParkingMobile.Model {
 			}
         }
 
+        public double ParkingHours { get; set; }
+
+		public decimal TotalPrice {
+			get {
+                if (this.AllDay) {
+					return this.Property.ShortTermParkingFullDayPrice - this.Property.Discount;
+				}
+
+				return ((decimal)this.ParkingHours * this.Property.ShortTermParkingPrice) - this.Discount;
+			}
+		}
+
         public string BookingNumber { get; set; }
 
         public async Task<bool> BookParking(){
@@ -296,7 +315,7 @@ namespace YallaParkingMobile.Model {
 
         public bool IsParkNow {
             get {
-                if (!this.ParkNow) {
+                if (!this.ParkNow && !this.AllDay) {
                     return true;
                 } else {
                     return false;

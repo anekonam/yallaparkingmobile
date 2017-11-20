@@ -152,7 +152,7 @@
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
                         LabelColor="Black"
-                        Text="{Binding Property.TotalPrice, StringFormat='AED {0:n2}'}">
+                        Text="{Binding TotalPrice, StringFormat='AED {0:n2}'}">
                     </EntryCell>
                     <TextCell
                         Height="20"
