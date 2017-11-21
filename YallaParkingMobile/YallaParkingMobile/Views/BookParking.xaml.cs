@@ -209,7 +209,7 @@ namespace YallaParkingMobile {
 										await DisplayAlert("Entry Error", "There was an error entering the parking space, please try again", "Ok");
 									}
                                 } else if(bookingResponse.StatusCode == HttpStatusCode.Conflict){
-                                    await DisplayAlert("Booking Exists Error", "There is already a booking for this property exists", "Ok");
+                                    await DisplayAlert("Booking Exists Error", "There is already a booking exists for this property", "Ok");
                                 } else {
 									await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
 									await Navigation.PopAsync();
@@ -236,7 +236,7 @@ namespace YallaParkingMobile {
 					await Navigation.PushAsync(bookingConfirmation);
 
                 } else if (bookingResponse.StatusCode == HttpStatusCode.Conflict) {
-					await DisplayAlert("Booking Exists Error", "There is already a booking for this property exists", "Ok");
+					await DisplayAlert("Booking Exists Error", "There is already a booking exists for this property", "Ok");
 				} else {
 					await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
 				} 
