@@ -6,6 +6,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using YallaParkingMobile.Model;
+using System.Net;
 
 namespace YallaParkingMobile.Utility {
 
@@ -328,21 +329,15 @@ namespace YallaParkingMobile.Utility {
 			return false;
 		}
 
-		public static async Task<string> Book(BookingModel model) {
+        public static async Task<HttpResponseMessage> Book(BookingModel model) {
 			InitHttpClient();
 
 			try {
 				var response = await client.PostAsync("/api/parking/book", model.AsJson());
-
-				if (response.IsSuccessStatusCode) {
-                    var booking = await response.Content.ReadAsStringAsync();
-                    return booking;
-				}
+                return response;
 			} catch {
                 return null;
 			}
-
-            return null;
 		}
 
 		public static async Task<bool> Update(BookingModel model) {

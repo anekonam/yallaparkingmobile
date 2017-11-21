@@ -9,6 +9,7 @@ using Xamarin.Forms;
 using YallaParkingMobile.Utility;
 using Plugin.Geolocator.Abstractions;
 using System.Windows.Input;
+using System.Net.Http;
 
 namespace YallaParkingMobile.Model {
 
@@ -277,7 +278,7 @@ namespace YallaParkingMobile.Model {
 
         public string BookingNumber { get; set; }
 
-        public async Task<bool> BookParking(){
+        public async Task<HttpResponseMessage> BookParking(){
             var model = new BookingModel {
                 UserCarId = this.SelectedUserCar.UserCarId.Value,
                 UserCardId = this.SelectedUserCard.UserCardId.Value,
@@ -291,10 +292,7 @@ namespace YallaParkingMobile.Model {
                 AllDay = this.AllDay
             };
 
-            this.BookingNumber = await ServiceUtility.Book(model);
-            this.BookingNumber = string.Format("#{0}", this.BookingNumber).Replace("\"", "");
-
-            return !string.IsNullOrWhiteSpace((this.BookingNumber));
+            return await ServiceUtility.Book(model);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -10,6 +10,7 @@ using YallaParkingMobile.Model;
 using YallaParkingMobile.Utility;
 using System.Collections.ObjectModel;
 using ZXing.Net.Mobile.Forms;
+using System.Net;
 
 namespace YallaParkingMobile {
 	public partial class BookParking : ContentPage {
@@ -190,9 +191,12 @@ namespace YallaParkingMobile {
 							scanFinished = true;
 
 							if (result.Text == Model.Property.PropertyId.ToString()) {
-								var booking = await Model.BookParking();
+								var bookingResponse = await Model.BookParking();
 
-								if (booking) {
+								if (bookingResponse.IsSuccessStatusCode) {
+									Model.BookingNumber = await bookingResponse.Content.ReadAsStringAsync();
+									Model.BookingNumber = string.Format("#{0}", Model.BookingNumber).Replace("\"", "");
+
 									var entry = await ServiceUtility.Entry(Model.Property.PropertyId);
 
 									if (entry) {
@@ -204,7 +208,9 @@ namespace YallaParkingMobile {
 									} else {
 										await DisplayAlert("Entry Error", "There was an error entering the parking space, please try again", "Ok");
 									}
-								} else {
+                                } else if(bookingResponse.StatusCode == HttpStatusCode.Conflict){
+                                    await DisplayAlert("Booking Exists Error", "There is already a booking for this property exists", "Ok");
+                                } else {
 									await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
 									await Navigation.PopAsync();
 								}
@@ -219,15 +225,21 @@ namespace YallaParkingMobile {
 
 				await Navigation.PushAsync(scanPage);
 			} else {
-				var booking = await Model.BookParking();
+				var bookingResponse = await Model.BookParking();
 
-				if (!booking) {
-					await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
-				} else {
+                if (bookingResponse.IsSuccessStatusCode) {
+                    Model.BookingNumber = await bookingResponse.Content.ReadAsStringAsync();
+                    Model.BookingNumber = string.Format("#{0}", Model.BookingNumber).Replace("\"", "");
+
 					var bookingConfirmation = new BookingConfirmation(this.Model);
 					bookingConfirmation.BindingContext = Model.BookingNumber;
 					await Navigation.PushAsync(bookingConfirmation);
-				}
+
+                } else if (bookingResponse.StatusCode == HttpStatusCode.Conflict) {
+					await DisplayAlert("Booking Exists Error", "There is already a booking for this property exists", "Ok");
+				} else {
+					await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
+				} 
 			}
 		}
 	}
