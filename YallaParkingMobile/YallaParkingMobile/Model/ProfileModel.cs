@@ -68,5 +68,7 @@ namespace YallaParkingMobile.Model {
         }
 
         public string ProfilePicture { get; set; }
+
+        public bool MobileEnabled { get; set; }
     }
 }

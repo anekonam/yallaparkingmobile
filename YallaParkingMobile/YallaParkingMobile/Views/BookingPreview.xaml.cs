@@ -125,6 +125,11 @@ namespace YallaParkingMobile {
             var emiratesScan = new EmiratesScan(false);
             var profile = await ServiceUtility.Profile();
 
+            if (profile != null && !profile.MobileEnabled){
+                await DisplayAlert("Account Disabled", "Please contact YallaParking to activate your account.", "Ok");
+                await Navigation.PopAsync();
+            }
+
             if (profile != null && (string.IsNullOrWhiteSpace(profile.EmiratesId) || string.IsNullOrWhiteSpace(profile.EmiratesId))) {
 				emiratesScan.BindingContext = profile;
 				await DisplayAlert("Emirates ID", "We take the security of our community very seriously. Please upload pictures of your Emirates ID (front & back) in order to start parking.", "Ok");
