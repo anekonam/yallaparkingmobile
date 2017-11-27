@@ -200,7 +200,6 @@ namespace YallaParkingMobile {
 									var entry = await ServiceUtility.Entry(Model.Property.PropertyId);
 
 									if (entry) {
-										await DisplayAlert("Valid Scan", "Your scan has been validated for entry to your parking space", "Ok");
 
 										var bookingConfirmation = new BookingConfirmation(this.Model);
 										bookingConfirmation.BindingContext = Model.BookingNumber;

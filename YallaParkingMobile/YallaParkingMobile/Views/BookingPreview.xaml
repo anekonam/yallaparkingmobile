@@ -148,6 +148,7 @@
                     x:Name="Access"
                     Title="Access">
                     <ViewCell
+                        IsEnabled="false"
                         StyleId="none">
                         <Grid>
                             <Grid.RowDefinitions>
@@ -205,6 +206,7 @@
                     x:Name="OrderFeatures"
                     Title="Features">
                     <ViewCell
+                        IsEnabled="false"
                         StyleId="none">
                         <Grid
                             x:Name="featureGrid">
@@ -368,6 +370,7 @@
                     x:Name="OrderDescription"
                     Title="Description">
                     <ViewCell
+                        IsEnabled="false"
                         StyleId="none">
                         <StackLayout>
                             <Label
