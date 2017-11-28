@@ -257,6 +257,8 @@
     <BundleResource Include="Resources\Clock-Time.png" />
     <BundleResource Include="Resources\place_holder.png" />
     <BundleResource Include="Resources\security_guard.png" />
+    <BundleResource Include="Resources\success.m4a" />
+    <BundleResource Include="Resources\failure.m4a" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -394,6 +396,12 @@
     </Reference>
     <Reference Include="Plugin.Share">
       <HintPath>..\..\packages\Plugin.Share.5.0.0\lib\Xamarin.iOS10\Plugin.Share.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.MediaManager.Abstractions">
+      <HintPath>..\..\packages\Plugin.MediaManager.0.4.5\lib\Xamarin.iOS10\Plugin.MediaManager.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.MediaManager">
+      <HintPath>..\..\packages\Plugin.MediaManager.0.4.5\lib\Xamarin.iOS10\Plugin.MediaManager.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

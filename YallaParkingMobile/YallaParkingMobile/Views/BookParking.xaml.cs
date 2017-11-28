@@ -11,6 +11,7 @@ using YallaParkingMobile.Utility;
 using System.Collections.ObjectModel;
 using ZXing.Net.Mobile.Forms;
 using System.Net;
+using Plugin.MediaManager;
 
 namespace YallaParkingMobile {
 	public partial class BookParking : ContentPage {
@@ -200,11 +201,14 @@ namespace YallaParkingMobile {
 									var entry = await ServiceUtility.Entry(Model.Property.PropertyId);
 
 									if (entry) {
+										await CrossMediaManager.Current.Play("https://clyp.it/upr4qv5u");
 
 										var bookingConfirmation = new BookingConfirmation(this.Model);
 										bookingConfirmation.BindingContext = Model.BookingNumber;
 										await Navigation.PushAsync(bookingConfirmation);
 									} else {
+                                        await CrossMediaManager.Current.Play("https://clyp.it/4kwelksn");
+
 										await DisplayAlert("Entry Error", "There was an error entering the parking space, please try again", "Ok");
 									}
                                 } else if(bookingResponse.StatusCode == HttpStatusCode.Conflict){
