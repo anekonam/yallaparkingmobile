@@ -15,7 +15,8 @@ using Plugin.Geolocator.Abstractions;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 using System.Diagnostics;
-
+using Plugin.MediaManager;
+using Plugin.SimpleAudioPlayer;
 
 namespace YallaParkingMobile {
     public partial class BookingDetail : ContentPage {
@@ -185,6 +186,7 @@ namespace YallaParkingMobile {
 
 		private async void ScanEntry_Clicked(object sender, EventArgs e) {
             var timeToBooking = (this.Model.Start - DateTime.UtcNow).TotalMinutes;
+			var player = CrossSimpleAudioPlayer.Current;
 
             if (timeToBooking > 30) {
                 await DisplayAlert("You're Early", "Hey eager beaver, you're early. You can only scan in within 30 minutes of a booking. You will start being charged from the time you scan in", "Ok");
@@ -203,13 +205,18 @@ namespace YallaParkingMobile {
                             scanFinished = true;
 
                             if (result.Text == Model.PropertyId.ToString()) {
+						
                                 var entry = await ServiceUtility.Entry(Model.PropertyId);
 
                                 if (entry) {
+									player.Load("success.m4a");
+									player.Play();
                                     await this.RefreshBooking();
                                     await DisplayAlert("Valid Scan", "Your scan has been validated for entry to your parking space", "Ok");
                                     await Navigation.PopAsync();
                                 } else {
+									player.Load("failure.m4a");
+									player.Play();
                                     await DisplayAlert("Entry Error", "There was an error entering the parking space, please try again", "Ok");
                                 }
                             } else {
@@ -228,6 +235,7 @@ namespace YallaParkingMobile {
 		private async void ScanExit_Clicked(object sender, EventArgs e) {
 			var scanPage = new ZXingScannerPage();
 			bool scanFinished = false;
+            var player = CrossSimpleAudioPlayer.Current;
 
 			scanPage.OnScanResult += (result) => {
 				// Stop scanning
@@ -243,9 +251,13 @@ namespace YallaParkingMobile {
 
 							if (exit) {
 								this.Model.ExitTime = DateTime.UtcNow;
+								player.Load("success.m4a");
+								player.Play();
 								await this.RefreshBooking();
 								await Navigation.PushAsync(new ConfirmExit(this.Model));
 							} else {
+								player.Load("failure.m4a");
+								player.Play();
 								await DisplayAlert("Exit Error", "There was an error leaving the parking space, please try again", "Ok");
 							}
 						} else {
@@ -261,6 +273,7 @@ namespace YallaParkingMobile {
 		}
       
         private async void Validate_Clicked(object sender, System.EventArgs e) {
+            var player = CrossSimpleAudioPlayer.Current;
 			var scanPage = new ZXingScannerPage();
 			bool scanFinished = false;
 
@@ -280,9 +293,13 @@ namespace YallaParkingMobile {
                             var validated = await ServiceUtility.Validate(Model.PropertyParkingId, validatorUserId.Value);
 
                             if (validated) {
+								player.Load("success.m4a");
+								player.Play();
                                 await this.RefreshBooking();
                                 await Navigation.PopAsync();
                             } else{
+								player.Load("success.m4a");
+								player.Play();
 								await DisplayAlert("Validate Error", "There was an error validating your parking, please try again", "Ok");
                             }
 						} else {

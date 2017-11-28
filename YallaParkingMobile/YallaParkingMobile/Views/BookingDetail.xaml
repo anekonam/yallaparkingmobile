@@ -509,26 +509,29 @@
         </control:MenuTableView>
         <StackLayout
             Grid.Row="5"
-            Margin="10">
+            Margin="5">
             <Button
+                HeightRequest="50"
                 x:Name="EntryButton"
                 Style="{StaticResource GreenButton}"
                 IsVisible="{Binding CanEnter}"
-                Text="Yalla, I'm Here"
+                Text="SCAN IN - Yalla, I'm Here"
                 Clicked="ScanEntry_Clicked"
                 Margin="0"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="Center" />
             <Button
+                HeightRequest="50"
                 x:Name="ExitButton"
-                Style="{StaticResource GreenButton}"
+                Style="{StaticResource RedButton}"
                 IsVisible="{Binding CanExit}"
-                Text="Yalla, I'm Leaving"
+                Text="SCAN OUT - Yalla I'm Leaving"
                 Clicked="ScanExit_Clicked"
                 Margin="0"
                 HorizontalOptions="FillAndExpand"
                 VerticalOptions="Center" />
             <Button
+                 HeightRequest="50"
                 x:Name="CancelButton"
                 Style="{StaticResource GreenButton}"
                 BackgroundColor="#ff4134"

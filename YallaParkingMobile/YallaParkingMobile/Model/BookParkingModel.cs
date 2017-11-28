@@ -243,6 +243,12 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+		public string ButtonText {
+			get {
+				return this.ParkNow ? "SCAN IN - Yalla I'm Here" : "Confirm Booking";
+			}
+		}
+
         public bool CanBook{
             get{
                 return this.Property != null && this.SelectedUserCar != null && this.SelectedUserCard!=null;

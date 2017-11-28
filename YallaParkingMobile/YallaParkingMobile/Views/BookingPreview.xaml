@@ -414,7 +414,8 @@
         </control:MenuTableView>
         <Button
             x:Name="BookButton"
-            Margin="10"
+            Margin="5"
+            HeightRequest="50"
             Style="{StaticResource GreenButton}"
             Text="{Binding BookText}"
             Clicked="Book_Clicked"

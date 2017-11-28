@@ -257,8 +257,6 @@
     <BundleResource Include="Resources\Clock-Time.png" />
     <BundleResource Include="Resources\place_holder.png" />
     <BundleResource Include="Resources\security_guard.png" />
-    <BundleResource Include="Resources\success.m4a" />
-    <BundleResource Include="Resources\failure.m4a" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -403,6 +401,12 @@
     <Reference Include="Plugin.MediaManager">
       <HintPath>..\..\packages\Plugin.MediaManager.0.4.5\lib\Xamarin.iOS10\Plugin.MediaManager.dll</HintPath>
     </Reference>
+    <Reference Include="Plugin.SimpleAudioPlayer.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugin.SimpleAudioPlayer.1.0.1\lib\Xamarin.iOS10\Plugin.SimpleAudioPlayer.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.SimpleAudioPlayer">
+      <HintPath>..\..\packages\Xam.Plugin.SimpleAudioPlayer.1.0.1\lib\Xamarin.iOS10\Plugin.SimpleAudioPlayer.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\YallaParkingMobile\YallaParkingMobile.csproj">
@@ -508,6 +512,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Effect\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\success.m4a" />
+    <EmbeddedResource Include="Resources\failure.m4a" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.4.0.282\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.4.0.282\build\netstandard1.0\Xamarin.Forms.targets')" />
