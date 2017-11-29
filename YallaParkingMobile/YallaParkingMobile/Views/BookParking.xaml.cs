@@ -229,9 +229,6 @@ namespace YallaParkingMobile {
 					});
 				};
 
-                player.Load("success.m4a");
-                player.Play();
-
 				await Navigation.PushAsync(scanPage);
 			
 			} else {
@@ -246,8 +243,12 @@ namespace YallaParkingMobile {
 					await Navigation.PushAsync(bookingConfirmation);
 
                 } else if (bookingResponse.StatusCode == HttpStatusCode.Conflict) {
+					player.Load("failure.m4a");
+					player.Play();
 					await DisplayAlert("Booking Exists Error", "There is already a booking exists for this property", "Ok");
 				} else {
+					player.Load("failure.m4a");
+					player.Play();
 					await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
 				} 
 			}
