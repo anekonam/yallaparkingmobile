@@ -250,9 +250,9 @@ namespace YallaParkingMobile {
 							var exit = await ServiceUtility.Exit(Model.PropertyId);
 
 							if (exit) {
-								this.Model.ExitTime = DateTime.UtcNow;
 								player.Load("success.m4a");
 								player.Play();
+								this.Model.ExitTime = DateTime.UtcNow;
 								await this.RefreshBooking();
 								await Navigation.PushAsync(new ConfirmExit(this.Model));
 							} else {
