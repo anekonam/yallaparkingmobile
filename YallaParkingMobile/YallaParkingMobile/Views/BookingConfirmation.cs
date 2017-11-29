@@ -22,9 +22,7 @@ namespace YallaParkingMobile {
 
 		public BookingConfirmation(BookParkingModel model) {
             this.Model = model;
-			var player = CrossSimpleAudioPlayer.Current;
-            player.Load("success.m4a");
-            player.Play();
+		
 			InitializeComponent();
 			Analytics.TrackEvent("Viewing Booking Confirmation");
 
