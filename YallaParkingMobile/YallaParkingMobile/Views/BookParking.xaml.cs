@@ -179,6 +179,8 @@ namespace YallaParkingMobile {
 		}
 
 		async void Book_Clicked(object sender, System.EventArgs e) {
+
+            var player = CrossSimpleAudioPlayer.Current;
             
 			if (Model.ParkingNow) {
 				var scanPage = new ZXingScannerPage();
@@ -226,6 +228,9 @@ namespace YallaParkingMobile {
 						}
 					});
 				};
+
+                player.Load("success.m4a");
+                player.Play();
 
 				await Navigation.PushAsync(scanPage);
 			
