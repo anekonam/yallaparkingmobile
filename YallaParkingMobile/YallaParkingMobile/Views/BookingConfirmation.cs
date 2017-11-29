@@ -15,6 +15,7 @@ using Xamarin.Forms.Maps;
 using YallaParkingMobile.Utility;
 using ZXing.Net.Mobile.Forms;
 using YallaParkingMobile.Model;
+using Plugin.SimpleAudioPlayer;
 
 namespace YallaParkingMobile {
     public partial class BookingConfirmation : ContentPage {
@@ -23,6 +24,10 @@ namespace YallaParkingMobile {
             this.Model = model;
 			InitializeComponent();
 			Analytics.TrackEvent("Viewing Booking Confirmation");
+
+			var player = CrossSimpleAudioPlayer.Current;
+			player.Load("success.m4a");
+			player.Play();
 
             if (model.BufferMinutes > 0 && !model.ParkNow) {
                 this.Instruction.Text = string.Format("No need to rush, you can arrive {0} minutes before your bookings starts for free!", model.BufferMinutes);
