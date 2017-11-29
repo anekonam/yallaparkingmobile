@@ -179,9 +179,7 @@ namespace YallaParkingMobile {
 		}
 
 		async void Book_Clicked(object sender, System.EventArgs e) {
-            var player = CrossSimpleAudioPlayer.Current;
-			
-		
+            
 			if (Model.ParkingNow) {
 				var scanPage = new ZXingScannerPage();
 				bool scanFinished = false;
@@ -204,32 +202,24 @@ namespace YallaParkingMobile {
 
 									var entry = await ServiceUtility.Entry(Model.Property.PropertyId);
 									if (entry) {
-										player.Load("success.m4a");
-										player.Play();
-
 										var bookingConfirmation = new BookingConfirmation(this.Model);
 										bookingConfirmation.BindingContext = Model.BookingNumber;
 										await Navigation.PushAsync(bookingConfirmation);
 									} else {
-										player.Load("failure.m4a");
-										player.Play();
 
 										await DisplayAlert("Entry Error", "There was an error entering the parking space, please try again", "Ok");
 									}
-                                } else if(bookingResponse.StatusCode == HttpStatusCode.Conflict){
-									player.Load("failure.m4a");
-									player.Play();
-                                    await DisplayAlert("Booking Exists Error", "There is already a booking exists for this property", "Ok");
-                                } else {
-									player.Load("failure.m4a");
-									player.Play();
+								} else if (bookingResponse.StatusCode == HttpStatusCode.Conflict) {
+								
+									await DisplayAlert("Booking Exists Error", "There is already a booking exists for this property", "Ok");
+								} else {
+								
 									await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
 									await Navigation.PopAsync();
 								}
 
 							} else {
-								player.Load("failure.m4a");
-								player.Play();
+							
 								await DisplayAlert("Invalid Scan", "The QR code scanned does not match the property for this booking", "Ok");
 								await Navigation.PopAsync();
 							}
@@ -238,6 +228,7 @@ namespace YallaParkingMobile {
 				};
 
 				await Navigation.PushAsync(scanPage);
+			
 			} else {
 				var bookingResponse = await Model.BookParking();
 

@@ -209,14 +209,10 @@ namespace YallaParkingMobile {
                                 var entry = await ServiceUtility.Entry(Model.PropertyId);
 
                                 if (entry) {
-									player.Load("success.m4a");
-									player.Play();
                                     await this.RefreshBooking();
                                     await DisplayAlert("Valid Scan", "Your scan has been validated for entry to your parking space", "Ok");
                                     await Navigation.PopAsync();
                                 } else {
-									player.Load("failure.m4a");
-									player.Play();
                                     await DisplayAlert("Entry Error", "There was an error entering the parking space, please try again", "Ok");
                                 }
                             } else {
@@ -250,14 +246,10 @@ namespace YallaParkingMobile {
 							var exit = await ServiceUtility.Exit(Model.PropertyId);
 
 							if (exit) {
-								player.Load("success.m4a");
-								player.Play();
 								this.Model.ExitTime = DateTime.UtcNow;
 								await this.RefreshBooking();
 								await Navigation.PushAsync(new ConfirmExit(this.Model));
 							} else {
-								player.Load("failure.m4a");
-								player.Play();
 								await DisplayAlert("Exit Error", "There was an error leaving the parking space, please try again", "Ok");
 							}
 						} else {
@@ -293,13 +285,9 @@ namespace YallaParkingMobile {
                             var validated = await ServiceUtility.Validate(Model.PropertyParkingId, validatorUserId.Value);
 
                             if (validated) {
-								player.Load("success.m4a");
-								player.Play();
                                 await this.RefreshBooking();
                                 await Navigation.PopAsync();
                             } else{
-								player.Load("success.m4a");
-								player.Play();
 								await DisplayAlert("Validate Error", "There was an error validating your parking, please try again", "Ok");
                             }
 						} else {

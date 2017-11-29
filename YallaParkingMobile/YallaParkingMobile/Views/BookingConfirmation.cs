@@ -22,12 +22,11 @@ namespace YallaParkingMobile {
 
 		public BookingConfirmation(BookParkingModel model) {
             this.Model = model;
+			var player = CrossSimpleAudioPlayer.Current;
+            player.Load("success.m4a");
+            player.Play();
 			InitializeComponent();
 			Analytics.TrackEvent("Viewing Booking Confirmation");
-
-			var player = CrossSimpleAudioPlayer.Current;
-			player.Load("success.m4a");
-			player.Play();
 
             if (model.BufferMinutes > 0 && !model.ParkNow) {
                 this.Instruction.Text = string.Format("No need to rush, you can arrive {0} minutes before your bookings starts for free!", model.BufferMinutes);
@@ -46,7 +45,6 @@ namespace YallaParkingMobile {
 				this.BindingContext = value;
 			}
 		}
-
 
 		private async void DoneButton_Clicked(object sender, EventArgs e) {
 			var model = new BookingsModel();
