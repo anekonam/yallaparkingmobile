@@ -299,9 +299,6 @@ namespace YallaParkingMobile {
 				});
 			};
 
-			player.Load("success.m4a");
-			player.Play();
-
 			// Navigate to our scanner page
 			await Navigation.PushAsync(scanPage);
         }

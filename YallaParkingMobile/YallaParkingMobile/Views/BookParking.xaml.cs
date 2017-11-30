@@ -181,6 +181,8 @@ namespace YallaParkingMobile {
 		async void Book_Clicked(object sender, System.EventArgs e) {
 
             var player = CrossSimpleAudioPlayer.Current;
+			player.Load("failure.m4a");
+			player.Play();
             
 			if (Model.ParkingNow) {
 				var scanPage = new ZXingScannerPage();
@@ -243,13 +245,13 @@ namespace YallaParkingMobile {
 					await Navigation.PushAsync(bookingConfirmation);
 
                 } else if (bookingResponse.StatusCode == HttpStatusCode.Conflict) {
-					player.Load("failure.m4a");
-					player.Play();
 					await DisplayAlert("Booking Exists Error", "There is already a booking exists for this property", "Ok");
-				} else {
 					player.Load("failure.m4a");
 					player.Play();
+				} else {
 					await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
+					player.Load("failure.m4a");
+					player.Play();
 				} 
 			}
 		}
