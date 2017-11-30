@@ -18,7 +18,6 @@ using Telerik.XamarinForms.Input.AutoComplete;
 using System.IO;
 using DurianCode.PlacesSearchBar;
 using TK.CustomMap;
-using TK.CustomMap.Api.Google;
 
 namespace YallaParkingMobile {
     public partial class Home : ContentPage {

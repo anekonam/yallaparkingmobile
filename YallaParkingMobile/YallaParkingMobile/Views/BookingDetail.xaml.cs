@@ -186,7 +186,6 @@ namespace YallaParkingMobile {
 
 		private async void ScanEntry_Clicked(object sender, EventArgs e) {
             var timeToBooking = (this.Model.Start - DateTime.UtcNow).TotalMinutes;
-			var player = CrossSimpleAudioPlayer.Current;
 
             if (timeToBooking > 30) {
                 await DisplayAlert("You're Early", "Hey eager beaver, you're early. You can only scan in within 30 minutes of a booking. You will start being charged from the time you scan in", "Ok");
@@ -232,9 +231,8 @@ namespace YallaParkingMobile {
 		private async void ScanExit_Clicked(object sender, EventArgs e) {
 			var scanPage = new ZXingScannerPage();
 			bool scanFinished = false;
-            var player = CrossSimpleAudioPlayer.Current;
 
-			scanPage.OnScanResult += (result) => {
+            scanPage.OnScanResult += (result) => {
 				// Stop scanning
 				scanPage.IsScanning = false;
 
@@ -266,7 +264,6 @@ namespace YallaParkingMobile {
 		}
       
         private async void Validate_Clicked(object sender, System.EventArgs e) {
-            var player = CrossSimpleAudioPlayer.Current;
 			var scanPage = new ZXingScannerPage();
 			bool scanFinished = false;
 
