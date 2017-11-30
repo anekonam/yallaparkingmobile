@@ -209,7 +209,6 @@ namespace YallaParkingMobile {
 
                                 if (entry) {
                                     await this.RefreshBooking();
-                                    await DisplayAlert("Valid Scan", "Your scan has been validated for entry to your parking space", "Ok");
                                     await Navigation.PopAsync();
                                 } else {
                                     await DisplayAlert("Entry Error", "There was an error entering the parking space, please try again", "Ok");
