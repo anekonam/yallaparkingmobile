@@ -370,7 +370,7 @@ namespace YallaParkingMobile.Model {
 
         public bool CanEnter {
             get {
-                return !this.Cancelled.HasValue && !this.Cancelled.HasValue && !this.EntryTime.HasValue;
+                return !this.Cancelled.HasValue && !this.EntryTime.HasValue;
             }
         }
 

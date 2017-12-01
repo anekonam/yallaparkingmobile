@@ -208,8 +208,10 @@ namespace YallaParkingMobile {
                                 var entry = await ServiceUtility.Entry(Model.PropertyId);
 
                                 if (entry) {
-                                    await this.RefreshBooking();
-                                    await Navigation.PopAsync();
+									var model = new BookingsModel();
+									var booking = new Bookings(model);
+
+									await Navigation.PushAsync(booking);
                                 } else {
                                     await DisplayAlert("Entry Error", "There was an error entering the parking space, please try again", "Ok");
                                 }

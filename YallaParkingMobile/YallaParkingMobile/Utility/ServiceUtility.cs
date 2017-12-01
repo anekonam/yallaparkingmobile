@@ -335,7 +335,7 @@ namespace YallaParkingMobile.Utility {
 			try {
 				var response = await client.PostAsync("/api/parking/book", model.AsJson());
                 return response;
-			} catch {
+            } catch(Exception ex) {
                 return null;
 			}
 		}
