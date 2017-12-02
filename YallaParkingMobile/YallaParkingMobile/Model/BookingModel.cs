@@ -184,7 +184,7 @@ namespace YallaParkingMobile.Model {
 					return String.Format("{0} {1} {2:MMM} All Day (Until Midnight)", this.Start.Date.ToString("ddd"), this.Start.Day.Ordinalize(), this.Start.Date);
 				} else if (this.End > DateTime.UtcNow) {
                     var timeSpan = this.End - DateTime.UtcNow;
-                    var totalHours = timeSpan.TotalHours >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", "")) : 0;
+                    var totalHours = timeSpan.TotalHours >= 1 && timeSpan.TotalHours < 10? int.Parse(new DateTime(timeSpan.Ticks).ToString("HH").Replace("0", "")) : timeSpan.Hours;
                     var minutes = timeSpan.TotalMinutes >= 1 ? int.Parse(new DateTime(timeSpan.Ticks).ToString("mm")) : 0;
                     return string.Format("{0} {1} {2} {3} left", totalHours, totalHours == 1 ? "hr" : "hrs", minutes, minutes == 1 ? "min" : "mins");
                 }

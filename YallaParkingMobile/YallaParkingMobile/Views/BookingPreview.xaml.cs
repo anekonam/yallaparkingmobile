@@ -23,7 +23,9 @@ namespace YallaParkingMobile {
         private IGeolocator locator = null;
 
         public BookingPreview() {
+            
             InitializeComponent();
+            BookButton.IsEnabled = true;
         }
 
         public BookingPreview(BookParkingModel model) {
@@ -48,14 +50,21 @@ namespace YallaParkingMobile {
             }
 
             InitializeComponent();
+			
             Analytics.TrackEvent("Viewing Booking Page");
 
             this.UpdateCurrentLocation();
 
         }
 
+		async void Handle_Appearing(object sender, System.EventArgs e) {
 
-        private async Task<Plugin.Geolocator.Abstractions.Position> GetCurrentLocation() {
+            BookButton.IsEnabled = true;
+
+		}
+
+
+		private async Task<Plugin.Geolocator.Abstractions.Position> GetCurrentLocation() {
             Plugin.Geolocator.Abstractions.Position position = null;
 
             try {
@@ -121,6 +130,7 @@ namespace YallaParkingMobile {
         }
 
         async void Book_Clicked(object sender, System.EventArgs e) {
+            BookButton.IsEnabled = false;
             var bookParking = new BookParking(this.Model);
             var emiratesScan = new EmiratesScan(false);
             var profile = await ServiceUtility.Profile();
@@ -128,9 +138,7 @@ namespace YallaParkingMobile {
             if (profile != null && !profile.MobileEnabled){
                 await DisplayAlert("Account Disabled", "Please contact YallaParking to activate your account.", "Ok");
                 await Navigation.PopAsync();
-            }
-
-            if (profile != null && (string.IsNullOrWhiteSpace(profile.EmiratesId) || string.IsNullOrWhiteSpace(profile.EmiratesId))) {
+            } else if (profile != null && (string.IsNullOrWhiteSpace(profile.EmiratesId) || string.IsNullOrWhiteSpace(profile.EmiratesId))) {
 				emiratesScan.BindingContext = profile;
 				await DisplayAlert("Emirates ID", "We take the security of our community very seriously. Please upload pictures of your Emirates ID (front & back) in order to start parking.", "Ok");
 				await Navigation.PushAsync(emiratesScan);

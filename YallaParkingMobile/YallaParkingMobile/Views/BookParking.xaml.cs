@@ -179,7 +179,7 @@ namespace YallaParkingMobile {
 		}
 
 		async void Book_Clicked(object sender, System.EventArgs e) {
-            
+
 			if (Model.ParkingNow) {
 				var scanPage = new ZXingScannerPage();
 				bool scanFinished = false;
