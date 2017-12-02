@@ -16,9 +16,9 @@ namespace YallaParkingMobile.Model {
 
         public int[] ValidatorUserIds { get; set; }
 
-        public int UserCarId { get; set; }
+        public int? UserCarId { get; set; }
 
-        public int UserCardId { get; set; }
+        public int? UserCardId { get; set; }
 
         public string UserCardBrand { get; set; }
 
