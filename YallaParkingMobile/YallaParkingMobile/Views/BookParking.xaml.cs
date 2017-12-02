@@ -209,6 +209,9 @@ namespace YallaParkingMobile {
 
 										await DisplayAlert("Entry Error", "There was an error entering the parking space, please try again", "Ok");
 									}
+								} else if (bookingResponse.StatusCode == HttpStatusCode.Forbidden) {
+
+									await DisplayAlert("Booking Error", "Please select a car and a card for booking", "Ok");
 								} else if (bookingResponse.StatusCode == HttpStatusCode.Conflict) {
 								
 									await DisplayAlert("Booking Exists Error", "There is already a booking exists for this property", "Ok");
@@ -240,7 +243,10 @@ namespace YallaParkingMobile {
 					bookingConfirmation.BindingContext = Model.BookingNumber;
 					await Navigation.PushAsync(bookingConfirmation);
 
-                } else if (bookingResponse.StatusCode == HttpStatusCode.Conflict) {
+				} else if (bookingResponse.StatusCode == HttpStatusCode.Forbidden) {
+
+					await DisplayAlert("Booking Error", "Please select a car and a card for booking", "Ok");
+				} else if (bookingResponse.StatusCode == HttpStatusCode.Conflict) {
 					await DisplayAlert("Booking Exists Error", "There is already a booking exists for this property", "Ok");
 					
 				} else {

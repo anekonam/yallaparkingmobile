@@ -251,7 +251,7 @@ namespace YallaParkingMobile.Model {
 
         public bool CanBook{
             get{
-                return this.Property != null && this.SelectedUserCar != null && this.SelectedUserCard!=null;
+                return this.Property != null && this.TotalCar > 0 && this.TotalCard > 0;
             }
         }
 
@@ -286,8 +286,8 @@ namespace YallaParkingMobile.Model {
 
         public async Task<HttpResponseMessage> BookParking(){
             var model = new BookingModel {
-                UserCarId = this.SelectedUserCar.UserCarId.Value,
-                UserCardId = this.SelectedUserCard.UserCardId.Value,
+                UserCarId = this.SelectedUserCar.UserCarId ?? 0,
+                UserCardId = this.SelectedUserCard.UserCardId ?? 0,
                 PropertyId = this.Property.PropertyId,
                 Start = this.Property.StartDate.ToUniversalTime(),
                 End = this.Property.EndDate.ToUniversalTime(),
