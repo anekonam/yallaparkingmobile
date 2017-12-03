@@ -261,6 +261,7 @@
     <BundleResource Include="Resources\120*120.png" />
     <BundleResource Include="Resources\152*152.png" />
     <BundleResource Include="Resources\167*167.png" />
+    <BundleResource Include="Resources\Y.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -494,6 +495,23 @@
     <ImageAsset Include="Resources\Media.xcassets\AppIcon.appiconset\Icon-Small-40%402x.png">
       <InProject>false</InProject>
     </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcon.appiconset\120*120.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcon.appiconset\167*167.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcon.appiconset\Icon-60%403x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcon.appiconset\Icon-Small%403x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcon.appiconset\Icon-Notification%403x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-Notification%403x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\87*87.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\80*80.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\180*180.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\152*152.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\167*167.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\76*76.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Y.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcon.appiconset\Y.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\menu-logout.png" />
