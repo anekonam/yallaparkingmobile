@@ -257,6 +257,10 @@
     <BundleResource Include="Resources\Clock-Time.png" />
     <BundleResource Include="Resources\place_holder.png" />
     <BundleResource Include="Resources\security_guard.png" />
+    <BundleResource Include="Resources\76*76.png" />
+    <BundleResource Include="Resources\120*120.png" />
+    <BundleResource Include="Resources\152*152.png" />
+    <BundleResource Include="Resources\167*167.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
