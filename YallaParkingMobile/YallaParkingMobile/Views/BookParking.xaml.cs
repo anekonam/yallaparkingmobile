@@ -45,7 +45,6 @@ namespace YallaParkingMobile {
             this.parkNowTotalTime = ParkNowTotalTime;
             this.parkLaterTotalTime = ParkLaterTotalTime;
 
-
             if(this.Model.IsParkNow){
                 Stack.Children.Remove(parkNowTotalTime);
                 Order.Remove(ParkNowDiscount);
@@ -209,17 +208,20 @@ namespace YallaParkingMobile {
 
 										await DisplayAlert("Entry Error", "There was an error entering the parking space, please try again", "Ok");
 									}
-								}  else if (bookingResponse.StatusCode == HttpStatusCode.Conflict) {
-								
+								} else if (bookingResponse.StatusCode == HttpStatusCode.Conflict) {
+
 									await DisplayAlert("Booking Exists Error", "There is already a booking exists for this property", "Ok");
-								} else {
-								
+								} else if (bookingResponse.StatusCode == HttpStatusCode.NotFound) {
+
+                                    await DisplayAlert("Booking Error", "If this is your first booking, please select a car and a card to proceed with yor booking", "Ok");
+                                } else {
+
 									await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
 									await Navigation.PopAsync();
 								}
 
 							} else {
-							
+
 								await DisplayAlert("Invalid Scan", "The QR code scanned does not match the property for this booking", "Ok");
 								await Navigation.PopAsync();
 							}
@@ -242,7 +244,10 @@ namespace YallaParkingMobile {
 
                 } else if (bookingResponse.StatusCode == HttpStatusCode.Conflict) {
 					await DisplayAlert("Booking Exists Error", "There is already a booking exists for this property", "Ok");
-					
+
+				} else if (bookingResponse.StatusCode == HttpStatusCode.NotFound) {
+
+					await DisplayAlert("Booking Error", "If this is your first booking, please select a car and a card to proceed with yor booking", "Ok");
 				} else {
 					await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
 					
