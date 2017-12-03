@@ -356,12 +356,13 @@ namespace YallaParkingMobile.Utility {
             return false;
 		}
 
-		public static async Task<bool> Entry(int propertyId) {
+		public static async Task<bool> Entry(int propertyId, DateTime startDate) {
 			InitHttpClient();
 
 			try {
                 var model = new {
-                    PropertyId = propertyId
+                    PropertyId = propertyId,
+                    StartDate = startDate
                 };
 
 				var response = await client.PostAsync("/api/parking/entry", model.AsJson());

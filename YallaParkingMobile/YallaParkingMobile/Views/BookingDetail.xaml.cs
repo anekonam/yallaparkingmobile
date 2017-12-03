@@ -205,7 +205,7 @@ namespace YallaParkingMobile {
 
                             if (result.Text == Model.PropertyId.ToString()) {
 						
-                                var entry = await ServiceUtility.Entry(Model.PropertyId);
+                                var entry = await ServiceUtility.Entry(Model.PropertyId, Model.PropertyStartDate);
 
                                 if (entry) {
 									var model = new BookingsModel();

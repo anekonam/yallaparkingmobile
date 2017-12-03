@@ -93,6 +93,8 @@ namespace YallaParkingMobile.Model {
 
         public string PropertyName { get; set; }
 
+        public DateTime PropertyStartDate { get; set; }
+
         public string PropertyPropertyArea { get; set; }
 
         public string PropertyCity { get; set; }

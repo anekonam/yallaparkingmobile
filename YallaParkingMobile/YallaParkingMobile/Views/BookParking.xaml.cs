@@ -200,7 +200,7 @@ namespace YallaParkingMobile {
 									Model.BookingNumber = await bookingResponse.Content.ReadAsStringAsync();
 									Model.BookingNumber = string.Format("#{0}", Model.BookingNumber).Replace("\"", "");
 
-									var entry = await ServiceUtility.Entry(Model.Property.PropertyId);
+									var entry = await ServiceUtility.Entry(Model.Property.PropertyId, Model.Property.StartDate);
 									if (entry) {
 										var bookingConfirmation = new BookingConfirmation(this.Model);
 										bookingConfirmation.BindingContext = Model.BookingNumber;
