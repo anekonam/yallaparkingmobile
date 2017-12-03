@@ -44,6 +44,8 @@
 	<string>This app needs access to the camera to take photos</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This app needs access to photos</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>This app needs acces to calendars</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
