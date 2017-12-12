@@ -70,7 +70,11 @@ namespace YallaParkingMobile {
                 await Navigation.PushAsync(new Verify());
             } else if(result.StatusCode == System.Net.HttpStatusCode.Conflict){
                 await DisplayAlert("E-mail Address Exists", "The e-mail address provided is already registered, please enter an alternative e-mail address", "Ok");
-            } else {
+			} else if (result.StatusCode == System.Net.HttpStatusCode.Ambiguous) {
+				await DisplayAlert("Phone Number Exists", "The phone number provided is already registered, please enter an alternative phone number", "Ok");
+			} else if (result.StatusCode == System.Net.HttpStatusCode.BadRequest) {
+				await DisplayAlert("Password", "Password must contain atleast 1 upper case letter and 1 number", "Ok");
+			} else {
                 await DisplayAlert("Registration Failed", "Registration failed, please try again", "Ok");
             }
         }

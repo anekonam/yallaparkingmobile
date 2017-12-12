@@ -213,7 +213,7 @@ namespace YallaParkingMobile {
 									await DisplayAlert("Booking Exists Error", "There is already a booking exists for this property", "Ok");
 								} else if (bookingResponse.StatusCode == HttpStatusCode.NotFound) {
 
-                                    await DisplayAlert("Booking Error", "If this is your first booking, please select a car and a card to proceed with yor booking", "Ok");
+                                    await DisplayAlert("Booking Error", "If this is your first booking, please select a car and a card to proceed with your booking", "Ok");
                                 } else {
 
 									await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
