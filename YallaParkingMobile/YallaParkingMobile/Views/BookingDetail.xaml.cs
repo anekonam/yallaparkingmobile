@@ -190,20 +190,42 @@ namespace YallaParkingMobile {
             if (timeToBooking > 30) {
                 await DisplayAlert("You're Early", "Hey eager beaver, you're early. You can only scan in within 30 minutes of a booking. You will start being charged from the time you scan in", "Ok");
             } else {
-				var entry = await ServiceUtility.Entry(Model.PropertyId, Model.Start);
 
-				if (entry) {
-					var model = new BookingsModel();
-					var booking = new Bookings(model);
+                var scanPage = new ZXingScannerPage();
+                bool scanFinished = false;
 
-					await Navigation.PushAsync(booking);
-				} else {
-					await DisplayAlert("Entry Error", "There was an error entering the parking space, please try again", "Ok");
-				}
+                scanPage.OnScanResult += (result) => {
+                    // Stop scanning
+                    scanPage.IsScanning = false;
+
+                    // Pop the page and show the result
+                    Device.BeginInvokeOnMainThread(async () => {
+                        if (!scanFinished) {
+                            scanFinished = true;
+
+                            if (result.Text == Model.PropertyId.ToString()) {
+						
+                                var entry = await ServiceUtility.Entry(Model.PropertyId, Model.Start);
+
+                                if (entry) {
+									var model = new BookingsModel();
+									var booking = new Bookings(model);
+
+									await Navigation.PushAsync(booking);
+                                } else {
+                                    await DisplayAlert("Entry Error", "There was an error entering the parking space, please try again", "Ok");
+                                }
+                            } else {
+                                await DisplayAlert("Invalid Scan", "The QR code scanned does not match the property for this booking", "Ok");
+                                await Navigation.PopAsync();
+                            }
+                        }
+                    });
+                };
 
 
                 // Navigate to our scanner page
-                //await Navigation.PushAsync(scanPage);
+                await Navigation.PushAsync(scanPage);
             }
 		}
 
