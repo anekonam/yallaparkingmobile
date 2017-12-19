@@ -74,7 +74,7 @@ namespace YallaParkingMobile {
 				await DisplayAlert("Phone Number Exists", "The phone number provided is already registered, please enter an alternative phone number", "Ok");
 			} else if (result.StatusCode == System.Net.HttpStatusCode.BadRequest) {
 				await DisplayAlert("Password", "Password must contain atleast 1 upper case letter and 1 number", "Ok");
-			} else if (result.StatusCode == System.Net.HttpStatusCode.Ambiguous) {
+			} else if (result.StatusCode == System.Net.HttpStatusCode.NotFound) {
 				await DisplayAlert("Password", "Your confirmation password must match your password", "Ok");
 			} else {
                 await DisplayAlert("Registration Failed", "Registration failed, please try again", "Ok");
