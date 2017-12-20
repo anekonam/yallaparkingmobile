@@ -243,7 +243,7 @@ namespace YallaParkingMobile {
 					await Navigation.PushAsync(bookingConfirmation);
 
                 } else if (bookingResponse.StatusCode == HttpStatusCode.Conflict) {
-					await DisplayAlert("Booking Exists Error", "There is already a booking exists for this property", "Ok");
+					await DisplayAlert("Booking Exists Error", "There is already an ongoing booking for this property", "Ok");
 
 				} else if (bookingResponse.StatusCode == HttpStatusCode.NotFound) {
 
