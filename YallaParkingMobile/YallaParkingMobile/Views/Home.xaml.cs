@@ -23,7 +23,7 @@ namespace YallaParkingMobile {
     public partial class Home : ContentPage {
 
         private Xamarin.Forms.Maps.Position mapPosition;
-        private string GooglePlacesApiKey = "AIzaSyBMhWyhCQgULXVczTr2IfCBh2GCn5hCMyQ";
+        private string GooglePlacesApiKey = "AIzaSyCz3rmlS7ThnvZJ0oq-GYmlWRSbceEyQrE";
         private TKCustomMapPin currentPin = null;
         private IGeolocator locator = null;
         private bool loading = false;
