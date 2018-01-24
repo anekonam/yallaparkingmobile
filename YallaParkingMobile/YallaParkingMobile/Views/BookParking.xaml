@@ -148,7 +148,7 @@
                         Text="{Binding Property.Discount, StringFormat='-AED {0:n2}'}" />
                     <EntryCell
                         x:Name="ParkLaterTotal"
-                        Label="Total"
+                        Label="Total (Inc VAT 5%)"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
                         LabelColor="Black"

@@ -274,7 +274,7 @@ namespace YallaParkingMobile.Model {
 
 		public decimal TotalPrice {
 			get {
-                if (this.AllDay) {
+				if (this.AllDay) {
 					return this.Property.ShortTermParkingFullDayPrice - this.Property.Discount;
 				}
 

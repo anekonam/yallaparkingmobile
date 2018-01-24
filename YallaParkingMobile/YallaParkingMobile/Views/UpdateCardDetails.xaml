@@ -95,5 +95,15 @@
             IsVisible="{Binding IsNew}"
             HorizontalOptions="FillAndExpand"
             VerticalOptions="Center" />
+        <Button
+            Grid.Row="2"
+            Margin="10"
+            x:Name="DeleteButton"
+            Style="{StaticResource RedButton}"
+            Text="Delete"
+            Clicked="DeleteButton_Clicked"
+            IsVisible="{Binding IsNotNew}"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="Center" />
     </Grid>
 </ContentPage>

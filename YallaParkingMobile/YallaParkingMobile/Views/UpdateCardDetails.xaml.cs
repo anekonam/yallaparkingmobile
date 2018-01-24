@@ -81,6 +81,22 @@ namespace YallaParkingMobile {
 				this.Cvc.Placeholder = "•••";
 			}
 		}
+		
+
+		private async void DeleteButton_Clicked(object sender, EventArgs e) {
+			var confirm = await DisplayAlert("Delete Card", "Are you sure you wish to delete this card?", "Yes", "No");
+
+			if (confirm) {
+				var result = await ServiceUtility.DeleteUserCard(this.Model);
+
+				if (result) {
+					await DisplayAlert("Card Deleted", "Your card has been successfully deleted", "Ok");
+                    await this.Navigation.PopAsync();
+				} else {
+					await DisplayAlert("Card Cancellation Error", "There was a problem deleting your card", "Ok");
+				}
+			}
+		}
 
         async void UpdateButton_Clicked(object sender, EventArgs e) {
             if(string.IsNullOrWhiteSpace((this.Model.Name))){
@@ -111,6 +127,7 @@ namespace YallaParkingMobile {
             if (userCard == null) {
                 await DisplayAlert("Card Save Error", "Unable to save your card details, please ensure your card details are valid", "Ok");
             } else {
+                await DisplayAlert("Card Save Confirm", "Your card details have been successfully added to your wallet.", "Ok");
                 await this.Navigation.PopAsync();
             }
 
