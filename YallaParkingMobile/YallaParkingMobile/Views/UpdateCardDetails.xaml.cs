@@ -136,7 +136,7 @@ namespace YallaParkingMobile {
             } else {
                 await DisplayAlert("Card Save Confirm", "Your card details have been successfully added to your wallet.", "Ok");
                 SaveButton.IsEnabled = true;
-                await this.Navigation.PopToRootAsync();
+                await this.Navigation.PopAsync();
             }
         }
     }
