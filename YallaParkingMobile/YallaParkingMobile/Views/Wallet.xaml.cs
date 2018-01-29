@@ -41,6 +41,10 @@ namespace YallaParkingMobile {
         async Task LoadCards(){
 			var userCards = await ServiceUtility.GetUserCards();
 
+            if(userCards == null){
+                
+            }
+
 			if (userCards != null && userCards.Any()) {
 				this.Model.UserCards = new ObservableCollection<UserCardModel>(userCards);
 			}

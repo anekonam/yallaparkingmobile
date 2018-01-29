@@ -99,23 +99,29 @@ namespace YallaParkingMobile {
 		}
 
         async void UpdateButton_Clicked(object sender, EventArgs e) {
-            if(string.IsNullOrWhiteSpace((this.Model.Name))){
+            SaveButton.IsEnabled = false;
+			if(string.IsNullOrWhiteSpace((this.Model.Name))){
                 await DisplayAlert("Name Required", "Please provide a Name", "Ok");
+                SaveButton.IsEnabled = true;
                 return;
             } else if (string.IsNullOrWhiteSpace((this.Model.ExpireMonth))) {
 				await DisplayAlert("Expiry Month Required", "Please provide a card expiry month", "Ok");
+                SaveButton.IsEnabled = true;
                 return;
             } else if (string.IsNullOrWhiteSpace((this.Model.ExpireYear))) {
 				await DisplayAlert("Expiry Year Required", "Please provide a card expiry year", "Ok");
+                SaveButton.IsEnabled = true;
 				return;
             } else if (string.IsNullOrWhiteSpace((this.Model.Number))) {
 				await DisplayAlert("Card Number Required", "Please provide a card number", "Ok");
+                SaveButton.IsEnabled = true;
                 return;
 			} else if (string.IsNullOrWhiteSpace((this.Model.Cvc))) {
 				await DisplayAlert("CVC Required", "Please provide a CVC number", "Ok");
+                SaveButton.IsEnabled = true;
 				return;
 			}
-               
+             
             Activity.IsVisible = true;
             Activity.IsRunning = true;
 
@@ -126,11 +132,12 @@ namespace YallaParkingMobile {
 
             if (userCard == null) {
                 await DisplayAlert("Card Save Error", "Unable to save your card details, please ensure your card details are valid", "Ok");
+                SaveButton.IsEnabled = true;
             } else {
                 await DisplayAlert("Card Save Confirm", "Your card details have been successfully added to your wallet.", "Ok");
-                await this.Navigation.PopAsync();
+                SaveButton.IsEnabled = true;
+                await this.Navigation.PopToRootAsync();
             }
-
         }
     }
 }
