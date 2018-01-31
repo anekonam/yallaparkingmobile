@@ -338,13 +338,20 @@
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
                         Text="{Binding Discount, StringFormat='{0:n0} %'}" />
-                    <EntryCell
+                    <!--<EntryCell
                         x:Name="CancellationCharge"
                         Label="Cancellation Fee"
                         LabelColor="#a1a1b4"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
-                        Text="{Binding CancellationCharge, StringFormat='AED {0:n2}'}" />
+                        Text="{Binding CancellationCharge, StringFormat='AED {0:n2}'}" />-->
+                     <EntryCell
+                        x:Name="Vat"
+                        Label="VAT 5%"
+                        HorizontalTextAlignment="End"
+                        IsEnabled="False"
+                        LabelColor="Black"
+                        Text="{Binding Vat, StringFormat='AED {0:n2}'}"/>
                     <EntryCell
                         x:Name="Total"
                         Label="Total"

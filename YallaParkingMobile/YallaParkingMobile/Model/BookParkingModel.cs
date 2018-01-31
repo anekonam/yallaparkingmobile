@@ -55,6 +55,12 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+		public string VatMessage {
+			get {
+				return "* 5% VAT will be added at checkout ";
+			}
+		}
+
         public string Description {
             get {
                 var description = "* This is an approximate order summary. The actual cost will";
@@ -278,7 +284,7 @@ namespace YallaParkingMobile.Model {
 					return this.Property.ShortTermParkingFullDayPrice - this.Property.Discount;
 				}
 
-				return ((decimal)this.ParkingHours * this.Property.ShortTermParkingPrice) - this.Discount;
+				return ((decimal)this.ParkingHours * this.Property.ShortTermParkingPrice) - this.Property.Discount;
 			}
 		}
 
@@ -317,7 +323,7 @@ namespace YallaParkingMobile.Model {
 			}
 		}       
 
-        public bool IsParkNow {
+        public bool IsParkLater {
             get {
                 if (!this.ParkNow && !this.AllDay) {
                     return true;

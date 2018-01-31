@@ -148,12 +148,17 @@
                         Text="{Binding Property.Discount, StringFormat='-AED {0:n2}'}" />
                     <EntryCell
                         x:Name="ParkLaterTotal"
-                        Label="Total (Inc VAT 5%)"
+                        Label="Total"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
                         LabelColor="Black"
-                        Text="{Binding TotalPrice, StringFormat='AED {0:n2}'}">
+                        Text="{Binding Property.TotalPrice, StringFormat='AED {0:n2}'}">
                     </EntryCell>
+                    <TextCell
+                        Height="20"
+                        Detail ="{Binding VatMessage}"
+                        DetailColor ="#a1a1b4">
+                    </TextCell>
                     <TextCell
                         Height="20"
                         Detail ="{Binding Description}"

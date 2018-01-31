@@ -45,7 +45,7 @@ namespace YallaParkingMobile {
             this.parkNowTotalTime = ParkNowTotalTime;
             this.parkLaterTotalTime = ParkLaterTotalTime;
 
-            if(this.Model.IsParkNow){
+            if(this.Model.IsParkLater){
                 Stack.Children.Remove(parkNowTotalTime);
                 Order.Remove(ParkNowDiscount);
             } else{
@@ -154,6 +154,7 @@ namespace YallaParkingMobile {
 					this.DiscountCode.IsEnabled = false;
 					Order.Remove(DiscountCode);
 					Order.Remove(ApplyCodeCell);
+
 					await DisplayAlert("Success!", "Your promotional code has been successfully added.", "Ok");
 				} else {
 					await DisplayAlert("Invalid Promotional Code", "Invalid or expired promotional code provided.", "Ok");
