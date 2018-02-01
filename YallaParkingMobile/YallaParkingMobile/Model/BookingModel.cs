@@ -335,7 +335,7 @@ namespace YallaParkingMobile.Model {
                     var price = this.TotalPrice.Value.ToString("n2");
                     var vat = (this.TotalPrice.Value * 5) / 100;
                     var priceIncludingVat = this.TotalPrice.Value + vat;
-                    return string.Format("Total price charged AED {0}", priceIncludingVat);
+                    return string.Format("Total price charged AED {0}", priceIncludingVat.ToString("n2"));
                 }
 
                 return null;
