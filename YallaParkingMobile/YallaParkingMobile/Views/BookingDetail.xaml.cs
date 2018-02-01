@@ -22,7 +22,7 @@ namespace YallaParkingMobile {
     public partial class BookingDetail : ContentPage {
         private IGeolocator locator = null;
 
-        //private EntryCell cancellationCharge;
+        private EntryCell cancellationCharge;
 
         public BookingDetail() {
             InitializeComponent();             
@@ -79,14 +79,14 @@ namespace YallaParkingMobile {
                 Order.Remove(ParkLaterDiscount);
 			}
 
-            //this.cancellationCharge = CancellationCharge;
+            this.cancellationCharge = CancellationCharge;
 
-            //Order.Remove(CancellationCharge);
+            Order.Remove(CancellationCharge);
 
 
-            //if(!this.Model.CancellationMessage){
-            //    TableView.Remove(CancellationPolicy);
-            //}
+            if(!this.Model.CancellationMessage){
+                TableView.Remove(CancellationPolicy);
+            }
 		}
              
 		private async Task<Plugin.Geolocator.Abstractions.Position> GetCurrentLocation() {
@@ -179,9 +179,9 @@ namespace YallaParkingMobile {
                     this.TableView.Insert(1, this.ValidateParking);
 				}
             }
-			//if (this.Model.Cancelled.HasValue) {
-			//	Order.Add(cancellationCharge);
-			//}
+			if (this.Model.Cancelled.HasValue) {
+				Order.Add(cancellationCharge);
+			}
         }
 
 		private async void ScanEntry_Clicked(object sender, EventArgs e) {
