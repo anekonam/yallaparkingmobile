@@ -41,6 +41,8 @@ namespace YallaParkingMobile.Model {
 
         public int[] ShortTermPropertyImages { get; set; }
 
+        public int? ShortTermParkingFreeMinutes { get; set; }
+
         public int? ShortTermParkingEntryTimeBufferMinutes { get; set; }
 
         public bool IsUncovered {

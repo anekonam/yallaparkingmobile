@@ -32,12 +32,26 @@
                 Text="Profile Verification" />
         </ContentView>
         <StackLayout
+             Orientation= "Horizontal"
             Grid.Row="2">
             <Label
                 x:Name="Instruction"
                 Margin="40,0,40,20"
                 HorizontalTextAlignment="Center"
-                Text="We take the security of our community seriously, please upload pictures of your Emirates ID (front and back). Don't worry these details are securely stored on our encrypted servers" />
+                LineBreakMode="WordWrap"
+                Text="We take the security of our community seriously, please upload pictures of your Emirates ID." />
+            <Label
+                x:Name="Instruction1"
+                Margin="40,0,40,20"
+                HorizontalTextAlignment="Center"
+                LineBreakMode="WordWrap"
+                Text="If you do not have an Emirates ID, you can use a driving license or passport." />
+            <Label
+                x:Name="Instruction2"
+                Margin="40,0,40,20"
+                HorizontalTextAlignment="Center"
+                LineBreakMode="WordWrap"
+                Text="This information will never be shared with any external parties." />
         </StackLayout>
         <ContentView
             Padding="40"

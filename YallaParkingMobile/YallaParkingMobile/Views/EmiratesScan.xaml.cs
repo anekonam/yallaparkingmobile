@@ -28,8 +28,10 @@ namespace YallaParkingMobile {
 
             if(this.back){
                 this.Title = "Scan Back";
-                this.Heading.Text = "Scan Emirates ID (Back)";
-                this.Instruction.Text = "Please take a picture of the back of your Emirates ID";
+                this.Heading.Text = "Scan ID (Back)";
+                this.Instruction.Text = "Please take a picture of the back of your ID. If you have used a passport then please take a picture of the front cover";
+                this.Instruction1.Text = "";
+                this.Instruction2.Text = "";
             } 
         }
 

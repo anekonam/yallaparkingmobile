@@ -414,7 +414,7 @@
                                 <RowDefinition
                                     Height="Auto" />
                             </Grid.RowDefinitions>
-                            <Image
+                           <Image
                                 HeightRequest="40"
                                 Margin="10,10,10,10"
                                 Aspect="AspectFit"

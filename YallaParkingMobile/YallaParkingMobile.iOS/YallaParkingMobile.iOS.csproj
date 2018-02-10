@@ -132,6 +132,7 @@
     <Compile Include="BorderlessTimePickerRenderer.cs" />
     <Compile Include="StandardViewCellRenderer.cs" />
     <Compile Include="PlacesBarRenderer.cs" />
+    <Compile Include="ExtendedViewCellRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -262,6 +263,7 @@
     <BundleResource Include="Resources\152*152.png" />
     <BundleResource Include="Resources\167*167.png" />
     <BundleResource Include="Resources\Y.jpg" />
+    <BundleResource Include="Resources\right-chevron.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

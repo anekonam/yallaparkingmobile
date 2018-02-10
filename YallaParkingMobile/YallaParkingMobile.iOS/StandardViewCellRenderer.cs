@@ -1,4 +1,5 @@
 ﻿using System;
+using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using YallaParkingMobile.iOS;
@@ -6,9 +7,11 @@ using YallaParkingMobile.iOS;
 [assembly: ExportRenderer(typeof(ViewCell), typeof(StandardViewCellRenderer))]
 namespace YallaParkingMobile.iOS {
 	public class StandardViewCellRenderer : ViewCellRenderer {
+        
 
 		public override UIKit.UITableViewCell GetCell(Cell item, UIKit.UITableViewCell reusableCell, UIKit.UITableView tv) {
 			var cell = base.GetCell(item, reusableCell, tv);
+
 			switch (item.StyleId) {
 				case "none":
 					cell.Accessory = UIKit.UITableViewCellAccessory.None;
@@ -27,6 +30,7 @@ namespace YallaParkingMobile.iOS {
 					cell.Accessory = UIKit.UITableViewCellAccessory.DisclosureIndicator;
 					break;
 			}
+
 			return cell;
 		}
 

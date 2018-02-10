@@ -17,7 +17,7 @@
                 Height="Auto" />
         </Grid.RowDefinitions>
         <Grid
-             Grid.Row="0"
+            Grid.Row="0"
             Grid.ColumnSpacing="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition
@@ -106,7 +106,7 @@
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
                         Text="{Binding Property.ShortTermParkingPrice, StringFormat='AED {0:n2}'}" />
-                     <EntryCell
+                    <EntryCell
                         x:Name="PriceDay"
                         LabelColor="#a1a1b4"
                         Label="Price per day"
@@ -139,7 +139,7 @@
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
                         Text="{Binding Discount, StringFormat='{0:n0} %'}" />
-                     <EntryCell
+                    <EntryCell
                         x:Name="ParkLaterDiscount"
                         Label="Discount"
                         LabelColor="#a1a1b4"
@@ -156,18 +156,18 @@
                     </EntryCell>
                     <TextCell
                         Height="20"
-                        Detail ="{Binding VatMessage}"
-                        DetailColor ="#a1a1b4">
+                        Detail="{Binding VatMessage}"
+                        DetailColor="#a1a1b4">
                     </TextCell>
                     <TextCell
                         Height="20"
-                        Detail ="{Binding Description}"
-                        DetailColor ="#a1a1b4">
+                        Detail="{Binding Description}"
+                        DetailColor="#a1a1b4">
                     </TextCell>
                     <TextCell
                         Height="20 "
-                        Detail ="{Binding Description1}"
-                        DetailColor ="#a1a1b4">
+                        Detail="{Binding Description1}"
+                        DetailColor="#a1a1b4">
                     </TextCell>
                 </TableSection>
                 <TableSection
@@ -181,14 +181,17 @@
                             <ListView
                                 x:Name="Cars"
                                 HasUnevenRows="true"
-                                VerticalOptions="FillAndExpand"
+                                ItemTapped="Car_Tapped"
                                 ItemsSource="{Binding UserCars}"
                                 SelectedItem="{Binding SelectedUserCar,Mode=TwoWay}">
                                 <ListView.SeparatorVisibility>None</ListView.SeparatorVisibility>
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
-                                        <ViewCell>
+                                        <ViewCell
+                                            x:Name="carsViewCell"
+                                            StyleId="none">
                                             <Grid
+                                                StyleId="none"
                                                 VerticalOptions="FillAndExpand"
                                                 ColumnSpacing="10"
                                                 RowSpacing="8"
@@ -197,7 +200,9 @@
                                                     <ColumnDefinition
                                                         Width="0.3*" />
                                                     <ColumnDefinition
-                                                        Width="*" />
+                                                        Width="0.8*" />
+                                                    <ColumnDefinition
+                                                        Width="0.3*" />
                                                 </Grid.ColumnDefinitions>
                                                 <Grid.RowDefinitions>
                                                     <RowDefinition
@@ -212,7 +217,8 @@
                                                     Source="{Binding Image}" />
                                                 <StackLayout
                                                     VerticalOptions="CenterAndExpand"
-                                                    Grid.Column="1">
+                                                    Grid.Column="1"
+                                                    StyleId="none">
                                                     <Label
                                                         HorizontalOptions="StartAndExpand"
                                                         FontSize="16"
@@ -224,6 +230,15 @@
                                                         HorizontalOptions="StartAndExpand"
                                                         Text="{Binding RegistrationNumber}" />
                                                 </StackLayout>
+                                                <Image
+                                                    Grid.Column="2"
+                                                    IsVisible="{Binding IsSelected}"
+                                                    HeightRequest="15"
+                                                    Margin="10,10,10,10"
+                                                    Aspect="AspectFill"
+                                                    VerticalOptions="Center"
+                                                    HorizontalOptions="Center"
+                                                    Source="right-chevron.png" />
                                             </Grid>
                                         </ViewCell>
                                     </DataTemplate>
@@ -243,7 +258,6 @@
                             VerticalOptions="Center" />
                     </ViewCell>
                 </TableSection>
-
                 <TableSection
                     x:Name="OneCar"
                     Title="Select Vehicle">
@@ -261,7 +275,8 @@
                                 <ListView.SeparatorVisibility>None</ListView.SeparatorVisibility>
                                 <ListView.ItemTemplate>
                                     <DataTemplate>
-                                        <ViewCell>
+                                        <ViewCell
+                                            StyleId="none">
                                             <Grid
                                                 VerticalOptions="FillAndExpand"
                                                 ColumnSpacing="10"
@@ -271,7 +286,9 @@
                                                     <ColumnDefinition
                                                         Width="0.3*" />
                                                     <ColumnDefinition
-                                                        Width="*" />
+                                                        Width="0.8*" />
+                                                    <ColumnDefinition
+                                                        Width="0.3*" />
                                                 </Grid.ColumnDefinitions>
                                                 <Grid.RowDefinitions>
                                                     <RowDefinition
@@ -298,6 +315,15 @@
                                                         HorizontalOptions="StartAndExpand"
                                                         Text="{Binding RegistrationNumber}" />
                                                 </StackLayout>
+                                                <Image
+                                                    Grid.Column="2"
+                                                    IsVisible="{Binding IsSelected}"
+                                                    HeightRequest="15"
+                                                    Margin="10,10,10,10"
+                                                    Aspect="AspectFill"
+                                                    VerticalOptions="Center"
+                                                    HorizontalOptions="Center"
+                                                    Source="right-chevron.png" />
                                             </Grid>
                                         </ViewCell>
                                     </DataTemplate>
@@ -330,7 +356,7 @@
                             HorizontalOptions="FillAndExpand"
                             VerticalOptions="Center" />
                     </ViewCell>
-                    </TableSection>
+                </TableSection>
                 <TableSection
                     x:Name="TwoCards"
                     Title="Select Card">
@@ -346,8 +372,10 @@
                             <ListView.SeparatorVisibility>None</ListView.SeparatorVisibility>
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <ViewCell>
+                                    <ViewCell
+                                        StyleId="none">
                                         <Grid
+                                            StyleId="none"
                                             VerticalOptions="FillAndExpand"
                                             ColumnSpacing="10"
                                             RowSpacing="5"
@@ -356,7 +384,9 @@
                                                 <ColumnDefinition
                                                     Width="0.3*" />
                                                 <ColumnDefinition
-                                                    Width="*" />
+                                                    Width="0.7*" />
+                                                <ColumnDefinition
+                                                    Width="0.2*" />
                                                 <ColumnDefinition
                                                     Width="Auto" />
                                             </Grid.ColumnDefinitions>
@@ -392,13 +422,22 @@
                                                 HorizontalOptions="EndAndExpand"
                                                 Margin="0,0,28,0"
                                                 Text="{Binding ExpireMonthYear}" />
+                                            <Image
+                                                Grid.Column="3"
+                                                IsVisible="{Binding IsSelected}"
+                                                HeightRequest="15"
+                                                Margin="10,10,10,10"
+                                                Aspect="AspectFill"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="Center"
+                                                Source="right-chevron.png" />
                                         </Grid>
                                     </ViewCell>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
                     </ViewCell>
-                      <ViewCell
+                    <ViewCell
                         StyleId="none">
                         <Button
                             x:Name="AddNewCardButton"
@@ -425,7 +464,8 @@
                             <ListView.SeparatorVisibility>None</ListView.SeparatorVisibility>
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <ViewCell>
+                                    <ViewCell
+                                        StyleId="none">
                                         <Grid
                                             VerticalOptions="FillAndExpand"
                                             ColumnSpacing="10"
@@ -435,7 +475,9 @@
                                                 <ColumnDefinition
                                                     Width="0.3*" />
                                                 <ColumnDefinition
-                                                    Width="*" />
+                                                    Width="0.6*" />
+                                                <ColumnDefinition
+                                                    Width="0.3*" />
                                                 <ColumnDefinition
                                                     Width="Auto" />
                                             </Grid.ColumnDefinitions>
@@ -471,13 +513,22 @@
                                                 HorizontalOptions="EndAndExpand"
                                                 Margin="0,0,28,0"
                                                 Text="{Binding ExpireMonthYear}" />
+                                            <Image
+                                                Grid.Column="3"
+                                                IsVisible="{Binding IsSelected}"
+                                                HeightRequest="15"
+                                                Margin="10,10,10,10"
+                                                Aspect="AspectFill"
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="Center"
+                                                Source="right-chevron.png" />
                                         </Grid>
                                     </ViewCell>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
                         </ListView>
                     </ViewCell>
-                      <ViewCell
+                    <ViewCell
                         StyleId="none">
                         <Button
                             x:Name="AddNewCardButton1"
@@ -491,7 +542,7 @@
                 </TableSection>
                 <TableSection
                     x:Name="AddNewCard">
-                        <ViewCell
+                    <ViewCell
                         StyleId="none">
                         <Button
                             x:Name="AddNewCardButton2"
@@ -502,12 +553,12 @@
                             HorizontalOptions="FillAndExpand"
                             VerticalOptions="Center" />
                     </ViewCell>
-                 </TableSection>    
+                </TableSection>
             </TableRoot>
         </control:MenuTableView>
         <Button
             x:Name="BookButton"
-             Margin="5"
+            Margin="5"
             HeightRequest="50"
             Style="{StaticResource GreenButton}"
             IsVisible="{Binding CanBook}"

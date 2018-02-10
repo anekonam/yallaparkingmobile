@@ -13,6 +13,7 @@ using ZXing.Net.Mobile.Forms;
 using System.Net;
 using Plugin.MediaManager;
 using Plugin.SimpleAudioPlayer;
+using SkiaSharp.Views.Forms;
 
 namespace YallaParkingMobile {
 	public partial class BookParking : ContentPage {
@@ -41,6 +42,8 @@ namespace YallaParkingMobile {
 			this.Model = model;
 
 			InitializeComponent();
+
+			//this.Model.HasImage = false;
 
             this.parkNowTotalTime = ParkNowTotalTime;
             this.parkLaterTotalTime = ParkLaterTotalTime;
@@ -76,6 +79,7 @@ namespace YallaParkingMobile {
 					Order.Remove(PriceDay);
 				}
 			}
+
 		}
 
 		public BookParkingModel Model {
@@ -162,6 +166,16 @@ namespace YallaParkingMobile {
 			} else {
 				await DisplayAlert("No Promotional Code", "No promotional code provided.", "Ok");
 			}
+		}
+
+        private void Car_Tapped(object sender, Xamarin.Forms.ItemTappedEventArgs e) {
+
+            //var viewCell = (ViewCell)sender;
+
+            //if (viewCell.View != null) {
+            //    viewCell.View.BackgroundColor = Color.Orange;
+            //}
+
 		}
 
 		async void AddNewCarButton_Clicked(object sender, EventArgs e) {

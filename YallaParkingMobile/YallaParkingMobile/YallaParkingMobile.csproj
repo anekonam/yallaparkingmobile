@@ -147,6 +147,7 @@
     <Compile Include="Views\UserCards.xaml.cs">
       <DependentUpon>UserCards.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Control\ExtendedViewCell.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">

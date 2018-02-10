@@ -91,7 +91,9 @@ namespace YallaParkingMobile {
 
 				if (result) {
 					await DisplayAlert("Card Deleted", "Your card has been successfully deleted", "Ok");
-                    await this.Navigation.PopAsync();
+					var card = new UserCards(new BookingModel());
+					card.BindingContext = new WalletModel();
+					await Navigation.PushAsync(card);
 				} else {
 					await DisplayAlert("Card Cancellation Error", "There was a problem deleting your card", "Ok");
 				}

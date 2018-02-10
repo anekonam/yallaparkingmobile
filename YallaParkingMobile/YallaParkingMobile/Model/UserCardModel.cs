@@ -2,9 +2,10 @@
 using Xamarin.Forms;
 using System.Text.RegularExpressions;
 using Telerik.XamarinForms.Common.DataAnnotations;
+using System.ComponentModel;
 
 namespace YallaParkingMobile.Model {
-    public class UserCardModel {
+    public class UserCardModel:INotifyPropertyChanged {
         
 		public int? UserCardId { get; set; }
 
@@ -56,6 +57,24 @@ namespace YallaParkingMobile.Model {
                 return string.Format("**** **** **** {0}", this.LastFourDigits).Replace('*', '\u2022');
             }
         }
+
+        private bool isSelected;
+        public bool IsSelected{
+            get{
+                return isSelected;
+            } set{
+                if(isSelected!=value){
+                    isSelected = value;
+
+                    if(PropertyChanged!=null){
+                        PropertyChanged(this, new PropertyChangedEventArgs("IsSelected"));
+                    }
+
+                }
+            }
+        }
+
+		public event PropertyChangedEventHandler PropertyChanged;
 
 	}
 }

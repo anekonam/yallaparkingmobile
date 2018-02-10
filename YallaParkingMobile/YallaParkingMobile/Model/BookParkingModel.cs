@@ -178,6 +178,8 @@ namespace YallaParkingMobile.Model {
 				if (selectedUserCar != value) {
 					selectedUserCar = value;
 
+                    UpdateSelectedCar();
+
 					if (PropertyChanged != null) {
 						PropertyChanged(this, new PropertyChangedEventArgs("SelectedUserCar"));
                         PropertyChanged(this, new PropertyChangedEventArgs("CanBook"));
@@ -188,7 +190,14 @@ namespace YallaParkingMobile.Model {
 			}
 		}
 
-        private ObservableCollection<UserCarModel> userCars = new ObservableCollection<UserCarModel>();
+        private void UpdateSelectedCar(){
+            foreach(var car in UserCars){
+                car.IsSelected = car == selectedUserCar;
+            }
+        }
+
+
+		private ObservableCollection<UserCarModel> userCars = new ObservableCollection<UserCarModel>();
         public ObservableCollection<UserCarModel> UserCars {
             get {
                 return userCars;
@@ -217,6 +226,8 @@ namespace YallaParkingMobile.Model {
 				if (selectedUserCard != value) {
 					selectedUserCard = value;
 
+                    UpdateSelectedCard();
+
 					if (PropertyChanged != null) {
 						PropertyChanged(this, new PropertyChangedEventArgs("SelectedUserCard"));
 						PropertyChanged(this, new PropertyChangedEventArgs("CanBook"));
@@ -224,6 +235,12 @@ namespace YallaParkingMobile.Model {
 						PropertyChanged(this, new PropertyChangedEventArgs("Booking"));
 					}
 				}
+			}
+		}
+
+		private void UpdateSelectedCard() {
+			foreach (var card in UserCards) {
+				card.IsSelected = card == selectedUserCard;
 			}
 		}
 
