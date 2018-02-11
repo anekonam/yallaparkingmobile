@@ -179,11 +179,13 @@
                         Height="150">
                         <StackLayout>
                             <ListView
-                                x:Name="Cars"
+                                x:Name="Cars"                                  
                                 HasUnevenRows="true"
-                                ItemTapped="Car_Tapped"
                                 ItemsSource="{Binding UserCars}"
-                                SelectedItem="{Binding SelectedUserCar,Mode=TwoWay}">
+                                SelectedItem="{Binding SelectedUserCar,Mode=TwoWay}">  
+                                <x:Arguments>
+    <ListViewCachingStrategy>RetainElement</ListViewCachingStrategy>
+  </x:Arguments>
                                 <ListView.SeparatorVisibility>None</ListView.SeparatorVisibility>
                                 <ListView.ItemTemplate>
                                     <DataTemplate>

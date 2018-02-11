@@ -32,7 +32,6 @@
                 Text="Profile Verification" />
         </ContentView>
         <StackLayout
-             Orientation= "Horizontal"
             Grid.Row="2">
             <Label
                 x:Name="Instruction"

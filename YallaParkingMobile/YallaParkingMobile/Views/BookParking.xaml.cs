@@ -17,8 +17,11 @@ using SkiaSharp.Views.Forms;
 
 namespace YallaParkingMobile {
 	public partial class BookParking : ContentPage {
+        void Handle_Tapped(object sender, System.EventArgs e) {
+            throw new NotImplementedException();
+        }
 
-		private TableSection oneCar;
+        private TableSection oneCar;
 		private TableSection twoCars;
         private TableSection newCar;
 
@@ -143,6 +146,8 @@ namespace YallaParkingMobile {
 			} else if (this.Model.TotalCard >= 2) {
 				TableView.Add(twoCards);
 			}
+
+            await this.Model.SetBookingDefaults();
 		}
 
 		private async void ApplyCodeButton_Clicked(object sender, EventArgs e) {
@@ -168,15 +173,6 @@ namespace YallaParkingMobile {
 			}
 		}
 
-        private void Car_Tapped(object sender, Xamarin.Forms.ItemTappedEventArgs e) {
-
-            //var viewCell = (ViewCell)sender;
-
-            //if (viewCell.View != null) {
-            //    viewCell.View.BackgroundColor = Color.Orange;
-            //}
-
-		}
 
 		async void AddNewCarButton_Clicked(object sender, EventArgs e) {
 			var updateCarDetails = new UpdateCarDetails();
@@ -267,7 +263,7 @@ namespace YallaParkingMobile {
 					await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
 					
 				} 
-			}
+            }
 		}
 	}
 }

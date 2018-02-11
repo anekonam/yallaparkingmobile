@@ -22,6 +22,30 @@ namespace YallaParkingMobile.Model {
             this.AllDay = allDay;
         }
 
+        public async Task SetBookingDefaults(){
+            var bookings = await ServiceUtility.GetBookings();
+
+            if(bookings!=null && bookings.Any()){
+                var lastBooking = bookings.OrderByDescending(b => b.Created).FirstOrDefault();
+
+                if (this.SelectedUserCar == null) {
+                    foreach (var userCar in this.UserCars) {
+                        if (lastBooking.UserCarId == userCar.UserCarId) {
+                            this.SelectedUserCar = userCar;
+                        }
+                    }
+                }
+
+                if (this.SelectedUserCard == null) {
+                    foreach (var userCard in this.UserCards) {
+                        if (lastBooking.UserCardId == userCard.UserCardId) {
+                            this.SelectedUserCard = userCard;
+                        }
+                    }
+                }
+            }
+        }
+
         public bool ParkNow { get; set; }
 
         public bool ParkNowAllDay { 

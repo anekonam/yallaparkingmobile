@@ -12,6 +12,12 @@ namespace YallaParkingMobile.iOS {
 		public override UIKit.UITableViewCell GetCell(Cell item, UIKit.UITableViewCell reusableCell, UIKit.UITableView tv) {
 			var cell = base.GetCell(item, reusableCell, tv);
 
+            cell.SelectionStyle = UITableViewCellSelectionStyle.None;
+            cell.SelectedBackgroundView = new UIView {
+                BackgroundColor = UIColor.White
+            };
+            cell.ContentView.BackgroundColor = UIColor.White;
+
 			switch (item.StyleId) {
 				case "none":
 					cell.Accessory = UIKit.UITableViewCellAccessory.None;

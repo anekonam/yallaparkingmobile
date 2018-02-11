@@ -330,7 +330,7 @@ namespace YallaParkingMobile.Utility {
 			try {
 				var response = await client.PostAsync("/api/parking/book", model.AsJson());
                 return response;
-            } catch(Exception ex) {
+            } catch {
                 return null;
 			}
 		}
@@ -344,7 +344,7 @@ namespace YallaParkingMobile.Utility {
 				if (response.IsSuccessStatusCode) {
 					return true;
 				}
-            } catch(System.Exception ex) {
+            } catch {
                 return false;
 			}
 
