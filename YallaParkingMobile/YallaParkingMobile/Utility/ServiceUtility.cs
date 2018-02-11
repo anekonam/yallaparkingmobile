@@ -313,20 +313,15 @@ namespace YallaParkingMobile.Utility {
 			return null;
 		}
 
-		public static async Task<bool> DeleteUserCard(UserCardModel model) {
+        public static async Task<HttpResponseMessage> DeleteUserCard(UserCardModel model) {
 			InitHttpClient();
 
 			try {
 				var response = await client.PostAsync("/api/account/deleteUserCard", model.AsJson());
-
-				if (response.IsSuccessStatusCode) {
-					return true;
-				}
+                return response;
 			} catch {
-				return false;
+				return null;
 			}
-
-			return false;
 		}
 
         public static async Task<HttpResponseMessage> Book(BookingModel model) {

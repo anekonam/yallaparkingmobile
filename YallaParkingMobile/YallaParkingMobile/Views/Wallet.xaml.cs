@@ -18,6 +18,7 @@ using YallaParkingMobile.Model;
 using YallaParkingMobile.Utility;
 using Plugin.Media.Abstractions;
 using System.Collections.ObjectModel;
+using System.Net;
 
 namespace YallaParkingMobile {
     public partial class Wallet : ContentPage {
@@ -73,8 +74,12 @@ namespace YallaParkingMobile {
             if (userCard != null) {
                 var result = await ServiceUtility.DeleteUserCard(userCard);
 
-                if (!result) {
-                    await DisplayAlert("Delete Card Error", "Unable to delete card", "Ok");
+                if (!result.IsSuccessStatusCode) {
+                    if (result.StatusCode == HttpStatusCode.Forbidden) {
+                        await DisplayAlert("Card Used", "A card that has been used for an existing booking cannot be deleted", "Ok");
+                    } else {
+                        await DisplayAlert("Delete Card Error", "Unable to delete card", "Ok");
+                    }
                 } else{
                     this.Model.UserCards.Remove(userCard);
                 }
