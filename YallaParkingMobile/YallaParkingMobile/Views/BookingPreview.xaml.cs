@@ -57,10 +57,8 @@ namespace YallaParkingMobile {
 
         }
 
-		async void Handle_Appearing(object sender, System.EventArgs e) {
-
+		void Handle_Appearing(object sender, System.EventArgs e) {
             BookButton.IsEnabled = true;
-
 		}
 
 

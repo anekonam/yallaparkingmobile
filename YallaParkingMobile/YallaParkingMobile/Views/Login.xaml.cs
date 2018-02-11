@@ -58,10 +58,8 @@ namespace YallaParkingMobile {
             }            
         }
 		
-		async void FacebookButton_Clicked(object sender, EventArgs e) {
+		void FacebookButton_Clicked(object sender, EventArgs e) {
             Analytics.TrackEvent("Facebook button clicked, submitting Facebook login details");
-
-			
         }
 
         async void ToolbarItem_Activated(object sender, EventArgs e) {

@@ -17,6 +17,7 @@ using Xamarin.Forms.Maps;
 using YallaParkingMobile.Model;
 using YallaParkingMobile.Utility;
 using YallaParkingMobile.Control;
+using System.Net;
 
 namespace YallaParkingMobile {
     public partial class UpdateCardDetails : ContentPage {
@@ -89,13 +90,17 @@ namespace YallaParkingMobile {
 			if (confirm) {
 				var result = await ServiceUtility.DeleteUserCard(this.Model);
 
-				if (result) {
+                if (result.IsSuccessStatusCode) {
 					await DisplayAlert("Card Deleted", "Your card has been successfully deleted", "Ok");
 					var card = new UserCards(new BookingModel());
 					card.BindingContext = new WalletModel();
 					await Navigation.PushAsync(card);
 				} else {
-					await DisplayAlert("Card Cancellation Error", "There was a problem deleting your card", "Ok");
+                    if (result.StatusCode == HttpStatusCode.Forbidden) {
+						await DisplayAlert("Card Used", "This card is associated with a booking and cannot be deleted", "Ok");
+                    } else {
+                        await DisplayAlert("Card Delete Error", "There was a problem deleting your card", "Ok");
+                    }
 				}
 			}
 		}
