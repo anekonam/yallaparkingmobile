@@ -158,7 +158,6 @@ namespace YallaParkingMobile {
 
             await this.RefreshBooking();
 
-			
 
 			UpdateCurrentLocation();
 		}        	

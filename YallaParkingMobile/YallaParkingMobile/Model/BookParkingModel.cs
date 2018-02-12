@@ -34,6 +34,8 @@ namespace YallaParkingMobile.Model {
                             this.SelectedUserCar = userCar;
                         }
                     }
+                } else{
+                    UpdateSelectedCar();
                 }
 
                 if (this.SelectedUserCard == null) {
@@ -42,6 +44,8 @@ namespace YallaParkingMobile.Model {
                             this.SelectedUserCard = userCard;
                         }
                     }
+                } else{
+                    UpdateSelectedCard();
                 }
             }
         }
@@ -216,7 +220,7 @@ namespace YallaParkingMobile.Model {
 
         private void UpdateSelectedCar(){
             foreach(var car in UserCars){
-                car.IsSelected = car == selectedUserCar;
+                car.IsSelected = car.UserCarId == selectedUserCar.UserCarId;
             }
         }
 
@@ -264,7 +268,7 @@ namespace YallaParkingMobile.Model {
 
 		private void UpdateSelectedCard() {
 			foreach (var card in UserCards) {
-				card.IsSelected = card == selectedUserCard;
+                card.IsSelected = card.UserCardId == selectedUserCard.UserCardId;
 			}
 		}
 
