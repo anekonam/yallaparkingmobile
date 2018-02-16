@@ -154,6 +154,12 @@
                         LabelColor="Black"
                         Text="{Binding Property.TotalPrice, StringFormat='AED {0:n2}'}">
                     </EntryCell>
+                     <TextCell
+                        x:Name="ParkingFreeMinutes"
+                        Height="20"
+                        Detail="{Binding FreeMinutes}"
+                        DetailColor="#a1a1b4">
+                    </TextCell>
                     <TextCell
                         Height="20"
                         Detail="{Binding VatMessage}"

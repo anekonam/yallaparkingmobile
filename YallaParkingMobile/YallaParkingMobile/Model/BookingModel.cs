@@ -20,6 +20,8 @@ namespace YallaParkingMobile.Model {
 
         public int? UserCardId { get; set; }
 
+        public string DiscountCode { get; set; }
+
         public string UserCardBrand { get; set; }
 
         public ImageSource UserCardImage {
@@ -116,6 +118,14 @@ namespace YallaParkingMobile.Model {
         public string PropertyShortTermParkingDetails { get; set; }
 
         public int? PropertyShortTermParkingCancelMinutes { get; set; }
+
+        public int? PropertyShortTermParkingFreeMinutes { get; set; }
+
+		public string FreeMinutes {
+			get {
+				return PropertyShortTermParkingFreeMinutes.HasValue ? string.Format("* {0} mins free parking", PropertyShortTermParkingFreeMinutes.Value) : string.Empty;
+			}
+		}
 
         public string EntranceMethod {
             get {

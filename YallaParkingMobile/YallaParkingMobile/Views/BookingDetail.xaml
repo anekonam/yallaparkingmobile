@@ -282,6 +282,12 @@
                 <TableSection
                     x:Name="Order"
                     Title="Order Summary">
+                     <TextCell
+                        x:Name="ParkingFreeMinutes"
+                        Height="20"
+                        Detail="{Binding FreeMinutes}"
+                        DetailColor="#a1a1b4">
+                    </TextCell>
                     <EntryCell
                         x:Name="ParkLater"
                         LabelColor="#a1a1b4"

@@ -103,6 +103,12 @@ namespace YallaParkingMobile.Model {
             }
         }
 
+        public string FreeMinutes{
+            get{
+                return property.ShortTermParkingFreeMinutes.HasValue ? string.Format("* {0} mins free parking",property.ShortTermParkingFreeMinutes.Value) : string.Empty;
+            }
+        }
+
         public bool HasDiscount {
             get {
                 return this.Property.Discount > 0;
@@ -335,6 +341,8 @@ namespace YallaParkingMobile.Model {
 
         public string BookingNumber { get; set; }
 
+        public string DiscountCode { get; set; }
+
         public async Task<HttpResponseMessage> BookParking(){
             var model = new BookingModel {
                 UserCarId = this.SelectedUserCar != null ? this.SelectedUserCar.UserCarId : null,
@@ -346,7 +354,8 @@ namespace YallaParkingMobile.Model {
                 Discount = this.Discount,
                 Hours = this.Property.Hours,
                 ParkNow = this.ParkNow,
-                AllDay = this.AllDay
+                AllDay = this.AllDay,
+                DiscountCode = this.DiscountCode
             };
 
             return await ServiceUtility.Book(model);

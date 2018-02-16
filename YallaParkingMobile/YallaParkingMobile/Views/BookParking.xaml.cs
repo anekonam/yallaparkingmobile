@@ -33,6 +33,8 @@ namespace YallaParkingMobile {
 
         private Frame parkLaterTotalTime;
 
+        private TextCell parkingFreeMinutes;
+
 		void Handle_Appearing(object sender, System.EventArgs e) {
 			throw new NotImplementedException();
 		}
@@ -50,6 +52,11 @@ namespace YallaParkingMobile {
 
             this.parkNowTotalTime = ParkNowTotalTime;
             this.parkLaterTotalTime = ParkLaterTotalTime;
+            this.parkingFreeMinutes = ParkingFreeMinutes;
+
+            if(string.IsNullOrWhiteSpace(this.Model.FreeMinutes)){
+                Order.Remove(parkingFreeMinutes);
+            }
 
             if(this.Model.IsParkLater){
                 Stack.Children.Remove(parkNowTotalTime);
@@ -149,7 +156,6 @@ namespace YallaParkingMobile {
 
             await this.Model.SetBookingDefaults();
 		}
-
 		private async void ApplyCodeButton_Clicked(object sender, EventArgs e) {
 			var discountCode = DiscountCode.Text;
 
@@ -159,6 +165,7 @@ namespace YallaParkingMobile {
 				if (discountResponse.Discount.HasValue) {
 					this.Model.Property.Discount = this.Model.Property.TotalPrice * (discountResponse.Discount.Value / 100);
 					this.Model.Discount = discountResponse.Discount.Value;
+                    this.Model.DiscountCode = discountResponse.DiscountCode;
 					this.ApplyCodeButton.IsVisible = false;
 					this.DiscountCode.IsEnabled = false;
 					Order.Remove(DiscountCode);
