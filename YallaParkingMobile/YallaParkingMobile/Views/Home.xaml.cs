@@ -208,6 +208,15 @@ namespace YallaParkingMobile {
         public ProfileModel UserProfile { get; set; }
 
         async void Handle_Appearing(object sender, System.EventArgs e) {
+            var loginValid = await ServiceUtility.Check();
+
+            if (!loginValid) {
+				PropertyUtility.RemoveKey("Token");
+				PropertyUtility.RemoveKey("LoggedIn");
+				await Navigation.PushAsync(new Login());
+                return; 
+            } 
+
 			var lc = CrossGeolocator.Current;
 		     	lc.DesiredAccuracy = 100;
 
