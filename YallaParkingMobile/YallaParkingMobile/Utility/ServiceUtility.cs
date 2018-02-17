@@ -79,7 +79,7 @@ namespace YallaParkingMobile.Utility {
 			InitHttpClient();
 
 			try {
-				var response = await client.GetAsync("/api/account/profile");
+				var response = await client.GetAsync("/api/account/check");
 
                 return response.IsSuccessStatusCode;
                 } catch {

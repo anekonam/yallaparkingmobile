@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using YallaParkingMobile.Utility;
 using Xamarin.Forms;
-using YallaParkingMobile.Utility;
 using Microsoft.Azure.Mobile.Distribute;
 using YallaParkingMobile.Model;
 
