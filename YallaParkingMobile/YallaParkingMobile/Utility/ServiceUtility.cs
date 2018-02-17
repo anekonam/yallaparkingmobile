@@ -56,6 +56,18 @@ namespace YallaParkingMobile.Utility {
                 return false;
             }            
         }
+	    
+	public static async Task<bool> Check() {
+            InitHttpClient();
+
+            try {
+                var response = await client.GetAsync("/api/account/profile");
+		return response.IsSuccessStatusCode;
+            } catch {
+                return false;
+            }            
+        }
+
 
         public static async Task<HttpResponseMessage> Login(LoginModel model) {
             InitHttpClient();
@@ -73,7 +85,7 @@ namespace YallaParkingMobile.Utility {
             } catch {
                 return null;
             }            
-        }
+        }	   	    
 
         public static async Task<HttpResponseMessage> Register(RegisterModel model) {
             InitHttpClient();
