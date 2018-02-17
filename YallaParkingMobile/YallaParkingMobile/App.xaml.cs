@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using YallaParkingMobile.Utility;
 using Xamarin.Forms;
 using YallaParkingMobile.Utility;
 using Microsoft.Azure.Mobile.Distribute;
@@ -20,11 +20,21 @@ namespace YallaParkingMobile {
             var loggedIn = PropertyUtility.GetValue("LoggedIn") == "true";
 
             if (loggedIn) {
-                Analytics.TrackEvent("Skipping login sequence, navigating to Home");
-                var model = new HomeModel();
-                MainPage = new NavigationPage(new Home(model)) {
-                    BarTextColor = Color.FromRgb(255, 142, 48)
-                };
+                var loginValid = ServiceUtility.Check().Result;
+                
+                if(loginValid){
+                    Analytics.TrackEvent("Skipping login sequence, navigating to Home");
+                    var model = new HomeModel();
+                    MainPage = new NavigationPage(new Home(model)) {
+                        BarTextColor = Color.FromRgb(255, 142, 48)
+                    };
+                } else{
+                    Analytics.TrackEvent("Saved login is invalid");                    
+                    Analytics.TrackEvent("Skipping onboarding sequence, navigating to Create Account");                    
+                    MainPage = new NavigationPage(new CreateAccount()) {
+                        BarTextColor = Color.FromRgb(255,142,48)                    
+                    };    
+                }
             } else if (onboarding) {
                 Analytics.TrackEvent("Skipping onboarding sequence, navigating to Create Account");
                 MainPage = new NavigationPage(new CreateAccount()) {
