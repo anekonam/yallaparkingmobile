@@ -121,11 +121,11 @@ namespace YallaParkingMobile.Model {
 
         public int? PropertyShortTermParkingFreeMinutes { get; set; }
 
-		public string FreeMinutes {
-			get {
-				return PropertyShortTermParkingFreeMinutes.HasValue ? string.Format("* {0} mins free parking", PropertyShortTermParkingFreeMinutes.Value) : string.Empty;
-			}
+	public string FreeMinutes {
+		get {
+			return PropertyShortTermParkingFreeMinutes.HasValue ? string.Format("* {0} mins free parking", PropertyShortTermParkingFreeMinutes.Value) : string.Empty;
 		}
+	}
 
         public string EntranceMethod {
             get {
