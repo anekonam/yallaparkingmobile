@@ -343,7 +343,7 @@
                         LabelColor="#a1a1b4"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
-                        Text="{Binding Discount, StringFormat='{0:n0} %'}" />
+                        Text="{Binding DiscountPercentage, StringFormat='{0:n0} %'}" />
                       <EntryCell
                         x:Name="CancellationCharge"
                         Label="Cancellation Fee"

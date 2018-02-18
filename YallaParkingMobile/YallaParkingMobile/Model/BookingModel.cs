@@ -446,12 +446,26 @@ namespace YallaParkingMobile.Model {
 
         public decimal? Discount { get; set; }
 
+        public decimal DiscountPercentage{
+            get{
+                if(!this.ValidatorUserId.HasValue){
+                    return Discount.HasValue ? this.Discount.Value : 0;
+                } else{
+                    return 100;
+                }
+            }
+        }
+
         public decimal DiscountValue {
             get {
-                if (!this.AllDay) {
-                    return this.Discount.HasValue && this.Hours.HasValue ? (decimal)this.Hours.Value * this.Price * (this.Discount.Value / 100) : 0;
-                } else {
-                    return this.Discount.HasValue ? this.Price * (this.Discount.Value / 100) : 0;
+                if (!this.ValidatorUserId.HasValue) {
+                    if (!this.AllDay) {
+                        return this.Discount.HasValue && this.Hours.HasValue ? (decimal)this.Hours.Value * this.Price * (this.Discount.Value / 100) : 0;
+                    } else {
+                        return this.Discount.HasValue ? this.Price * (this.Discount.Value / 100) : 0;
+                    }
+                } else{
+                    return 0;
                 }
             }
         }
@@ -565,21 +579,28 @@ namespace YallaParkingMobile.Model {
                 if (this.Cancelled.HasValue) {
                     return this.CancellationCharge.HasValue ? this.CancellationCharge.Value : 0.0M;
                 }
-
-                return this.Completed ? this.TotalPrice + this.Vat : this.EstimatedTotalPrice + this.Vat;
+                if (!this.ValidatorUserId.HasValue) {
+                    return this.Completed ? this.TotalPrice + this.Vat : this.EstimatedTotalPrice + this.Vat;
+                } else {
+                    return 0;
+                }
             }
         }
 
         public decimal? Vat {
             get {
-                if (this.Completed && TotalPrice.HasValue) {
-                    var totalVat = (this.TotalPrice.Value * 5) / 100;
+                if (!this.ValidatorUserId.HasValue) {
+                    if (this.Completed && TotalPrice.HasValue) {
+                        var totalVat = (this.TotalPrice.Value * 5) / 100;
 
-                    return totalVat;
+                        return totalVat;
+                    } else {
+                        var estiamtedTotalVat = (this.EstimatedTotalPrice * 5) / 100;
+
+                        return estiamtedTotalVat;
+                    }
                 } else {
-                    var estiamtedTotalVat = (this.EstimatedTotalPrice * 5) / 100;
-
-                    return estiamtedTotalVat;
+                    return 0;
                 }
             }
         }
