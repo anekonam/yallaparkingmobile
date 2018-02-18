@@ -341,16 +341,19 @@ namespace YallaParkingMobile.Model {
 
         public string ParkingCharge {
             get {
-                if (this.TotalPrice.HasValue) {
-                    var price = this.TotalPrice.Value.ToString("n2");
-                    var vat = (this.TotalPrice.Value * 5) / 100;
-                    var priceIncludingVat = this.TotalPrice.Value + vat;
-                    return string.Format("Total price charged AED {0}", priceIncludingVat.ToString("n2"));
+                if (!this.ValidatorUserId.HasValue) {
+                    if (this.TotalPrice.HasValue) {
+                        var price = this.TotalPrice.Value.ToString("n2");
+                        var vat = (this.TotalPrice.Value * 5) / 100;
+                        var priceIncludingVat = this.TotalPrice.Value + vat;
+                        return string.Format("Total price charged AED {0}", priceIncludingVat.ToString("n2"));
+                    }
+                } else{
+                    return "Total price charged AED 0";
                 }
-
-                return null;
+                    return null;
+                }
             }
-        }
 
         public string ParkingCompleteDetails {
             get {
