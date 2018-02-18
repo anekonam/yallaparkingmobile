@@ -308,7 +308,7 @@ namespace YallaParkingMobile.Model {
 
         public bool CanBook{
             get{
-                return this.Property != null;
+                return this.Property != null && this.SelectedUserCar !=null && this.SelectedUserCard != null;
             }
         }
 
