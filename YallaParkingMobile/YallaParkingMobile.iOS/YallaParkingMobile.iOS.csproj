@@ -263,6 +263,7 @@
     <BundleResource Include="Resources\167*167.png" />
     <BundleResource Include="Resources\right-chevron.png" />
     <BundleResource Include="Resources\Y.png" />
+    <BundleResource Include="Resources\Y_1.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
