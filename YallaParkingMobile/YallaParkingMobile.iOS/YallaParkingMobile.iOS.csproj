@@ -514,7 +514,6 @@
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\76*76.png" />
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Y_1.png" />
     <ImageAsset Include="Resources\Media.xcassets\AppIcon.appiconset\Y_1.png" />
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Y.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\menu-logout.png" />
