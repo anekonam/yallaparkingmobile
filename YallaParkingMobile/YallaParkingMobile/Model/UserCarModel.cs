@@ -4,6 +4,8 @@ using Xamarin.Forms;
 
 namespace YallaParkingMobile.Model {
     public class UserCarModel:INotifyPropertyChanged {
+        
+        public event PropertyChangedEventHandler PropertyChanged;
 
 		public int? UserCarId { get; set; }
 
@@ -43,18 +45,15 @@ namespace YallaParkingMobile.Model {
 				return isSelected;
 			}
 			set {
-				if (isSelected != value) {
-					isSelected = value;
-
-					if (PropertyChanged != null) {
-						PropertyChanged(this, new PropertyChangedEventArgs("IsSelected"));
-					}
-
-				}
+                isSelected = value;
+                OnPropertyChanged("IsSelected");
 			}
 		}
 
-		public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
 	}
 }
