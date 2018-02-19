@@ -261,8 +261,8 @@
     <BundleResource Include="Resources\120*120.png" />
     <BundleResource Include="Resources\152*152.png" />
     <BundleResource Include="Resources\167*167.png" />
-    <BundleResource Include="Resources\Y.jpg" />
     <BundleResource Include="Resources\right-chevron.png" />
+    <BundleResource Include="Resources\Y.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -511,8 +511,9 @@
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\152*152.png" />
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\167*167.png" />
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\76*76.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Y_1.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcon.appiconset\Y_1.png" />
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Y.png" />
-    <ImageAsset Include="Resources\Media.xcassets\AppIcon.appiconset\Y.png" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\menu-logout.png" />
