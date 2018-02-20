@@ -119,6 +119,8 @@ namespace YallaParkingMobile
 
         async void BookParking_Appearing(object sender, EventArgs e)
         {
+            base.OnAppearing();
+            this.InitializeComponent();
             NavigationPage.SetBackButtonTitle(this, " ");
 
             var userCars = await ServiceUtility.GetUserCars();
@@ -141,24 +143,16 @@ namespace YallaParkingMobile
 
             }
 
-            if (!this.Model.UserCars.Any())
-            {
-                TableView.Remove(TwoCars);
-                TableView.Remove(OneCar);
-                TableView.Remove(AddNewCar);
+            TableView.Remove(TwoCars);
+            TableView.Remove(OneCar);
+            TableView.Remove(AddNewCar);
 
-                if (this.Model.TotalCar < 1)
-                {
-                    TableView.Add(AddNewCar);
-                }
-                else if (this.Model.TotalCar == 1)
-                {
-                    TableView.Add(oneCar);
-                }
-                else if (this.Model.TotalCar >= 2)
-                {
-                    TableView.Add(twoCars);
-                }
+            if (this.Model.TotalCar < 1) {
+                TableView.Add(AddNewCar);
+            } else if (this.Model.TotalCar == 1) {
+                TableView.Add(oneCar);
+            } else if (this.Model.TotalCar >= 2) {
+                TableView.Add(twoCars);
             }
 
             this.Model.UserCars = new ObservableCollection<UserCarModel>(userCars);
@@ -181,24 +175,16 @@ namespace YallaParkingMobile
                 }
             }
 
-            if (!this.Model.UserCards.Any())
-            {
-                TableView.Remove(TwoCards);
-                TableView.Remove(OneCard);
-                TableView.Remove(AddNewCard);
+            TableView.Remove(TwoCards);
+            TableView.Remove(OneCard);
+            TableView.Remove(AddNewCard);
 
-                if (this.Model.TotalCard < 1)
-                {
-                    TableView.Add(newCard);
-                }
-                else if (this.Model.TotalCard == 1)
-                {
-                    TableView.Add(oneCard);
-                }
-                else if (this.Model.TotalCard >= 2)
-                {
-                    TableView.Add(twoCards);
-                }
+            if (this.Model.TotalCard < 1) {
+                TableView.Add(newCard);
+            } else if (this.Model.TotalCard == 1) {
+                TableView.Add(oneCard);
+            } else if (this.Model.TotalCard >= 2) {
+                TableView.Add(twoCards);
             }
 
             this.Model.UserCards = new ObservableCollection<UserCardModel>(userCards);
