@@ -123,6 +123,34 @@ namespace YallaParkingMobile
             this.InitializeComponent();
             NavigationPage.SetBackButtonTitle(this, " ");
 
+            this.parkNowTotalTime = ParkNowTotalTime;
+            this.parkLaterTotalTime = ParkLaterTotalTime;
+            this.parkingFreeMinutes = ParkingFreeMinutes;
+
+            if (string.IsNullOrWhiteSpace(this.Model.FreeMinutes)) {
+                Order.Remove(parkingFreeMinutes);
+            }
+
+            if (this.Model.IsParkLater) {
+                Stack.Children.Remove(parkNowTotalTime);
+                Order.Remove(ParkNowDiscount);
+            } else {
+                Order.Remove(ParkLaterDiscount);
+                Order.Remove(ParkLaterTotal);
+                Order.Remove(ParkLaterHours);
+                Stack.Children.Remove((ParkLaterTotalTime));
+            }
+
+            if (this.Model.AllDay) {
+                if (Order.Contains(PriceHour)) {
+                    Order.Remove(PriceHour);
+                }
+            } else {
+                if (Order.Contains(PriceDay)) {
+                    Order.Remove(PriceDay);
+                }
+            }
+
             var userCars = await ServiceUtility.GetUserCars();
 
             if (userCars != null && userCars.Any())
