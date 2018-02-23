@@ -89,7 +89,7 @@ namespace YallaParkingMobile.Model {
 
         public ImageSource PropertyImage {
             get {
-                return ImageSource.FromUri(new Uri("http://yallaparking-new.insiso.co.uk/property/image/" + this.PropertyId.ToString()));
+                return ImageSource.FromUri(new Uri("https://yallaparking.com/property/image/" + this.PropertyId.ToString()));
             }
         }
 

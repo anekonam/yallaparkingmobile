@@ -172,7 +172,7 @@ namespace YallaParkingMobile.Model {
 
         public ImageSource Image {
             get {
-                return ImageSource.FromUri(new Uri("http://yallaparking-new.insiso.co.uk/property/image/" + this.PropertyId));
+                return ImageSource.FromUri(new Uri("https://www.yallaparking.com/property/image/" + this.PropertyId));
 
             }
         }
@@ -181,7 +181,7 @@ namespace YallaParkingMobile.Model {
 			get {
                 return this.ShortTermPropertyImages!=null && this.ShortTermPropertyImages.Any() ? 
                            this.ShortTermPropertyImages
-                           .Select(i => new KeyValuePair<int, ImageSource>(i, ImageSource.FromUri(new Uri("http://yallaparking-new.insiso.co.uk/property/getImage/" + i))))
+                           .Select(i => new KeyValuePair<int, ImageSource>(i, ImageSource.FromUri(new Uri("https://www.yallaparking.com/property/getImage/" + i))))
                            .ToList() : null;
 
 			}
