@@ -14,7 +14,7 @@ namespace YallaParkingMobile.Utility {
 
         private static HttpClient client;
 
-        private static string webUrl = "https://yallaparking.com";
+        private static string webUrl = "https://www.yallaparking.com";
         private static void InitHttpClient() {
             client = new HttpClient(new HttpClientHandler {
                 ClientCertificateOptions = ClientCertificateOption.Automatic                
