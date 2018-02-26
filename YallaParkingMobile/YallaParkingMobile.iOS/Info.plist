@@ -33,19 +33,19 @@
 	<key>XSLaunchImageAssets</key>
 	<string>Resources/Media.xcassets/LaunchImages.launchimage</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We are using your location</string>
+	<string>We are using your location to find the nearest available parking spaces</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We are using your location</string>
+	<string>We are using your location to find the nearest available parking spaces</string>
 	<key>NSLocationUsageDescription</key>
-	<string>This permission is required for this application</string>
+	<string>We are using your location to find the nearest available parking spaces</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>We are using your location</string>
+	<string>We are using your location to find the nearest available parking spaces</string>
 	<key>NSCameraUsageDescription</key>
-	<string>This app needs access to the camera to take photos</string>
+	<string>This app needs access to the camera to take photos for providing the necessary personal identification</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>This app needs access to photos</string>
+	<string>This app needs access to photos to provide the necessary valid personal identification</string>
 	<key>NSCalendarsUsageDescription</key>
-	<string>This app needs acces to calendars</string>
+	<string>This app needs acces to calendars for selection of dates and times for booking</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
