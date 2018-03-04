@@ -17,6 +17,8 @@ namespace YallaParkingMobile {
         }    
 
         async void VerifyButton_Clicked(object sender, EventArgs e) {
+            VerifyButton.IsEnabled = false;
+
             Analytics.TrackEvent("Verify button clicked, submitting verification code");
                    
             if (string.IsNullOrWhiteSpace(this.VerificationCode.Text)) {
@@ -28,6 +30,8 @@ namespace YallaParkingMobile {
 			Activity.IsVisible = true;
 
             var success = await ServiceUtility.Verify(this.VerificationCode.Text);
+
+            VerifyButton.IsEnabled = true;
 
             Activity.IsRunning = false;
 			Activity.IsVisible = false;

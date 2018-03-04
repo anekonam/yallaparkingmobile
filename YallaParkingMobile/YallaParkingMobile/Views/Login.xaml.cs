@@ -24,6 +24,8 @@ namespace YallaParkingMobile {
         }
 		
 		async void NextButton_Clicked(object sender, EventArgs e) {
+            NextButton.IsEnabled = false;
+
             Analytics.TrackEvent("Next button clicked, submitting login details");
 
             if (string.IsNullOrWhiteSpace(this.EmailAddress.Text)) {
@@ -43,6 +45,8 @@ namespace YallaParkingMobile {
 			Activity.IsVisible = true;
 
             var result = await ServiceUtility.Login(model);
+
+            NextButton.IsEnabled = true;
 
             Activity.IsRunning = false;
             Activity.IsVisible = false;

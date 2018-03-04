@@ -270,6 +270,7 @@ namespace YallaParkingMobile
 
         async void Book_Clicked(object sender, System.EventArgs e)
         {
+            BookButton.IsEnabled = false;
 
             if (Model.ParkingNow)
             {
@@ -298,6 +299,8 @@ namespace YallaParkingMobile
                                     Model.BookingNumber = string.Format("#{0}", Model.BookingNumber).Replace("\"", "");
 
                                     var entry = await ServiceUtility.Entry(Model.Property.PropertyId, Model.Property.StartDate);
+                                    BookButton.IsEnabled = true;
+
                                     if (entry)
                                     {
                                         var bookingConfirmation = new BookingConfirmation(this.Model);
@@ -344,6 +347,7 @@ namespace YallaParkingMobile
             else
             {
                 var bookingResponse = await Model.BookParking();
+                BookButton.IsEnabled = true;
 
                 if (bookingResponse.IsSuccessStatusCode)
                 {

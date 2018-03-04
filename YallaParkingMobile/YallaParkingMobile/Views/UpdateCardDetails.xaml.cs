@@ -107,6 +107,7 @@ namespace YallaParkingMobile {
 
         async void UpdateButton_Clicked(object sender, EventArgs e) {
             SaveButton.IsEnabled = false;
+
 			if(string.IsNullOrWhiteSpace((this.Model.Name))){
                 await DisplayAlert("Name Required", "Please provide a Name", "Ok");
                 SaveButton.IsEnabled = true;
@@ -134,15 +135,15 @@ namespace YallaParkingMobile {
 
             var userCard = await ServiceUtility.UpdateUserCard(this.Model);
 
+            SaveButton.IsEnabled = true;
+
 			Activity.IsRunning = false;
 			Activity.IsVisible = false;
 
             if (userCard == null) {
                 await DisplayAlert("Card Save Error", "Unable to save your card details, please ensure your card details are valid", "Ok");
-                SaveButton.IsEnabled = true;
             } else {
                 await DisplayAlert("Card Save Confirm", "Your card details have been successfully added to your wallet.", "Ok");
-                SaveButton.IsEnabled = true;
                 await this.Navigation.PopAsync();
             }
         }

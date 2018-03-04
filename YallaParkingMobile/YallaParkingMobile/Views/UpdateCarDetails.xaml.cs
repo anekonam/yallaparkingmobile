@@ -120,6 +120,8 @@ namespace YallaParkingMobile {
         public BookParkingModel BookParking { get; set; }
 
         async void UpdateButton_Clicked(object sender, EventArgs e) {
+            SaveButton.IsEnabled = false;
+
             if(string.IsNullOrWhiteSpace(this.Model.Make)){
                 await DisplayAlert("Make Required", "Please select a car Make", "Ok");
                 return;
@@ -138,6 +140,8 @@ namespace YallaParkingMobile {
             Activity.IsRunning = true;
 
 			var userCar = await ServiceUtility.UpdateUserCar(this.Model);
+
+            SaveButton.IsEnabled = true;
 
 			Activity.IsRunning = false;
 			Activity.IsVisible = false;
