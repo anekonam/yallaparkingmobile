@@ -33,7 +33,5 @@ namespace YallaParkingMobile.Droid {
 			global::ZXing.Net.Mobile.Forms.Android.PermissionsHandler.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 		}
     }
-
-	
 }
 

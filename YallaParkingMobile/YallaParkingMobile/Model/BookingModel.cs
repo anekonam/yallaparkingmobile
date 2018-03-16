@@ -463,12 +463,14 @@ namespace YallaParkingMobile.Model {
             get {
                 if (!this.ValidatorUserId.HasValue) {
                     if (!this.AllDay) {
-                        return this.Discount.HasValue && this.Hours.HasValue ? (decimal)this.Hours.Value * this.Price * (this.Discount.Value / 100) : 0;
+                        var discount = this.Discount.HasValue && this.Hours.HasValue ? (decimal)this.Hours.Value * this.Price * (this.Discount.Value / 100) : 0;
+                        return discount;
                     } else {
-                        return this.Discount.HasValue ? this.Price * (this.Discount.Value / 100) : 0;
+                        var discountValue = this.Discount.HasValue ? this.Price * (this.Discount.Value / 100) : 0;
+                        return discountValue;
                     }
                 } else{
-                    return 0;
+                    return 100;
                 }
             }
         }

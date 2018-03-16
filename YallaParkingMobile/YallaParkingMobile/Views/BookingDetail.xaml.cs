@@ -66,17 +66,24 @@ namespace YallaParkingMobile {
 				Order.Remove(PriceDay);
 			}
 
-            if(this.Model.ParkLater){
+            if(this.Model.ParkLater && !Model.ValidatorUserId.HasValue){
                 Order.Remove(ParkNow);
                 Order.Remove(ParkNowDiscount);
+                Order.Remove(ParkLaterValidatorDiscount);
+            } else if(model.ParkLater && Model.ValidatorUserId.HasValue){
+                Order.Remove(ParkNow);
+                Order.Remove(ParkNowDiscount);
+                Order.Remove(ParkLaterDiscount);
             } else{
                 Order.Remove(ParkLaterDiscount);
                 Order.Remove(ParkLater);
+                Order.Remove(ParkLaterValidatorDiscount);
             }
 
 			if (this.Model.ParkNow && this.Model.AllDay) {
 				Order.Remove(ParkLater);
                 Order.Remove(ParkLaterDiscount);
+                Order.Remove(ParkLaterValidatorDiscount);
 			}
 
             this.cancellationCharge = CancellationCharge;

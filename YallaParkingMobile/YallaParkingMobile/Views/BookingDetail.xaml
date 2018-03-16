@@ -337,6 +337,13 @@
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
                         Text="{Binding DiscountValue, StringFormat='-AED {0:n2}'}" />
+                     <EntryCell
+                        x:Name="ParkLaterValidatorDiscount"
+                        Label="Discount"
+                        LabelColor="#a1a1b4"
+                        HorizontalTextAlignment="End"
+                        IsEnabled="False"
+                        Text="{Binding DiscountValue, StringFormat='{0:n0} %'}" />
                       <EntryCell
                         x:Name="ParkNowDiscount"
                         Label="Discount"
