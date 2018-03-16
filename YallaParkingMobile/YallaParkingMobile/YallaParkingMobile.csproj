@@ -350,9 +350,6 @@
     <Reference Include="DurianCode.PlacesSearchBar">
       <HintPath>..\..\packages\DurianCode.PlacesSearchBar.1.0.0\lib\portable45-net45+win8+wp8+wpa81\DurianCode.PlacesSearchBar.dll</HintPath>
     </Reference>
-    <Reference Include="TK.CustomMap">
-      <HintPath>..\..\packages\TK.CustomMap.1.5.1\lib\portable-net45+win8+wpa81+wp8\TK.CustomMap.dll</HintPath>
-    </Reference>
     <Reference Include="Humanizer">
       <HintPath>..\..\packages\Humanizer.Core.2.2.0\lib\netstandard1.0\Humanizer.dll</HintPath>
     </Reference>
@@ -373,6 +370,9 @@
     </Reference>
     <Reference Include="Plugin.SimpleAudioPlayer">
       <HintPath>..\..\packages\Xam.Plugin.SimpleAudioPlayer.1.0.1\lib\netstandard1.0\Plugin.SimpleAudioPlayer.dll</HintPath>
+    </Reference>
+    <Reference Include="TK.CustomMap">
+      <HintPath>..\..\packages\TK.CustomMap.1.5.1\lib\portable-net45+win8+wpa81+wp8\TK.CustomMap.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

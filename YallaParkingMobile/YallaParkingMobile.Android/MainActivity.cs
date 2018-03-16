@@ -10,6 +10,8 @@ using Android.OS;
 using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Distribute;
 using ImageCircle.Forms.Plugin.Droid;
+using TK.CustomMap;
+using TK.CustomMap.Droid;
 
 namespace YallaParkingMobile.Droid {
     [Activity(Label = "YallaParkingMobile", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
