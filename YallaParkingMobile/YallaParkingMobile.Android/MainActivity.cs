@@ -29,6 +29,7 @@ namespace YallaParkingMobile.Droid {
             ZXing.Net.Mobile.Forms.Android.Platform.Init();
             LoadApplication(new App());
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity = this;
+            //TKGoogleMaps.Init(this, bundle);
             MobileCenter.Start("7543c5d7-d484-4a54-a528-26d0bb7744e3", typeof(Distribute));
         }
 

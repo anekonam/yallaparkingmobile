@@ -44,7 +44,7 @@
                                 WidthRequest="320"
                                 HeightRequest="200"
                                 IsVisible="false"
-                                IsShowingUser="true"
+                                IsShowingUser="false"
                                 VerticalOptions="FillAndExpand"
                                 MapClicked="Map_MapClicked"
                                 PinSelected="Handle_PinSelected"

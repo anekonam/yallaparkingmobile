@@ -8,8 +8,7 @@ using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json;
 
 namespace YallaParkingMobile.Model {
-    //[PreserveAttribute(AllMembers = true)]
-    [JsonObject(MemberSerialization.OptIn)]
+    [PreserveAttribute(AllMembers = true)]
     public class LoginModel {       
 
         public string EmailAddress { get; set; }

@@ -6,8 +6,6 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using YallaParkingMobile.Model;
-using System.Net;
-using Newtonsoft.Json.Linq;
 
 namespace YallaParkingMobile.Utility {
 
@@ -15,7 +13,7 @@ namespace YallaParkingMobile.Utility {
 
         private static HttpClient client;
 
-        private static string webUrl = "https://www.yallaparking.com";
+        private static string webUrl = "http://yallaparking-new.insiso.co.uk";
         private static void InitHttpClient() {
             client = new HttpClient(new HttpClientHandler {
                 ClientCertificateOptions = ClientCertificateOption.Automatic                

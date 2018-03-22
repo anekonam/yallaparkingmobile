@@ -17,7 +17,7 @@ namespace YallaParkingMobile.Android {
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e) {
             base.OnElementPropertyChanged(sender, e);
 
-            //Control.Layer.BorderWidth = 0;
+            //Control..BorderWidth = 0;
             //Control.BorderStyle = UITextBorderStyle.None;
         }
     }
