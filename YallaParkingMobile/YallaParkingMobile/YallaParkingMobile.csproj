@@ -251,9 +251,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Telerik.Documents.SpreadsheetStreaming, Version=2017.3.913.234, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Telerik.UI.for.Xamarin.2017.3.913.3\lib\portable-net45+win8+wpa81+wp8\Telerik.Documents.SpreadsheetStreaming.dll</HintPath>
     </Reference>
@@ -373,6 +370,9 @@
     </Reference>
     <Reference Include="TK.CustomMap">
       <HintPath>..\..\packages\TK.CustomMap.1.5.1\lib\portable-net45+win8+wpa81+wp8\TK.CustomMap.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.11.0.1\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

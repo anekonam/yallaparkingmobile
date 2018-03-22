@@ -50,7 +50,7 @@ namespace YallaParkingMobile.iOS {
             if (string.IsNullOrEmpty(name) || items == null)
                 return null;
 
-            return items.ToList().Where(itemData => name.Equals(itemData.Name)).FirstOrDefault();
+            return items.ToList().Where(itemData => name.Equals(itemData.Text)).FirstOrDefault();
         }
     }
 }

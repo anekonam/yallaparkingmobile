@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using YallaParkingMobile.Model;
 using System.Net;
+using Newtonsoft.Json.Linq;
 
 namespace YallaParkingMobile.Utility {
 
@@ -60,6 +61,9 @@ namespace YallaParkingMobile.Utility {
         public static async Task<HttpResponseMessage> Login(LoginModel model) {
             InitHttpClient();
 
+            //var json = JsonConvert.SerializeObject(model);
+            //var stringContent = new StringContent(json, Encoding.UTF8, "application/json");
+
             try {
                 var response = await client.PostAsync("/api/account/login", model.AsJson());
 
@@ -70,7 +74,7 @@ namespace YallaParkingMobile.Utility {
                 }
 
                 return response;
-            } catch {
+            } catch(Exception ex){
                 return null;
             }            
         }
