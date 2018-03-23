@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 
 using YallaParkingMobile.Control;
+using YallaParkingMobile.Android;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using System.ComponentModel;
-using YallaParkingMobile.Android;
 
-[assembly: ExportRenderer(typeof(BorderlessDatePicker), typeof(BorderlessDatePickerRenderer))]
+[assembly: ExportRenderer(typeof(BorderlessEntry), typeof(BorderlessEntryRenderer))]
 namespace YallaParkingMobile.Android {
-    public class BorderlessDatePickerRenderer : DatePickerRenderer {
+    public class BorderlessEntryRenderer : EntryRenderer {
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e) {
             base.OnElementPropertyChanged(sender, e);
 

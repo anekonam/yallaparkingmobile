@@ -45,7 +45,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <AndroidSupportedAbis>arm64-v8a;armeabi;armeabi-v7a;x86;x86_64</AndroidSupportedAbis>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -306,6 +307,9 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="BorderlessDatePickerRenderer.cs" />
+    <Compile Include="BorderlessEntryRenderer.cs" />
+    <Compile Include="BorderlessPickerRenderer.cs" />
+    <Compile Include="BorderlessTimePickerRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
