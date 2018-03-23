@@ -34,6 +34,8 @@
                 <Setter Property="BorderRadius" Value="4" />
                 <Setter Property="FontSize" Value="16" />
                 <Setter Property="TextColor" Value="#5fd25f" />
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
             </Style>
             <Style x:Key="RedButton" TargetType="Button">
                 <Setter Property="BorderRadius" Value="5" />
@@ -47,6 +49,8 @@
             <Style x:Key="GreyTextButton" TargetType="Button">
                 <Setter Property="TextColor" Value="#a1a1b4" />
                 <Setter Property="FontSize" Value="16" />
+                <Setter Property="BackgroundColor" Value="Transparent"/>
+                <Setter Property="BorderColor" Value="Transparent"/>
             </Style>
         </ResourceDictionary>
     </Application.Resources>
