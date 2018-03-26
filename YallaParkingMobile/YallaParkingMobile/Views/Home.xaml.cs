@@ -272,8 +272,6 @@ namespace YallaParkingMobile {
                 var startDate = this.SearchDate.Date;
                 startDate.Date.Add(this.SearchTime.Time);
 
-                BusyIndicator.IsBusy = false;
-
                 var search = new SearchModel {
                     StartDate = startDate,
                     Hours = (int)this.ParkLaterHoursSlider.Value
@@ -321,8 +319,7 @@ namespace YallaParkingMobile {
 
 					this.Map.CustomPins = pins;
 				}
-
-                BusyIndicator.IsBusy = false;
+                 
 
                 if (!Map.IsVisible) {
                     Map.IsVisible = true;

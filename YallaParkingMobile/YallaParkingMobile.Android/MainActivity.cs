@@ -24,24 +24,19 @@ namespace YallaParkingMobile.Droid {
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            ImageCircleRenderer.Init();
+            ImageCircleRenderer.Init();        
             Xamarin.FormsMaps.Init(this, bundle);
             ZXing.Net.Mobile.Forms.Android.Platform.Init();
             LoadApplication(new App());
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Activity = this;
             //TKGoogleMaps.Init(this, bundle);
             MobileCenter.Start("7543c5d7-d484-4a54-a528-26d0bb7744e3", typeof(Distribute));
-            AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
         }
 
 		public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults) {
 			base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
             PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 		}
-
-        private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e) {
-            Console.WriteLine(e.ExceptionObject.ToString());
-        }
     }
 }
 

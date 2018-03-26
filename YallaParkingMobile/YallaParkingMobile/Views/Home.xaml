@@ -28,29 +28,15 @@
                         <RowDefinition
                             Height="Auto" />
                     </Grid.RowDefinitions>
-                    <telerikPrimitives:RadBusyIndicator
-                        x:Name="BusyIndicator"
-                        AnimationContentHeightRequest="50"
-                        AnimationContentWidthRequest="50"
-                        AnimationContentColor="#ff8e30"
-                        Grid.Row="0">
-                        <telerikPrimitives:RadBusyIndicator.BusyContent>
-                            <Label
-                                Text="Searching for parking spaces..." />
-                        </telerikPrimitives:RadBusyIndicator.BusyContent>
-                        <telerikPrimitives:RadBusyIndicator.Content>
-                            <customMap:TKCustomMap
+                    <customMap:TKCustomMap
                                 x:Name="Map"
                                 WidthRequest="320"
                                 HeightRequest="200"
-                                IsVisible="false"
-                                IsShowingUser="false"
+                                IsShowingUser="true"
                                 VerticalOptions="FillAndExpand"
                                 MapClicked="Map_MapClicked"
                                 PinSelected="Handle_PinSelected"
                                 MapType="Street" />
-                        </telerikPrimitives:RadBusyIndicator.Content>
-                    </telerikPrimitives:RadBusyIndicator>
                     <Frame
                         x:Name="SearchFrame"
                         Margin="15,20,15,0"

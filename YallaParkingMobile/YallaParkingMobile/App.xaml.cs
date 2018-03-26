@@ -23,17 +23,20 @@ namespace YallaParkingMobile {
 				Analytics.TrackEvent("Skipping login sequence, navigating to Home");
 				var model = new HomeModel();
 				MainPage = new NavigationPage(new Home(model)) {
-					BarTextColor = Color.FromRgb(255, 142, 48)
+					BarTextColor = Color.FromRgb(255, 142, 48),
+                    BarBackgroundColor = Color.FromRgb(255,255,255)
 				};                            
             } else if (onboarding) {
                 Analytics.TrackEvent("Skipping onboarding sequence, navigating to Create Account");
                 MainPage = new NavigationPage(new CreateAccount()) {
-                    BarTextColor = Color.FromRgb(255,142,48)                    
+                    BarTextColor = Color.FromRgb(255,142,48),
+                    BarBackgroundColor = Color.FromRgb(255, 255, 255)
                 };                
             } else {
                 Analytics.TrackEvent("Activating onboarding sequence");
                 MainPage = new NavigationPage(new SignupPage1()) {                    
-                    BarTextColor = Color.FromRgb(255, 142, 48)
+                    BarTextColor = Color.FromRgb(255, 142, 48),
+                    BarBackgroundColor = Color.FromRgb(255, 255, 255)
                 };
             }
         }
