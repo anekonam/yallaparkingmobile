@@ -239,6 +239,7 @@
                             Text="Find Parking"
                             TextColor="#ff8e30"
                             HorizontalOptions="Start"
+                             BackgroundColor="Transparent"
                             Clicked="FindParking_Clicked" />
                     </StackLayout>
                     <StackLayout
@@ -255,6 +256,7 @@
                             Text="My Bookings"
                             TextColor="#ff8e30"
                             HorizontalOptions="Start"
+                             BackgroundColor="Transparent"
                             Clicked="MyBookings_Clicked" />
                     </StackLayout>
                     <StackLayout
@@ -271,6 +273,7 @@
                             Text="My Profile"
                             TextColor="#ff8e30"
                             HorizontalOptions="Start"
+                             BackgroundColor="Transparent"
                             Clicked="MyProfile_Clicked" />
                     </StackLayout>
                     <StackLayout
@@ -287,6 +290,7 @@
                             Text="Invite"
                             TextColor="#ff8e30"
                             HorizontalOptions="Start"
+                             BackgroundColor="Transparent"
                             Clicked="Invite_Clicked" />
                     </StackLayout>
                 </StackLayout>

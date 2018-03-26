@@ -147,6 +147,9 @@
     <Compile Include="Views\UserCards.xaml.cs">
       <DependentUpon>UserCards.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\MyMapPage.xaml.cs">
+      <DependentUpon>MyMapPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml">
@@ -202,6 +205,10 @@
     <EmbeddedResource Include="Views\UserCards.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MyMapPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

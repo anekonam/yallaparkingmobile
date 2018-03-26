@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using YallaParkingMobile.Views;
 
 namespace YallaParkingMobile {
     public partial class SignupPage1 : ContentPage {

@@ -42,7 +42,7 @@
             Text="In order to show parking spaces around you, we need to access your location" />
 
         <ContentView
-            Padding="0,10,0,40"
+            Padding="0,5,0,35"
             Grid.Row="7"
             Grid.Column="1"
             Grid.ColumnSpan="2">

@@ -310,6 +310,7 @@
     <Compile Include="BorderlessEntryRenderer.cs" />
     <Compile Include="BorderlessPickerRenderer.cs" />
     <Compile Include="BorderlessTimePickerRenderer.cs" />
+    <Compile Include="StandardViewCellRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

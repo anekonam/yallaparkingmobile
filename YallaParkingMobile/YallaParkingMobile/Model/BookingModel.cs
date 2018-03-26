@@ -58,7 +58,7 @@ namespace YallaParkingMobile.Model {
         public ImageSource UserCarImage {
             get {
                 if (!string.IsNullOrWhiteSpace(this.UserCarMake)) {
-                    return ImageSource.FromFile(string.Format("{0}-logo.png", this.UserCarMake.Replace(" ", "-")));
+                    return ImageSource.FromFile(string.Format("{0}_logo.png", this.UserCarMake.Replace(" ", "_")));
                 }
 
                 return null;

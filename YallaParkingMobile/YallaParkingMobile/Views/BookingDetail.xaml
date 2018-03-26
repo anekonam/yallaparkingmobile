@@ -294,12 +294,14 @@
                         Label="Number of hours"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
+                        StyleId = "None"
                         Text="{Binding TotalHours}" />
                     <EntryCell
                         x:Name="ParkNow"
                         LabelColor="#a1a1b4"
                         Label="Total time spent"
                         HorizontalTextAlignment="End"
+                        StyleId = "None"
                         IsEnabled="False"
                         Text="{Binding ParkNowActiveTime}" />
                       <EntryCell
@@ -308,6 +310,7 @@
                         Label="Number of days"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
+                        StyleId = "None"
                         Text="{Binding TotalDays}" />
                     <EntryCell
                         x:Name="PriceHour"
@@ -315,6 +318,7 @@
                         Label="Price per hour"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
+                        StyleId = "None"
                         Text="{Binding Price, StringFormat='AED {0:n2}'}" />
                     <EntryCell
                         x:Name="PriceDay"
@@ -329,6 +333,7 @@
                         Label="Price per day"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
+                        StyleId = "None"
                         Text="{Binding Price, StringFormat='AED {0:n2}'}" />
                     <EntryCell
                         x:Name="ParkLaterDiscount"
@@ -336,6 +341,7 @@
                         LabelColor="#a1a1b4"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
+                        StyleId = "None"
                         Text="{Binding DiscountValue, StringFormat='-AED {0:n2}'}" />
                      <EntryCell
                         x:Name="ParkLaterValidatorDiscount"
@@ -343,6 +349,7 @@
                         LabelColor="#a1a1b4"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
+                        StyleId = "None"
                         Text="{Binding DiscountValue, StringFormat='{0:n0} %'}" />
                       <EntryCell
                         x:Name="ParkNowDiscount"
@@ -350,6 +357,7 @@
                         LabelColor="#a1a1b4"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
+                        StyleId = "None"
                         Text="{Binding DiscountPercentage, StringFormat='{0:n0} %'}" />
                       <EntryCell
                         x:Name="CancellationCharge"
@@ -357,6 +365,7 @@
                         LabelColor="#a1a1b4"
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
+                        StyleId = "None"
                         Text="{Binding CancellationCharge, StringFormat='AED {0:n2}'}" />
                      <EntryCell
                         x:Name="Vat"
@@ -364,6 +373,7 @@
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
                         LabelColor="Black"
+                        StyleId = "None"
                         Text="{Binding Vat, StringFormat='AED {0:n2}'}"/>
                     <EntryCell
                         x:Name="Total"
@@ -371,6 +381,7 @@
                         HorizontalTextAlignment="End"
                         IsEnabled="False"
                         LabelColor="Black"
+                        StyleId = "None"
                         Text="{Binding Total, StringFormat='AED {0:n2}'}"/>
                 </TableSection>
                 <TableSection
