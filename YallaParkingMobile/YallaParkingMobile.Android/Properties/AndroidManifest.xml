@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto">
 	<uses-sdk />
-	<uses-permission android:name="YallaParkingMobile.android.permission.ACCESS_COARSE_LOCATION" />
-	<uses-permission android:name="YallaParkingMobile.android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
-	<uses-permission android:name="YallaParkingMobile.android.permission.ACCESS_FINE_LOCATION" />
-	<uses-permission android:name="YallaParkingMobile.android.permission.ACCESS_MOCK_LOCATION" />
-	<uses-permission android:name="YallaParkingMobile.android.permission.ACCESS_NETWORK_STATE" />
-	<uses-permission android:name="YallaParkingMobile.android.permission.ACCESS_WIFI_STATE" />
-	<uses-permission android:name="YallaParkingMobile.android.permission.INTERNET" />
-	<uses-permission android:name="YallaParkingMobile.android.permission.CAMERA" />
-	<uses-permission android:name="YallaParkingMobile.android.permission.MAPS_RECEIVE" />
-	<!--<permission android:name="YallaParkingMobile.android.permission.MAPS_RECEIVE"/>-->
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.MAPS_RECEIVE" />
 	<application android:label="YallaParkingMobile.Android" android:icon="@drawable/icon">
 		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyCz3rmlS7ThnvZJ0oq-GYmlWRSbceEyQrE" />
 	</application>
