@@ -45,6 +45,9 @@ namespace YallaParkingMobile {
 
             Analytics.TrackEvent("Viewing Home Page");
 
+            Map = new TKCustomMap(
+                MapSpan.FromCenterAndRadius(new Xamarin.Forms.Maps.Position(25.2048, 55.2708), Distance.FromMiles(0.3)));
+
             PropertyUtility.SetValue("LoggedIn", "true");
             PropertyUtility.RemoveKey("query");
             PropertyUtility.RemoveKey("hours");             

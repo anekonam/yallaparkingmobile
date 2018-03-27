@@ -311,7 +311,6 @@
     <Compile Include="BorderlessPickerRenderer.cs" />
     <Compile Include="BorderlessTimePickerRenderer.cs" />
     <Compile Include="StandardViewCellRenderer.cs" />
-    <Compile Include="ContentPageRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
