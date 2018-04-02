@@ -569,7 +569,7 @@
             Margin="5"
             HeightRequest="50"
             Style="{StaticResource GreenButton}"
-            IsVisible="{Binding CanBook}"
+            IsEnabled="{Binding CanBook}"
             Text="{Binding ButtonText}"
             Clicked="Book_Clicked"
             HorizontalOptions="FillAndExpand"

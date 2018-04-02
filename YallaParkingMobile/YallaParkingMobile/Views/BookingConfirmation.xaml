@@ -47,7 +47,7 @@
                     x:Name ="BookingReference"
                     Margin="40,10,40,0"
                     HorizontalTextAlignment="Center"
-                    FontSize="16"
+                    FontSize="18"
                     Style="{StaticResource Header}"/>
             </StackLayout>
             <ContentView

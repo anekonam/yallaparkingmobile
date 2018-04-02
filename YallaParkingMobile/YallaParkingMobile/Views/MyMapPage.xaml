@@ -8,7 +8,9 @@
         <maps:Map WidthRequest="320" HeightRequest="200"
             x:Name="MyMap"
             IsShowingUser="true"
-            MapType="Hybrid"
+            MapClicked="Map_MapClicked"
+            PinSelected="Handle_PinSelected"
+            MapType="Street"
         />
     </StackLayout>
 </ContentPage>
