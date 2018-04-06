@@ -36,7 +36,8 @@
                                 VerticalOptions="FillAndExpand"
                                 MapClicked="Map_MapClicked"
                                 PinSelected="Handle_PinSelected"
-                                MapType="Street" />
+                                MapType="Street">
+                    </customMap:TKCustomMap>
                     <Frame
                         x:Name="SearchFrame"
                         Margin="15,20,15,0"

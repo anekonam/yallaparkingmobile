@@ -45,8 +45,8 @@ namespace YallaParkingMobile {
 
             Analytics.TrackEvent("Viewing Home Page");
 
-            Map = new TKCustomMap(
-                MapSpan.FromCenterAndRadius(new Xamarin.Forms.Maps.Position(25.2048, 55.2708), Distance.FromMiles(0.3)));
+            var dubai = new Xamarin.Forms.Maps.Position(25.2048, 55.2708);
+            var mapView = new TKCustomMap(MapSpan.FromCenterAndRadius(dubai, Distance.FromMiles(0.3)));
 
             PropertyUtility.SetValue("LoggedIn", "true");
             PropertyUtility.RemoveKey("query");
@@ -127,7 +127,8 @@ namespace YallaParkingMobile {
             if (place != null) {
                 this.Place = place;
                 var position = new Xamarin.Forms.Maps.Position(place.Latitude, place.Longitude);
-                Map.MoveToRegion(MapSpan.FromCenterAndRadius(position, Distance.FromMeters(800)));
+                Map.MapCenter = position;
+                Map.MoveToRegion(MapSpan.FromCenterAndRadius(Map.MapCenter, Distance.FromMeters(800)));
 
                 if (this.Map.CustomPins !=null && !this.Map.CustomPins.Any(p => p.Position.Latitude == place.Latitude && p.Position.Longitude == place.Longitude)) {
                     if (placePin != null && placePin.BindingContext.GetType() == typeof(Place)) {

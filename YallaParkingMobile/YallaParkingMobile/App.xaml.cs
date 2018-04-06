@@ -9,7 +9,6 @@ using YallaParkingMobile.Utility;
 using Xamarin.Forms;
 using Microsoft.Azure.Mobile.Distribute;
 using YallaParkingMobile.Model;
-using Xamarin.Forms.Maps;
 
 namespace YallaParkingMobile {
     public partial class App : Application {

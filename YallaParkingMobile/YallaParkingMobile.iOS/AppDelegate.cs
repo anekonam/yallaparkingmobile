@@ -27,9 +27,10 @@ namespace YallaParkingMobile.iOS {
         
 
         public override bool FinishedLaunching(UIApplication app, NSDictionary options) {
-            global::Xamarin.Forms.Forms.Init();            
+            global::           
             Xamarin.FormsMaps.Init();
-			TKCustomMapRenderer.InitMapRenderer();
+            Forms.Init();
+            var renderer = new TKCustomMapRenderer();
             ImageCircleRenderer.Init();
             ZXing.Net.Mobile.Forms.iOS.Platform.Init();
             Distribute.DontCheckForUpdatesInDebug();

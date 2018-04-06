@@ -22,7 +22,7 @@ namespace YallaParkingMobile.Views {
                 Type = PinType.Place,
                 Position = position,
                 Label = "custom pin",
-                Address = "custom detail info"
+                Address = "custom detail info",
             };
             map.Pins.Add(pin);
 
