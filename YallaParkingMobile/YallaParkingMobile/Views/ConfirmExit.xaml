@@ -10,28 +10,31 @@
             <RowDefinition
                 Height="*" />
             <RowDefinition
-                Height="Auto" />
-            <RowDefinition
-                Height="Auto" />
+                Height="Auto" />         
             <RowDefinition
                 Height="Auto" />
         </Grid.RowDefinitions>
         <Image
             Margin="40"
-            Source="car.png"
+            Source="bookingConfirmed.png"
             Grid.Row="0"
             VerticalOptions="Center"
-            Aspect="AspectFit" />
-        <ContentView
+            Aspect="AspectFit" />       
+        <StackLayout
             Padding="0,40,0,0"
             Grid.Row="1">
+             <Label
+                    x:Name ="BookingReference"
+                    Margin="40,10,40,0"
+                    HorizontalTextAlignment="Center"
+                    FontSize="30"
+                    FontAttributes="Bold"
+                    Text="{Binding Number}"
+                    Style="{StaticResource Header}"/>
             <Label
                 Style="{StaticResource Header}"
                 VerticalTextAlignment="Center"
                 Text="Parking Complete" />
-        </ContentView>
-        <StackLayout
-            Grid.Row="2">
             <Label
                 Margin="40,10,40,10"
                 HorizontalTextAlignment="Center"
@@ -51,7 +54,7 @@
         </StackLayout>
         <ContentView
             Padding="40"
-            Grid.Row="3">
+            Grid.Row="2">
             <Button
                 x:Name="YallaButton"
                 Clicked="YallaButton_Clicked"
