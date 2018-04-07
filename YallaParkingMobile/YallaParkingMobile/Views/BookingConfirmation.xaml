@@ -15,45 +15,36 @@
                 <RowDefinition
                     Height="Auto" />
                 <RowDefinition
-                    Height="Auto" />
-                <RowDefinition
-                    Height="Auto" />
+                    Height="Auto" />           
             </Grid.RowDefinitions>
             <Image
                 Margin="40"
                 Source="bookingConfirmed.png"
                 Grid.Row="0"
                 VerticalOptions="Center"
-                Aspect="AspectFit" />
-            <ContentView
-                Padding="0,40,0,0"
-                Grid.Row="1">
-                <Label
-                    Style="{StaticResource Header}"
-                    VerticalTextAlignment="Center"
-                    Text="Booking Confirmed" />
-            </ContentView>
+                Aspect="AspectFit" />           
             <StackLayout
-                Grid.Row="2">
-                <Label
-                    x:Name="Instruction"
-                    Margin="40,20,40,20"
-                    HorizontalTextAlignment="Center" />
-                <Label
-                    Margin="40,10,40,0"
-                    HorizontalTextAlignment="Center"
-                    Text="Booking Reference" />
-                <Label
+                Grid.Row="1">
+                 <Label
                     x:Name ="BookingReference"
-                    Margin="40,10,40,0"
+                    Margin="40,20,40,0"
                     HorizontalTextAlignment="Center"
                     FontSize="30"
                     FontAttributes="Bold"
                     Style="{StaticResource Header}"/>
+                  <Label
+                    Margin="40,10,40,20"
+                    Style="{StaticResource Header}"
+                    VerticalTextAlignment="Center"
+                    Text="Booking Confirmed" />
+                <Label
+                    x:Name="Instruction"
+                    Margin="40,10,40,0"
+                    HorizontalTextAlignment="Center" />      
             </StackLayout>
             <ContentView
                 Padding="40"
-                Grid.Row="3">
+                Grid.Row="2">
                 <Button
                     x:Name="DoneButton"
                     Clicked="DoneButton_Clicked"
