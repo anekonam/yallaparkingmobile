@@ -19,15 +19,16 @@
             </Grid.RowDefinitions>
             <Image
                 Margin="40"
-                Source="bookingConfirmed.png"
+                Source="car.png"
                 Grid.Row="0"
                 VerticalOptions="Center"
                 Aspect="AspectFit" />           
             <StackLayout
+                Padding="0,40,0,0"
                 Grid.Row="1">
                  <Label
                     x:Name ="BookingReference"
-                    Margin="40,20,40,0"
+                    Margin="40,10,40,0"
                     HorizontalTextAlignment="Center"
                     FontSize="30"
                     FontAttributes="Bold"
