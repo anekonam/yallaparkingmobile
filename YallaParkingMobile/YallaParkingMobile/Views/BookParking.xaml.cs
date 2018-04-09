@@ -270,109 +270,88 @@ namespace YallaParkingMobile
 
         async void Book_Clicked(object sender, System.EventArgs e)
         {
-            BookButton.IsEnabled = false;
+            if (Model.SelectedUserCar == null || Model.SelectedUserCard == null) {
+                await DisplayAlert("Booking Error", "Please select a car and a card to proceed with your booking", "Ok");
+                await Navigation.PopAsync();
+            } else {
+                BookButton.IsEnabled = false;
 
-            if (Model.ParkingNow)
-            {
-                var scanPage = new ZXingScannerPage();
-                bool scanFinished = false;
+                if (Model.ParkingNow) {
+                    var scanPage = new ZXingScannerPage();
+                    bool scanFinished = false;
 
-                scanPage.OnScanResult += (result) =>
-                {
-                    // Stop scanning
-                    scanPage.IsScanning = false;
+                    scanPage.OnScanResult += (result) => {
+                        // Stop scanning
+                        scanPage.IsScanning = false;
 
-                    // Pop the page and show the result
-                    Device.BeginInvokeOnMainThread(async () =>
-                    {
-                        if (!scanFinished)
-                        {
-                            scanFinished = true;
+                        // Pop the page and show the result
+                        Device.BeginInvokeOnMainThread(async () => {
+                            if (!scanFinished) {
+                                scanFinished = true;
 
-                            if (result.Text == Model.Property.PropertyId.ToString())
-                            {
-                                var bookingResponse = await Model.BookParking();
+                                if (result.Text == Model.Property.PropertyId.ToString()) {
+                                    var bookingResponse = await Model.BookParking();
 
-                                if (bookingResponse.IsSuccessStatusCode)
-                                {
-                                    Model.BookingNumber = await bookingResponse.Content.ReadAsStringAsync();
-                                    Model.BookingNumber = string.Format("#{0}", Model.BookingNumber).Replace("\"", "");
+                                    if (bookingResponse.IsSuccessStatusCode) {
+                                        Model.BookingNumber = await bookingResponse.Content.ReadAsStringAsync();
+                                        Model.BookingNumber = string.Format("#{0}", Model.BookingNumber).Replace("\"", "");
 
-                                    var entry = await ServiceUtility.Entry(Model.Property.PropertyId, Model.Property.StartDate);
-                                    BookButton.IsEnabled = true;
+                                        var entry = await ServiceUtility.Entry(Model.Property.PropertyId, Model.Property.StartDate);
+                                        BookButton.IsEnabled = true;
 
-                                    if (entry)
-                                    {
-                                        var bookingConfirmation = new BookingConfirmation(this.Model);
-                                        bookingConfirmation.BindingContext = Model.BookingNumber;
-                                        await Navigation.PushAsync(bookingConfirmation);
+                                        if (entry) {
+                                            var bookingConfirmation = new BookingConfirmation(this.Model);
+                                            bookingConfirmation.BindingContext = Model.BookingNumber;
+                                            await Navigation.PushAsync(bookingConfirmation);
+                                        } else {
+
+                                            await DisplayAlert("Entry Error", "There was an error entering the parking space, please try again", "Ok");
+                                        }
+                                    } else if (bookingResponse.StatusCode == HttpStatusCode.Conflict) {
+
+                                        await DisplayAlert("Booking Exists Error", "There is already a booking exists for this property", "Ok");
+                                    } else if (bookingResponse.StatusCode == HttpStatusCode.NotFound) {
+
+                                        await DisplayAlert("Booking Error", "If this is your first booking, please select a car and a card to proceed with your booking", "Ok");
+                                    } else {
+
+                                        await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
+                                        await Navigation.PopAsync();
                                     }
-                                    else
-                                    {
 
-                                        await DisplayAlert("Entry Error", "There was an error entering the parking space, please try again", "Ok");
-                                    }
-                                }
-                                else if (bookingResponse.StatusCode == HttpStatusCode.Conflict)
-                                {
+                                } else {
 
-                                    await DisplayAlert("Booking Exists Error", "There is already a booking exists for this property", "Ok");
-                                }
-                                else if (bookingResponse.StatusCode == HttpStatusCode.NotFound)
-                                {
-
-                                    await DisplayAlert("Booking Error", "If this is your first booking, please select a car and a card to proceed with your booking", "Ok");
-                                }
-                                else
-                                {
-
-                                    await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
+                                    await DisplayAlert("Invalid Scan", "The QR code scanned does not match the property for this booking", "Ok");
                                     await Navigation.PopAsync();
                                 }
-
                             }
-                            else
-                            {
+                        });
+                    };
 
-                                await DisplayAlert("Invalid Scan", "The QR code scanned does not match the property for this booking", "Ok");
-                                await Navigation.PopAsync();
-                            }
-                        }
-                    });
-                };
+                    await Navigation.PushAsync(scanPage);
 
-                await Navigation.PushAsync(scanPage);
+                } else {
+                    var bookingResponse = await Model.BookParking();
+                    BookButton.IsEnabled = true;
 
-            }
-            else
-            {
-                var bookingResponse = await Model.BookParking();
-                BookButton.IsEnabled = true;
+                    if (bookingResponse.IsSuccessStatusCode) {
+                        Model.BookingNumber = await bookingResponse.Content.ReadAsStringAsync();
+                        Model.BookingNumber = string.Format("#{0}", Model.BookingNumber).Replace("\"", "");
 
-                if (bookingResponse.IsSuccessStatusCode)
-                {
-                    Model.BookingNumber = await bookingResponse.Content.ReadAsStringAsync();
-                    Model.BookingNumber = string.Format("#{0}", Model.BookingNumber).Replace("\"", "");
+                        var bookingConfirmation = new BookingConfirmation(this.Model);
+                        bookingConfirmation.BindingContext = Model.BookingNumber;
+                        await Navigation.PushAsync(bookingConfirmation);
 
-                    var bookingConfirmation = new BookingConfirmation(this.Model);
-                    bookingConfirmation.BindingContext = Model.BookingNumber;
-                    await Navigation.PushAsync(bookingConfirmation);
+                    } else if (bookingResponse.StatusCode == HttpStatusCode.Conflict) {
+                        await DisplayAlert("Booking Exists Error", "There is already an ongoing booking for this property", "Ok");
 
-                }
-                else if (bookingResponse.StatusCode == HttpStatusCode.Conflict)
-                {
-                    await DisplayAlert("Booking Exists Error", "There is already an ongoing booking for this property", "Ok");
+                    } else if (bookingResponse.StatusCode == HttpStatusCode.NotFound) {
 
-                }
-                else if (bookingResponse.StatusCode == HttpStatusCode.NotFound)
-                {
+                        await DisplayAlert("Booking Error", "If this is your first booking, please select a car and a card to proceed with yor booking", "Ok");
+                    } else {
+                        await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
 
-                    await DisplayAlert("Booking Error", "If this is your first booking, please select a car and a card to proceed with yor booking", "Ok");
-                }
-                else
-                {
-                    await DisplayAlert("Booking Error", "There was an error confirming your booking, please try again", "Ok");
-
+                    }
                 }
             }
         }
