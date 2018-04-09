@@ -223,7 +223,6 @@ namespace YallaParkingMobile.Model {
 				}
 			}
 		}
-
         private void UpdateSelectedCar(){
             foreach(var car in UserCars){
                 car.IsSelected = car.UserCarId == selectedUserCar.UserCarId;

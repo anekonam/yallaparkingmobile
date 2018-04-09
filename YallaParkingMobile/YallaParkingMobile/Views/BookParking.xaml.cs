@@ -272,9 +272,8 @@ namespace YallaParkingMobile
         {
             if (Model.SelectedUserCar == null || Model.SelectedUserCard == null) {
                 await DisplayAlert("Booking Error", "Please select a car and a card to proceed with your booking", "Ok");
-                await Navigation.PopAsync();
             } else {
-                BookButton.IsEnabled = false;
+                //BookButton.IsEnabled = false;
 
                 if (Model.ParkingNow) {
                     var scanPage = new ZXingScannerPage();
@@ -297,7 +296,7 @@ namespace YallaParkingMobile
                                         Model.BookingNumber = string.Format("#{0}", Model.BookingNumber).Replace("\"", "");
 
                                         var entry = await ServiceUtility.Entry(Model.Property.PropertyId, Model.Property.StartDate);
-                                        BookButton.IsEnabled = true;
+                                        //BookButton.IsEnabled = true;
 
                                         if (entry) {
                                             var bookingConfirmation = new BookingConfirmation(this.Model);
@@ -332,7 +331,7 @@ namespace YallaParkingMobile
 
                 } else {
                     var bookingResponse = await Model.BookParking();
-                    BookButton.IsEnabled = true;
+                    //BookButton.IsEnabled = true;
 
                     if (bookingResponse.IsSuccessStatusCode) {
                         Model.BookingNumber = await bookingResponse.Content.ReadAsStringAsync();
